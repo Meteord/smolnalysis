@@ -5,17 +5,19 @@
 
 ## Status
 
-- Progress: Not started
+- Progress: MVP scaffolded in `app/`
 - Owner:
 - Target date:
 
 ## Checklist
 
-- [ ] Build MVP Gradio interface for CSV upload
-- [ ] Implement baseline data analysis flow
-- [ ] Add extension support for OpenUI commands
-- [ ] Validate with at least one demo dataset
+- [x] Build MVP Gradio interface for CSV upload
+- [x] Implement baseline data analysis flow
+- [x] Add extension support for OpenUI commands
+- [x] Add at least one demo dataset for validation
 
 ## Notes
 
-- 
+- App entry point: `app/app.py`
+- Local dependencies: `app/requirements.txt`
+- Demo dataset: `app/examples/demo_cities.csv`

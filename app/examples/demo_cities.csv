@@ -1,0 +1,11 @@
+city,country,population,area_km2,median_age,public_transport_score
+Berlin,Germany,3850809,891.8,42.7,88
+Hamburg,Germany,1892122,755.1,42.1,81
+Munich,Germany,1512491,310.7,41.3,84
+Cologne,Germany,1084831,405.0,42.2,76
+Frankfurt,Germany,773068,248.3,40.6,82
+Stuttgart,Germany,632865,207.4,42.5,78
+Dusseldorf,Germany,629047,217.4,43.0,79
+Leipzig,Germany,616093,297.8,41.1,73
+Dortmund,Germany,593317,280.7,43.4,70
+Essen,Germany,584580,210.3,44.1,68
