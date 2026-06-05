@@ -14,6 +14,7 @@
 - [x] Build MVP Gradio interface for CSV upload
 - [x] Implement baseline data analysis flow
 - [x] Add extension support for OpenUI commands
+- [ ] Add chatbot-style OpenUI React rendering flow ([01.1-openui-support-in-gradio-app.md](01.1-openui-support-in-gradio-app.md))
 - [x] Add at least one demo dataset for validation
 
 ## Notes
