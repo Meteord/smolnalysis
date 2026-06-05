@@ -8,11 +8,8 @@ import gradio as gr
 import pandas as pd
 
 from openui_support import (
-    ASSISTANT_FALLBACK,
     generate_openui_response,
     openui_styles,
-    parse_openui_lang,
-    render_openui_html,
 )
 
 
@@ -30,7 +27,7 @@ def _read_csv(file_path: str | None) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
-def _render_debug_block(debug_steps: str, raw_openui: str) -> str:
+def _render_debug_block(debug_steps: str, preset_name: str) -> str:
     steps_html = "".join(
         f"<li>{html.escape(line[2:] if line.startswith('- ') else line)}</li>"
         for line in debug_steps.splitlines()
@@ -38,9 +35,9 @@ def _render_debug_block(debug_steps: str, raw_openui: str) -> str:
     )
     return (
         "<details class='openui-debug'>"
-        "<summary>OpenUI debug</summary>"
+        "<summary>Debug</summary>"
         f"<ul>{steps_html}</ul>"
-        f"<pre><code class='language-openui'>{html.escape(raw_openui)}</code></pre>"
+        f"<pre><code>Preset: {html.escape(preset_name)}</code></pre>"
         "</details>"
     )
 
@@ -65,20 +62,8 @@ def chat_with_openui(
         df = None
 
     turn = generate_openui_response(df, prompt)
-    raw_openui = turn.openui_lang
     debug_steps = "\n".join(f"- {step.role}: {step.content}" for step in turn.agent_steps)
-
-    try:
-        parsed = parse_openui_lang(raw_openui)
-        rendered_value = render_openui_html(parsed)
-    except Exception as exc:
-        rendered_value = (
-            "<section class='openui-notice openui-warning'>"
-            f"{ASSISTANT_FALLBACK} {exc}"
-            "</section>"
-        )
-
-    assistant_message = _compose_assistant_html(rendered_value, debug_steps, raw_openui)
+    assistant_message = f"{turn.rendered_html}{_render_debug_block(debug_steps, turn.preset_name)}"
 
     history = [
         *history,
@@ -107,22 +92,20 @@ with gr.Blocks(title="smolnalysis") as demo:
 
     with gr.Group(elem_classes=["app-shell", "chat-shell"]):
         openui_chatbot = gr.Chatbot(
-            label="Conversation",
+            label=None,
             height=420,
             container=False,
         )
         with gr.Row(elem_classes=["composer-row"]):
             openui_prompt = gr.Textbox(
-                label="",
+                label="Message",
                 show_label=False,
-                placeholder="Ask something like: show a bar chart of population by city",
+                placeholder="Ask a question about the dataset",
                 scale=8,
                 max_lines=4,
                 autofocus=True,
-                container=False,
-                elem_classes=["composer-input"],
             )
-            openui_send = gr.Button("Send", variant="primary", scale=1, min_width=120)
+            openui_send = gr.Button("Send", variant="primary", scale=1, min_width=120, elem_classes=["composer-send"])
 
     openui_send.click(
         chat_with_openui,
