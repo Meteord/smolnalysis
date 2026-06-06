@@ -11,10 +11,11 @@ uv run gradio app/app.py
 
 The MVP app includes:
 
-- CSV upload and baseline analysis
-- OpenUI-style slash commands
-- OpenUI chat flow with deterministic OpenUI-Lang generation, validation, and Gradio rendering
-- Raw OpenUI-Lang debug output for evaluation
+- CSV upload
+- Chat-style dataset interaction
+- Mock backend responses that emit deterministic OpenUI-Lang
+- OpenUI-Lang validation plus OpenUI's native React renderer hosted in a Gradio 6 custom `gr.HTML` component
+- Assistant responses rendered as OpenUI components directly inside a single Gradio chat
 
 ## Planning
 

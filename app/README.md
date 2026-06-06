@@ -12,6 +12,13 @@ uv sync
 uv run gradio app/app.py
 ```
 
+If you change `app/frontend/openui-renderer.jsx`, rebuild the bundled OpenUI renderer:
+
+```bash
+npm install
+npm run build:openui-renderer
+```
+
 ## Hugging Face Space
 
 For a later Hugging Face Space, use this folder as the Space root. The Space needs:
@@ -22,30 +29,25 @@ For a later Hugging Face Space, use this folder as the Space root. The Space nee
 
 ## MVP Features
 
-- CSV upload and preview
-- Baseline dataset summary
-- Column profile with missing-value counts
-- Automatic chart for the first numeric column
-- Chat-style OpenUI flow with conversation history
-- Deterministic OpenUI-Lang backend contract
+- CSV upload
+- Dataset-aware chat interaction
+- Single Gradio `Chatbot` with OpenUI-rendered assistant responses in the conversation history
+- Mocked deterministic OpenUI-Lang backend contract
 - OpenUI-Lang validation and fallback rendering
-- Basic OpenUI-style commands:
-  - `/summary`
-  - `/columns`
-  - `/plot <column>`
-  - `/plot histogram of <column>`
-  - `/plot <column> against <other column>`
+- OpenUI's native React `<Renderer />` hosted inside a Gradio 6 `gr.HTML` component
 
 ## OpenUI Chat Architecture
 
 The Gradio app keeps OpenUI support modular:
 
-- `app.py` owns the Gradio interface and session history.
+- `app.py` owns the Gradio interface, dataset upload, and single chat history.
 - `openui_support.py` defines the message schema, backend orchestration, OpenUI-Lang generation, validation, parsing, and rendering adapter.
+- `app/frontend/openui-renderer.jsx` defines the OpenUI component library and mounts OpenUI's React `<Renderer />`.
+- `app/static/openui-renderer.js` is the bundled browser asset loaded by Gradio.
 - The backend emits line-oriented OpenUI-Lang with a `root = Root([...])` entry point.
 - The parser validates supported components before rendering.
-- The frontend boots the OpenUI React `Renderer` in-browser through a Gradio 6 custom `gr.HTML` template component and a small custom library matching the backend contract.
-- Matplotlib still renders the analytical chart output separately for reliability, while the OpenUI React runtime renders the structured component response.
+- Each assistant message is a Gradio HTML component that passes raw OpenUI-Lang into OpenUI's bundled React renderer.
+- Later, an LLM can replace the mock generator without changing the renderer contract.
 
 ## OpenUI Chat Examples
 
