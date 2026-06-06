@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import html
 from pathlib import Path
 from typing import Any
 
@@ -8,12 +7,20 @@ import gradio as gr
 import pandas as pd
 
 from openui_support import (
+    app_styles,
     generate_openui_response,
-    openui_styles,
+    openui_component,
+    parse_openui_lang,
+    render_openui_error,
+    render_openui_value,
 )
 
 
 MAX_UPLOAD_MB = 25
+STATIC_DIR = Path(__file__).parent / "static"
+
+
+gr.set_static_paths(paths=[STATIC_DIR])
 
 
 def _read_csv(file_path: str | None) -> pd.DataFrame:
@@ -27,23 +34,12 @@ def _read_csv(file_path: str | None) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
-def _render_debug_block(debug_steps: str, preset_name: str) -> str:
-    steps_html = "".join(
-        f"<li>{html.escape(line[2:] if line.startswith('- ') else line)}</li>"
-        for line in debug_steps.splitlines()
-        if line.strip()
-    )
-    return (
-        "<details class='openui-debug'>"
-        "<summary>Debug</summary>"
-        f"<ul>{steps_html}</ul>"
-        f"<pre><code>Preset: {html.escape(preset_name)}</code></pre>"
-        "</details>"
-    )
-
-
-def _compose_assistant_html(rendered_value: str, debug_steps: str, raw_openui: str) -> str:
-    return f"{rendered_value}{_render_debug_block(debug_steps, raw_openui)}"
+def _dataset_status(file_path: str | None) -> str:
+    try:
+        df = _read_csv(file_path)
+    except Exception as exc:
+        return f"Dataset not loaded: {exc}"
+    return f"Dataset loaded: {len(df):,} rows x {len(df.columns):,} columns."
 
 
 def chat_with_openui(
@@ -62,26 +58,31 @@ def chat_with_openui(
         df = None
 
     turn = generate_openui_response(df, prompt)
-    debug_steps = "\n".join(f"- {step.role}: {step.content}" for step in turn.agent_steps)
-    assistant_message = f"{turn.rendered_html}{_render_debug_block(debug_steps, turn.preset_name)}"
+    try:
+        parsed = parse_openui_lang(turn.openui_lang)
+        render_value = render_openui_value(parsed, turn.openui_lang)
+    except Exception as exc:
+        render_value = render_openui_error(turn.openui_lang, str(exc))
+
+    rendered_response = openui_component(value=render_value, label="OpenUI response")
 
     history = [
         *history,
         {"role": "user", "content": prompt},
-        {"role": "assistant", "content": assistant_message},
+        {"role": "assistant", "content": rendered_response},
     ]
     return history, ""
 
 
 with gr.Blocks(title="smolnalysis") as demo:
-    gr.HTML(openui_styles())
+    gr.HTML(app_styles())
     gr.HTML(
         """
         <section class="app-shell">
           <div class="app-hero">
             <p class="app-kicker">OpenUI Data Chat</p>
             <h1>smolnalysis</h1>
-            <p class="app-subtitle">Upload a dataset, ask a question, and inspect the rendered OpenUI response directly in chat.</p>
+            <p class="app-subtitle">Upload a CSV, ask about the data, and render mocked OpenUI-Lang answers with a native Gradio HTML component.</p>
           </div>
         </section>
         """
@@ -89,24 +90,38 @@ with gr.Blocks(title="smolnalysis") as demo:
 
     with gr.Group(elem_classes=["app-shell", "upload-shell"]):
         csv_file = gr.File(label="Dataset", file_types=[".csv"], type="filepath")
+        dataset_status = gr.Markdown("Dataset not loaded.")
 
     with gr.Group(elem_classes=["app-shell", "chat-shell"]):
         openui_chatbot = gr.Chatbot(
             label=None,
-            height=420,
+            height=620,
             container=False,
+            layout="bubble",
         )
         with gr.Row(elem_classes=["composer-row"]):
             openui_prompt = gr.Textbox(
                 label="Message",
                 show_label=False,
-                placeholder="Ask a question about the dataset",
+                placeholder="Ask for a summary, schema, bar chart, or histogram",
                 scale=8,
                 max_lines=4,
                 autofocus=True,
             )
-            openui_send = gr.Button("Send", variant="primary", scale=1, min_width=120, elem_classes=["composer-send"])
+            openui_send = gr.Button("Send", variant="primary", scale=1, min_width=120)
 
+        gr.Examples(
+            examples=[
+                ["Summarize this dataset"],
+                ["Show a bar chart of population by city"],
+                ["Show a histogram of median_age"],
+                ["List the columns and missing values"],
+                ["Return invalid OpenUI for fallback testing"],
+            ],
+            inputs=openui_prompt,
+            )
+
+    csv_file.change(_dataset_status, inputs=csv_file, outputs=dataset_status)
     openui_send.click(
         chat_with_openui,
         inputs=[csv_file, openui_prompt, openui_chatbot],

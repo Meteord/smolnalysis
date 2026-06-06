@@ -1,3 +1,2 @@
 gradio>=6.0,<7
-matplotlib>=3.8,<4
 pandas>=2.2,<3

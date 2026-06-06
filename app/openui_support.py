@@ -1,26 +1,19 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
-import html
-from dataclasses import dataclass
+import base64
+import json
+import re
+from dataclasses import dataclass, field
 from typing import Any
 
+import gradio as gr
 import pandas as pd
 
 
-_PRESET_INDEX = 0
-
-PRESET_NAMES = [
-    "metrics-cards",
-    "callout-highlights",
-    "tabs-view",
-    "chart-details",
-    "schema-table",
-]
-
-
-# ---------------------------------------------------------------------------
-# Data model
-# ---------------------------------------------------------------------------
+ASSISTANT_FALLBACK = "I could not render the OpenUI response, so I am showing a fallback."
+EMPTY_RENDER_VALUE = {
+    "encoded": "",
+}
 
 
 @dataclass
@@ -33,391 +26,408 @@ class AgentStep:
 class ChatTurn:
     user_message: str
     agent_steps: list[AgentStep]
-    rendered_html: str
-    preset_name: str
+    openui_lang: str
+    fallback_text: str
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
+@dataclass
+class OpenUIComponent:
+    identifier: str
+    component_type: str
+    args: list[Any] = field(default_factory=list)
 
 
-def _e(text: Any) -> str:
-    return html.escape(str(text))
+@dataclass
+class ParsedOpenUI:
+    root_children: list[str]
+    components: dict[str, OpenUIComponent]
+
+
+class OpenUIValidationError(ValueError):
+    pass
+
+
+def _json_arg(value: Any) -> str:
+    return json.dumps(value, ensure_ascii=False, default=str)
+
+
+def _records(df: pd.DataFrame, limit: int = 8) -> list[dict[str, Any]]:
+    sample = df.head(limit).where(pd.notna(df.head(limit)), None)
+    return [{str(key): value for key, value in row.items()} for row in sample.to_dict(orient="records")]
 
 
 def _numeric_columns(df: pd.DataFrame) -> list[str]:
-    return [col for col in df.columns if pd.api.types.is_numeric_dtype(df[col])]
+    return [column for column in df.columns if pd.api.types.is_numeric_dtype(df[column])]
 
 
 def _text_columns(df: pd.DataFrame) -> list[str]:
-    return [col for col in df.columns if not pd.api.types.is_numeric_dtype(df[col])]
-
-
-def _top_records(df: pd.DataFrame, n: int = 8) -> list[dict[str, Any]]:
-    return df.head(n).to_dict(orient="records")
+    return [column for column in df.columns if not pd.api.types.is_numeric_dtype(df[column])]
 
 
 def _find_column(prompt: str, columns: list[str]) -> str | None:
-    lower = prompt.casefold()
-    for col in columns:
-        if col.casefold() in lower:
-            return col
+    normalized = prompt.casefold()
+    for column in columns:
+        if column.casefold() in normalized:
+            return column
     return None
 
 
-def _next_preset() -> str:
-    global _PRESET_INDEX
-    name = PRESET_NAMES[_PRESET_INDEX % len(PRESET_NAMES)]
-    _PRESET_INDEX += 1
-    return name
-
-
-# ---------------------------------------------------------------------------
-# Preset 1 — metrics-cards
-# ---------------------------------------------------------------------------
-
-
-def _preset_metrics_cards(df: pd.DataFrame, prompt: str) -> str:
-    rows = len(df)
-    cols = len(df.columns)
-    missing = int(df.isna().sum().sum())
-    numeric = len(_numeric_columns(df))
-    text = len(_text_columns(df))
-
-    metrics_html = "".join(
-        f'<div class="openui-metric"><span>{_e(label)}</span><strong>{_e(value)}</strong></div>'
-        for label, value in [
-            ("Rows", f"{rows:,}"),
-            ("Columns", f"{cols:,}"),
-            ("Numeric", f"{numeric}"),
-            ("Text cols", f"{text}"),
-            ("Missing", f"{missing:,}"),
-        ]
-    )
-
-    records = _top_records(df)
-    col_headers = "".join(f"<th>{_e(c)}</th>" for c in df.columns)
-    table_rows = "".join(
-        "<tr>" + "".join(f"<td>{_e(row.get(c, ''))}</td>" for c in df.columns) + "</tr>"
-        for row in records
-    )
-
-    return (
-        '<div class="openui-render">'
-        '<section class="openui-card">'
-        f'<h3>{_e(prompt)}</h3>'
-        f'<section class="openui-metrics">{metrics_html}</section>'
-        '</section>'
-        '<section class="openui-card"><h3>Sample rows</h3>'
-        '<div class="openui-table-wrap">'
-        f'<table><thead><tr>{col_headers}</tr></thead><tbody>{table_rows}</tbody></table>'
-        '</div></section>'
-        '</div>'
-    )
-
-
-# ---------------------------------------------------------------------------
-# Preset 2 — callout-highlights
-# ---------------------------------------------------------------------------
-
-
-def _preset_callout_highlights(df: pd.DataFrame, prompt: str) -> str:
-    rows = len(df)
-    cols = len(df.columns)
-    missing = int(df.isna().sum().sum())
-    numeric_cols = _numeric_columns(df)
-
-    insights: list[tuple[str, str]] = [
-        ("Dataset size", f"{rows:,} rows × {cols:,} columns"),
-        ("Missing values", f"{missing:,} cells ({missing / max(rows * cols, 1) * 100:.1f}%)"),
+def _build_column_rows(df: pd.DataFrame) -> list[dict[str, Any]]:
+    return [
+        {
+            "column": column,
+            "dtype": str(df[column].dtype),
+            "missing": int(df[column].isna().sum()),
+            "unique": int(df[column].nunique(dropna=True)),
+        }
+        for column in df.columns
     ]
-    for col in numeric_cols[:4]:
-        series = df[col].dropna()
-        if not series.empty:
-            insights.append((col, f"min {series.min():.2f}  /  max {series.max():.2f}  /  mean {series.mean():.2f}"))
-
-    cards_html = "".join(
-        f'<section class="openui-card"><h3>{_e(title)}</h3><p>{_e(body)}</p></section>'
-        for title, body in insights
-    )
-
-    return (
-        '<div class="openui-render">'
-        '<section class="openui-notice openui-info">'
-        f'<strong>{_e(prompt)}</strong>'
-        f'<p>{rows:,} rows loaded — key column insights below.</p>'
-        '</section>'
-        f'<div class="openui-split">{cards_html}</div>'
-        '</div>'
-    )
 
 
-# ---------------------------------------------------------------------------
-# Preset 3 — tabs-view
-# ---------------------------------------------------------------------------
+def generate_openui_response(df: pd.DataFrame | None, prompt: str) -> ChatTurn:
+    prompt = prompt.strip()
+    steps = [AgentStep("planner", "Classified the request and selected a mock response path.")]
 
+    if df is None or df.empty:
+        openui_lang = "\n".join(
+            [
+                "root = Root([notice])",
+                'notice = Notice("Upload a CSV dataset first, then ask me to summarize, inspect columns, or chart it.", "info")',
+            ]
+        )
+        return ChatTurn(prompt, steps, openui_lang, "Upload a CSV dataset first.")
 
-def _preset_tabs_view(df: pd.DataFrame, prompt: str) -> str:
     rows = len(df)
-    cols = len(df.columns)
+    columns = len(df.columns)
     missing = int(df.isna().sum().sum())
     duplicates = int(df.duplicated().sum())
+    numeric_columns = _numeric_columns(df)
+    text_columns = _text_columns(df)
+    selected_numeric = _find_column(prompt, numeric_columns) or (numeric_columns[0] if numeric_columns else None)
+    selected_label = _find_column(prompt, text_columns) or (text_columns[0] if text_columns else None)
+    lower_prompt = prompt.casefold()
 
-    summary_html = "".join(
-        f'<div class="openui-metric"><span>{_e(k)}</span><strong>{_e(v)}</strong></div>'
-        for k, v in [("Rows", f"{rows:,}"), ("Columns", f"{cols:,}"), ("Missing", f"{missing:,}"), ("Dupes", f"{duplicates:,}")]
-    )
+    steps.append(AgentStep("tool", f"Loaded CSV with {rows:,} rows and {columns:,} columns."))
 
-    col_rows = "".join(
-        f'<tr><td>{_e(c)}</td><td>{_e(str(df[c].dtype))}</td><td>{_e(int(df[c].isna().sum()))}</td></tr>'
-        for c in df.columns
-    )
-
-    records = _top_records(df)
-    col_headers = "".join(f"<th>{_e(c)}</th>" for c in df.columns)
-    sample_rows_html = "".join(
-        "<tr>" + "".join(f"<td>{_e(row.get(c, ''))}</td>" for c in df.columns) + "</tr>"
-        for row in records
-    )
-
-    return (
-        '<div class="openui-render"><section class="openui-card">'
-        f'<h3>{_e(prompt)}</h3>'
-        '<div class="openui-tabs">'
-        '<div class="openui-tab-nav">'
-        '<span class="openui-tab-pill openui-tab-active">Summary</span>'
-        '<span class="openui-tab-pill">Columns</span>'
-        '<span class="openui-tab-pill">Sample</span>'
-        '</div>'
-        f'<section class="openui-tab-panel"><section class="openui-metrics">{summary_html}</section></section>'
-        f'<section class="openui-tab-panel openui-tab-panel--hidden">'
-        '<div class="openui-table-wrap"><table>'
-        '<thead><tr><th>Column</th><th>Type</th><th>Missing</th></tr></thead>'
-        f'<tbody>{col_rows}</tbody></table></div></section>'
-        f'<section class="openui-tab-panel openui-tab-panel--hidden">'
-        '<div class="openui-table-wrap"><table>'
-        f'<thead><tr>{col_headers}</tr></thead>'
-        f'<tbody>{sample_rows_html}</tbody></table></div></section>'
-        '</div></section></div>'
-    )
-
-
-# ---------------------------------------------------------------------------
-# Preset 4 — chart-details
-# ---------------------------------------------------------------------------
-
-
-def _preset_chart_details(df: pd.DataFrame, prompt: str) -> str:
-    numeric_cols = _numeric_columns(df)
-    text_cols = _text_columns(df)
-
-    selected_num = _find_column(prompt, numeric_cols) or (numeric_cols[0] if numeric_cols else None)
-    selected_label = _find_column(prompt, text_cols) or (text_cols[0] if text_cols else None)
-
-    if selected_num:
-        subset_cols = [c for c in ([selected_label, selected_num] if selected_label else [selected_num]) if c]
-        chart_data = df[subset_cols].dropna().head(14).to_dict(orient="records")
-        values = [float(row[selected_num]) for row in chart_data]
-        labels = [str(row[selected_label]) if selected_label else str(i + 1) for i, row in enumerate(chart_data)]
-        max_val = max(values) or 1.0
-
-        bar_rows = "".join(
-            f'<div class="openui-chart-row">'
-            f'<div class="openui-chart-label">{_e(label)}</div>'
-            f'<div class="openui-chart-track"><div class="openui-chart-bar" style="width:{max(4.0, v / max_val * 100):.1f}%"></div></div>'
-            f'<div class="openui-chart-value">{_e(f"{v:.0f}" if float(v).is_integer() else f"{v:.2f}")}</div>'
-            f'</div>'
-            for label, v in zip(labels, values)
-        )
-        chart_html = (
-            '<section class="openui-card openui-chart-card">'
-            f'<h3>{_e(selected_num)}</h3>'
-            f'<p class="openui-chart-meta">Bar chart — {_e(selected_num)}</p>'
-            f'<div class="openui-chart-grid">{bar_rows}</div>'
-            '</section>'
-        )
-    else:
-        chart_html = (
-            '<section class="openui-notice openui-info">'
-            '<strong>No numeric column found</strong>'
-            '<p>Upload a dataset with numeric columns to see a chart.</p>'
-            '</section>'
+    if "invalid openui" in lower_prompt:
+        steps.append(AgentStep("validator", "Returning intentionally invalid OpenUI-Lang for fallback testing."))
+        return ChatTurn(
+            prompt,
+            steps,
+            "root = Nope([missing])",
+            "The intentionally invalid OpenUI response triggered the fallback path.",
         )
 
-    schema_rows = "".join(
-        f'<tr><td>{_e(c)}</td><td>{_e(str(df[c].dtype))}</td><td>{_e(int(df[c].isna().sum()))}</td></tr>'
-        for c in df.columns
+    if any(term in lower_prompt for term in ["columns", "schema", "fields"]):
+        openui_lang = "\n".join(
+            [
+                "root = Root([summary, table])",
+                f'summary = InsightCard("Dataset schema", "{columns:,} columns detected. Missing values are counted per column.")',
+                f'table = DataTable("Columns", {_json_arg(_build_column_rows(df))})',
+            ]
+        )
+        return ChatTurn(prompt, steps, openui_lang, "Rendered the dataset schema.")
+
+    if any(term in lower_prompt for term in ["histogram", "distribution", "spread"]):
+        if not selected_numeric:
+            openui_lang = "\n".join(
+                [
+                    "root = Root([notice, table])",
+                    'notice = Notice("This dataset has no numeric columns for a histogram.", "warning")',
+                    f'table = DataTable("Sample rows", {_json_arg(_records(df))})',
+                ]
+            )
+            return ChatTurn(prompt, steps, openui_lang, "No numeric histogram is available.")
+
+        values = [float(value) for value in df[selected_numeric].dropna().head(500).tolist()]
+        openui_lang = "\n".join(
+            [
+                "root = Root([summary, histogram, table])",
+                f'summary = InsightCard("Distribution", "Histogram for {selected_numeric} based on the uploaded CSV.")',
+                f'histogram = Histogram("Distribution of {selected_numeric}", "{selected_numeric}", {_json_arg(values)})',
+                f'table = DataTable("Sample rows", {_json_arg(_records(df))})',
+            ]
+        )
+        return ChatTurn(prompt, steps, openui_lang, f"Rendered a histogram for {selected_numeric}.")
+
+    if any(term in lower_prompt for term in ["plot", "chart", "bar", "compare", "visualize", "show"]):
+        if not selected_numeric:
+            openui_lang = "\n".join(
+                [
+                    "root = Root([notice, table])",
+                    'notice = Notice("This dataset has no numeric columns for charting.", "warning")',
+                    f'table = DataTable("Sample rows", {_json_arg(_records(df))})',
+                ]
+            )
+            return ChatTurn(prompt, steps, openui_lang, "No numeric chart is available.")
+
+        chart_columns = [selected_numeric]
+        if selected_label:
+            chart_columns.insert(0, selected_label)
+        chart_rows = df[chart_columns].dropna().head(18).to_dict(orient="records")
+        x_column = selected_label or "__row__"
+        if not selected_label:
+            chart_rows = [{"__row__": index + 1, selected_numeric: row[selected_numeric]} for index, row in enumerate(chart_rows)]
+
+        openui_lang = "\n".join(
+            [
+                "root = Root([summary, chart])",
+                f'summary = InsightCard("Chart", "Bar chart for {selected_numeric}.")',
+                f'chart = BarChart("{selected_numeric} overview", "{x_column}", "{selected_numeric}", {_json_arg(chart_rows)})',
+            ]
+        )
+        return ChatTurn(prompt, steps, openui_lang, f"Rendered a bar chart for {selected_numeric}.")
+
+    openui_lang = "\n".join(
+        [
+            "root = Root([summary, metrics, table])",
+            f'summary = InsightCard("Dataset summary", "Loaded {rows:,} rows and {columns:,} columns from the uploaded CSV.")',
+            f'm1 = Metric("Rows", "{rows:,}", "CSV records")',
+            f'm2 = Metric("Columns", "{columns:,}", "Dataset fields")',
+            f'm3 = Metric("Missing", "{missing:,}", "Empty cells")',
+            f'm4 = Metric("Duplicates", "{duplicates:,}", "Repeated rows")',
+            "metrics = MetricGrid([m1, m2, m3, m4])",
+            f'table = DataTable("Sample rows", {_json_arg(_records(df))})',
+        ]
     )
-
-    return (
-        '<div class="openui-render">'
-        f'{chart_html}'
-        '<section class="openui-card"><h3>Column schema</h3>'
-        '<div class="openui-table-wrap"><table>'
-        '<thead><tr><th>Column</th><th>Type</th><th>Missing</th></tr></thead>'
-        f'<tbody>{schema_rows}</tbody></table></div></section>'
-        '</div>'
-    )
+    return ChatTurn(prompt, steps, openui_lang, "Rendered a dataset summary.")
 
 
-# ---------------------------------------------------------------------------
-# Preset 5 — schema-table
-# ---------------------------------------------------------------------------
+def _split_args(args_text: str) -> list[str]:
+    args: list[str] = []
+    start = 0
+    depth = 0
+    quote: str | None = None
+    escaped = False
+
+    for index, char in enumerate(args_text):
+        if escaped:
+            escaped = False
+            continue
+        if char == "\\" and quote:
+            escaped = True
+            continue
+        if char in {'"', "'"}:
+            if quote == char:
+                quote = None
+            elif quote is None:
+                quote = char
+            continue
+        if quote:
+            continue
+        if char in "([{":
+            depth += 1
+        elif char in ")]}":
+            depth -= 1
+        elif char == "," and depth == 0:
+            args.append(args_text[start:index].strip())
+            start = index + 1
+
+    tail = args_text[start:].strip()
+    if tail:
+        args.append(tail)
+    return args
 
 
-def _preset_schema_table(df: pd.DataFrame, prompt: str) -> str:
-    missing_total = int(df.isna().sum().sum())
-
-    schema_rows = "".join(
-        f'<tr>'
-        f'<td><strong>{_e(c)}</strong></td>'
-        f'<td>{_e(str(df[c].dtype))}</td>'
-        f'<td>{_e(df[c].nunique())}</td>'
-        f'<td>{_e(int(df[c].isna().sum()))}</td>'
-        f'<td>{_e(str(df[c].iloc[0]) if not df[c].empty else "—")}</td>'
-        f'</tr>'
-        for c in df.columns
-    )
-
-    tone = "openui-warning" if missing_total > 0 else "openui-success"
-    callout_msg = (
-        f"{missing_total:,} missing values detected across {len(df.columns)} columns."
-        if missing_total
-        else f"No missing values — dataset looks clean ({len(df):,} rows)."
-    )
-
-    return (
-        '<div class="openui-render">'
-        f'<section class="openui-notice {_e(tone)}">'
-        f'<strong>{_e(prompt)}</strong>'
-        f'<p>{_e(callout_msg)}</p>'
-        '</section>'
-        '<section class="openui-card"><h3>Column details</h3>'
-        '<div class="openui-table-wrap"><table>'
-        '<thead><tr><th>Column</th><th>Type</th><th>Unique</th><th>Missing</th><th>First value</th></tr></thead>'
-        f'<tbody>{schema_rows}</tbody></table></div></section>'
-        '</div>'
-    )
+def _parse_value(value: str) -> Any:
+    value = value.strip()
+    if value == "null":
+        return None
+    if value.startswith("[") and value.endswith("]"):
+        inner = value[1:-1].strip()
+        if not inner:
+            return []
+        return [_parse_value(part) for part in _split_args(inner)]
+    if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", value):
+        return {"$ref": value}
+    try:
+        return json.loads(value)
+    except json.JSONDecodeError as exc:
+        raise OpenUIValidationError(f"Invalid argument value: {value}") from exc
 
 
-# ---------------------------------------------------------------------------
-# No-dataset fallback
-# ---------------------------------------------------------------------------
-
-
-def _preset_no_dataset(prompt: str, preset_name: str) -> str:
-    return (
-        '<div class="openui-render">'
-        '<section class="openui-notice openui-info">'
-        f'<strong>{_e(prompt)}</strong>'
-        f'<p>Upload a CSV file to see an analysis. This would use the <em>{_e(preset_name)}</em> layout.</p>'
-        '</section>'
-        '</div>'
-    )
-
-
-# ---------------------------------------------------------------------------
-# Public entry point
-# ---------------------------------------------------------------------------
-
-
-def generate_openui_response(df: "pd.DataFrame | None", prompt: str) -> ChatTurn:
-    steps: list[AgentStep] = [AgentStep("planner", f"Received: {prompt[:80]}")]
-    preset_name = _next_preset()
-    steps.append(AgentStep("planner", f"Rotating to preset: {preset_name}"))
-
-    if df is None:
-        steps.append(AgentStep("tool", "No dataset loaded."))
-        return ChatTurn(prompt, steps, _preset_no_dataset(prompt, preset_name), preset_name)
-
-    steps.append(AgentStep("tool", f"Dataset: {len(df):,} rows x {len(df.columns):,} columns"))
-
-    dispatch = {
-        "metrics-cards": _preset_metrics_cards,
-        "callout-highlights": _preset_callout_highlights,
-        "tabs-view": _preset_tabs_view,
-        "chart-details": _preset_chart_details,
-        "schema-table": _preset_schema_table,
+def parse_openui_lang(openui_lang: str) -> ParsedOpenUI:
+    allowed_components = {
+        "Root",
+        "InsightCard",
+        "Notice",
+        "Metric",
+        "MetricGrid",
+        "DataTable",
+        "BarChart",
+        "Histogram",
     }
-    html_out = dispatch.get(preset_name, _preset_schema_table)(df, prompt)
+    components: dict[str, OpenUIComponent] = {}
+    root_children: list[str] | None = None
 
-    steps.append(AgentStep("renderer", f"Rendered {preset_name} preset."))
-    return ChatTurn(prompt, steps, html_out, preset_name)
+    for raw_line in openui_lang.splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("//"):
+            continue
+
+        match = re.fullmatch(r"([A-Za-z_][A-Za-z0-9_]*)\s*=\s*([A-Za-z_][A-Za-z0-9_]*)\((.*)\)", line)
+        if not match:
+            raise OpenUIValidationError(f"Invalid OpenUI statement: {line}")
+
+        identifier, component_type, args_text = match.groups()
+        if component_type not in allowed_components:
+            raise OpenUIValidationError(f"Unsupported component: {component_type}")
+
+        component = OpenUIComponent(
+            identifier=identifier,
+            component_type=component_type,
+            args=[_parse_value(part) for part in _split_args(args_text)],
+        )
+        components[identifier] = component
+
+        if identifier == "root":
+            if component_type != "Root":
+                raise OpenUIValidationError("`root` must be a Root(...) component.")
+            if not component.args or not isinstance(component.args[0], list):
+                raise OpenUIValidationError("Root must receive a child reference list.")
+            root_children = [
+                item["$ref"]
+                for item in component.args[0]
+                if isinstance(item, dict) and "$ref" in item
+            ]
+
+    if not root_children:
+        raise OpenUIValidationError("OpenUI-Lang must include `root = Root([...])`.")
+
+    missing = [child for child in root_children if child not in components]
+    if missing:
+        raise OpenUIValidationError(f"Missing component definitions: {', '.join(missing)}")
+
+    return ParsedOpenUI(root_children=root_children, components=components)
 
 
-# ---------------------------------------------------------------------------
-# Styles
-# ---------------------------------------------------------------------------
+def _encode_openui(openui_lang: str) -> str:
+    return base64.b64encode(openui_lang.encode("utf-8")).decode("ascii")
 
 
-def openui_styles() -> str:
+def render_openui_value(parsed: ParsedOpenUI, openui_lang: str) -> dict[str, Any]:
+    return {"encoded": _encode_openui(openui_lang), "openui_lang": openui_lang}
+
+
+def render_openui_error(openui_lang: str, error: str) -> dict[str, Any]:
+    fallback_openui = "\n".join(
+        [
+            "root = Root([notice])",
+            f"notice = Notice({_json_arg(f'{ASSISTANT_FALLBACK} {error}')}, \"warning\")",
+        ]
+    )
+    return {"encoded": _encode_openui(fallback_openui), "openui_lang": openui_lang, "error": error}
+
+
+OPENUI_HTML_TEMPLATE = """
+<div class="openui-host">
+  <div data-openui-mount data-openui-encoded="${value.encoded}"></div>
+</div>
+"""
+
+
+OPENUI_CSS_TEMPLATE = """
+.openui-host { width: 100%; }
+.openui-host [data-openui-mount] {
+  display: block;
+  min-height: 48px;
+}
+.openui-host [data-openui-mount]:empty::before {
+  content: "Upload a CSV and ask a question to render OpenUI-Lang.";
+  display: block;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 14px;
+  color: #64748b;
+  background: #f8fafc;
+}
+"""
+
+
+OPENUI_JS_ON_LOAD = """
+const loadOpenUIRenderer = () => new Promise((resolve, reject) => {
+  if (window.SmolnalysisOpenUIRenderer) {
+    resolve();
+    return;
+  }
+  const existing = document.querySelector('script[data-smolnalysis-openui-renderer]');
+  if (existing) {
+    existing.addEventListener('load', resolve, { once: true });
+    existing.addEventListener('error', reject, { once: true });
+    return;
+  }
+  const script = document.createElement('script');
+  script.src = '/gradio_api/file=app/static/openui-renderer.js';
+  script.dataset.smolnalysisOpenuiRenderer = 'true';
+  script.onload = resolve;
+  script.onerror = reject;
+  document.head.appendChild(script);
+});
+
+loadOpenUIRenderer().then(() => {
+  window.SmolnalysisOpenUIRenderer.mount(element, props.value?.encoded || "");
+});
+"""
+
+
+class OpenUIRenderer(gr.HTML):
+    def __init__(self, value: dict[str, Any] | None = None, **kwargs: Any):
+        super().__init__(
+            value=value or EMPTY_RENDER_VALUE,
+            html_template=OPENUI_HTML_TEMPLATE,
+            css_template=OPENUI_CSS_TEMPLATE,
+            js_on_load=OPENUI_JS_ON_LOAD,
+            apply_default_css=False,
+            **kwargs,
+        )
+
+
+def openui_component(value: dict[str, Any] | None = None, **kwargs: Any) -> gr.HTML:
+    return gr.HTML(
+        value=value or EMPTY_RENDER_VALUE,
+        html_template=OPENUI_HTML_TEMPLATE,
+        css_template=OPENUI_CSS_TEMPLATE,
+        js_on_load=OPENUI_JS_ON_LOAD,
+        apply_default_css=False,
+        **kwargs,
+    )
+
+
+def app_styles() -> str:
     return """
 <style>
 .gradio-container {
-    background:
-        radial-gradient(circle at top left, rgba(14, 165, 233, 0.12), transparent 28%),
-        linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
 }
-.app-shell { width: min(960px, calc(100vw - 32px)); margin: 0 auto; }
+.app-shell { width: min(980px, calc(100vw - 32px)); margin: 0 auto; }
 .app-hero { padding: 8px 4px 4px; }
 .app-kicker {
-    margin: 0 0 6px; font-size: 11px; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase; color: #0369a1;
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0369a1;
 }
 .app-hero h1 {
-    margin: 0; font-size: clamp(30px, 5vw, 44px);
-    line-height: 0.95; letter-spacing: -0.04em; color: #0f172a;
+  margin: 0;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1;
+  color: #0f172a;
 }
-.app-subtitle { max-width: 680px; margin: 10px 0 0; color: #475569; font-size: 15px; }
+.app-subtitle { max-width: 720px; margin: 10px 0 0; color: #475569; font-size: 15px; }
 .upload-shell,
-.chat-shell {
-    background: rgba(255,255,255,0.82); backdrop-filter: blur(10px);
-    border: 1px solid rgba(148,163,184,0.22); border-radius: 18px;
-    box-shadow: 0 16px 40px rgba(15,23,42,0.06);
+.chat-shell,
+.render-shell {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
 }
 .upload-shell { margin-top: 12px; margin-bottom: 14px; }
-.chat-shell { padding: 10px; }
+.chat-shell,
+.render-shell { padding: 10px; }
 .composer-row { align-items: end; gap: 10px; margin-top: 10px; }
-.openui-debug { margin-top: 10px; border-top: 1px solid #e5e7eb; padding-top: 10px; }
-.openui-debug summary { cursor: pointer; font-size: 12px; font-weight: 600; color: #475569; }
-.openui-debug ul { margin: 10px 0 8px; padding-left: 18px; color: #475569; }
-.openui-debug pre { margin:0; padding:12px; overflow:auto; border-radius:10px; background:#f8fafc; border:1px solid #e2e8f0; font-size:12px; }
-.openui-render { display: grid; gap: 12px; }
-.openui-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
-.openui-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; background:#fff; box-shadow:0 8px 24px rgba(15,23,42,0.04); }
-.openui-card h3 { margin: 0 0 10px; font-size: 15px; font-weight: 600; color: #0f172a; }
-.openui-card p  { margin: 0; color: #374151; font-size: 14px; }
-.openui-notice { border-radius: 12px; padding: 12px 16px; font-size: 14px; }
-.openui-notice strong { display: block; margin-bottom: 4px; font-weight: 600; }
-.openui-notice p { margin: 0; }
-.openui-info    { border: 1px solid #bae6fd; background: #f0f9ff; color: #0c4a6e; }
-.openui-success { border: 1px solid #bbf7d0; background: #f0fdf4; color: #14532d; }
-.openui-warning { border: 1px solid #fde68a; background: #fffbeb; color: #78350f; }
-.openui-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; margin-top: 10px; }
-.openui-metric { border:1px solid #e5e7eb; border-radius:10px; padding:12px; background:#f9fafb; }
-.openui-metric span   { display:block; color:#6b7280; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; }
-.openui-metric strong { display:block; margin-top:4px; font-size:22px; color:#111827; font-weight:700; }
-.openui-table-wrap { max-height: 320px; overflow: auto; margin-top: 6px; }
-.openui-table-wrap table { border-collapse: collapse; width: 100%; font-size: 13px; }
-.openui-table-wrap th,
-.openui-table-wrap td { border-bottom: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
-.openui-table-wrap th { background:#f9fafb; position:sticky; top:0; font-weight:600; font-size:12px; color:#374151; }
-.openui-tabs { margin-top: 6px; }
-.openui-tab-nav { display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap; }
-.openui-tab-pill { padding:4px 12px; border-radius:999px; background:#f1f5f9; font-size:12px; font-weight:600; color:#475569; cursor:pointer; border:1px solid #e2e8f0; }
-.openui-tab-pill.openui-tab-active { background:#0ea5e9; color:#fff; border-color:#0ea5e9; }
-.openui-tab-panel--hidden { display: none; }
-.openui-chart-card { gap: 12px; }
-.openui-chart-meta { color:#6b7280; margin:0 0 12px; font-size:12px; }
-.openui-chart-grid { display: grid; gap: 8px; }
-.openui-chart-row { display:grid; grid-template-columns:minmax(80px,120px) minmax(0,1fr) minmax(44px,64px); gap:10px; align-items:center; }
-.openui-chart-label, .openui-chart-value { font-size:12px; color:#374151; }
-.openui-chart-track { height:14px; border-radius:999px; background:#e5e7eb; overflow:hidden; }
-.openui-chart-bar { height:100%; border-radius:999px; background:linear-gradient(90deg,#2563eb 0%,#0ea5e9 100%); }
-@media (max-width: 720px) {
-    .app-shell { width: min(100vw - 20px, 960px); }
-    .openui-chart-row { grid-template-columns: minmax(64px,88px) minmax(0,1fr) minmax(40px,52px); gap:8px; }
-}
+.raw-openui textarea { font-family: Consolas, monospace; font-size: 12px; }
 </style>
 """
