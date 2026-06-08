@@ -1,6 +1,8 @@
-# smolnalysis Gradio App
+# smolnalysis App
 
-This folder contains the first MVP Gradio app for `smolnalysis`.
+This folder contains the current MVP app for `smolnalysis`.
+
+The app now uses Gradio Server Mode instead of a traditional Gradio Blocks interface. Gradio runs the Python backend and API endpoints; the page at `/` is a bundled React frontend using OpenUI's fullscreen chat component and `openuiChatLibrary`.
 
 ## Local Run
 
@@ -9,52 +11,66 @@ From the repository root:
 ```bash
 uv venv
 uv sync
-uv run gradio app/app.py
+npm install
+npm run build:openui-chat
+uv run python app/app.py
 ```
 
-If you change `app/frontend/openui-renderer.jsx`, rebuild the bundled OpenUI renderer:
+Then open [http://127.0.0.1:7860/](http://127.0.0.1:7860/).
+
+If you change `app/frontend/openui-chat.jsx` or `app/frontend/openui-chat.css`, rebuild the bundled OpenUI chat frontend:
 
 ```bash
-npm install
-npm run build:openui-renderer
+npm run build:openui-chat
 ```
 
 ## Hugging Face Space
 
-For a later Hugging Face Space, use this folder as the Space root. The Space needs:
+For a later Hugging Face Space, use this folder as the Space root or copy this app structure into the Space root. The Space needs:
 
 - `app.py`
 - `requirements.txt`
-- optional files in `examples/`
+- `openui_support.py`
+- files in `examples/`
+- built assets in `static/`
 
 ## MVP Features
 
-- CSV upload
-- Dataset-aware chat interaction
-- Single Gradio `Chatbot` with OpenUI-rendered assistant responses in the conversation history
+- Fullscreen OpenUI chat UI
+- Gradio `Server` backend with custom FastAPI routes
+- Dataset-aware mocked chat interaction using `examples/demo_cities.csv`
 - Mocked deterministic OpenUI-Lang backend contract
-- OpenUI-Lang validation and fallback rendering
-- OpenUI's native React `<Renderer />` hosted inside a Gradio 6 `gr.HTML` component
+- OpenUI's native `FullScreen` chat component
+- OpenUI's chat-optimized `openuiChatLibrary`
+- Streaming `/api/chat` route that adapts Python responses to the OpenUI chat stream
+- Public Gradio API function at `/gradio_api/call/respond`
 
 ## OpenUI Chat Architecture
 
-The Gradio app keeps OpenUI support modular:
+The app keeps OpenUI support modular:
 
-- `app.py` owns the Gradio interface, dataset upload, and single chat history.
-- `openui_support.py` defines the message schema, backend orchestration, OpenUI-Lang generation, validation, parsing, and rendering adapter.
-- `app/frontend/openui-renderer.jsx` defines the OpenUI component library and mounts OpenUI's React `<Renderer />`.
-- `app/static/openui-renderer.js` is the bundled browser asset loaded by Gradio.
-- The backend emits line-oriented OpenUI-Lang with a `root = Root([...])` entry point.
-- The parser validates supported components before rendering.
-- Each assistant message is a Gradio HTML component that passes raw OpenUI-Lang into OpenUI's bundled React renderer.
-- Later, an LLM can replace the mock generator without changing the renderer contract.
+- `app.py` owns the Gradio `Server`, serves the frontend, and exposes `/api/chat` plus the Gradio `respond` API.
+- `openui_support.py` defines deterministic mock OpenUI-Lang responses for the demo dataset.
+- `app/frontend/openui-chat.jsx` mounts OpenUI's `FullScreen` chat component.
+- `app/frontend/openui-chat.css` contains the app-specific frontend styling.
+- `app/static/openui-chat.js` and `app/static/openui-chat.css` are the bundled browser assets loaded by `/`.
+- The current chat contract emits line-oriented OpenUI-Lang with a `root = Card([...])` entry point for `openuiChatLibrary`.
+- Later, an LLM can replace the mock generator while keeping the Gradio server and OpenUI chat contract.
+
+The earlier embedded renderer prototype is still represented by:
+
+- `app/frontend/openui-renderer.jsx`
+- `app/static/openui-renderer.js`
+- `OpenUIRenderer` / `openui_component()` in `openui_support.py`
+
+That path rendered OpenUI inside a Gradio `Chatbot`. The current main app renders the full OpenUI chat frontend instead.
 
 ## OpenUI Chat Examples
 
-Use `app/examples/demo_cities.csv` and try:
+The current server uses `app/examples/demo_cities.csv` and supports prompts like:
 
-- `Summarize this dataset` -> metric cards and a sample table
+- `Summarize this dataset` -> summary list and sample table
 - `Show a bar chart of population by city` -> rendered bar chart
-- `Show a histogram of median_age` -> rendered histogram
+- `Show a histogram of median_age` -> bucketed bar chart
 - `List the columns and missing values` -> schema table
-- `Return invalid OpenUI for fallback testing` -> friendly fallback instead of a crash
+- `Return invalid OpenUI for fallback testing` -> mocked warning/debug response

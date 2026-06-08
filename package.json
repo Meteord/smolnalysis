@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build:openui-renderer": "esbuild app/frontend/openui-renderer.jsx --bundle --format=iife --global-name=SmolnalysisOpenUI --outfile=app/static/openui-renderer.js"
+    "build:openui-renderer": "esbuild app/frontend/openui-renderer.jsx --bundle --format=iife --global-name=SmolnalysisOpenUI --outfile=app/static/openui-renderer.js",
+    "build:openui-chat": "esbuild app/frontend/openui-chat.jsx --bundle --format=iife --global-name=SmolnalysisOpenUIChat --outfile=app/static/openui-chat.js"
   },
   "dependencies": {
     "@openuidev/react-lang": "^0.2.6",

@@ -1,0 +1,28 @@
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f6f7f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openui-shell-container {
+  height: 100vh;
+}
+
+.openui-shell-sidebar {
+  border-right: 1px solid rgba(31, 41, 55, 0.08);
+}
+
+.openui-shell-thread-container {
+  background:
+    radial-gradient(circle at 8% 0%, rgba(14, 165, 233, 0.08), transparent 28rem),
+    linear-gradient(180deg, #fbfcfd 0%, #eef2f5 100%);
+}

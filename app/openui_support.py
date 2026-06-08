@@ -193,6 +193,144 @@ def generate_openui_response(df: pd.DataFrame | None, prompt: str) -> ChatTurn:
     return ChatTurn(prompt, steps, openui_lang, "Rendered a dataset summary.")
 
 
+def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
+    prompt = prompt.strip()
+    lower_prompt = prompt.casefold()
+
+    if df is None or df.empty:
+        return "\n".join(
+            [
+                "root = Card([header, callout, followups])",
+                'header = CardHeader("smolnalysis", "OpenUI fullscreen chat")',
+                'callout = Callout("info", "Ready for data questions", "Ask for a summary, schema, bar chart, histogram, or mocked fallback. This server-mode frontend is rendered by OpenUI, while Python serves the responses.")',
+                "followups = FollowUpBlock([f1, f2, f3])",
+                'f1 = FollowUpItem("Summarize this dataset")',
+                'f2 = FollowUpItem("Show a bar chart of population by city")',
+                'f3 = FollowUpItem("List the columns and missing values")',
+            ]
+        )
+
+    rows = len(df)
+    columns = len(df.columns)
+    missing = int(df.isna().sum().sum())
+    duplicates = int(df.duplicated().sum())
+    numeric_columns = _numeric_columns(df)
+    text_columns = _text_columns(df)
+    selected_numeric = _find_column(prompt, numeric_columns) or (numeric_columns[0] if numeric_columns else None)
+    selected_label = _find_column(prompt, text_columns) or (text_columns[0] if text_columns else None)
+
+    if "invalid openui" in lower_prompt or "fallback" in lower_prompt:
+        return "\n".join(
+            [
+                "root = Card([header, callout, code])",
+                'header = CardHeader("Fallback path", "Mocked invalid OpenUI request")',
+                'callout = Callout("warning", "Renderer guard", "The old prototype used a custom fallback renderer. The fullscreen chat keeps this as a mocked warning response for now.")',
+                f'code = CodeBlock("openui-lang", {_json_arg("root = Nope([missing])")})',
+            ]
+        )
+
+    if any(term in lower_prompt for term in ["columns", "schema", "fields"]):
+        rows_by_column = _build_column_rows(df)
+        return "\n".join(
+            [
+                "root = Card([header, table, followups])",
+                f'header = CardHeader("Dataset schema", "{columns:,} columns detected")',
+                f'c1 = Col("Column", {_json_arg([row["column"] for row in rows_by_column])}, "string")',
+                f'c2 = Col("Type", {_json_arg([row["dtype"] for row in rows_by_column])}, "string")',
+                f'c3 = Col("Missing", {_json_arg([row["missing"] for row in rows_by_column])}, "number")',
+                f'c4 = Col("Unique", {_json_arg([row["unique"] for row in rows_by_column])}, "number")',
+                "table = Table([c1, c2, c3, c4])",
+                "followups = FollowUpBlock([f1, f2])",
+                'f1 = FollowUpItem("Summarize this dataset")',
+                'f2 = FollowUpItem("Show a chart")',
+            ]
+        )
+
+    if any(term in lower_prompt for term in ["histogram", "distribution", "spread"]):
+        if not selected_numeric:
+            return "\n".join(
+                [
+                    "root = Card([header, callout])",
+                    'header = CardHeader("Distribution", "No numeric column found")',
+                    'callout = Callout("warning", "No histogram available", "This dataset does not include numeric columns that can be bucketed.")',
+                ]
+            )
+
+        values = [float(value) for value in df[selected_numeric].dropna().head(120).tolist()]
+        if not values:
+            values = [0]
+        low = min(values)
+        high = max(values)
+        span = high - low or 1
+        bucket_count = 8
+        counts = [0] * bucket_count
+        for value in values:
+            bucket = min(bucket_count - 1, int(((value - low) / span) * bucket_count))
+            counts[bucket] += 1
+        labels = [f"{low + (span / bucket_count) * i:.1f}" for i in range(bucket_count)]
+        return "\n".join(
+            [
+                "root = Card([header, chart, note, followups])",
+                f'header = CardHeader("Distribution", "Histogram for {selected_numeric}")',
+                f'series = Series("Count", {_json_arg(counts)})',
+                f'chart = BarChart({_json_arg(labels)}, [series], "grouped", "{selected_numeric}", "Rows")',
+                f'note = TextContent("Bucketed {len(values):,} numeric values from the uploaded/demo dataset.", "small")',
+                "followups = FollowUpBlock([f1, f2])",
+                'f1 = FollowUpItem("List the columns")',
+                'f2 = FollowUpItem("Summarize this dataset")',
+            ]
+        )
+
+    if any(term in lower_prompt for term in ["plot", "chart", "bar", "compare", "visualize", "show"]):
+        if not selected_numeric:
+            return "\n".join(
+                [
+                    "root = Card([header, callout])",
+                    'header = CardHeader("Chart", "No numeric column found")',
+                    'callout = Callout("warning", "No chart available", "I need at least one numeric column for a chart.")',
+                ]
+            )
+
+        chart_rows = df[[column for column in [selected_label, selected_numeric] if column]].dropna().head(12)
+        labels = [str(value) for value in (chart_rows[selected_label].tolist() if selected_label else range(1, len(chart_rows) + 1))]
+        values = [float(value) for value in chart_rows[selected_numeric].tolist()]
+        return "\n".join(
+            [
+                "root = Card([header, chart, followups])",
+                f'header = CardHeader("Bar chart", "{selected_numeric} by {selected_label or "row"}")',
+                f'series = Series("{selected_numeric}", {_json_arg(values)})',
+                f'chart = BarChart({_json_arg(labels)}, [series], "grouped", "{selected_label or "Row"}", "{selected_numeric}")',
+                "followups = FollowUpBlock([f1, f2])",
+                'f1 = FollowUpItem("Show a histogram")',
+                'f2 = FollowUpItem("List the columns")',
+            ]
+        )
+
+    sample = _records(df, limit=6)
+    sample_columns = list(sample[0].keys())[:5] if sample else []
+    table_lines = [
+        f'c{index + 1} = Col({_json_arg(column)}, {_json_arg([row.get(column) for row in sample])}, "string")'
+        for index, column in enumerate(sample_columns)
+    ]
+    return "\n".join(
+        [
+            "root = Card([header, metrics, table, followups])",
+            f'header = CardHeader("Dataset summary", "{rows:,} rows x {columns:,} columns")',
+            f'metrics = ListBlock([m1, m2, m3, m4], "number")',
+            f'm1 = ListItem("Rows", "{rows:,} records")',
+            f'm2 = ListItem("Columns", "{columns:,} fields")',
+            f'm3 = ListItem("Missing cells", "{missing:,}")',
+            f'm4 = ListItem("Duplicate rows", "{duplicates:,}")',
+            *table_lines,
+            f'table = Table([{", ".join(f"c{index + 1}" for index in range(len(sample_columns))) }])',
+            "followups = FollowUpBlock([f1, f2, f3])",
+            'f1 = FollowUpItem("Show a bar chart")',
+            'f2 = FollowUpItem("Show a histogram")',
+            'f3 = FollowUpItem("List the columns")',
+        ]
+    )
+
+
 def _split_args(args_text: str) -> list[str]:
     args: list[str] = []
     start = 0
