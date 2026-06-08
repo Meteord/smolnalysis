@@ -150592,7 +150592,7 @@ ${verifyLines.join("\n")}`;
 
   // app/frontend/openui-chat.jsx
   var CKAN_STORAGE_KEY = "smolnalysis.ckanEndpoint";
-  function CkanEndpointPanel() {
+  function CkanEndpointPanel({ onConnectionChange }) {
     const [defaultEndpoint, setDefaultEndpoint] = (0, import_react89.useState)("https://opendata.muenchen.de/");
     const [endpoint, setEndpoint] = (0, import_react89.useState)("https://opendata.muenchen.de/");
     const [status, setStatus] = (0, import_react89.useState)({ ok: false, message: "Not connected." });
@@ -150630,6 +150630,7 @@ ${verifyLines.join("\n")}`;
         if (data.ok && data.base_url) {
           setEndpoint(data.base_url);
           window.localStorage.setItem(CKAN_STORAGE_KEY, data.base_url);
+          onConnectionChange?.({ connected: true, base_url: data.base_url });
         }
       } catch {
         setStatus({ ok: false, message: "Could not contact the local CKAN connector." });
@@ -150641,6 +150642,7 @@ ${verifyLines.join("\n")}`;
       window.localStorage.removeItem(CKAN_STORAGE_KEY);
       setEndpoint(defaultEndpoint);
       setStatus({ ok: false, message: "Reset to the default CKAN endpoint." });
+      onConnectionChange?.({ connected: false, base_url: defaultEndpoint });
     };
     return /* @__PURE__ */ import_react89.default.createElement("section", { className: "ckan-panel", "aria-label": "CKAN endpoint configuration" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "ckan-panel__copy" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "ckan-panel__label" }, "CKAN endpoint"), /* @__PURE__ */ import_react89.default.createElement("span", { className: `ckan-panel__status ${status.ok ? "ckan-panel__status--ok" : ""}` }, /* @__PURE__ */ import_react89.default.createElement("span", { "aria-hidden": "true" }), status.message)), /* @__PURE__ */ import_react89.default.createElement("div", { className: "ckan-panel__controls" }, /* @__PURE__ */ import_react89.default.createElement(
       "input",
@@ -150685,20 +150687,31 @@ ${verifyLines.join("\n")}`;
     };
     return /* @__PURE__ */ import_react89.default.createElement("section", { className: "llm-panel", "aria-label": "LLM role configuration" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-panel__header" }, /* @__PURE__ */ import_react89.default.createElement("div", null, /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-panel__label" }, "LLM roles"), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-panel__message" }, message2)), /* @__PURE__ */ import_react89.default.createElement("button", { className: "ckan-panel__button ckan-panel__button--primary", type: "button", onClick: validate2, disabled: isValidating }, isValidating ? "Validating" : "Validate")), /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-panel__roles" }, roles.map((role) => /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-role", key: role.key }, /* @__PURE__ */ import_react89.default.createElement("span", { className: `llm-role__dot llm-role__dot--${role.validation_status || "missing"}`, "aria-hidden": "true" }), /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-role__body" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__name" }, role.label), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__meta" }, role.model || "No model", role.base_url_display ? ` \xB7 ${role.base_url_display}` : ""), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__status" }, role.message))))));
   }
-  function BackendConfigHeader() {
-    return /* @__PURE__ */ import_react89.default.createElement("div", { className: "backend-config" }, /* @__PURE__ */ import_react89.default.createElement(CkanEndpointPanel, null), /* @__PURE__ */ import_react89.default.createElement(LlmRolesPanel, null));
+  function BackendConfigHeader({ onCkanConnectionChange }) {
+    return /* @__PURE__ */ import_react89.default.createElement("div", { className: "backend-config" }, /* @__PURE__ */ import_react89.default.createElement(CkanEndpointPanel, { onConnectionChange: onCkanConnectionChange }), /* @__PURE__ */ import_react89.default.createElement(LlmRolesPanel, null));
   }
   function App() {
+    const [ckanConnection, setCkanConnection] = (0, import_react89.useState)({ connected: false, base_url: "https://opendata.muenchen.de/" });
+    const processMessage = ({ threadId, messages, abortController }) => fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        threadId,
+        messages,
+        ckan: ckanConnection
+      }),
+      signal: abortController.signal
+    });
     return /* @__PURE__ */ import_react89.default.createElement(
       FullScreen,
       {
-        apiUrl: "/api/chat",
+        processMessage,
         streamProtocol: openAIAdapter(),
         componentLibrary: openuiChatLibrary,
         agentName: "smolnalysis",
         logoUrl: "/static/smolnalysis-mark.svg",
         showAssistantLogo: false,
-        threadHeader: /* @__PURE__ */ import_react89.default.createElement(BackendConfigHeader, null),
+        threadHeader: /* @__PURE__ */ import_react89.default.createElement(BackendConfigHeader, { onCkanConnectionChange: setCkanConnection }),
         welcomeMessage: {
           title: "smolnalysis",
           description: "Ask about the demo dataset and receive mocked OpenUI-Lang responses."
