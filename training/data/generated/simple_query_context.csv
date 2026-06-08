@@ -1,0 +1,247 @@
+package_name,package_title,resource_name,resource_format,columns,has_example_row,description
+indikatorenatlas-bevoelkerung-wohndauer-muenchen-83r65mct,Indikatorenatlas: Bevölkerung - Wohndauer München,Wohndauer München,csv,10,True,Indikatorenatlas: Bevölkerung - Wohndauer München
+solarpotenzial_globalstrahlung_p_02,Solarpotenzialanalyse 2018 der Landeshauptstadt München,Metadaten (XML),xml,20,True,"Basierend auf einem 3D-Modell, stellt die Solarpotenzialanalyse auf Grundlage von Ausrichtung, Neigung und Verschattung die einfallende Globalstrahlung in kWh/m2a auf alle Dachflächen dar. Die Analyse berücksichtigt Formparameter der Dachfläche und Denkmalschutzbelange. Die Solarpotenzialanalyse dient zur Erstinformation über vorhandene Solarpotenziale für interessierte Bürgerinnen und Bürger. Das Referat für Stadtplanung und Bauordnung stellt die Daten mit der erforderlichen Sorgfalt bereit. Eine Gewähr für die Richtigkeit, Vollzähligkeit, Maßhaltigkeit und Genauigkeit der überlassenen Daten wird nicht übernommen. Insoweit besteht auch keine Haftung für unrichtige Angaben, Übertragungsfehler, Folgeschäden oder sonstige Schäden jeglicher Art."
+abfall_sonstiges_opendata,Sonstige Abfallentsorgungsanlagen (Opendata),Metadaten (XML),xml,20,True,Sonstige Abfallentsorgungsanlagen
+abfall_sonstiges_opendata,Sonstige Abfallentsorgungsanlagen (Opendata),WFS (GML),xml,78,True,Sonstige Abfallentsorgungsanlagen
+abfall_sonstiges_opendata,Sonstige Abfallentsorgungsanlagen (Opendata),WFS (CSV),csv,21,True,Sonstige Abfallentsorgungsanlagen
+bestand_sbh_opendata,Sozialbürgerhaus,Metadaten (XML),xml,20,True,Im SBH werden die bürgerorientierten sozialen Dienstleistungen unter einem Dach und einer gemeinsamen regionalen Zuständigkeit angeboten. Das SBH besteht aus dem SBH Soziales und dem SBH Arbeit (JC).
+bestand_sbh_opendata,Sozialbürgerhaus,WFS (GML),xml,63,True,Im SBH werden die bürgerorientierten sozialen Dienstleistungen unter einem Dach und einer gemeinsamen regionalen Zuständigkeit angeboten. Das SBH besteht aus dem SBH Soziales und dem SBH Arbeit (JC).
+bestand_sbh_opendata,Sozialbürgerhaus,WFS (CSV),csv,17,True,Im SBH werden die bürgerorientierten sozialen Dienstleistungen unter einem Dach und einer gemeinsamen regionalen Zuständigkeit angeboten. Das SBH besteht aus dem SBH Soziales und dem SBH Arbeit (JC).
+abfall_gewerbemisch_opendata,Anlagen zur Sortierung von Baustellen- und Gewerbemischabfällen (Opendata),Metadaten (XML),xml,20,True,Anlagen zur Sortierung von Baustellen- und Gewerbemischabfällen
+abfall_gewerbemisch_opendata,Anlagen zur Sortierung von Baustellen- und Gewerbemischabfällen (Opendata),WFS (GML),xml,78,True,Anlagen zur Sortierung von Baustellen- und Gewerbemischabfällen
+abfall_gewerbemisch_opendata,Anlagen zur Sortierung von Baustellen- und Gewerbemischabfällen (Opendata),WFS (CSV),csv,21,True,Anlagen zur Sortierung von Baustellen- und Gewerbemischabfällen
+awm_container_barrierefrei,Barrierefreie Container für Altglas,WFS (GML),xml,39,True,"Der Dienst liefert einen Überblick über die Standorte der barrierefreien Container für Altglas. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die jeweilige Wertstoffinsel zuständige Firma."
+awm_container_barrierefrei,Barrierefreie Container für Altglas,WFS (CSV),csv,8,True,"Der Dienst liefert einen Überblick über die Standorte der barrierefreien Container für Altglas. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die jeweilige Wertstoffinsel zuständige Firma."
+awm_container_barrierefrei,Barrierefreie Container für Altglas,Metadaten (XML),xml,373,True,"Der Dienst liefert einen Überblick über die Standorte der barrierefreien Container für Altglas. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die jeweilige Wertstoffinsel zuständige Firma."
+abfall_betrieb_opendata,Abfallentsorgungsanlagen der Landeshauptstadt München,Metadaten (XML),xml,24,True,"Anlagen zur Behandlung, Lagerung und Ablagerung von Abfällen"
+abfall_betrieb_opendata,Abfallentsorgungsanlagen der Landeshauptstadt München,WFS (GML),xml,78,True,"Anlagen zur Behandlung, Lagerung und Ablagerung von Abfällen"
+abfall_betrieb_opendata,Abfallentsorgungsanlagen der Landeshauptstadt München,WFS (CSV),csv,21,True,"Anlagen zur Behandlung, Lagerung und Ablagerung von Abfällen"
+vollst_pflegeeinrichtung_opendata,Vollstationäre Pflegeeinrichtungen,Metadaten (XML),xml,20,True,Standorte und Adressen der vollstationären Pflegeeinrichtungen
+vollst_pflegeeinrichtung_opendata,Vollstationäre Pflegeeinrichtungen,WFS (GML),xml,48,True,Standorte und Adressen der vollstationären Pflegeeinrichtungen
+vollst_pflegeeinrichtung_opendata,Vollstationäre Pflegeeinrichtungen,WFS (CSV),csv,15,True,Standorte und Adressen der vollstationären Pflegeeinrichtungen
+abfall_papier_opendata,Anlagen zur Lagerung und Behandlung von Altpapier (Opendata),Metadaten (XML),xml,20,True,Anlagen zur Lagerung und Behandlung von Altpapier
+abfall_papier_opendata,Anlagen zur Lagerung und Behandlung von Altpapier (Opendata),WFS (GML),xml,78,True,Anlagen zur Lagerung und Behandlung von Altpapier
+abfall_papier_opendata,Anlagen zur Lagerung und Behandlung von Altpapier (Opendata),WFS (CSV),csv,21,True,Anlagen zur Lagerung und Behandlung von Altpapier
+abfall_elektronik_opendata,Anlagen zur Lagerung und Behandlung von Elektronikschrott (Opendata),Metadaten (XML),xml,20,True,Anlagen zur Lagerung und Behandlung von Elektronikschrott
+abfall_elektronik_opendata,Anlagen zur Lagerung und Behandlung von Elektronikschrott (Opendata),WFS (GML),xml,78,True,Anlagen zur Lagerung und Behandlung von Elektronikschrott
+abfall_elektronik_opendata,Anlagen zur Lagerung und Behandlung von Elektronikschrott (Opendata),WFS (CSV),csv,21,True,Anlagen zur Lagerung und Behandlung von Elektronikschrott
+awm_container_opendata,Wertstoffinseln in München,WFS (GML),xml,48,True,"Die Stadtkarte liefert einen Überblick über die Standorte der Wertstoffinseln mit den AWM-Altkleidercontainern und den Wertstoffcontainern für Glas und Verpackungen aus Kunststoff und Metall. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas und Verpackungen, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die jeweilige Wertstoffinsel zuständige Firma."
+awm_container_opendata,Wertstoffinseln in München,WFS (CSV),csv,11,True,"Die Stadtkarte liefert einen Überblick über die Standorte der Wertstoffinseln mit den AWM-Altkleidercontainern und den Wertstoffcontainern für Glas und Verpackungen aus Kunststoff und Metall. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas und Verpackungen, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die jeweilige Wertstoffinsel zuständige Firma."
+awm_container_opendata,Wertstoffinseln in München,Metadaten (XML),xml,373,True,"Die Stadtkarte liefert einen Überblick über die Standorte der Wertstoffinseln mit den AWM-Altkleidercontainern und den Wertstoffcontainern für Glas und Verpackungen aus Kunststoff und Metall. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas und Verpackungen, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die jeweilige Wertstoffinsel zuständige Firma."
+bestand_asz_opendata,Alten- und Servicezentrum,Metadaten (XML),xml,20,True,"Standorte und Adressen der Alten-und Service-Zentren.<br> für weitere Informationen siehe <a target=""_blank"" href=""stadt.muenchen.de/infos/asz-alten-service-zentrum.html"">Sozialreferat München</a>"
+bestand_asz_opendata,Alten- und Servicezentrum,WFS (GML),xml,60,True,"Standorte und Adressen der Alten-und Service-Zentren.<br> für weitere Informationen siehe <a target=""_blank"" href=""stadt.muenchen.de/infos/asz-alten-service-zentrum.html"">Sozialreferat München</a>"
+bestand_asz_opendata,Alten- und Servicezentrum,WFS (CSV),csv,15,True,"Standorte und Adressen der Alten-und Service-Zentren.<br> für weitere Informationen siehe <a target=""_blank"" href=""stadt.muenchen.de/infos/asz-alten-service-zentrum.html"">Sozialreferat München</a>"
+abfall_kompost_opendata,"Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden (Opendata)",Metadaten (XML),xml,20,True,"Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden"
+abfall_kompost_opendata,"Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden (Opendata)",WFS (GML),xml,78,True,"Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden"
+abfall_kompost_opendata,"Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden (Opendata)",WFS (CSV),csv,21,True,"Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden"
+lsa_opendata,Lichtsignalanlagen,Metadaten (XML),xml,20,True,Lichtsignalanlagen
+lsa_opendata,Lichtsignalanlagen,WFS (GML),xml,33,True,Lichtsignalanlagen
+lsa_opendata,Lichtsignalanlagen,WFS (CSV),csv,9,True,Lichtsignalanlagen
+gebaeude_waermedichte_o_geb_03,Wärmedichte,Metadaten (XML),xml,20,True,"Die Wärmedichte ist ein Indikator für die Realisierbarkeit von netzgebundener Wärmeversorgung. Gebiete mit hohen Wärmedichten können sich gut für Fernwärmenetze eignen. Niedrige Wärmedichten eigenen sich besser für (kleine) Nahwärmenetze und dezentrale Wärmeversorgung. Das Referat für Stadtplanung und Bauordnung stellt die Daten mit der erforderlichen Sorgfalt bereit. Eine Gewähr für die Richtigkeit, Vollzähligkeit, Maßhaltigkeit und Genauigkeit der überlassenen Daten wird nicht übernommen. Insoweit besteht auch keine Haftung für unrichtige Angaben, Übertragungsfehler, Folgeschäden oder sonstige Schäden jeglicher Art."
+bestand_nachbarschaftstreffs_opendata,Nachbarschaftstreffs,Metadaten (XML),xml,20,True,"Ein Nachbarschaftstreff ist ein Treffpunkt und offener Raum für alle Menschen, die im Viertel leben. Hier werden Ideen ausgetauscht und soziale oder kulturelle Projekte zusammen umgesetzt."
+bestand_nachbarschaftstreffs_opendata,Nachbarschaftstreffs,WFS (GML),xml,33,True,"Ein Nachbarschaftstreff ist ein Treffpunkt und offener Raum für alle Menschen, die im Viertel leben. Hier werden Ideen ausgetauscht und soziale oder kulturelle Projekte zusammen umgesetzt."
+bestand_nachbarschaftstreffs_opendata,Nachbarschaftstreffs,WFS (CSV),csv,6,True,"Ein Nachbarschaftstreff ist ein Treffpunkt und offener Raum für alle Menschen, die im Viertel leben. Hier werden Ideen ausgetauscht und soziale oder kulturelle Projekte zusammen umgesetzt."
+awm_wertstoffhoefe_opendata,Wertstoffhöfe der Landeshauptstadt München,WFS (CSV),csv,5,True,"An den Wertstoffhöfen können Sie sperrige Abfälle, Problemstoffe und Grünschnitt in haushaltsüblicher Art und Menge gebührenfrei abgeben. Größere Mengen nehmen gegen eine Gebühr die Wertstoffhöfe Plus in Freimann und Langwied an. Bitte sortieren Sie vor. Damit erleichtern Sie sich die Abgabe vor Ort und verringern die Abladezeit. <br> Weitere Informationen unter <a target=""_blank"" href=""www.awm-muenchen.de/entsorgen/wertstoffhoefe"">Wertstoffhöfe München</a>"
+awm_wertstoffhoefe_opendata,Wertstoffhöfe der Landeshauptstadt München,WFS (GML),xml,30,True,"An den Wertstoffhöfen können Sie sperrige Abfälle, Problemstoffe und Grünschnitt in haushaltsüblicher Art und Menge gebührenfrei abgeben. Größere Mengen nehmen gegen eine Gebühr die Wertstoffhöfe Plus in Freimann und Langwied an. Bitte sortieren Sie vor. Damit erleichtern Sie sich die Abgabe vor Ort und verringern die Abladezeit. <br> Weitere Informationen unter <a target=""_blank"" href=""www.awm-muenchen.de/entsorgen/wertstoffhoefe"">Wertstoffhöfe München</a>"
+abfall_auto_metall_opendata,"Anlagen zur Lagerung und Behandlung von Autowracks, Schrotten und Metallen (Opendata)",Metadaten (XML),xml,20,True,"Anlagen zur Lagerung und Behandlung von Autowracks, Schrotten und Metallen"
+abfall_auto_metall_opendata,"Anlagen zur Lagerung und Behandlung von Autowracks, Schrotten und Metallen (Opendata)",WFS (GML),xml,78,True,"Anlagen zur Lagerung und Behandlung von Autowracks, Schrotten und Metallen"
+abfall_auto_metall_opendata,"Anlagen zur Lagerung und Behandlung von Autowracks, Schrotten und Metallen (Opendata)",WFS (CSV),csv,21,True,"Anlagen zur Lagerung und Behandlung von Autowracks, Schrotten und Metallen"
+maerkte,Märkte der Landeshauptstadt München,WFS (GML),xml,46,True,"Die großen Münchner Märkte und Wochenmärkte. Neben dem Viktualienmarkt gibt es in nahezu jedem Münchner Stadtteil Wochenmärkte, zudem bieten verschiedene Bauernmärkte in München eine ganze Palette an Produkten aus der Region an. Der Dienst wird als WMS und WFS angeboten."
+maerkte,Märkte der Landeshauptstadt München,WFS (CSV),csv,12,True,"Die großen Münchner Märkte und Wochenmärkte. Neben dem Viktualienmarkt gibt es in nahezu jedem Münchner Stadtteil Wochenmärkte, zudem bieten verschiedene Bauernmärkte in München eine ganze Palette an Produkten aus der Region an. Der Dienst wird als WMS und WFS angeboten."
+maerkte,Märkte der Landeshauptstadt München,Metadaten (XML),xml,22,True,"Die großen Münchner Märkte und Wochenmärkte. Neben dem Viktualienmarkt gibt es in nahezu jedem Münchner Stadtteil Wochenmärkte, zudem bieten verschiedene Bauernmärkte in München eine ganze Palette an Produkten aus der Region an. Der Dienst wird als WMS und WFS angeboten."
+erlaeuterung_strassennamen,Informationen zu Straßennamen,Metadaten (XML),xml,31,True,"Informationen über die Namen von Straßen und Plätzen ab 1996: Amtliche Namenserläuterung, Benennungsdatum, weiblich/männlich/sächlich, Stadtbezirk"
+erlaeuterung_strassennamen,Informationen zu Straßennamen,WFS (GML),xml,32,True,"Informationen über die Namen von Straßen und Plätzen ab 1996: Amtliche Namenserläuterung, Benennungsdatum, weiblich/männlich/sächlich, Stadtbezirk"
+erlaeuterung_strassennamen,Informationen zu Straßennamen,WFS (CSV),csv,8,True,"Informationen über die Namen von Straßen und Plätzen ab 1996: Amtliche Namenserläuterung, Benennungsdatum, weiblich/männlich/sächlich, Stadtbezirk"
+baut_strassenabschnitte_wu,Straßennetzgraf Baureferat Tiefbau,WFS (GML),xml,32,True,"Der Straßennetzgraf der Hauptabteilung Tiefbau ist ein Linienthema, das Straßenzüge der Landeshauptstadt München durch ein Netzwerk abbildet. Berücksichtigt werden in dieser Kartendarstellung nur Straßen bzw. Straßenabschnitte, die nach Bayerischem Straßen- und Wegegesetz (BayStrWG) sowie dem Bundesfernstraßengesetz (FStrG) gewidmet und in der Baulast der Landeshauptstadt München und somit in der Zuständigkeit der Hauptabteilung Tiefbau sind. Die Beschriftung setzt sich aus den folgenden Komponenten zusammen: Straßenschlüssel || Abschnittsnummer || Länge Beispiel: 5666 || 100 || 114m Definition: Straßenschlüssel: Jede Straße der Landeshauptstadt München erhält eine eindeutige Nummer. Für die Vergabe der Nummern ist das Kommunalreferat zuständig. Abschnittsnummer: Eindeutige Nummerierung der Straßenabschnitte einer Straße. Die Abschnittsnummern werden vom Baureferat Tiefbau vergeben. Die Abschnittsnummerierung erfolgt in der Regel hausnummernaufwärts und in Hunderterschritten. Abweichungen sind systembedingt möglich. Länge: Hierbei handelt es sich um die Länge der dargestellten Linie und nicht um die tatsächliche Länge des Straßenabschnitts."
+baut_strassenabschnitte_wu,Straßennetzgraf Baureferat Tiefbau,WFS (CSV),csv,5,True,"Der Straßennetzgraf der Hauptabteilung Tiefbau ist ein Linienthema, das Straßenzüge der Landeshauptstadt München durch ein Netzwerk abbildet. Berücksichtigt werden in dieser Kartendarstellung nur Straßen bzw. Straßenabschnitte, die nach Bayerischem Straßen- und Wegegesetz (BayStrWG) sowie dem Bundesfernstraßengesetz (FStrG) gewidmet und in der Baulast der Landeshauptstadt München und somit in der Zuständigkeit der Hauptabteilung Tiefbau sind. Die Beschriftung setzt sich aus den folgenden Komponenten zusammen: Straßenschlüssel || Abschnittsnummer || Länge Beispiel: 5666 || 100 || 114m Definition: Straßenschlüssel: Jede Straße der Landeshauptstadt München erhält eine eindeutige Nummer. Für die Vergabe der Nummern ist das Kommunalreferat zuständig. Abschnittsnummer: Eindeutige Nummerierung der Straßenabschnitte einer Straße. Die Abschnittsnummern werden vom Baureferat Tiefbau vergeben. Die Abschnittsnummerierung erfolgt in der Regel hausnummernaufwärts und in Hunderterschritten. Abweichungen sind systembedingt möglich. Länge: Hierbei handelt es sich um die Länge der dargestellten Linie und nicht um die tatsächliche Länge des Straßenabschnitts."
+baut_strassenabschnitte_wu,Straßennetzgraf Baureferat Tiefbau,Metadaten (XML),xml,373,True,"Der Straßennetzgraf der Hauptabteilung Tiefbau ist ein Linienthema, das Straßenzüge der Landeshauptstadt München durch ein Netzwerk abbildet. Berücksichtigt werden in dieser Kartendarstellung nur Straßen bzw. Straßenabschnitte, die nach Bayerischem Straßen- und Wegegesetz (BayStrWG) sowie dem Bundesfernstraßengesetz (FStrG) gewidmet und in der Baulast der Landeshauptstadt München und somit in der Zuständigkeit der Hauptabteilung Tiefbau sind. Die Beschriftung setzt sich aus den folgenden Komponenten zusammen: Straßenschlüssel || Abschnittsnummer || Länge Beispiel: 5666 || 100 || 114m Definition: Straßenschlüssel: Jede Straße der Landeshauptstadt München erhält eine eindeutige Nummer. Für die Vergabe der Nummern ist das Kommunalreferat zuständig. Abschnittsnummer: Eindeutige Nummerierung der Straßenabschnitte einer Straße. Die Abschnittsnummern werden vom Baureferat Tiefbau vergeben. Die Abschnittsnummerierung erfolgt in der Regel hausnummernaufwärts und in Hunderterschritten. Abweichungen sind systembedingt möglich. Länge: Hierbei handelt es sich um die Länge der dargestellten Linie und nicht um die tatsächliche Länge des Straßenabschnitts."
+opendata_trinkwasserbrunnen,Stadtplan der städtischen Trinkbrunnen,WFS (GML),xml,25,True,Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München
+opendata_trinkwasserbrunnen,Stadtplan der städtischen Trinkbrunnen,WFS (CSV),csv,5,True,Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München
+opendata_trinkwasserbrunnen,Stadtplan der städtischen Trinkbrunnen,Metadaten (XML),xml,381,True,Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München
+wc_finder,WC-Standorte der Landeshauptstadt München,Metadaten (XML),xml,20,True,"Die Daten beinhalten die Standorte der öffentlichen Toiletten, die sich im Besitz der Landeshauptstadt München befinden. Es werden sowohl barrierefreie als auch nicht barrierefreie Toiletten dargestellt. Der Nutzer kann auf ausführliche Informationen hinsichtlich Zugänglichkeit, Ausstattung und Zustand der Toiletten zugreifen. Wir bemühen uns, die Informationen zu den Maßnahmen aktuell und inhaltlich richtig anzubieten, die Karte bietet dennoch keine Gewähr auf Richtigkeit, Vollständigkeit und Aktualität."
+wc_finder,WC-Standorte der Landeshauptstadt München,WFS (GML),xml,288,True,"Die Daten beinhalten die Standorte der öffentlichen Toiletten, die sich im Besitz der Landeshauptstadt München befinden. Es werden sowohl barrierefreie als auch nicht barrierefreie Toiletten dargestellt. Der Nutzer kann auf ausführliche Informationen hinsichtlich Zugänglichkeit, Ausstattung und Zustand der Toiletten zugreifen. Wir bemühen uns, die Informationen zu den Maßnahmen aktuell und inhaltlich richtig anzubieten, die Karte bietet dennoch keine Gewähr auf Richtigkeit, Vollständigkeit und Aktualität."
+wc_finder,WC-Standorte der Landeshauptstadt München,WFS (CSV),csv,91,True,"Die Daten beinhalten die Standorte der öffentlichen Toiletten, die sich im Besitz der Landeshauptstadt München befinden. Es werden sowohl barrierefreie als auch nicht barrierefreie Toiletten dargestellt. Der Nutzer kann auf ausführliche Informationen hinsichtlich Zugänglichkeit, Ausstattung und Zustand der Toiletten zugreifen. Wir bemühen uns, die Informationen zu den Maßnahmen aktuell und inhaltlich richtig anzubieten, die Karte bietet dennoch keine Gewähr auf Richtigkeit, Vollständigkeit und Aktualität."
+baut_blindenleitsystem_altstadt,Blindenleitsystem Altstadt – Fußgängerzone,WFS (CSV),csv,7,True,"Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukturen oder Bodenindikatoren sein. Ein Bodenindikator ist ein Bodenelement mit einem hohen taktilen, visuellen (Hell-Dunkel) und akustischen Kontrast zum angrenzenden Bodenbelag."
+baut_blindenleitsystem_altstadt,Blindenleitsystem Altstadt – Fußgängerzone,Metadaten (XML),xml,20,True,"Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukturen oder Bodenindikatoren sein. Ein Bodenindikator ist ein Bodenelement mit einem hohen taktilen, visuellen (Hell-Dunkel) und akustischen Kontrast zum angrenzenden Bodenbelag."
+opendata_miv_umweltzone_vz_point,Umweltzone - Verkehrszeichen,WFS (GML),xml,22,True,"Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiterten Umweltzone eingeführt. Bei den Transferflächen handelt es sich um Fahrbeziehungen, die aufgrund fehlender Alternativstrecken trotz ihrer Lage in der Umweltzone für Fahrzeuge ohne die erforderlichen Voraussetzungen freigegeben sind. Die weiteren Bestimmungen der Allgemeinverfügung sind zu beachten."
+opendata_miv_umweltzone_vz_point,Umweltzone - Verkehrszeichen,WFS (CSV),csv,4,True,"Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiterten Umweltzone eingeführt. Bei den Transferflächen handelt es sich um Fahrbeziehungen, die aufgrund fehlender Alternativstrecken trotz ihrer Lage in der Umweltzone für Fahrzeuge ohne die erforderlichen Voraussetzungen freigegeben sind. Die weiteren Bestimmungen der Allgemeinverfügung sind zu beachten."
+opendata_miv_umweltzone_vz_point,Umweltzone - Verkehrszeichen,Metadaten (XML),xml,20,True,"Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiterten Umweltzone eingeführt. Bei den Transferflächen handelt es sich um Fahrbeziehungen, die aufgrund fehlender Alternativstrecken trotz ihrer Lage in der Umweltzone für Fahrzeuge ohne die erforderlichen Voraussetzungen freigegeben sind. Die weiteren Bestimmungen der Allgemeinverfügung sind zu beachten."
+opendata_miv_umweltzone_poly,Umweltzone,WFS (GML),xml,30,True,Umweltzone
+opendata_miv_umweltzone_poly,Umweltzone,Metadaten (XML),xml,20,True,Umweltzone
+paketboxen,Paketboxen,WFS (CSV),csv,18,True,Paketboxen
+paketboxen,Paketboxen,WFS (GML),xml,66,True,Paketboxen
+paketboxen,Paketboxen,Metadaten (XML),xml,20,True,Paketboxen
+opendata_ruhver_prm_gebiete_poly,Parkraummanagementgebiete,WFS (GML),xml,36,True,Parkraummanagementgebiete
+opendata_ruhver_prm_gebiete_poly,Parkraummanagementgebiete,WFS (CSV),csv,8,True,Parkraummanagementgebiete
+opendata_ruhver_prm_gebiete_poly,Parkraummanagementgebiete,Metadaten (XML),xml,20,True,Parkraummanagementgebiete
+opendata_ruhver_parkseiten_laden_liefern_leisten,"Laden, Liefern, Leisten",Metadaten (XML),xml,20,True,"Laden, Liefern, Leisten"
+opendata_ruhver_parkseiten_laden_liefern_leisten,"Laden, Liefern, Leisten",WFS (GML),xml,40,True,"Laden, Liefern, Leisten"
+opendata_ruhver_parkseiten_laden_liefern_leisten,"Laden, Liefern, Leisten",WFS (CSV),csv,10,True,"Laden, Liefern, Leisten"
+ruhver_els_saeule_point,Ladeeinrichtungen,WFS (GML),xml,34,True,Ladeeinrichtungen
+ruhver_els_saeule_point,Ladeeinrichtungen,WFS (CSV),csv,8,True,Ladeeinrichtungen
+ruhver_els_saeule_point,Ladeeinrichtungen,Metadaten (XML),xml,20,True,Ladeeinrichtungen
+g_sensor_3l_zonen,Digitale 3L-Zonen,Metadaten (XML),xml,20,True,Digitale 3L-Zonen
+g_sensor_3l_zonen,Digitale 3L-Zonen,WFS (GML),xml,28,True,Digitale 3L-Zonen
+g_sensor_3l_zonen,Digitale 3L-Zonen,WFS (CSV),csv,6,True,Digitale 3L-Zonen
+opendata_ruhver_parkseiten_line,Parkseiten,WFS (GML),xml,40,True,Parkseiten
+opendata_ruhver_parkseiten_line,Parkseiten,WFS (CSV),csv,10,True,Parkseiten
+opendata_ruhver_parkseiten_line,Parkseiten,Metadaten (XML),xml,20,True,Parkseiten
+opendata_ruhver_lastenradparken_line,Lastenradparken,WFS (GML),xml,51,True,Lastenradparken
+opendata_ruhver_lastenradparken_line,Lastenradparken,WFS (CSV),csv,15,True,Lastenradparken
+opendata_ruhver_lastenradparken_line,Lastenradparken,Metadaten (XML),xml,20,True,Lastenradparken
+ruhver_mim_abstellverbot_ts,Abstellverbotszonen für E-Tretroller,WFS (GML),xml,55,True,Abstellverbotszonen für E-Tretroller
+ruhver_mim_abstellverbot_ts,Abstellverbotszonen für E-Tretroller,Metadaten (XML),xml,365,True,Abstellverbotszonen für E-Tretroller
+ruhver_mim_abstellverbot_ts,Abstellverbotszonen für E-Tretroller,Vordefinierte Teilmengen des Datensatzes,html,5,True,Abstellverbotszonen für E-Tretroller
+behindertenparkplaetze,Behindertenparkplätze,WFS (CSV),csv,19,True,Behindertenparkplätze
+behindertenparkplaetze,Behindertenparkplätze,WFS (GML),xml,67,True,Behindertenparkplätze
+behindertenparkplaetze,Behindertenparkplätze,Metadaten (XML),xml,20,True,Behindertenparkplätze
+ruhver_mim_abstellfl_ls,Lastenradsharing Abstellflächen,WFS (CSV),csv,17,True,Lastenradsharing Abstellflächen
+ruhver_mim_abstellfl_ls,Lastenradsharing Abstellflächen,WFS (GML),xml,61,True,Lastenradsharing Abstellflächen
+ruhver_mim_abstellfl_ls,Lastenradsharing Abstellflächen,Metadaten (XML),xml,365,True,Lastenradsharing Abstellflächen
+ruhver_mim_abstellfl_ls,Lastenradsharing Abstellflächen,Vordefinierte Teilmengen des Datensatzes,html,5,True,Lastenradsharing Abstellflächen
+ruhver_mim_fahrverbot_ts,Fahrverbotszonen für E-Tretroller,WFS (CSV),csv,14,True,Fahrverbotszonen für E-Tretroller
+ruhver_mim_fahrverbot_ts,Fahrverbotszonen für E-Tretroller,WFS (GML),xml,60,True,Fahrverbotszonen für E-Tretroller
+ruhver_mim_fahrverbot_ts,Fahrverbotszonen für E-Tretroller,Metadaten (XML),xml,365,True,Fahrverbotszonen für E-Tretroller
+ruhver_mim_fahrverbot_ts,Fahrverbotszonen für E-Tretroller,Vordefinierte Teilmengen des Datensatzes,html,5,True,Fahrverbotszonen für E-Tretroller
+ruhver_els_standort_point,Standorte der Ladeinfrastruktur,WFS (CSV),csv,11,True,Standorte der Ladeinfrastruktur
+ruhver_els_standort_point,Standorte der Ladeinfrastruktur,Metadaten (XML),xml,20,True,Standorte der Ladeinfrastruktur
+ruhver_els_standort_point,Standorte der Ladeinfrastruktur,WFS (GML),xml,43,True,Standorte der Ladeinfrastruktur
+ruhver_mim_abstellfl_ms,Abstellflächen für E-Motorroller,WFS (CSV),csv,17,True,Abstellflächen für E-Motorroller
+ruhver_mim_abstellfl_ms,Abstellflächen für E-Motorroller,WFS (GML),xml,61,True,Abstellflächen für E-Motorroller
+ruhver_mim_abstellfl_ms,Abstellflächen für E-Motorroller,Metadaten (XML),xml,365,True,Abstellflächen für E-Motorroller
+ruhver_mim_abstellfl_ms,Abstellflächen für E-Motorroller,Vordefinierte Teilmengen des Datensatzes,html,5,True,Abstellflächen für E-Motorroller
+ruhver_radservicestation_point,Radservicestationen,WFS (CSV),csv,8,True,Radservicestationen
+ruhver_radservicestation_point,Radservicestationen,WFS (GML),xml,34,True,Radservicestationen
+ruhver_radservicestation_point,Radservicestationen,Metadaten (XML),xml,20,True,Radservicestationen
+opendata_ruhver_fahrradparken_line,Fahrradparken mit Standardmaßen,WFS (GML),xml,52,True,Fahrradparken mit Standardmaßen
+opendata_ruhver_fahrradparken_line,Fahrradparken mit Standardmaßen,WFS (CSV),csv,15,True,Fahrradparken mit Standardmaßen
+opendata_ruhver_fahrradparken_line,Fahrradparken mit Standardmaßen,Metadaten (XML),xml,20,True,Fahrradparken mit Standardmaßen
+opendata_ruhver_mim_geofence_poly,Geofences für E-Tretroller,WFS (CSV),csv,16,True,Geofences für E-Tretroller
+opendata_ruhver_mim_geofence_poly,Geofences für E-Tretroller,WFS (GML),xml,54,True,Geofences für E-Tretroller
+opendata_ruhver_mim_geofence_poly,Geofences für E-Tretroller,Metadaten (XML),xml,368,True,Geofences für E-Tretroller
+opendata_ruhver_mim_geofence_poly,Geofences für E-Tretroller,Vordefinierte Teilmengen des Datensatzes,html,5,True,Geofences für E-Tretroller
+ruhver_mim_flexzone_myradl,Flexzonen für MyRadl,WFS (GML),xml,44,True,Flexzonen für MyRadl
+ruhver_mim_flexzone_myradl,Flexzonen für MyRadl,WFS (CSV),csv,10,True,Flexzonen für MyRadl
+ruhver_mim_flexzone_myradl,Flexzonen für MyRadl,Metadaten (XML),xml,378,True,Flexzonen für MyRadl
+ruhver_carsharing_station,Stationsbasierte Carsharing-Parkplätze,WFS (CSV),csv,16,True,Stationsbasierte Carsharing-Parkplätze
+ruhver_carsharing_station,Stationsbasierte Carsharing-Parkplätze,WFS (GML),xml,60,True,Stationsbasierte Carsharing-Parkplätze
+ruhver_carsharing_station,Stationsbasierte Carsharing-Parkplätze,Metadaten (XML),xml,22,True,Stationsbasierte Carsharing-Parkplätze
+ruhver_carsharing_station,Stationsbasierte Carsharing-Parkplätze,Vordefinierte Teilmengen des Datensatzes,html,5,True,Stationsbasierte Carsharing-Parkplätze
+ruhver_mim_abstellfl_bs,Abstellflächen für Bikesharing,WFS (CSV),csv,17,True,Abstellflächen für Bikesharing
+ruhver_mim_abstellfl_bs,Abstellflächen für Bikesharing,WFS (GML),xml,61,True,Abstellflächen für Bikesharing
+ruhver_mim_abstellfl_bs,Abstellflächen für Bikesharing,Metadaten (XML),xml,365,True,Abstellflächen für Bikesharing
+ruhver_mim_abstellfl_bs,Abstellflächen für Bikesharing,Vordefinierte Teilmengen des Datensatzes,html,5,True,Abstellflächen für Bikesharing
+ruhver_mim_abstellverbot_bs,Abstellverbotszonen für Bikesharing,WFS (GML),xml,48,True,Abstellverbotszonen für Bikesharing
+ruhver_mim_abstellverbot_bs,Abstellverbotszonen für Bikesharing,Metadaten (XML),xml,365,True,Abstellverbotszonen für Bikesharing
+ruhver_mim_abstellverbot_bs,Abstellverbotszonen für Bikesharing,Vordefinierte Teilmengen des Datensatzes,html,5,True,Abstellverbotszonen für Bikesharing
+ruhver_carsharing,Allgemeine Carsharing-Parkplätze,WFS (CSV),csv,16,True,Allgemeine Carsharing-Parkplätze
+ruhver_carsharing,Allgemeine Carsharing-Parkplätze,WFS (GML),xml,51,True,Allgemeine Carsharing-Parkplätze
+ruhver_carsharing,Allgemeine Carsharing-Parkplätze,Metadaten (XML),xml,22,True,Allgemeine Carsharing-Parkplätze
+ruhver_carsharing,Allgemeine Carsharing-Parkplätze,Vordefinierte Teilmengen des Datensatzes,html,5,True,Allgemeine Carsharing-Parkplätze
+opendata_radschnellverb_line,Radschnellverbindungen,WFS (GML),xml,33,True,Radschnellverbindungen
+opendata_radschnellverb_line,Radschnellverbindungen,WFS (CSV),csv,11,True,Radschnellverbindungen
+opendata_radschnellverb_line,Radschnellverbindungen,Metadaten (XML),xml,20,True,Radschnellverbindungen
+opendata_ruhver_mp_standort_point,Mobilitätspunkte,Metadaten (XML),xml,386,True,Mobilitätspunkte
+opendata_ruhver_mp_standort_point,Mobilitätspunkte,WFS (GML),xml,81,True,Mobilitätspunkte
+opendata_ruhver_mp_standort_point,Mobilitätspunkte,WFS (CSV),csv,22,True,Mobilitätspunkte
+opendata_radentscheid_line,Radentscheidmaßnahmen,Metadaten (XML),xml,22,True,Radentscheidmaßnahmen
+opendata_radentscheid_line,Radentscheidmaßnahmen,WFS (GML),xml,44,True,Radentscheidmaßnahmen
+opendata_radentscheid_line,Radentscheidmaßnahmen,WFS (CSV),csv,9,True,Radentscheidmaßnahmen
+ruhver_mim_abstellfl_ts,Abstellflächen für E-Tretroller,WFS (CSV),csv,17,True,Abstellflächen für E-Tretroller
+ruhver_mim_abstellfl_ts,Abstellflächen für E-Tretroller,WFS (GML),xml,59,True,Abstellflächen für E-Tretroller
+ruhver_mim_abstellfl_ts,Abstellflächen für E-Tretroller,Metadaten (XML),xml,365,True,Abstellflächen für E-Tretroller
+ruhver_mim_abstellfl_ts,Abstellflächen für E-Tretroller,Vordefinierte Teilmengen des Datensatzes,html,5,True,Abstellflächen für E-Tretroller
+rad_gruene_welle,Grüne Welle Radverkehr,WFS (CSV),csv,10,True,Grüne Welle Radverkehr
+rad_gruene_welle,Grüne Welle Radverkehr,Metadaten (XML),xml,20,True,Grüne Welle Radverkehr
+rad_gruene_welle,Grüne Welle Radverkehr,WFS (GML),xml,40,True,Grüne Welle Radverkehr
+graustufenstadtplan_2024_schriftplatte,Radlstadtplan (Graustufenstadtplan Beschriftung),Metadaten (XML),xml,20,True,Radlstadtplan (Graustufenstadtplan Beschriftung)
+opendata_fahrradstrassen_line,Fahrradstraßen,WFS (GML),xml,30,True,Fahrradstraßen
+opendata_fahrradstrassen_line,Fahrradstraßen,WFS (CSV),csv,6,True,Fahrradstraßen
+opendata_fahrradstrassen_line,Fahrradstraßen,Metadaten (XML),xml,378,True,Fahrradstraßen
+opendata_rad_altstadt_radlring_linie,Altstadt-Radlring,WFS (GML),xml,34,True,Altstadt-Radlring
+opendata_rad_altstadt_radlring_linie,Altstadt-Radlring,WFS (CSV),csv,10,True,Altstadt-Radlring
+opendata_rad_altstadt_radlring_linie,Altstadt-Radlring,Metadaten (XML),xml,358,True,Altstadt-Radlring
+opendata_raddauerzaehlstellen,Raddauerzählstellen,WFS (CSV),csv,14,True,Raddauerzählstellen
+opendata_raddauerzaehlstellen,Raddauerzählstellen,WFS (GML),xml,52,True,Raddauerzählstellen
+opendata_raddauerzaehlstellen,Raddauerzählstellen,Metadaten (XML),xml,20,True,Raddauerzählstellen
+rad_rsp_radservicestation,Radlstadtplan (Radservicestationen),WFS (CSV),csv,8,True,Radlstadtplan (Radservicestationen)
+rad_rsp_radservicestation,Radlstadtplan (Radservicestationen),WFS (GML),xml,34,True,Radlstadtplan (Radservicestationen)
+rad_rsp_radservicestation,Radlstadtplan (Radservicestationen),Metadaten (XML),xml,20,True,Radlstadtplan (Radservicestationen)
+rad_rsp_route_line,Radlstadtplan (Ausgeschildertes Radlnetz),WFS (CSV),csv,8,True,Radlstadtplan (Ausgeschildertes Radlnetz)
+rad_rsp_route_line,Radlstadtplan (Ausgeschildertes Radlnetz),WFS (GML),xml,27,True,Radlstadtplan (Ausgeschildertes Radlnetz)
+rad_rsp_route_line,Radlstadtplan (Ausgeschildertes Radlnetz),Metadaten (XML),xml,20,True,Radlstadtplan (Ausgeschildertes Radlnetz)
+rad_rsp_radwege_line,Radlstadtplan (Radwege),WFS (CSV),csv,16,True,Radlstadtplan (Radwege)
+rad_rsp_radwege_line,Radlstadtplan (Radwege),WFS (GML),xml,51,True,Radlstadtplan (Radwege)
+rad_rsp_radwege_line,Radlstadtplan (Radwege),Metadaten (XML),xml,20,True,Radlstadtplan (Radwege)
+rad_rsp_gemradfusswege_line,Radlstadtplan (Gemeinsame Rad- und Fußwege),WFS (CSV),csv,16,True,Radlstadtplan (Gemeinsame Rad- und Fußwege)
+rad_rsp_gemradfusswege_line,Radlstadtplan (Gemeinsame Rad- und Fußwege),WFS (GML),xml,51,True,Radlstadtplan (Gemeinsame Rad- und Fußwege)
+rad_rsp_gemradfusswege_line,Radlstadtplan (Gemeinsame Rad- und Fußwege),Metadaten (XML),xml,20,True,Radlstadtplan (Gemeinsame Rad- und Fußwege)
+rad_rsp_radwege_forstfeld_line,Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege),WFS (CSV),csv,16,True,Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege)
+rad_rsp_radwege_forstfeld_line,Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege),WFS (GML),xml,51,True,Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege)
+rad_rsp_radwege_forstfeld_line,Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege),Metadaten (XML),xml,20,True,Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege)
+deckschichten_opendata,Deckschichten (Opendata),Metadaten (XML),xml,20,True,Deckschichten (Opendata)
+deckschichten_opendata,Deckschichten (Opendata),WFS (GML),xml,44,True,Deckschichten (Opendata)
+deckschichten_opendata,Deckschichten (Opendata),WFS (CSV),csv,6,True,Deckschichten (Opendata)
+kehrbezirke_opendata,Kehrbezirke,Metadaten (XML),xml,20,True,Kehrbezirke
+kehrbezirke_opendata,Kehrbezirke,WFS (GML),xml,32,True,Kehrbezirke
+kehrbezirke_opendata,Kehrbezirke,WFS (CSV),csv,5,True,Kehrbezirke
+qz_borkenkaefer,Borkenkäfer Quarantänezonen,Metadaten (XML),xml,386,True,Borkenkäfer Quarantänezonen
+qz_borkenkaefer,Borkenkäfer Quarantänezonen,WFS (GML),xml,50,True,Borkenkäfer Quarantänezonen
+qz_borkenkaefer,Borkenkäfer Quarantänezonen,WFS (CSV),csv,11,True,Borkenkäfer Quarantänezonen
+rad_rsp_rad_freig_einbahn,Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt),WFS (CSV),csv,10,True,Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt)
+rad_rsp_rad_freig_einbahn,Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt),WFS (GML),xml,38,True,Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt)
+rad_rsp_rad_freig_einbahn,Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt),Metadaten (XML),xml,368,True,Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt)
+baden_isar_opendata,Baden in der Isar,Metadaten (XML),xml,20,True,Baden in der Isar
+baden_isar_opendata,Baden in der Isar,WFS (GML),xml,41,True,Baden in der Isar
+stadtplan,Amtlicher Stadtplan der Landeshauptstadt München,Metadaten (XML),xml,22,True,Amtlicher Stadtplan der Landeshauptstadt München
+gefahrenstellen_isar_opendata,Gefahrenstellen,Metadaten (XML),xml,20,True,Gefahrenstellen
+gefahrenstellen_isar_opendata,Gefahrenstellen,WFS (GML),xml,36,True,Gefahrenstellen
+gefahrenstellen_isar_opendata,Gefahrenstellen,WFS (CSV),csv,7,True,Gefahrenstellen
+graustufenstadtplan_2024_geometrie,Radlstadtplan (Graustufenstadtplan Geometrie),Metadaten (XML),xml,20,True,Radlstadtplan (Graustufenstadtplan Geometrie)
+bootfahren_isar_opendata,Bootfahren in der Isar,Metadaten (XML),xml,20,True,Bootfahren in der Isar
+bootfahren_isar_opendata,Bootfahren in der Isar,WFS (GML),xml,41,True,Bootfahren in der Isar
+rad_rsp_tempo30zone_poly,Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone),WFS (CSV),csv,11,True,Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone)
+rad_rsp_tempo30zone_poly,Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone),WFS (GML),xml,41,True,Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone)
+rad_rsp_tempo30zone_poly,Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone),Metadaten (XML),xml,20,True,Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone)
+baustellen_4_weeks_opendata,"Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)",Metadaten (XML),xml,20,True,"Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)"
+baustellen_4_weeks_opendata,"Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)",WFS (GML),xml,70,True,"Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)"
+baustellen_4_weeks_opendata,"Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)",WFS (CSV),csv,12,True,"Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)"
+erhalt_umgriff,Gebiete mit Erhaltungssatzungen in der Landeshauptstadt München,Metadaten (XML),xml,376,True,Gebiete mit Erhaltungssatzungen in der Landeshauptstadt München
+vagrund_baug_umgriff_opendata,"Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten",Metadaten (XML),xml,22,True,"Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten"
+vagrund_baug_umgriff_opendata,"Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten",WFS (GML),xml,32,True,"Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten"
+vagrund_baug_umgriff_opendata,"Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten",WFS (CSV),csv,5,True,"Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten"
+vablock_viertel_opendata,Stadtviertel München,WFS (CSV),csv,7,True,Stadtviertel München
+vablock_viertel_opendata,Stadtviertel München,WFS (GML),xml,33,True,Stadtviertel München
+vablock_viertel_opendata,Stadtviertel München,Metadaten (XML),xml,376,True,Stadtviertel München
+rad_rsp_fahrradstrasse_poly,Radlstadtplan (Fahrradstraßen),WFS (CSV),csv,11,True,Radlstadtplan (Fahrradstraßen)
+rad_rsp_fahrradstrasse_poly,Radlstadtplan (Fahrradstraßen),WFS (GML),xml,36,True,Radlstadtplan (Fahrradstraßen)
+rad_rsp_fahrradstrasse_poly,Radlstadtplan (Fahrradstraßen),Metadaten (XML),xml,20,True,Radlstadtplan (Fahrradstraßen)
+rad_rsp_fussg_zone_2024,Radlstadtplan (Fußgängerzone),WFS (GML),xml,53,True,Radlstadtplan (Fußgängerzone)
+rad_rsp_fussg_zone_2024,Radlstadtplan (Fußgängerzone),Metadaten (XML),xml,20,True,Radlstadtplan (Fußgängerzone)
+vablock_stadtbezirke_opendata,Stadtbezirke,WFS (GML),xml,27,True,Stadtbezirke
+vablock_stadtbezirke_opendata,Stadtbezirke,WFS (CSV),csv,5,True,Stadtbezirke
+vablock_stadtbezirke_opendata,Stadtbezirke,Metadaten (XML),xml,22,True,Stadtbezirke
+g_fnp,Digitaler Flächennutzungsplan mit integrierter Landschaftsplanung der Landeshauptstadt München,Metadaten (XML),xml,394,True,Digitaler Flächennutzungsplan mit integrierter Landschaftsplanung der Landeshauptstadt München
+vagrund_hoeh_symbol_opendata,Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München,WFS (GML),xml,24,True,Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München
+vagrund_hoeh_symbol_opendata,Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München,WFS (CSV),csv,4,True,Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München
+vagrund_hoeh_symbol_opendata,Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München,Metadaten (XML),xml,22,True,Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München
+g_stadtkarte_wms,Digitale Stadtkarte der Landeshauptstadt München (ab Maßstab 1:7500),Metadaten (XML),xml,20,True,Digitale Stadtkarte der Landeshauptstadt München (ab Maßstab 1:7500)
+vablock_bezirksteil_opendata,Bezirksteil,WFS (CSV),csv,4,True,Bezirksteil
+vablock_bezirksteil_opendata,Bezirksteil,WFS (GML),xml,24,True,Bezirksteil
+vablock_bezirksteil_opendata,Bezirksteil,Metadaten (XML),xml,376,True,Bezirksteil
+luftbild,Aktuelle Luftbilder der Landeshauptstadt München Bodenauflösung 20cm,Metadaten (XML),xml,22,True,Aktuelle Luftbilder der Landeshauptstadt München Bodenauflösung 20cm
+adressen_opendata,Münchner Adressen,Adressen,txt,4,True,Münchner Adressen
+indikatorenatlas-bevoelkerung-zusammengefasste-geburtenrate-83r65mct,Indikatorenatlas: Bevölkerung - Zusammengefasste Geburtenrate,Zusammengefasste Geburtenrate,csv,6,True,Indikatorenatlas: Bevölkerung - Zusammengefasste Geburtenrate
+indikatorenatlas-bevoelkerung-ueberalterungsquotient-83r65mct,Indikatorenatlas: Bevölkerung - Überalterungsquotient,Überalterungsquotient,csv,10,True,Indikatorenatlas: Bevölkerung - Überalterungsquotient
+datensaetze-des-open-data-portals-muenchen-dcatapde,Datensätze des Open Data Portals München (DCATAP.de),CKAN_LHM.xml - Version 43 - 08.06.2026,xml,42,True,Datensätze des Open Data Portals München (DCATAP.de)
+veranstaltungen-der-messe-muenchen,Bisherige Veranstaltungen der Messe München,Veranstaltungsdaten ab 2018,csv,21,True,Bisherige Veranstaltungen der Messe München
+indikatorenatlas-bevoelkerung-wohndauer-adresse-83r65mct,Indikatorenatlas: Bevölkerung - Wohndauer Adresse,Wohndauer Adresse,csv,10,True,Indikatorenatlas: Bevölkerung - Wohndauer Adresse
+indikatorenatlas-bevoelkerung-rohe-sterberate-83r65mct,Indikatorenatlas: Bevölkerung - Rohe Sterberate,Rohe Sterberate,csv,10,True,Indikatorenatlas: Bevölkerung - Rohe Sterberate
+indikatorenatlas-bevoelkerung-rohe-geburtenrate-83r65mct,Indikatorenatlas: Bevölkerung - Rohe Geburtenrate,Rohe Geburtenrate,csv,10,True,Indikatorenatlas: Bevölkerung - Rohe Geburtenrate
+indikatorenatlas-bevoelkerung-religionszugehoerigkeit,Indikatorenatlas: Bevölkerung - Religionszugehörigkeit,Religionszugehörigkeit,csv,10,True,Indikatorenatlas: Bevölkerung - Religionszugehörigkeit
+indikatorenatlas-bevoelkerung-optionskinder-83r65mct,Indikatorenatlas: Bevölkerung - Optionskinder,Optionskinder,csv,10,True,Indikatorenatlas: Bevölkerung - Optionskinder
+indikatorenatlas-bevoelkerung-nichtdeutsche-83r65mct,Indikatorenatlas: Bevölkerung - Nichtdeutsche,Nichtdeutsche,csv,10,True,Indikatorenatlas: Bevölkerung - Nichtdeutsche
+indikatorenatlas-bevoelkerung-natuerlicher-saldo-83r65mct,Indikatorenatlas: Bevölkerung - Natürlicher Saldo,Natürlicher Saldo ,csv,10,True,Indikatorenatlas: Bevölkerung - Natürlicher Saldo
+indikatorenatlas-bevoelkerung-muetter-ab-35-jahre-83r65mct,Indikatorenatlas: Bevölkerung - Mütter ab 35 Jahre,Mütter ab 35 Jahre,csv,10,True,Indikatorenatlas: Bevölkerung - Mütter ab 35 Jahre
+indikatorenatlas-bevoelkerung-mobilitaetsziffer-83r65mct,Indikatorenatlas: Bevölkerung - Mobilitätsziffer,Mobilitätsziffer,csv,16,True,Indikatorenatlas: Bevölkerung - Mobilitätsziffer
+indikatorenatlas-bevoelkerung-migrationshintergrund-kinder-83r65mct,Indikatorenatlas: Bevölkerung - Migrationshintergrund - Kinder,Migrationshintergrund - Kinder,csv,10,True,Indikatorenatlas: Bevölkerung - Migrationshintergrund - Kinder

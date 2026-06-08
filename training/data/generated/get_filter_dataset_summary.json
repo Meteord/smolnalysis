@@ -1,0 +1,15 @@
+{
+  "source": "training/data/raw/munich_filter_parameters.jsonl",
+  "resources": 246,
+  "retrieval_examples": 1320,
+  "filter_examples": 943,
+  "splits": {
+    "train": 78,
+    "validation": 10,
+    "test": 10
+  },
+  "outputs": {
+    "retrieval": "training/data/generated/retrieval_query_tool.{train,validation,test,all}.jsonl",
+    "filter": "training/data/generated/filter_tool.{train,validation,test,all}.jsonl"
+  }
+}
