@@ -26,3 +26,116 @@ body {
     radial-gradient(circle at 8% 0%, rgba(14, 165, 233, 0.08), transparent 28rem),
     linear-gradient(180deg, #fbfcfd 0%, #eef2f5 100%);
 }
+
+.ckan-panel {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.8fr) minmax(20rem, 1.2fr);
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.ckan-panel__copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ckan-panel__label {
+  color: #111827;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ckan-panel__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.ckan-panel__status span {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #94a3b8;
+}
+
+.ckan-panel__status--ok {
+  color: #166534;
+}
+
+.ckan-panel__status--ok span {
+  background: #22c55e;
+}
+
+.ckan-panel__controls {
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ckan-panel__input {
+  min-width: 0;
+  flex: 1 1 auto;
+  height: 36px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 13px;
+}
+
+.ckan-panel__input:focus {
+  border-color: #0284c7;
+  outline: 2px solid rgba(14, 165, 233, 0.22);
+  outline-offset: 0;
+}
+
+.ckan-panel__button {
+  height: 36px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+  color: #334155;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.ckan-panel__button--primary {
+  border-color: #0369a1;
+  background: #0369a1;
+  color: #fff;
+}
+
+.ckan-panel__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 760px) {
+  .ckan-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .ckan-panel__controls {
+    flex-wrap: wrap;
+  }
+
+  .ckan-panel__input {
+    flex-basis: 100%;
+  }
+}

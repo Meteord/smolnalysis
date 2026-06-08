@@ -38,11 +38,13 @@ For a later Hugging Face Space, use this folder as the Space root or copy this a
 
 - Fullscreen OpenUI chat UI
 - Gradio `Server` backend with custom FastAPI routes
+- Public CKAN endpoint configuration and validation
 - Dataset-aware mocked chat interaction using `examples/demo_cities.csv`
 - Mocked deterministic OpenUI-Lang backend contract
 - OpenUI's native `FullScreen` chat component
 - OpenUI's chat-optimized `openuiChatLibrary`
 - Streaming `/api/chat` route that adapts Python responses to the OpenUI chat stream
+- CKAN connection routes at `/api/ckan/default` and `/api/ckan/connect`
 - Public Gradio API function at `/gradio_api/call/respond`
 
 ## OpenUI Chat Architecture
@@ -50,12 +52,25 @@ For a later Hugging Face Space, use this folder as the Space root or copy this a
 The app keeps OpenUI support modular:
 
 - `app.py` owns the Gradio `Server`, serves the frontend, and exposes `/api/chat` plus the Gradio `respond` API.
+- `ckan_support.py` validates public CKAN endpoints through the Action API v3.
 - `openui_support.py` defines deterministic mock OpenUI-Lang responses for the demo dataset.
 - `app/frontend/openui-chat.jsx` mounts OpenUI's `FullScreen` chat component.
 - `app/frontend/openui-chat.css` contains the app-specific frontend styling.
 - `app/static/openui-chat.js` and `app/static/openui-chat.css` are the bundled browser assets loaded by `/`.
 - The current chat contract emits line-oriented OpenUI-Lang with a `root = Card([...])` entry point for `openuiChatLibrary`.
 - Later, an LLM can replace the mock generator while keeping the Gradio server and OpenUI chat contract.
+
+## CKAN Endpoint Connection
+
+The current CKAN slice is intentionally small:
+
+- Default endpoint: `https://opendata.muenchen.de/`
+- Authentication: public/anonymous only
+- Validation: `/api/3/action/site_read` plus `/api/3/action/package_search?rows=0`
+- UI state: the last successful endpoint is stored in browser `localStorage`
+- Deferred: agentic CKAN search, resource loading, and dataset analysis
+
+For deployed safety, private and link-local endpoint addresses are blocked unless `SMOLNALYSIS_ALLOW_LOCAL_CKAN=true` is set.
 
 The earlier embedded renderer prototype is still represented by:
 
@@ -74,3 +89,9 @@ The current server uses `app/examples/demo_cities.csv` and supports prompts like
 - `Show a histogram of median_age` -> bucketed bar chart
 - `List the columns and missing values` -> schema table
 - `Return invalid OpenUI for fallback testing` -> mocked warning/debug response
+
+## Tests
+
+```bash
+uv run python -m unittest tests.test_ckan_support
+```
