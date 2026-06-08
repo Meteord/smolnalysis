@@ -150654,6 +150654,40 @@ ${verifyLines.join("\n")}`;
       }
     ), /* @__PURE__ */ import_react89.default.createElement("button", { className: "ckan-panel__button ckan-panel__button--primary", type: "button", onClick: connect, disabled: isConnecting }, isConnecting ? "Connecting" : "Connect"), /* @__PURE__ */ import_react89.default.createElement("button", { className: "ckan-panel__button", type: "button", onClick: reset, disabled: isConnecting }, "Reset")));
   }
+  function LlmRolesPanel() {
+    const [roles, setRoles] = (0, import_react89.useState)([]);
+    const [isValidating, setIsValidating] = (0, import_react89.useState)(false);
+    const [message2, setMessage] = (0, import_react89.useState)("Loading LLM roles...");
+    const loadStatus = () => {
+      fetch("/api/llms/status").then((response) => response.json()).then((data) => {
+        setRoles(data.roles || []);
+        setMessage("Server-side LLM role configuration.");
+      }).catch(() => {
+        setMessage("Could not load LLM role status.");
+      });
+    };
+    (0, import_react89.useEffect)(() => {
+      loadStatus();
+    }, []);
+    const validate2 = async () => {
+      setIsValidating(true);
+      setMessage("Validating OpenAI-compatible providers...");
+      try {
+        const response = await fetch("/api/llms/validate", { method: "POST" });
+        const data = await response.json();
+        setRoles(data.roles || []);
+        setMessage("Validation complete.");
+      } catch {
+        setMessage("Could not validate LLM roles.");
+      } finally {
+        setIsValidating(false);
+      }
+    };
+    return /* @__PURE__ */ import_react89.default.createElement("section", { className: "llm-panel", "aria-label": "LLM role configuration" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-panel__header" }, /* @__PURE__ */ import_react89.default.createElement("div", null, /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-panel__label" }, "LLM roles"), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-panel__message" }, message2)), /* @__PURE__ */ import_react89.default.createElement("button", { className: "ckan-panel__button ckan-panel__button--primary", type: "button", onClick: validate2, disabled: isValidating }, isValidating ? "Validating" : "Validate")), /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-panel__roles" }, roles.map((role) => /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-role", key: role.key }, /* @__PURE__ */ import_react89.default.createElement("span", { className: `llm-role__dot llm-role__dot--${role.validation_status || "missing"}`, "aria-hidden": "true" }), /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-role__body" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__name" }, role.label), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__meta" }, role.model || "No model", role.base_url_display ? ` \xB7 ${role.base_url_display}` : ""), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__status" }, role.message))))));
+  }
+  function BackendConfigHeader() {
+    return /* @__PURE__ */ import_react89.default.createElement("div", { className: "backend-config" }, /* @__PURE__ */ import_react89.default.createElement(CkanEndpointPanel, null), /* @__PURE__ */ import_react89.default.createElement(LlmRolesPanel, null));
+  }
   function App() {
     return /* @__PURE__ */ import_react89.default.createElement(
       FullScreen,
@@ -150664,7 +150698,7 @@ ${verifyLines.join("\n")}`;
         agentName: "smolnalysis",
         logoUrl: "/static/smolnalysis-mark.svg",
         showAssistantLogo: false,
-        threadHeader: /* @__PURE__ */ import_react89.default.createElement(CkanEndpointPanel, null),
+        threadHeader: /* @__PURE__ */ import_react89.default.createElement(BackendConfigHeader, null),
         welcomeMessage: {
           title: "smolnalysis",
           description: "Ask about the demo dataset and receive mocked OpenUI-Lang responses."

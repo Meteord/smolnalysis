@@ -23,12 +23,40 @@ The app includes:
 - A custom React frontend served from `/`
 - OpenUI's native fullscreen `FullScreen` chat component
 - Public CKAN endpoint configuration with `https://opendata.muenchen.de/` as the default
+- Server-side configuration for four OpenAI-compatible LLM roles
 - Mock backend responses that emit deterministic OpenUI-Lang
 - OpenUI's `openuiChatLibrary` for rendered assistant responses
 - A demo city dataset used by the current mock analysis flow
 - A public Gradio API endpoint at `/gradio_api/call/respond`
 
-The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser. CKAN support is connection-only for now: users can configure and validate a public endpoint, but chat does not yet search or analyze CKAN datasets.
+The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser. CKAN support is connection-only for now, and LLM support is configuration-only with a mocked workflow trace. The future workflow is: user request -> CKAN search -> data analysis -> OpenUI-Lang translation -> frontend render.
+
+## LLM role configuration
+
+The backend reads OpenAI-compatible provider settings from environment variables. API keys stay server-side and are never returned by status endpoints.
+
+Use [example.env](example.env) as a starting point:
+
+```bash
+cp example.env .env
+```
+
+```bash
+SMOLNALYSIS_LLM_BASE_URL=https://api.openai.com
+SMOLNALYSIS_LLM_API_KEY=...
+SMOLNALYSIS_LLM_TIMEOUT_SECONDS=8
+SMOLNALYSIS_LLM_GENERAL_AGENT_MODEL=gpt-4.1-mini
+SMOLNALYSIS_LLM_CKAN_TOOL_MODEL=gpt-4.1-mini
+SMOLNALYSIS_LLM_DATA_ANALYSIS_MODEL=gpt-4.1-mini
+SMOLNALYSIS_LLM_OPENUI_TRANSLATOR_MODEL=gpt-4.1-mini
+```
+
+Optional per-role overrides exist for future provider mixing:
+
+```bash
+SMOLNALYSIS_LLM_CKAN_TOOL_BASE_URL=https://provider.example
+SMOLNALYSIS_LLM_CKAN_TOOL_API_KEY=...
+```
 
 ## Useful commands
 
@@ -44,6 +72,9 @@ npm run build:openui-renderer
 
 # Run CKAN connector tests
 uv run python -m unittest tests.test_ckan_support
+
+# Run LLM settings tests
+uv run python -m unittest tests.test_llm_support
 ```
 
 ## Planning
