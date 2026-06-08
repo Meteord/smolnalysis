@@ -14,9 +14,9 @@ from fastapi.staticfiles import StaticFiles
 
 load_dotenv()
 
+from agent_workflow import run_agent_workflow
 from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
 from llm_support import llm_status, validate_llms
-from openui_support import generate_openui_chat_response
 
 
 APP_DIR = Path(__file__).parent
@@ -55,7 +55,11 @@ def _last_user_prompt(messages: list[dict[str, Any]]) -> str:
 
 
 def build_openui_response(prompt: str) -> str:
-    return generate_openui_chat_response(_demo_dataframe(), prompt or "Summarize this dataset")
+    return build_workflow_response(prompt)
+
+
+def build_workflow_response(prompt: str, ckan_endpoint: str | None = None) -> str:
+    return run_agent_workflow(prompt or "Summarize this dataset", ckan_endpoint).get("openui_lang", "")
 
 
 def _openai_sse_chunk(delta: dict[str, Any], finish_reason: str | None = None) -> str:
@@ -85,9 +89,10 @@ def respond(prompt: str) -> str:
 async def chat(request: Request) -> StreamingResponse:
     body = await request.json()
     messages = body.get("messages") or []
-    _ckan = body.get("ckan")
+    ckan = body.get("ckan") or {}
+    ckan_endpoint = ckan.get("base_url") if isinstance(ckan, dict) and ckan.get("connected") else None
     prompt = _last_user_prompt(messages)
-    openui_lang = build_openui_response(prompt)
+    openui_lang = build_workflow_response(prompt, ckan_endpoint)
     return StreamingResponse(_stream_openui_response(openui_lang), media_type="text/event-stream")
 
 

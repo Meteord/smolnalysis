@@ -8,7 +8,7 @@ import "./openui-chat.css";
 
 const CKAN_STORAGE_KEY = "smolnalysis.ckanEndpoint";
 
-function CkanEndpointPanel() {
+function CkanEndpointPanel({ onConnectionChange }) {
   const [defaultEndpoint, setDefaultEndpoint] = useState("https://opendata.muenchen.de/");
   const [endpoint, setEndpoint] = useState("https://opendata.muenchen.de/");
   const [status, setStatus] = useState({ ok: false, message: "Not connected." });
@@ -53,6 +53,7 @@ function CkanEndpointPanel() {
       if (data.ok && data.base_url) {
         setEndpoint(data.base_url);
         window.localStorage.setItem(CKAN_STORAGE_KEY, data.base_url);
+        onConnectionChange?.({ connected: true, base_url: data.base_url });
       }
     } catch {
       setStatus({ ok: false, message: "Could not contact the local CKAN connector." });
@@ -65,6 +66,7 @@ function CkanEndpointPanel() {
     window.localStorage.removeItem(CKAN_STORAGE_KEY);
     setEndpoint(defaultEndpoint);
     setStatus({ ok: false, message: "Reset to the default CKAN endpoint." });
+    onConnectionChange?.({ connected: false, base_url: defaultEndpoint });
   };
 
   return (
@@ -159,25 +161,39 @@ function LlmRolesPanel() {
   );
 }
 
-function BackendConfigHeader() {
+function BackendConfigHeader({ onCkanConnectionChange }) {
   return (
     <div className="backend-config">
-      <CkanEndpointPanel />
+      <CkanEndpointPanel onConnectionChange={onCkanConnectionChange} />
       <LlmRolesPanel />
     </div>
   );
 }
 
 function App() {
+  const [ckanConnection, setCkanConnection] = useState({ connected: false, base_url: "https://opendata.muenchen.de/" });
+
+  const processMessage = ({ threadId, messages, abortController }) =>
+    fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        threadId,
+        messages,
+        ckan: ckanConnection,
+      }),
+      signal: abortController.signal,
+    });
+
   return (
     <FullScreen
-      apiUrl="/api/chat"
+      processMessage={processMessage}
       streamProtocol={openAIAdapter()}
       componentLibrary={openuiChatLibrary}
       agentName="smolnalysis"
       logoUrl="/static/smolnalysis-mark.svg"
       showAssistantLogo={false}
-      threadHeader={<BackendConfigHeader />}
+      threadHeader={<BackendConfigHeader onCkanConnectionChange={setCkanConnection} />}
       welcomeMessage={{
         title: "smolnalysis",
         description: "Ask about the demo dataset and receive mocked OpenUI-Lang responses.",
