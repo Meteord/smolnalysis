@@ -1088,7 +1088,7 @@ var SmolnalysisOpenUIChat = (() => {
             }
             return dispatcher.useContext(Context);
           }
-          function useState32(initialState) {
+          function useState33(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1100,7 +1100,7 @@ var SmolnalysisOpenUIChat = (() => {
             var dispatcher = resolveDispatcher();
             return dispatcher.useRef(initialValue);
           }
-          function useEffect36(create3, deps) {
+          function useEffect37(create3, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useEffect(create3, deps);
           }
@@ -1883,7 +1883,7 @@ var SmolnalysisOpenUIChat = (() => {
           exports.useContext = useContext9;
           exports.useDebugValue = useDebugValue2;
           exports.useDeferredValue = useDeferredValue;
-          exports.useEffect = useEffect36;
+          exports.useEffect = useEffect37;
           exports.useId = useId3;
           exports.useImperativeHandle = useImperativeHandle3;
           exports.useInsertionEffect = useInsertionEffect4;
@@ -1891,7 +1891,7 @@ var SmolnalysisOpenUIChat = (() => {
           exports.useMemo = useMemo17;
           exports.useReducer = useReducer3;
           exports.useRef = useRef36;
-          exports.useState = useState32;
+          exports.useState = useState33;
           exports.useSyncExternalStore = useSyncExternalStore2;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -23604,7 +23604,7 @@ var SmolnalysisOpenUIChat = (() => {
               "The result of getSnapshot should be cached to avoid an infinite loop"
             ), didWarnUncachedGetSnapshot = true);
           }
-          cachedValue = useState32({
+          cachedValue = useState33({
             inst: { value, getSnapshot }
           });
           var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -23616,7 +23616,7 @@ var SmolnalysisOpenUIChat = (() => {
             },
             [subscribe, value, getSnapshot]
           );
-          useEffect36(
+          useEffect37(
             function() {
               checkIfSnapshotChanged(inst) && forceUpdate({ inst });
               return subscribe(function() {
@@ -23642,7 +23642,7 @@ var SmolnalysisOpenUIChat = (() => {
           return getSnapshot();
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var React126 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is2, useState32 = React126.useState, useEffect36 = React126.useEffect, useLayoutEffect7 = React126.useLayoutEffect, useDebugValue2 = React126.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+        var React126 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is2, useState33 = React126.useState, useEffect37 = React126.useEffect, useLayoutEffect7 = React126.useLayoutEffect, useDebugValue2 = React126.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
         exports.useSyncExternalStore = void 0 !== React126.useSyncExternalStore ? React126.useSyncExternalStore : shim;
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
       })();
@@ -23670,7 +23670,7 @@ var SmolnalysisOpenUIChat = (() => {
           return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var React126 = require_react(), shim = require_shim(), objectIs = "function" === typeof Object.is ? Object.is : is2, useSyncExternalStore2 = shim.useSyncExternalStore, useRef36 = React126.useRef, useEffect36 = React126.useEffect, useMemo17 = React126.useMemo, useDebugValue2 = React126.useDebugValue;
+        var React126 = require_react(), shim = require_shim(), objectIs = "function" === typeof Object.is ? Object.is : is2, useSyncExternalStore2 = shim.useSyncExternalStore, useRef36 = React126.useRef, useEffect37 = React126.useEffect, useMemo17 = React126.useMemo, useDebugValue2 = React126.useDebugValue;
         exports.useSyncExternalStoreWithSelector = function(subscribe, getSnapshot, getServerSnapshot, selector, isEqual10) {
           var instRef = useRef36(null);
           if (null === instRef.current) {
@@ -23713,7 +23713,7 @@ var SmolnalysisOpenUIChat = (() => {
             [getSnapshot, getServerSnapshot, selector, isEqual10]
           );
           var value = useSyncExternalStore2(subscribe, instRef[0], instRef[1]);
-          useEffect36(
+          useEffect37(
             function() {
               inst.hasValue = true;
               inst.value = value;
@@ -150591,6 +150591,69 @@ ${verifyLines.join("\n")}`;
   });
 
   // app/frontend/openui-chat.jsx
+  var CKAN_STORAGE_KEY = "smolnalysis.ckanEndpoint";
+  function CkanEndpointPanel() {
+    const [defaultEndpoint, setDefaultEndpoint] = (0, import_react89.useState)("https://opendata.muenchen.de/");
+    const [endpoint, setEndpoint] = (0, import_react89.useState)("https://opendata.muenchen.de/");
+    const [status, setStatus] = (0, import_react89.useState)({ ok: false, message: "Not connected." });
+    const [isConnecting, setIsConnecting] = (0, import_react89.useState)(false);
+    (0, import_react89.useEffect)(() => {
+      let active = true;
+      fetch("/api/ckan/default").then((response) => response.json()).then((data) => {
+        if (!active) return;
+        const nextDefault = data.default_endpoint || data.base_url || "https://opendata.muenchen.de/";
+        const saved = window.localStorage.getItem(CKAN_STORAGE_KEY);
+        setDefaultEndpoint(nextDefault);
+        setEndpoint(saved || nextDefault);
+        setStatus(saved ? { ok: false, message: "Saved endpoint ready to connect." } : data);
+      }).catch(() => {
+        const saved = window.localStorage.getItem(CKAN_STORAGE_KEY);
+        if (!active || !saved) return;
+        setEndpoint(saved);
+        setStatus({ ok: false, message: "Saved endpoint ready to connect." });
+      });
+      return () => {
+        active = false;
+      };
+    }, []);
+    const connect = async () => {
+      setIsConnecting(true);
+      setStatus({ ok: false, message: "Checking CKAN endpoint..." });
+      try {
+        const response = await fetch("/api/ckan/connect", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ base_url: endpoint })
+        });
+        const data = await response.json();
+        setStatus(data);
+        if (data.ok && data.base_url) {
+          setEndpoint(data.base_url);
+          window.localStorage.setItem(CKAN_STORAGE_KEY, data.base_url);
+        }
+      } catch {
+        setStatus({ ok: false, message: "Could not contact the local CKAN connector." });
+      } finally {
+        setIsConnecting(false);
+      }
+    };
+    const reset = () => {
+      window.localStorage.removeItem(CKAN_STORAGE_KEY);
+      setEndpoint(defaultEndpoint);
+      setStatus({ ok: false, message: "Reset to the default CKAN endpoint." });
+    };
+    return /* @__PURE__ */ import_react89.default.createElement("section", { className: "ckan-panel", "aria-label": "CKAN endpoint configuration" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "ckan-panel__copy" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "ckan-panel__label" }, "CKAN endpoint"), /* @__PURE__ */ import_react89.default.createElement("span", { className: `ckan-panel__status ${status.ok ? "ckan-panel__status--ok" : ""}` }, /* @__PURE__ */ import_react89.default.createElement("span", { "aria-hidden": "true" }), status.message)), /* @__PURE__ */ import_react89.default.createElement("div", { className: "ckan-panel__controls" }, /* @__PURE__ */ import_react89.default.createElement(
+      "input",
+      {
+        className: "ckan-panel__input",
+        type: "url",
+        value: endpoint,
+        onChange: (event) => setEndpoint(event.target.value),
+        placeholder: "https://opendata.muenchen.de/",
+        "aria-label": "CKAN endpoint URL"
+      }
+    ), /* @__PURE__ */ import_react89.default.createElement("button", { className: "ckan-panel__button ckan-panel__button--primary", type: "button", onClick: connect, disabled: isConnecting }, isConnecting ? "Connecting" : "Connect"), /* @__PURE__ */ import_react89.default.createElement("button", { className: "ckan-panel__button", type: "button", onClick: reset, disabled: isConnecting }, "Reset")));
+  }
   function App() {
     return /* @__PURE__ */ import_react89.default.createElement(
       FullScreen,
@@ -150601,6 +150664,7 @@ ${verifyLines.join("\n")}`;
         agentName: "smolnalysis",
         logoUrl: "/static/smolnalysis-mark.svg",
         showAssistantLogo: false,
+        threadHeader: /* @__PURE__ */ import_react89.default.createElement(CkanEndpointPanel, null),
         welcomeMessage: {
           title: "smolnalysis",
           description: "Ask about the demo dataset and receive mocked OpenUI-Lang responses."

@@ -11,6 +11,7 @@ from fastapi import Request
 from fastapi.responses import HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
+from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
 from openui_support import generate_openui_chat_response
 
 
@@ -80,9 +81,23 @@ def respond(prompt: str) -> str:
 async def chat(request: Request) -> StreamingResponse:
     body = await request.json()
     messages = body.get("messages") or []
+    _ckan = body.get("ckan")
     prompt = _last_user_prompt(messages)
     openui_lang = build_openui_response(prompt)
     return StreamingResponse(_stream_openui_response(openui_lang), media_type="text/event-stream")
+
+
+@app.get("/api/ckan/default")
+async def ckan_default() -> dict[str, Any]:
+    status = default_ckan_status().to_dict()
+    status["default_endpoint"] = DEFAULT_CKAN_ENDPOINT
+    return status
+
+
+@app.post("/api/ckan/connect")
+async def ckan_connect(request: Request) -> dict[str, Any]:
+    body = await request.json()
+    return validate_ckan_endpoint(str(body.get("base_url", ""))).to_dict()
 
 
 @app.get("/", response_class=HTMLResponse)

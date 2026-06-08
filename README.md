@@ -22,12 +22,13 @@ The app includes:
 - Gradio `Server` as the Python backend
 - A custom React frontend served from `/`
 - OpenUI's native fullscreen `FullScreen` chat component
+- Public CKAN endpoint configuration with `https://opendata.muenchen.de/` as the default
 - Mock backend responses that emit deterministic OpenUI-Lang
 - OpenUI's `openuiChatLibrary` for rendered assistant responses
 - A demo city dataset used by the current mock analysis flow
 - A public Gradio API endpoint at `/gradio_api/call/respond`
 
-The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser.
+The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser. CKAN support is connection-only for now: users can configure and validate a public endpoint, but chat does not yet search or analyze CKAN datasets.
 
 ## Useful commands
 
@@ -40,6 +41,9 @@ npm run build:openui-chat
 
 # Rebuild the earlier embedded renderer prototype bundle
 npm run build:openui-renderer
+
+# Run CKAN connector tests
+uv run python -m unittest tests.test_ckan_support
 ```
 
 ## Planning
