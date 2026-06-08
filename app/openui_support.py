@@ -84,6 +84,18 @@ def _build_column_rows(df: pd.DataFrame) -> list[dict[str, Any]]:
     ]
 
 
+def _workflow_trace_lines(prompt: str) -> list[str]:
+    request = prompt or "User request"
+    return [
+        "workflow = ListBlock([wf1, wf2, wf3, wf4, wf5], \"number\")",
+        f'wf1 = ListItem("User request received", {_json_arg(request)})',
+        'wf2 = ListItem("general_agent", "Would plan CKAN search, data analysis, and OpenUI translation.")',
+        'wf3 = ListItem("ckan_tool", "Would search the configured CKAN endpoint with tool calls.")',
+        'wf4 = ListItem("data_analysis", "Would analyze the selected dataset/resource data.")',
+        'wf5 = ListItem("openui_translator", "Would convert the analysis result into OpenUI-Lang for rendering.")',
+    ]
+
+
 def generate_openui_response(df: pd.DataFrame | None, prompt: str) -> ChatTurn:
     prompt = prompt.strip()
     steps = [AgentStep("planner", "Classified the request and selected a mock response path.")]
@@ -200,8 +212,9 @@ def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
     if df is None or df.empty:
         return "\n".join(
             [
-                "root = Card([header, callout, followups])",
+                "root = Card([header, workflow, callout, followups])",
                 'header = CardHeader("smolnalysis", "OpenUI fullscreen chat")',
+                *_workflow_trace_lines(prompt),
                 'callout = Callout("info", "Ready for data questions", "Ask for a summary, schema, bar chart, histogram, or mocked fallback. This server-mode frontend is rendered by OpenUI, while Python serves the responses.")',
                 "followups = FollowUpBlock([f1, f2, f3])",
                 'f1 = FollowUpItem("Summarize this dataset")',
@@ -222,8 +235,9 @@ def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
     if "invalid openui" in lower_prompt or "fallback" in lower_prompt:
         return "\n".join(
             [
-                "root = Card([header, callout, code])",
+                "root = Card([header, workflow, callout, code])",
                 'header = CardHeader("Fallback path", "Mocked invalid OpenUI request")',
+                *_workflow_trace_lines(prompt),
                 'callout = Callout("warning", "Renderer guard", "The old prototype used a custom fallback renderer. The fullscreen chat keeps this as a mocked warning response for now.")',
                 f'code = CodeBlock("openui-lang", {_json_arg("root = Nope([missing])")})',
             ]
@@ -233,8 +247,9 @@ def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
         rows_by_column = _build_column_rows(df)
         return "\n".join(
             [
-                "root = Card([header, table, followups])",
+                "root = Card([header, workflow, table, followups])",
                 f'header = CardHeader("Dataset schema", "{columns:,} columns detected")',
+                *_workflow_trace_lines(prompt),
                 f'c1 = Col("Column", {_json_arg([row["column"] for row in rows_by_column])}, "string")',
                 f'c2 = Col("Type", {_json_arg([row["dtype"] for row in rows_by_column])}, "string")',
                 f'c3 = Col("Missing", {_json_arg([row["missing"] for row in rows_by_column])}, "number")',
@@ -250,8 +265,9 @@ def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
         if not selected_numeric:
             return "\n".join(
                 [
-                    "root = Card([header, callout])",
+                    "root = Card([header, workflow, callout])",
                     'header = CardHeader("Distribution", "No numeric column found")',
+                    *_workflow_trace_lines(prompt),
                     'callout = Callout("warning", "No histogram available", "This dataset does not include numeric columns that can be bucketed.")',
                 ]
             )
@@ -270,8 +286,9 @@ def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
         labels = [f"{low + (span / bucket_count) * i:.1f}" for i in range(bucket_count)]
         return "\n".join(
             [
-                "root = Card([header, chart, note, followups])",
+                "root = Card([header, workflow, chart, note, followups])",
                 f'header = CardHeader("Distribution", "Histogram for {selected_numeric}")',
+                *_workflow_trace_lines(prompt),
                 f'series = Series("Count", {_json_arg(counts)})',
                 f'chart = BarChart({_json_arg(labels)}, [series], "grouped", "{selected_numeric}", "Rows")',
                 f'note = TextContent("Bucketed {len(values):,} numeric values from the uploaded/demo dataset.", "small")',
@@ -285,8 +302,9 @@ def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
         if not selected_numeric:
             return "\n".join(
                 [
-                    "root = Card([header, callout])",
+                    "root = Card([header, workflow, callout])",
                     'header = CardHeader("Chart", "No numeric column found")',
+                    *_workflow_trace_lines(prompt),
                     'callout = Callout("warning", "No chart available", "I need at least one numeric column for a chart.")',
                 ]
             )
@@ -296,8 +314,9 @@ def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
         values = [float(value) for value in chart_rows[selected_numeric].tolist()]
         return "\n".join(
             [
-                "root = Card([header, chart, followups])",
+                "root = Card([header, workflow, chart, followups])",
                 f'header = CardHeader("Bar chart", "{selected_numeric} by {selected_label or "row"}")',
+                *_workflow_trace_lines(prompt),
                 f'series = Series("{selected_numeric}", {_json_arg(values)})',
                 f'chart = BarChart({_json_arg(labels)}, [series], "grouped", "{selected_label or "Row"}", "{selected_numeric}")',
                 "followups = FollowUpBlock([f1, f2])",
@@ -314,8 +333,9 @@ def generate_openui_chat_response(df: pd.DataFrame | None, prompt: str) -> str:
     ]
     return "\n".join(
         [
-            "root = Card([header, metrics, table, followups])",
+            "root = Card([header, workflow, metrics, table, followups])",
             f'header = CardHeader("Dataset summary", "{rows:,} rows x {columns:,} columns")',
+            *_workflow_trace_lines(prompt),
             f'metrics = ListBlock([m1, m2, m3, m4], "number")',
             f'm1 = ListItem("Rows", "{rows:,} records")',
             f'm2 = ListItem("Columns", "{columns:,} fields")',

@@ -7,11 +7,15 @@ from typing import Any
 
 import gradio as gr
 import pandas as pd
+from dotenv import load_dotenv
 from fastapi import Request
 from fastapi.responses import HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
+load_dotenv()
+
 from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
+from llm_support import llm_status, validate_llms
 from openui_support import generate_openui_chat_response
 
 
@@ -98,6 +102,16 @@ async def ckan_default() -> dict[str, Any]:
 async def ckan_connect(request: Request) -> dict[str, Any]:
     body = await request.json()
     return validate_ckan_endpoint(str(body.get("base_url", ""))).to_dict()
+
+
+@app.get("/api/llms/status")
+async def llms_status() -> dict[str, Any]:
+    return llm_status()
+
+
+@app.post("/api/llms/validate")
+async def llms_validate() -> dict[str, Any]:
+    return validate_llms()
 
 
 @app.get("/", response_class=HTMLResponse)

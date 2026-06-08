@@ -96,6 +96,78 @@ function CkanEndpointPanel() {
   );
 }
 
+function LlmRolesPanel() {
+  const [roles, setRoles] = useState([]);
+  const [isValidating, setIsValidating] = useState(false);
+  const [message, setMessage] = useState("Loading LLM roles...");
+
+  const loadStatus = () => {
+    fetch("/api/llms/status")
+      .then((response) => response.json())
+      .then((data) => {
+        setRoles(data.roles || []);
+        setMessage("Server-side LLM role configuration.");
+      })
+      .catch(() => {
+        setMessage("Could not load LLM role status.");
+      });
+  };
+
+  useEffect(() => {
+    loadStatus();
+  }, []);
+
+  const validate = async () => {
+    setIsValidating(true);
+    setMessage("Validating OpenAI-compatible providers...");
+    try {
+      const response = await fetch("/api/llms/validate", { method: "POST" });
+      const data = await response.json();
+      setRoles(data.roles || []);
+      setMessage("Validation complete.");
+    } catch {
+      setMessage("Could not validate LLM roles.");
+    } finally {
+      setIsValidating(false);
+    }
+  };
+
+  return (
+    <section className="llm-panel" aria-label="LLM role configuration">
+      <div className="llm-panel__header">
+        <div>
+          <span className="llm-panel__label">LLM roles</span>
+          <span className="llm-panel__message">{message}</span>
+        </div>
+        <button className="ckan-panel__button ckan-panel__button--primary" type="button" onClick={validate} disabled={isValidating}>
+          {isValidating ? "Validating" : "Validate"}
+        </button>
+      </div>
+      <div className="llm-panel__roles">
+        {roles.map((role) => (
+          <div className="llm-role" key={role.key}>
+            <span className={`llm-role__dot llm-role__dot--${role.validation_status || "missing"}`} aria-hidden="true" />
+            <div className="llm-role__body">
+              <span className="llm-role__name">{role.label}</span>
+              <span className="llm-role__meta">{role.model || "No model"}{role.base_url_display ? ` · ${role.base_url_display}` : ""}</span>
+              <span className="llm-role__status">{role.message}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function BackendConfigHeader() {
+  return (
+    <div className="backend-config">
+      <CkanEndpointPanel />
+      <LlmRolesPanel />
+    </div>
+  );
+}
+
 function App() {
   return (
     <FullScreen
@@ -105,7 +177,7 @@ function App() {
       agentName="smolnalysis"
       logoUrl="/static/smolnalysis-mark.svg"
       showAssistantLogo={false}
-      threadHeader={<CkanEndpointPanel />}
+      threadHeader={<BackendConfigHeader />}
       welcomeMessage={{
         title: "smolnalysis",
         description: "Ask about the demo dataset and receive mocked OpenUI-Lang responses.",
