@@ -1,138 +1,108 @@
 from __future__ import annotations
 
+import asyncio
+import json
 from pathlib import Path
 from typing import Any
 
 import gradio as gr
 import pandas as pd
+from fastapi import Request
+from fastapi.responses import HTMLResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
 
-from openui_support import (
-    app_styles,
-    generate_openui_response,
-    openui_component,
-    parse_openui_lang,
-    render_openui_error,
-    render_openui_value,
-)
+from openui_support import generate_openui_chat_response
 
 
-MAX_UPLOAD_MB = 25
-STATIC_DIR = Path(__file__).parent / "static"
+APP_DIR = Path(__file__).parent
+STATIC_DIR = APP_DIR / "static"
+DEMO_CSV = APP_DIR / "examples" / "demo_cities.csv"
 
 
-gr.set_static_paths(paths=[STATIC_DIR])
+def _demo_dataframe() -> pd.DataFrame:
+    if DEMO_CSV.exists():
+        return pd.read_csv(DEMO_CSV)
 
-
-def _read_csv(file_path: str | None) -> pd.DataFrame:
-    if not file_path:
-        raise ValueError("Upload a CSV file to begin.")
-
-    path = Path(file_path)
-    if path.stat().st_size > MAX_UPLOAD_MB * 1024 * 1024:
-        raise ValueError(f"CSV file is larger than {MAX_UPLOAD_MB} MB.")
-
-    return pd.read_csv(path)
-
-
-def _dataset_status(file_path: str | None) -> str:
-    try:
-        df = _read_csv(file_path)
-    except Exception as exc:
-        return f"Dataset not loaded: {exc}"
-    return f"Dataset loaded: {len(df):,} rows x {len(df.columns):,} columns."
-
-
-def chat_with_openui(
-    file_path: str | None,
-    prompt: str,
-    history: list[dict[str, Any]] | None,
-) -> tuple[list[dict[str, Any]], str]:
-    history = history or []
-    prompt = prompt.strip()
-    if not prompt:
-        return history, ""
-
-    try:
-        df = _read_csv(file_path)
-    except Exception:
-        df = None
-
-    turn = generate_openui_response(df, prompt)
-    try:
-        parsed = parse_openui_lang(turn.openui_lang)
-        render_value = render_openui_value(parsed, turn.openui_lang)
-    except Exception as exc:
-        render_value = render_openui_error(turn.openui_lang, str(exc))
-
-    rendered_response = openui_component(value=render_value, label="OpenUI response")
-
-    history = [
-        *history,
-        {"role": "user", "content": prompt},
-        {"role": "assistant", "content": rendered_response},
-    ]
-    return history, ""
-
-
-with gr.Blocks(title="smolnalysis") as demo:
-    gr.HTML(app_styles())
-    gr.HTML(
-        """
-        <section class="app-shell">
-          <div class="app-hero">
-            <p class="app-kicker">OpenUI Data Chat</p>
-            <h1>smolnalysis</h1>
-            <p class="app-subtitle">Upload a CSV, ask about the data, and render mocked OpenUI-Lang answers with a native Gradio HTML component.</p>
-          </div>
-        </section>
-        """
+    return pd.DataFrame(
+        [
+            {"city": "Berlin", "population": 3677000, "median_age": 42.6},
+            {"city": "Hamburg", "population": 1906000, "median_age": 42.1},
+            {"city": "Munich", "population": 1512000, "median_age": 41.5},
+            {"city": "Cologne", "population": 1086000, "median_age": 42.3},
+        ]
     )
 
-    with gr.Group(elem_classes=["app-shell", "upload-shell"]):
-        csv_file = gr.File(label="Dataset", file_types=[".csv"], type="filepath")
-        dataset_status = gr.Markdown("Dataset not loaded.")
 
-    with gr.Group(elem_classes=["app-shell", "chat-shell"]):
-        openui_chatbot = gr.Chatbot(
-            label=None,
-            height=620,
-            container=False,
-            layout="bubble",
-        )
-        with gr.Row(elem_classes=["composer-row"]):
-            openui_prompt = gr.Textbox(
-                label="Message",
-                show_label=False,
-                placeholder="Ask for a summary, schema, bar chart, or histogram",
-                scale=8,
-                max_lines=4,
-                autofocus=True,
-            )
-            openui_send = gr.Button("Send", variant="primary", scale=1, min_width=120)
+def _message_text(message: dict[str, Any]) -> str:
+    content = message.get("content", "")
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        return " ".join(str(part.get("text", "")) for part in content if isinstance(part, dict))
+    return str(content)
 
-        gr.Examples(
-            examples=[
-                ["Summarize this dataset"],
-                ["Show a bar chart of population by city"],
-                ["Show a histogram of median_age"],
-                ["List the columns and missing values"],
-                ["Return invalid OpenUI for fallback testing"],
-            ],
-            inputs=openui_prompt,
-            )
 
-    csv_file.change(_dataset_status, inputs=csv_file, outputs=dataset_status)
-    openui_send.click(
-        chat_with_openui,
-        inputs=[csv_file, openui_prompt, openui_chatbot],
-        outputs=[openui_chatbot, openui_prompt],
-    )
-    openui_prompt.submit(
-        chat_with_openui,
-        inputs=[csv_file, openui_prompt, openui_chatbot],
-        outputs=[openui_chatbot, openui_prompt],
-    )
+def _last_user_prompt(messages: list[dict[str, Any]]) -> str:
+    for message in reversed(messages):
+        if message.get("role") == "user":
+            return _message_text(message).strip()
+    return ""
+
+
+def build_openui_response(prompt: str) -> str:
+    return generate_openui_chat_response(_demo_dataframe(), prompt or "Summarize this dataset")
+
+
+def _openai_sse_chunk(delta: dict[str, Any], finish_reason: str | None = None) -> str:
+    payload = {"choices": [{"delta": delta, "finish_reason": finish_reason}]}
+    return f"data: {json.dumps(payload)}\n\n"
+
+
+async def _stream_openui_response(openui_lang: str):
+    yield _openai_sse_chunk({"role": "assistant"})
+    await asyncio.sleep(0)
+    yield _openai_sse_chunk({"content": openui_lang})
+    await asyncio.sleep(0)
+    yield _openai_sse_chunk({}, "stop")
+    yield "data: [DONE]\n\n"
+
+
+app = gr.Server(title="smolnalysis")
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+
+
+@app.api(name="respond")
+def respond(prompt: str) -> str:
+    return build_openui_response(prompt)
+
+
+@app.post("/api/chat")
+async def chat(request: Request) -> StreamingResponse:
+    body = await request.json()
+    messages = body.get("messages") or []
+    prompt = _last_user_prompt(messages)
+    openui_lang = build_openui_response(prompt)
+    return StreamingResponse(_stream_openui_response(openui_lang), media_type="text/event-stream")
+
+
+@app.get("/", response_class=HTMLResponse)
+async def homepage() -> str:
+    return """
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>smolnalysis</title>
+    <link rel="stylesheet" href="/static/openui-chat.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/static/openui-chat.js"></script>
+  </body>
+</html>
+"""
 
 
 if __name__ == "__main__":
-    demo.launch(theme=gr.themes.Soft())
+    app.launch()
