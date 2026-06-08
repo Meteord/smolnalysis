@@ -29,6 +29,9 @@ class AgentWorkflowState(TypedDict, total=False):
     ckan_result: dict[str, Any]
     analysis_result: dict[str, Any]
     openui_lang: str
+    next_action: str
+    retrieval_attempts: int
+    analysis_attempts: int
 
 
 def run_agent_workflow(prompt: str, ckan_endpoint: str | None = None) -> AgentWorkflowState:
@@ -36,42 +39,51 @@ def run_agent_workflow(prompt: str, ckan_endpoint: str | None = None) -> AgentWo
         "prompt": prompt.strip() or "Summarize this dataset",
         "ckan_endpoint": _normalize_endpoint_or_default(ckan_endpoint),
         "steps": [],
+        "retrieval_attempts": 0,
+        "analysis_attempts": 0,
     }
     return build_agent_workflow().invoke(initial_state)
 
 
 def build_agent_workflow():
     graph = StateGraph(AgentWorkflowState)
-    graph.add_node("plan_request", plan_request)
+    graph.add_node("react_agent", react_agent)
     graph.add_node("retrieve_ckan", retrieve_ckan)
     graph.add_node("analyze_data", analyze_data)
     graph.add_node("translate_openui", translate_openui)
-    graph.add_edge(START, "plan_request")
-    graph.add_edge("plan_request", "retrieve_ckan")
-    graph.add_edge("retrieve_ckan", "analyze_data")
-    graph.add_edge("analyze_data", "translate_openui")
+    graph.add_edge(START, "react_agent")
+    graph.add_conditional_edges(
+        "react_agent",
+        route_next_action,
+        {
+            "retrieve_ckan": "retrieve_ckan",
+            "analyze_data": "analyze_data",
+            "translate_openui": "translate_openui",
+        },
+    )
+    graph.add_edge("retrieve_ckan", "react_agent")
+    graph.add_edge("analyze_data", "react_agent")
     graph.add_edge("translate_openui", END)
     return graph.compile()
 
 
-def plan_request(state: AgentWorkflowState) -> AgentWorkflowState:
+def route_next_action(state: AgentWorkflowState) -> str:
+    return state.get("next_action", "translate_openui")
+
+
+def react_agent(state: AgentWorkflowState) -> AgentWorkflowState:
     _simulate_node_delay()
-    plan = random.choice(
-        [
-            "Plan CKAN search first, inspect candidate resources, then analyze the selected data.",
-            "Search the configured portal, rank likely tabular resources, and prepare an analysis summary.",
-            "Find relevant open-data resources, run a compact analysis, and translate the result to OpenUI-Lang.",
-        ]
-    )
+    next_action, thought = _decide_next_action(state)
     return {
+        "next_action": next_action,
         "steps": [
             *state.get("steps", []),
             {
-                "node": "plan_request",
+                "node": "react_agent",
                 "title": "general_agent",
-                "detail": plan,
+                "detail": thought,
             },
-        ]
+        ],
     }
 
 
@@ -79,12 +91,15 @@ def retrieve_ckan(state: AgentWorkflowState) -> AgentWorkflowState:
     _simulate_node_delay()
     endpoint = state["ckan_endpoint"]
     prompt = state["prompt"]
+    attempt = state.get("retrieval_attempts", 0) + 1
     candidates = _mock_ckan_candidates(prompt)
     selected = random.choice(candidates)
     return {
+        "retrieval_attempts": attempt,
         "ckan_result": {
             "endpoint": endpoint,
             "query": _mock_search_query(prompt),
+            "attempt": attempt,
             "datasets": candidates,
             "selected": selected,
         },
@@ -93,7 +108,7 @@ def retrieve_ckan(state: AgentWorkflowState) -> AgentWorkflowState:
             {
                 "node": "retrieve_ckan",
                 "title": "ckan_tool",
-                "detail": f"Stub searched {endpoint} and selected {selected['title']}.",
+                "detail": f"Attempt {attempt} searched {endpoint} and selected {selected['title']}.",
             },
         ],
     }
@@ -103,13 +118,16 @@ def analyze_data(state: AgentWorkflowState) -> AgentWorkflowState:
     _simulate_node_delay()
     ckan_result = state.get("ckan_result", {})
     selected = ckan_result.get("selected", {}) if isinstance(ckan_result, dict) else {}
+    attempt = state.get("analysis_attempts", 0) + 1
     rows = random.randint(450, 12500)
     columns = random.randint(5, 18)
     missing_pct = round(random.uniform(0.0, 7.5), 1)
     chart_labels = random.sample(["2019", "2020", "2021", "2022", "2023", "2024", "Q1", "Q2", "Q3", "Q4"], 5)
     chart_values = [random.randint(12, 96) for _ in chart_labels]
     return {
+        "analysis_attempts": attempt,
         "analysis_result": {
+            "attempt": attempt,
             "summary": f"Stub analysis inspected {selected.get('resource', 'a CSV resource')} and found a usable table.",
             "rows": rows,
             "columns": columns,
@@ -133,7 +151,7 @@ def analyze_data(state: AgentWorkflowState) -> AgentWorkflowState:
             {
                 "node": "analyze_data",
                 "title": "data_analysis",
-                "detail": f"Stub analyzed {rows:,} rows and prepared summary metrics.",
+                "detail": f"Attempt {attempt} analyzed {rows:,} rows and prepared summary metrics.",
             },
         ],
     }
@@ -141,18 +159,37 @@ def analyze_data(state: AgentWorkflowState) -> AgentWorkflowState:
 
 def translate_openui(state: AgentWorkflowState) -> AgentWorkflowState:
     _simulate_node_delay()
-    openui_lang = _build_openui_response(state)
+    final_steps: list[WorkflowStep] = [
+        *state.get("steps", []),
+        {
+            "node": "translate_openui",
+            "title": "openui_translator",
+            "detail": "Stub translated the current ReAct state into OpenUI-Lang.",
+        },
+    ]
+    openui_lang = _build_openui_response({**state, "steps": final_steps})
     return {
         "openui_lang": openui_lang,
-        "steps": [
-            *state.get("steps", []),
-            {
-                "node": "translate_openui",
-                "title": "openui_translator",
-                "detail": "Stub translated the workflow state into OpenUI-Lang.",
-            },
-        ],
+        "steps": final_steps,
     }
+
+
+def _decide_next_action(state: AgentWorkflowState) -> tuple[str, str]:
+    prompt = state["prompt"].casefold()
+    retrieval_attempts = state.get("retrieval_attempts", 0)
+    analysis_attempts = state.get("analysis_attempts", 0)
+    wants_deeper_search = any(term in prompt for term in ["again", "broader", "compare", "more", "rerun"])
+    wants_deeper_analysis = any(term in prompt for term in ["chart", "compare", "distribution", "quality", "trend"])
+
+    if retrieval_attempts == 0:
+        return "retrieve_ckan", "Thought: I need CKAN candidates before I can inspect data."
+    if wants_deeper_search and retrieval_attempts < 2:
+        return "retrieve_ckan", "Thought: The request hints at comparison or breadth, so I will rerun CKAN retrieval once."
+    if analysis_attempts == 0:
+        return "analyze_data", "Thought: I have a CKAN candidate, so the next useful action is data analysis."
+    if wants_deeper_analysis and analysis_attempts < 2:
+        return "analyze_data", "Thought: The request asks for a chart or quality lens, so I will rerun analysis with a different pass."
+    return "translate_openui", "Thought: I have enough retrieval and analysis context to produce the final OpenUI-Lang response."
 
 
 def _build_openui_response(state: AgentWorkflowState) -> str:
@@ -168,16 +205,15 @@ def _build_openui_response(state: AgentWorkflowState) -> str:
 
     lines = [
         _root_line(variant),
-        f'header = CardHeader("LangGraph workflow", {_json_arg(f"Stub pipeline · {variant} result")})',
+        f'header = CardHeader("ReAct-style LangGraph agent", {_json_arg(f"Tool loop - {variant} result")})',
         f'request = TextContent({_json_arg(f"User request: {prompt}")}, "default")',
         f'endpoint = TextContent({_json_arg(f"CKAN endpoint used: {endpoint}")}, "small")',
-        f'workflow = ListBlock([{", ".join(f"step{index + 1}" for index in range(len(steps) + 1))}], "number")',
+        f'workflow = ListBlock([{", ".join(f"step{index + 1}" for index in range(len(steps)))}], "number")',
     ]
 
     for index, step in enumerate(steps):
         step_detail = f"{step['title']}: {step['detail']}"
         lines.append(f'step{index + 1} = ListItem({_json_arg(step["node"])}, {_json_arg(step_detail)})')
-    lines.append('step4 = ListItem("translate_openui", "openui_translator: Stub translated the workflow state into OpenUI-Lang.")')
 
     lines.extend(
         [
@@ -194,7 +230,7 @@ def _build_openui_response(state: AgentWorkflowState) -> str:
         [
             "followups = FollowUpBlock([f1, f2, f3])",
             'f1 = FollowUpItem("Search CKAN for population datasets")',
-            'f2 = FollowUpItem("Analyze the selected resource")',
+            'f2 = FollowUpItem("Rerun analysis with a quality lens")',
             'f3 = FollowUpItem("Translate the result to OpenUI-Lang")',
         ]
     )
