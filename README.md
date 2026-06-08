@@ -24,13 +24,13 @@ The app includes:
 - OpenUI's native fullscreen `FullScreen` chat component
 - Public CKAN endpoint configuration with `https://opendata.muenchen.de/` as the default
 - Server-side configuration for four OpenAI-compatible LLM roles
-- A LangGraph backend workflow with delayed, randomized stub CKAN, analysis, and OpenUI translation nodes
+- A ReAct-style LangGraph backend workflow with delayed, randomized stub CKAN, analysis, and OpenUI translation nodes
 - Mock backend responses that emit deterministic OpenUI-Lang
 - OpenUI's `openuiChatLibrary` for rendered assistant responses
 - A demo city dataset used by the current mock analysis flow
 - A public Gradio API endpoint at `/gradio_api/call/respond`
 
-The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser. CKAN support is connection-only for now, and LLM support is configuration-only. `/api/chat` now runs a delayed LangGraph stub workflow: user request -> CKAN retrieval stub -> data analysis stub -> randomized OpenUI-Lang translation stub -> frontend render.
+The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser. CKAN support is connection-only for now, and LLM support is configuration-only. `/api/chat` now runs a delayed ReAct-style LangGraph stub workflow: user request -> controller thought -> CKAN retrieval stub, optionally rerun -> data analysis stub, optionally rerun -> randomized OpenUI-Lang translation stub -> frontend render.
 
 ## LLM role configuration
 

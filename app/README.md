@@ -40,7 +40,7 @@ For a later Hugging Face Space, use this folder as the Space root or copy this a
 - Gradio `Server` backend with custom FastAPI routes
 - Public CKAN endpoint configuration and validation
 - Server-side OpenAI-compatible LLM role configuration
-- Delayed and randomized LangGraph workflow stubs behind `/api/chat`
+- Delayed and randomized ReAct-style LangGraph workflow stubs behind `/api/chat`
 - Dataset-aware mocked chat interaction using `examples/demo_cities.csv`
 - Mocked deterministic OpenUI-Lang backend contract
 - OpenUI's native `FullScreen` chat component
@@ -99,18 +99,18 @@ SMOLNALYSIS_LLM_<ROLE>_BASE_URL=...
 SMOLNALYSIS_LLM_<ROLE>_API_KEY=...
 ```
 
-The current chat path runs LangGraph stubs with small randomized delays and randomized OpenUI-Lang result layouts. It renders a visible workflow trace for the future flow: user request -> CKAN search -> data analysis -> OpenUI-Lang translation -> frontend render.
+The current chat path runs ReAct-style LangGraph stubs with small randomized delays and randomized OpenUI-Lang result layouts. It renders a visible workflow trace for the future flow: user request -> controller thought -> CKAN search, optionally rerun -> data analysis, optionally rerun -> OpenUI-Lang translation -> frontend render.
 
 ## LangGraph Workflow
 
 `/api/chat` invokes a compiled LangGraph `StateGraph` with these nodes:
 
-- `plan_request`
+- `react_agent`
 - `retrieve_ckan`
 - `analyze_data`
 - `translate_openui`
 
-The frontend sends the connected CKAN endpoint with each chat request. The workflow records that endpoint in the rendered OpenUI response, then returns one final assistant message through the existing OpenAI-compatible SSE shape.
+The `react_agent` controller decides the next action after each tool call. It can rerun the CKAN retrieval and data-analysis stubs for prompts that ask for broader comparison, charts, trends, or quality checks. The frontend sends the connected CKAN endpoint with each chat request. The workflow records that endpoint in the rendered OpenUI response, then returns one final assistant message through the existing OpenAI-compatible SSE shape.
 
 Set `SMOLNALYSIS_WORKFLOW_DISABLE_DELAYS=true` to skip artificial node delays during tests or demos.
 

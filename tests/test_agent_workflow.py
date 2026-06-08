@@ -28,7 +28,22 @@ class AgentWorkflowTests(TestCase):
         result = run_agent_workflow("Find population data", "https://opendata.muenchen.de/")
         step_nodes = [step["node"] for step in result["steps"]]
 
-        self.assertEqual(step_nodes, ["plan_request", "retrieve_ckan", "analyze_data", "translate_openui"])
+        self.assertEqual(step_nodes[0], "react_agent")
+        self.assertEqual(step_nodes[-1], "translate_openui")
+        self.assertIn("retrieve_ckan", step_nodes)
+        self.assertIn("analyze_data", step_nodes)
+        self.assertLess(step_nodes.index("retrieve_ckan"), step_nodes.index("analyze_data"))
+        self.assertLess(step_nodes.index("analyze_data"), step_nodes.index("translate_openui"))
+
+    def test_agent_can_rerun_stub_tools(self) -> None:
+        result = run_agent_workflow("Compare more population quality chart data", "https://opendata.muenchen.de/")
+        step_nodes = [step["node"] for step in result["steps"]]
+
+        self.assertGreaterEqual(step_nodes.count("retrieve_ckan"), 2)
+        self.assertGreaterEqual(step_nodes.count("analyze_data"), 2)
+        self.assertEqual(result["ckan_result"]["attempt"], 2)
+        self.assertEqual(result["analysis_result"]["attempt"], 2)
+        self.assertIn("Thought:", result["openui_lang"])
 
     def test_ckan_endpoint_is_reflected_in_output(self) -> None:
         result = run_agent_workflow("Find population data", "https://example.org/ckan")
@@ -56,7 +71,8 @@ class AgentWorkflowTests(TestCase):
         payloads = [json.loads(chunk) for chunk in chunks]
         self.assertEqual(payloads[0]["choices"][0]["delta"]["role"], "assistant")
         content = "".join(payload["choices"][0]["delta"].get("content", "") for payload in payloads)
-        self.assertIn("LangGraph workflow", content)
+        self.assertIn("ReAct-style LangGraph agent", content)
+        self.assertIn("react_agent", content)
         self.assertIn("https://example.org/ckan/", content)
 
 
