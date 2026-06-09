@@ -131,7 +131,7 @@ Use-case split:
 
 The retrieval adapter must not receive candidate dataset metadata in the prompt. It should learn to turn a user request like "wieviele toiletten wurden im jahr 2020 eroeffnet" into a processable CKAN search query. The filter adapter receives the dataframe schema after retrieval, which makes it much easier to generate valid filter parameters.
 
-To generate more human-like seed queries with a LiteLLM/OpenAI model:
+To generate more human-like seed queries with an OpenAI-compatible chat model:
 
 First build the simplified LLM input context:
 
@@ -163,7 +163,7 @@ training/data/generated/llm_user_queries.jsonl
 training/data/generated/llm_user_queries.summary.json
 ```
 
-Each LLM prompt receives the dataset description, resource name, column names, dtypes, operators, example values, and sample rows. The output contains natural user questions plus optional `filter_intent` hints that can be validated and converted into `query_dataframe(...)` examples.
+Each LLM prompt receives the dataset description, resource name, column names, dtypes, example values, and sample rows. The output contains natural user questions plus a short language and intent label. The model call follows the same `ChatOpenAI(...).with_structured_output(..., method="json_schema")` pattern used in `/DLF`.
 
 ### Dataframe Persistence
 
