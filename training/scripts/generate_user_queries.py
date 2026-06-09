@@ -2,17 +2,24 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import random
 import re
 import time
+from truststore import inject_into_ssl
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
+from dotenv import load_dotenv
+from pydantic import BaseModel, Field
+
+inject_into_ssl()
+load_dotenv()
 
 DEFAULT_INPUT = Path("training/data/generated/simple_query_context.jsonl")
 DEFAULT_CATALOG = Path("training/data/raw/munich_catalog_sample.jsonl")
 DEFAULT_OUTPUT = Path("training/data/generated/llm_user_queries.jsonl")
-DEFAULT_MODEL = "gpt-4o-mini"
+DEFAULT_MODEL = os.getenv("OPENAI_CHAT_MODEL", "gpt-4.1-mini")
 
 
 SYSTEM_PROMPT = """You generate realistic user questions for a Munich open-data assistant.
@@ -21,14 +28,12 @@ The user is not a data engineer. They ask natural questions in German, English, 
 The assistant will later:
 1. search the Munich CKAN catalog,
 2. fetch the relevant resource as a dataframe,
-3. generate dataframe filter/aggregation parameters from the dataframe columns.
+3. answer questions using the dataframe columns.
 
 Generate questions that are answerable from the provided dataset description and columns.
 Do not copy the dataset title verbatim in every question.
 Do not invent columns, values, years, districts, categories, or facts that are not implied by the provided context.
 Prefer concrete civic-data questions over generic "show me this dataset" requests.
-
-Return JSON only.
 """
 
 
@@ -37,38 +42,22 @@ USER_PROMPT_TEMPLATE = """Create {count} realistic user questions for this Munic
 Dataset context:
 {context_json}
 
-Return exactly this JSON shape:
-{{
-  "queries": [
-    {{
-      "query": "natural user question",
-      "language": "de|en|mixed",
-      "intent": "short description of what the user wants",
-      "filter_intent": {{
-        "filters": [
-          {{"column": "provided column name", "operator": "provided operator", "value": "provided example value or numeric/date range"}}
-        ],
-        "group_by": ["provided column name"],
-        "aggregate": [
-          {{"column": "provided numeric column name", "function": "count|sum|mean|median|min|max"}}
-        ],
-        "sort": [
-          {{"column": "provided column or aggregate alias", "direction": "asc|desc"}}
-        ],
-        "limit": 10
-      }}
-    }}
-  ]
-}}
-
 Rules:
-- `filter_intent` can be empty if the question is only about finding or previewing the dataset.
-- Use only provided column names.
-- Use only provided operators for filters.
-- Use only example values shown in the column metadata, unless using a numeric min/max range.
+- Return exactly {count} questions.
 - Make at least half of the questions German.
-- Include a mix of simple filtering, top-k, comparisons, year/date filtering if possible, and overview questions.
+- Use only provided column names and example values when referring to concrete fields or values.
+- Include a mix of overview, filtering, comparison, top-k, and year/date questions where the columns support them.
 """
+
+
+class GeneratedQuery(BaseModel):
+    query: str = Field(description="Natural user question.")
+    language: Literal["de", "en", "mixed"] = Field(description="Question language.")
+    intent: str = Field(description="Short description of what the user wants.")
+
+
+class GeneratedQueries(BaseModel):
+    queries: list[GeneratedQuery] = Field(description="Generated natural user questions.")
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -109,14 +98,13 @@ def compact_text(value: str | None, max_chars: int = 900) -> str:
     return re.sub(r"\s+", " ", value).strip()[:max_chars]
 
 
-def compact_columns(entry: dict[str, Any], max_columns: int = 18, max_examples: int = 8) -> list[dict[str, Any]]:
+def compact_columns(entry: dict[str, Any], max_columns: int = 12, max_examples: int = 5) -> list[dict[str, Any]]:
     if entry.get("columns"):
         return [
             {
                 "name": column.get("name"),
                 "dtype": column.get("dtype"),
                 "kind": column.get("kind"),
-                "operators": column.get("operators", []),
                 "examples": column.get("examples", [])[:max_examples],
                 "min": column.get("min"),
                 "max": column.get("max"),
@@ -135,7 +123,6 @@ def compact_columns(entry: dict[str, Any], max_columns: int = 18, max_examples: 
                 "name": column,
                 "dtype": param.get("dtype"),
                 "kind": param.get("kind"),
-                "operators": param.get("operators", []),
                 "examples": param.get("example_values", [])[:max_examples],
                 "min": param.get("min"),
                 "max": param.get("max"),
@@ -160,100 +147,23 @@ def resource_context(entry: dict[str, Any], catalog_by_name: dict[str, dict[str,
     }
 
 
-def strip_json_fence(text: str) -> str:
-    text = text.strip()
-    if text.startswith("```"):
-        text = re.sub(r"^```(?:json)?\s*", "", text)
-        text = re.sub(r"\s*```$", "", text)
-    return text.strip()
-
-
-def parse_llm_json(text: str) -> dict[str, Any]:
-    text = strip_json_fence(text)
-    try:
-        payload = json.loads(text)
-    except json.JSONDecodeError:
-        match = re.search(r"\{.*\}", text, flags=re.DOTALL)
-        if not match:
-            raise
-        payload = json.loads(match.group(0))
-    if not isinstance(payload, dict) or not isinstance(payload.get("queries"), list):
-        raise ValueError("LLM response must be an object with a `queries` list.")
-    return payload
-
-
-def validate_filter_intent(filter_intent: dict[str, Any], columns: list[dict[str, Any]]) -> dict[str, Any]:
-    column_map = {column["name"]: column for column in columns}
-    cleaned: dict[str, Any] = {}
-
-    filters = []
-    for condition in filter_intent.get("filters", []) or []:
-        column = condition.get("column")
-        op = condition.get("operator")
-        if column not in column_map:
-            continue
-        if op not in column_map[column].get("operators", []):
-            continue
-        filters.append(
-            {
-                "column": column,
-                "operator": op,
-                "value": condition.get("value"),
-            }
-        )
-    if filters:
-        cleaned["filters"] = filters
-
-    group_by = [column for column in filter_intent.get("group_by", []) or [] if column in column_map]
-    if group_by:
-        cleaned["group_by"] = group_by
-
-    aggregates = []
-    for aggregate in filter_intent.get("aggregate", []) or []:
-        column = aggregate.get("column")
-        function = aggregate.get("function")
-        if column in column_map and function in {"count", "sum", "mean", "median", "min", "max"}:
-            aggregates.append({"column": column, "function": function})
-    if aggregates:
-        cleaned["aggregate"] = aggregates
-
-    sort = []
-    for item in filter_intent.get("sort", []) or []:
-        column = item.get("column")
-        direction = item.get("direction", "desc")
-        if column in column_map or any(column == f"{agg['function']}_{agg['column']}" for agg in aggregates):
-            sort.append({"column": column, "direction": "desc" if direction == "desc" else "asc"})
-    if sort:
-        cleaned["sort"] = sort
-
-    limit = filter_intent.get("limit")
-    if isinstance(limit, int) and 1 <= limit <= 1000:
-        cleaned["limit"] = limit
-
-    return cleaned
-
-
 def normalize_query_row(
     *,
     entry: dict[str, Any],
-    query: dict[str, Any],
+    query: GeneratedQuery,
     columns: list[dict[str, Any]],
     index: int,
     model: str,
 ) -> dict[str, Any] | None:
-    text = compact_text(str(query.get("query") or ""), max_chars=300)
+    text = compact_text(query.query, max_chars=300)
     if len(text) < 8:
         return None
-
-    filter_intent = query.get("filter_intent") or {}
-    if not isinstance(filter_intent, dict):
-        filter_intent = {}
 
     return {
         "query_id": f"{entry['package_name']}::{entry['resource_id']}::{index}",
         "query": text,
-        "language": query.get("language") if query.get("language") in {"de", "en", "mixed"} else "de",
-        "intent": compact_text(str(query.get("intent") or ""), max_chars=260),
+        "language": query.language,
+        "intent": compact_text(query.intent, max_chars=260),
         "search_target": {
             "tool_name": "search_open_data",
             "arguments": {
@@ -261,7 +171,6 @@ def normalize_query_row(
                 "limit": 5,
             },
         },
-        "filter_intent": validate_filter_intent(filter_intent, columns),
         "package_name": entry.get("package_name"),
         "package_title": entry.get("package_title"),
         "resource_id": entry.get("resource_id"),
@@ -282,21 +191,25 @@ def search_query_for_entry(entry: dict[str, Any]) -> str:
     return title.strip()
 
 
-def completion(model: str, messages: list[dict[str, str]], temperature: float) -> str:
+def generate_structured_queries(model: str, messages: list[tuple[str, str]], temperature: float) -> GeneratedQueries:
     try:
-        from litellm import completion as litellm_completion
+        from langchain_openai.chat_models import ChatOpenAI
     except ImportError as exc:
         raise RuntimeError(
-            "Missing dependency `litellm`. Install it with `uv add litellm` or `pip install litellm`."
+            "Missing dependency `langchain-openai`. Install it with `uv add langchain-openai`."
         ) from exc
 
-    response = litellm_completion(
+    chat_model = ChatOpenAI(
         model=model,
-        messages=messages,
         temperature=temperature,
-        response_format={"type": "json_object"},
+        timeout=int(os.getenv("LLM_TIMEOUT", "30")),
+        max_retries=int(os.getenv("LLM_MAX_RETRIES", "2")),
     )
-    return response.choices[0].message.content or ""
+    structured_model = chat_model.with_structured_output(GeneratedQueries, method="json_schema")
+    result = structured_model.invoke(messages)
+    if isinstance(result, GeneratedQueries):
+        return result
+    return GeneratedQueries.model_validate(result)
 
 
 def generate_queries_for_entry(
@@ -309,22 +222,19 @@ def generate_queries_for_entry(
 ) -> list[dict[str, Any]]:
     context = resource_context(entry, catalog_by_name)
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {
-            "role": "user",
-            "content": USER_PROMPT_TEMPLATE.format(
+        ("system", SYSTEM_PROMPT),
+        (
+            "user",
+            USER_PROMPT_TEMPLATE.format(
                 count=count,
                 context_json=json.dumps(context, ensure_ascii=False, indent=2),
             ),
-        },
+        ),
     ]
-    text = completion(model, messages, temperature)
-    payload = parse_llm_json(text)
+    payload = generate_structured_queries(model, messages, temperature)
     columns = context["columns"]
     rows = []
-    for index, query in enumerate(payload.get("queries", []), start=1):
-        if not isinstance(query, dict):
-            continue
+    for index, query in enumerate(payload.queries[:count], start=1):
         row = normalize_query_row(entry=entry, query=query, columns=columns, index=index, model=model)
         if row:
             rows.append(row)
@@ -342,7 +252,7 @@ def already_done(path: Path) -> set[tuple[str, str]]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate realistic user queries for Munich CKAN resources with LiteLLM.")
+    parser = argparse.ArgumentParser(description="Generate realistic user queries for Munich CKAN resources.")
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
