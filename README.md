@@ -24,13 +24,13 @@ The app includes:
 - OpenUI's native fullscreen `FullScreen` chat component
 - Public CKAN endpoint configuration with `https://opendata.muenchen.de/` as the default
 - Server-side configuration for four OpenAI-compatible LLM roles
-- A ReAct-style LangGraph backend workflow with delayed, randomized stub CKAN, analysis, and OpenUI translation nodes
-- Mock backend responses that emit deterministic OpenUI-Lang
+- A Gemma backend chat service exposed to the fullscreen frontend through `/api/chat`
+- A ReAct-style LangGraph backend workflow with delayed, randomized stub CKAN, analysis, and OpenUI translation nodes for the Gradio `respond` API
 - OpenUI's `openuiChatLibrary` for rendered assistant responses
 - A demo city dataset used by the current mock analysis flow
 - A public Gradio API endpoint at `/gradio_api/call/respond`
 
-The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser. CKAN support is connection-only for now, and LLM support is configuration-only. `/api/chat` now runs a delayed ReAct-style LangGraph stub workflow: user request -> controller thought -> CKAN retrieval stub, optionally rerun -> data analysis stub, optionally rerun -> randomized OpenUI-Lang translation stub -> frontend render.
+The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser. CKAN support is connection-only for now, and LLM support is configuration-only. `/api/chat` now forwards browser chat messages to the backend Gemma service and streams the response in the OpenAI-compatible SSE shape expected by the frontend.
 
 ## LLM role configuration
 
@@ -58,6 +58,20 @@ Optional per-role overrides exist for future provider mixing:
 SMOLNALYSIS_LLM_CKAN_TOOL_BASE_URL=https://provider.example
 SMOLNALYSIS_LLM_CKAN_TOOL_API_KEY=...
 ```
+
+## Hugging Face tracing
+
+The Gemma backend can emit OpenTelemetry spans for Hugging Face tokenizer/model loading, PEFT adapter loading, and generation. Tracing is off by default.
+
+```bash
+SMOLNALYSIS_HF_TRACING_ENABLED=true
+SMOLNALYSIS_HF_TRACING_CONSOLE=true
+# or send spans to an OTLP HTTP collector:
+SMOLNALYSIS_HF_TRACING_OTLP_ENDPOINT=http://localhost:4318/v1/traces
+SMOLNALYSIS_HF_TRACING_SERVICE_NAME=smolnalysis
+```
+
+Generation spans include the base model, active adapter, sampling settings, message count, and input/output token counts. Prompt and response text are not added to spans.
 
 ## Useful commands
 

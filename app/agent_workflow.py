@@ -3,12 +3,16 @@ from __future__ import annotations
 import os
 import random
 import time
-from typing import Any, TypedDict
+from typing import Any, TypedDict, cast
 
 from langgraph.graph import END, START, StateGraph
 
-from ckan_support import DEFAULT_CKAN_ENDPOINT, normalize_ckan_base_url
-from openui_support import _json_arg
+try:
+    from .ckan_support import DEFAULT_CKAN_ENDPOINT, normalize_ckan_base_url
+    from .openui_support import _json_arg
+except ImportError:
+    from ckan_support import DEFAULT_CKAN_ENDPOINT, normalize_ckan_base_url
+    from openui_support import _json_arg
 
 
 MIN_NODE_DELAY_SECONDS = 0.35
@@ -42,7 +46,7 @@ def run_agent_workflow(prompt: str, ckan_endpoint: str | None = None) -> AgentWo
         "retrieval_attempts": 0,
         "analysis_attempts": 0,
     }
-    return build_agent_workflow().invoke(initial_state)
+    return cast(AgentWorkflowState, build_agent_workflow().invoke(initial_state))
 
 
 def build_agent_workflow():
@@ -89,8 +93,8 @@ def react_agent(state: AgentWorkflowState) -> AgentWorkflowState:
 
 def retrieve_ckan(state: AgentWorkflowState) -> AgentWorkflowState:
     _simulate_node_delay()
-    endpoint = state["ckan_endpoint"]
-    prompt = state["prompt"]
+    endpoint = state.get("ckan_endpoint", DEFAULT_CKAN_ENDPOINT)
+    prompt = state.get("prompt", "Summarize this dataset")
     attempt = state.get("retrieval_attempts", 0) + 1
     candidates = _mock_ckan_candidates(prompt)
     selected = random.choice(candidates)
@@ -175,7 +179,7 @@ def translate_openui(state: AgentWorkflowState) -> AgentWorkflowState:
 
 
 def _decide_next_action(state: AgentWorkflowState) -> tuple[str, str]:
-    prompt = state["prompt"].casefold()
+    prompt = state.get("prompt", "").casefold()
     retrieval_attempts = state.get("retrieval_attempts", 0)
     analysis_attempts = state.get("analysis_attempts", 0)
     wants_deeper_search = any(term in prompt for term in ["again", "broader", "compare", "more", "rerun"])
@@ -193,8 +197,8 @@ def _decide_next_action(state: AgentWorkflowState) -> tuple[str, str]:
 
 
 def _build_openui_response(state: AgentWorkflowState) -> str:
-    prompt = state["prompt"]
-    endpoint = state["ckan_endpoint"]
+    prompt = state.get("prompt", "Summarize this dataset")
+    endpoint = state.get("ckan_endpoint", DEFAULT_CKAN_ENDPOINT)
     steps = state.get("steps", [])
     ckan_result = state.get("ckan_result", {})
     analysis_result = state.get("analysis_result", {})

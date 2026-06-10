@@ -55,6 +55,8 @@ For a later Hugging Face Space, use this folder as the Space root or copy this a
 The app keeps OpenUI support modular:
 
 - `app.py` owns the Gradio `Server`, serves the frontend, and exposes `/api/chat` plus the Gradio `respond` API.
+- `backend/gemma_chat.py` owns the lazy-loaded Gemma chat runtime used by `/api/chat`.
+- `backend/adapter_registry.py` maps backend adapter names to checkpoints under `models/gemma`.
 - `agent_workflow.py` defines the LangGraph workflow and stub tools.
 - `ckan_support.py` validates public CKAN endpoints through the Action API v3.
 - `llm_support.py` parses server-side LLM role settings with `pydantic-settings`.
@@ -62,8 +64,8 @@ The app keeps OpenUI support modular:
 - `app/frontend/openui-chat.jsx` mounts OpenUI's `FullScreen` chat component.
 - `app/frontend/openui-chat.css` contains the app-specific frontend styling.
 - `app/static/openui-chat.js` and `app/static/openui-chat.css` are the bundled browser assets loaded by `/`.
-- The current chat contract emits line-oriented OpenUI-Lang with a `root = Card([...])` entry point for `openuiChatLibrary`.
-- Later, an LLM can replace the mock generator while keeping the Gradio server and OpenUI chat contract.
+- The frontend chat contract streams assistant content through OpenAI-compatible SSE chunks.
+- The Gradio `respond` API still exposes the mocked OpenUI-Lang workflow.
 
 ## LLM Backend Configuration
 
@@ -99,18 +101,29 @@ SMOLNALYSIS_LLM_<ROLE>_BASE_URL=...
 SMOLNALYSIS_LLM_<ROLE>_API_KEY=...
 ```
 
-The current chat path runs ReAct-style LangGraph stubs with small randomized delays and randomized OpenUI-Lang result layouts. It renders a visible workflow trace for the future flow: user request -> controller thought -> CKAN search, optionally rerun -> data analysis, optionally rerun -> OpenUI-Lang translation -> frontend render.
+The current `/api/chat` path forwards frontend messages to the lazy-loaded Gemma backend service and streams the assistant response as OpenAI-compatible SSE chunks.
+
+## Hugging Face Tracing
+
+Set `SMOLNALYSIS_HF_TRACING_ENABLED=true` to emit OpenTelemetry spans around the Hugging Face runtime path:
+
+- `huggingface.tokenizer.load`
+- `huggingface.model.load`
+- `huggingface.adapter.load`
+- `huggingface.model.generate`
+
+For local debugging, set `SMOLNALYSIS_HF_TRACING_CONSOLE=true`. To export to a collector, set `SMOLNALYSIS_HF_TRACING_OTLP_ENDPOINT`, for example `http://localhost:4318/v1/traces`. Spans include model, adapter, generation parameters, and token counts, but not prompt or response text.
 
 ## LangGraph Workflow
 
-`/api/chat` invokes a compiled LangGraph `StateGraph` with these nodes:
+The Gradio `respond` API invokes a compiled LangGraph `StateGraph` with these nodes:
 
 - `react_agent`
 - `retrieve_ckan`
 - `analyze_data`
 - `translate_openui`
 
-The `react_agent` controller decides the next action after each tool call. It can rerun the CKAN retrieval and data-analysis stubs for prompts that ask for broader comparison, charts, trends, or quality checks. The frontend sends the connected CKAN endpoint with each chat request. The workflow records that endpoint in the rendered OpenUI response, then returns one final assistant message through the existing OpenAI-compatible SSE shape.
+The `react_agent` controller decides the next action after each tool call. It can rerun the CKAN retrieval and data-analysis stubs for prompts that ask for broader comparison, charts, trends, or quality checks. The workflow records the CKAN endpoint in the rendered OpenUI response returned by `respond`.
 
 Set `SMOLNALYSIS_WORKFLOW_DISABLE_DELAYS=true` to skip artificial node delays during tests or demos.
 

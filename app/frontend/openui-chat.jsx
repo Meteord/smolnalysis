@@ -7,6 +7,7 @@ import "../../node_modules/@openuidev/react-ui/dist/styles/index.css";
 import "./openui-chat.css";
 
 const CKAN_STORAGE_KEY = "smolnalysis.ckanEndpoint";
+const CHAT_ADAPTER = "auto";
 
 function CkanEndpointPanel({ onConnectionChange }) {
   const [defaultEndpoint, setDefaultEndpoint] = useState("https://opendata.muenchen.de/");
@@ -173,17 +174,26 @@ function BackendConfigHeader({ onCkanConnectionChange }) {
 function App() {
   const [ckanConnection, setCkanConnection] = useState({ connected: false, base_url: "https://opendata.muenchen.de/" });
 
-  const processMessage = ({ threadId, messages, abortController }) =>
-    fetch("/api/chat", {
+  const processMessage = ({ threadId, messages, abortController }) => {
+    console.info("[smolnalysis] sending chat request", {
+      threadId,
+      adapter: CHAT_ADAPTER,
+      messageCount: messages?.length || 0,
+      ckan: ckanConnection,
+    });
+
+    return fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         threadId,
         messages,
+        adapter: CHAT_ADAPTER,
         ckan: ckanConnection,
       }),
       signal: abortController.signal,
     });
+  };
 
   return (
     <FullScreen

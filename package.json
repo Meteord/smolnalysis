@@ -4,11 +4,13 @@
     "build:openui-chat": "esbuild app/frontend/openui-chat.jsx --bundle --format=iife --global-name=SmolnalysisOpenUIChat --outfile=app/static/openui-chat.js"
   },
   "dependencies": {
+    "@openuidev/react-headless": "^0.8.2",
     "@openuidev/react-lang": "^0.2.6",
     "@openuidev/react-ui": "^0.11.8",
     "esbuild": "^0.27.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "zustand": "^4.5.7",
     "zod": "^4.4.3"
   }
 }
