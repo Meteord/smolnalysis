@@ -1,0 +1,7 @@
+accelerate>=1.2
+datasets>=3.2
+modal>=1.0
+peft>=0.14
+torch>=2.5
+transformers>=4.49
+trl>=0.15

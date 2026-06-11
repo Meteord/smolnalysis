@@ -20,6 +20,9 @@ Dataset generation scaffold:
 - CKAN scenario harvester: [harvest_ckan_scenarios.py](harvest_ckan_scenarios.py)
 - Teacher generator: [generate_teacher_data.py](generate_teacher_data.py)
 - Dataset generation guide: [DATASET_GENERATION.md](DATASET_GENERATION.md)
+- Modal training runbook: [TRAINING_RUNBOOK.md](TRAINING_RUNBOOK.md)
+- Training script: [train_minicpm_lora.py](train_minicpm_lora.py)
+- Modal app: [modal_train_ckan.py](modal_train_ckan.py)
 
 ## Model And Adapter
 
