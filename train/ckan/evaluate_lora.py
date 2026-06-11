@@ -19,11 +19,27 @@ DEFAULT_MODEL = "openbmb/MiniCPM5-1B"
 DEFAULT_ADAPTER = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
 DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl"
 DEFAULT_OUTPUT_DIR = "train/ckan/outputs/eval"
+INFERENCE_SYSTEM_PROMPT = """You are the CKAN retrieval policy for smolnalysis. Emit strict JSON only.
+Allowed actions: package_search, package_show, select_resource, reject_result, finish.
+Use exact args schemas:
+- package_search: {"query":"string","rows":5,"start":0}
+- package_show: {"package_id":"observed-package-id"}
+- select_resource: {"package_id":"observed-package-id","resource_id":"observed-resource-id","reason":"why it fits"}
+- reject_result: {"reason":"why unsuitable","next_query":"better search query"}
+- finish: {"selected_candidates":[{"package_id":"observed-package-id","resource_id":"observed-resource-id"}],"rationale":"why retrieval is complete"}
+Do not invent action names. Do not output markdown."""
 
 
 def prompt_messages(example: dict[str, Any]) -> list[dict[str, str]]:
     messages = example.get("messages", [])
     return [message for message in messages if isinstance(message, dict) and message.get("role") != "assistant"]
+
+
+def strict_prompt_messages(example: dict[str, Any]) -> list[dict[str, str]]:
+    messages = prompt_messages(example)
+    if messages and messages[0].get("role") == "system":
+        return [{"role": "system", "content": INFERENCE_SYSTEM_PROMPT}, *messages[1:]]
+    return [{"role": "system", "content": INFERENCE_SYSTEM_PROMPT}, *messages]
 
 
 def expected_action(example: dict[str, Any]) -> dict[str, Any] | None:
@@ -96,7 +112,8 @@ def evaluate(args: argparse.Namespace) -> dict[str, Any]:
     parsed_outputs = 0
 
     for index, example in enumerate(examples, start=1):
-        raw_prediction = generate_prediction(model, tokenizer, prompt_messages(example), args.max_new_tokens)
+        messages = strict_prompt_messages(example) if args.strict_prompt else prompt_messages(example)
+        raw_prediction = generate_prediction(model, tokenizer, messages, args.max_new_tokens)
         normalized = normalize_prediction(raw_prediction)
         expected = expected_action(example)
         parsed, parse_issues = parse_action(normalized)
@@ -153,6 +170,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--max-new-tokens", type=int, default=256)
+    parser.add_argument("--strict-prompt", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--quiet", action="store_true")
     return parser
 

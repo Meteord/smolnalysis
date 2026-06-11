@@ -5,6 +5,7 @@ This runbook trains the CKAN retrieval adapter from the curated dataset:
 - Train: `train/ckan/data/generated/valid_train_1000_repaired.jsonl`
 - Eval: `train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl`
 - Stats: `train/ckan/data/DATASET_STATS.md`
+- Results: `train/ckan/EVALUATION_RESULTS.md`
 
 The adapter target is `smolnalysis-ckan-retrieval-minicpm5-lora` on top of `openbmb/MiniCPM5-1B`.
 
@@ -102,6 +103,37 @@ Evaluation writes to the Modal volume:
 
 - `/outputs/eval/eval_predictions.jsonl`
 - `/outputs/eval/eval_summary.json`
+
+Run the human-authored challenge eval:
+
+```powershell
+uv run modal run train/ckan/modal_train_ckan.py --mode evaluate --no-smoke --challenge
+```
+
+Challenge evaluation writes:
+
+- `/outputs/eval-challenge/eval_predictions.jsonl`
+- `/outputs/eval-challenge/eval_summary.json`
+
+If challenge eval shows schema drift, run the challenge-mix training variant:
+
+```powershell
+uv run modal run train/ckan/modal_train_ckan.py --mode train --no-smoke --challenge
+```
+
+This trains on `valid_train_1000_repaired.jsonl` plus four repeats of the 30-example human-authored challenge set, writing the adapter to:
+
+```text
+/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-challenge
+```
+
+Then evaluate that adapter with:
+
+```powershell
+uv run modal run train/ckan/modal_train_ckan.py --mode evaluate --no-smoke --challenge --adapter-variant challenge
+```
+
+Challenge-adapter evaluation writes to `/outputs/eval-challenge-adapter-challenge`.
 
 Metrics include:
 

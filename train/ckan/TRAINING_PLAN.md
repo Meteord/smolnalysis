@@ -21,6 +21,7 @@ Dataset generation scaffold:
 - Teacher generator: [generate_teacher_data.py](generate_teacher_data.py)
 - Dataset generation guide: [DATASET_GENERATION.md](DATASET_GENERATION.md)
 - Modal training runbook: [TRAINING_RUNBOOK.md](TRAINING_RUNBOOK.md)
+- Evaluation results: [EVALUATION_RESULTS.md](EVALUATION_RESULTS.md)
 - Training script: [train_minicpm_lora.py](train_minicpm_lora.py)
 - Modal app: [modal_train_ckan.py](modal_train_ckan.py)
 

@@ -17,6 +17,8 @@ image = (
     .add_local_file("train/ckan/ckan_dataset_tools.py", remote_path="/root/ckan_dataset_tools.py")
     .add_local_file("train/ckan/data/generated/valid_train_1000_repaired.jsonl", remote_path="/root/data/train.jsonl")
     .add_local_file("train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl", remote_path="/root/data/eval.jsonl")
+    .add_local_file("train/ckan/data/generated/challenge_eval_30.jsonl", remote_path="/root/data/challenge_eval.jsonl")
+    .add_local_file("train/ckan/data/generated/train_with_challenge.jsonl", remote_path="/root/data/train_with_challenge.jsonl")
 )
 
 
@@ -26,18 +28,18 @@ image = (
     timeout=60 * 60 * 4,
     volumes={"/outputs": volume},
 )
-def train_ckan_lora(smoke: bool = True) -> None:
+def train_ckan_lora(smoke: bool = True, challenge: bool = False) -> None:
     import subprocess
 
     cmd = [
         "python",
         "/root/train_minicpm_lora.py",
         "--train-data",
-        "/root/data/train.jsonl",
+        "/root/data/train_with_challenge.jsonl" if challenge else "/root/data/train.jsonl",
         "--eval-data",
         "/root/data/eval.jsonl",
         "--output-dir",
-        "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-smoke" if smoke else "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora",
+        "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-challenge" if challenge and not smoke else "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-smoke" if smoke else "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora",
         "--per-device-train-batch-size",
         "1",
         "--gradient-accumulation-steps",
@@ -59,16 +61,32 @@ def train_ckan_lora(smoke: bool = True) -> None:
     timeout=60 * 60,
     volumes={"/outputs": volume},
 )
-def evaluate_ckan_lora(smoke: bool = False) -> None:
+def evaluate_ckan_lora(smoke: bool = False, challenge: bool = False, adapter_variant: str = "base") -> None:
     import subprocess
 
-    adapter_path = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-smoke" if smoke else "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
-    output_dir = "/outputs/eval-smoke" if smoke else "/outputs/eval"
+    if smoke:
+        adapter_path = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-smoke"
+    elif adapter_variant == "challenge":
+        adapter_path = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-challenge"
+    else:
+        adapter_path = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
+    eval_data = "/root/data/challenge_eval.jsonl" if challenge else "/root/data/eval.jsonl"
+    output_dir = (
+        "/outputs/eval-challenge-adapter-challenge"
+        if challenge and adapter_variant == "challenge" and not smoke
+        else "/outputs/eval-challenge-smoke"
+        if smoke and challenge
+        else "/outputs/eval-challenge"
+        if challenge
+        else "/outputs/eval-smoke"
+        if smoke
+        else "/outputs/eval"
+    )
     cmd = [
         "python",
         "/root/evaluate_lora.py",
         "--eval-data",
-        "/root/data/eval.jsonl",
+        eval_data,
         "--adapter-path",
         adapter_path,
         "--output-dir",
@@ -81,10 +99,10 @@ def evaluate_ckan_lora(smoke: bool = False) -> None:
 
 
 @app.local_entrypoint()
-def main(mode: str = "train", smoke: bool = True) -> None:
+def main(mode: str = "train", smoke: bool = True, challenge: bool = False, adapter_variant: str = "base") -> None:
     if mode == "train":
-        train_ckan_lora.remote(smoke=smoke)
+        train_ckan_lora.remote(smoke=smoke, challenge=challenge)
     elif mode == "evaluate":
-        evaluate_ckan_lora.remote(smoke=smoke)
+        evaluate_ckan_lora.remote(smoke=smoke, challenge=challenge, adapter_variant=adapter_variant)
     else:
         raise ValueError("mode must be 'train' or 'evaluate'")
