@@ -14,6 +14,13 @@ References:
 - Modal pricing: <https://modal.com/pricing>
 - AgenticQwen paper: <https://arxiv.org/pdf/2604.21590>
 
+Dataset generation scaffold:
+
+- CKAN dataset tools: [ckan_dataset_tools.py](ckan_dataset_tools.py)
+- CKAN scenario harvester: [harvest_ckan_scenarios.py](harvest_ckan_scenarios.py)
+- Teacher generator: [generate_teacher_data.py](generate_teacher_data.py)
+- Dataset generation guide: [DATASET_GENERATION.md](DATASET_GENERATION.md)
+
 ## Model And Adapter
 
 - Base model: `openbmb/MiniCPM5-1B`
@@ -88,6 +95,10 @@ Target size:
 - Smoke-test subset: 20-50 examples before full training.
 
 Data should be synthetic teacher-generated, then deterministically filtered.
+
+Use [ckan_dataset_tools.py](ckan_dataset_tools.py) as the first hard validation gate before any example enters the training set.
+
+Prefer inventory-grounded scenarios from [harvest_ckan_scenarios.py](harvest_ckan_scenarios.py) before scaling teacher generation. The goal is broad CKAN behavior coverage across groups, organizations, tags, and resource formats, not memorization of concrete München dataset ids.
 
 Generate examples around:
 

@@ -209,6 +209,11 @@ node_modules/
 # Ruff stuff:
 .ruff_cache/
 
+# Training outputs
+train/**/data/generated/
+train/**/outputs/
+train/**/adapters/
+
 # PyPI configuration file
 .pypirc
 
