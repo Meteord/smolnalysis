@@ -12,6 +12,7 @@ from ckan_dataset_tools import (
     balanced_sample,
     build_training_example,
     package_overlap,
+    repair_training_example,
     scenario_package_ids,
     seed_examples,
     split_by_package,
@@ -124,6 +125,25 @@ class CkanDatasetToolsTests(TestCase):
         self.assertEqual(len(train_rows), 12)
         self.assertEqual(len(eval_rows), 6)
         self.assertEqual(package_overlap(train_rows, eval_rows), set())
+
+    def test_repair_training_example_trims_long_thought(self) -> None:
+        long_thought = " ".join(["word"] * 45)
+        example = build_training_example(
+            "Request: find schools.",
+            {
+                "thought": long_thought,
+                "action": "package_search",
+                "args": {"query": "schools", "rows": 5, "start": 0},
+                "confidence": 0.75,
+            },
+        )
+
+        repaired = repair_training_example(example, max_thought_words=12)
+
+        self.assertFalse(validate_training_example(example).ok)
+        self.assertTrue(validate_training_example(repaired).ok)
+        payload = json.loads(repaired["messages"][-1]["content"])
+        self.assertLessEqual(len(payload["thought"].split()), 12)
 
 
 if __name__ == "__main__":

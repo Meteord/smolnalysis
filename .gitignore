@@ -211,6 +211,12 @@ node_modules/
 
 # Training outputs
 train/**/data/generated/
+!train/ckan/data/generated/
+train/ckan/data/generated/*
+!train/ckan/data/generated/valid_train_1000_repaired.jsonl
+!train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl
+!train/ckan/data/generated/report_train_1000_repaired.jsonl
+!train/ckan/data/generated/report_eval_golden_60_repaired.jsonl
 train/**/outputs/
 train/**/adapters/
 

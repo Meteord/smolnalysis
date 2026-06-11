@@ -118,6 +118,28 @@ def validate_training_example(example: dict[str, Any]) -> ValidationResult:
     return validate_ckan_action(content, extract_context_from_example(example))
 
 
+def repair_training_example(example: dict[str, Any], max_thought_words: int = 32) -> dict[str, Any]:
+    repaired = json.loads(json.dumps(example, ensure_ascii=False))
+    messages = repaired.get("messages")
+    if not isinstance(messages, list):
+        return repaired
+    assistant_messages = [message for message in messages if isinstance(message, dict) and message.get("role") == "assistant"]
+    if not assistant_messages:
+        return repaired
+    content = assistant_messages[-1].get("content")
+    if not isinstance(content, str):
+        return repaired
+    payload, issues = parse_action(content)
+    if payload is None:
+        return repaired
+    issue_codes = {issue.code for issue in validate_ckan_action(content, extract_context_from_example(example)).issues}
+    if issue_codes and issue_codes <= {"long_thought"} and isinstance(payload.get("thought"), str):
+        words = payload["thought"].split()
+        payload["thought"] = " ".join(words[:max_thought_words]).rstrip(".,;:") + "."
+        assistant_messages[-1]["content"] = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+    return repaired
+
+
 def seed_examples() -> list[dict[str, Any]]:
     contexts = [
         {
@@ -231,6 +253,13 @@ def scenario_package_ids(row: dict[str, Any]) -> set[str]:
     for package_id in row.get("observed_packages") or []:
         if isinstance(package_id, str) and package_id:
             package_ids.add(package_id)
+    metadata = row.get("metadata")
+    if isinstance(metadata, dict):
+        context = metadata.get("ckan_context")
+        if isinstance(context, dict):
+            for package_id in context.get("observed_packages") or []:
+                if isinstance(package_id, str) and package_id:
+                    package_ids.add(package_id)
     package_summary = row.get("package_summary")
     if isinstance(package_summary, dict):
         package_id = package_summary.get("id")
@@ -375,6 +404,25 @@ def _command_validate(args: argparse.Namespace) -> int:
     return 0 if len(valid_rows) == len(rows) else 1
 
 
+def _command_repair(args: argparse.Namespace) -> int:
+    rows = [row for row in read_jsonl(Path(args.input)) if not row.get("_invalid_jsonl")]
+    repaired_rows = [repair_training_example(row, args.max_thought_words) for row in rows]
+    valid_rows = []
+    report_rows = []
+    for index, row in enumerate(repaired_rows, start=1):
+        result = validate_training_example(row)
+        report_rows.append({"line": index, **result.to_dict()})
+        if result.ok:
+            valid_rows.append(row)
+    write_jsonl(Path(args.output), repaired_rows)
+    if args.valid_output:
+        write_jsonl(Path(args.valid_output), valid_rows)
+    if args.report:
+        write_jsonl(Path(args.report), report_rows)
+    print(f"Repaired {len(rows)} examples; {len(valid_rows)} validate after repair, {len(rows) - len(valid_rows)} rejected.")
+    return 0 if len(valid_rows) == len(rows) else 1
+
+
 def _command_sample(args: argparse.Namespace) -> int:
     rows = [row for row in read_jsonl(Path(args.input)) if not row.get("_invalid_jsonl")]
     sampled = balanced_sample(rows, args.limit, args.key, args.seed)
@@ -411,6 +459,14 @@ def main() -> int:
     validate_parser.add_argument("--valid-output")
     validate_parser.add_argument("--report")
     validate_parser.set_defaults(func=_command_validate)
+
+    repair_parser = subparsers.add_parser("repair", help="Repair minor generated-example issues such as long thoughts.")
+    repair_parser.add_argument("--input", required=True)
+    repair_parser.add_argument("--output", required=True)
+    repair_parser.add_argument("--valid-output")
+    repair_parser.add_argument("--report")
+    repair_parser.add_argument("--max-thought-words", type=int, default=32)
+    repair_parser.set_defaults(func=_command_repair)
 
     sample_parser = subparsers.add_parser("sample", help="Write a deterministic balanced sample from JSONL rows.")
     sample_parser.add_argument("--input", required=True)
