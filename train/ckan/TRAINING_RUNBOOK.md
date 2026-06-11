@@ -39,7 +39,7 @@ The Modal app uses:
 Always run the smoke job first:
 
 ```powershell
-modal run train/ckan/modal_train_ckan.py --smoke true
+uv run modal run train/ckan/modal_train_ckan.py --smoke
 ```
 
 The smoke job uses 24 train examples and 12 eval examples for one epoch.
@@ -49,7 +49,14 @@ The smoke job uses 24 train examples and 12 eval examples for one epoch.
 Run the full 1,000-example training job only after the smoke job completes:
 
 ```powershell
-modal run train/ckan/modal_train_ckan.py --smoke false
+uv run modal run train/ckan/modal_train_ckan.py --no-smoke
+```
+
+Equivalent explicit train commands:
+
+```powershell
+uv run modal run train/ckan/modal_train_ckan.py --mode train --smoke
+uv run modal run train/ckan/modal_train_ckan.py --mode train --no-smoke
 ```
 
 Default training settings:
@@ -77,9 +84,36 @@ The training script writes:
 
 Use the Modal volume browser or Modal CLI to download the adapter after training.
 
+## Adapter Evaluation
+
+After training, run generation-based evaluation on the package-disjoint golden eval set:
+
+```powershell
+uv run modal run train/ckan/modal_train_ckan.py --mode evaluate --no-smoke
+```
+
+For a smoke adapter:
+
+```powershell
+uv run modal run train/ckan/modal_train_ckan.py --mode evaluate --smoke
+```
+
+Evaluation writes to the Modal volume:
+
+- `/outputs/eval/eval_predictions.jsonl`
+- `/outputs/eval/eval_summary.json`
+
+Metrics include:
+
+- JSON parse rate
+- valid action rate
+- exact action match rate
+- issue counts
+- predicted action counts
+
 ## Notes
 
 - This first training script is intentionally simple SFT.
 - It does not merge the adapter into the base model.
 - It does not push to Hugging Face yet.
-- The next slice should add inference/evaluation for exact JSON validity on `valid_eval_golden_60_repaired.jsonl`.
+- The generation-based eval checks syntax and action selection, but it is still benchmarked against teacher labels.
