@@ -1,10 +1,13 @@
 from __future__ import annotations
 
+import ctypes
 from dataclasses import dataclass
 from functools import lru_cache
+import importlib.util
 from importlib import metadata
 import logging
 import os
+import site
 import threading
 import time
 from pathlib import Path
@@ -179,6 +182,7 @@ def _load_llama_cached(
     verbose: bool,
 ):
     try:
+        _preload_cuda_runtime()
         from llama_cpp import Llama
     except ImportError as exc:
         raise RuntimeError("llama-cpp-python is not installed in this runtime.") from exc
@@ -197,6 +201,31 @@ def _load_llama_cached(
 
     logger.info("loading MiniCPM llama.cpp model=%s lora=%s", model_path, lora_path or "none")
     return Llama(**kwargs)
+
+
+def _preload_cuda_runtime() -> str:
+    candidates = _cuda_runtime_library_candidates()
+    errors = []
+    for candidate in candidates:
+        try:
+            ctypes.CDLL(str(candidate), mode=ctypes.RTLD_GLOBAL)
+            return str(candidate)
+        except OSError as exc:
+            errors.append(f"{candidate}: {exc}")
+    if errors:
+        logger.debug("CUDA runtime preload attempts failed: %s", " | ".join(errors))
+    return ""
+
+
+def _cuda_runtime_library_candidates() -> list[Path]:
+    candidates: list[Path] = []
+    spec = importlib.util.find_spec("nvidia.cuda_runtime")
+    if spec and spec.submodule_search_locations:
+        for location in spec.submodule_search_locations:
+            candidates.append(Path(location) / "lib" / "libcudart.so.12")
+    for root in [*site.getsitepackages(), site.getusersitepackages()]:
+        candidates.append(Path(root) / "nvidia" / "cuda_runtime" / "lib" / "libcudart.so.12")
+    return [candidate for candidate in candidates if candidate.exists()]
 
 
 def _load_llama(role: str):
@@ -286,6 +315,7 @@ def llama_cpp_runtime_info() -> dict[str, Any]:
         "version": "",
         "supports_gpu_offload": None,
         "backend": "",
+        "cuda_runtime_preload": "",
         "error": "",
     }
     try:
@@ -297,6 +327,7 @@ def llama_cpp_runtime_info() -> dict[str, Any]:
         info["error"] = str(exc)
 
     try:
+        info["cuda_runtime_preload"] = _preload_cuda_runtime()
         import llama_cpp
 
         info["installed"] = True
@@ -486,6 +517,7 @@ def probe_runtime(role: str = "general_agent") -> dict[str, Any]:
             "lora_path": lora_path,
             "options": options,
         }
+        _preload_cuda_runtime()
         from llama_cpp import Llama
 
         kwargs: dict[str, Any] = {
