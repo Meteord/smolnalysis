@@ -210,6 +210,7 @@ node_modules/
 .ruff_cache/
 
 # Training outputs
+tmp/data/
 train/**/data/generated/
 !train/ckan/data/generated/
 train/ckan/data/generated/*

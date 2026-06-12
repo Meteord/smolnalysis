@@ -1,0 +1,59 @@
+name: Sync Hugging Face Space
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: huggingface-space-sync
+  cancel-in-progress: true
+
+jobs:
+  sync-space:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Build frontend assets
+        run: |
+          npm ci
+          npm run build:openui-chat
+
+      - name: Prepare Space snapshot
+        run: |
+          set -euo pipefail
+          rm -rf _space
+          mkdir -p _space
+
+          cp app.py _space/app.py
+          cp requirements.txt _space/requirements.txt
+          cp README.md _space/README.md
+          cp LICENSE _space/LICENSE
+          cp -R app _space/app
+
+          find _space -type d -name "__pycache__" -prune -exec rm -rf {} +
+          find _space -type f \( -name "*.pyc" -o -name "*.pyo" -o -name "*.log" \) -delete
+
+          echo "Space snapshot:"
+          find _space -maxdepth 3 -type f | sort
+
+      - name: Sync snapshot to Hugging Face
+        uses: huggingface/hub-sync@v0.2.0
+        with:
+          github_repo_id: ${{ github.repository }}
+          huggingface_repo_id: build-small-hackathon/smolnalysis
+          repo_type: space
+          space_sdk: gradio
+          hf_token: ${{ secrets.HF_TOKEN }}
+          subdirectory: _space

@@ -4,6 +4,11 @@ import asyncio
 import json
 import logging
 import os
+import time
+import traceback
+import uuid
+from collections import deque
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +19,19 @@ from fastapi import Request
 from fastapi.responses import HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
+try:
+    import spaces
+except ImportError:
+    class _SpacesFallback:
+        @staticmethod
+        def GPU(*args: Any, **kwargs: Any):
+            def decorator(fn):
+                return fn
+
+            return decorator
+
+    spaces = _SpacesFallback()
+
 load_dotenv()
 logging.basicConfig(
     level=os.getenv("SMOLNALYSIS_LOG_LEVEL", "INFO").upper(),
@@ -23,9 +41,11 @@ logging.basicConfig(
 try:
     from .agent_workflow import run_agent_workflow
     from .ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
+    from .backend import minicpm_transformers as _minicpm_startup
     from .llm_support import llm_status, validate_llms
 except ImportError:
     from agent_workflow import run_agent_workflow
+    from backend import minicpm_transformers as _minicpm_startup
     from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from llm_support import llm_status, validate_llms
 
@@ -34,6 +54,11 @@ APP_DIR = Path(__file__).parent
 STATIC_DIR = APP_DIR / "static"
 DEMO_CSV = APP_DIR / "examples" / "demo_cities.csv"
 logger = logging.getLogger(__name__)
+TRACE_LIMIT = int(os.getenv("SMOLNALYSIS_TRACE_LIMIT", "50"))
+ENABLE_STUB_CHAT_FALLBACK = os.getenv("SMOLNALYSIS_ENABLE_STUB_CHAT_FALLBACK", "").casefold() in {"1", "true", "yes", "on"}
+MINICPM_BACKEND = os.getenv("SMOLNALYSIS_MINICPM_BACKEND", "transformers").strip().casefold()
+TRACE_STORE: deque[dict[str, Any]] = deque(maxlen=TRACE_LIMIT)
+TRACE_LOCK = asyncio.Lock()
 
 
 def _static_asset_version(filename: str) -> str:
@@ -86,40 +111,211 @@ def _chat_messages(messages: list[dict[str, Any]]) -> list[dict[str, str]]:
 
 
 def build_openui_response(prompt: str) -> str:
-    return build_workflow_response(prompt)
+    return build_workflow_response(prompt, dataset_path=_default_dataset_path_for_prompt(prompt))
 
 
-def build_workflow_response(prompt: str, ckan_endpoint: str | None = None) -> str:
-    return run_agent_workflow(prompt or "Summarize this dataset", ckan_endpoint).get("openui_lang", "")
+def build_workflow_response(prompt: str, ckan_endpoint: str | None = None, dataset_path: str | None = None) -> str:
+    return run_agent_workflow(prompt or "Summarize this dataset", ckan_endpoint, dataset_path).get("openui_lang", "")
 
 
-def build_gemma_openui_response(assistant_text: str) -> str:
+def _default_dataset_path_for_prompt(prompt: str) -> str | None:
+    lower = prompt.casefold()
+    analysis_terms = ("this dataset", "summarize", "summary", "schema", "columns", "quality", "missing", "trend", "statistics", "chart", "histogram")
+    if any(term in lower for term in analysis_terms):
+        return str(DEMO_CSV) if DEMO_CSV.exists() else None
+    retrieval_terms = ("ckan", "resource", "catalog", "search", "find", "retrieve", "open data")
+    if any(term in lower for term in retrieval_terms):
+        return None
+    return str(DEMO_CSV) if DEMO_CSV.exists() else None
+
+
+def build_model_openui_response(assistant_text: str, backend_label: str = "MiniCPM") -> str:
     return "\n".join(
         [
             "root = Card([header, response])",
-            'header = CardHeader("Gemma", "Backend response")',
+            f"header = CardHeader({json.dumps(backend_label)}, \"Backend response\")",
             f"response = TextContent({json.dumps(assistant_text)}, \"default\")",
         ]
     )
 
 
+build_gemma_openui_response = build_model_openui_response
+
+
+def _looks_like_openui_lang(value: str) -> bool:
+    return any(line.strip().startswith("root =") for line in value.splitlines())
+
+
+def build_chat_openui_response(assistant_text: str) -> str:
+    if _looks_like_openui_lang(assistant_text):
+        return assistant_text
+    return build_model_openui_response(assistant_text)
+
+
+def _now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+async def _remember_trace(trace: dict[str, Any]) -> dict[str, Any]:
+    async with TRACE_LOCK:
+        TRACE_STORE.appendleft(trace)
+    return trace
+
+
+async def _latest_traces(limit: int = 10) -> list[dict[str, Any]]:
+    async with TRACE_LOCK:
+        return list(TRACE_STORE)[: max(1, min(limit, TRACE_LIMIT))]
+
+
+async def _trace_by_id(trace_id: str) -> dict[str, Any] | None:
+    async with TRACE_LOCK:
+        return next((trace for trace in TRACE_STORE if trace.get("request_id") == trace_id), None)
+
+
+@spaces.GPU(duration=5)
+def zerogpu_probe() -> dict[str, Any]:
+    return {"ok": True, "runtime": "zerogpu-ready"}
+
+
 def generate_chat_response(messages: list[dict[str, str]], *, adapter: str = "auto") -> str:
+    response, _trace = generate_chat_response_with_trace(messages, adapter=adapter)
+    return response
+
+
+def generate_chat_response_with_trace(messages: list[dict[str, str]], *, adapter: str = "auto") -> tuple[str, dict[str, Any]]:
+    started = time.perf_counter()
     try:
-        try:
-            from .backend.gemma_chat import generate_chat_response as backend_generate_chat_response
-        except ImportError:
-            from backend.gemma_chat import generate_chat_response as backend_generate_chat_response
+        backend_generate_chat_response_with_trace = _backend_generate_function()
     except Exception as exc:
-        logger.warning("Gemma backend unavailable, using workflow fallback: %s", exc)
-        prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
-        return run_agent_workflow(prompt or "Summarize this dataset").get("openui_lang", "")
+        logger.exception("MiniCPM backend unavailable.")
+        return _handle_backend_failure(messages, adapter, "backend_unavailable", exc, started)
 
     try:
-        return backend_generate_chat_response(messages, adapter=adapter)
+        return backend_generate_chat_response_with_trace(messages, adapter=adapter)
     except Exception as exc:
-        logger.warning("Gemma generation failed, using workflow fallback: %s", exc)
+        logger.exception("MiniCPM generation failed.")
+        return _handle_backend_failure(messages, adapter, "generation_failed", exc, started)
+
+
+def _backend_generate_function():
+    if MINICPM_BACKEND in {"llama.cpp", "llamacpp", "llama_cpp", "gguf"}:
+        try:
+            from .backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+        except ImportError:
+            from backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+        return backend_generate_chat_response_with_trace
+    try:
+        from .backend.minicpm_transformers import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+    except ImportError:
+        from backend.minicpm_transformers import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+    return backend_generate_chat_response_with_trace
+
+
+def _handle_backend_failure(
+    messages: list[dict[str, str]],
+    adapter: str,
+    reason: str,
+    exc: Exception,
+    started: float,
+) -> tuple[str, dict[str, Any]]:
+    if ENABLE_STUB_CHAT_FALLBACK:
         prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
-        return run_agent_workflow(prompt or "Summarize this dataset").get("openui_lang", "")
+        workflow = run_agent_workflow(prompt or "Summarize this dataset")
+        return workflow.get("openui_lang", ""), _fallback_trace(
+            messages,
+            adapter,
+            reason,
+            _exception_detail(exc),
+            workflow,
+            started,
+        )
+    detail = _exception_detail(exc)
+    return _backend_error_openui(reason, detail), _backend_error_trace(messages, adapter, reason, detail, exc, started)
+
+
+def _exception_detail(exc: Exception) -> str:
+    details = []
+    current: BaseException | None = exc
+    while current is not None:
+        message = str(current).strip()
+        details.append(f"{type(current).__name__}: {message}" if message else type(current).__name__)
+        current = current.__cause__ or current.__context__
+    return " <- ".join(details)
+
+
+def _backend_error_openui(reason: str, detail: str) -> str:
+    return "\n".join(
+        [
+            "root = Card([header, callout, details])",
+            'header = CardHeader("MiniCPM backend unavailable", "Generation did not complete")',
+            f'callout = Callout("error", "Backend error", {json.dumps(reason)})',
+            f"details = TextContent({json.dumps(detail)}, \"small\")",
+        ]
+    )
+
+
+def _backend_error_trace(
+    messages: list[dict[str, str]],
+    adapter: str,
+    reason: str,
+    detail: str,
+    exc: Exception,
+    started: float,
+) -> dict[str, Any]:
+    openui_lang = _backend_error_openui(reason, detail)
+    return {
+        "backend": MINICPM_BACKEND,
+        "model_family": "MiniCPM",
+        "requested_adapter": adapter,
+        "role": "backend_error",
+        "message_count": len(messages),
+        "runtime": _minicpm_runtime_status_snapshot(),
+        "events": [{"name": "backend_error", "detail": f"{reason}: {detail}"}],
+        "fallback_reason": reason,
+        "fallback_detail": detail,
+        "traceback": "".join(traceback.format_exception(exc)),
+        "stub_fallback_enabled": False,
+        "duration_ms": round((time.perf_counter() - started) * 1000, 1),
+        "output_chars": len(openui_lang),
+    }
+
+
+def _minicpm_runtime_status_snapshot() -> dict[str, Any]:
+    try:
+        return _selected_minicpm_runtime_status()
+    except Exception as exc:
+        return {"error": _exception_detail(exc)}
+
+
+def _fallback_trace(
+    messages: list[dict[str, str]],
+    adapter: str,
+    reason: str,
+    detail: str,
+    workflow: dict[str, Any],
+    started: float,
+) -> dict[str, Any]:
+    steps = workflow.get("steps", [])
+    events = [
+        {"name": "fallback", "detail": f"{reason}: {detail}"},
+        *[
+            {"name": str(step.get("node", "workflow_step")), "detail": f"{step.get('title', '')}: {step.get('detail', '')}".strip()}
+            for step in steps
+            if isinstance(step, dict)
+        ],
+    ]
+    return {
+        "backend": "langgraph_fallback",
+        "model_family": "stub",
+        "requested_adapter": adapter,
+        "role": "fallback",
+        "message_count": len(messages),
+        "events": events,
+        "fallback_reason": reason,
+        "fallback_detail": detail,
+        "duration_ms": round((time.perf_counter() - started) * 1000, 1),
+        "output_chars": len(str(workflow.get("openui_lang", ""))),
+    }
 
 
 def _openai_sse_chunk(delta: dict[str, Any], finish_reason: str | None = None) -> str:
@@ -145,8 +341,15 @@ def respond(prompt: str) -> str:
     return build_openui_response(prompt)
 
 
+@app.api(name="zerogpu_probe")
+def api_zerogpu_probe() -> dict[str, Any]:
+    return zerogpu_probe()
+
+
 @app.post("/api/chat")
 async def chat(request: Request) -> StreamingResponse:
+    request_id = str(uuid.uuid4())
+    request_started = _now_iso()
     body = await request.json()
     messages = body.get("messages") or []
     adapter = str(body.get("adapter") or "auto").strip() or "auto"
@@ -162,10 +365,50 @@ async def chat(request: Request) -> StreamingResponse:
     )
     if chat_messages:
         logger.debug("chat last message: role=%s chars=%d", chat_messages[-1]["role"], len(chat_messages[-1]["content"]))
-    assistant_text = await asyncio.to_thread(generate_chat_response, chat_messages, adapter=adapter)
+    prompt = _last_user_prompt(messages if isinstance(messages, list) else []) or "Summarize this dataset"
+    ckan_base_url = ckan.get("base_url") if isinstance(ckan, dict) else None
+    dataset_path = _default_dataset_path_for_prompt(prompt)
+    workflow = await asyncio.to_thread(run_agent_workflow, prompt, ckan_base_url, dataset_path)
+    assistant_text = str(workflow.get("openui_lang", ""))
+    trace = _workflow_trace(chat_messages, adapter, workflow)
+    trace = {
+        "request_id": request_id,
+        "thread_id": body.get("threadId"),
+        "created_at": request_started,
+        "completed_at": _now_iso(),
+        "ckan": ckan if isinstance(ckan, dict) else {},
+        **trace,
+    }
+    await _remember_trace(trace)
     logger.info("chat response generated: adapter=%s response_chars=%d", adapter, len(assistant_text))
-    openui_lang = build_gemma_openui_response(assistant_text)
-    return StreamingResponse(_stream_openui_response(openui_lang), media_type="text/event-stream")
+    openui_lang = build_chat_openui_response(assistant_text)
+    return StreamingResponse(
+        _stream_openui_response(openui_lang),
+        media_type="text/event-stream",
+        headers={"x-smolnalysis-trace-id": request_id},
+    )
+
+
+def _workflow_trace(messages: list[dict[str, str]], adapter: str, workflow: dict[str, Any]) -> dict[str, Any]:
+    steps = workflow.get("steps", [])
+    return {
+        "backend": "deterministic_workflow",
+        "model_family": "python",
+        "requested_adapter": adapter,
+        "role": workflow.get("intent", {}).get("task_type", "workflow") if isinstance(workflow.get("intent"), dict) else "workflow",
+        "message_count": len(messages),
+        "events": [
+            {"name": str(step.get("node", "workflow_step")), "detail": f"{step.get('title', '')}: {step.get('detail', '')}".strip()}
+            for step in steps
+            if isinstance(step, dict)
+        ],
+        "runtime": {
+            "ckan_endpoint": workflow.get("ckan_endpoint", DEFAULT_CKAN_ENDPOINT),
+            "dataset_path": workflow.get("dataset_path", ""),
+        },
+        "duration_ms": 0,
+        "output_chars": len(str(workflow.get("openui_lang", ""))),
+    }
 
 
 @app.get("/api/ckan/default")
@@ -189,6 +432,54 @@ async def llms_status() -> dict[str, Any]:
 @app.post("/api/llms/validate")
 async def llms_validate() -> dict[str, Any]:
     return validate_llms()
+
+
+@app.get("/api/minicpm/status")
+async def minicpm_status() -> dict[str, Any]:
+    try:
+        return _selected_minicpm_runtime_status()
+    except Exception as exc:
+        return {"backend": MINICPM_BACKEND, "model_family": "MiniCPM", "error": _exception_detail(exc)}
+
+
+def _selected_minicpm_runtime_status() -> dict[str, Any]:
+    if MINICPM_BACKEND in {"llama.cpp", "llamacpp", "llama_cpp", "gguf"}:
+        try:
+            from .backend.minicpm_llama_cpp import runtime_status
+        except ImportError:
+            from backend.minicpm_llama_cpp import runtime_status
+        return runtime_status()
+    try:
+        from .backend.minicpm_transformers import runtime_status
+    except ImportError:
+        from backend.minicpm_transformers import runtime_status
+    return runtime_status()
+
+
+@app.get("/api/minicpm/probe")
+async def minicpm_probe(role: str = "general_agent") -> dict[str, Any]:
+    try:
+        try:
+            from .backend.minicpm_llama_cpp import probe_runtime
+        except ImportError:
+            from backend.minicpm_llama_cpp import probe_runtime
+        return await asyncio.to_thread(probe_runtime, role)
+    except Exception as exc:
+        return {"backend": "llama.cpp", "model_family": "MiniCPM", "error": _exception_detail(exc)}
+
+
+@app.get("/api/traces/latest")
+async def traces_latest(limit: int = 10) -> dict[str, Any]:
+    traces = await _latest_traces(limit)
+    return {"traces": traces}
+
+
+@app.get("/api/traces/{trace_id}")
+async def traces_get(trace_id: str) -> dict[str, Any]:
+    trace = await _trace_by_id(trace_id)
+    if trace is None:
+        return {"error": "trace_not_found", "request_id": trace_id}
+    return trace
 
 
 @app.get("/", response_class=HTMLResponse)

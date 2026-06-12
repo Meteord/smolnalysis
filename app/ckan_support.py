@@ -122,6 +122,26 @@ def _read_ckan_action(api_base: str, action: str, params: dict[str, Any] | None 
     return payload
 
 
+def read_ckan_action(base_url: str, action: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
+    normalized = normalize_ckan_base_url(base_url)
+    _assert_public_host(normalized)
+    payload = _read_ckan_action(ckan_api_base(normalized), action, params)
+    if payload.get("success") is not True:
+        raise CkanEndpointError(f"CKAN action failed: {action}")
+    result = payload.get("result")
+    return result if isinstance(result, dict) else {"value": result}
+
+
+def package_search(base_url: str, query: str, rows: int = 5, start: int = 0) -> dict[str, Any]:
+    clean_rows = max(1, min(int(rows), 10))
+    clean_start = max(0, int(start))
+    return read_ckan_action(base_url, "package_search", {"q": query.strip() or "open data", "rows": clean_rows, "start": clean_start})
+
+
+def package_show(base_url: str, package_id: str) -> dict[str, Any]:
+    return read_ckan_action(base_url, "package_show", {"id": package_id})
+
+
 def validate_ckan_endpoint(raw_url: str) -> CkanConnectionStatus:
     try:
         base_url = normalize_ckan_base_url(raw_url)

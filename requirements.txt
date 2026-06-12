@@ -5,3 +5,6 @@ langgraph>=1.2.4
 pydantic-settings>=2.14.1
 huggingface-hub>=0.27.0
 spaces
+transformers>=5.6
+torch>=2.8
+accelerate

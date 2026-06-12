@@ -407,6 +407,17 @@ def _parse_value(value: str) -> Any:
 def parse_openui_lang(openui_lang: str) -> ParsedOpenUI:
     allowed_components = {
         "Root",
+        "Card",
+        "CardHeader",
+        "TextContent",
+        "ListBlock",
+        "ListItem",
+        "Table",
+        "Col",
+        "Series",
+        "Callout",
+        "FollowUpBlock",
+        "FollowUpItem",
         "InsightCard",
         "Notice",
         "Metric",
@@ -439,10 +450,10 @@ def parse_openui_lang(openui_lang: str) -> ParsedOpenUI:
         components[identifier] = component
 
         if identifier == "root":
-            if component_type != "Root":
-                raise OpenUIValidationError("`root` must be a Root(...) component.")
+            if component_type not in {"Root", "Card"}:
+                raise OpenUIValidationError("`root` must be a Root(...) or Card(...) component.")
             if not component.args or not isinstance(component.args[0], list):
-                raise OpenUIValidationError("Root must receive a child reference list.")
+                raise OpenUIValidationError("Root/Card must receive a child reference list.")
             root_children = [
                 item["$ref"]
                 for item in component.args[0]
@@ -450,7 +461,7 @@ def parse_openui_lang(openui_lang: str) -> ParsedOpenUI:
             ]
 
     if not root_children:
-        raise OpenUIValidationError("OpenUI-Lang must include `root = Root([...])`.")
+        raise OpenUIValidationError("OpenUI-Lang must include `root = Root([...])` or `root = Card([...])`.")
 
     missing = [child for child in root_children if child not in components]
     if missing:
