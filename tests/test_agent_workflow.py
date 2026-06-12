@@ -45,6 +45,13 @@ class CkanAgentWorkflowTests(TestCase):
         self.assertEqual(fallback.action, "package_search")
         self.assertIn("population", fallback.args["query"])
 
+    def test_fallback_search_ignores_chat_wrapper_words(self) -> None:
+        session = AgentSession("content population content context", "https://opendata.muenchen.de/")
+
+        fallback = fallback_action(session)
+
+        self.assertEqual(fallback.args["query"], "population")
+
     def test_unknown_action_is_rejected(self) -> None:
         session = AgentSession("Find data", "https://opendata.muenchen.de/")
         action = AgentAction("delete_everything", {}, "bad", 1)
@@ -134,6 +141,23 @@ class CkanAgentWorkflowTests(TestCase):
 
         self.assertEqual(result.status, "max_tool_calls")
         self.assertEqual(package_search_mock.call_count, 2)
+
+    @patch("app.ckan_agent.package_search")
+    def test_repeated_503_stops_without_hammering_endpoint(self, package_search_mock) -> None:
+        package_search_mock.side_effect = RuntimeError("HTTP Error 503: Service Unavailable")
+        model = _ModelScript(
+            [
+                {"action": "package_search", "args": {"query": "population", "rows": 5}, "reason": "search", "confidence": 0.4},
+                {"action": "package_search", "args": {"query": "population csv", "rows": 5}, "reason": "refine", "confidence": 0.4},
+                {"action": "package_search", "args": {"query": "population data", "rows": 5}, "reason": "repeat", "confidence": 0.4},
+            ]
+        )
+
+        result = run_ckan_agent("Find population datasets", "https://opendata.muenchen.de/", model_caller=model, max_tool_calls=8)
+
+        self.assertEqual(result.status, "error")
+        self.assertEqual(package_search_mock.call_count, 2)
+        self.assertTrue(any(event.type == "error" for event in result.events))
 
     def test_openui_generation_accepts_valid_model_output(self) -> None:
         result = _selected_result()

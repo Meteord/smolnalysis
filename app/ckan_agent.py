@@ -74,6 +74,9 @@ class AgentSession:
     resources: dict[str, RetrievalResource] = field(default_factory=dict)
     events: list[AgentEvent] = field(default_factory=list)
     tool_calls: int = 0
+    searched_queries: list[str] = field(default_factory=list)
+    failed_searches: dict[str, int] = field(default_factory=dict)
+    consecutive_service_errors: int = 0
 
 
 @dataclass
@@ -131,6 +134,9 @@ def run_ckan_agent(
         session.tool_calls += 1
         _append_tool_result(session, valid_action, result)
         _record_event(session, AgentEvent("tool_result", result.summary, {"tool_result": asdict(result)}), on_event)
+        if _should_stop_for_tool_failure(session, result):
+            _record_event(session, AgentEvent("error", result.summary, {"tool_result": asdict(result)}), on_event)
+            return _finish(session, "error", clarification=result.summary)
 
         auto_resource = _best_observed_resource(session)
         if auto_resource and _score_resource(auto_resource, session.prompt) >= 0.86:
@@ -174,6 +180,8 @@ def validate_action(action: AgentAction, session: AgentSession) -> tuple[AgentAc
         query = str(action.args.get("query", "")).strip()
         if not query or "://" in query:
             return action, "package_search requires a plain query string."
+        if session.failed_searches.get(query, 0) > 0:
+            return action, f"package_search query already failed in this run: {query}"
         rows = int(action.args.get("rows", 5) or 5)
         action.args["rows"] = max(1, min(rows, 10))
     if action.action == "package_show":
@@ -188,10 +196,12 @@ def validate_action(action: AgentAction, session: AgentSession) -> tuple[AgentAc
 
 
 def fallback_action(session: AgentSession) -> AgentAction:
+    if session.consecutive_service_errors >= 2:
+        return AgentAction("finish", {}, "CKAN service is currently unavailable; stop instead of repeating failing calls.", 0.0, "fallback")
     for package_id, package in session.packages.items():
         if package_id and not package.get("_shown"):
             return AgentAction("package_show", {"package_id": package_id}, "Inspect the next observed package.", 0.45, "fallback")
-    query = _fallback_query(session.prompt, len([event for event in session.events if "package_search" in event.detail]))
+    query = _fallback_query(session.prompt, session.searched_queries)
     return AgentAction("package_search", {"query": query, "rows": 5}, "Fallback search query.", 0.35, "fallback")
 
 
@@ -199,11 +209,18 @@ def execute_action(action: AgentAction, session: AgentSession, on_event: Callabl
     if action.action == "package_search":
         query = str(action.args.get("query", "")).strip()
         rows = int(action.args.get("rows", 5) or 5)
+        if query not in session.searched_queries:
+            session.searched_queries.append(query)
         _record_event(session, AgentEvent("tool_call", f"package_search: {query}", {"query": query, "rows": rows}), on_event)
         try:
             result = package_search(session.endpoint, query, rows=rows)
         except Exception as exc:
+            short_error = _short_error(exc)
+            session.failed_searches[query] = session.failed_searches.get(query, 0) + 1
+            if _is_service_unavailable_error(short_error):
+                session.consecutive_service_errors += 1
             return ToolResult("package_search", False, f"package_search failed for '{query}': {_short_error(exc)}", error=_short_error(exc))
+        session.consecutive_service_errors = 0
         packages = [package for package in result.get("results", []) if isinstance(package, dict)]
         for package in packages:
             package_id = _package_id(package)
@@ -421,11 +438,63 @@ def _package_id(package: dict[str, Any]) -> str:
     return str(package.get("id") or package.get("name") or "")
 
 
-def _fallback_query(prompt: str, index: int = 0) -> str:
-    terms = [term for term in re.findall(r"[\w-]+", prompt.casefold()) if len(term) > 2 and term not in {"find", "search", "dataset", "datasets", "ckan", "data"}]
+def _fallback_query(prompt: str, searched_queries: list[str] | int | None = None) -> str:
+    if isinstance(searched_queries, int):
+        searched = []
+        index = searched_queries
+    else:
+        searched = list(searched_queries or [])
+        index = len(searched)
+    terms = _search_terms(prompt)
     base = " ".join(terms[:4]) or "open data"
-    variants = [base, " ".join(terms[:2]) or base, f"{base} csv"]
+    short = " ".join(terms[:2]) or base
+    variants = _unique_queries([base, short, f"{base} csv", f"{short} csv", " ".join(terms[:3]) or base])
+    for query in variants:
+        if query not in searched:
+            return query
     return variants[min(index, len(variants) - 1)]
+
+
+def _search_terms(prompt: str) -> list[str]:
+    stopwords = {
+        "api",
+        "assistant",
+        "catalog",
+        "ckan",
+        "content",
+        "context",
+        "data",
+        "dataset",
+        "datasets",
+        "endpoint",
+        "find",
+        "https",
+        "muenchen",
+        "open",
+        "opendata",
+        "request",
+        "resource",
+        "resources",
+        "search",
+        "user",
+    }
+    terms = []
+    for term in re.findall(r"[\w-]+", prompt.casefold()):
+        clean = term.strip("-_")
+        if len(clean) <= 2 or clean in stopwords or clean.isdigit():
+            continue
+        if clean not in terms:
+            terms.append(clean)
+    return terms
+
+
+def _unique_queries(queries: list[str]) -> list[str]:
+    unique = []
+    for query in queries:
+        clean = " ".join(query.split()).strip()
+        if clean and clean not in unique:
+            unique.append(clean)
+    return unique or ["open data"]
 
 
 def _normalize_endpoint_or_default(endpoint: str | None) -> str:
@@ -439,3 +508,15 @@ def _normalize_endpoint_or_default(endpoint: str | None) -> str:
 
 def _short_error(exc: Exception) -> str:
     return f"{type(exc).__name__}: {str(exc).strip() or type(exc).__name__}"
+
+
+def _is_service_unavailable_error(error: str) -> bool:
+    return "503" in error or "service unavailable" in error.casefold()
+
+
+def _should_stop_for_tool_failure(session: AgentSession, result: ToolResult) -> bool:
+    if result.ok:
+        return False
+    if session.consecutive_service_errors >= 2:
+        return True
+    return any(count >= 2 for count in session.failed_searches.values())
