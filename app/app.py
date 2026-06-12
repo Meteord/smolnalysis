@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import asyncio
 import json
+import logging
+import os
 from pathlib import Path
 from typing import Any
 
@@ -13,15 +15,34 @@ from fastapi.responses import HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
 load_dotenv()
+logging.basicConfig(
+    level=os.getenv("SMOLNALYSIS_LOG_LEVEL", "INFO").upper(),
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
 
-from agent_workflow import run_agent_workflow
-from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
-from llm_support import llm_status, validate_llms
+try:
+    from .agent_workflow import run_agent_workflow
+    from .backend.gemma_chat import generate_chat_response
+    from .ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
+    from .llm_support import llm_status, validate_llms
+except ImportError:
+    from agent_workflow import run_agent_workflow
+    from backend.gemma_chat import generate_chat_response
+    from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
+    from llm_support import llm_status, validate_llms
 
 
 APP_DIR = Path(__file__).parent
 STATIC_DIR = APP_DIR / "static"
 DEMO_CSV = APP_DIR / "examples" / "demo_cities.csv"
+logger = logging.getLogger(__name__)
+
+
+def _static_asset_version(filename: str) -> str:
+    path = STATIC_DIR / filename
+    if not path.exists():
+        return "missing"
+    return str(int(path.stat().st_mtime))
 
 
 def _demo_dataframe() -> pd.DataFrame:
@@ -54,12 +75,34 @@ def _last_user_prompt(messages: list[dict[str, Any]]) -> str:
     return ""
 
 
+def _chat_messages(messages: list[dict[str, Any]]) -> list[dict[str, str]]:
+    chat_messages = []
+    for message in messages:
+        role = str(message.get("role", "")).strip()
+        if role not in {"system", "user", "assistant"}:
+            continue
+        content = _message_text(message).strip()
+        if content:
+            chat_messages.append({"role": role, "content": content})
+    return chat_messages
+
+
 def build_openui_response(prompt: str) -> str:
     return build_workflow_response(prompt)
 
 
 def build_workflow_response(prompt: str, ckan_endpoint: str | None = None) -> str:
     return run_agent_workflow(prompt or "Summarize this dataset", ckan_endpoint).get("openui_lang", "")
+
+
+def build_gemma_openui_response(assistant_text: str) -> str:
+    return "\n".join(
+        [
+            "root = Card([header, response])",
+            'header = CardHeader("Gemma", "Backend response")',
+            f"response = TextContent({json.dumps(assistant_text)}, \"default\")",
+        ]
+    )
 
 
 def _openai_sse_chunk(delta: dict[str, Any], finish_reason: str | None = None) -> str:
@@ -89,10 +132,22 @@ def respond(prompt: str) -> str:
 async def chat(request: Request) -> StreamingResponse:
     body = await request.json()
     messages = body.get("messages") or []
+    adapter = str(body.get("adapter") or "auto").strip() or "auto"
     ckan = body.get("ckan") or {}
-    ckan_endpoint = ckan.get("base_url") if isinstance(ckan, dict) and ckan.get("connected") else None
-    prompt = _last_user_prompt(messages)
-    openui_lang = build_workflow_response(prompt, ckan_endpoint)
+    chat_messages = _chat_messages(messages)
+    logger.info(
+        "chat request received: raw_messages=%d chat_messages=%d adapter=%s ckan_connected=%s ckan_base_url=%s",
+        len(messages) if isinstance(messages, list) else 0,
+        len(chat_messages),
+        adapter,
+        ckan.get("connected") if isinstance(ckan, dict) else None,
+        ckan.get("base_url") if isinstance(ckan, dict) else None,
+    )
+    if chat_messages:
+        logger.debug("chat last message: role=%s chars=%d", chat_messages[-1]["role"], len(chat_messages[-1]["content"]))
+    assistant_text = await asyncio.to_thread(generate_chat_response, chat_messages, adapter=adapter)
+    logger.info("chat response generated: adapter=%s response_chars=%d", adapter, len(assistant_text))
+    openui_lang = build_gemma_openui_response(assistant_text)
     return StreamingResponse(_stream_openui_response(openui_lang), media_type="text/event-stream")
 
 
@@ -121,18 +176,20 @@ async def llms_validate() -> dict[str, Any]:
 
 @app.get("/", response_class=HTMLResponse)
 async def homepage() -> str:
-    return """
+    chat_css_version = _static_asset_version("openui-chat.css")
+    chat_js_version = _static_asset_version("openui-chat.js")
+    return f"""
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>smolnalysis</title>
-    <link rel="stylesheet" href="/static/openui-chat.css" />
+    <link rel="stylesheet" href="/static/openui-chat.css?v={chat_css_version}" />
   </head>
   <body>
     <div id="root"></div>
-    <script src="/static/openui-chat.js"></script>
+    <script src="/static/openui-chat.js?v={chat_js_version}"></script>
   </body>
 </html>
 """

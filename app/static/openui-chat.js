@@ -150592,6 +150592,7 @@ ${verifyLines.join("\n")}`;
 
   // app/frontend/openui-chat.jsx
   var CKAN_STORAGE_KEY = "smolnalysis.ckanEndpoint";
+  var CHAT_ADAPTER = "auto";
   function CkanEndpointPanel({ onConnectionChange }) {
     const [defaultEndpoint, setDefaultEndpoint] = (0, import_react89.useState)("https://opendata.muenchen.de/");
     const [endpoint, setEndpoint] = (0, import_react89.useState)("https://opendata.muenchen.de/");
@@ -150692,16 +150693,25 @@ ${verifyLines.join("\n")}`;
   }
   function App() {
     const [ckanConnection, setCkanConnection] = (0, import_react89.useState)({ connected: false, base_url: "https://opendata.muenchen.de/" });
-    const processMessage = ({ threadId, messages, abortController }) => fetch("/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
+    const processMessage = ({ threadId, messages, abortController }) => {
+      console.info("[smolnalysis] sending chat request", {
         threadId,
-        messages,
+        adapter: CHAT_ADAPTER,
+        messageCount: messages?.length || 0,
         ckan: ckanConnection
-      }),
-      signal: abortController.signal
-    });
+      });
+      return fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          threadId,
+          messages,
+          adapter: CHAT_ADAPTER,
+          ckan: ckanConnection
+        }),
+        signal: abortController.signal
+      });
+    };
     return /* @__PURE__ */ import_react89.default.createElement(
       FullScreen,
       {
