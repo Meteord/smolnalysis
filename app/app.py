@@ -5,6 +5,7 @@ import json
 import logging
 import os
 import time
+import traceback
 import uuid
 from collections import deque
 from datetime import datetime, timezone
@@ -204,14 +205,17 @@ def _handle_backend_failure(
             started,
         )
     detail = _exception_detail(exc)
-    return _backend_error_openui(reason, detail), _backend_error_trace(messages, adapter, reason, detail, started)
+    return _backend_error_openui(reason, detail), _backend_error_trace(messages, adapter, reason, detail, exc, started)
 
 
 def _exception_detail(exc: Exception) -> str:
-    message = str(exc).strip()
-    if message:
-        return f"{type(exc).__name__}: {message}"
-    return type(exc).__name__
+    details = []
+    current: BaseException | None = exc
+    while current is not None:
+        message = str(current).strip()
+        details.append(f"{type(current).__name__}: {message}" if message else type(current).__name__)
+        current = current.__cause__ or current.__context__
+    return " <- ".join(details)
 
 
 def _backend_error_openui(reason: str, detail: str) -> str:
@@ -230,6 +234,7 @@ def _backend_error_trace(
     adapter: str,
     reason: str,
     detail: str,
+    exc: Exception,
     started: float,
 ) -> dict[str, Any]:
     openui_lang = _backend_error_openui(reason, detail)
@@ -243,6 +248,7 @@ def _backend_error_trace(
         "events": [{"name": "backend_error", "detail": f"{reason}: {detail}"}],
         "fallback_reason": reason,
         "fallback_detail": detail,
+        "traceback": "".join(traceback.format_exception(exc)),
         "stub_fallback_enabled": False,
         "duration_ms": round((time.perf_counter() - started) * 1000, 1),
         "output_chars": len(openui_lang),

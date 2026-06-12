@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from functools import lru_cache
+from importlib import metadata
 import logging
 import os
 import threading
@@ -214,6 +215,39 @@ def _load_llama(role: str):
     )
 
 
+def _load_llama_with_gpu_fallback(role: str):
+    config = role_config(role)
+    model_path = _resolve_model_path(config)
+    lora_path = _resolve_lora_path(config)
+    options = _role_runtime_options(role)
+    try:
+        llm = _load_llama_cached(
+            model_path,
+            lora_path,
+            options["n_ctx"],
+            options["n_batch"],
+            options["n_gpu_layers"],
+            options.get("n_threads"),
+            options["verbose"],
+        )
+        return llm, options, ""
+    except Exception as exc:
+        if options["n_gpu_layers"] == 0:
+            raise
+        fallback_options = {**options, "n_gpu_layers": 0}
+        logger.exception("MiniCPM llama.cpp GPU load failed for role=%s; retrying with CPU.", role)
+        llm = _load_llama_cached(
+            model_path,
+            lora_path,
+            fallback_options["n_ctx"],
+            fallback_options["n_batch"],
+            fallback_options["n_gpu_layers"],
+            fallback_options.get("n_threads"),
+            fallback_options["verbose"],
+        )
+        return llm, fallback_options, f"{type(exc).__name__}: {str(exc).strip() or type(exc).__name__}"
+
+
 def role_runtime_status(role: str) -> dict[str, Any]:
     config = role_config(role)
     options = _role_runtime_options(role)
@@ -231,6 +265,7 @@ def role_runtime_status(role: str) -> dict[str, Any]:
         lora_error = str(exc)
     return {
         "role": role,
+        "llama_cpp": llama_cpp_runtime_info(),
         "model_path": model_path or config.model_path,
         "model_repo_id": config.model_repo_id,
         "model_filename": config.model_filename,
@@ -243,6 +278,42 @@ def role_runtime_status(role: str) -> dict[str, Any]:
         "configured": bool(config.model_path or (config.model_repo_id and config.model_filename)),
         "loaded_models": _load_llama_cached.cache_info().currsize,
     }
+
+
+def llama_cpp_runtime_info() -> dict[str, Any]:
+    info: dict[str, Any] = {
+        "installed": False,
+        "version": "",
+        "supports_gpu_offload": None,
+        "backend": "",
+        "error": "",
+    }
+    try:
+        info["version"] = metadata.version("llama-cpp-python")
+    except metadata.PackageNotFoundError:
+        info["error"] = "llama-cpp-python is not installed."
+        return info
+    except Exception as exc:
+        info["error"] = str(exc)
+
+    try:
+        import llama_cpp
+
+        info["installed"] = True
+        info["version"] = str(getattr(llama_cpp, "__version__", info["version"]))
+        low_level = getattr(llama_cpp, "llama_cpp", None)
+        supports_gpu_offload = getattr(low_level, "llama_supports_gpu_offload", None)
+        if callable(supports_gpu_offload):
+            info["supports_gpu_offload"] = bool(supports_gpu_offload())
+        supports_mmap = getattr(low_level, "llama_supports_mmap", None)
+        if callable(supports_mmap):
+            info["supports_mmap"] = bool(supports_mmap())
+        supports_mlock = getattr(low_level, "llama_supports_mlock", None)
+        if callable(supports_mlock):
+            info["supports_mlock"] = bool(supports_mlock())
+    except Exception as exc:
+        info["error"] = str(exc)
+    return info
 
 ROLE_SYSTEM_PROMPTS = {
     "general_agent": "You are smolnalysis, a concise assistant for exploring open data and planning analysis steps.",
@@ -300,8 +371,13 @@ def generate_chat_response_with_trace(
     runtime = role_runtime_status(role)
     routed_messages = _with_role_system_prompt(messages, role)
     cache_before = _load_llama_cached.cache_info()
+    effective_options: dict[str, Any] = {}
+    gpu_fallback_error = ""
     with MODEL_LOCK:
-        llm = _load_llama(role)
+        try:
+            llm, effective_options, gpu_fallback_error = _load_llama_with_gpu_fallback(role)
+        except Exception as exc:
+            raise RuntimeError(f"MiniCPM llama.cpp load failed for role '{role}'.") from exc
         cache_after_load = _load_llama_cached.cache_info()
         payload: dict[str, Any] = {
             "messages": routed_messages,
@@ -312,7 +388,10 @@ def generate_chat_response_with_trace(
         }
         if top_k is not None:
             payload["top_k"] = top_k
-        response = llm.create_chat_completion(**payload)
+        try:
+            response = llm.create_chat_completion(**payload)
+        except Exception as exc:
+            raise RuntimeError(f"MiniCPM llama.cpp generation failed for role '{role}'.") from exc
 
     content = response["choices"][0]["message"]["content"]
     elapsed_ms = round((time.perf_counter() - started) * 1000, 1)
@@ -331,6 +410,8 @@ def generate_chat_response_with_trace(
             "top_k": top_k,
         },
         "runtime": runtime,
+        "effective_options": effective_options,
+        "gpu_fallback_error": gpu_fallback_error,
         "cache": {
             "hit": cache_hit,
             "loaded_models": cache_after_load.currsize,
