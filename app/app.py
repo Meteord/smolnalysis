@@ -143,10 +143,10 @@ def _default_dataset_path_for_prompt(prompt: str) -> str | None:
     analysis_terms = ("this dataset", "summarize", "summary", "schema", "columns", "quality", "missing", "trend", "statistics", "chart", "histogram")
     if any(term in lower for term in analysis_terms):
         return str(DEMO_CSV) if DEMO_CSV.exists() else None
-    retrieval_terms = ("ckan", "resource", "catalog", "search", "find", "retrieve", "open data", "bike", "bicycle", "bycycle", "bycycles", "fahrrad", "counter", "traffic")
+    retrieval_terms = ("ckan", "resource", "catalog", "search", "find", "retrieve", "open data", "dataset", "datasets")
     if any(term in lower for term in retrieval_terms):
         return None
-    return str(DEMO_CSV) if DEMO_CSV.exists() else None
+    return None
 
 
 def build_model_openui_response(assistant_text: str, backend_label: str = "MiniCPM") -> str:
@@ -408,7 +408,8 @@ def _is_retrieval_prompt(prompt: str, has_dataset: bool) -> bool:
     if has_dataset:
         return False
     lower = _clean_user_prompt(prompt).casefold()
-    return any(term in lower for term in ("ckan", "dataset", "resource", "catalog", "search", "find", "retrieve", "open data", "bike", "bicycle", "bycycle", "bycycles", "fahrrad", "counter", "traffic"))
+    analysis_terms = ("this dataset", "summarize", "summary", "schema", "columns", "quality", "missing", "trend", "statistics", "chart", "histogram")
+    return not any(term in lower for term in analysis_terms)
 
 
 async def _stream_retrieval_workflow_response(

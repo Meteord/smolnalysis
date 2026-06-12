@@ -28,7 +28,7 @@ CKAN_ACTION_CONTRACT = (
     "Use tag_search first when the user's terms may not match the catalog language. "
     "Use group_list or organization_list to discover catalog vocabulary when package_search returns weak or empty results. "
     "Use package_show only with observed package_id values. Use select_resource only with observed resource_id values. "
-    "For bicycle topics, prefer CKAN vocabulary like fahrrad, radverkehr, zaehlstelle, verkehr. Do not invent URLs."
+    "Do not invent URLs."
 )
 OPENUI_CONTRACT = "You translate structured smolnalysis results into OpenUI-Lang. Output OpenUI-Lang only. No markdown, no prose."
 
@@ -79,6 +79,7 @@ class AgentSession:
     tool_calls: int = 0
     searched_queries: list[str] = field(default_factory=list)
     failed_searches: dict[str, int] = field(default_factory=dict)
+    searched_tag_queries: list[str] = field(default_factory=list)
     consecutive_service_errors: int = 0
     discovered_tags: list[str] = field(default_factory=list)
     discovered_groups: list[dict[str, Any]] = field(default_factory=list)
@@ -211,6 +212,8 @@ def validate_action(action: AgentAction, session: AgentSession) -> tuple[AgentAc
         query = str(action.args.get("query", "")).strip()
         if not query or "://" in query:
             return action, "tag_search requires a plain query string."
+        if query in session.searched_tag_queries:
+            return action, f"tag_search query already ran in this run: {query}"
         rows = int(action.args.get("rows", 10) or 10)
         action.args["rows"] = max(1, min(rows, 25))
     if action.action in {"group_list", "organization_list"}:
@@ -247,6 +250,8 @@ def execute_action(action: AgentAction, session: AgentSession, on_event: Callabl
         query = str(action.args.get("query", "")).strip()
         rows = int(action.args.get("rows", 10) or 10)
         session.catalog_tools_run.add("tag_search")
+        if query not in session.searched_tag_queries:
+            session.searched_tag_queries.append(query)
         _record_event(session, AgentEvent("tool_call", f"tag_search: {query}", {"query": query, "rows": rows}), on_event)
         try:
             result = tag_search(session.endpoint, query, rows=rows)
@@ -405,13 +410,6 @@ def _next_model_action(
 
 def _initial_messages(prompt: str, endpoint: str | None, history: list[dict[str, str]] | None) -> list[dict[str, str]]:
     messages = []
-    for message in history or []:
-        role = str(message.get("role", "")).strip()
-        content = str(message.get("content", "")).strip()
-        if role == "user":
-            content = _clean_prompt(content)
-        if role and content:
-            messages.append({"role": role, "content": content})
     messages.append(
         {
             "role": "user",
@@ -533,96 +531,42 @@ def _fallback_query(
     else:
         searched = list(searched_queries or [])
         index = len(searched)
-    terms = _search_terms(prompt)
-    expanded_terms = _expand_domain_terms(terms)
-    base = " ".join(expanded_terms[:4]) or "open data"
-    short = " ".join(terms[:2]) or base
-    discovered = _matching_discovered_queries(expanded_terms, discovered_tags or [], discovered_groups or [])
-    variants = _unique_queries([*discovered, base, short, *expanded_terms[:4], f"{base} csv", f"{short} csv", " ".join(expanded_terms[:3]) or base])
+    base = _catalog_query(prompt)
+    discovered = _matching_discovered_queries(discovered_tags or [], discovered_groups or [])
+    variants = _unique_queries([*discovered, base, f"{base} csv"])
     for query in variants:
         if query not in searched:
             return query
     return variants[min(index, len(variants) - 1)]
 
 
-def _matching_discovered_queries(expanded_terms: list[str], tags: list[str], groups: list[dict[str, Any]]) -> list[str]:
+def _matching_discovered_queries(tags: list[str], groups: list[dict[str, Any]]) -> list[str]:
     candidates: list[str] = []
     for tag in tags:
         clean = str(tag).strip()
-        if clean and any(term in clean.casefold() or clean.casefold() in term for term in expanded_terms):
+        if clean:
             candidates.append(clean)
     for group in groups:
         label = str(group.get("title") or group.get("display_name") or group.get("name") or "").strip()
-        if label and any(term in label.casefold() or label.casefold() in term for term in expanded_terms):
+        if label:
             candidates.append(label)
     return _unique_queries(candidates)
 
 
 def _catalog_query(prompt: str) -> str:
-    terms = _expand_domain_terms(_search_terms(prompt))
-    return terms[0] if terms else "open data"
+    return _clean_prompt(prompt) or "open data"
 
 
 def _search_terms(prompt: str) -> list[str]:
     prompt = _clean_prompt(prompt)
-    stopwords = {
-        "api",
-        "assistant",
-        "catalog",
-        "ckan",
-        "content",
-        "context",
-        "data",
-        "dataset",
-        "datasets",
-        "endpoint",
-        "find",
-        "https",
-        "know",
-        "knwo",
-        "muenchen",
-        "open",
-        "opendata",
-        "request",
-        "resource",
-        "resources",
-        "search",
-        "tell",
-        "what",
-        "user",
-        "yo",
-        "you",
-    }
     terms = []
     for term in re.findall(r"[\w-]+", prompt.casefold()):
         clean = term.strip("-_")
-        if len(clean) <= 2 or clean in stopwords or clean.isdigit():
+        if len(clean) <= 2 or clean.isdigit():
             continue
         if clean not in terms:
             terms.append(clean)
     return terms
-
-
-def _expand_domain_terms(terms: list[str]) -> list[str]:
-    expanded: list[str] = []
-    for term in terms:
-        for candidate in _domain_synonyms(term):
-            if candidate not in expanded:
-                expanded.append(candidate)
-    return expanded
-
-
-def _domain_synonyms(term: str) -> list[str]:
-    bicycle_terms = {"bike", "bikes", "bicycle", "bicycles", "bycycle", "bycycles", "cycle", "cycles", "cycling", "fahrrad", "rad", "radverkehr"}
-    if term in bicycle_terms:
-        return ["fahrrad", "radverkehr", "bike", "bicycle"]
-    counter_terms = {"counter", "counters", "count", "counts", "zaehler", "zaehlstelle", "zählstelle", "zählstellen"}
-    if term in counter_terms:
-        return ["zaehlstelle", "zaehlung", "counter"]
-    traffic_terms = {"traffic", "verkehr", "mobility", "mobilitaet", "mobilität"}
-    if term in traffic_terms:
-        return ["verkehr", "mobilitaet", "traffic"]
-    return [term]
 
 
 def _unique_queries(queries: list[str]) -> list[str]:

@@ -51,13 +51,13 @@ class CkanAgentWorkflowTests(TestCase):
         self.assertEqual(fallback.action, "tag_search")
         self.assertIn("population", fallback.args["query"])
 
-    def test_fallback_search_ignores_chat_wrapper_words(self) -> None:
+    def test_fallback_search_keeps_plain_prompt_text(self) -> None:
         session = AgentSession("content population content context", "https://opendata.muenchen.de/")
 
         fallback = fallback_action(session)
 
         self.assertEqual(fallback.action, "tag_search")
-        self.assertEqual(fallback.args["query"], "population")
+        self.assertEqual(fallback.args["query"], "content population content context")
 
     def test_fallback_search_extracts_openui_clicked_content(self) -> None:
         session = AgentSession(
@@ -68,7 +68,7 @@ class CkanAgentWorkflowTests(TestCase):
         fallback = fallback_action(session)
 
         self.assertEqual(fallback.action, "tag_search")
-        self.assertEqual(fallback.args["query"], "fahrrad")
+        self.assertEqual(fallback.args["query"], "Find CKAN bike counter datasets")
 
     def test_fallback_package_search_uses_discovered_bike_tags(self) -> None:
         session = AgentSession("what do yo knwo about bycycles", "https://opendata.muenchen.de/")
@@ -79,6 +79,15 @@ class CkanAgentWorkflowTests(TestCase):
 
         self.assertEqual(fallback.action, "package_search")
         self.assertEqual(fallback.args["query"], "radverkehr")
+
+    def test_repeated_tag_search_is_rejected(self) -> None:
+        session = AgentSession("was weißt du über fahrräder?", "https://opendata.muenchen.de/")
+        session.searched_tag_queries.append("population")
+        action = AgentAction("tag_search", {"query": "population"}, "stale", 0.3)
+
+        _validated, error = validate_action(action, session)
+
+        self.assertIn("already ran", error)
 
     def test_unknown_action_is_rejected(self) -> None:
         session = AgentSession("Find data", "https://opendata.muenchen.de/")
@@ -157,7 +166,7 @@ class CkanAgentWorkflowTests(TestCase):
         result = run_ckan_agent("Find schools", "https://opendata.muenchen.de/", model_caller=_FailingModel(), max_tool_calls=1)
 
         self.assertEqual(result.status, "max_tool_calls")
-        self.assertEqual(tag_search_mock.call_args.args[1], "schools")
+        self.assertEqual(tag_search_mock.call_args.args[1], "Find schools")
         self.assertTrue(any(event.type == "retry" for event in result.events))
 
     @patch("app.ckan_agent.group_list")
