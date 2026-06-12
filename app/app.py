@@ -22,12 +22,10 @@ logging.basicConfig(
 
 try:
     from .agent_workflow import run_agent_workflow
-    from .backend.gemma_chat import generate_chat_response
     from .ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from .llm_support import llm_status, validate_llms
 except ImportError:
     from agent_workflow import run_agent_workflow
-    from backend.gemma_chat import generate_chat_response
     from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from llm_support import llm_status, validate_llms
 
@@ -103,6 +101,25 @@ def build_gemma_openui_response(assistant_text: str) -> str:
             f"response = TextContent({json.dumps(assistant_text)}, \"default\")",
         ]
     )
+
+
+def generate_chat_response(messages: list[dict[str, str]], *, adapter: str = "auto") -> str:
+    try:
+        try:
+            from .backend.gemma_chat import generate_chat_response as backend_generate_chat_response
+        except ImportError:
+            from backend.gemma_chat import generate_chat_response as backend_generate_chat_response
+    except Exception as exc:
+        logger.warning("Gemma backend unavailable, using workflow fallback: %s", exc)
+        prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
+        return run_agent_workflow(prompt or "Summarize this dataset").get("openui_lang", "")
+
+    try:
+        return backend_generate_chat_response(messages, adapter=adapter)
+    except Exception as exc:
+        logger.warning("Gemma generation failed, using workflow fallback: %s", exc)
+        prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
+        return run_agent_workflow(prompt or "Summarize this dataset").get("openui_lang", "")
 
 
 def _openai_sse_chunk(delta: dict[str, Any], finish_reason: str | None = None) -> str:
