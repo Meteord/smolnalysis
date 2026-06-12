@@ -37,7 +37,7 @@ This repository is ready to run as a Hugging Face Gradio Space from the reposito
 huggingface-cli repo create YOUR_ORG/smolnalysis --type space --space_sdk gradio
 ```
 
-The Space uses the root [app.py](app.py) launcher, [requirements.txt](requirements.txt), and the metadata above so it appears as a Gradio Space in the organisation namespace at `https://huggingface.co/spaces/YOUR_ORG/smolnalysis`.
+The Space uses the root [app.py](app.py) launcher, [requirements.txt](requirements.txt), and the metadata above so it appears as a Gradio Space in the organisation namespace at `https://huggingface.co/spaces/build-small-hackathon/smolnalysis`.
 
 ### llama.cpp Deployment Target
 
@@ -52,7 +52,7 @@ The deployed model stack should be MiniCPM-only, not Gemma. Use `openbmb/MiniCPM
 - `openui_translator` LoRA GGUF
 - optional future `data_analysis` LoRA GGUF
 
-The app should call a local llama.cpp adapter when running inside the Space. If per-request LoRA switching is not reliable enough for this workflow, use pre-merged role-specific GGUF models.
+The app calls a local llama.cpp adapter when running inside the Space. It can share one base GGUF across roles, attach optional role-specific LoRA GGUF files, or use pre-merged role-specific GGUF models.
 
 Runtime configuration:
 
@@ -73,14 +73,25 @@ SMOLNALYSIS_MINICPM_DATA_ANALYSIS_LORA_PATH=/models/data-analysis-lora.gguf
 SMOLNALYSIS_MINICPM_OPENUI_TRANSLATOR_LORA_PATH=/models/openui-translator-lora.gguf
 ```
 
+LoRAs can also live in Hugging Face repos and be downloaded by the Space at runtime:
+
+```text
+SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_LORA_REPO_ID=your-org/smolnalysis-loras
+SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_LORA_FILENAME=ckan-retrieval-lora.gguf
+SMOLNALYSIS_MINICPM_DATA_ANALYSIS_LORA_REPO_ID=your-org/smolnalysis-loras
+SMOLNALYSIS_MINICPM_DATA_ANALYSIS_LORA_FILENAME=data-analysis-lora.gguf
+SMOLNALYSIS_MINICPM_OPENUI_TRANSLATOR_LORA_REPO_ID=your-org/smolnalysis-loras
+SMOLNALYSIS_MINICPM_OPENUI_TRANSLATOR_LORA_FILENAME=openui-translator-lora.gguf
+```
+
 Supported runtime roles are `general_agent`, `ckan_retrieval`, `data_analysis`, and `openui_translator`. The frontend can still send `adapter: "auto"`; the backend routes to the best role from the latest user message.
 
 ZeroGPU deployment notes:
 
 - Keep `sdk: gradio`.
 - Select ZeroGPU hardware in the Space settings.
-- Add the `spaces` package only when GPU-decorated functions are introduced.
-- Wrap generation in `@spaces.GPU(duration=...)` if llama.cpp GPU offload is compatible with ZeroGPU.
+- The `spaces` package is installed, and startup exposes a small GPU-decorated probe so ZeroGPU detects the app correctly.
+- Generation is wrapped in `@spaces.GPU(duration=...)`; keep `SMOLNALYSIS_MINICPM_N_GPU_LAYERS=0` for CPU-only llama.cpp if GPU offload is not compatible.
 - Do not use Modal for the deployed path.
 
 ## Current MVP

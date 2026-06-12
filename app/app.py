@@ -119,6 +119,16 @@ def build_model_openui_response(assistant_text: str, backend_label: str = "MiniC
 build_gemma_openui_response = build_model_openui_response
 
 
+def _looks_like_openui_lang(value: str) -> bool:
+    return any(line.strip().startswith("root =") for line in value.splitlines())
+
+
+def build_chat_openui_response(assistant_text: str) -> str:
+    if _looks_like_openui_lang(assistant_text):
+        return assistant_text
+    return build_model_openui_response(assistant_text)
+
+
 @spaces.GPU(duration=5)
 def zerogpu_probe() -> dict[str, Any]:
     return {"ok": True, "runtime": "zerogpu-ready"}
@@ -190,7 +200,7 @@ async def chat(request: Request) -> StreamingResponse:
         logger.debug("chat last message: role=%s chars=%d", chat_messages[-1]["role"], len(chat_messages[-1]["content"]))
     assistant_text = await asyncio.to_thread(generate_chat_response, chat_messages, adapter=adapter)
     logger.info("chat response generated: adapter=%s response_chars=%d", adapter, len(assistant_text))
-    openui_lang = build_gemma_openui_response(assistant_text)
+    openui_lang = build_chat_openui_response(assistant_text)
     return StreamingResponse(_stream_openui_response(openui_lang), media_type="text/event-stream")
 
 

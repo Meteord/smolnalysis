@@ -82,6 +82,17 @@ class AgentWorkflowTests(TestCase):
         self.assertIn('header = CardHeader("MiniCPM", "Backend response")', content)
         self.assertIn("MiniCPM backend response", content)
 
+    def test_chat_route_preserves_model_openui_lang(self) -> None:
+        client = TestClient(app)
+        model_openui = 'root = Card([TextContent("Already OpenUI", "default")])'
+        with patch.object(app_module, "generate_chat_response", return_value=model_openui):
+            response = client.post("/api/chat", json={"messages": [{"role": "user", "content": "Render UI"}]})
+
+        chunks = [line.removeprefix("data: ") for line in response.text.splitlines() if line.startswith("data: ") and line != "data: [DONE]"]
+        payloads = [json.loads(chunk) for chunk in chunks]
+        content = "".join(payload["choices"][0]["delta"].get("content", "") for payload in payloads)
+        self.assertEqual(content, model_openui)
+
 
 if __name__ == "__main__":
     main()

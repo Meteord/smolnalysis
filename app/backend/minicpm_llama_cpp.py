@@ -67,6 +67,8 @@ class LlamaCppRoleConfig:
     model_repo_id: str
     model_filename: str
     lora_path: str
+    lora_repo_id: str
+    lora_filename: str
 
 
 def _clean_env_value(name: str, default: str = "") -> str:
@@ -121,7 +123,9 @@ def role_config(role: str) -> LlamaCppRoleConfig:
         _clean_env_value("SMOLNALYSIS_MINICPM_MODEL_FILENAME", _clean_env_value("MODEL_FILENAME")),
     )
     lora_path = _clean_env_value(_role_env(role, "LORA_PATH"), "")
-    return LlamaCppRoleConfig(role, model_path, model_repo_id, model_filename, lora_path)
+    lora_repo_id = _clean_env_value(_role_env(role, "LORA_REPO_ID"), "")
+    lora_filename = _clean_env_value(_role_env(role, "LORA_FILENAME"), "")
+    return LlamaCppRoleConfig(role, model_path, model_repo_id, model_filename, lora_path, lora_repo_id, lora_filename)
 
 
 def _resolve_model_path(config: LlamaCppRoleConfig) -> str:
@@ -138,17 +142,19 @@ def _resolve_model_path(config: LlamaCppRoleConfig) -> str:
     )
 
 
-@lru_cache(maxsize=4)
-def _load_llama(role: str):
-    try:
-        from llama_cpp import Llama
-    except ImportError as exc:
-        raise RuntimeError("llama-cpp-python is not installed in this runtime.") from exc
+def _resolve_lora_path(config: LlamaCppRoleConfig) -> str:
+    if config.lora_path:
+        path = Path(config.lora_path).expanduser()
+        if not path.exists():
+            raise FileNotFoundError(f"MiniCPM LoRA path does not exist for role {config.role}: {path}")
+        return str(path)
+    if config.lora_repo_id and config.lora_filename:
+        return hf_hub_download(repo_id=config.lora_repo_id, filename=config.lora_filename)
+    return ""
 
-    config = role_config(role)
-    model_path = _resolve_model_path(config)
-    kwargs: dict[str, Any] = {
-        "model_path": model_path,
+
+def _role_runtime_options(role: str) -> dict[str, Any]:
+    options: dict[str, Any] = {
         "n_ctx": int(_clean_env_value(_role_env(role, "N_CTX"), str(DEFAULT_N_CTX))),
         "n_batch": int(_clean_env_value(_role_env(role, "N_BATCH"), str(DEFAULT_N_BATCH))),
         "n_gpu_layers": int(_clean_env_value(_role_env(role, "N_GPU_LAYERS"), str(DEFAULT_N_GPU_LAYERS))),
@@ -156,15 +162,71 @@ def _load_llama(role: str):
     }
     n_threads = _clean_env_value(_role_env(role, "N_THREADS"), _clean_env_value("SMOLNALYSIS_MINICPM_N_THREADS", _clean_env_value("N_THREADS")))
     if n_threads:
-        kwargs["n_threads"] = int(n_threads)
-    if config.lora_path:
-        lora_path = Path(config.lora_path).expanduser()
-        if not lora_path.exists():
-            raise FileNotFoundError(f"MiniCPM LoRA path does not exist for role {role}: {lora_path}")
-        kwargs["lora_path"] = str(lora_path)
+        options["n_threads"] = int(n_threads)
+    return options
 
-    logger.info("loading MiniCPM llama.cpp role=%s model=%s lora=%s", role, model_path, config.lora_path or "none")
+
+@lru_cache(maxsize=4)
+def _load_llama_cached(
+    model_path: str,
+    lora_path: str,
+    n_ctx: int,
+    n_batch: int,
+    n_gpu_layers: int,
+    n_threads: int | None,
+    verbose: bool,
+):
+    try:
+        from llama_cpp import Llama
+    except ImportError as exc:
+        raise RuntimeError("llama-cpp-python is not installed in this runtime.") from exc
+
+    kwargs: dict[str, Any] = {
+        "model_path": model_path,
+        "n_ctx": n_ctx,
+        "n_batch": n_batch,
+        "n_gpu_layers": n_gpu_layers,
+        "verbose": verbose,
+    }
+    if n_threads is not None:
+        kwargs["n_threads"] = n_threads
+    if lora_path:
+        kwargs["lora_path"] = lora_path
+
+    logger.info("loading MiniCPM llama.cpp model=%s lora=%s", model_path, lora_path or "none")
     return Llama(**kwargs)
+
+
+def _load_llama(role: str):
+    config = role_config(role)
+    model_path = _resolve_model_path(config)
+    lora_path = _resolve_lora_path(config)
+    options = _role_runtime_options(role)
+    return _load_llama_cached(
+        model_path,
+        lora_path,
+        options["n_ctx"],
+        options["n_batch"],
+        options["n_gpu_layers"],
+        options.get("n_threads"),
+        options["verbose"],
+    )
+
+ROLE_SYSTEM_PROMPTS = {
+    "general_agent": "You are smolnalysis, a concise assistant for exploring open data and planning analysis steps.",
+    "ckan_retrieval": "You are the smolnalysis CKAN retrieval specialist. Help identify datasets, resources, filters, and catalog search steps.",
+    "data_analysis": "You are the smolnalysis data analyst. Focus on columns, quality checks, aggregations, distributions, trends, and clear next analyses.",
+    "openui_translator": "You are the smolnalysis OpenUI translator. When asked for UI, return valid OpenUI-Lang only.",
+}
+
+
+def _with_role_system_prompt(messages: list[dict[str, str]], role: str) -> list[dict[str, str]]:
+    if any(message.get("role") == "system" for message in messages):
+        return messages
+    prompt = ROLE_SYSTEM_PROMPTS.get(role)
+    if not prompt:
+        return messages
+    return [{"role": "system", "content": prompt}, *messages]
 
 
 MODEL_LOCK = threading.Lock()
@@ -181,10 +243,11 @@ def generate_chat_response(
     top_k: int | None = None,
 ) -> str:
     role = route_role(messages, adapter)
+    routed_messages = _with_role_system_prompt(messages, role)
     with MODEL_LOCK:
         llm = _load_llama(role)
         payload: dict[str, Any] = {
-            "messages": messages,
+            "messages": routed_messages,
             "temperature": temperature,
             "top_p": top_p,
             "max_tokens": max_new_tokens,
@@ -208,8 +271,10 @@ def runtime_status() -> dict[str, Any]:
             "model_repo_id": config.model_repo_id,
             "model_filename": config.model_filename,
             "lora_path": config.lora_path,
+            "lora_repo_id": config.lora_repo_id,
+            "lora_filename": config.lora_filename,
             "configured": bool(config.model_path or (config.model_repo_id and config.model_filename)),
-            "loaded": _load_llama.cache_info().currsize > 0,
+            "loaded": _load_llama_cached.cache_info().currsize > 0,
         }
     return {
         "backend": "llama.cpp",

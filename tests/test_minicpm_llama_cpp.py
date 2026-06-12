@@ -17,8 +17,10 @@ class MiniCpmLlamaCppTests(TestCase):
         for key in list(os.environ):
             if key.startswith("SMOLNALYSIS_MINICPM_") or key in {"MODEL_PATH", "MODEL_REPO_ID", "MODEL_FILENAME"}:
                 os.environ.pop(key)
+        minicpm_llama_cpp._load_llama_cached.cache_clear()
 
     def tearDown(self) -> None:
+        minicpm_llama_cpp._load_llama_cached.cache_clear()
         os.environ.clear()
         os.environ.update(self._old_env)
 
@@ -52,6 +54,32 @@ class MiniCpmLlamaCppTests(TestCase):
 
         self.assertEqual(config.model_path, "/models/minicpm.gguf")
         self.assertEqual(config.lora_path, "/models/ckan.gguf")
+
+    def test_role_config_accepts_hub_lora_files(self) -> None:
+        os.environ["MODEL_REPO_ID"] = "org/minicpm-gguf"
+        os.environ["MODEL_FILENAME"] = "minicpm.Q4_K_M.gguf"
+        os.environ["SMOLNALYSIS_MINICPM_OPENUI_TRANSLATOR_LORA_REPO_ID"] = "org/smolnalysis-loras"
+        os.environ["SMOLNALYSIS_MINICPM_OPENUI_TRANSLATOR_LORA_FILENAME"] = "openui-adapter.gguf"
+
+        config = minicpm_llama_cpp.role_config("openui_translator")
+
+        self.assertEqual(config.lora_repo_id, "org/smolnalysis-loras")
+        self.assertEqual(config.lora_filename, "openui-adapter.gguf")
+
+    def test_role_system_prompt_is_added_once(self) -> None:
+        messages = [{"role": "user", "content": "Search CKAN"}]
+
+        routed = minicpm_llama_cpp._with_role_system_prompt(messages, "ckan_retrieval")
+
+        self.assertEqual(routed[0]["role"], "system")
+        self.assertIn("CKAN retrieval", routed[0]["content"])
+        self.assertEqual(routed[1:], messages)
+
+        with_existing_system = [{"role": "system", "content": "Use this persona."}, *messages]
+        self.assertIs(
+            minicpm_llama_cpp._with_role_system_prompt(with_existing_system, "ckan_retrieval"),
+            with_existing_system,
+        )
 
 
 def _route(prompt: str) -> str:
