@@ -19,9 +19,9 @@ from dataset import OpenUIDataCollator, OpenUITrainingDataset # type: ignore
 
 
 DEFAULT_MODEL = "openbmb/MiniCPM5-1B"
-DEFAULT_TRAIN_DATA = DATA_DIR / "train"
-DEFAULT_EVAL_DATA = DATA_DIR / "valid"
-DEFAULT_OUTPUT_DIR = Path("train/openui_lang/outputs/smolnalysis-openui-minicpm5-lora")
+DEFAULT_TRAIN_DATA = DATA_DIR / "openui_sft_train.jsonl"
+DEFAULT_EVAL_DATA = DATA_DIR / "openui_sft_eval.jsonl"
+DEFAULT_OUTPUT_DIR = Path("train/openui_lang/outputs/openui-sft-stats-components-lora")
 DEFAULT_TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
 
@@ -41,8 +41,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--train-limit", type=int, help="Use a subset for smoke tests.")
     parser.add_argument("--eval-limit", type=int, help="Use a subset for smoke tests.")
-    parser.add_argument("--max-length", type=int, default=4096)
-    parser.add_argument("--num-train-epochs", type=float, default=2.0)
+    parser.add_argument("--max-length", type=int, default=2048)
+    parser.add_argument("--num-train-epochs", type=float, default=1.0)
     parser.add_argument("--learning-rate", type=float, default=2e-4)
     parser.add_argument("--per-device-train-batch-size", type=int, default=1)
     parser.add_argument("--per-device-eval-batch-size", type=int, default=1)
@@ -50,9 +50,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--warmup-ratio", type=float, default=0.03)
     parser.add_argument("--weight-decay", type=float, default=0.0)
     parser.add_argument("--max-grad-norm", type=float, default=1.0)
-    parser.add_argument("--logging-steps", type=int, default=5)
-    parser.add_argument("--eval-steps", type=int, default=25)
-    parser.add_argument("--save-steps", type=int, default=25)
+    parser.add_argument("--logging-steps", type=int, default=25)
+    parser.add_argument("--eval-steps", type=int, default=250)
+    parser.add_argument("--save-steps", type=int, default=250)
     parser.add_argument("--save-total-limit", type=int, default=2)
     parser.add_argument("--lora-r", type=int, default=16)
     parser.add_argument("--lora-alpha", type=int, default=32)
