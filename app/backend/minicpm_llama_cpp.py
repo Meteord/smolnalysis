@@ -204,27 +204,43 @@ def _load_llama_cached(
 
 
 def _preload_cuda_runtime() -> str:
-    candidates = _cuda_runtime_library_candidates()
+    candidates = _cuda_library_candidates()
+    loaded = []
     errors = []
     for candidate in candidates:
         try:
             ctypes.CDLL(str(candidate), mode=ctypes.RTLD_GLOBAL)
-            return str(candidate)
+            loaded.append(str(candidate))
         except OSError as exc:
             errors.append(f"{candidate}: {exc}")
     if errors:
         logger.debug("CUDA runtime preload attempts failed: %s", " | ".join(errors))
-    return ""
+    return os.pathsep.join(loaded)
 
 
-def _cuda_runtime_library_candidates() -> list[Path]:
+def _cuda_library_candidates() -> list[Path]:
     candidates: list[Path] = []
-    spec = importlib.util.find_spec("nvidia.cuda_runtime")
-    if spec and spec.submodule_search_locations:
-        for location in spec.submodule_search_locations:
-            candidates.append(Path(location) / "lib" / "libcudart.so.12")
+    package_libraries = [
+        ("nvidia.nvjitlink", "libnvJitLink.so.12"),
+        ("nvidia.cuda_runtime", "libcudart.so.12"),
+        ("nvidia.cublas", "libcublasLt.so.12"),
+        ("nvidia.cublas", "libcublas.so.12"),
+    ]
+    for package, library in package_libraries:
+        spec = importlib.util.find_spec(package)
+        if spec and spec.submodule_search_locations:
+            for location in spec.submodule_search_locations:
+                candidates.append(Path(location) / "lib" / library)
     for root in [*site.getsitepackages(), site.getusersitepackages()]:
-        candidates.append(Path(root) / "nvidia" / "cuda_runtime" / "lib" / "libcudart.so.12")
+        base = Path(root) / "nvidia"
+        candidates.extend(
+            [
+                base / "nvjitlink" / "lib" / "libnvJitLink.so.12",
+                base / "cuda_runtime" / "lib" / "libcudart.so.12",
+                base / "cublas" / "lib" / "libcublasLt.so.12",
+                base / "cublas" / "lib" / "libcublas.so.12",
+            ]
+        )
     return [candidate for candidate in candidates if candidate.exists()]
 
 
