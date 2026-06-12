@@ -110,6 +110,33 @@ class AgentWorkflowTests(TestCase):
         self.assertEqual(payload["role"], "data_analysis")
         self.assertEqual(payload["events"][0]["name"], "route_role")
 
+    def test_backend_generation_failure_does_not_use_stub_fallback_by_default(self) -> None:
+        with patch.object(app_module, "ENABLE_STUB_CHAT_FALLBACK", False):
+            response, trace = app_module.generate_chat_response_with_trace(
+                [{"role": "user", "content": "Find population data"}],
+                adapter="auto",
+            )
+
+        self.assertIn("MiniCPM backend unavailable", response)
+        self.assertNotIn("ReAct-style LangGraph agent", response)
+        self.assertEqual(trace["backend"], "llama.cpp")
+        self.assertEqual(trace["model_family"], "MiniCPM")
+        self.assertEqual(trace["role"], "backend_error")
+        self.assertFalse(trace["stub_fallback_enabled"])
+        self.assertIn("MiniCPM llama.cpp model is not configured", trace["fallback_detail"])
+
+    def test_backend_generation_failure_can_opt_into_stub_fallback(self) -> None:
+        with patch.object(app_module, "ENABLE_STUB_CHAT_FALLBACK", True):
+            response, trace = app_module.generate_chat_response_with_trace(
+                [{"role": "user", "content": "Find population data"}],
+                adapter="auto",
+            )
+
+        self.assertIn("ReAct-style LangGraph agent", response)
+        self.assertEqual(trace["backend"], "langgraph_fallback")
+        self.assertEqual(trace["model_family"], "stub")
+        self.assertEqual(trace["role"], "fallback")
+
 
 if __name__ == "__main__":
     main()

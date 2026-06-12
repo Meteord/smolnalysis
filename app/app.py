@@ -52,6 +52,7 @@ STATIC_DIR = APP_DIR / "static"
 DEMO_CSV = APP_DIR / "examples" / "demo_cities.csv"
 logger = logging.getLogger(__name__)
 TRACE_LIMIT = int(os.getenv("SMOLNALYSIS_TRACE_LIMIT", "50"))
+ENABLE_STUB_CHAT_FALLBACK = os.getenv("SMOLNALYSIS_ENABLE_STUB_CHAT_FALLBACK", "").casefold() in {"1", "true", "yes", "on"}
 TRACE_STORE: deque[dict[str, Any]] = deque(maxlen=TRACE_LIMIT)
 TRACE_LOCK = asyncio.Lock()
 
@@ -174,32 +175,89 @@ def generate_chat_response_with_trace(messages: list[dict[str, str]], *, adapter
         except ImportError:
             from backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
     except Exception as exc:
-        logger.warning("MiniCPM llama.cpp backend unavailable, using workflow fallback: %s", exc)
-        prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
-        workflow = run_agent_workflow(prompt or "Summarize this dataset")
-        return workflow.get("openui_lang", ""), _fallback_trace(
-            messages,
-            adapter,
-            "backend_unavailable",
-            str(exc),
-            workflow,
-            started,
-        )
+        logger.exception("MiniCPM llama.cpp backend unavailable.")
+        return _handle_backend_failure(messages, adapter, "backend_unavailable", exc, started)
 
     try:
         return backend_generate_chat_response_with_trace(messages, adapter=adapter)
     except Exception as exc:
-        logger.warning("MiniCPM llama.cpp generation failed, using workflow fallback: %s", exc)
+        logger.exception("MiniCPM llama.cpp generation failed.")
+        return _handle_backend_failure(messages, adapter, "generation_failed", exc, started)
+
+
+def _handle_backend_failure(
+    messages: list[dict[str, str]],
+    adapter: str,
+    reason: str,
+    exc: Exception,
+    started: float,
+) -> tuple[str, dict[str, Any]]:
+    if ENABLE_STUB_CHAT_FALLBACK:
         prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
         workflow = run_agent_workflow(prompt or "Summarize this dataset")
         return workflow.get("openui_lang", ""), _fallback_trace(
             messages,
             adapter,
-            "generation_failed",
-            str(exc),
+            reason,
+            _exception_detail(exc),
             workflow,
             started,
         )
+    detail = _exception_detail(exc)
+    return _backend_error_openui(reason, detail), _backend_error_trace(messages, adapter, reason, detail, started)
+
+
+def _exception_detail(exc: Exception) -> str:
+    message = str(exc).strip()
+    if message:
+        return f"{type(exc).__name__}: {message}"
+    return type(exc).__name__
+
+
+def _backend_error_openui(reason: str, detail: str) -> str:
+    return "\n".join(
+        [
+            "root = Card([header, callout, details])",
+            'header = CardHeader("MiniCPM backend unavailable", "Generation did not complete")',
+            f'callout = Callout("error", "Backend error", {json.dumps(reason)})',
+            f"details = TextContent({json.dumps(detail)}, \"small\")",
+        ]
+    )
+
+
+def _backend_error_trace(
+    messages: list[dict[str, str]],
+    adapter: str,
+    reason: str,
+    detail: str,
+    started: float,
+) -> dict[str, Any]:
+    openui_lang = _backend_error_openui(reason, detail)
+    return {
+        "backend": "llama.cpp",
+        "model_family": "MiniCPM",
+        "requested_adapter": adapter,
+        "role": "backend_error",
+        "message_count": len(messages),
+        "runtime": _minicpm_runtime_status_snapshot(),
+        "events": [{"name": "backend_error", "detail": f"{reason}: {detail}"}],
+        "fallback_reason": reason,
+        "fallback_detail": detail,
+        "stub_fallback_enabled": False,
+        "duration_ms": round((time.perf_counter() - started) * 1000, 1),
+        "output_chars": len(openui_lang),
+    }
+
+
+def _minicpm_runtime_status_snapshot() -> dict[str, Any]:
+    try:
+        try:
+            from .backend.minicpm_llama_cpp import runtime_status
+        except ImportError:
+            from backend.minicpm_llama_cpp import runtime_status
+        return runtime_status()
+    except Exception as exc:
+        return {"error": _exception_detail(exc)}
 
 
 def _fallback_trace(
