@@ -111,7 +111,10 @@ class AgentWorkflowTests(TestCase):
         self.assertEqual(payload["events"][0]["name"], "route_role")
 
     def test_backend_generation_failure_does_not_use_stub_fallback_by_default(self) -> None:
-        with patch.object(app_module, "ENABLE_STUB_CHAT_FALLBACK", False):
+        def failing_backend():
+            raise RuntimeError("backend exploded")
+
+        with patch.object(app_module, "ENABLE_STUB_CHAT_FALLBACK", False), patch.object(app_module, "_backend_generate_function", side_effect=failing_backend):
             response, trace = app_module.generate_chat_response_with_trace(
                 [{"role": "user", "content": "Find population data"}],
                 adapter="auto",
@@ -119,14 +122,17 @@ class AgentWorkflowTests(TestCase):
 
         self.assertIn("MiniCPM backend unavailable", response)
         self.assertNotIn("ReAct-style LangGraph agent", response)
-        self.assertEqual(trace["backend"], "llama.cpp")
+        self.assertEqual(trace["backend"], "transformers")
         self.assertEqual(trace["model_family"], "MiniCPM")
         self.assertEqual(trace["role"], "backend_error")
         self.assertFalse(trace["stub_fallback_enabled"])
-        self.assertIn("MiniCPM llama.cpp model is not configured", trace["fallback_detail"])
+        self.assertIn("backend exploded", trace["fallback_detail"])
 
     def test_backend_generation_failure_can_opt_into_stub_fallback(self) -> None:
-        with patch.object(app_module, "ENABLE_STUB_CHAT_FALLBACK", True):
+        def failing_backend():
+            raise RuntimeError("backend exploded")
+
+        with patch.object(app_module, "ENABLE_STUB_CHAT_FALLBACK", True), patch.object(app_module, "_backend_generate_function", side_effect=failing_backend):
             response, trace = app_module.generate_chat_response_with_trace(
                 [{"role": "user", "content": "Find population data"}],
                 adapter="auto",

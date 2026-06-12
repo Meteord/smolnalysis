@@ -1,0 +1,55 @@
+from __future__ import annotations
+
+import importlib
+import os
+import sys
+from pathlib import Path
+from unittest import TestCase, main
+from unittest.mock import patch
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "app"))
+
+
+class MiniCpmTransformersTests(TestCase):
+    def setUp(self) -> None:
+        self._old_env = os.environ.copy()
+        os.environ["SMOLNALYSIS_MINICPM_TRANSFORMERS_EAGER_LOAD"] = "false"
+
+    def tearDown(self) -> None:
+        os.environ.clear()
+        os.environ.update(self._old_env)
+
+    def test_runtime_status_does_not_load_model(self) -> None:
+        module = importlib.reload(importlib.import_module("backend.minicpm_transformers"))
+
+        status = module.runtime_status()
+
+        self.assertEqual(status["backend"], "transformers")
+        self.assertEqual(status["model_family"], "MiniCPM")
+        self.assertEqual(status["model"], "openbmb/MiniCPM5-1B")
+        self.assertFalse(status["eager_load"]["enabled"])
+        self.assertEqual(status["cache"]["loaded_models"], 0)
+
+    def test_generate_trace_uses_cached_runtime_metadata(self) -> None:
+        module = importlib.reload(importlib.import_module("backend.minicpm_transformers"))
+
+        with patch.object(module, "_generate", return_value=("ok", {
+            "cache": {"hit": True, "loaded_models": 1, "hits": 1, "misses": 1},
+            "device": "cuda:0",
+            "input_tokens": 8,
+            "output_tokens": 2,
+        })):
+            response, trace = module.generate_chat_response_with_trace(
+                [{"role": "user", "content": "hello"}],
+                adapter="auto",
+            )
+
+        self.assertEqual(response, "ok")
+        self.assertEqual(trace["backend"], "transformers")
+        self.assertEqual(trace["cache"]["hit"], True)
+        self.assertIn("cuda:0", trace["events"][-1]["detail"])
+
+
+if __name__ == "__main__":
+    main()

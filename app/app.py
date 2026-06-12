@@ -41,11 +41,11 @@ logging.basicConfig(
 try:
     from .agent_workflow import run_agent_workflow
     from .ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
-    from .backend import minicpm_llama_cpp as _minicpm_startup
+    from .backend import minicpm_transformers as _minicpm_startup
     from .llm_support import llm_status, validate_llms
 except ImportError:
     from agent_workflow import run_agent_workflow
-    from backend import minicpm_llama_cpp as _minicpm_startup
+    from backend import minicpm_transformers as _minicpm_startup
     from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from llm_support import llm_status, validate_llms
 
@@ -56,6 +56,7 @@ DEMO_CSV = APP_DIR / "examples" / "demo_cities.csv"
 logger = logging.getLogger(__name__)
 TRACE_LIMIT = int(os.getenv("SMOLNALYSIS_TRACE_LIMIT", "50"))
 ENABLE_STUB_CHAT_FALLBACK = os.getenv("SMOLNALYSIS_ENABLE_STUB_CHAT_FALLBACK", "").casefold() in {"1", "true", "yes", "on"}
+MINICPM_BACKEND = os.getenv("SMOLNALYSIS_MINICPM_BACKEND", "transformers").strip().casefold()
 TRACE_STORE: deque[dict[str, Any]] = deque(maxlen=TRACE_LIMIT)
 TRACE_LOCK = asyncio.Lock()
 
@@ -173,19 +174,30 @@ def generate_chat_response(messages: list[dict[str, str]], *, adapter: str = "au
 def generate_chat_response_with_trace(messages: list[dict[str, str]], *, adapter: str = "auto") -> tuple[str, dict[str, Any]]:
     started = time.perf_counter()
     try:
-        try:
-            from .backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
-        except ImportError:
-            from backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+        backend_generate_chat_response_with_trace = _backend_generate_function()
     except Exception as exc:
-        logger.exception("MiniCPM llama.cpp backend unavailable.")
+        logger.exception("MiniCPM backend unavailable.")
         return _handle_backend_failure(messages, adapter, "backend_unavailable", exc, started)
 
     try:
         return backend_generate_chat_response_with_trace(messages, adapter=adapter)
     except Exception as exc:
-        logger.exception("MiniCPM llama.cpp generation failed.")
+        logger.exception("MiniCPM generation failed.")
         return _handle_backend_failure(messages, adapter, "generation_failed", exc, started)
+
+
+def _backend_generate_function():
+    if MINICPM_BACKEND in {"llama.cpp", "llamacpp", "llama_cpp", "gguf"}:
+        try:
+            from .backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+        except ImportError:
+            from backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+        return backend_generate_chat_response_with_trace
+    try:
+        from .backend.minicpm_transformers import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+    except ImportError:
+        from backend.minicpm_transformers import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
+    return backend_generate_chat_response_with_trace
 
 
 def _handle_backend_failure(
@@ -241,7 +253,7 @@ def _backend_error_trace(
 ) -> dict[str, Any]:
     openui_lang = _backend_error_openui(reason, detail)
     return {
-        "backend": "llama.cpp",
+        "backend": MINICPM_BACKEND,
         "model_family": "MiniCPM",
         "requested_adapter": adapter,
         "role": "backend_error",
@@ -259,11 +271,7 @@ def _backend_error_trace(
 
 def _minicpm_runtime_status_snapshot() -> dict[str, Any]:
     try:
-        try:
-            from .backend.minicpm_llama_cpp import runtime_status
-        except ImportError:
-            from backend.minicpm_llama_cpp import runtime_status
-        return runtime_status()
+        return _selected_minicpm_runtime_status()
     except Exception as exc:
         return {"error": _exception_detail(exc)}
 
@@ -391,13 +399,23 @@ async def llms_validate() -> dict[str, Any]:
 @app.get("/api/minicpm/status")
 async def minicpm_status() -> dict[str, Any]:
     try:
+        return _selected_minicpm_runtime_status()
+    except Exception as exc:
+        return {"backend": MINICPM_BACKEND, "model_family": "MiniCPM", "error": _exception_detail(exc)}
+
+
+def _selected_minicpm_runtime_status() -> dict[str, Any]:
+    if MINICPM_BACKEND in {"llama.cpp", "llamacpp", "llama_cpp", "gguf"}:
         try:
             from .backend.minicpm_llama_cpp import runtime_status
         except ImportError:
             from backend.minicpm_llama_cpp import runtime_status
         return runtime_status()
-    except Exception as exc:
-        return {"backend": "llama.cpp", "model_family": "MiniCPM", "error": str(exc)}
+    try:
+        from .backend.minicpm_transformers import runtime_status
+    except ImportError:
+        from backend.minicpm_transformers import runtime_status
+    return runtime_status()
 
 
 @app.get("/api/minicpm/probe")
