@@ -1,0 +1,126 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of Bezirksteilnummer in Bevölkerung Stadtbezirksteile München.",
+  "query_result": {
+    "dataset_title": "Bevölkerung Stadtbezirksteile München",
+    "package_id": "15aa8720-cd0c-45db-ba37-d90924a9dc5c",
+    "package_name": "bevoelkerung-stadtbezirksteile-muenchen",
+    "resource_id": "ffcdc8ec-1fc4-4186-9fbf-9114448e80a7",
+    "resource_name": "Hauptwohnsitzbevölkerung Stadtbezirksteile",
+    "resource_format": "csv",
+    "description": "Der Datensatz \"Bevölkerung Stadtbezirksteile\" beinhaltet die Bevölkerungszahlen der Hauptwohnsitzbevölkerung in den 108 Münchner Stadtbezirksteilen (je nach Größe und Bevölkerung zwischen 2 und 9 Stadtbezirksteile pro Stadtbezirk).",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung"
+    ],
+    "groups": [],
+    "row_count": 108,
+    "sampled_rows": 108,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "Bezirksteilnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 108,
+        "null_count": 0,
+        "examples": [
+          "01.1",
+          "01.2",
+          "01.3",
+          "01.4",
+          "01.5"
+        ],
+        "numeric": {
+          "count": 108.0,
+          "min": 1.1,
+          "max": 25.2,
+          "mean": 11.9731,
+          "median": 12.45
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Hauptwohnsitzbevolkerung im Dezember 2017",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 108,
+        "null_count": 0,
+        "examples": [
+          "2597",
+          "3524",
+          "2047",
+          "718",
+          "7104"
+        ],
+        "numeric": {
+          "count": 108.0,
+          "min": 189.0,
+          "max": 49412.0,
+          "mean": 14130.1481,
+          "median": 12224.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Stadtbezirk",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 108,
+        "null_count": 0,
+        "examples": [
+          "Altstadt-Lehel",
+          "Ludwigsvorstadt-Isarvorstadt",
+          "Maxvorstadt",
+          "Schwabing-West",
+          "Au-Haidhausen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Bezirksteilnummer",
+      "Hauptwohnsitzbevolkerung im Dezember 2017"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "Bezirksteilnummer"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bevölkerung Stadtbezirksteile München\", \"Hauptwohnsitzbevölkerung Stadtbezirksteile\")\nsummary = TextContent(\"Hauptwohnsitzbevölkerung Stadtbezirksteile belongs to Statistisches Amt München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include Bezirksteilnummer, Hauptwohnsitzbevolkerung im Dezember 2017.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"108\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"Bezirksteilnummer\",\"Hauptwohnsitzbevolkerung im Dezember 2017\",\"Stadtbezirk\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Bezirksteilnummer\", [1.1,1.2,1.3,1.4,1.5])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"Bezirksteilnummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of Bezirksteilnummer in Bevölkerung Stadtbezirksteile München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Bevölkerung Stadtbezirksteile München\",\n    \"package_id\": \"15aa8720-cd0c-45db-ba37-d90924a9dc5c\",\n    \"package_name\": \"bevoelkerung-stadtbezirksteile-muenchen\",\n    \"resource_id\": \"ffcdc8ec-1fc4-4186-9fbf-9114448e80a7\",\n    \"resource_name\": \"Hauptwohnsitzbevölkerung Stadtbezirksteile\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz \\\"Bevölkerung Stadtbezirksteile\\\" beinhaltet die Bevölkerungszahlen der Hauptwohnsitzbevölkerung in den 108 Münchner Stadtbezirksteilen (je nach Größe und Bevölkerung zwischen 2 und 9 Stadtbezirksteile pro Stadtbezirk).\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bevölkerung\"\n    ],\n    \"groups\": [],\n    \"row_count\": 108,\n    \"sampled_rows\": 108,\n    \"column_count\": 4,\n    \"columns\": [\n      {\n        \"name\": \"Bezirksteilnummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 108,\n        \"null_count\": 0,\n        \"examples\": [\n          \"01.1\",\n          \"01.2\",\n          \"01.3\",\n          \"01.4\",\n          \"01.5\"\n        ],\n        \"numeric\": {\n          \"count\": 108.0,\n          \"min\": 1.1,\n          \"max\": 25.2,\n          \"mean\": 11.9731,\n          \"median\": 12.45\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Hauptwohnsitzbevolkerung im Dezember 2017\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 108,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2597\",\n          \"3524\",\n          \"2047\",\n          \"718\",\n          \"7104\"\n        ],\n        \"numeric\": {\n          \"count\": 108.0,\n          \"min\": 189.0,\n          \"max\": 49412.0,\n          \"mean\": 14130.1481,\n          \"median\": 12224.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Stadtbezirk\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 108,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Altstadt-Lehel\",\n          \"Ludwigsvorstadt-Isarvorstadt\",\n          \"Maxvorstadt\",\n          \"Schwabing-West\",\n          \"Au-Haidhausen\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Bezirksteilnummer\",\n      \"Hauptwohnsitzbevolkerung im Dezember 2017\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"Bezirksteilnummer\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bevölkerung Stadtbezirksteile München\", \"Hauptwohnsitzbevölkerung Stadtbezirksteile\")\nsummary = TextContent(\"Hauptwohnsitzbevölkerung Stadtbezirksteile belongs to Statistisches Amt München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include Bezirksteilnummer, Hauptwohnsitzbevolkerung im Dezember 2017.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"108\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"Bezirksteilnummer\",\"Hauptwohnsitzbevolkerung im Dezember 2017\",\"Stadtbezirk\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Bezirksteilnummer\", [1.1,1.2,1.3,1.4,1.5])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"Bezirksteilnummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

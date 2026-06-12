@@ -1,0 +1,300 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of rad_rsp_radwege_forstfeld_line.richtung in Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege).",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege)",
+    "package_id": "36834062-4dc8-4280-af4d-e7fed83d895f",
+    "package_name": "rad_rsp_radwege_forstfeld_line",
+    "resource_id": "edb39ede-835f-45a2-ac75-33940a6d3e92",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Einige Radlstrecken in und um München – vor allem am Stadtrand und außerhalb des Stadtgebietes – führen über Forst- und Feldwege. Hierbei handelt es sich zumeist um unbefestigte Kies- und Schotterwege, auf denen auch land- und forstwirtschaftlicher Verkehr unterwegs sein kann. Beim Radlstadtplan handelt es sich um eine kartographische Darstellung auf Basis des Stadtplans der Landeshauptstadt München. Daher sind die Geodaten nicht lagegenau.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Forstwege",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 51,
+    "columns": [
+      {
+        "name": "rad_rsp_radwege_forstfeld_line.richtung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.4671,
+          "median": 1.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_radwege_forstfeld_line.fuss",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.4551,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_radwege_forstfeld_line.umgebung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.3234,
+          "median": 1.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_radwege_forstfeld_line.unterfuehrung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0419,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_radwege_forstfeld_line.legende",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1010",
+          "2010",
+          "2120",
+          "1110",
+          "21201"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1010.0,
+          "max": 21201.0,
+          "mean": 2896.9401,
+          "median": 1110.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_radwege_forstfeld_line.forst",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0719,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_radwege_forstfeld_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_radwege_forstfeld_line.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "richtung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.4671,
+          "median": 1.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "fuss",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.4551,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "umgebung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.3234,
+          "median": 1.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "unterfuehrung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0419,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_rsp_radwege_forstfeld_line.richtung",
+      "rad_rsp_radwege_forstfeld_line.fuss",
+      "rad_rsp_radwege_forstfeld_line.umgebung",
+      "rad_rsp_radwege_forstfeld_line.unterfuehrung"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "rad_rsp_radwege_forstfeld_line.richtung"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 35,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege)\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include rad_rsp_radwege_forstfeld_line.richtung, rad_rsp_radwege_forstfeld_line.fuss, rad_rsp_radwege_forstfeld_line.umgebung.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"51\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"rad_rsp_radwege_forstfeld_line.richtung\",\"rad_rsp_radwege_forstfeld_line.fuss\",\"rad_rsp_radwege_forstfeld_line.umgebung\",\"rad_rsp_radwege_forstfeld_line.unterfuehrung\",\"rad_rsp_radwege_forstfeld_line.legende\",\"rad_rsp_radwege_forstfeld_line.forst\",\"rad_rsp_radwege_forstfeld_line.status\",\"rad_rsp_radwege_forstfeld_line.planungsstatus\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"833\",\"833\",\"833\",\"833\",\"833\",\"833\",\"833\",\"833\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"rad_rsp_radwege_forstfeld_line.richtung\", [1.0,2.0])\nchart = BarChart([\"v1\",\"v2\"], [series], \"grouped\", \"Example\", \"rad_rsp_radwege_forstfeld_line.richtung\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 35 lower-ranked columns, and removed 4 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of rad_rsp_radwege_forstfeld_line.richtung in Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege).\",\n  \"query_result\": {\n    \"dataset_title\": \"Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege)\",\n    \"package_id\": \"36834062-4dc8-4280-af4d-e7fed83d895f\",\n    \"package_name\": \"rad_rsp_radwege_forstfeld_line\",\n    \"resource_id\": \"edb39ede-835f-45a2-ac75-33940a6d3e92\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Einige Radlstrecken in und um München – vor allem am Stadtrand und außerhalb des Stadtgebietes – führen über Forst- und Feldwege. Hierbei handelt es sich zumeist um unbefestigte Kies- und Schotterwege, auf denen auch land- und forstwirtschaftlicher Verkehr unterwegs sein kann. Beim Radlstadtplan handelt es sich um eine kartographische Darstellung auf Basis des Stadtplans der Landeshauptstadt München. Daher sind die Geodaten nicht lagegenau.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Forstwege\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 51,\n    \"columns\": [\n      {\n        \"name\": \"rad_rsp_radwege_forstfeld_line.richtung\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"1\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.4671,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"rad_rsp_radwege_forstfeld_line.fuss\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"0\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.4551,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"rad_rsp_radwege_forstfeld_line.umgebung\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"1\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.3234,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"rad_rsp_radwege_forstfeld_line.unterfuehrung\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"0\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.0419,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"rad_rsp_radwege_forstfeld_line.legende\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"1010\",\n          \"2010\",\n          \"2120\",\n          \"1110\",\n          \"21201\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 1010.0,\n          \"max\": 21201.0,\n          \"mean\": 2896.9401,\n          \"median\": 1110.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"rad_rsp_radwege_forstfeld_line.forst\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"0\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.0719,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"rad_rsp_radwege_forstfeld_line.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"rad_rsp_radwege_forstfeld_line.planungsstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"richtung\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"1\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.4671,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"fuss\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"0\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.4551,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"umgebung\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"1\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.3234,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.833\n      },\n      {\n        \"name\": \"unterfuehrung\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 167,\n        \"null_count\": 833,\n        \"examples\": [\n          \"0\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 167.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.0419,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.833\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"rad_rsp_radwege_forstfeld_line.richtung\",\n      \"rad_rsp_radwege_forstfeld_line.fuss\",\n      \"rad_rsp_radwege_forstfeld_line.umgebung\",\n      \"rad_rsp_radwege_forstfeld_line.unterfuehrung\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"rad_rsp_radwege_forstfeld_line.richtung\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radlstadtplan (Für Fuß- und Radverkehr freigegebene Forst- und Feldwege)\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include rad_rsp_radwege_forstfeld_line.richtung, rad_rsp_radwege_forstfeld_line.fuss, rad_rsp_radwege_forstfeld_line.umgebung.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"51\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"rad_rsp_radwege_forstfeld_line.richtung\",\"rad_rsp_radwege_forstfeld_line.fuss\",\"rad_rsp_radwege_forstfeld_line.umgebung\",\"rad_rsp_radwege_forstfeld_line.unterfuehrung\",\"rad_rsp_radwege_forstfeld_line.legende\",\"rad_rsp_radwege_forstfeld_line.forst\",\"rad_rsp_radwege_forstfeld_line.status\",\"rad_rsp_radwege_forstfeld_line.planungsstatus\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"833\",\"833\",\"833\",\"833\",\"833\",\"833\",\"833\",\"833\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"rad_rsp_radwege_forstfeld_line.richtung\", [1.0,2.0])\nchart = BarChart([\"v1\",\"v2\"], [series], \"grouped\", \"Example\", \"rad_rsp_radwege_forstfeld_line.richtung\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 35 lower-ranked columns, and removed 4 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Tierbestandsliste Tierpark Hellabrunn and compare anzahl by ordnung.",
+  "query_result": {
+    "dataset_title": "Tierbestandsliste Tierpark Hellabrunn",
+    "package_id": "9818ae8c-b902-428b-91a2-9cba54aa6e22",
+    "package_name": "tierbestandsliste-tierpark-hellabrunn",
+    "resource_id": "eb556157-5dea-49dc-83ee-9d214826f496",
+    "resource_name": "Tierbestand Wirbellose 2023",
+    "resource_format": "csv",
+    "description": "Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z",
+    "organization": "Münchener Tierpark Hellabrunn AG",
+    "tags": [
+      "Tierpark",
+      "Zoo"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 11,
+    "sampled_rows": 11,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "anzahl",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          63,
+          0,
+          3,
+          1,
+          20
+        ],
+        "numeric": {
+          "count": 11.0,
+          "min": 0.0,
+          "max": 63.0,
+          "mean": 10.2727,
+          "median": 3.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ordnung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          "Nesseltiere",
+          "Weichtiere",
+          "Gliederfüßer",
+          "Stachelhäuter"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "klasse",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          "WIRBELLOSE"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          "Blumentiere",
+          "Quallen",
+          "Muscheln",
+          "Schnecken",
+          "Insekten"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wiss-namen",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          "Anthozoa",
+          "Scyphozoa",
+          "Bivalvia",
+          "Gastropoda",
+          "Insecta"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl"
+    ],
+    "category_columns": [
+      "ordnung",
+      "klasse"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "ordnung",
+      "y": "anzahl"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Tierbestandsliste Tierpark Hellabrunn\", \"Tierbestand Wirbellose 2023\")\nsummary = TextContent(\"Tierbestand Wirbellose 2023 belongs to Münchener Tierpark Hellabrunn AG. It exposes 5 profiled columns for OpenUI rendering. Numeric fields include anzahl. Categorical fields include ordnung, klasse.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"11\")\nm2 = ListItem(\"Columns\", \"6\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"anzahl\",\"ordnung\",\"klasse\",\"art\",\"wiss-namen\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"category\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"anzahl\", [63.0,0.0,3.0,1.0])\nchart = BarChart([\"Nesseltiere\",\"Weichtiere\",\"Gliederfüßer\",\"Stachelhäuter\"], [series], \"grouped\", \"ordnung\", \"anzahl\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Tierbestandsliste Tierpark Hellabrunn and compare anzahl by ordnung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Tierbestandsliste Tierpark Hellabrunn\",\n    \"package_id\": \"9818ae8c-b902-428b-91a2-9cba54aa6e22\",\n    \"package_name\": \"tierbestandsliste-tierpark-hellabrunn\",\n    \"resource_id\": \"eb556157-5dea-49dc-83ee-9d214826f496\",\n    \"resource_name\": \"Tierbestand Wirbellose 2023\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z\",\n    \"organization\": \"Münchener Tierpark Hellabrunn AG\",\n    \"tags\": [\n      \"Tierpark\",\n      \"Zoo\"\n    ],\n    \"groups\": [\n      \"educ\"\n    ],\n    \"row_count\": 11,\n    \"sampled_rows\": 11,\n    \"column_count\": 6,\n    \"columns\": [\n      {\n        \"name\": \"anzahl\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 11,\n        \"null_count\": 0,\n        \"examples\": [\n          63,\n          0,\n          3,\n          1,\n          20\n        ],\n        \"numeric\": {\n          \"count\": 11.0,\n          \"min\": 0.0,\n          \"max\": 63.0,\n          \"mean\": 10.2727,\n          \"median\": 3.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ordnung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 11,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Nesseltiere\",\n          \"Weichtiere\",\n          \"Gliederfüßer\",\n          \"Stachelhäuter\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"klasse\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 11,\n        \"null_count\": 0,\n        \"examples\": [\n          \"WIRBELLOSE\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"art\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 11,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Blumentiere\",\n          \"Quallen\",\n          \"Muscheln\",\n          \"Schnecken\",\n          \"Insekten\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wiss-namen\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 11,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Anthozoa\",\n          \"Scyphozoa\",\n          \"Bivalvia\",\n          \"Gastropoda\",\n          \"Insecta\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"anzahl\"\n    ],\n    \"category_columns\": [\n      \"ordnung\",\n      \"klasse\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"ordnung\",\n      \"y\": \"anzahl\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Tierbestandsliste Tierpark Hellabrunn\", \"Tierbestand Wirbellose 2023\")\nsummary = TextContent(\"Tierbestand Wirbellose 2023 belongs to Münchener Tierpark Hellabrunn AG. It exposes 5 profiled columns for OpenUI rendering. Numeric fields include anzahl. Categorical fields include ordnung, klasse.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"11\")\nm2 = ListItem(\"Columns\", \"6\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"anzahl\",\"ordnung\",\"klasse\",\"art\",\"wiss-namen\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"category\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"anzahl\", [63.0,0.0,3.0,1.0])\nchart = BarChart([\"Nesseltiere\",\"Weichtiere\",\"Gliederfüßer\",\"Stachelhäuter\"], [series], \"grouped\", \"ordnung\", \"anzahl\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

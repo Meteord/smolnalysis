@@ -1,0 +1,285 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Gefahrenstellen and compare x_coord by betrifft.",
+  "query_result": {
+    "dataset_title": "Gefahrenstellen",
+    "package_id": "f41fa862-ddbe-4c9a-829d-c135a8d44a20",
+    "package_name": "gefahrenstellen_isar_opendata",
+    "resource_id": "0f443220-8110-4ba8-9353-51e955b5b61f",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Dienst umfasst Gefahrenstellen entlang der Isar.",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 59,
+    "sampled_rows": 59,
+    "column_count": 36,
+    "columns": [
+      {
+        "name": "x_coord",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 19,
+        "null_count": 40,
+        "examples": [
+          "689214.52",
+          "689216.27",
+          "689236.09",
+          "689859.69",
+          "689847.11"
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 689214.52,
+          "max": 694457.5,
+          "mean": 691592.4657,
+          "median": 691646.91
+        },
+        "null_rate": 0.678
+      },
+      {
+        "name": "y_coord",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 19,
+        "null_count": 40,
+        "examples": [
+          "5328648.13",
+          "5328675.96",
+          "5328654.82",
+          "5329609.48",
+          "5330751.05"
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 5328648.13,
+          "max": 5338199.44,
+          "mean": 5333417.4475,
+          "median": 5333584.49
+        },
+        "null_rate": 0.678
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 19,
+        "null_count": 40,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.678
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 58,
+        "examples": [
+          "19"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 19.0,
+          "max": 19.0,
+          "mean": 19.0,
+          "median": 19.0
+        },
+        "null_rate": 0.9831
+      },
+      {
+        "name": "featureMembers.isar_gefahrenstellen.x_coord",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 58,
+        "examples": [
+          "692489.64318694"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 692489.6432,
+          "max": 692489.6432,
+          "mean": 692489.6432,
+          "median": 692489.6432
+        },
+        "null_rate": 0.9831
+      },
+      {
+        "name": "featureMembers.isar_gefahrenstellen.y_coord",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 58,
+        "examples": [
+          "5335485.17117422"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 5335485.1712,
+          "max": 5335485.1712,
+          "mean": 5335485.1712,
+          "median": 5335485.1712
+        },
+        "null_rate": 0.9831
+      },
+      {
+        "name": "isar_gefahrenstellen.x_coord",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 58,
+        "examples": [
+          "692489.64318694"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 692489.6432,
+          "max": 692489.6432,
+          "mean": 692489.6432,
+          "median": 692489.6432
+        },
+        "null_rate": 0.9831
+      },
+      {
+        "name": "isar_gefahrenstellen.y_coord",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 58,
+        "examples": [
+          "5335485.17117422"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 5335485.1712,
+          "max": 5335485.1712,
+          "mean": 5335485.1712,
+          "median": 5335485.1712
+        },
+        "null_rate": 0.9831
+      },
+      {
+        "name": "betrifft",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 19,
+        "null_count": 40,
+        "examples": [
+          "Baden",
+          "Bootfahren"
+        ],
+        "null_rate": 0.678
+      },
+      {
+        "name": "shape.Point.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 19,
+        "null_count": 40,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.678
+      },
+      {
+        "name": "Point.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 19,
+        "null_count": 40,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.678
+      },
+      {
+        "name": "shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 19,
+        "null_count": 40,
+        "examples": [
+          "urn:x-ogc:def:crs:EPSG:25832"
+        ],
+        "null_rate": 0.678
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "x_coord",
+      "y_coord",
+      "srsDimension",
+      "numberOfFeatures"
+    ],
+    "category_columns": [
+      "betrifft"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "betrifft",
+      "y": "x_coord"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 24,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Gefahrenstellen\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Referat für Klima- und Umweltschutz der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include x_coord, y_coord, srsDimension. Categorical fields include betrifft.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"59\")\nm2 = ListItem(\"Columns\", \"36\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.25\")\nc1 = Col(\"Column\", [\"x_coord\",\"y_coord\",\"srsDimension\",\"numberOfFeatures\",\"featureMembers.isar_gefahrenstellen.x_coord\",\"featureMembers.isar_gefahrenstellen.y_coord\",\"isar_gefahrenstellen.x_coord\",\"isar_gefahrenstellen.y_coord\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"40\",\"40\",\"40\",\"58\",\"58\",\"58\",\"58\",\"58\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"x_coord\", [689214.52,689216.27])\nchart = BarChart([\"Baden\",\"Bootfahren\"], [series], \"grouped\", \"betrifft\", \"x_coord\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 24 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Gefahrenstellen and compare x_coord by betrifft.\",\n  \"query_result\": {\n    \"dataset_title\": \"Gefahrenstellen\",\n    \"package_id\": \"f41fa862-ddbe-4c9a-829d-c135a8d44a20\",\n    \"package_name\": \"gefahrenstellen_isar_opendata\",\n    \"resource_id\": \"0f443220-8110-4ba8-9353-51e955b5b61f\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Dieser Dienst umfasst Gefahrenstellen entlang der Isar.\",\n    \"organization\": \"Referat für Klima- und Umweltschutz der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Service\"\n    ],\n    \"groups\": [],\n    \"row_count\": 59,\n    \"sampled_rows\": 59,\n    \"column_count\": 36,\n    \"columns\": [\n      {\n        \"name\": \"x_coord\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 19,\n        \"null_count\": 40,\n        \"examples\": [\n          \"689214.52\",\n          \"689216.27\",\n          \"689236.09\",\n          \"689859.69\",\n          \"689847.11\"\n        ],\n        \"numeric\": {\n          \"count\": 19.0,\n          \"min\": 689214.52,\n          \"max\": 694457.5,\n          \"mean\": 691592.4657,\n          \"median\": 691646.91\n        },\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"y_coord\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 19,\n        \"null_count\": 40,\n        \"examples\": [\n          \"5328648.13\",\n          \"5328675.96\",\n          \"5328654.82\",\n          \"5329609.48\",\n          \"5330751.05\"\n        ],\n        \"numeric\": {\n          \"count\": 19.0,\n          \"min\": 5328648.13,\n          \"max\": 5338199.44,\n          \"mean\": 5333417.4475,\n          \"median\": 5333584.49\n        },\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"srsDimension\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 19,\n        \"null_count\": 40,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 19.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"numberOfFeatures\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 58,\n        \"examples\": [\n          \"19\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 19.0,\n          \"max\": 19.0,\n          \"mean\": 19.0,\n          \"median\": 19.0\n        },\n        \"null_rate\": 0.9831\n      },\n      {\n        \"name\": \"featureMembers.isar_gefahrenstellen.x_coord\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 58,\n        \"examples\": [\n          \"692489.64318694\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 692489.6432,\n          \"max\": 692489.6432,\n          \"mean\": 692489.6432,\n          \"median\": 692489.6432\n        },\n        \"null_rate\": 0.9831\n      },\n      {\n        \"name\": \"featureMembers.isar_gefahrenstellen.y_coord\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 58,\n        \"examples\": [\n          \"5335485.17117422\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 5335485.1712,\n          \"max\": 5335485.1712,\n          \"mean\": 5335485.1712,\n          \"median\": 5335485.1712\n        },\n        \"null_rate\": 0.9831\n      },\n      {\n        \"name\": \"isar_gefahrenstellen.x_coord\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 58,\n        \"examples\": [\n          \"692489.64318694\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 692489.6432,\n          \"max\": 692489.6432,\n          \"mean\": 692489.6432,\n          \"median\": 692489.6432\n        },\n        \"null_rate\": 0.9831\n      },\n      {\n        \"name\": \"isar_gefahrenstellen.y_coord\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 58,\n        \"examples\": [\n          \"5335485.17117422\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 5335485.1712,\n          \"max\": 5335485.1712,\n          \"mean\": 5335485.1712,\n          \"median\": 5335485.1712\n        },\n        \"null_rate\": 0.9831\n      },\n      {\n        \"name\": \"betrifft\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 19,\n        \"null_count\": 40,\n        \"examples\": [\n          \"Baden\",\n          \"Bootfahren\"\n        ],\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"shape.Point.srsDimension\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 19,\n        \"null_count\": 40,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 19.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"Point.srsDimension\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 19,\n        \"null_count\": 40,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 19.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"shape.Point.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 19,\n        \"null_count\": 40,\n        \"examples\": [\n          \"urn:x-ogc:def:crs:EPSG:25832\"\n        ],\n        \"null_rate\": 0.678\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"x_coord\",\n      \"y_coord\",\n      \"srsDimension\",\n      \"numberOfFeatures\"\n    ],\n    \"category_columns\": [\n      \"betrifft\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"betrifft\",\n      \"y\": \"x_coord\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Gefahrenstellen\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Referat für Klima- und Umweltschutz der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include x_coord, y_coord, srsDimension. Categorical fields include betrifft.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"59\")\nm2 = ListItem(\"Columns\", \"36\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.25\")\nc1 = Col(\"Column\", [\"x_coord\",\"y_coord\",\"srsDimension\",\"numberOfFeatures\",\"featureMembers.isar_gefahrenstellen.x_coord\",\"featureMembers.isar_gefahrenstellen.y_coord\",\"isar_gefahrenstellen.x_coord\",\"isar_gefahrenstellen.y_coord\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"40\",\"40\",\"40\",\"58\",\"58\",\"58\",\"58\",\"58\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"x_coord\", [689214.52,689216.27])\nchart = BarChart([\"Baden\",\"Bootfahren\"], [series], \"grouped\", \"betrifft\", \"x_coord\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 24 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

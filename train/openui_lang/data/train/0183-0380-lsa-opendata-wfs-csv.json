@@ -1,0 +1,186 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Lichtsignalanlagen and compare abbau by zeb.",
+  "query_result": {
+    "dataset_title": "Lichtsignalanlagen",
+    "package_id": "ae13375a-f838-4fb3-9035-b13163c6f68a",
+    "package_name": "lsa_opendata",
+    "resource_id": "8c778327-5349-4a93-b5b6-e05d16f1b22b",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "In diesem Dienst werden Lichtsignalanlagen (Ampeln) dargestellt.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Verkehr"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "zeb",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 776,
+        "null_count": 224,
+        "examples": [
+          "TA",
+          "T"
+        ],
+        "null_rate": 0.224
+      },
+      {
+        "name": "zeb_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 776,
+        "null_count": 224,
+        "examples": [
+          "Anlage ist mit einer Einrichtung mit taktilem und akustischem Signal ausgestattet",
+          "Anlage ist mit einer Einrichtung mit taktilem Signal ausgestattet"
+        ],
+        "null_rate": 0.224
+      },
+      {
+        "name": "lon",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          11.511451,
+          11.58903289,
+          11.53804207,
+          11.52022861,
+          11.511419
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 11.3924,
+          "max": 11.7152,
+          "mean": 11.557,
+          "median": 11.5611
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "lat",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          48.15852,
+          48.12483835,
+          48.10036344,
+          48.15011081,
+          48.15442
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 48.0683,
+          "max": 48.22,
+          "mean": 48.1436,
+          "median": 48.1406
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "POINT (686761.7885207168 5336969.6225507045)",
+          "POINT (692656.7388688007 5333417.791370704)",
+          "POINT (688952.4085889519 5330571.25507262)",
+          "POINT (687445.1247962305 5336056.414075168)",
+          "POINT (686774.297770987 5336513.882133055)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Auffahrtsalleen / Menzinger Str.",
+          "Franziskaner-/ Gebsattelstr.",
+          "Boschetsrieder-/ Tölzer Str.",
+          "Steubenplatz",
+          "Romanplatz / Wotanstr."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "abbau",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      },
+      {
+        "name": "abbaud",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "abbau",
+      "abbaud"
+    ],
+    "category_columns": [
+      "zeb",
+      "zeb_bedeutung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "zeb",
+      "y": "abbau"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Lichtsignalanlagen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 8 profiled columns for OpenUI rendering. Numeric fields include abbau, abbaud. Categorical fields include zeb, zeb_bedeutung.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"zeb\",\"zeb_bedeutung\",\"lon\",\"lat\",\"shape\",\"standort\",\"abbau\",\"abbaud\"], \"string\")\nc2 = Col(\"Kind\", [\"category\",\"category\",\"geospatial\",\"geospatial\",\"geospatial\",\"string\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"float64\",\"float64\",\"object\",\"object\",\"float64\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"224\",\"224\",\"0\",\"0\",\"0\",\"0\",\"1,000\",\"1,000\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"abbau\", [0.0])\nchart = BarChart([\"sample\"], [series], \"grouped\", \"zeb\", \"abbau\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Lichtsignalanlagen and compare abbau by zeb.\",\n  \"query_result\": {\n    \"dataset_title\": \"Lichtsignalanlagen\",\n    \"package_id\": \"ae13375a-f838-4fb3-9035-b13163c6f68a\",\n    \"package_name\": \"lsa_opendata\",\n    \"resource_id\": \"8c778327-5349-4a93-b5b6-e05d16f1b22b\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"In diesem Dienst werden Lichtsignalanlagen (Ampeln) dargestellt.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Verkehr\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 9,\n    \"columns\": [\n      {\n        \"name\": \"zeb\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 776,\n        \"null_count\": 224,\n        \"examples\": [\n          \"TA\",\n          \"T\"\n        ],\n        \"null_rate\": 0.224\n      },\n      {\n        \"name\": \"zeb_bedeutung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 776,\n        \"null_count\": 224,\n        \"examples\": [\n          \"Anlage ist mit einer Einrichtung mit taktilem und akustischem Signal ausgestattet\",\n          \"Anlage ist mit einer Einrichtung mit taktilem Signal ausgestattet\"\n        ],\n        \"null_rate\": 0.224\n      },\n      {\n        \"name\": \"lon\",\n        \"dtype\": \"float64\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          11.511451,\n          11.58903289,\n          11.53804207,\n          11.52022861,\n          11.511419\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 11.3924,\n          \"max\": 11.7152,\n          \"mean\": 11.557,\n          \"median\": 11.5611\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"lat\",\n        \"dtype\": \"float64\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          48.15852,\n          48.12483835,\n          48.10036344,\n          48.15011081,\n          48.15442\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 48.0683,\n          \"max\": 48.22,\n          \"mean\": 48.1436,\n          \"median\": 48.1406\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POINT (686761.7885207168 5336969.6225507045)\",\n          \"POINT (692656.7388688007 5333417.791370704)\",\n          \"POINT (688952.4085889519 5330571.25507262)\",\n          \"POINT (687445.1247962305 5336056.414075168)\",\n          \"POINT (686774.297770987 5336513.882133055)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"standort\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Auffahrtsalleen / Menzinger Str.\",\n          \"Franziskaner-/ Gebsattelstr.\",\n          \"Boschetsrieder-/ Tölzer Str.\",\n          \"Steubenplatz\",\n          \"Romanplatz / Wotanstr.\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"abbau\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 0,\n        \"null_count\": 1000,\n        \"null_rate\": 1.0\n      },\n      {\n        \"name\": \"abbaud\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 0,\n        \"null_count\": 1000,\n        \"null_rate\": 1.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"abbau\",\n      \"abbaud\"\n    ],\n    \"category_columns\": [\n      \"zeb\",\n      \"zeb_bedeutung\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"zeb\",\n      \"y\": \"abbau\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Lichtsignalanlagen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 8 profiled columns for OpenUI rendering. Numeric fields include abbau, abbaud. Categorical fields include zeb, zeb_bedeutung.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"zeb\",\"zeb_bedeutung\",\"lon\",\"lat\",\"shape\",\"standort\",\"abbau\",\"abbaud\"], \"string\")\nc2 = Col(\"Kind\", [\"category\",\"category\",\"geospatial\",\"geospatial\",\"geospatial\",\"string\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"float64\",\"float64\",\"object\",\"object\",\"float64\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"224\",\"224\",\"0\",\"0\",\"0\",\"0\",\"1,000\",\"1,000\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"abbau\", [0.0])\nchart = BarChart([\"sample\"], [series], \"grouped\", \"zeb\", \"abbau\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

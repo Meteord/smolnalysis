@@ -1,0 +1,227 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of neugeborene_in_muenchen in Geburten in der München Klinik gGmbH.",
+  "query_result": {
+    "dataset_title": "Geburten in der München Klinik gGmbH",
+    "package_id": "a872618b-d29d-43f8-ae79-cb27ca8b9f23",
+    "package_name": "geburten-in-der-muenchen-klinik-ggmbh",
+    "resource_id": "0a8a0026-c95a-40dc-bfb6-83c2011a2439",
+    "resource_name": "Geburten in der München Klinik gGmbH",
+    "resource_format": "csv",
+    "description": "Geburten in der München Klinik gGmbH",
+    "organization": "München Klinik gGmbH",
+    "tags": [
+      "Krankenhaus",
+      "Stadtratsauftrag"
+    ],
+    "groups": [
+      "heal"
+    ],
+    "row_count": 8,
+    "sampled_rows": 8,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "neugeborene_in_muenchen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          "20415",
+          "21110",
+          "22284",
+          "24089",
+          "23198"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 20415.0,
+          "max": 24089.0,
+          "mean": 22681.0,
+          "median": 23287.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "neugeborene_muenchner_innen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          "15221",
+          "15667",
+          "16540",
+          "18330",
+          "17593"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 15221.0,
+          "max": 18330.0,
+          "mean": 17009.5,
+          "median": 17548.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "geburten_in_der_muenchner_klinik",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          "5816",
+          "5789",
+          "6146",
+          "6637",
+          "6089"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 5789.0,
+          "max": 6637.0,
+          "mean": 6082.375,
+          "median": 6080.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "babys_in_der_muenchner_klinik",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          "5910",
+          "5886",
+          "6268",
+          "6740",
+          "6204"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 5886.0,
+          "max": 6740.0,
+          "mean": 6194.375,
+          "median": 6199.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zwillingsgeburten",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          "92",
+          "93",
+          "120",
+          "101",
+          "107"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 92.0,
+          "max": 120.0,
+          "mean": 107.25,
+          "median": 110.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "drillingsgeburten",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "2",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 1.0,
+          "max": 5.0,
+          "mean": 2.375,
+          "median": 1.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          "2024",
+          "2023",
+          "2022",
+          "2021",
+          "2020"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 2017.0,
+          "max": 2024.0,
+          "mean": 2020.5,
+          "median": 2020.5
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "neugeborene_in_muenchen",
+      "neugeborene_muenchner_innen",
+      "geburten_in_der_muenchner_klinik",
+      "babys_in_der_muenchner_klinik"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "neugeborene_in_muenchen"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Geburten in der München Klinik gGmbH\", \"Geburten in der München Klinik gGmbH\")\nsummary = TextContent(\"Geburten in der München Klinik gGmbH belongs to München Klinik gGmbH. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include neugeborene_in_muenchen, neugeborene_muenchner_innen, geburten_in_der_muenchner_klinik.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"8\")\nm2 = ListItem(\"Columns\", \"8\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"neugeborene_in_muenchen\",\"neugeborene_muenchner_innen\",\"geburten_in_der_muenchner_klinik\",\"babys_in_der_muenchner_klinik\",\"zwillingsgeburten\",\"drillingsgeburten\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"neugeborene_in_muenchen\", [20415.0,21110.0,22284.0,24089.0,23198.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"neugeborene_in_muenchen\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of neugeborene_in_muenchen in Geburten in der München Klinik gGmbH.\",\n  \"query_result\": {\n    \"dataset_title\": \"Geburten in der München Klinik gGmbH\",\n    \"package_id\": \"a872618b-d29d-43f8-ae79-cb27ca8b9f23\",\n    \"package_name\": \"geburten-in-der-muenchen-klinik-ggmbh\",\n    \"resource_id\": \"0a8a0026-c95a-40dc-bfb6-83c2011a2439\",\n    \"resource_name\": \"Geburten in der München Klinik gGmbH\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Geburten in der München Klinik gGmbH\",\n    \"organization\": \"München Klinik gGmbH\",\n    \"tags\": [\n      \"Krankenhaus\",\n      \"Stadtratsauftrag\"\n    ],\n    \"groups\": [\n      \"heal\"\n    ],\n    \"row_count\": 8,\n    \"sampled_rows\": 8,\n    \"column_count\": 8,\n    \"columns\": [\n      {\n        \"name\": \"neugeborene_in_muenchen\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          \"20415\",\n          \"21110\",\n          \"22284\",\n          \"24089\",\n          \"23198\"\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 20415.0,\n          \"max\": 24089.0,\n          \"mean\": 22681.0,\n          \"median\": 23287.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"neugeborene_muenchner_innen\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          \"15221\",\n          \"15667\",\n          \"16540\",\n          \"18330\",\n          \"17593\"\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 15221.0,\n          \"max\": 18330.0,\n          \"mean\": 17009.5,\n          \"median\": 17548.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"geburten_in_der_muenchner_klinik\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          \"5816\",\n          \"5789\",\n          \"6146\",\n          \"6637\",\n          \"6089\"\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 5789.0,\n          \"max\": 6637.0,\n          \"mean\": 6082.375,\n          \"median\": 6080.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"babys_in_der_muenchner_klinik\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          \"5910\",\n          \"5886\",\n          \"6268\",\n          \"6740\",\n          \"6204\"\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 5886.0,\n          \"max\": 6740.0,\n          \"mean\": 6194.375,\n          \"median\": 6199.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zwillingsgeburten\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          \"92\",\n          \"93\",\n          \"120\",\n          \"101\",\n          \"107\"\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 92.0,\n          \"max\": 120.0,\n          \"mean\": 107.25,\n          \"median\": 110.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"drillingsgeburten\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1\",\n          \"2\",\n          \"4\",\n          \"5\"\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 1.0,\n          \"max\": 5.0,\n          \"mean\": 2.375,\n          \"median\": 1.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2024\",\n          \"2023\",\n          \"2022\",\n          \"2021\",\n          \"2020\"\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 2017.0,\n          \"max\": 2024.0,\n          \"mean\": 2020.5,\n          \"median\": 2020.5\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"neugeborene_in_muenchen\",\n      \"neugeborene_muenchner_innen\",\n      \"geburten_in_der_muenchner_klinik\",\n      \"babys_in_der_muenchner_klinik\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"neugeborene_in_muenchen\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Geburten in der München Klinik gGmbH\", \"Geburten in der München Klinik gGmbH\")\nsummary = TextContent(\"Geburten in der München Klinik gGmbH belongs to München Klinik gGmbH. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include neugeborene_in_muenchen, neugeborene_muenchner_innen, geburten_in_der_muenchner_klinik.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"8\")\nm2 = ListItem(\"Columns\", \"8\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"neugeborene_in_muenchen\",\"neugeborene_muenchner_innen\",\"geburten_in_der_muenchner_klinik\",\"babys_in_der_muenchner_klinik\",\"zwillingsgeburten\",\"drillingsgeburten\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"neugeborene_in_muenchen\", [20415.0,21110.0,22284.0,24089.0,23198.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"neugeborene_in_muenchen\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

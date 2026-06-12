@@ -1,0 +1,312 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of richtung_1 in Daten der Raddauerzählstellen München März 2018.",
+  "query_result": {
+    "dataset_title": "Daten der Raddauerzählstellen München März 2018",
+    "package_id": "e47d63ec-ba1c-409b-bf76-fea0775373cd",
+    "package_name": "daten-der-raddauerzaehlstellen-muenchen-maerz-2018",
+    "resource_id": "f1694c61-41e0-47aa-94c0-57992929a6c1",
+    "resource_name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München März  2018",
+    "resource_format": "csv",
+    "description": "Folgende [Fahrrad-Zählstellen](/dataset/raddauerzaehlstellen-muenchen) sind derzeit im Betrieb: * Arnulfstr. 9 - 11 Südseite * Bad-Kreuther-Str. (Joseph-Hörwick-Weg) * Erhardtstr. (Deutsches Museum) * Hirsch HLP (Birketweg) * Margaretenstr. (Harras) * Olympia Park (Rudolf-Harbig-Weg) Die Werte gibt es pro Zählstelle monatlich als * 15-Minuten-Werte und als * Tageswerte mit Wetterdaten (Min-Temp, Max-Temp, Niederschlag,Bewölkung in Prozent, Sonnenstunden) Weitere Informationen: https://opendata.m",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Fahrrad",
+      "Raddauerzählstellen",
+      "Raddauerzählstellen 2018"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 186,
+    "sampled_rows": 186,
+    "column_count": 13,
+    "columns": [
+      {
+        "name": "richtung_1",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          436,
+          429,
+          233,
+          336,
+          883
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": 9.0,
+          "max": 1691.0,
+          "mean": 558.3763,
+          "median": 483.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "richtung_2",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          65,
+          58,
+          25,
+          27,
+          76
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": 11.0,
+          "max": 1609.0,
+          "mean": 441.8925,
+          "median": 342.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gesamt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          501,
+          487,
+          258,
+          363,
+          959
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": 36.0,
+          "max": 3298.0,
+          "mean": 1000.2688,
+          "median": 862.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "min-temp",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          -11.3,
+          -9.3,
+          -5.1,
+          -1.0,
+          0.1
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": -11.3,
+          "max": 7.2,
+          "mean": 0.2968,
+          "median": 0.4
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "max-temp",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          -3.9,
+          -2.0,
+          3.3,
+          9.6,
+          8.8
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": -3.9,
+          "max": 17.0,
+          "mean": 7.9968,
+          "median": 9.6
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "niederschlag",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          0.0,
+          0.2,
+          0.3,
+          0.1,
+          1.5
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": 0.0,
+          "max": 6.8,
+          "mean": 0.9194,
+          "median": 0.2
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bewoelkung",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          90,
+          89,
+          51,
+          100,
+          96
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": 51.0,
+          "max": 100.0,
+          "mean": 86.8065,
+          "median": 90.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sonnenstunden",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          1.8,
+          3.3,
+          3.5,
+          10.3,
+          6.0
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": 0.0,
+          "max": 11.5,
+          "mean": 3.5645,
+          "median": 3.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          "2018-03-01T00:00:00",
+          "2018-03-02T00:00:00",
+          "2018-03-03T00:00:00",
+          "2018-03-04T00:00:00",
+          "2018-03-05T00:00:00"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_ende",
+        "dtype": "float64",
+        "kind": "time",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          23.59
+        ],
+        "numeric": {
+          "count": 186.0,
+          "min": 23.59,
+          "max": 23.59,
+          "mean": 23.59,
+          "median": 23.59
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_start",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          "2025-09-24T00:00:00"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zaehlstelle",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 186,
+        "null_count": 0,
+        "examples": [
+          "Arnulf",
+          "Kreuther",
+          "Olympia",
+          "Hirsch",
+          "Margareten"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "richtung_1",
+      "richtung_2",
+      "gesamt",
+      "min-temp"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "datum",
+      "uhrzeit_ende",
+      "uhrzeit_start"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "richtung_1"
+    }
+  },
+  "quality_score": 7.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Daten der Raddauerzählstellen München März 2018\", \"Tageswerte und Wetter - Daten der Raddauerzählstellen München März 2018\")\nsummary = TextContent(\"Tageswerte und Wetter - Daten der Raddauerzählstellen München März 2018 belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include richtung_1, richtung_2, gesamt.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"186\")\nm2 = ListItem(\"Columns\", \"13\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.5\")\nc1 = Col(\"Column\", [\"richtung_1\",\"richtung_2\",\"gesamt\",\"min-temp\",\"max-temp\",\"niederschlag\",\"bewoelkung\",\"sonnenstunden\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"float64\",\"float64\",\"float64\",\"int64\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"richtung_1\", [436.0,429.0,233.0,336.0,883.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"richtung_1\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of richtung_1 in Daten der Raddauerzählstellen München März 2018.\",\n  \"query_result\": {\n    \"dataset_title\": \"Daten der Raddauerzählstellen München März 2018\",\n    \"package_id\": \"e47d63ec-ba1c-409b-bf76-fea0775373cd\",\n    \"package_name\": \"daten-der-raddauerzaehlstellen-muenchen-maerz-2018\",\n    \"resource_id\": \"f1694c61-41e0-47aa-94c0-57992929a6c1\",\n    \"resource_name\": \"Tageswerte und Wetter - Daten der Raddauerzählstellen München März  2018\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Folgende [Fahrrad-Zählstellen](/dataset/raddauerzaehlstellen-muenchen) sind derzeit im Betrieb: * Arnulfstr. 9 - 11 Südseite * Bad-Kreuther-Str. (Joseph-Hörwick-Weg) * Erhardtstr. (Deutsches Museum) * Hirsch HLP (Birketweg) * Margaretenstr. (Harras) * Olympia Park (Rudolf-Harbig-Weg) Die Werte gibt es pro Zählstelle monatlich als * 15-Minuten-Werte und als * Tageswerte mit Wetterdaten (Min-Temp, Max-Temp, Niederschlag,Bewölkung in Prozent, Sonnenstunden) Weitere Informationen: https://opendata.m\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Fahrrad\",\n      \"Raddauerzählstellen\",\n      \"Raddauerzählstellen 2018\"\n    ],\n    \"groups\": [\n      \"tran\"\n    ],\n    \"row_count\": 186,\n    \"sampled_rows\": 186,\n    \"column_count\": 13,\n    \"columns\": [\n      {\n        \"name\": \"richtung_1\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          436,\n          429,\n          233,\n          336,\n          883\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": 9.0,\n          \"max\": 1691.0,\n          \"mean\": 558.3763,\n          \"median\": 483.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"richtung_2\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          65,\n          58,\n          25,\n          27,\n          76\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": 11.0,\n          \"max\": 1609.0,\n          \"mean\": 441.8925,\n          \"median\": 342.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"gesamt\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          501,\n          487,\n          258,\n          363,\n          959\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": 36.0,\n          \"max\": 3298.0,\n          \"mean\": 1000.2688,\n          \"median\": 862.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"min-temp\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          -11.3,\n          -9.3,\n          -5.1,\n          -1.0,\n          0.1\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": -11.3,\n          \"max\": 7.2,\n          \"mean\": 0.2968,\n          \"median\": 0.4\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"max-temp\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          -3.9,\n          -2.0,\n          3.3,\n          9.6,\n          8.8\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": -3.9,\n          \"max\": 17.0,\n          \"mean\": 7.9968,\n          \"median\": 9.6\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"niederschlag\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          0.0,\n          0.2,\n          0.3,\n          0.1,\n          1.5\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": 0.0,\n          \"max\": 6.8,\n          \"mean\": 0.9194,\n          \"median\": 0.2\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bewoelkung\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          90,\n          89,\n          51,\n          100,\n          96\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": 51.0,\n          \"max\": 100.0,\n          \"mean\": 86.8065,\n          \"median\": 90.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"sonnenstunden\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          1.8,\n          3.3,\n          3.5,\n          10.3,\n          6.0\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": 0.0,\n          \"max\": 11.5,\n          \"mean\": 3.5645,\n          \"median\": 3.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"datum\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2018-03-01T00:00:00\",\n          \"2018-03-02T00:00:00\",\n          \"2018-03-03T00:00:00\",\n          \"2018-03-04T00:00:00\",\n          \"2018-03-05T00:00:00\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"uhrzeit_ende\",\n        \"dtype\": \"float64\",\n        \"kind\": \"time\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          23.59\n        ],\n        \"numeric\": {\n          \"count\": 186.0,\n          \"min\": 23.59,\n          \"max\": 23.59,\n          \"mean\": 23.59,\n          \"median\": 23.59\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"uhrzeit_start\",\n        \"dtype\": \"object\",\n        \"kind\": \"time\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2025-09-24T00:00:00\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zaehlstelle\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 186,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Arnulf\",\n          \"Kreuther\",\n          \"Olympia\",\n          \"Hirsch\",\n          \"Margareten\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"richtung_1\",\n      \"richtung_2\",\n      \"gesamt\",\n      \"min-temp\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"datum\",\n      \"uhrzeit_ende\",\n      \"uhrzeit_start\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"richtung_1\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Daten der Raddauerzählstellen München März 2018\", \"Tageswerte und Wetter - Daten der Raddauerzählstellen München März 2018\")\nsummary = TextContent(\"Tageswerte und Wetter - Daten der Raddauerzählstellen München März 2018 belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include richtung_1, richtung_2, gesamt.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"186\")\nm2 = ListItem(\"Columns\", \"13\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.5\")\nc1 = Col(\"Column\", [\"richtung_1\",\"richtung_2\",\"gesamt\",\"min-temp\",\"max-temp\",\"niederschlag\",\"bewoelkung\",\"sonnenstunden\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"float64\",\"float64\",\"float64\",\"int64\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"richtung_1\", [436.0,429.0,233.0,336.0,883.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"richtung_1\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

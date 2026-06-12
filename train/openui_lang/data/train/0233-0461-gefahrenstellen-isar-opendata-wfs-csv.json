@@ -1,0 +1,173 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Gefahrenstellen and compare x_coord by betrifft.",
+  "query_result": {
+    "dataset_title": "Gefahrenstellen",
+    "package_id": "f41fa862-ddbe-4c9a-829d-c135a8d44a20",
+    "package_name": "gefahrenstellen_isar_opendata",
+    "resource_id": "f50b9768-6120-409d-8c96-d3dcc033b81b",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Dieser Dienst umfasst Gefahrenstellen entlang der Isar.",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 19,
+    "sampled_rows": 19,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "x_coord",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          689214.52,
+          689216.27,
+          689236.09,
+          689859.69,
+          689847.11
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 689214.52,
+          "max": 694457.5,
+          "mean": 691592.4657,
+          "median": 691646.91
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "y_coord",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          5328648.13,
+          5328675.96,
+          5328654.82,
+          5329609.48,
+          5330751.05
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 5328648.13,
+          "max": 5338199.44,
+          "mean": 5333417.4475,
+          "median": 5333584.49
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "betrifft",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "Baden",
+          "Bootfahren"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "POINT (689214.5200007878 5328648.129998128)",
+          "POINT (689216.2700007879 5328675.959998128)",
+          "POINT (689236.0900007882 5328654.819998127)",
+          "POINT (689859.690000801 5329609.479998089)",
+          "POINT (689847.1100008006 5330751.049998087)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "lage",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "Einfahrt in den Floßkanal",
+          "Im Abstrom der Wehrklappe / Floßrutsche im Floßkanal",
+          "Werkkanal - Kraftwerk Isar I",
+          "Marienklausensteg",
+          "Flauchersteg und -wehr"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "hinweis",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "Achtung Wehrklappe! Einfahrt in die Floßgasse erfolgt auf eigene Gefahr! Lebensgefahr! Ausreichend Sicherheitsabstand zu Flößen halten! Vor Einfahrt in die Floß",
+          "Achtung Kollisionsgefahr! Lebensgefahr! Es ist mit Flößen und Booten zu rechnen, die über die Floßrutsche mit plötzlich zunehmender Strömungsgeschwindigkeit in",
+          "Achtung Kraftwerksanlage! Lebensgefahr! Ende Erlaubnisbereich Bootfahren. Kein Ausstieg im Werkkanal möglich.",
+          "Achtung Wehr! Absturzkante / Wasserwalze! Lebensgefahr! Bootfahren ist im Bereich des Marienklausenstegs flussaufwärts und flussabwärts verboten!",
+          "Achtung Wehr! Wasserwalze! Lebensgefahr! Ende Erlaubnisbereich Bootfahren. Der Ausstieg ist auf der in Fließrichtung linken (westlichen) Uferseite möglich."
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "x_coord",
+      "y_coord"
+    ],
+    "category_columns": [
+      "betrifft"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "betrifft",
+      "y": "x_coord"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Gefahrenstellen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Referat für Klima- und Umweltschutz der Landeshauptstadt München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include x_coord, y_coord. Categorical fields include betrifft.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"19\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"x_coord\",\"y_coord\",\"betrifft\",\"shape\",\"lage\",\"hinweis\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"category\",\"geospatial\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"float64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"x_coord\", [689214.52,689216.27])\nchart = BarChart([\"Baden\",\"Bootfahren\"], [series], \"grouped\", \"betrifft\", \"x_coord\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Gefahrenstellen and compare x_coord by betrifft.\",\n  \"query_result\": {\n    \"dataset_title\": \"Gefahrenstellen\",\n    \"package_id\": \"f41fa862-ddbe-4c9a-829d-c135a8d44a20\",\n    \"package_name\": \"gefahrenstellen_isar_opendata\",\n    \"resource_id\": \"f50b9768-6120-409d-8c96-d3dcc033b81b\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Dieser Dienst umfasst Gefahrenstellen entlang der Isar.\",\n    \"organization\": \"Referat für Klima- und Umweltschutz der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Service\"\n    ],\n    \"groups\": [],\n    \"row_count\": 19,\n    \"sampled_rows\": 19,\n    \"column_count\": 7,\n    \"columns\": [\n      {\n        \"name\": \"x_coord\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 19,\n        \"null_count\": 0,\n        \"examples\": [\n          689214.52,\n          689216.27,\n          689236.09,\n          689859.69,\n          689847.11\n        ],\n        \"numeric\": {\n          \"count\": 19.0,\n          \"min\": 689214.52,\n          \"max\": 694457.5,\n          \"mean\": 691592.4657,\n          \"median\": 691646.91\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"y_coord\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 19,\n        \"null_count\": 0,\n        \"examples\": [\n          5328648.13,\n          5328675.96,\n          5328654.82,\n          5329609.48,\n          5330751.05\n        ],\n        \"numeric\": {\n          \"count\": 19.0,\n          \"min\": 5328648.13,\n          \"max\": 5338199.44,\n          \"mean\": 5333417.4475,\n          \"median\": 5333584.49\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"betrifft\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 19,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Baden\",\n          \"Bootfahren\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 19,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POINT (689214.5200007878 5328648.129998128)\",\n          \"POINT (689216.2700007879 5328675.959998128)\",\n          \"POINT (689236.0900007882 5328654.819998127)\",\n          \"POINT (689859.690000801 5329609.479998089)\",\n          \"POINT (689847.1100008006 5330751.049998087)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"lage\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 19,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Einfahrt in den Floßkanal\",\n          \"Im Abstrom der Wehrklappe / Floßrutsche im Floßkanal\",\n          \"Werkkanal - Kraftwerk Isar I\",\n          \"Marienklausensteg\",\n          \"Flauchersteg und -wehr\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"hinweis\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 19,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Achtung Wehrklappe! Einfahrt in die Floßgasse erfolgt auf eigene Gefahr! Lebensgefahr! Ausreichend Sicherheitsabstand zu Flößen halten! Vor Einfahrt in die Floß\",\n          \"Achtung Kollisionsgefahr! Lebensgefahr! Es ist mit Flößen und Booten zu rechnen, die über die Floßrutsche mit plötzlich zunehmender Strömungsgeschwindigkeit in\",\n          \"Achtung Kraftwerksanlage! Lebensgefahr! Ende Erlaubnisbereich Bootfahren. Kein Ausstieg im Werkkanal möglich.\",\n          \"Achtung Wehr! Absturzkante / Wasserwalze! Lebensgefahr! Bootfahren ist im Bereich des Marienklausenstegs flussaufwärts und flussabwärts verboten!\",\n          \"Achtung Wehr! Wasserwalze! Lebensgefahr! Ende Erlaubnisbereich Bootfahren. Der Ausstieg ist auf der in Fließrichtung linken (westlichen) Uferseite möglich.\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"x_coord\",\n      \"y_coord\"\n    ],\n    \"category_columns\": [\n      \"betrifft\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"betrifft\",\n      \"y\": \"x_coord\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Gefahrenstellen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Referat für Klima- und Umweltschutz der Landeshauptstadt München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include x_coord, y_coord. Categorical fields include betrifft.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"19\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"x_coord\",\"y_coord\",\"betrifft\",\"shape\",\"lage\",\"hinweis\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"category\",\"geospatial\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"float64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"x_coord\", [689214.52,689216.27])\nchart = BarChart([\"Baden\",\"Bootfahren\"], [series], \"grouped\", \"betrifft\", \"x_coord\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

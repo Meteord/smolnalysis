@@ -1,0 +1,97 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (GML) from Ladeinfrastruktur.",
+  "query_result": {
+    "dataset_title": "Ladeinfrastruktur",
+    "package_id": "f9f75a53-879e-4676-8ba8-4f2b8d712672",
+    "package_name": "opendata_ruhver_els_point",
+    "resource_id": "a6032909-2000-4682-be38-9bf467864e6a",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "PKW-Ladesäulen auf öffentlichem Grund.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 1,
+    "sampled_rows": 1,
+    "column_count": 3,
+    "columns": [
+      {
+        "name": "version",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 0,
+        "examples": [
+          "1.2.0"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "{http://www.w3.org/2001/XMLSchema-instance}schemaLocation",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 0,
+        "examples": [
+          "http://www.opengis.net/ogc http://schemas.opengis.net/wfs/1.0.0/OGC-exception.xsd"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ServiceException",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 0,
+        "examples": [
+          "Feature type mor_wfs:opendata_ruhver_els_point unknown"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "version",
+      "{http://www.w3.org/2001/XMLSchema-instance}schemaLocation",
+      "ServiceException"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 3.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Ladeinfrastruktur\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 3 profiled columns for OpenUI rendering. Categorical fields include version, {http://www.w3.org/2001/XMLSchema-instance}schemaLocation, ServiceException.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"1\")\nm2 = ListItem(\"Columns\", \"3\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"3.25\")\nc1 = Col(\"Column\", [\"version\",\"{http://www.w3.org/2001/XMLSchema-instance}schemaLocation\",\"ServiceException\"], \"string\")\nc2 = Col(\"Kind\", [\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Create a compact OpenUI summary for WFS (GML) from Ladeinfrastruktur.\",\n  \"query_result\": {\n    \"dataset_title\": \"Ladeinfrastruktur\",\n    \"package_id\": \"f9f75a53-879e-4676-8ba8-4f2b8d712672\",\n    \"package_name\": \"opendata_ruhver_els_point\",\n    \"resource_id\": \"a6032909-2000-4682-be38-9bf467864e6a\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"PKW-Ladesäulen auf öffentlichem Grund.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": 1,\n    \"sampled_rows\": 1,\n    \"column_count\": 3,\n    \"columns\": [\n      {\n        \"name\": \"version\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1.2.0\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"{http://www.w3.org/2001/XMLSchema-instance}schemaLocation\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 0,\n        \"examples\": [\n          \"http://www.opengis.net/ogc http://schemas.opengis.net/wfs/1.0.0/OGC-exception.xsd\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ServiceException\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Feature type mor_wfs:opendata_ruhver_els_point unknown\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [],\n    \"category_columns\": [\n      \"version\",\n      \"{http://www.w3.org/2001/XMLSchema-instance}schemaLocation\",\n      \"ServiceException\"\n    ],\n    \"time_columns\": []\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Ladeinfrastruktur\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 3 profiled columns for OpenUI rendering. Categorical fields include version, {http://www.w3.org/2001/XMLSchema-instance}schemaLocation, ServiceException.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"1\")\nm2 = ListItem(\"Columns\", \"3\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"3.25\")\nc1 = Col(\"Column\", [\"version\",\"{http://www.w3.org/2001/XMLSchema-instance}schemaLocation\",\"ServiceException\"], \"string\")\nc2 = Col(\"Kind\", [\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of plz in WC-Standorte der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "WC-Standorte der Landeshauptstadt München",
+    "package_id": "80832bca-499b-4b24-bb41-9e77f0ef31ee",
+    "package_name": "wc_finder",
+    "resource_id": "3d8c7328-e65d-4b4a-98f6-1b54adae9fb0",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Daten beinhalten die Standorte der öffentlichen Toiletten, die sich im Besitz der Landeshauptstadt München befinden. Es werden sowohl barrierefreie als auch nicht barrierefreie Toiletten dargestellt. Der Nutzer kann auf ausführliche Informationen hinsichtlich Zugänglichkeit, Ausstattung und Zustand der Toiletten zugreifen. Wir bemühen uns, die Informationen zu den Maßnahmen aktuell und inhaltlich richtig anzubieten, die Karte bietet dennoch keine Gewähr auf Richtigkeit, Vollständigkeit und A",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "WC-Finder",
+      "planningCadastre"
+    ],
+    "groups": [],
+    "row_count": 932,
+    "sampled_rows": 932,
+    "column_count": 288,
+    "columns": [
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 310,
+        "null_count": 622,
+        "examples": [
+          "80804",
+          "80339",
+          "80992",
+          "81667",
+          "80637"
+        ],
+        "numeric": {
+          "count": 310.0,
+          "min": 80331.0,
+          "max": 85764.0,
+          "mean": 81191.071,
+          "median": 81373.0
+        },
+        "null_rate": 0.6674
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 310,
+        "null_count": 622,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 310.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6674
+      },
+      {
+        "name": "wickeln",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 302,
+        "null_count": 630,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 302.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2219,
+          "median": 0.0
+        },
+        "null_rate": 0.676
+      },
+      {
+        "name": "telefon",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 239,
+        "null_count": 693,
+        "examples": [
+          "089/23326198",
+          "089/23326199",
+          "089/23326200",
+          "891465590",
+          "858367910"
+        ],
+        "numeric": {
+          "count": 26.0,
+          "min": 93921770.0,
+          "max": 4028794380.0,
+          "mean": 1603177706.0769,
+          "median": 858367910.0
+        },
+        "null_rate": 0.7436
+      },
+      {
+        "name": "preis",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 225,
+        "null_count": 707,
+        "examples": [
+          "0.5",
+          "0.0",
+          "0.6",
+          "1.0"
+        ],
+        "numeric": {
+          "count": 225.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2711,
+          "median": 0.0
+        },
+        "null_rate": 0.7586
+      },
+      {
+        "name": "wc_buegel_rechts",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 822,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.6545,
+          "median": 1.0
+        },
+        "null_rate": 0.882
+      },
+      {
+        "name": "wc_buegel_links",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 822,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.6636,
+          "median": 1.0
+        },
+        "null_rate": 0.882
+      },
+      {
+        "name": "toilette_fuer_alle",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2547,
+          "median": 0.0
+        },
+        "null_rate": 0.8863
+      },
+      {
+        "name": "wc_badewanne",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.8863
+      },
+      {
+        "name": "wc_dusche",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.8863
+      },
+      {
+        "name": "wc_spiegel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.566,
+          "median": 1.0
+        },
+        "null_rate": 0.8863
+      },
+      {
+        "name": "wc_gelaender",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0377,
+          "median": 0.0
+        },
+        "null_rate": 0.8863
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "plz",
+      "srsDimension",
+      "wickeln",
+      "telefon"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "plz"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 276,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"WC-Standorte der Landeshauptstadt München\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include plz, srsDimension, wickeln.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"932\")\nm2 = ListItem(\"Columns\", \"288\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"plz\",\"srsDimension\",\"wickeln\",\"telefon\",\"preis\",\"wc_buegel_rechts\",\"wc_buegel_links\",\"toilette_fuer_alle\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"622\",\"622\",\"630\",\"693\",\"707\",\"822\",\"822\",\"826\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"plz\", [80804.0,80339.0,80992.0,81667.0,80637.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"plz\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 276 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of plz in WC-Standorte der Landeshauptstadt München.\",\n  \"query_result\": {\n    \"dataset_title\": \"WC-Standorte der Landeshauptstadt München\",\n    \"package_id\": \"80832bca-499b-4b24-bb41-9e77f0ef31ee\",\n    \"package_name\": \"wc_finder\",\n    \"resource_id\": \"3d8c7328-e65d-4b4a-98f6-1b54adae9fb0\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Die Daten beinhalten die Standorte der öffentlichen Toiletten, die sich im Besitz der Landeshauptstadt München befinden. Es werden sowohl barrierefreie als auch nicht barrierefreie Toiletten dargestellt. Der Nutzer kann auf ausführliche Informationen hinsichtlich Zugänglichkeit, Ausstattung und Zustand der Toiletten zugreifen. Wir bemühen uns, die Informationen zu den Maßnahmen aktuell und inhaltlich richtig anzubieten, die Karte bietet dennoch keine Gewähr auf Richtigkeit, Vollständigkeit und A\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"WC-Finder\",\n      \"planningCadastre\"\n    ],\n    \"groups\": [],\n    \"row_count\": 932,\n    \"sampled_rows\": 932,\n    \"column_count\": 288,\n    \"columns\": [\n      {\n        \"name\": \"plz\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 310,\n        \"null_count\": 622,\n        \"examples\": [\n          \"80804\",\n          \"80339\",\n          \"80992\",\n          \"81667\",\n          \"80637\"\n        ],\n        \"numeric\": {\n          \"count\": 310.0,\n          \"min\": 80331.0,\n          \"max\": 85764.0,\n          \"mean\": 81191.071,\n          \"median\": 81373.0\n        },\n        \"null_rate\": 0.6674\n      },\n      {\n        \"name\": \"srsDimension\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 310,\n        \"null_count\": 622,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 310.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.6674\n      },\n      {\n        \"name\": \"wickeln\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 302,\n        \"null_count\": 630,\n        \"examples\": [\n          \"0\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 302.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.2219,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.676\n      },\n      {\n        \"name\": \"telefon\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 239,\n        \"null_count\": 693,\n        \"examples\": [\n          \"089/23326198\",\n          \"089/23326199\",\n          \"089/23326200\",\n          \"891465590\",\n          \"858367910\"\n        ],\n        \"numeric\": {\n          \"count\": 26.0,\n          \"min\": 93921770.0,\n          \"max\": 4028794380.0,\n          \"mean\": 1603177706.0769,\n          \"median\": 858367910.0\n        },\n        \"null_rate\": 0.7436\n      },\n      {\n        \"name\": \"preis\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 225,\n        \"null_count\": 707,\n        \"examples\": [\n          \"0.5\",\n          \"0.0\",\n          \"0.6\",\n          \"1.0\"\n        ],\n        \"numeric\": {\n          \"count\": 225.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.2711,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.7586\n      },\n      {\n        \"name\": \"wc_buegel_rechts\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 110,\n        \"null_count\": 822,\n        \"examples\": [\n          \"1\",\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 110.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.6545,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.882\n      },\n      {\n        \"name\": \"wc_buegel_links\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 110,\n        \"null_count\": 822,\n        \"examples\": [\n          \"1\",\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 110.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.6636,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.882\n      },\n      {\n        \"name\": \"toilette_fuer_alle\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 826,\n        \"examples\": [\n          \"1\",\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.2547,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.8863\n      },\n      {\n        \"name\": \"wc_badewanne\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 826,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.8863\n      },\n      {\n        \"name\": \"wc_dusche\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 826,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.8863\n      },\n      {\n        \"name\": \"wc_spiegel\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 826,\n        \"examples\": [\n          \"1\",\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.566,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.8863\n      },\n      {\n        \"name\": \"wc_gelaender\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 826,\n        \"examples\": [\n          \"0\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.0377,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.8863\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"plz\",\n      \"srsDimension\",\n      \"wickeln\",\n      \"telefon\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"plz\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"WC-Standorte der Landeshauptstadt München\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include plz, srsDimension, wickeln.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"932\")\nm2 = ListItem(\"Columns\", \"288\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"plz\",\"srsDimension\",\"wickeln\",\"telefon\",\"preis\",\"wc_buegel_rechts\",\"wc_buegel_links\",\"toilette_fuer_alle\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"622\",\"622\",\"630\",\"693\",\"707\",\"822\",\"822\",\"826\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"plz\", [80804.0,80339.0,80992.0,81667.0,80637.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"plz\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 276 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

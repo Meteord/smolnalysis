@@ -1,0 +1,333 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of Gebietsnummer in Bundestagswahlen 2017 - Ergebnisse München.",
+  "query_result": {
+    "dataset_title": "Bundestagswahlen 2017 - Ergebnisse München",
+    "package_id": "d95b5aa1-83d0-4c15-9a12-661c2e3622ff",
+    "package_name": "bundestagswahlen-2017-ergebnisse-munchen",
+    "resource_id": "fba0bca0-aaa6-4888-a5d9-ecf25c845575",
+    "resource_name": "Bundestagswahl 2017 Zweitstimmen nach Wahlbezirken",
+    "resource_format": "csv",
+    "description": "Bitte beachten Sie die [\"Erläuterungen zu den Ergebnistabellen\"](https://www.muenchen.de/rathaus/dam/jcr:79b60f9c-6be9-4feb-a640-8bf1e94c45de/btw_2017_Erlaeuterungen_Download.pdf) (PDF). Der Datensatz Bundestagswahl 2017 beinhaltet die Wahlergebnisse der Bundestagswahl 2017 in München und umfasst folgende Ressourcen: * Erststimmen_Stadtbezirke * Erststimmen_Wahlbezirke * Erststimmen_Wahlkreise * Zweitstimmen_Stadtbezirke * Zweitstimmen_Wahlbezirke * Zweitstimmen_Wahlkreise [Informationsseite des",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bundestagswahl",
+      "Wahlen"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 944,
+    "sampled_rows": 944,
+    "column_count": 53,
+    "columns": [
+      {
+        "name": "Gebietsnummer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          1001,
+          1002,
+          1003,
+          1004,
+          1005
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 162.0,
+          "max": 25082.0,
+          "mean": 13291.7797,
+          "median": 13075.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Stimmbezirksart",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          11,
+          21
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 11.0,
+          "max": 21.0,
+          "mean": 14.4534,
+          "median": 11.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahlberechtigte gesamt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          1534,
+          1496,
+          1505,
+          1456,
+          1513
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 1242.0,
+          "max": 923612.0,
+          "mean": 3913.6102,
+          "median": 1524.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahlberechtigte ohne Wahlschein",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          877,
+          805,
+          900,
+          847,
+          863
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 729.0,
+          "max": 594743.0,
+          "mean": 2520.0975,
+          "median": 1007.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahlberechtigte mit Wahlschein",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          657,
+          691,
+          605,
+          609,
+          650
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 124.0,
+          "max": 328833.0,
+          "mean": 1393.3602,
+          "median": 604.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahlberechtigte nicht im Wahlerverzeichnis",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "36"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 0.0,
+          "max": 36.0,
+          "mean": 0.1525,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahler gesamt",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "586",
+          "582",
+          "674",
+          "591",
+          "641"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 298.0,
+          "max": 416213.0,
+          "mean": 1535.9979,
+          "median": 707.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahler mit Wahlschein",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "15",
+          "11",
+          "13",
+          "16"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 0.0,
+          "max": 308778.0,
+          "mean": 666.0551,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Ungultige Stimmen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "0",
+          "3",
+          "2",
+          "4"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 0.0,
+          "max": 1993.0,
+          "mean": 6.0381,
+          "median": 3.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl CSU",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          152,
+          145,
+          185,
+          138,
+          179
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 76.0,
+          "max": 115605.0,
+          "mean": 458.5678,
+          "median": 209.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl SPD",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          55,
+          85,
+          91,
+          78,
+          76
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 37.0,
+          "max": 71675.0,
+          "mean": 247.3814,
+          "median": 122.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl GRUNE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "120",
+          "141",
+          "122",
+          "137",
+          "112"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 25.0,
+          "max": 72092.0,
+          "mean": 263.4852,
+          "median": 123.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Gebietsnummer",
+      "Stimmbezirksart",
+      "Wahlberechtigte gesamt",
+      "Wahlberechtigte ohne Wahlschein"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "Gebietsnummer"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 40,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bundestagswahlen 2017 - Ergebnisse München\", \"Bundestagswahl 2017 Zweitstimmen nach Wahlbezirken\")\nsummary = TextContent(\"Bundestagswahl 2017 Zweitstimmen nach Wahlbezirken belongs to Statistisches Amt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include Gebietsnummer, Stimmbezirksart, Wahlberechtigte gesamt.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"944\")\nm2 = ListItem(\"Columns\", \"53\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"Gebietsnummer\",\"Stimmbezirksart\",\"Wahlberechtigte gesamt\",\"Wahlberechtigte ohne Wahlschein\",\"Wahlberechtigte mit Wahlschein\",\"Wahlberechtigte nicht im Wahlerverzeichnis\",\"Wahler gesamt\",\"Wahler mit Wahlschein\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Gebietsnummer\", [1001.0,1002.0,1003.0,1004.0,1005.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"Gebietsnummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 40 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of Gebietsnummer in Bundestagswahlen 2017 - Ergebnisse München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Bundestagswahlen 2017 - Ergebnisse München\",\n    \"package_id\": \"d95b5aa1-83d0-4c15-9a12-661c2e3622ff\",\n    \"package_name\": \"bundestagswahlen-2017-ergebnisse-munchen\",\n    \"resource_id\": \"fba0bca0-aaa6-4888-a5d9-ecf25c845575\",\n    \"resource_name\": \"Bundestagswahl 2017 Zweitstimmen nach Wahlbezirken\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Bitte beachten Sie die [\\\"Erläuterungen zu den Ergebnistabellen\\\"](https://www.muenchen.de/rathaus/dam/jcr:79b60f9c-6be9-4feb-a640-8bf1e94c45de/btw_2017_Erlaeuterungen_Download.pdf) (PDF). Der Datensatz Bundestagswahl 2017 beinhaltet die Wahlergebnisse der Bundestagswahl 2017 in München und umfasst folgende Ressourcen: * Erststimmen_Stadtbezirke * Erststimmen_Wahlbezirke * Erststimmen_Wahlkreise * Zweitstimmen_Stadtbezirke * Zweitstimmen_Wahlbezirke * Zweitstimmen_Wahlkreise [Informationsseite des\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bundestagswahl\",\n      \"Wahlen\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 944,\n    \"sampled_rows\": 944,\n    \"column_count\": 53,\n    \"columns\": [\n      {\n        \"name\": \"Gebietsnummer\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          1001,\n          1002,\n          1003,\n          1004,\n          1005\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 162.0,\n          \"max\": 25082.0,\n          \"mean\": 13291.7797,\n          \"median\": 13075.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Stimmbezirksart\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          11,\n          21\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 11.0,\n          \"max\": 21.0,\n          \"mean\": 14.4534,\n          \"median\": 11.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Wahlberechtigte gesamt\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          1534,\n          1496,\n          1505,\n          1456,\n          1513\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 1242.0,\n          \"max\": 923612.0,\n          \"mean\": 3913.6102,\n          \"median\": 1524.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Wahlberechtigte ohne Wahlschein\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          877,\n          805,\n          900,\n          847,\n          863\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 729.0,\n          \"max\": 594743.0,\n          \"mean\": 2520.0975,\n          \"median\": 1007.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Wahlberechtigte mit Wahlschein\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          657,\n          691,\n          605,\n          609,\n          650\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 124.0,\n          \"max\": 328833.0,\n          \"mean\": 1393.3602,\n          \"median\": 604.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Wahlberechtigte nicht im Wahlerverzeichnis\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          \"0\",\n          \"1\",\n          \"2\",\n          \"3\",\n          \"36\"\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 0.0,\n          \"max\": 36.0,\n          \"mean\": 0.1525,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Wahler gesamt\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          \"586\",\n          \"582\",\n          \"674\",\n          \"591\",\n          \"641\"\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 298.0,\n          \"max\": 416213.0,\n          \"mean\": 1535.9979,\n          \"median\": 707.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Wahler mit Wahlschein\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          \"6\",\n          \"15\",\n          \"11\",\n          \"13\",\n          \"16\"\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 0.0,\n          \"max\": 308778.0,\n          \"mean\": 666.0551,\n          \"median\": 13.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Ungultige Stimmen\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1\",\n          \"0\",\n          \"3\",\n          \"2\",\n          \"4\"\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 0.0,\n          \"max\": 1993.0,\n          \"mean\": 6.0381,\n          \"median\": 3.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Anzahl CSU\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          152,\n          145,\n          185,\n          138,\n          179\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 76.0,\n          \"max\": 115605.0,\n          \"mean\": 458.5678,\n          \"median\": 209.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Anzahl SPD\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          55,\n          85,\n          91,\n          78,\n          76\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 37.0,\n          \"max\": 71675.0,\n          \"mean\": 247.3814,\n          \"median\": 122.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Anzahl GRUNE\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 944,\n        \"null_count\": 0,\n        \"examples\": [\n          \"120\",\n          \"141\",\n          \"122\",\n          \"137\",\n          \"112\"\n        ],\n        \"numeric\": {\n          \"count\": 944.0,\n          \"min\": 25.0,\n          \"max\": 72092.0,\n          \"mean\": 263.4852,\n          \"median\": 123.0\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Gebietsnummer\",\n      \"Stimmbezirksart\",\n      \"Wahlberechtigte gesamt\",\n      \"Wahlberechtigte ohne Wahlschein\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"Gebietsnummer\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bundestagswahlen 2017 - Ergebnisse München\", \"Bundestagswahl 2017 Zweitstimmen nach Wahlbezirken\")\nsummary = TextContent(\"Bundestagswahl 2017 Zweitstimmen nach Wahlbezirken belongs to Statistisches Amt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include Gebietsnummer, Stimmbezirksart, Wahlberechtigte gesamt.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"944\")\nm2 = ListItem(\"Columns\", \"53\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"Gebietsnummer\",\"Stimmbezirksart\",\"Wahlberechtigte gesamt\",\"Wahlberechtigte ohne Wahlschein\",\"Wahlberechtigte mit Wahlschein\",\"Wahlberechtigte nicht im Wahlerverzeichnis\",\"Wahler gesamt\",\"Wahler mit Wahlschein\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Gebietsnummer\", [1001.0,1002.0,1003.0,1004.0,1005.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"Gebietsnummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 40 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

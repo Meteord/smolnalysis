@@ -1,0 +1,296 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of srsDimension in Wertstoffinseln in München.",
+  "query_result": {
+    "dataset_title": "Wertstoffinseln in München",
+    "package_id": "63eb98c7-d70c-4be1-854c-05dc95c48146",
+    "package_name": "awm_container_opendata",
+    "resource_id": "7c248a2b-da44-4ab4-8ad5-48d883efba9f",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Stadtkarte liefert einen Überblick über die Standorte der Wertstoffinseln mit den AWM-Altkleidercontainern und den Wertstoffcontainern für Glas und Verpackungen aus Kunststoff und Metall. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas und Verpackungen, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Ver- und Entsorgung",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 48,
+    "columns": [
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 332,
+        "null_count": 668,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 332.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.668
+      },
+      {
+        "name": "glas_braun",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 322,
+        "null_count": 678,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 322.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.0031,
+          "median": 1.0
+        },
+        "null_rate": 0.678
+      },
+      {
+        "name": "glas_gruen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 322,
+        "null_count": 678,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 322.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.028,
+          "median": 1.0
+        },
+        "null_rate": 0.678
+      },
+      {
+        "name": "glas_weiss",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 322,
+        "null_count": 678,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 322.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.0435,
+          "median": 1.0
+        },
+        "null_rate": 0.678
+      },
+      {
+        "name": "lvp",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 316,
+        "null_count": 684,
+        "examples": [
+          "3",
+          "4",
+          "2",
+          "5",
+          "1"
+        ],
+        "numeric": {
+          "count": 316.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 2.6456,
+          "median": 3.0
+        },
+        "null_rate": 0.684
+      },
+      {
+        "name": "altkleider",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 115,
+        "null_count": 885,
+        "examples": [
+          "1",
+          "2",
+          "3"
+        ],
+        "numeric": {
+          "count": 115.0,
+          "min": 1.0,
+          "max": 3.0,
+          "mean": 1.5652,
+          "median": 2.0
+        },
+        "null_rate": 0.885
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "860"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 860.0,
+          "max": 860.0,
+          "mean": 860.0,
+          "median": 860.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.awm_container.glas_braun",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.awm_container.glas_gruen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.awm_container.glas_weiss",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.awm_container.altkleider",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.awm_container.lvp",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "srsDimension",
+      "glas_braun",
+      "glas_gruen",
+      "glas_weiss"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "srsDimension"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 36,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Wertstoffinseln in München\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include srsDimension, glas_braun, glas_gruen.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"48\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"srsDimension\",\"glas_braun\",\"glas_gruen\",\"glas_weiss\",\"lvp\",\"altkleider\",\"numberOfFeatures\",\"featureMembers.awm_container.glas_braun\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"668\",\"678\",\"678\",\"678\",\"684\",\"885\",\"999\",\"999\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"srsDimension\", [2.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"srsDimension\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 36 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of srsDimension in Wertstoffinseln in München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Wertstoffinseln in München\",\n    \"package_id\": \"63eb98c7-d70c-4be1-854c-05dc95c48146\",\n    \"package_name\": \"awm_container_opendata\",\n    \"resource_id\": \"7c248a2b-da44-4ab4-8ad5-48d883efba9f\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Die Stadtkarte liefert einen Überblick über die Standorte der Wertstoffinseln mit den AWM-Altkleidercontainern und den Wertstoffcontainern für Glas und Verpackungen aus Kunststoff und Metall. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas und Verpackungen, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Ver- und Entsorgung\",\n      \"opendata\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 48,\n    \"columns\": [\n      {\n        \"name\": \"srsDimension\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 332,\n        \"null_count\": 668,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 332.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.668\n      },\n      {\n        \"name\": \"glas_braun\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 322,\n        \"null_count\": 678,\n        \"examples\": [\n          \"1\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 322.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.0031,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"glas_gruen\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 322,\n        \"null_count\": 678,\n        \"examples\": [\n          \"1\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 322.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.028,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"glas_weiss\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 322,\n        \"null_count\": 678,\n        \"examples\": [\n          \"1\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 322.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.0435,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.678\n      },\n      {\n        \"name\": \"lvp\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 316,\n        \"null_count\": 684,\n        \"examples\": [\n          \"3\",\n          \"4\",\n          \"2\",\n          \"5\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 316.0,\n          \"min\": 1.0,\n          \"max\": 6.0,\n          \"mean\": 2.6456,\n          \"median\": 3.0\n        },\n        \"null_rate\": 0.684\n      },\n      {\n        \"name\": \"altkleider\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 115,\n        \"null_count\": 885,\n        \"examples\": [\n          \"1\",\n          \"2\",\n          \"3\"\n        ],\n        \"numeric\": {\n          \"count\": 115.0,\n          \"min\": 1.0,\n          \"max\": 3.0,\n          \"mean\": 1.5652,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.885\n      },\n      {\n        \"name\": \"numberOfFeatures\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"860\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 860.0,\n          \"max\": 860.0,\n          \"mean\": 860.0,\n          \"median\": 860.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"featureMembers.awm_container.glas_braun\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"featureMembers.awm_container.glas_gruen\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"featureMembers.awm_container.glas_weiss\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"featureMembers.awm_container.altkleider\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"featureMembers.awm_container.lvp\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.999\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"srsDimension\",\n      \"glas_braun\",\n      \"glas_gruen\",\n      \"glas_weiss\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"srsDimension\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Wertstoffinseln in München\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include srsDimension, glas_braun, glas_gruen.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"48\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"srsDimension\",\"glas_braun\",\"glas_gruen\",\"glas_weiss\",\"lvp\",\"altkleider\",\"numberOfFeatures\",\"featureMembers.awm_container.glas_braun\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"668\",\"678\",\"678\",\"678\",\"684\",\"885\",\"999\",\"999\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"srsDimension\", [2.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"srsDimension\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 36 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

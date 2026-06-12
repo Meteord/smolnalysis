@@ -1,0 +1,286 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Laden, Liefern, Leisten and compare ruhver_laden_liefern_line.status by ruhver_laden_liefern_line.status_bedeutung.",
+  "query_result": {
+    "dataset_title": "Laden, Liefern, Leisten",
+    "package_id": "58b8759c-2841-4817-911c-e3eb146767cf",
+    "package_name": "opendata_ruhver_parkseiten_laden_liefern_leisten",
+    "resource_id": "d2f3d751-7729-453a-878a-b150cc4b319b",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Haltebereiche für Fahrzeuge von Lieferdiensten bzw. Handwerksbetrieben in der Landeshauptstadt München. Die Daten beinhalten \"Bereiche zum Laden und Liefern\", die zum Be- und Entladen genutzt werden dürfen und \"Bereiche zum Laden, Liefern und Leisten\", in denen auch Fahrzeuge von Handwerksbetrieben abgestellt werden dürfen. Die Haltebereiche sind häufig zeitlich begrenzt. Beide Nutzungen können in einem Bereich im zeitlichen Wechsel angeordnet sein.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Verkehrswesen",
+      "Wirschaftsverkehr"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 40,
+    "columns": [
+      {
+        "name": "ruhver_laden_liefern_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "2",
+          "1"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.988,
+          "median": 2.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_laden_liefern_line.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "0",
+          "3"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 0.036,
+          "median": 0.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "2",
+          "1"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.988,
+          "median": 2.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "0",
+          "3"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 0.036,
+          "median": 0.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_laden_liefern_line.angebot",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 249,
+        "null_count": 751,
+        "examples": [
+          "1",
+          "3",
+          "2",
+          "4",
+          "10"
+        ],
+        "numeric": {
+          "count": 249.0,
+          "min": 0.0,
+          "max": 20.0,
+          "mean": 3.3534,
+          "median": 3.0
+        },
+        "null_rate": 0.751
+      },
+      {
+        "name": "angebot",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 249,
+        "null_count": 751,
+        "examples": [
+          "1",
+          "3",
+          "2",
+          "4",
+          "10"
+        ],
+        "numeric": {
+          "count": 249.0,
+          "min": 0.0,
+          "max": 20.0,
+          "mean": 3.3534,
+          "median": 3.0
+        },
+        "null_rate": 0.751
+      },
+      {
+        "name": "featureMember.ruhver_laden_liefern_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_laden_liefern_line.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_laden_liefern_line.angebot",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "4"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4.0,
+          "max": 4.0,
+          "mean": 4.0,
+          "median": 4.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_laden_liefern_line.status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "in Bestand / in Betrieb",
+          "in Planung / in Entwuf"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_laden_liefern_line.planungsstatus_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "--",
+          "Umsetzung beschlossen"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_laden_liefern_line.wirtschaftsverkehr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Bereich zum Laden, Leisten und Liefern (auch temporär)",
+          "Lade- und Lieferbereich (auch temporär)"
+        ],
+        "null_rate": 0.75
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_laden_liefern_line.status",
+      "ruhver_laden_liefern_line.planungsstatus",
+      "status",
+      "planungsstatus"
+    ],
+    "category_columns": [
+      "ruhver_laden_liefern_line.status_bedeutung",
+      "ruhver_laden_liefern_line.planungsstatus_bedeutung",
+      "ruhver_laden_liefern_line.wirtschaftsverkehr"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "ruhver_laden_liefern_line.status_bedeutung",
+      "y": "ruhver_laden_liefern_line.status"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 27,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Laden, Liefern, Leisten\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include ruhver_laden_liefern_line.status, ruhver_laden_liefern_line.planungsstatus, status. Categorical fields include ruhver_laden_liefern_line.status_bedeutung, ruhver_laden_liefern_line.planungsstatus_bedeutung, ruhver_laden_liefern_line.wirtschaftsverkehr.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"40\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"ruhver_laden_liefern_line.status\",\"ruhver_laden_liefern_line.planungsstatus\",\"status\",\"planungsstatus\",\"ruhver_laden_liefern_line.angebot\",\"angebot\",\"featureMember.ruhver_laden_liefern_line.status\",\"featureMember.ruhver_laden_liefern_line.planungsstatus\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"750\",\"750\",\"750\",\"750\",\"751\",\"751\",\"999\",\"999\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"ruhver_laden_liefern_line.status\", [2.0,1.0])\nchart = BarChart([\"in Bestand / in Betrieb\",\"in Planung / in Entwuf\"], [series], \"grouped\", \"ruhver_laden_liefern_line.status_bedeutung\", \"ruhver_laden_liefern_line.status\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 27 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Laden, Liefern, Leisten and compare ruhver_laden_liefern_line.status by ruhver_laden_liefern_line.status_bedeutung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Laden, Liefern, Leisten\",\n    \"package_id\": \"58b8759c-2841-4817-911c-e3eb146767cf\",\n    \"package_name\": \"opendata_ruhver_parkseiten_laden_liefern_leisten\",\n    \"resource_id\": \"d2f3d751-7729-453a-878a-b150cc4b319b\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Haltebereiche für Fahrzeuge von Lieferdiensten bzw. Handwerksbetrieben in der Landeshauptstadt München. Die Daten beinhalten \\\"Bereiche zum Laden und Liefern\\\", die zum Be- und Entladen genutzt werden dürfen und \\\"Bereiche zum Laden, Liefern und Leisten\\\", in denen auch Fahrzeuge von Handwerksbetrieben abgestellt werden dürfen. Die Haltebereiche sind häufig zeitlich begrenzt. Beide Nutzungen können in einem Bereich im zeitlichen Wechsel angeordnet sein.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Verkehrswesen\",\n      \"Wirschaftsverkehr\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 40,\n    \"columns\": [\n      {\n        \"name\": \"ruhver_laden_liefern_line.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"2\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.988,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_laden_liefern_line.planungsstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"0\",\n          \"3\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 0.0,\n          \"max\": 3.0,\n          \"mean\": 0.036,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"2\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.988,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"planungsstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"0\",\n          \"3\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 0.0,\n          \"max\": 3.0,\n          \"mean\": 0.036,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_laden_liefern_line.angebot\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 249,\n        \"null_count\": 751,\n        \"examples\": [\n          \"1\",\n          \"3\",\n          \"2\",\n          \"4\",\n          \"10\"\n        ],\n        \"numeric\": {\n          \"count\": 249.0,\n          \"min\": 0.0,\n          \"max\": 20.0,\n          \"mean\": 3.3534,\n          \"median\": 3.0\n        },\n        \"null_rate\": 0.751\n      },\n      {\n        \"name\": \"angebot\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 249,\n        \"null_count\": 751,\n        \"examples\": [\n          \"1\",\n          \"3\",\n          \"2\",\n          \"4\",\n          \"10\"\n        ],\n        \"numeric\": {\n          \"count\": 249.0,\n          \"min\": 0.0,\n          \"max\": 20.0,\n          \"mean\": 3.3534,\n          \"median\": 3.0\n        },\n        \"null_rate\": 0.751\n      },\n      {\n        \"name\": \"featureMember.ruhver_laden_liefern_line.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"featureMember.ruhver_laden_liefern_line.planungsstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"featureMember.ruhver_laden_liefern_line.angebot\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"4\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 4.0,\n          \"max\": 4.0,\n          \"mean\": 4.0,\n          \"median\": 4.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"ruhver_laden_liefern_line.status_bedeutung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"in Bestand / in Betrieb\",\n          \"in Planung / in Entwuf\"\n        ],\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_laden_liefern_line.planungsstatus_bedeutung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"--\",\n          \"Umsetzung beschlossen\"\n        ],\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_laden_liefern_line.wirtschaftsverkehr\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"Bereich zum Laden, Leisten und Liefern (auch temporär)\",\n          \"Lade- und Lieferbereich (auch temporär)\"\n        ],\n        \"null_rate\": 0.75\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"ruhver_laden_liefern_line.status\",\n      \"ruhver_laden_liefern_line.planungsstatus\",\n      \"status\",\n      \"planungsstatus\"\n    ],\n    \"category_columns\": [\n      \"ruhver_laden_liefern_line.status_bedeutung\",\n      \"ruhver_laden_liefern_line.planungsstatus_bedeutung\",\n      \"ruhver_laden_liefern_line.wirtschaftsverkehr\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"ruhver_laden_liefern_line.status_bedeutung\",\n      \"y\": \"ruhver_laden_liefern_line.status\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Laden, Liefern, Leisten\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include ruhver_laden_liefern_line.status, ruhver_laden_liefern_line.planungsstatus, status. Categorical fields include ruhver_laden_liefern_line.status_bedeutung, ruhver_laden_liefern_line.planungsstatus_bedeutung, ruhver_laden_liefern_line.wirtschaftsverkehr.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"40\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"ruhver_laden_liefern_line.status\",\"ruhver_laden_liefern_line.planungsstatus\",\"status\",\"planungsstatus\",\"ruhver_laden_liefern_line.angebot\",\"angebot\",\"featureMember.ruhver_laden_liefern_line.status\",\"featureMember.ruhver_laden_liefern_line.planungsstatus\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"750\",\"750\",\"750\",\"750\",\"751\",\"751\",\"999\",\"999\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"ruhver_laden_liefern_line.status\", [2.0,1.0])\nchart = BarChart([\"in Bestand / in Betrieb\",\"in Planung / in Entwuf\"], [series], \"grouped\", \"ruhver_laden_liefern_line.status_bedeutung\", \"ruhver_laden_liefern_line.status\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 27 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

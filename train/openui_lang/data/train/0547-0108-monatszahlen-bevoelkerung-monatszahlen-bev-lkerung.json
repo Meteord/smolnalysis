@@ -1,0 +1,257 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Bevölkerung and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Bevölkerung",
+    "package_id": "ac572882-24c6-4c98-873a-b61c638e058d",
+    "package_name": "monatszahlen-bevoelkerung",
+    "resource_id": "2252dc7c-265b-4f21-aa0e-b602c30cb85f",
+    "resource_name": "Monatszahlen Bevölkerung",
+    "resource_format": "csv",
+    "description": "Der Datensatz Monatszahlen Bevölkerung besteht aus den Themen: * Geschlecht und Staatsangehörigkeit * Altersgruppen * EU-Nationalitäten * Nicht-EU-Nationalitäten * Kontinente * Geborene * Gestorbene * Zuzüge * Wegzüge * Umzüge * Eheschließungen * Haushalte nach Nationengruppe * Haushalte nach Personenzahl * Haushalte nach Kinderzahl Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Monatszahlen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 27439,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201340.884,
+          "median": 201311.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "38249",
+          "38159",
+          "38184",
+          "NA",
+          "38315"
+        ],
+        "numeric": {
+          "count": 961.0,
+          "min": 26724.0,
+          "max": 1131626.0,
+          "mean": 409963.6587,
+          "median": 203465.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "38315",
+          "38335",
+          "38395",
+          "38391",
+          "38337"
+        ],
+        "numeric": {
+          "count": 976.0,
+          "min": 26724.0,
+          "max": 1131626.0,
+          "mean": 405763.9672,
+          "median": 200970.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "-0.32",
+          "-0.24",
+          "0.07",
+          "NA",
+          "-0.16"
+        ],
+        "numeric": {
+          "count": 958.0,
+          "min": -1.22,
+          "max": 1.72,
+          "mean": 0.0901,
+          "median": 0.09
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "-0.17",
+          "-0.46",
+          "-0.55",
+          "NA",
+          "1.34"
+        ],
+        "numeric": {
+          "count": 937.0,
+          "min": -3.73,
+          "max": 5.84,
+          "mean": 1.1285,
+          "median": 1.24
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "38362",
+          "38347",
+          "38330",
+          "NA",
+          "38080"
+        ],
+        "numeric": {
+          "count": 961.0,
+          "min": 26813.0,
+          "max": 1126122.0,
+          "mean": 408172.1769,
+          "median": 201840.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2013.344,
+          "median": 2013.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Berufsschulpflichtige (15 bis 17 Jahre)",
+          "Erwerbsfähige (15 bis 64 Jahre)",
+          "Minderjährige (0 bis 17 Jahre)",
+          "noch nicht Schulpflichtige (0 bis 5 Jahre)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Altersgruppen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Bevölkerung\", \"Monatszahlen Bevölkerung\")\nsummary = TextContent(\"Monatszahlen Bevölkerung belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include AUSPRAEGUNG, MONATSZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"27,439\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0,202603.0,202604.0])\nchart = BarChart([\"Berufsschulpflichtige (15 bis 17 Jahre)\",\"Erwerbsfähige (15 bis 64 Jahre)\",\"Minderjährige (0 bis 17 Jahre)\",\"noch nicht Schulpflichtige (0 bis 5 Jahre)\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Monatszahlen Bevölkerung and compare MONAT by AUSPRAEGUNG.\",\n  \"query_result\": {\n    \"dataset_title\": \"Monatszahlen Bevölkerung\",\n    \"package_id\": \"ac572882-24c6-4c98-873a-b61c638e058d\",\n    \"package_name\": \"monatszahlen-bevoelkerung\",\n    \"resource_id\": \"2252dc7c-265b-4f21-aa0e-b602c30cb85f\",\n    \"resource_name\": \"Monatszahlen Bevölkerung\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz Monatszahlen Bevölkerung besteht aus den Themen: * Geschlecht und Staatsangehörigkeit * Altersgruppen * EU-Nationalitäten * Nicht-EU-Nationalitäten * Kontinente * Geborene * Gestorbene * Zuzüge * Wegzüge * Umzüge * Eheschließungen * Haushalte nach Nationengruppe * Haushalte nach Personenzahl * Haushalte nach Kinderzahl Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bevölkerung\",\n      \"Monatszahlen\"\n    ],\n    \"groups\": [\n      \"soci\"\n    ],\n    \"row_count\": 27439,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"MONAT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"202601\",\n          \"202602\",\n          \"202603\",\n          \"202604\",\n          \"202605\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 200001.0,\n          \"max\": 202612.0,\n          \"mean\": 201340.884,\n          \"median\": 201311.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"WERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"38249\",\n          \"38159\",\n          \"38184\",\n          \"NA\",\n          \"38315\"\n        ],\n        \"numeric\": {\n          \"count\": 961.0,\n          \"min\": 26724.0,\n          \"max\": 1131626.0,\n          \"mean\": 409963.6587,\n          \"median\": 203465.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VORJAHRESWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"38315\",\n          \"38335\",\n          \"38395\",\n          \"38391\",\n          \"38337\"\n        ],\n        \"numeric\": {\n          \"count\": 976.0,\n          \"min\": 26724.0,\n          \"max\": 1131626.0,\n          \"mean\": 405763.9672,\n          \"median\": 200970.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"-0.32\",\n          \"-0.24\",\n          \"0.07\",\n          \"NA\",\n          \"-0.16\"\n        ],\n        \"numeric\": {\n          \"count\": 958.0,\n          \"min\": -1.22,\n          \"max\": 1.72,\n          \"mean\": 0.0901,\n          \"median\": 0.09\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORJAHRESMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"-0.17\",\n          \"-0.46\",\n          \"-0.55\",\n          \"NA\",\n          \"1.34\"\n        ],\n        \"numeric\": {\n          \"count\": 937.0,\n          \"min\": -3.73,\n          \"max\": 5.84,\n          \"mean\": 1.1285,\n          \"median\": 1.24\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ZWOELF_MONATE_MITTELWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"38362\",\n          \"38347\",\n          \"38330\",\n          \"NA\",\n          \"38080\"\n        ],\n        \"numeric\": {\n          \"count\": 961.0,\n          \"min\": 26813.0,\n          \"max\": 1126122.0,\n          \"mean\": 408172.1769,\n          \"median\": 201840.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"JAHR\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2026\",\n          \"2025\",\n          \"2024\",\n          \"2023\",\n          \"2022\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2000.0,\n          \"max\": 2026.0,\n          \"mean\": 2013.344,\n          \"median\": 2013.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"AUSPRAEGUNG\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Berufsschulpflichtige (15 bis 17 Jahre)\",\n          \"Erwerbsfähige (15 bis 64 Jahre)\",\n          \"Minderjährige (0 bis 17 Jahre)\",\n          \"noch nicht Schulpflichtige (0 bis 5 Jahre)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"MONATSZAHL\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Altersgruppen\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"MONAT\",\n      \"WERT\",\n      \"VORJAHRESWERT\",\n      \"VERAEND_VORMONAT_PROZENT\"\n    ],\n    \"category_columns\": [\n      \"AUSPRAEGUNG\",\n      \"MONATSZAHL\"\n    ],\n    \"time_columns\": [\n      \"JAHR\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"AUSPRAEGUNG\",\n      \"y\": \"MONAT\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Bevölkerung\", \"Monatszahlen Bevölkerung\")\nsummary = TextContent(\"Monatszahlen Bevölkerung belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include AUSPRAEGUNG, MONATSZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"27,439\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0,202603.0,202604.0])\nchart = BarChart([\"Berufsschulpflichtige (15 bis 17 Jahre)\",\"Erwerbsfähige (15 bis 64 Jahre)\",\"Minderjährige (0 bis 17 Jahre)\",\"noch nicht Schulpflichtige (0 bis 5 Jahre)\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

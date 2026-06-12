@@ -1,0 +1,316 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Daten der Raddauerzählstellen München 2025 and compare richtung_1 by zaehlstelle.",
+  "query_result": {
+    "dataset_title": "Daten der Raddauerzählstellen München 2025",
+    "package_id": "69307443-8de6-4f48-93ac-8cd410998d49",
+    "package_name": "daten-der-raddauerzaehlstellen-muenchen-2025",
+    "resource_id": "0df3e615-4990-48be-9f51-3af1697b827b",
+    "resource_name": "Tageswerte und Wetter - Mai 2025 - Daten der Raddauerzählstellen München",
+    "resource_format": "csv",
+    "description": "Folgende Fahrrad-Zählstellen sind derzeit im Betrieb - bitte beachten Sie die ergänzenden Hinweise: * Arnulfstr. 9 - 11 Südseite (Die Zählstelle Arnulfstraße ist aktuell die einzige im Stadtgebiet, die nicht an einem Zweirichtungsradweg liegt. Richtung 2 verzeichnet daher Fahrräder entgegen der Fahrtrichtung) * Bad-Kreuther-Str. (Joseph-Hörwick-Weg) * Erhardtstr. (Deutsches Museum) * Hirsch HLP (Birketweg) * Margaretenstr. (Harras): Defekt an Sensor nach Bauarbeiten * Olympia Park (Rudolf-Harbig",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Fahrrad",
+      "Rad",
+      "Raddauerzählstellen",
+      "Raddauerzählstellen 2025"
+    ],
+    "groups": [
+      "educ",
+      "tran"
+    ],
+    "row_count": 124,
+    "sampled_rows": 124,
+    "column_count": 13,
+    "columns": [
+      {
+        "name": "richtung_1",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          1687,
+          1840,
+          1041,
+          516,
+          489
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 191.0,
+          "max": 4567.0,
+          "mean": 1665.75,
+          "median": 1449.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "richtung_2",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          77,
+          84,
+          72,
+          50,
+          37
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 29.0,
+          "max": 4247.0,
+          "mean": 1184.871,
+          "median": 1131.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gesamt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          1764,
+          1924,
+          1113,
+          566,
+          526
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 359.0,
+          "max": 8716.0,
+          "mean": 2850.621,
+          "median": 2237.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "min-temp",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          8.1,
+          9.9,
+          14.8,
+          9.2,
+          6.0
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 2.7,
+          "max": 14.8,
+          "mean": 8.1097,
+          "median": 7.6
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "max-temp",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          25.8,
+          28.5,
+          23.5,
+          15.2,
+          9.8
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 9.8,
+          "max": 30.9,
+          "mean": 18.8452,
+          "median": 18.1
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "niederschlag",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          0.0,
+          0.8,
+          11.0,
+          14.4,
+          0.2
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 0.0,
+          "max": 14.4,
+          "mean": 1.4419,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bewoelkung",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          6,
+          21,
+          80,
+          96,
+          94
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 4.0,
+          "max": 100.0,
+          "mean": 64.9032,
+          "median": 80.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sonnenstunden",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          14.1,
+          13.8,
+          5.1,
+          0.2,
+          0.0
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 0.0,
+          "max": 14.7,
+          "mean": 7.3935,
+          "median": 6.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          "2025.05.01",
+          "2025.05.02",
+          "2025.05.03",
+          "2025.05.04",
+          "2025.05.05"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zaehlstelle",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          "Arnulf",
+          "Olympia",
+          "Hirsch",
+          "Erhardt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_ende",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          "23.59"
+        ],
+        "numeric": {
+          "count": 124.0,
+          "min": 23.59,
+          "max": 23.59,
+          "mean": 23.59,
+          "median": 23.59
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_start",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 124,
+        "null_count": 0,
+        "examples": [
+          "00:00"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "richtung_1",
+      "richtung_2",
+      "gesamt",
+      "min-temp"
+    ],
+    "category_columns": [
+      "zaehlstelle"
+    ],
+    "time_columns": [
+      "datum",
+      "uhrzeit_ende",
+      "uhrzeit_start"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "zaehlstelle",
+      "y": "richtung_1"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Daten der Raddauerzählstellen München 2025\", \"Tageswerte und Wetter - Mai 2025 - Daten der Raddauerzählstellen München\")\nsummary = TextContent(\"Tageswerte und Wetter - Mai 2025 - Daten der Raddauerzählstellen München belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include richtung_1, richtung_2, gesamt. Categorical fields include zaehlstelle.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"124\")\nm2 = ListItem(\"Columns\", \"13\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"richtung_1\",\"richtung_2\",\"gesamt\",\"min-temp\",\"max-temp\",\"niederschlag\",\"bewoelkung\",\"sonnenstunden\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"float64\",\"float64\",\"float64\",\"int64\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"richtung_1\", [1687.0,1840.0,1041.0,516.0])\nchart = BarChart([\"Arnulf\",\"Olympia\",\"Hirsch\",\"Erhardt\"], [series], \"grouped\", \"zaehlstelle\", \"richtung_1\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Daten der Raddauerzählstellen München 2025 and compare richtung_1 by zaehlstelle.\",\n  \"query_result\": {\n    \"dataset_title\": \"Daten der Raddauerzählstellen München 2025\",\n    \"package_id\": \"69307443-8de6-4f48-93ac-8cd410998d49\",\n    \"package_name\": \"daten-der-raddauerzaehlstellen-muenchen-2025\",\n    \"resource_id\": \"0df3e615-4990-48be-9f51-3af1697b827b\",\n    \"resource_name\": \"Tageswerte und Wetter - Mai 2025 - Daten der Raddauerzählstellen München\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Folgende Fahrrad-Zählstellen sind derzeit im Betrieb - bitte beachten Sie die ergänzenden Hinweise: * Arnulfstr. 9 - 11 Südseite (Die Zählstelle Arnulfstraße ist aktuell die einzige im Stadtgebiet, die nicht an einem Zweirichtungsradweg liegt. Richtung 2 verzeichnet daher Fahrräder entgegen der Fahrtrichtung) * Bad-Kreuther-Str. (Joseph-Hörwick-Weg) * Erhardtstr. (Deutsches Museum) * Hirsch HLP (Birketweg) * Margaretenstr. (Harras): Defekt an Sensor nach Bauarbeiten * Olympia Park (Rudolf-Harbig\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Fahrrad\",\n      \"Rad\",\n      \"Raddauerzählstellen\",\n      \"Raddauerzählstellen 2025\"\n    ],\n    \"groups\": [\n      \"educ\",\n      \"tran\"\n    ],\n    \"row_count\": 124,\n    \"sampled_rows\": 124,\n    \"column_count\": 13,\n    \"columns\": [\n      {\n        \"name\": \"richtung_1\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          1687,\n          1840,\n          1041,\n          516,\n          489\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 191.0,\n          \"max\": 4567.0,\n          \"mean\": 1665.75,\n          \"median\": 1449.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"richtung_2\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          77,\n          84,\n          72,\n          50,\n          37\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 29.0,\n          \"max\": 4247.0,\n          \"mean\": 1184.871,\n          \"median\": 1131.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"gesamt\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          1764,\n          1924,\n          1113,\n          566,\n          526\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 359.0,\n          \"max\": 8716.0,\n          \"mean\": 2850.621,\n          \"median\": 2237.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"min-temp\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          8.1,\n          9.9,\n          14.8,\n          9.2,\n          6.0\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 2.7,\n          \"max\": 14.8,\n          \"mean\": 8.1097,\n          \"median\": 7.6\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"max-temp\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          25.8,\n          28.5,\n          23.5,\n          15.2,\n          9.8\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 9.8,\n          \"max\": 30.9,\n          \"mean\": 18.8452,\n          \"median\": 18.1\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"niederschlag\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          0.0,\n          0.8,\n          11.0,\n          14.4,\n          0.2\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 0.0,\n          \"max\": 14.4,\n          \"mean\": 1.4419,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bewoelkung\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          6,\n          21,\n          80,\n          96,\n          94\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 4.0,\n          \"max\": 100.0,\n          \"mean\": 64.9032,\n          \"median\": 80.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"sonnenstunden\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          14.1,\n          13.8,\n          5.1,\n          0.2,\n          0.0\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 0.0,\n          \"max\": 14.7,\n          \"mean\": 7.3935,\n          \"median\": 6.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"datum\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2025.05.01\",\n          \"2025.05.02\",\n          \"2025.05.03\",\n          \"2025.05.04\",\n          \"2025.05.05\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zaehlstelle\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Arnulf\",\n          \"Olympia\",\n          \"Hirsch\",\n          \"Erhardt\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"uhrzeit_ende\",\n        \"dtype\": \"object\",\n        \"kind\": \"time\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          \"23.59\"\n        ],\n        \"numeric\": {\n          \"count\": 124.0,\n          \"min\": 23.59,\n          \"max\": 23.59,\n          \"mean\": 23.59,\n          \"median\": 23.59\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"uhrzeit_start\",\n        \"dtype\": \"object\",\n        \"kind\": \"time\",\n        \"non_null_count\": 124,\n        \"null_count\": 0,\n        \"examples\": [\n          \"00:00\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"richtung_1\",\n      \"richtung_2\",\n      \"gesamt\",\n      \"min-temp\"\n    ],\n    \"category_columns\": [\n      \"zaehlstelle\"\n    ],\n    \"time_columns\": [\n      \"datum\",\n      \"uhrzeit_ende\",\n      \"uhrzeit_start\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"zaehlstelle\",\n      \"y\": \"richtung_1\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Daten der Raddauerzählstellen München 2025\", \"Tageswerte und Wetter - Mai 2025 - Daten der Raddauerzählstellen München\")\nsummary = TextContent(\"Tageswerte und Wetter - Mai 2025 - Daten der Raddauerzählstellen München belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include richtung_1, richtung_2, gesamt. Categorical fields include zaehlstelle.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"124\")\nm2 = ListItem(\"Columns\", \"13\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"richtung_1\",\"richtung_2\",\"gesamt\",\"min-temp\",\"max-temp\",\"niederschlag\",\"bewoelkung\",\"sonnenstunden\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"float64\",\"float64\",\"float64\",\"int64\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"richtung_1\", [1687.0,1840.0,1041.0,516.0])\nchart = BarChart([\"Arnulf\",\"Olympia\",\"Hirsch\",\"Erhardt\"], [series], \"grouped\", \"zaehlstelle\", \"richtung_1\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

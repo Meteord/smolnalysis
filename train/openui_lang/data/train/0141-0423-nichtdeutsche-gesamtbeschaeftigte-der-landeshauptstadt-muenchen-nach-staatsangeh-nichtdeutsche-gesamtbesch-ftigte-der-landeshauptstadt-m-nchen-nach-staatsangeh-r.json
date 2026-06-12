@@ -1,0 +1,174 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of nichtdeutsche_gesamtbeschaeftigte in Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit.",
+  "query_result": {
+    "dataset_title": "Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit",
+    "package_id": "b4b72cac-5c62-46d1-8966-35e9c0056a83",
+    "package_name": "nichtdeutsche-gesamtbeschaeftigte-der-landeshauptstadt-muenchen-nach-staatsangehoerigkeit",
+    "resource_id": "d175f77e-ed14-40c7-acef-3c2b87bdba45",
+    "resource_name": "Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit",
+    "resource_format": "csv",
+    "description": "Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit am 31.12. des jeweiligen Jahres.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Personal",
+      "Personalreferat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 66,
+    "sampled_rows": 66,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "nichtdeutsche_gesamtbeschaeftigte",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 66,
+        "null_count": 0,
+        "examples": [
+          7181,
+          425,
+          27,
+          64,
+          85
+        ],
+        "numeric": {
+          "count": 66.0,
+          "min": 27.0,
+          "max": 7181.0,
+          "mean": 615.1818,
+          "median": 136.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 66,
+        "null_count": 0,
+        "examples": [
+          4497,
+          295,
+          25,
+          53,
+          49
+        ],
+        "numeric": {
+          "count": 66.0,
+          "min": 25.0,
+          "max": 4497.0,
+          "mean": 382.5455,
+          "median": 94.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 66,
+        "null_count": 0,
+        "examples": [
+          2684,
+          130,
+          2,
+          11,
+          36
+        ],
+        "numeric": {
+          "count": 66.0,
+          "min": 0.0,
+          "max": 2684.0,
+          "mean": 232.6364,
+          "median": 29.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 66,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 66.0,
+          "min": 2022.0,
+          "max": 2024.0,
+          "mean": 2023.0,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "staatsangehoerigkeit",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 66,
+        "null_count": 0,
+        "examples": [
+          "insgesamt",
+          "bosnisch-herzegowinisch",
+          "brasilianisch",
+          "bulgarisch",
+          "französisch"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "nichtdeutsche_gesamtbeschaeftigte",
+      "weiblich",
+      "maennlich"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "nichtdeutsche_gesamtbeschaeftigte"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit\", \"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit\")\nsummary = TextContent(\"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit belongs to Statistisches Amt München. It exposes 5 profiled columns for OpenUI rendering. Numeric fields include nichtdeutsche_gesamtbeschaeftigte, weiblich, maennlich.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"66\")\nm2 = ListItem(\"Columns\", \"6\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"nichtdeutsche_gesamtbeschaeftigte\",\"weiblich\",\"maennlich\",\"jahr\",\"staatsangehoerigkeit\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"nichtdeutsche_gesamtbeschaeftigte\", [7181.0,425.0,27.0,64.0,85.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"nichtdeutsche_gesamtbeschaeftigte\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of nichtdeutsche_gesamtbeschaeftigte in Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit.\",\n  \"query_result\": {\n    \"dataset_title\": \"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit\",\n    \"package_id\": \"b4b72cac-5c62-46d1-8966-35e9c0056a83\",\n    \"package_name\": \"nichtdeutsche-gesamtbeschaeftigte-der-landeshauptstadt-muenchen-nach-staatsangehoerigkeit\",\n    \"resource_id\": \"d175f77e-ed14-40c7-acef-3c2b87bdba45\",\n    \"resource_name\": \"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit am 31.12. des jeweiligen Jahres.\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Personal\",\n      \"Personalreferat\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 66,\n    \"sampled_rows\": 66,\n    \"column_count\": 6,\n    \"columns\": [\n      {\n        \"name\": \"nichtdeutsche_gesamtbeschaeftigte\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 66,\n        \"null_count\": 0,\n        \"examples\": [\n          7181,\n          425,\n          27,\n          64,\n          85\n        ],\n        \"numeric\": {\n          \"count\": 66.0,\n          \"min\": 27.0,\n          \"max\": 7181.0,\n          \"mean\": 615.1818,\n          \"median\": 136.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"weiblich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 66,\n        \"null_count\": 0,\n        \"examples\": [\n          4497,\n          295,\n          25,\n          53,\n          49\n        ],\n        \"numeric\": {\n          \"count\": 66.0,\n          \"min\": 25.0,\n          \"max\": 4497.0,\n          \"mean\": 382.5455,\n          \"median\": 94.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"maennlich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 66,\n        \"null_count\": 0,\n        \"examples\": [\n          2684,\n          130,\n          2,\n          11,\n          36\n        ],\n        \"numeric\": {\n          \"count\": 66.0,\n          \"min\": 0.0,\n          \"max\": 2684.0,\n          \"mean\": 232.6364,\n          \"median\": 29.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 66,\n        \"null_count\": 0,\n        \"examples\": [\n          2024,\n          2023,\n          2022\n        ],\n        \"numeric\": {\n          \"count\": 66.0,\n          \"min\": 2022.0,\n          \"max\": 2024.0,\n          \"mean\": 2023.0,\n          \"median\": 2023.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"staatsangehoerigkeit\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 66,\n        \"null_count\": 0,\n        \"examples\": [\n          \"insgesamt\",\n          \"bosnisch-herzegowinisch\",\n          \"brasilianisch\",\n          \"bulgarisch\",\n          \"französisch\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"nichtdeutsche_gesamtbeschaeftigte\",\n      \"weiblich\",\n      \"maennlich\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"nichtdeutsche_gesamtbeschaeftigte\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit\", \"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit\")\nsummary = TextContent(\"Nichtdeutsche Gesamtbeschäftigte der Landeshauptstadt München nach Staatsangehörigkeit belongs to Statistisches Amt München. It exposes 5 profiled columns for OpenUI rendering. Numeric fields include nichtdeutsche_gesamtbeschaeftigte, weiblich, maennlich.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"66\")\nm2 = ListItem(\"Columns\", \"6\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"nichtdeutsche_gesamtbeschaeftigte\",\"weiblich\",\"maennlich\",\"jahr\",\"staatsangehoerigkeit\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"nichtdeutsche_gesamtbeschaeftigte\", [7181.0,425.0,27.0,64.0,85.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"nichtdeutsche_gesamtbeschaeftigte\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

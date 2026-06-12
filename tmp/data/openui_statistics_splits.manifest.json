@@ -1,0 +1,23 @@
+{
+  "source": "data/generated/openui_statistics_samples.jsonl",
+  "seed": 42,
+  "ratios": {
+    "train": 0.8,
+    "valid": 0.1,
+    "test": 0.1
+  },
+  "splits": {
+    "train": {
+      "count": 547,
+      "dir": "data/train"
+    },
+    "valid": {
+      "count": 68,
+      "dir": "data/valid"
+    },
+    "test": {
+      "count": 69,
+      "dir": "data/test"
+    }
+  }
+}

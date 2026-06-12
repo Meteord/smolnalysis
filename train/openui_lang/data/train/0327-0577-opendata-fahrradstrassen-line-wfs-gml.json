@@ -1,0 +1,252 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of rad_fahrradstrassen_line.laenge_5m in Fahrradstraßen.",
+  "query_result": {
+    "dataset_title": "Fahrradstraßen",
+    "package_id": "54828acb-7a9b-4c03-8a1b-4da3569648cb",
+    "package_name": "opendata_fahrradstrassen_line",
+    "resource_id": "b7c5d2ba-e351-442d-9dc1-0cf72bef4497",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "In Fahrradstraßen haben Radfahrende Vorrang, dürfen nebeneinander fahren und die Geschwindigkeit bestimmen. Nur, wenn das Zusatzschild „Kraftfahrzeuge frei“ hängt, dürfen auch andere motorisierte Verkehrsteilnehmende hier fahren. Für alle gilt eine Höchstgeschwindigkeit von 30 Stundenkilometern, an Kreuzungen und Einmündungen gilt rechts vor links. Ein großes Fahrrad-Piktogramm im blauen Kreis mit der zusätzlichen Beschriftung „Fahrradstraße“ als Verkehrsschild und als Bodenmarkierung kennzeichn",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 662,
+    "sampled_rows": 662,
+    "column_count": 30,
+    "columns": [
+      {
+        "name": "rad_fahrradstrassen_line.laenge_5m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 104,
+        "null_count": 558,
+        "examples": [
+          "180",
+          "815",
+          "525",
+          "405",
+          "290"
+        ],
+        "numeric": {
+          "count": 104.0,
+          "min": 50.0,
+          "max": 1785.0,
+          "mean": 444.7596,
+          "median": 310.0
+        },
+        "null_rate": 0.8429
+      },
+      {
+        "name": "laenge_5m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 104,
+        "null_count": 558,
+        "examples": [
+          "180",
+          "815",
+          "525",
+          "405",
+          "290"
+        ],
+        "numeric": {
+          "count": 104.0,
+          "min": 50.0,
+          "max": 1785.0,
+          "mean": 444.7596,
+          "median": 310.0
+        },
+        "null_rate": 0.8429
+      },
+      {
+        "name": "featureMember.rad_fahrradstrassen_line.laenge_5m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 661,
+        "examples": [
+          "175"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 175.0,
+          "max": 175.0,
+          "mean": 175.0,
+          "median": 175.0
+        },
+        "null_rate": 0.9985
+      },
+      {
+        "name": "rad_fahrradstrassen_line.shape.MultiLineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 104,
+        "null_count": 558,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.8429
+      },
+      {
+        "name": "rad_fahrradstrassen_line.shape.MultiLineString.lineStringMember.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 104,
+        "null_count": 558,
+        "examples": [
+          "693412.92300088,5334281.79359785 693429.75080088,5334295.31689785 693475.52240088,5334329.27929785 693500.25330088,5334348.47189785 693524.44470088,5334361.6884",
+          "689936.3812008,5331430.31779808 689930.1599008,5331422.41109808 689928.4687008,5331413.30989808 689928.0189008,5331386.46889808 689927.1810008,5331359.92709808",
+          "681529.90800064,5337719.84069851 681517.94870064,5337753.70229851 681507.76510064,5337782.17169851 681505.29320064,5337783.13419851 681502.44640064,5337784.2425",
+          "686546.48100073,5335747.95219827 686537.53260073,5335720.24739827 686524.26970073,5335698.61339827 686503.82170073,5335664.16059827 686500.12860073,5335658.0910",
+          "691943.86460084,5334977.72499795 691956.44500084,5335028.28759795 691968.85740085,5335078.20949795 691992.39470085,5335170.14639794 691999.49240085,5335197.4208"
+        ],
+        "null_rate": 0.8429
+      },
+      {
+        "name": "shape.MultiLineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 104,
+        "null_count": 558,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.8429
+      },
+      {
+        "name": "shape.MultiLineString.lineStringMember.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 104,
+        "null_count": 558,
+        "examples": [
+          "693412.92300088,5334281.79359785 693429.75080088,5334295.31689785 693475.52240088,5334329.27929785 693500.25330088,5334348.47189785 693524.44470088,5334361.6884",
+          "689936.3812008,5331430.31779808 689930.1599008,5331422.41109808 689928.4687008,5331413.30989808 689928.0189008,5331386.46889808 689927.1810008,5331359.92709808",
+          "681529.90800064,5337719.84069851 681517.94870064,5337753.70229851 681507.76510064,5337782.17169851 681505.29320064,5337783.13419851 681502.44640064,5337784.2425",
+          "686546.48100073,5335747.95219827 686537.53260073,5335720.24739827 686524.26970073,5335698.61339827 686503.82170073,5335664.16059827 686500.12860073,5335658.0910",
+          "691943.86460084,5334977.72499795 691956.44500084,5335028.28759795 691968.85740085,5335078.20949795 691992.39470085,5335170.14639794 691999.49240085,5335197.4208"
+        ],
+        "null_rate": 0.8429
+      },
+      {
+        "name": "LineString.coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 122,
+        "null_count": 540,
+        "examples": [
+          "693412.92300088,5334281.79359785 693429.75080088,5334295.31689785 693475.52240088,5334329.27929785 693500.25330088,5334348.47189785 693524.44470088,5334361.6884",
+          "689936.3812008,5331430.31779808 689930.1599008,5331422.41109808 689928.4687008,5331413.30989808 689928.0189008,5331386.46889808 689927.1810008,5331359.92709808",
+          "681529.90800064,5337719.84069851 681517.94870064,5337753.70229851 681507.76510064,5337782.17169851 681505.29320064,5337783.13419851 681502.44640064,5337784.2425",
+          "686546.48100073,5335747.95219827 686537.53260073,5335720.24739827 686524.26970073,5335698.61339827 686503.82170073,5335664.16059827 686500.12860073,5335658.0910",
+          "691943.86460084,5334977.72499795 691956.44500084,5335028.28759795 691968.85740085,5335078.20949795 691992.39470085,5335170.14639794 691999.49240085,5335197.4208"
+        ],
+        "null_rate": 0.8157
+      },
+      {
+        "name": "coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 122,
+        "null_count": 540,
+        "examples": [
+          "693412.92300088,5334281.79359785 693429.75080088,5334295.31689785 693475.52240088,5334329.27929785 693500.25330088,5334348.47189785 693524.44470088,5334361.6884",
+          "689936.3812008,5331430.31779808 689930.1599008,5331422.41109808 689928.4687008,5331413.30989808 689928.0189008,5331386.46889808 689927.1810008,5331359.92709808",
+          "681529.90800064,5337719.84069851 681517.94870064,5337753.70229851 681507.76510064,5337782.17169851 681505.29320064,5337783.13419851 681502.44640064,5337784.2425",
+          "686546.48100073,5335747.95219827 686537.53260073,5335720.24739827 686524.26970073,5335698.61339827 686503.82170073,5335664.16059827 686500.12860073,5335658.0910",
+          "691943.86460084,5334977.72499795 691956.44500084,5335028.28759795 691968.85740085,5335078.20949795 691992.39470085,5335170.14639794 691999.49240085,5335197.4208"
+        ],
+        "null_rate": 0.8157
+      },
+      {
+        "name": "featureMember.rad_fahrradstrassen_line.shape.MultiLineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 661,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.9985
+      },
+      {
+        "name": "featureMember.rad_fahrradstrassen_line.shape.MultiLineString.lineStringMember.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 661,
+        "examples": [
+          "684310.92470069,5336609.70819838 684346.13830069,5336596.87189838 684359.16660069,5336593.26929838 684420.85800069,5336584.17389837 684433.41560069,5336579.6717"
+        ],
+        "null_rate": 0.9985
+      },
+      {
+        "name": "rad_fahrradstrassen_line.fid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 104,
+        "null_count": 558,
+        "examples": [
+          "rad_fahrradstrassen_line.1",
+          "rad_fahrradstrassen_line.2",
+          "rad_fahrradstrassen_line.3",
+          "rad_fahrradstrassen_line.4",
+          "rad_fahrradstrassen_line.5"
+        ],
+        "null_rate": 0.8429
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_fahrradstrassen_line.laenge_5m",
+      "laenge_5m",
+      "featureMember.rad_fahrradstrassen_line.laenge_5m"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "rad_fahrradstrassen_line.laenge_5m"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 17,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Fahrradstraßen\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include rad_fahrradstrassen_line.laenge_5m, laenge_5m, featureMember.rad_fahrradstrassen_line.laenge_5m.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"662\")\nm2 = ListItem(\"Columns\", \"30\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"rad_fahrradstrassen_line.laenge_5m\",\"laenge_5m\",\"featureMember.rad_fahrradstrassen_line.laenge_5m\",\"rad_fahrradstrassen_line.shape.MultiLineString.srsName\",\"rad_fahrradstrassen_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\"shape.MultiLineString.srsName\",\"shape.MultiLineString.lineStringMember.LineString.coordinates\",\"LineString.coordinates\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"geospatial\",\"geospatial\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"558\",\"558\",\"661\",\"558\",\"558\",\"558\",\"558\",\"540\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"rad_fahrradstrassen_line.laenge_5m\", [180.0,815.0,525.0,405.0,290.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"rad_fahrradstrassen_line.laenge_5m\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 17 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of rad_fahrradstrassen_line.laenge_5m in Fahrradstraßen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Fahrradstraßen\",\n    \"package_id\": \"54828acb-7a9b-4c03-8a1b-4da3569648cb\",\n    \"package_name\": \"opendata_fahrradstrassen_line\",\n    \"resource_id\": \"b7c5d2ba-e351-442d-9dc1-0cf72bef4497\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"In Fahrradstraßen haben Radfahrende Vorrang, dürfen nebeneinander fahren und die Geschwindigkeit bestimmen. Nur, wenn das Zusatzschild „Kraftfahrzeuge frei“ hängt, dürfen auch andere motorisierte Verkehrsteilnehmende hier fahren. Für alle gilt eine Höchstgeschwindigkeit von 30 Stundenkilometern, an Kreuzungen und Einmündungen gilt rechts vor links. Ein großes Fahrrad-Piktogramm im blauen Kreis mit der zusätzlichen Beschriftung „Fahrradstraße“ als Verkehrsschild und als Bodenmarkierung kennzeichn\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Planungsunterlagen Kataster\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 662,\n    \"sampled_rows\": 662,\n    \"column_count\": 30,\n    \"columns\": [\n      {\n        \"name\": \"rad_fahrradstrassen_line.laenge_5m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 104,\n        \"null_count\": 558,\n        \"examples\": [\n          \"180\",\n          \"815\",\n          \"525\",\n          \"405\",\n          \"290\"\n        ],\n        \"numeric\": {\n          \"count\": 104.0,\n          \"min\": 50.0,\n          \"max\": 1785.0,\n          \"mean\": 444.7596,\n          \"median\": 310.0\n        },\n        \"null_rate\": 0.8429\n      },\n      {\n        \"name\": \"laenge_5m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 104,\n        \"null_count\": 558,\n        \"examples\": [\n          \"180\",\n          \"815\",\n          \"525\",\n          \"405\",\n          \"290\"\n        ],\n        \"numeric\": {\n          \"count\": 104.0,\n          \"min\": 50.0,\n          \"max\": 1785.0,\n          \"mean\": 444.7596,\n          \"median\": 310.0\n        },\n        \"null_rate\": 0.8429\n      },\n      {\n        \"name\": \"featureMember.rad_fahrradstrassen_line.laenge_5m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 661,\n        \"examples\": [\n          \"175\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 175.0,\n          \"max\": 175.0,\n          \"mean\": 175.0,\n          \"median\": 175.0\n        },\n        \"null_rate\": 0.9985\n      },\n      {\n        \"name\": \"rad_fahrradstrassen_line.shape.MultiLineString.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 104,\n        \"null_count\": 558,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.8429\n      },\n      {\n        \"name\": \"rad_fahrradstrassen_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 104,\n        \"null_count\": 558,\n        \"examples\": [\n          \"693412.92300088,5334281.79359785 693429.75080088,5334295.31689785 693475.52240088,5334329.27929785 693500.25330088,5334348.47189785 693524.44470088,5334361.6884\",\n          \"689936.3812008,5331430.31779808 689930.1599008,5331422.41109808 689928.4687008,5331413.30989808 689928.0189008,5331386.46889808 689927.1810008,5331359.92709808\",\n          \"681529.90800064,5337719.84069851 681517.94870064,5337753.70229851 681507.76510064,5337782.17169851 681505.29320064,5337783.13419851 681502.44640064,5337784.2425\",\n          \"686546.48100073,5335747.95219827 686537.53260073,5335720.24739827 686524.26970073,5335698.61339827 686503.82170073,5335664.16059827 686500.12860073,5335658.0910\",\n          \"691943.86460084,5334977.72499795 691956.44500084,5335028.28759795 691968.85740085,5335078.20949795 691992.39470085,5335170.14639794 691999.49240085,5335197.4208\"\n        ],\n        \"null_rate\": 0.8429\n      },\n      {\n        \"name\": \"shape.MultiLineString.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 104,\n        \"null_count\": 558,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.8429\n      },\n      {\n        \"name\": \"shape.MultiLineString.lineStringMember.LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 104,\n        \"null_count\": 558,\n        \"examples\": [\n          \"693412.92300088,5334281.79359785 693429.75080088,5334295.31689785 693475.52240088,5334329.27929785 693500.25330088,5334348.47189785 693524.44470088,5334361.6884\",\n          \"689936.3812008,5331430.31779808 689930.1599008,5331422.41109808 689928.4687008,5331413.30989808 689928.0189008,5331386.46889808 689927.1810008,5331359.92709808\",\n          \"681529.90800064,5337719.84069851 681517.94870064,5337753.70229851 681507.76510064,5337782.17169851 681505.29320064,5337783.13419851 681502.44640064,5337784.2425\",\n          \"686546.48100073,5335747.95219827 686537.53260073,5335720.24739827 686524.26970073,5335698.61339827 686503.82170073,5335664.16059827 686500.12860073,5335658.0910\",\n          \"691943.86460084,5334977.72499795 691956.44500084,5335028.28759795 691968.85740085,5335078.20949795 691992.39470085,5335170.14639794 691999.49240085,5335197.4208\"\n        ],\n        \"null_rate\": 0.8429\n      },\n      {\n        \"name\": \"LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 122,\n        \"null_count\": 540,\n        \"examples\": [\n          \"693412.92300088,5334281.79359785 693429.75080088,5334295.31689785 693475.52240088,5334329.27929785 693500.25330088,5334348.47189785 693524.44470088,5334361.6884\",\n          \"689936.3812008,5331430.31779808 689930.1599008,5331422.41109808 689928.4687008,5331413.30989808 689928.0189008,5331386.46889808 689927.1810008,5331359.92709808\",\n          \"681529.90800064,5337719.84069851 681517.94870064,5337753.70229851 681507.76510064,5337782.17169851 681505.29320064,5337783.13419851 681502.44640064,5337784.2425\",\n          \"686546.48100073,5335747.95219827 686537.53260073,5335720.24739827 686524.26970073,5335698.61339827 686503.82170073,5335664.16059827 686500.12860073,5335658.0910\",\n          \"691943.86460084,5334977.72499795 691956.44500084,5335028.28759795 691968.85740085,5335078.20949795 691992.39470085,5335170.14639794 691999.49240085,5335197.4208\"\n        ],\n        \"null_rate\": 0.8157\n      },\n      {\n        \"name\": \"coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 122,\n        \"null_count\": 540,\n        \"examples\": [\n          \"693412.92300088,5334281.79359785 693429.75080088,5334295.31689785 693475.52240088,5334329.27929785 693500.25330088,5334348.47189785 693524.44470088,5334361.6884\",\n          \"689936.3812008,5331430.31779808 689930.1599008,5331422.41109808 689928.4687008,5331413.30989808 689928.0189008,5331386.46889808 689927.1810008,5331359.92709808\",\n          \"681529.90800064,5337719.84069851 681517.94870064,5337753.70229851 681507.76510064,5337782.17169851 681505.29320064,5337783.13419851 681502.44640064,5337784.2425\",\n          \"686546.48100073,5335747.95219827 686537.53260073,5335720.24739827 686524.26970073,5335698.61339827 686503.82170073,5335664.16059827 686500.12860073,5335658.0910\",\n          \"691943.86460084,5334977.72499795 691956.44500084,5335028.28759795 691968.85740085,5335078.20949795 691992.39470085,5335170.14639794 691999.49240085,5335197.4208\"\n        ],\n        \"null_rate\": 0.8157\n      },\n      {\n        \"name\": \"featureMember.rad_fahrradstrassen_line.shape.MultiLineString.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1,\n        \"null_count\": 661,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.9985\n      },\n      {\n        \"name\": \"featureMember.rad_fahrradstrassen_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1,\n        \"null_count\": 661,\n        \"examples\": [\n          \"684310.92470069,5336609.70819838 684346.13830069,5336596.87189838 684359.16660069,5336593.26929838 684420.85800069,5336584.17389837 684433.41560069,5336579.6717\"\n        ],\n        \"null_rate\": 0.9985\n      },\n      {\n        \"name\": \"rad_fahrradstrassen_line.fid\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 104,\n        \"null_count\": 558,\n        \"examples\": [\n          \"rad_fahrradstrassen_line.1\",\n          \"rad_fahrradstrassen_line.2\",\n          \"rad_fahrradstrassen_line.3\",\n          \"rad_fahrradstrassen_line.4\",\n          \"rad_fahrradstrassen_line.5\"\n        ],\n        \"null_rate\": 0.8429\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"rad_fahrradstrassen_line.laenge_5m\",\n      \"laenge_5m\",\n      \"featureMember.rad_fahrradstrassen_line.laenge_5m\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"rad_fahrradstrassen_line.laenge_5m\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Fahrradstraßen\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include rad_fahrradstrassen_line.laenge_5m, laenge_5m, featureMember.rad_fahrradstrassen_line.laenge_5m.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"662\")\nm2 = ListItem(\"Columns\", \"30\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"rad_fahrradstrassen_line.laenge_5m\",\"laenge_5m\",\"featureMember.rad_fahrradstrassen_line.laenge_5m\",\"rad_fahrradstrassen_line.shape.MultiLineString.srsName\",\"rad_fahrradstrassen_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\"shape.MultiLineString.srsName\",\"shape.MultiLineString.lineStringMember.LineString.coordinates\",\"LineString.coordinates\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"geospatial\",\"geospatial\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"558\",\"558\",\"661\",\"558\",\"558\",\"558\",\"558\",\"540\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"rad_fahrradstrassen_line.laenge_5m\", [180.0,815.0,525.0,405.0,290.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"rad_fahrradstrassen_line.laenge_5m\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 17 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

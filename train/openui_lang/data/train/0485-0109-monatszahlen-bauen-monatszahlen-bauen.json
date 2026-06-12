@@ -1,0 +1,256 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Bauen and compare MONAT by MONATSZAHL.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Bauen",
+    "package_id": "6c05f063-8113-4fee-9b52-57fca7211b36",
+    "package_name": "monatszahlen-bauen",
+    "resource_id": "bba34051-1a32-43c7-bb46-09270e708570",
+    "resource_name": "Monatszahlen Bauen",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Bauen__ beinhaltet die Themen * Baugenehmigungen und * Baufertigstellungen. Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [],
+    "row_count": 1790,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 939.0,
+          "min": 201301.0,
+          "max": 202612.0,
+          "mean": 201986.6773,
+          "median": 202006.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "715",
+          "44",
+          "77",
+          "69"
+        ],
+        "numeric": {
+          "count": 784.0,
+          "min": 7.0,
+          "max": 9837.0,
+          "mean": 313.6862,
+          "median": 71.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "44",
+          "77",
+          "69",
+          "71"
+        ],
+        "numeric": {
+          "count": 830.0,
+          "min": 7.0,
+          "max": 8289.0,
+          "mean": 288.6711,
+          "median": 71.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "57.14",
+          "75",
+          "-10.39",
+          "2.9"
+        ],
+        "numeric": {
+          "count": 721.0,
+          "min": -84.21,
+          "max": 757.14,
+          "mean": 19.1108,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "63.99",
+          "109.52",
+          "83.33",
+          "64.29"
+        ],
+        "numeric": {
+          "count": 758.0,
+          "min": -90.24,
+          "max": 1442.86,
+          "mean": 18.6904,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "38",
+          "41",
+          "43",
+          "48"
+        ],
+        "numeric": {
+          "count": 723.0,
+          "min": 21.0,
+          "max": 848.0,
+          "mean": 169.1355,
+          "median": 70.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2026,
+          2025,
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2013.0,
+          "max": 2026.0,
+          "mean": 2019.707,
+          "median": 2020.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Baufertigstellungen",
+          "Baugenehmigungen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Ein- und Zweifamiliengebäude",
+          "Nichtwohngebäude",
+          "Wohngebäude",
+          "Wohnungen",
+          "Wohnungen in Ein- und Zweifamiliengebäuden"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "MONATSZAHL",
+      "AUSPRAEGUNG"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "MONATSZAHL",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Bauen\", \"Monatszahlen Bauen\")\nsummary = TextContent(\"Monatszahlen Bauen belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include MONATSZAHL, AUSPRAEGUNG.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"1,790\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"MONATSZAHL\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0])\nchart = BarChart([\"Baufertigstellungen\",\"Baugenehmigungen\"], [series], \"grouped\", \"MONATSZAHL\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Monatszahlen Bauen and compare MONAT by MONATSZAHL.\",\n  \"query_result\": {\n    \"dataset_title\": \"Monatszahlen Bauen\",\n    \"package_id\": \"6c05f063-8113-4fee-9b52-57fca7211b36\",\n    \"package_name\": \"monatszahlen-bauen\",\n    \"resource_id\": \"bba34051-1a32-43c7-bb46-09270e708570\",\n    \"resource_name\": \"Monatszahlen Bauen\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz __Monatszahlen Bauen__ beinhaltet die Themen * Baugenehmigungen und * Baufertigstellungen. Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Monatszahlen\"\n    ],\n    \"groups\": [],\n    \"row_count\": 1790,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"MONAT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"202601\",\n          \"202602\",\n          \"202603\",\n          \"202604\",\n          \"202605\"\n        ],\n        \"numeric\": {\n          \"count\": 939.0,\n          \"min\": 201301.0,\n          \"max\": 202612.0,\n          \"mean\": 201986.6773,\n          \"median\": 202006.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"WERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"715\",\n          \"44\",\n          \"77\",\n          \"69\"\n        ],\n        \"numeric\": {\n          \"count\": 784.0,\n          \"min\": 7.0,\n          \"max\": 9837.0,\n          \"mean\": 313.6862,\n          \"median\": 71.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VORJAHRESWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"44\",\n          \"77\",\n          \"69\",\n          \"71\"\n        ],\n        \"numeric\": {\n          \"count\": 830.0,\n          \"min\": 7.0,\n          \"max\": 8289.0,\n          \"mean\": 288.6711,\n          \"median\": 71.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"57.14\",\n          \"75\",\n          \"-10.39\",\n          \"2.9\"\n        ],\n        \"numeric\": {\n          \"count\": 721.0,\n          \"min\": -84.21,\n          \"max\": 757.14,\n          \"mean\": 19.1108,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORJAHRESMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"63.99\",\n          \"109.52\",\n          \"83.33\",\n          \"64.29\"\n        ],\n        \"numeric\": {\n          \"count\": 758.0,\n          \"min\": -90.24,\n          \"max\": 1442.86,\n          \"mean\": 18.6904,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ZWOELF_MONATE_MITTELWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"38\",\n          \"41\",\n          \"43\",\n          \"48\"\n        ],\n        \"numeric\": {\n          \"count\": 723.0,\n          \"min\": 21.0,\n          \"max\": 848.0,\n          \"mean\": 169.1355,\n          \"median\": 70.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"JAHR\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          2026,\n          2025,\n          2024,\n          2023,\n          2022\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2013.0,\n          \"max\": 2026.0,\n          \"mean\": 2019.707,\n          \"median\": 2020.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"MONATSZAHL\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Baufertigstellungen\",\n          \"Baugenehmigungen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"AUSPRAEGUNG\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Ein- und Zweifamiliengebäude\",\n          \"Nichtwohngebäude\",\n          \"Wohngebäude\",\n          \"Wohnungen\",\n          \"Wohnungen in Ein- und Zweifamiliengebäuden\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"MONAT\",\n      \"WERT\",\n      \"VORJAHRESWERT\",\n      \"VERAEND_VORMONAT_PROZENT\"\n    ],\n    \"category_columns\": [\n      \"MONATSZAHL\",\n      \"AUSPRAEGUNG\"\n    ],\n    \"time_columns\": [\n      \"JAHR\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"MONATSZAHL\",\n      \"y\": \"MONAT\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Bauen\", \"Monatszahlen Bauen\")\nsummary = TextContent(\"Monatszahlen Bauen belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include MONATSZAHL, AUSPRAEGUNG.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"1,790\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"MONATSZAHL\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0])\nchart = BarChart([\"Baufertigstellungen\",\"Baugenehmigungen\"], [series], \"grouped\", \"MONATSZAHL\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

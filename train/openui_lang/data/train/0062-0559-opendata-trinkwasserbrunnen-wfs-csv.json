@@ -1,0 +1,118 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (CSV) from Stadtplan der städtischen Trinkbrunnen.",
+  "query_result": {
+    "dataset_title": "Stadtplan der städtischen Trinkbrunnen",
+    "package_id": "7e8484f0-12c2-40be-bd0c-cfe04f63a624",
+    "package_name": "opendata_trinkwasserbrunnen",
+    "resource_id": "20ba2c6a-f3ba-457f-81eb-959936afd5e9",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 106,
+    "sampled_rows": 106,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 106,
+        "null_count": 0,
+        "examples": [
+          "POINT (693160.8497008716 5334127.190397869)",
+          "POINT (688259.9238007668 5336793.02129817)",
+          "POINT (687988.6302007613 5336372.788798186)",
+          "POINT (690953.6683008221 5339563.139498003)",
+          "POINT (689739.0887007987 5329669.487098097)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "objekt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 106,
+        "null_count": 0,
+        "examples": [
+          "Trinkbrunnen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 105,
+        "null_count": 1,
+        "examples": [
+          "Bertschbrunnen",
+          "Gänsebrunnen",
+          "Vasenbrunnen",
+          "Holztrogbrunnen",
+          "Bezoldbrunnen"
+        ],
+        "null_rate": 0.0094
+      },
+      {
+        "name": "bemerkung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 50,
+        "null_count": 56,
+        "examples": [
+          "Winterabdeckung",
+          "Forstenrieder Park, Karolinen geräumt",
+          "liegt im Perlacher Forst",
+          "Kronprinzenpark",
+          "Dauerläufer 24/7"
+        ],
+        "null_rate": 0.5283
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "objekt"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtplan der städtischen Trinkbrunnen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Baureferat der Landeshauptstadt München. It exposes 4 profiled columns for OpenUI rendering. Categorical fields include objekt.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"106\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"shape\",\"objekt\",\"bezeichnung\",\"bemerkung\"], \"string\")\nc2 = Col(\"Kind\", [\"geospatial\",\"category\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"1\",\"56\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Create a compact OpenUI summary for WFS (CSV) from Stadtplan der städtischen Trinkbrunnen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Stadtplan der städtischen Trinkbrunnen\",\n    \"package_id\": \"7e8484f0-12c2-40be-bd0c-cfe04f63a624\",\n    \"package_name\": \"opendata_trinkwasserbrunnen\",\n    \"resource_id\": \"20ba2c6a-f3ba-457f-81eb-959936afd5e9\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München\",\n    \"organization\": \"Baureferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Service\"\n    ],\n    \"groups\": [],\n    \"row_count\": 106,\n    \"sampled_rows\": 106,\n    \"column_count\": 5,\n    \"columns\": [\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 106,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POINT (693160.8497008716 5334127.190397869)\",\n          \"POINT (688259.9238007668 5336793.02129817)\",\n          \"POINT (687988.6302007613 5336372.788798186)\",\n          \"POINT (690953.6683008221 5339563.139498003)\",\n          \"POINT (689739.0887007987 5329669.487098097)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"objekt\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 106,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Trinkbrunnen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bezeichnung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 105,\n        \"null_count\": 1,\n        \"examples\": [\n          \"Bertschbrunnen\",\n          \"Gänsebrunnen\",\n          \"Vasenbrunnen\",\n          \"Holztrogbrunnen\",\n          \"Bezoldbrunnen\"\n        ],\n        \"null_rate\": 0.0094\n      },\n      {\n        \"name\": \"bemerkung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 50,\n        \"null_count\": 56,\n        \"examples\": [\n          \"Winterabdeckung\",\n          \"Forstenrieder Park, Karolinen geräumt\",\n          \"liegt im Perlacher Forst\",\n          \"Kronprinzenpark\",\n          \"Dauerläufer 24/7\"\n        ],\n        \"null_rate\": 0.5283\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [],\n    \"category_columns\": [\n      \"objekt\"\n    ],\n    \"time_columns\": []\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtplan der städtischen Trinkbrunnen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Baureferat der Landeshauptstadt München. It exposes 4 profiled columns for OpenUI rendering. Categorical fields include objekt.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"106\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"shape\",\"objekt\",\"bezeichnung\",\"bemerkung\"], \"string\")\nc2 = Col(\"Kind\", [\"geospatial\",\"category\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"1\",\"56\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

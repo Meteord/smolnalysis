@@ -1,0 +1,168 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Preise und Stipendien and compare dotierung in euro by art.",
+  "query_result": {
+    "dataset_title": "Preise und Stipendien",
+    "package_id": "a5ec87ea-9877-4fa2-a41e-8628770a15d3",
+    "package_name": "preise_stipendien",
+    "resource_id": "f54d353e-745d-4680-91b1-3b3e0f00c5b3",
+    "resource_name": "Preise und Stipendien",
+    "resource_format": "csv",
+    "description": "Der Datensatz enthält Informationen zu den vom Kulturreferat der Landeshauptstadt München vergebenen Preisen und Stipendien. Neben der Beschreibung des Preises / Stipendiums sind Angaben zum Vergabeturnus und der Dotierung erfasst. Bitte beachten sie auch die Verweise auf muenchen.de, mit welchen man zu einer ausführlicheren Beschreibung navigieren kann.",
+    "organization": "Kulturreferat",
+    "tags": [
+      "Kulturreferat",
+      "Preise",
+      "Stipendien"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 42,
+    "sampled_rows": 42,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "dotierung in euro",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "8000",
+          "10000",
+          "5000",
+          "0",
+          "20000"
+        ],
+        "numeric": {
+          "count": 41.0,
+          "min": 0.0,
+          "max": 30000.0,
+          "mean": 9146.5244,
+          "median": 8000.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "Stipendium",
+          "Preis",
+          "Preis mit Eigenbewerbung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "vergabeturnus",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "jährlich",
+          "triennal",
+          "biennal",
+          "unregelmäßig"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "Arbeitsstipendien für Münchner Autor*innen",
+          "Architekturpreis",
+          "Designpreis",
+          "Dieter-Hildebrandt-Preis",
+          "Ernst-Hoferichter-Preise"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "Mit den Arbeitsstipendien fördert das Kulturreferat der Landeshauptstadt München literarische Projekte von etablierten Münchner Autor*innen.",
+          "Als Anerkennung eines Gesamtwerkes vergibt die Landeshauptstadt München alle drei Jahre den Architekturpreis.",
+          "Als Anerkennung eines Gesamtwerkes vergibt die Landeshauptstadt München alle drei Jahre den Designpreis.",
+          "Eine Auszeichnung für anspruchsvolles politisches bzw. dezidiert gesellschaftskritisches Kabarett.",
+          "Auszeichnung für Autor*innen , die in ihrem Werk „Originalität mit Weltoffenheit und Humor“ verbinden."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "https://stadt.muenchen.de/service/info/abteilung-1/10314712/",
+          "https://stadt.muenchen.de/infos/architekturpreis.html",
+          "https://stadt.muenchen.de/infos/designpreis.html",
+          "https://stadt.muenchen.de/infos/dieter-hildebrandt-preis.html",
+          "https://stadt.muenchen.de/infos/ernst-hoferichter-preis.html"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "dotierung in euro"
+    ],
+    "category_columns": [
+      "art",
+      "vergabeturnus"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "art",
+      "y": "dotierung in euro"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Preise und Stipendien\", \"Preise und Stipendien\")\nsummary = TextContent(\"Preise und Stipendien belongs to Kulturreferat. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include dotierung in euro. Categorical fields include art, vergabeturnus.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"42\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"dotierung in euro\",\"art\",\"vergabeturnus\",\"name\",\"beschreibung\",\"url\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"category\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"dotierung in euro\", [8000.0,10000.0,5000.0])\nchart = BarChart([\"Stipendium\",\"Preis\",\"Preis mit Eigenbewerbung\"], [series], \"grouped\", \"art\", \"dotierung in euro\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Preise und Stipendien and compare dotierung in euro by art.\",\n  \"query_result\": {\n    \"dataset_title\": \"Preise und Stipendien\",\n    \"package_id\": \"a5ec87ea-9877-4fa2-a41e-8628770a15d3\",\n    \"package_name\": \"preise_stipendien\",\n    \"resource_id\": \"f54d353e-745d-4680-91b1-3b3e0f00c5b3\",\n    \"resource_name\": \"Preise und Stipendien\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz enthält Informationen zu den vom Kulturreferat der Landeshauptstadt München vergebenen Preisen und Stipendien. Neben der Beschreibung des Preises / Stipendiums sind Angaben zum Vergabeturnus und der Dotierung erfasst. Bitte beachten sie auch die Verweise auf muenchen.de, mit welchen man zu einer ausführlicheren Beschreibung navigieren kann.\",\n    \"organization\": \"Kulturreferat\",\n    \"tags\": [\n      \"Kulturreferat\",\n      \"Preise\",\n      \"Stipendien\"\n    ],\n    \"groups\": [\n      \"educ\"\n    ],\n    \"row_count\": 42,\n    \"sampled_rows\": 42,\n    \"column_count\": 7,\n    \"columns\": [\n      {\n        \"name\": \"dotierung in euro\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 42,\n        \"null_count\": 0,\n        \"examples\": [\n          \"8000\",\n          \"10000\",\n          \"5000\",\n          \"0\",\n          \"20000\"\n        ],\n        \"numeric\": {\n          \"count\": 41.0,\n          \"min\": 0.0,\n          \"max\": 30000.0,\n          \"mean\": 9146.5244,\n          \"median\": 8000.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"art\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 42,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Stipendium\",\n          \"Preis\",\n          \"Preis mit Eigenbewerbung\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"vergabeturnus\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 42,\n        \"null_count\": 0,\n        \"examples\": [\n          \"jährlich\",\n          \"triennal\",\n          \"biennal\",\n          \"unregelmäßig\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"name\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 42,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Arbeitsstipendien für Münchner Autor*innen\",\n          \"Architekturpreis\",\n          \"Designpreis\",\n          \"Dieter-Hildebrandt-Preis\",\n          \"Ernst-Hoferichter-Preise\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"beschreibung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 42,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Mit den Arbeitsstipendien fördert das Kulturreferat der Landeshauptstadt München literarische Projekte von etablierten Münchner Autor*innen.\",\n          \"Als Anerkennung eines Gesamtwerkes vergibt die Landeshauptstadt München alle drei Jahre den Architekturpreis.\",\n          \"Als Anerkennung eines Gesamtwerkes vergibt die Landeshauptstadt München alle drei Jahre den Designpreis.\",\n          \"Eine Auszeichnung für anspruchsvolles politisches bzw. dezidiert gesellschaftskritisches Kabarett.\",\n          \"Auszeichnung für Autor*innen , die in ihrem Werk „Originalität mit Weltoffenheit und Humor“ verbinden.\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"url\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 42,\n        \"null_count\": 0,\n        \"examples\": [\n          \"https://stadt.muenchen.de/service/info/abteilung-1/10314712/\",\n          \"https://stadt.muenchen.de/infos/architekturpreis.html\",\n          \"https://stadt.muenchen.de/infos/designpreis.html\",\n          \"https://stadt.muenchen.de/infos/dieter-hildebrandt-preis.html\",\n          \"https://stadt.muenchen.de/infos/ernst-hoferichter-preis.html\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"dotierung in euro\"\n    ],\n    \"category_columns\": [\n      \"art\",\n      \"vergabeturnus\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"art\",\n      \"y\": \"dotierung in euro\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Preise und Stipendien\", \"Preise und Stipendien\")\nsummary = TextContent(\"Preise und Stipendien belongs to Kulturreferat. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include dotierung in euro. Categorical fields include art, vergabeturnus.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"42\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"dotierung in euro\",\"art\",\"vergabeturnus\",\"name\",\"beschreibung\",\"url\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"category\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"dotierung in euro\", [8000.0,10000.0,5000.0])\nchart = BarChart([\"Stipendium\",\"Preis\",\"Preis mit Eigenbewerbung\"], [series], \"grouped\", \"art\", \"dotierung in euro\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

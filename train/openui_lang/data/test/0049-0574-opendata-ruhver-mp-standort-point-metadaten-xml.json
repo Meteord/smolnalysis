@@ -1,0 +1,302 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Mobilitätspunkte.",
+  "query_result": {
+    "dataset_title": "Mobilitätspunkte",
+    "package_id": "b1f40df9-8643-4eb6-a61a-820a171b6e50",
+    "package_name": "opendata_ruhver_mp_standort_point",
+    "resource_id": "cba1243b-e30b-4ee5-a771-c11eb9b4d540",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet die Standorte der Mobilitätspunkte in München. Der Standort entspricht den Koordinaten der Informationsstele. Folgende Angebote stehen an den Mobilitätspunkten zur Verfügung: • Abstellflächen für geteilte Mikromobilitätsfahrzeuge, d.h. Fahrzeuge für Bikesharing, E-Tretrollersharing, E-Motorrollersharing und Lastenradsharing (Abstellflächen im jew. Layer des Fahrzeugtyps) • Abstellflächen für stationsbasiertes und allgemeines Carsharing (Abstellflächen im Layer „stationsba",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Mobilitätspunkte",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 237,
+    "sampled_rows": 237,
+    "column_count": 386,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 93,
+        "null_count": 144,
+        "examples": [
+          "cf2770ce-199f-4a8e-80d5-7ca0fef1865e",
+          "basemaps",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 4326.0,
+          "max": 80335.0,
+          "mean": 54232.6,
+          "median": 80335.0
+        },
+        "null_rate": 0.6076
+      },
+      {
+        "name": "code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 233,
+        "examples": [
+          "4326",
+          "25832",
+          "cf2770ce-199f-4a8e-80d5-7ca0fef1865e",
+          "Landeshauptstadt München"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9831
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 233,
+        "examples": [
+          "11.3379",
+          "11.7938",
+          "48.019",
+          "48.2408"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3379,
+          "max": 48.2408,
+          "mean": 29.8479,
+          "median": 29.9064
+        },
+        "null_rate": 0.9831
+      },
+      {
+        "name": "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 235,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9916
+      },
+      {
+        "name": "referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 235,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9916
+      },
+      {
+        "name": "RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 235,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9916
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 235,
+        "examples": [
+          "1",
+          "false"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9916
+      },
+      {
+        "name": "referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 236,
+        "examples": [
+          "25832"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 25832.0,
+          "max": 25832.0,
+          "mean": 25832.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9958
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 236,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9958
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 236,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9958
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 236,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9958
+      },
+      {
+        "name": "EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 236,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9958
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "code.CharacterString",
+      "Decimal",
+      "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 374,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Mobilitätspunkte\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include CharacterString, code.CharacterString, Decimal.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"237\")\nm2 = ListItem(\"Columns\", \"386\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"CharacterString\",\"code.CharacterString\",\"Decimal\",\"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"RS_Identifier.code.CharacterString\",\"Boolean\",\"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"144\",\"233\",\"233\",\"235\",\"235\",\"235\",\"235\",\"236\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"CharacterString\", [4326.0,80335.0,54232.6,80335.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"CharacterString\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 374 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of CharacterString in Mobilitätspunkte.\",\n  \"query_result\": {\n    \"dataset_title\": \"Mobilitätspunkte\",\n    \"package_id\": \"b1f40df9-8643-4eb6-a61a-820a171b6e50\",\n    \"package_name\": \"opendata_ruhver_mp_standort_point\",\n    \"resource_id\": \"cba1243b-e30b-4ee5-a771-c11eb9b4d540\",\n    \"resource_name\": \"Metadaten (XML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Dieser Layer beinhaltet die Standorte der Mobilitätspunkte in München. Der Standort entspricht den Koordinaten der Informationsstele. Folgende Angebote stehen an den Mobilitätspunkten zur Verfügung: • Abstellflächen für geteilte Mikromobilitätsfahrzeuge, d.h. Fahrzeuge für Bikesharing, E-Tretrollersharing, E-Motorrollersharing und Lastenradsharing (Abstellflächen im jew. Layer des Fahrzeugtyps) • Abstellflächen für stationsbasiertes und allgemeines Carsharing (Abstellflächen im Layer „stationsba\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Karte\",\n      \"Mobilitätspunkte\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 237,\n    \"sampled_rows\": 237,\n    \"column_count\": 386,\n    \"columns\": [\n      {\n        \"name\": \"CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 93,\n        \"null_count\": 144,\n        \"examples\": [\n          \"cf2770ce-199f-4a8e-80d5-7ca0fef1865e\",\n          \"basemaps\",\n          \"WMS\",\n          \"GeodatenService München\",\n          \"Landeshauptstadt München - Kommunalreferat\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 4326.0,\n          \"max\": 80335.0,\n          \"mean\": 54232.6,\n          \"median\": 80335.0\n        },\n        \"null_rate\": 0.6076\n      },\n      {\n        \"name\": \"code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 4,\n        \"null_count\": 233,\n        \"examples\": [\n          \"4326\",\n          \"25832\",\n          \"cf2770ce-199f-4a8e-80d5-7ca0fef1865e\",\n          \"Landeshauptstadt München\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 4326.0,\n          \"max\": 25832.0,\n          \"mean\": 15079.0,\n          \"median\": 15079.0\n        },\n        \"null_rate\": 0.9831\n      },\n      {\n        \"name\": \"Decimal\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 4,\n        \"null_count\": 233,\n        \"examples\": [\n          \"11.3379\",\n          \"11.7938\",\n          \"48.019\",\n          \"48.2408\"\n        ],\n        \"numeric\": {\n          \"count\": 4.0,\n          \"min\": 11.3379,\n          \"max\": 48.2408,\n          \"mean\": 29.8479,\n          \"median\": 29.9064\n        },\n        \"null_rate\": 0.9831\n      },\n      {\n        \"name\": \"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 235,\n        \"examples\": [\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 4326.0,\n          \"max\": 25832.0,\n          \"mean\": 15079.0,\n          \"median\": 15079.0\n        },\n        \"null_rate\": 0.9916\n      },\n      {\n        \"name\": \"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 235,\n        \"examples\": [\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 4326.0,\n          \"max\": 25832.0,\n          \"mean\": 15079.0,\n          \"median\": 15079.0\n        },\n        \"null_rate\": 0.9916\n      },\n      {\n        \"name\": \"RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 235,\n        \"examples\": [\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 4326.0,\n          \"max\": 25832.0,\n          \"mean\": 15079.0,\n          \"median\": 15079.0\n        },\n        \"null_rate\": 0.9916\n      },\n      {\n        \"name\": \"Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 235,\n        \"examples\": [\n          \"1\",\n          \"false\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9916\n      },\n      {\n        \"name\": \"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 236,\n        \"examples\": [\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 25832.0,\n          \"max\": 25832.0,\n          \"mean\": 25832.0,\n          \"median\": 25832.0\n        },\n        \"null_rate\": 0.9958\n      },\n      {\n        \"name\": \"identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 236,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9958\n      },\n      {\n        \"name\": \"SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 236,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9958\n      },\n      {\n        \"name\": \"extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 236,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9958\n      },\n      {\n        \"name\": \"EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 236,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9958\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"CharacterString\",\n      \"code.CharacterString\",\n      \"Decimal\",\n      \"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"CharacterString\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Mobilitätspunkte\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include CharacterString, code.CharacterString, Decimal.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"237\")\nm2 = ListItem(\"Columns\", \"386\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"CharacterString\",\"code.CharacterString\",\"Decimal\",\"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"RS_Identifier.code.CharacterString\",\"Boolean\",\"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"144\",\"233\",\"233\",\"235\",\"235\",\"235\",\"235\",\"236\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"CharacterString\", [4326.0,80335.0,54232.6,80335.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"CharacterString\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 374 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

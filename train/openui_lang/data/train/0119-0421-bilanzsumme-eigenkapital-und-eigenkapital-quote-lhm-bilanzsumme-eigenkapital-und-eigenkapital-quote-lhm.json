@@ -1,0 +1,161 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of bilanzsumme in Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM.",
+  "query_result": {
+    "dataset_title": "Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM",
+    "package_id": "60944910-30fe-4f26-9be2-17f692579d4c",
+    "package_name": "bilanzsumme-eigenkapital-und-eigenkapital-quote-lhm",
+    "resource_id": "09e17132-2a74-4f83-bcce-cee366fd3328",
+    "resource_name": "Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM ",
+    "resource_format": "csv",
+    "description": "Darstellung der Entwicklung der Bilanzsummen, des Eigenkapitals sowie der Eigenkapitalquote der Landeshauptstadt München (LHM) ab dem Jahresabschluss 2009. Dabei ist die Bilanzsumme der Kernverwaltung mit rechtlich unselbstständigen Stiftungen. Das Eigenkapital ist jedoch ohne rechtlich unselbstständige Stiftungen, da dies in einer gesonderten Position dargestellt wird.",
+    "organization": "Stadtkämmerei der Landeshauptstadt München",
+    "tags": [
+      "Finanzen",
+      "Haushalt"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 16,
+    "sampled_rows": 16,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "bilanzsumme",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "2161232399898.00",
+          "2062481826200.00",
+          "2083000939400.00",
+          "2075593263900.00",
+          "2142631084400.00"
+        ],
+        "numeric": {
+          "count": 16.0,
+          "min": 28748117219.21,
+          "max": 2703202856361.0,
+          "mean": 1912497906725.0344,
+          "median": 2207431756849.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "eigenkapital",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "965002440800.00",
+          "983532114800.00",
+          "1044625938400.00",
+          "1113707963600.00",
+          "1164875810400.00"
+        ],
+        "numeric": {
+          "count": 16.0,
+          "min": 12531391738.0,
+          "max": 1346648875927.0,
+          "mean": 982722782244.3025,
+          "median": 1187726429550.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "EK-quote_prozent",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "44.7",
+          "47.7",
+          "50.2",
+          "53.7",
+          "54.4"
+        ],
+        "numeric": {
+          "count": 16.0,
+          "min": 40.0,
+          "max": 54.4,
+          "mean": 50.0563,
+          "median": 50.75
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013"
+        ],
+        "numeric": {
+          "count": 16.0,
+          "min": 2009.0,
+          "max": 2024.0,
+          "mean": 2016.5,
+          "median": 2016.5
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "bilanzsumme",
+      "eigenkapital",
+      "EK-quote_prozent"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "bilanzsumme"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM\", \"Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM\")\nsummary = TextContent(\"Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM belongs to Stadtkämmerei der Landeshauptstadt München. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include bilanzsumme, eigenkapital, EK-quote_prozent.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"16\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"bilanzsumme\",\"eigenkapital\",\"EK-quote_prozent\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"bilanzsumme\", [2161232399898.0,2062481826200.0,2083000939400.0,2075593263900.0,2142631084400.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"bilanzsumme\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of bilanzsumme in Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM.\",\n  \"query_result\": {\n    \"dataset_title\": \"Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM\",\n    \"package_id\": \"60944910-30fe-4f26-9be2-17f692579d4c\",\n    \"package_name\": \"bilanzsumme-eigenkapital-und-eigenkapital-quote-lhm\",\n    \"resource_id\": \"09e17132-2a74-4f83-bcce-cee366fd3328\",\n    \"resource_name\": \"Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM \",\n    \"resource_format\": \"csv\",\n    \"description\": \"Darstellung der Entwicklung der Bilanzsummen, des Eigenkapitals sowie der Eigenkapitalquote der Landeshauptstadt München (LHM) ab dem Jahresabschluss 2009. Dabei ist die Bilanzsumme der Kernverwaltung mit rechtlich unselbstständigen Stiftungen. Das Eigenkapital ist jedoch ohne rechtlich unselbstständige Stiftungen, da dies in einer gesonderten Position dargestellt wird.\",\n    \"organization\": \"Stadtkämmerei der Landeshauptstadt München\",\n    \"tags\": [\n      \"Finanzen\",\n      \"Haushalt\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 16,\n    \"sampled_rows\": 16,\n    \"column_count\": 5,\n    \"columns\": [\n      {\n        \"name\": \"bilanzsumme\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 16,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2161232399898.00\",\n          \"2062481826200.00\",\n          \"2083000939400.00\",\n          \"2075593263900.00\",\n          \"2142631084400.00\"\n        ],\n        \"numeric\": {\n          \"count\": 16.0,\n          \"min\": 28748117219.21,\n          \"max\": 2703202856361.0,\n          \"mean\": 1912497906725.0344,\n          \"median\": 2207431756849.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"eigenkapital\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 16,\n        \"null_count\": 0,\n        \"examples\": [\n          \"965002440800.00\",\n          \"983532114800.00\",\n          \"1044625938400.00\",\n          \"1113707963600.00\",\n          \"1164875810400.00\"\n        ],\n        \"numeric\": {\n          \"count\": 16.0,\n          \"min\": 12531391738.0,\n          \"max\": 1346648875927.0,\n          \"mean\": 982722782244.3025,\n          \"median\": 1187726429550.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"EK-quote_prozent\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 16,\n        \"null_count\": 0,\n        \"examples\": [\n          \"44.7\",\n          \"47.7\",\n          \"50.2\",\n          \"53.7\",\n          \"54.4\"\n        ],\n        \"numeric\": {\n          \"count\": 16.0,\n          \"min\": 40.0,\n          \"max\": 54.4,\n          \"mean\": 50.0563,\n          \"median\": 50.75\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 16,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2009\",\n          \"2010\",\n          \"2011\",\n          \"2012\",\n          \"2013\"\n        ],\n        \"numeric\": {\n          \"count\": 16.0,\n          \"min\": 2009.0,\n          \"max\": 2024.0,\n          \"mean\": 2016.5,\n          \"median\": 2016.5\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"bilanzsumme\",\n      \"eigenkapital\",\n      \"EK-quote_prozent\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"bilanzsumme\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM\", \"Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM\")\nsummary = TextContent(\"Bilanzsumme, Eigenkapital und Eigenkapital-Quote LHM belongs to Stadtkämmerei der Landeshauptstadt München. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include bilanzsumme, eigenkapital, EK-quote_prozent.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"16\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"bilanzsumme\",\"eigenkapital\",\"EK-quote_prozent\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"bilanzsumme\", [2161232399898.0,2062481826200.0,2083000939400.0,2075593263900.0,2142631084400.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"bilanzsumme\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

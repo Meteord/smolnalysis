@@ -1,0 +1,182 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (CSV) from Radentscheidmaßnahmen.",
+  "query_result": {
+    "dataset_title": "Radentscheidmaßnahmen",
+    "package_id": "a3b9ad1b-7de8-4aa1-a466-79abefba29b2",
+    "package_name": "opendata_radentscheid_line",
+    "resource_id": "d4d79d1b-73e5-4fdc-9805-d0075f896776",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Beschlossene Umbaumaßnahmen in der Landeshauptstadt München zur Stärkung der Fahrradinfrastruktur. Der Radentscheid München (REM) ist ein Bürgerbegehren, das einen wichtigen Schritt zur Verkehrswende darstellt und damit eine Neuverteilung des öffentlichen Raums vorsieht - zugunsten von Zu-Fuß-Gehenden, Radfahrenden und Nutzer*innen der öffentlichen Verkehrsmittel – für mehr Verkehrssicherheit und Umweltschutz. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/ra",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Radentscheid",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 58,
+    "sampled_rows": 58,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "sachstand",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 58,
+        "null_count": 0,
+        "examples": [
+          "in Bau / in Umsetzung (BAU)",
+          "Planung beschlossen (MOR)",
+          "Umsetzung beschlossen (BAU)",
+          "Umsetzung erfolgt (BAU)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 58,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((692107.842600847 5340018.718297927, 692144.7277008479 5340023.530397924, 692183.9882008488 5340027.127897923, 692242.37540085 5340031.21779791",
+          "MULTILINESTRING ((688683.7020007756 5336280.896498146, 688858.327300779 5336237.240198136, 689125.8216007844 5336165.802498121, 689381.4096007899 5336098.333598",
+          "MULTILINESTRING ((690799.1182008199 5334752.056398022, 690769.6806008192 5334749.660998024, 690527.1561008141 5334743.062498039, 690452.0516008126 5334741.64919",
+          "MULTILINESTRING ((687402.937900749 5338847.909898216, 687484.9341007507 5338915.87069821), (687550.6640007519 5338868.198898207, 687484.9341007507 5338915.87069",
+          "MULTILINESTRING ((691778.3876008416 5332716.711197962, 691787.0397008416 5332704.560397964, 691791.7853008417 5332695.555597962, 691797.6006008419 5332679.91449"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 58,
+        "null_count": 0,
+        "examples": [
+          "Domagkstraße",
+          "Abschnitt westlich der Landshuter Allee bis Stiglmaierplatz",
+          "Schwanthalerstraße zw. Paul-Heyse-Str. und Sonnenstraße",
+          "Knotenpunkt Dachauer Straße / Wintrichring / Georg-Brauchle-Ring einschl. Anschluss Feldmochinger Straße",
+          "Martin-Luther-Straße in Verbindung mit dem Giesinger Berg bis zur Plattnerstraße"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung_kurz",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 58,
+        "null_count": 0,
+        "examples": [
+          "Domagkstraße",
+          "Nymphenburger Straße",
+          "Schwanthalerstraße",
+          "Dachauer Str. / Wintrich- / Georg-Brauchle-Ring",
+          "Martin-Luther-Straße / Giesinger Berg"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "link_pdf",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 56,
+        "null_count": 2,
+        "examples": [
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/domagkstrasse/pdf",
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/nymphenburger-strasse/pdf",
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/schwanthalerstrasse/pdf",
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/knotenpunkt-dachauer-strasse-wintrichring-georg-brauchle-ring/pdf",
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/giesinger-berg-martin-luther-strasse/pdf"
+        ],
+        "null_rate": 0.0345
+      },
+      {
+        "name": "link_folien",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 21,
+        "null_count": 37,
+        "examples": [
+          "https://muenchenunterwegs.de/content/854/download/220728-domagkstrasse-prasentation-ov-final-1.pdf",
+          "https://muenchenunterwegs.de/content/854/download/20240227-vorstellung-p-heyse-str-schwanth-1.pdf",
+          "https://muenchenunterwegs.de/content/854/download/230720-knoten-dah-prasentation.pdf",
+          "https://muenchenunterwegs.de/content/854/download/2022-06-29-martin-luther-strasse-offentlichkeitsveranstaltung-fin2-1-1.pdf",
+          "https://muenchenunterwegs.de/content/854/download/210623-vorstellung-querung-stadelheimer-strasse-2-1.pdf"
+        ],
+        "null_rate": 0.6379
+      },
+      {
+        "name": "link_stadtratsbeschluss",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 13,
+        "null_count": 45,
+        "examples": [
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7577040",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/8396565",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7738901",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7298792",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/6628153"
+        ],
+        "null_rate": 0.7759
+      },
+      {
+        "name": "link_video",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 6,
+        "null_count": 52,
+        "examples": [
+          "https://youtu.be/SA5vXT7z_es",
+          "https://youtu.be/XlGhGyE6u68",
+          "https://youtu.be/sg1eyb71ugQ",
+          "https://www.youtube.com/watch?v=T4OhPRR3EAM",
+          "https://youtu.be/jWWWsmqBSD0"
+        ],
+        "null_rate": 0.8966
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "sachstand"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radentscheidmaßnahmen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 8 profiled columns for OpenUI rendering. Categorical fields include sachstand.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"58\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"4.25\")\nc1 = Col(\"Column\", [\"sachstand\",\"shape\",\"bezeichnung\",\"bezeichnung_kurz\",\"link_pdf\",\"link_folien\",\"link_stadtratsbeschluss\",\"link_video\"], \"string\")\nc2 = Col(\"Kind\", [\"category\",\"geospatial\",\"string\",\"string\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"2\",\"37\",\"45\",\"52\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Create a compact OpenUI summary for WFS (CSV) from Radentscheidmaßnahmen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Radentscheidmaßnahmen\",\n    \"package_id\": \"a3b9ad1b-7de8-4aa1-a466-79abefba29b2\",\n    \"package_name\": \"opendata_radentscheid_line\",\n    \"resource_id\": \"d4d79d1b-73e5-4fdc-9805-d0075f896776\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Beschlossene Umbaumaßnahmen in der Landeshauptstadt München zur Stärkung der Fahrradinfrastruktur. Der Radentscheid München (REM) ist ein Bürgerbegehren, das einen wichtigen Schritt zur Verkehrswende darstellt und damit eine Neuverteilung des öffentlichen Raums vorsieht - zugunsten von Zu-Fuß-Gehenden, Radfahrenden und Nutzer*innen der öffentlichen Verkehrsmittel – für mehr Verkehrssicherheit und Umweltschutz. Mehr Informationen erhalten Sie hier: <a target=\\\"_blank\\\" href=\\\"muenchenunterwegs.de/ra\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Karte\",\n      \"Radentscheid\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 58,\n    \"sampled_rows\": 58,\n    \"column_count\": 9,\n    \"columns\": [\n      {\n        \"name\": \"sachstand\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 58,\n        \"null_count\": 0,\n        \"examples\": [\n          \"in Bau / in Umsetzung (BAU)\",\n          \"Planung beschlossen (MOR)\",\n          \"Umsetzung beschlossen (BAU)\",\n          \"Umsetzung erfolgt (BAU)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 58,\n        \"null_count\": 0,\n        \"examples\": [\n          \"MULTILINESTRING ((692107.842600847 5340018.718297927, 692144.7277008479 5340023.530397924, 692183.9882008488 5340027.127897923, 692242.37540085 5340031.21779791\",\n          \"MULTILINESTRING ((688683.7020007756 5336280.896498146, 688858.327300779 5336237.240198136, 689125.8216007844 5336165.802498121, 689381.4096007899 5336098.333598\",\n          \"MULTILINESTRING ((690799.1182008199 5334752.056398022, 690769.6806008192 5334749.660998024, 690527.1561008141 5334743.062498039, 690452.0516008126 5334741.64919\",\n          \"MULTILINESTRING ((687402.937900749 5338847.909898216, 687484.9341007507 5338915.87069821), (687550.6640007519 5338868.198898207, 687484.9341007507 5338915.87069\",\n          \"MULTILINESTRING ((691778.3876008416 5332716.711197962, 691787.0397008416 5332704.560397964, 691791.7853008417 5332695.555597962, 691797.6006008419 5332679.91449\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bezeichnung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 58,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Domagkstraße\",\n          \"Abschnitt westlich der Landshuter Allee bis Stiglmaierplatz\",\n          \"Schwanthalerstraße zw. Paul-Heyse-Str. und Sonnenstraße\",\n          \"Knotenpunkt Dachauer Straße / Wintrichring / Georg-Brauchle-Ring einschl. Anschluss Feldmochinger Straße\",\n          \"Martin-Luther-Straße in Verbindung mit dem Giesinger Berg bis zur Plattnerstraße\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bezeichnung_kurz\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 58,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Domagkstraße\",\n          \"Nymphenburger Straße\",\n          \"Schwanthalerstraße\",\n          \"Dachauer Str. / Wintrich- / Georg-Brauchle-Ring\",\n          \"Martin-Luther-Straße / Giesinger Berg\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"link_pdf\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 56,\n        \"null_count\": 2,\n        \"examples\": [\n          \"https://muenchenunterwegs.de/radentscheid/massnahmen/domagkstrasse/pdf\",\n          \"https://muenchenunterwegs.de/radentscheid/massnahmen/nymphenburger-strasse/pdf\",\n          \"https://muenchenunterwegs.de/radentscheid/massnahmen/schwanthalerstrasse/pdf\",\n          \"https://muenchenunterwegs.de/radentscheid/massnahmen/knotenpunkt-dachauer-strasse-wintrichring-georg-brauchle-ring/pdf\",\n          \"https://muenchenunterwegs.de/radentscheid/massnahmen/giesinger-berg-martin-luther-strasse/pdf\"\n        ],\n        \"null_rate\": 0.0345\n      },\n      {\n        \"name\": \"link_folien\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 21,\n        \"null_count\": 37,\n        \"examples\": [\n          \"https://muenchenunterwegs.de/content/854/download/220728-domagkstrasse-prasentation-ov-final-1.pdf\",\n          \"https://muenchenunterwegs.de/content/854/download/20240227-vorstellung-p-heyse-str-schwanth-1.pdf\",\n          \"https://muenchenunterwegs.de/content/854/download/230720-knoten-dah-prasentation.pdf\",\n          \"https://muenchenunterwegs.de/content/854/download/2022-06-29-martin-luther-strasse-offentlichkeitsveranstaltung-fin2-1-1.pdf\",\n          \"https://muenchenunterwegs.de/content/854/download/210623-vorstellung-querung-stadelheimer-strasse-2-1.pdf\"\n        ],\n        \"null_rate\": 0.6379\n      },\n      {\n        \"name\": \"link_stadtratsbeschluss\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 13,\n        \"null_count\": 45,\n        \"examples\": [\n          \"https://risi.muenchen.de/risi/sitzungsvorlage/detail/7577040\",\n          \"https://risi.muenchen.de/risi/sitzungsvorlage/detail/8396565\",\n          \"https://risi.muenchen.de/risi/sitzungsvorlage/detail/7738901\",\n          \"https://risi.muenchen.de/risi/sitzungsvorlage/detail/7298792\",\n          \"https://risi.muenchen.de/risi/sitzungsvorlage/detail/6628153\"\n        ],\n        \"null_rate\": 0.7759\n      },\n      {\n        \"name\": \"link_video\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 6,\n        \"null_count\": 52,\n        \"examples\": [\n          \"https://youtu.be/SA5vXT7z_es\",\n          \"https://youtu.be/XlGhGyE6u68\",\n          \"https://youtu.be/sg1eyb71ugQ\",\n          \"https://www.youtube.com/watch?v=T4OhPRR3EAM\",\n          \"https://youtu.be/jWWWsmqBSD0\"\n        ],\n        \"null_rate\": 0.8966\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [],\n    \"category_columns\": [\n      \"sachstand\"\n    ],\n    \"time_columns\": []\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radentscheidmaßnahmen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 8 profiled columns for OpenUI rendering. Categorical fields include sachstand.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"58\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"4.25\")\nc1 = Col(\"Column\", [\"sachstand\",\"shape\",\"bezeichnung\",\"bezeichnung_kurz\",\"link_pdf\",\"link_folien\",\"link_stadtratsbeschluss\",\"link_video\"], \"string\")\nc2 = Col(\"Kind\", [\"category\",\"geospatial\",\"string\",\"string\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"2\",\"37\",\"45\",\"52\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

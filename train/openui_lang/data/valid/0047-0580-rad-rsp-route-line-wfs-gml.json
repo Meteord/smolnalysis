@@ -1,0 +1,261 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of rad_rsp_route_line.status in Radlstadtplan (Ausgeschildertes Radlnetz).",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Ausgeschildertes Radlnetz)",
+    "package_id": "66a47d1b-e108-48f4-be29-ef6347a4d386",
+    "package_name": "rad_rsp_route_line",
+    "resource_id": "c1131dd0-d69f-4e11-b7d1-67e3fde48255",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Das beschilderte Hauptroutennetz für Radler*innen in München besteht aus vierzehn sternförmig vom Marienplatz ausgehenden Strecken sowie dem Inneren und dem Äußeren Radlring. Darüber hinaus sind der Isarradweg, der Würmradweg und der Nymphenburgradweg als Routen beschildert. Für alle Teile des Münchner Radlnetzes gilt: An größeren Kreuzungen und dort, wo sich die Richtung ändert, sind weiß-grüne Schilder zur Orientierung angebracht, die mit Kilometerangaben sowohl wichtige Orte in der Nähe (Sehe",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Radwege",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 760,
+    "sampled_rows": 760,
+    "column_count": 27,
+    "columns": [
+      {
+        "name": "rad_rsp_route_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 39,
+        "null_count": 721,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 39.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9487
+      },
+      {
+        "name": "rad_rsp_route_line.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 39,
+        "null_count": 721,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 39.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9487
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 39,
+        "null_count": 721,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 39.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9487
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 39,
+        "null_count": 721,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 39.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9487
+      },
+      {
+        "name": "featureMember.rad_rsp_route_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 759,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9987
+      },
+      {
+        "name": "featureMember.rad_rsp_route_line.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 759,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9987
+      },
+      {
+        "name": "LineString.coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 301,
+        "null_count": 459,
+        "examples": [
+          "680618.17250062,5331311.86449856 680581.99490062,5331261.98809856 680557.22500062,5331238.17079856 680541.02930062,5331221.97509856 680498.15820062,5331192.4416",
+          "689320.79490079,5330026.82239812 689515.44830079,5329959.80169811",
+          "689334.15250079,5327749.71999812 689361.91100079,5327753.83059812 689362.21290079,5327759.66799812 689361.88320079,5327768.12859812 689364.56030079,5327780.9427",
+          "689140.30040079,5327735.25399813 689124.06150079,5327745.29869814 689097.77410079,5327753.51349814 689070.25440078,5327753.10279814 689062.03960078,5327751.0490",
+          "688893.07390078,5335350.38499813 688891.17910078,5335335.46769814 688890.26100078,5335313.89199814 688891.40860078,5335258.57579814 688891.09350078,5335054.6152"
+        ],
+        "null_rate": 0.6039
+      },
+      {
+        "name": "coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 301,
+        "null_count": 459,
+        "examples": [
+          "680618.17250062,5331311.86449856 680581.99490062,5331261.98809856 680557.22500062,5331238.17079856 680541.02930062,5331221.97509856 680498.15820062,5331192.4416",
+          "689320.79490079,5330026.82239812 689515.44830079,5329959.80169811",
+          "689334.15250079,5327749.71999812 689361.91100079,5327753.83059812 689362.21290079,5327759.66799812 689361.88320079,5327768.12859812 689364.56030079,5327780.9427",
+          "689140.30040079,5327735.25399813 689124.06150079,5327745.29869814 689097.77410079,5327753.51349814 689070.25440078,5327753.10279814 689062.03960078,5327751.0490",
+          "688893.07390078,5335350.38499813 688891.17910078,5335335.46769814 688890.26100078,5335313.89199814 688891.40860078,5335258.57579814 688891.09350078,5335054.6152"
+        ],
+        "null_rate": 0.6039
+      },
+      {
+        "name": "rad_rsp_route_line.shape.MultiLineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 39,
+        "null_count": 721,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.9487
+      },
+      {
+        "name": "rad_rsp_route_line.shape.MultiLineString.lineStringMember.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 39,
+        "null_count": 721,
+        "examples": [
+          "680618.17250062,5331311.86449856 680581.99490062,5331261.98809856 680557.22500062,5331238.17079856 680541.02930062,5331221.97509856 680498.15820062,5331192.4416",
+          "689320.79490079,5330026.82239812 689515.44830079,5329959.80169811",
+          "689334.15250079,5327749.71999812 689361.91100079,5327753.83059812 689362.21290079,5327759.66799812 689361.88320079,5327768.12859812 689364.56030079,5327780.9427",
+          "689140.30040079,5327735.25399813 689124.06150079,5327745.29869814 689097.77410079,5327753.51349814 689070.25440078,5327753.10279814 689062.03960078,5327751.0490",
+          "688893.07390078,5335350.38499813 688891.17910078,5335335.46769814 688890.26100078,5335313.89199814 688891.40860078,5335258.57579814 688891.09350078,5335054.6152"
+        ],
+        "null_rate": 0.9487
+      },
+      {
+        "name": "shape.MultiLineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 39,
+        "null_count": 721,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.9487
+      },
+      {
+        "name": "shape.MultiLineString.lineStringMember.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 39,
+        "null_count": 721,
+        "examples": [
+          "680618.17250062,5331311.86449856 680581.99490062,5331261.98809856 680557.22500062,5331238.17079856 680541.02930062,5331221.97509856 680498.15820062,5331192.4416",
+          "689320.79490079,5330026.82239812 689515.44830079,5329959.80169811",
+          "689334.15250079,5327749.71999812 689361.91100079,5327753.83059812 689362.21290079,5327759.66799812 689361.88320079,5327768.12859812 689364.56030079,5327780.9427",
+          "689140.30040079,5327735.25399813 689124.06150079,5327745.29869814 689097.77410079,5327753.51349814 689070.25440078,5327753.10279814 689062.03960078,5327751.0490",
+          "688893.07390078,5335350.38499813 688891.17910078,5335335.46769814 688890.26100078,5335313.89199814 688891.40860078,5335258.57579814 688891.09350078,5335054.6152"
+        ],
+        "null_rate": 0.9487
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_rsp_route_line.status",
+      "rad_rsp_route_line.planungsstatus",
+      "status",
+      "planungsstatus"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "rad_rsp_route_line.status"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 14,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radlstadtplan (Ausgeschildertes Radlnetz)\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include rad_rsp_route_line.status, rad_rsp_route_line.planungsstatus, status.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"760\")\nm2 = ListItem(\"Columns\", \"27\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"rad_rsp_route_line.status\",\"rad_rsp_route_line.planungsstatus\",\"status\",\"planungsstatus\",\"featureMember.rad_rsp_route_line.status\",\"featureMember.rad_rsp_route_line.planungsstatus\",\"LineString.coordinates\",\"coordinates\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"721\",\"721\",\"721\",\"721\",\"759\",\"759\",\"459\",\"459\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"rad_rsp_route_line.status\", [2.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"rad_rsp_route_line.status\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 14 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of rad_rsp_route_line.status in Radlstadtplan (Ausgeschildertes Radlnetz).\",\n  \"query_result\": {\n    \"dataset_title\": \"Radlstadtplan (Ausgeschildertes Radlnetz)\",\n    \"package_id\": \"66a47d1b-e108-48f4-be29-ef6347a4d386\",\n    \"package_name\": \"rad_rsp_route_line\",\n    \"resource_id\": \"c1131dd0-d69f-4e11-b7d1-67e3fde48255\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Das beschilderte Hauptroutennetz für Radler*innen in München besteht aus vierzehn sternförmig vom Marienplatz ausgehenden Strecken sowie dem Inneren und dem Äußeren Radlring. Darüber hinaus sind der Isarradweg, der Würmradweg und der Nymphenburgradweg als Routen beschildert. Für alle Teile des Münchner Radlnetzes gilt: An größeren Kreuzungen und dort, wo sich die Richtung ändert, sind weiß-grüne Schilder zur Orientierung angebracht, die mit Kilometerangaben sowohl wichtige Orte in der Nähe (Sehe\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Radwege\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": 760,\n    \"sampled_rows\": 760,\n    \"column_count\": 27,\n    \"columns\": [\n      {\n        \"name\": \"rad_rsp_route_line.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 39,\n        \"null_count\": 721,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 39.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.9487\n      },\n      {\n        \"name\": \"rad_rsp_route_line.planungsstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 39,\n        \"null_count\": 721,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 39.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.9487\n      },\n      {\n        \"name\": \"status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 39,\n        \"null_count\": 721,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 39.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.9487\n      },\n      {\n        \"name\": \"planungsstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 39,\n        \"null_count\": 721,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 39.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.9487\n      },\n      {\n        \"name\": \"featureMember.rad_rsp_route_line.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 759,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.9987\n      },\n      {\n        \"name\": \"featureMember.rad_rsp_route_line.planungsstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 759,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.9987\n      },\n      {\n        \"name\": \"LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 301,\n        \"null_count\": 459,\n        \"examples\": [\n          \"680618.17250062,5331311.86449856 680581.99490062,5331261.98809856 680557.22500062,5331238.17079856 680541.02930062,5331221.97509856 680498.15820062,5331192.4416\",\n          \"689320.79490079,5330026.82239812 689515.44830079,5329959.80169811\",\n          \"689334.15250079,5327749.71999812 689361.91100079,5327753.83059812 689362.21290079,5327759.66799812 689361.88320079,5327768.12859812 689364.56030079,5327780.9427\",\n          \"689140.30040079,5327735.25399813 689124.06150079,5327745.29869814 689097.77410079,5327753.51349814 689070.25440078,5327753.10279814 689062.03960078,5327751.0490\",\n          \"688893.07390078,5335350.38499813 688891.17910078,5335335.46769814 688890.26100078,5335313.89199814 688891.40860078,5335258.57579814 688891.09350078,5335054.6152\"\n        ],\n        \"null_rate\": 0.6039\n      },\n      {\n        \"name\": \"coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 301,\n        \"null_count\": 459,\n        \"examples\": [\n          \"680618.17250062,5331311.86449856 680581.99490062,5331261.98809856 680557.22500062,5331238.17079856 680541.02930062,5331221.97509856 680498.15820062,5331192.4416\",\n          \"689320.79490079,5330026.82239812 689515.44830079,5329959.80169811\",\n          \"689334.15250079,5327749.71999812 689361.91100079,5327753.83059812 689362.21290079,5327759.66799812 689361.88320079,5327768.12859812 689364.56030079,5327780.9427\",\n          \"689140.30040079,5327735.25399813 689124.06150079,5327745.29869814 689097.77410079,5327753.51349814 689070.25440078,5327753.10279814 689062.03960078,5327751.0490\",\n          \"688893.07390078,5335350.38499813 688891.17910078,5335335.46769814 688890.26100078,5335313.89199814 688891.40860078,5335258.57579814 688891.09350078,5335054.6152\"\n        ],\n        \"null_rate\": 0.6039\n      },\n      {\n        \"name\": \"rad_rsp_route_line.shape.MultiLineString.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 39,\n        \"null_count\": 721,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.9487\n      },\n      {\n        \"name\": \"rad_rsp_route_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 39,\n        \"null_count\": 721,\n        \"examples\": [\n          \"680618.17250062,5331311.86449856 680581.99490062,5331261.98809856 680557.22500062,5331238.17079856 680541.02930062,5331221.97509856 680498.15820062,5331192.4416\",\n          \"689320.79490079,5330026.82239812 689515.44830079,5329959.80169811\",\n          \"689334.15250079,5327749.71999812 689361.91100079,5327753.83059812 689362.21290079,5327759.66799812 689361.88320079,5327768.12859812 689364.56030079,5327780.9427\",\n          \"689140.30040079,5327735.25399813 689124.06150079,5327745.29869814 689097.77410079,5327753.51349814 689070.25440078,5327753.10279814 689062.03960078,5327751.0490\",\n          \"688893.07390078,5335350.38499813 688891.17910078,5335335.46769814 688890.26100078,5335313.89199814 688891.40860078,5335258.57579814 688891.09350078,5335054.6152\"\n        ],\n        \"null_rate\": 0.9487\n      },\n      {\n        \"name\": \"shape.MultiLineString.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 39,\n        \"null_count\": 721,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.9487\n      },\n      {\n        \"name\": \"shape.MultiLineString.lineStringMember.LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 39,\n        \"null_count\": 721,\n        \"examples\": [\n          \"680618.17250062,5331311.86449856 680581.99490062,5331261.98809856 680557.22500062,5331238.17079856 680541.02930062,5331221.97509856 680498.15820062,5331192.4416\",\n          \"689320.79490079,5330026.82239812 689515.44830079,5329959.80169811\",\n          \"689334.15250079,5327749.71999812 689361.91100079,5327753.83059812 689362.21290079,5327759.66799812 689361.88320079,5327768.12859812 689364.56030079,5327780.9427\",\n          \"689140.30040079,5327735.25399813 689124.06150079,5327745.29869814 689097.77410079,5327753.51349814 689070.25440078,5327753.10279814 689062.03960078,5327751.0490\",\n          \"688893.07390078,5335350.38499813 688891.17910078,5335335.46769814 688890.26100078,5335313.89199814 688891.40860078,5335258.57579814 688891.09350078,5335054.6152\"\n        ],\n        \"null_rate\": 0.9487\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"rad_rsp_route_line.status\",\n      \"rad_rsp_route_line.planungsstatus\",\n      \"status\",\n      \"planungsstatus\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"rad_rsp_route_line.status\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radlstadtplan (Ausgeschildertes Radlnetz)\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include rad_rsp_route_line.status, rad_rsp_route_line.planungsstatus, status.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"760\")\nm2 = ListItem(\"Columns\", \"27\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"rad_rsp_route_line.status\",\"rad_rsp_route_line.planungsstatus\",\"status\",\"planungsstatus\",\"featureMember.rad_rsp_route_line.status\",\"featureMember.rad_rsp_route_line.planungsstatus\",\"LineString.coordinates\",\"coordinates\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"721\",\"721\",\"721\",\"721\",\"759\",\"759\",\"459\",\"459\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"rad_rsp_route_line.status\", [2.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"rad_rsp_route_line.status\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 14 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

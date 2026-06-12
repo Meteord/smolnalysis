@@ -1,0 +1,143 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of sb_nummer in Stadtbezirke.",
+  "query_result": {
+    "dataset_title": "Stadtbezirke",
+    "package_id": "906f9c9b-5416-4168-86fe-44aa7c2ac486",
+    "package_name": "vablock_stadtbezirke_opendata",
+    "resource_id": "71131e89-a9d0-4fe5-8816-4d1e380f4805",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den 25 Stadtbezirken der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 27,
+    "sampled_rows": 27,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "sb_nummer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 27,
+        "null_count": 0,
+        "examples": [
+          4,
+          19,
+          15,
+          21,
+          2
+        ],
+        "numeric": {
+          "count": 27.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.4074,
+          "median": 14.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "flaeche_qm",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 27,
+        "null_count": 0,
+        "examples": [
+          4363287.49516,
+          17763489.71034,
+          22453921.62629,
+          16497538.92504,
+          4401650.66894
+        ],
+        "numeric": {
+          "count": 27.0,
+          "min": 2070313.1777,
+          "max": 34057321.8029,
+          "mean": 12464798.1688,
+          "median": 9223789.3511
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 27,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((691821.8368008411 5339259.124697947, 691767.2908008397 5339263.317497951, 691722.8645008388 5339268.3197979545, 691549.2958008351 5339287.898797965, 6",
+          "POLYGON ((685540.4664007145 5327534.649198331, 685543.4101007145 5327538.092298331, 685533.9111007145 5327546.266598333, 685526.6701007142 5327552.494698332, 68",
+          "POLYGON ((689968.495500803 5331316.3958980795, 689963.030200803 5331316.44229808, 689962.9825008028 5331314.578798079, 689958.3600008027 5331314.56879808, 68995",
+          "POLYGON ((698523.6245009969 5337387.298797457, 698428.4384009946 5337405.859497464, 698326.8793009921 5337432.9110974725, 698326.1116009919 5337394.332997472, 6",
+          "POLYGON ((682919.3568006638 5338681.105898444, 682929.1308006641 5338739.673298444, 682932.484100664 5338790.021698444, 682927.5653006639 5338848.870298443, 682"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sb_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 27,
+        "null_count": 0,
+        "examples": [
+          "Schwabing-West",
+          "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln",
+          "Trudering-Riem",
+          "Pasing-Obermenzing",
+          "Ludwigsvorstadt-Isarvorstadt"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "sb_nummer",
+      "flaeche_qm"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "sb_nummer"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtbezirke\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include sb_nummer, flaeche_qm.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"27\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.25\")\nc1 = Col(\"Column\", [\"sb_nummer\",\"flaeche_qm\",\"shape\",\"sb_name\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"float64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"sb_nummer\", [4.0,19.0,15.0,21.0,2.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"sb_nummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of sb_nummer in Stadtbezirke.\",\n  \"query_result\": {\n    \"dataset_title\": \"Stadtbezirke\",\n    \"package_id\": \"906f9c9b-5416-4168-86fe-44aa7c2ac486\",\n    \"package_name\": \"vablock_stadtbezirke_opendata\",\n    \"resource_id\": \"71131e89-a9d0-4fe5-8816-4d1e380f4805\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Flächenhafte Darstellung der Verwaltungsgrenzen von den 25 Stadtbezirken der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Planungsunterlagen\",\n      \"opendata\"\n    ],\n    \"groups\": [],\n    \"row_count\": 27,\n    \"sampled_rows\": 27,\n    \"column_count\": 5,\n    \"columns\": [\n      {\n        \"name\": \"sb_nummer\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 27,\n        \"null_count\": 0,\n        \"examples\": [\n          4,\n          19,\n          15,\n          21,\n          2\n        ],\n        \"numeric\": {\n          \"count\": 27.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 13.4074,\n          \"median\": 14.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"flaeche_qm\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 27,\n        \"null_count\": 0,\n        \"examples\": [\n          4363287.49516,\n          17763489.71034,\n          22453921.62629,\n          16497538.92504,\n          4401650.66894\n        ],\n        \"numeric\": {\n          \"count\": 27.0,\n          \"min\": 2070313.1777,\n          \"max\": 34057321.8029,\n          \"mean\": 12464798.1688,\n          \"median\": 9223789.3511\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 27,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POLYGON ((691821.8368008411 5339259.124697947, 691767.2908008397 5339263.317497951, 691722.8645008388 5339268.3197979545, 691549.2958008351 5339287.898797965, 6\",\n          \"POLYGON ((685540.4664007145 5327534.649198331, 685543.4101007145 5327538.092298331, 685533.9111007145 5327546.266598333, 685526.6701007142 5327552.494698332, 68\",\n          \"POLYGON ((689968.495500803 5331316.3958980795, 689963.030200803 5331316.44229808, 689962.9825008028 5331314.578798079, 689958.3600008027 5331314.56879808, 68995\",\n          \"POLYGON ((698523.6245009969 5337387.298797457, 698428.4384009946 5337405.859497464, 698326.8793009921 5337432.9110974725, 698326.1116009919 5337394.332997472, 6\",\n          \"POLYGON ((682919.3568006638 5338681.105898444, 682929.1308006641 5338739.673298444, 682932.484100664 5338790.021698444, 682927.5653006639 5338848.870298443, 682\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"sb_name\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 27,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Schwabing-West\",\n          \"Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln\",\n          \"Trudering-Riem\",\n          \"Pasing-Obermenzing\",\n          \"Ludwigsvorstadt-Isarvorstadt\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"sb_nummer\",\n      \"flaeche_qm\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"sb_nummer\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtbezirke\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include sb_nummer, flaeche_qm.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"27\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.25\")\nc1 = Col(\"Column\", [\"sb_nummer\",\"flaeche_qm\",\"shape\",\"sb_name\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"float64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"sb_nummer\", [4.0,19.0,15.0,21.0,2.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"sb_nummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

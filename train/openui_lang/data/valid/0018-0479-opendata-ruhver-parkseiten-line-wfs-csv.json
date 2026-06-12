@@ -1,0 +1,195 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of angebot in Parkseiten.",
+  "query_result": {
+    "dataset_title": "Parkseiten",
+    "package_id": "5a06c81c-ce1c-41cf-9113-c3284360af07",
+    "package_name": "opendata_ruhver_parkseiten_line",
+    "resource_id": "0a0173b3-558f-42a3-80ba-55357b993ffc",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Eine Parkseite umfasst die Anzahl der Parkplätze, die entsprechende Parkregelung und weitere Attribute.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "angebot",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          32,
+          31,
+          17,
+          6,
+          5
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 64.0,
+          "mean": 15.261,
+          "median": 14.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "LINESTRING (691533.5644008361 5333053.363097979, 691678.9265008392 5332930.023497969)",
+          "LINESTRING (691535.6310008361 5333058.680797978, 691682.1419008394 5332934.96779797)",
+          "LINESTRING (691715.7321008401 5333191.238597966, 691766.9583008412 5333201.267297964)",
+          "LINESTRING (691646.5145008385 5333220.589497971, 691634.2038008382 5333232.720097972)",
+          "LINESTRING (691626.547500838 5333224.209497972, 691646.0924008384 5333205.025897971)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "parkregel_beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Bewohnerparken 9-23 Uhr",
+          "Kurzzeitparken 2h 9-23 Uhr, Bewohnerparken 18-23 Uhr",
+          "Kurzzeitparken 2h 9-19 Uhr, Mischparken 19-23 Uhr",
+          "Mischparken 9-18 Uhr, Bewohnerparken 18-23 Uhr",
+          "Mischparken 9-23 Uhr"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "parkregel_gruppe",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Bewohnerparken",
+          "Kurzzeitparken",
+          "Mischparken",
+          "E-Parken",
+          "Absolutes Halteverbot (0-24 Uhr)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "parkregel_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Bew 9-23",
+          "KZP 2h 9-23, Bew frei 18-23",
+          "KZP 2h 9-19, M 19-23",
+          "M 9-18, Bew 18-23",
+          "M 9-23"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "geoportal_class",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Bewohnerparken",
+          "Kurzzeitparken",
+          "Mischparken",
+          "E-Parken",
+          "Absolutes Halteverbot"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 999,
+        "null_count": 1,
+        "examples": [
+          "Edlingerstr.",
+          "Schlotthauerstr.",
+          "Entenbachstr.",
+          "Sommerstr.",
+          "Rosenheimer Str."
+        ],
+        "null_rate": 0.001
+      },
+      {
+        "name": "prm_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 989,
+        "null_count": 11,
+        "examples": [
+          "Südliche Au",
+          "Franziskanerstraße",
+          "West Schwabing",
+          "Bayernplatz",
+          "Barbarastraße"
+        ],
+        "null_rate": 0.011
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "angebot"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "angebot"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Parkseiten\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 8 profiled columns for OpenUI rendering. Numeric fields include angebot.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"angebot\",\"shape\",\"parkregel_beschreibung\",\"parkregel_gruppe\",\"parkregel_name\",\"geoportal_class\",\"strasse\",\"prm_name\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"geospatial\",\"string\",\"string\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"11\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"angebot\", [32.0,31.0,17.0,6.0,5.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"angebot\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 2 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of angebot in Parkseiten.\",\n  \"query_result\": {\n    \"dataset_title\": \"Parkseiten\",\n    \"package_id\": \"5a06c81c-ce1c-41cf-9113-c3284360af07\",\n    \"package_name\": \"opendata_ruhver_parkseiten_line\",\n    \"resource_id\": \"0a0173b3-558f-42a3-80ba-55357b993ffc\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Eine Parkseite umfasst die Anzahl der Parkplätze, die entsprechende Parkregelung und weitere Attribute.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"angebot\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          32,\n          31,\n          17,\n          6,\n          5\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 0.0,\n          \"max\": 64.0,\n          \"mean\": 15.261,\n          \"median\": 14.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"LINESTRING (691533.5644008361 5333053.363097979, 691678.9265008392 5332930.023497969)\",\n          \"LINESTRING (691535.6310008361 5333058.680797978, 691682.1419008394 5332934.96779797)\",\n          \"LINESTRING (691715.7321008401 5333191.238597966, 691766.9583008412 5333201.267297964)\",\n          \"LINESTRING (691646.5145008385 5333220.589497971, 691634.2038008382 5333232.720097972)\",\n          \"LINESTRING (691626.547500838 5333224.209497972, 691646.0924008384 5333205.025897971)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"parkregel_beschreibung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Bewohnerparken 9-23 Uhr\",\n          \"Kurzzeitparken 2h 9-23 Uhr, Bewohnerparken 18-23 Uhr\",\n          \"Kurzzeitparken 2h 9-19 Uhr, Mischparken 19-23 Uhr\",\n          \"Mischparken 9-18 Uhr, Bewohnerparken 18-23 Uhr\",\n          \"Mischparken 9-23 Uhr\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"parkregel_gruppe\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Bewohnerparken\",\n          \"Kurzzeitparken\",\n          \"Mischparken\",\n          \"E-Parken\",\n          \"Absolutes Halteverbot (0-24 Uhr)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"parkregel_name\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Bew 9-23\",\n          \"KZP 2h 9-23, Bew frei 18-23\",\n          \"KZP 2h 9-19, M 19-23\",\n          \"M 9-18, Bew 18-23\",\n          \"M 9-23\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"geoportal_class\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Bewohnerparken\",\n          \"Kurzzeitparken\",\n          \"Mischparken\",\n          \"E-Parken\",\n          \"Absolutes Halteverbot\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"strasse\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 999,\n        \"null_count\": 1,\n        \"examples\": [\n          \"Edlingerstr.\",\n          \"Schlotthauerstr.\",\n          \"Entenbachstr.\",\n          \"Sommerstr.\",\n          \"Rosenheimer Str.\"\n        ],\n        \"null_rate\": 0.001\n      },\n      {\n        \"name\": \"prm_name\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 989,\n        \"null_count\": 11,\n        \"examples\": [\n          \"Südliche Au\",\n          \"Franziskanerstraße\",\n          \"West Schwabing\",\n          \"Bayernplatz\",\n          \"Barbarastraße\"\n        ],\n        \"null_rate\": 0.011\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"angebot\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"angebot\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Parkseiten\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 8 profiled columns for OpenUI rendering. Numeric fields include angebot.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"angebot\",\"shape\",\"parkregel_beschreibung\",\"parkregel_gruppe\",\"parkregel_name\",\"geoportal_class\",\"strasse\",\"prm_name\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"geospatial\",\"string\",\"string\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"11\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"angebot\", [32.0,31.0,17.0,6.0,5.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"angebot\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 2 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

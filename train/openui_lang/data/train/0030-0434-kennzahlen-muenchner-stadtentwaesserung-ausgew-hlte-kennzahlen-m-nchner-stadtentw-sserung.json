@@ -1,0 +1,163 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of behandelte_jahresabwassermenge in Ausgewählte Kennzahlen Münchner Stadtentwässerung.",
+  "query_result": {
+    "dataset_title": "Ausgewählte Kennzahlen Münchner Stadtentwässerung",
+    "package_id": "90e5a919-7955-4f4f-b73d-52efacb97400",
+    "package_name": "kennzahlen-muenchner-stadtentwaesserung",
+    "resource_id": "bc7c5cbe-8059-4fc6-bdbb-9b0c99762d61",
+    "resource_name": "Ausgewählte Kennzahlen Münchner Stadtentwässerung",
+    "resource_format": "csv",
+    "description": "Der Datensatz enthält ausgewählte, wichtige Kennzahlen zu Jahresabwassermenge, Bilanzsumme und Investitionen des Unternehmens.",
+    "organization": "Münchner Stadtentwässerung",
+    "tags": [
+      "Abwasser",
+      "Abwasserreinigung",
+      "Daseinsvorsorge",
+      "Entwässerungsbetrieb",
+      "Kanal",
+      "Klärwerke"
+    ],
+    "groups": [],
+    "row_count": 9,
+    "sampled_rows": 9,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "behandelte_jahresabwassermenge",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 0,
+        "examples": [
+          "164.6",
+          "155.3",
+          "173.4",
+          "160.5",
+          "169.3"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 155.3,
+          "max": 176.1,
+          "mean": 166.6889,
+          "median": 167.2
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bilanzsumme",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 0,
+        "examples": [
+          "1782506.326",
+          "1714054.149",
+          "1663351.361",
+          "1693534.746",
+          "1726305.435"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 1551870.241,
+          "max": 1782506.326,
+          "mean": 1668883.7514,
+          "median": 1663351.361
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "investitionen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 0,
+        "examples": [
+          "101321",
+          "85919",
+          "69577",
+          "67412",
+          "102916"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 62771.0,
+          "max": 102916.0,
+          "mean": 77800.2222,
+          "median": 69577.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 9,
+        "null_count": 0,
+        "examples": [
+          "2023",
+          "2022",
+          "2021",
+          "2020",
+          "2019"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 2015.0,
+          "max": 2023.0,
+          "mean": 2019.0,
+          "median": 2019.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "behandelte_jahresabwassermenge",
+      "bilanzsumme",
+      "investitionen"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "behandelte_jahresabwassermenge"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Ausgewählte Kennzahlen Münchner Stadtentwässerung\", \"Ausgewählte Kennzahlen Münchner Stadtentwässerung\")\nsummary = TextContent(\"Ausgewählte Kennzahlen Münchner Stadtentwässerung belongs to Münchner Stadtentwässerung. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include behandelte_jahresabwassermenge, bilanzsumme, investitionen.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"9\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"behandelte_jahresabwassermenge\",\"bilanzsumme\",\"investitionen\",\"Jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"behandelte_jahresabwassermenge\", [164.6,155.3,173.4,160.5,169.3])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"behandelte_jahresabwassermenge\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of behandelte_jahresabwassermenge in Ausgewählte Kennzahlen Münchner Stadtentwässerung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Ausgewählte Kennzahlen Münchner Stadtentwässerung\",\n    \"package_id\": \"90e5a919-7955-4f4f-b73d-52efacb97400\",\n    \"package_name\": \"kennzahlen-muenchner-stadtentwaesserung\",\n    \"resource_id\": \"bc7c5cbe-8059-4fc6-bdbb-9b0c99762d61\",\n    \"resource_name\": \"Ausgewählte Kennzahlen Münchner Stadtentwässerung\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz enthält ausgewählte, wichtige Kennzahlen zu Jahresabwassermenge, Bilanzsumme und Investitionen des Unternehmens.\",\n    \"organization\": \"Münchner Stadtentwässerung\",\n    \"tags\": [\n      \"Abwasser\",\n      \"Abwasserreinigung\",\n      \"Daseinsvorsorge\",\n      \"Entwässerungsbetrieb\",\n      \"Kanal\",\n      \"Klärwerke\"\n    ],\n    \"groups\": [],\n    \"row_count\": 9,\n    \"sampled_rows\": 9,\n    \"column_count\": 5,\n    \"columns\": [\n      {\n        \"name\": \"behandelte_jahresabwassermenge\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 9,\n        \"null_count\": 0,\n        \"examples\": [\n          \"164.6\",\n          \"155.3\",\n          \"173.4\",\n          \"160.5\",\n          \"169.3\"\n        ],\n        \"numeric\": {\n          \"count\": 9.0,\n          \"min\": 155.3,\n          \"max\": 176.1,\n          \"mean\": 166.6889,\n          \"median\": 167.2\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bilanzsumme\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 9,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1782506.326\",\n          \"1714054.149\",\n          \"1663351.361\",\n          \"1693534.746\",\n          \"1726305.435\"\n        ],\n        \"numeric\": {\n          \"count\": 9.0,\n          \"min\": 1551870.241,\n          \"max\": 1782506.326,\n          \"mean\": 1668883.7514,\n          \"median\": 1663351.361\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"investitionen\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 9,\n        \"null_count\": 0,\n        \"examples\": [\n          \"101321\",\n          \"85919\",\n          \"69577\",\n          \"67412\",\n          \"102916\"\n        ],\n        \"numeric\": {\n          \"count\": 9.0,\n          \"min\": 62771.0,\n          \"max\": 102916.0,\n          \"mean\": 77800.2222,\n          \"median\": 69577.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 9,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2023\",\n          \"2022\",\n          \"2021\",\n          \"2020\",\n          \"2019\"\n        ],\n        \"numeric\": {\n          \"count\": 9.0,\n          \"min\": 2015.0,\n          \"max\": 2023.0,\n          \"mean\": 2019.0,\n          \"median\": 2019.0\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"behandelte_jahresabwassermenge\",\n      \"bilanzsumme\",\n      \"investitionen\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"behandelte_jahresabwassermenge\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Ausgewählte Kennzahlen Münchner Stadtentwässerung\", \"Ausgewählte Kennzahlen Münchner Stadtentwässerung\")\nsummary = TextContent(\"Ausgewählte Kennzahlen Münchner Stadtentwässerung belongs to Münchner Stadtentwässerung. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include behandelte_jahresabwassermenge, bilanzsumme, investitionen.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"9\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"behandelte_jahresabwassermenge\",\"bilanzsumme\",\"investitionen\",\"Jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"behandelte_jahresabwassermenge\", [164.6,155.3,173.4,160.5,169.3])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"behandelte_jahresabwassermenge\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

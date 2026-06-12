@@ -1,0 +1,293 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ruhver_mim_abstellverbot_ts.objectid in Abstellverbotszonen für E-Tretroller.",
+  "query_result": {
+    "dataset_title": "Abstellverbotszonen für E-Tretroller",
+    "package_id": "20f44080-5399-4b22-9432-1d3064ba5446",
+    "package_name": "ruhver_mim_abstellverbot_ts",
+    "resource_id": "d61005b0-a4a1-4754-9da3-a0fddb0763b3",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet Abstellverbotszonen für Fahrzeuge des E-Tretrollersharings. Innerhalb dieser Bereiche ist eine Mietbeendigung nicht möglich. Temporäre Abstellverbotszonen (bspw. aufgrund von Baustellen oder Veranstaltungen) werden Ocker angezeigt. Das Hinweisfeld gibt Informationen zur Dauer und Art.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 63,
+    "columns": [
+      {
+        "name": "ruhver_mim_abstellverbot_ts.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 877,
+        "examples": [
+          "603",
+          "604",
+          "605",
+          "606",
+          "607"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 19.0,
+          "max": 7377.0,
+          "mean": 1010.4228,
+          "median": 287.0
+        },
+        "null_rate": 0.877
+      },
+      {
+        "name": "ruhver_mim_abstellverbot_ts.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 877,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.877
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 877,
+        "examples": [
+          "603",
+          "604",
+          "605",
+          "606",
+          "607"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 19.0,
+          "max": 7377.0,
+          "mean": 1010.4228,
+          "median": 287.0
+        },
+        "null_rate": 0.877
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 877,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.877
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellverbot_ts.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "6098"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 6098.0,
+          "max": 6098.0,
+          "mean": 6098.0,
+          "median": 6098.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellverbot_ts.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_mim_abstellverbot_ts.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 123,
+        "null_count": 877,
+        "examples": [
+          "20260119",
+          "20260402",
+          "20260123",
+          "20260504"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 20260119.0,
+          "max": 20260504.0,
+          "mean": 20260126.7642,
+          "median": 20260119.0
+        },
+        "null_rate": 0.877
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 123,
+        "null_count": 877,
+        "examples": [
+          "20260119",
+          "20260402",
+          "20260123",
+          "20260504"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 20260119.0,
+          "max": 20260504.0,
+          "mean": 20260126.7642,
+          "median": 20260119.0
+        },
+        "null_rate": 0.877
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellverbot_ts.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "20260610"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 20260610.0,
+          "max": 20260610.0,
+          "mean": 20260610.0,
+          "median": 20260610.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_mim_abstellverbot_ts.realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 18,
+        "null_count": 982,
+        "examples": [
+          "15.05.2025",
+          "23.09.2025",
+          "18.05.2025",
+          "19.05.2025",
+          "16.06.2025"
+        ],
+        "null_rate": 0.982
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 18,
+        "null_count": 982,
+        "examples": [
+          "15.05.2025",
+          "23.09.2025",
+          "18.05.2025",
+          "19.05.2025",
+          "16.06.2025"
+        ],
+        "null_rate": 0.982
+      },
+      {
+        "name": "ruhver_mim_abstellverbot_ts.gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 3,
+        "null_count": 997,
+        "examples": [
+          "18.06.2025",
+          "22.05.2025"
+        ],
+        "null_rate": 0.997
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_mim_abstellverbot_ts.objectid",
+      "ruhver_mim_abstellverbot_ts.status",
+      "objectid",
+      "status"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "ruhver_mim_abstellverbot_ts.bearbeitung_datum",
+      "bearbeitung_datum",
+      "featureMember.ruhver_mim_abstellverbot_ts.bearbeitung_datum"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ruhver_mim_abstellverbot_ts.objectid"
+    }
+  },
+  "quality_score": 6.5,
+  "cleaning_notes": {
+    "dropped_columns": 47,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Abstellverbotszonen für E-Tretroller\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include ruhver_mim_abstellverbot_ts.objectid, ruhver_mim_abstellverbot_ts.status, objectid.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"63\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"6.5\")\nc1 = Col(\"Column\", [\"ruhver_mim_abstellverbot_ts.objectid\",\"ruhver_mim_abstellverbot_ts.status\",\"objectid\",\"status\",\"featureMember.ruhver_mim_abstellverbot_ts.objectid\",\"featureMember.ruhver_mim_abstellverbot_ts.status\",\"ruhver_mim_abstellverbot_ts.bearbeitung_datum\",\"bearbeitung_datum\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"date\",\"date\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"877\",\"877\",\"877\",\"877\",\"999\",\"999\",\"877\",\"877\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"ruhver_mim_abstellverbot_ts.objectid\", [603.0,604.0,605.0,606.0,607.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"ruhver_mim_abstellverbot_ts.objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 47 lower-ranked columns, and removed 4 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of ruhver_mim_abstellverbot_ts.objectid in Abstellverbotszonen für E-Tretroller.\",\n  \"query_result\": {\n    \"dataset_title\": \"Abstellverbotszonen für E-Tretroller\",\n    \"package_id\": \"20f44080-5399-4b22-9432-1d3064ba5446\",\n    \"package_name\": \"ruhver_mim_abstellverbot_ts\",\n    \"resource_id\": \"d61005b0-a4a1-4754-9da3-a0fddb0763b3\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Dieser Layer beinhaltet Abstellverbotszonen für Fahrzeuge des E-Tretrollersharings. Innerhalb dieser Bereiche ist eine Mietbeendigung nicht möglich. Temporäre Abstellverbotszonen (bspw. aufgrund von Baustellen oder Veranstaltungen) werden Ocker angezeigt. Das Hinweisfeld gibt Informationen zur Dauer und Art.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 63,\n    \"columns\": [\n      {\n        \"name\": \"ruhver_mim_abstellverbot_ts.objectid\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 123,\n        \"null_count\": 877,\n        \"examples\": [\n          \"603\",\n          \"604\",\n          \"605\",\n          \"606\",\n          \"607\"\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 19.0,\n          \"max\": 7377.0,\n          \"mean\": 1010.4228,\n          \"median\": 287.0\n        },\n        \"null_rate\": 0.877\n      },\n      {\n        \"name\": \"ruhver_mim_abstellverbot_ts.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 123,\n        \"null_count\": 877,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.877\n      },\n      {\n        \"name\": \"objectid\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 123,\n        \"null_count\": 877,\n        \"examples\": [\n          \"603\",\n          \"604\",\n          \"605\",\n          \"606\",\n          \"607\"\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 19.0,\n          \"max\": 7377.0,\n          \"mean\": 1010.4228,\n          \"median\": 287.0\n        },\n        \"null_rate\": 0.877\n      },\n      {\n        \"name\": \"status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 123,\n        \"null_count\": 877,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.877\n      },\n      {\n        \"name\": \"featureMember.ruhver_mim_abstellverbot_ts.objectid\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"6098\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 6098.0,\n          \"max\": 6098.0,\n          \"mean\": 6098.0,\n          \"median\": 6098.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"featureMember.ruhver_mim_abstellverbot_ts.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"ruhver_mim_abstellverbot_ts.bearbeitung_datum\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 123,\n        \"null_count\": 877,\n        \"examples\": [\n          \"20260119\",\n          \"20260402\",\n          \"20260123\",\n          \"20260504\"\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 20260119.0,\n          \"max\": 20260504.0,\n          \"mean\": 20260126.7642,\n          \"median\": 20260119.0\n        },\n        \"null_rate\": 0.877\n      },\n      {\n        \"name\": \"bearbeitung_datum\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 123,\n        \"null_count\": 877,\n        \"examples\": [\n          \"20260119\",\n          \"20260402\",\n          \"20260123\",\n          \"20260504\"\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 20260119.0,\n          \"max\": 20260504.0,\n          \"mean\": 20260126.7642,\n          \"median\": 20260119.0\n        },\n        \"null_rate\": 0.877\n      },\n      {\n        \"name\": \"featureMember.ruhver_mim_abstellverbot_ts.bearbeitung_datum\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 1,\n        \"null_count\": 999,\n        \"examples\": [\n          \"20260610\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 20260610.0,\n          \"max\": 20260610.0,\n          \"mean\": 20260610.0,\n          \"median\": 20260610.0\n        },\n        \"null_rate\": 0.999\n      },\n      {\n        \"name\": \"ruhver_mim_abstellverbot_ts.realisierungsdatum\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 18,\n        \"null_count\": 982,\n        \"examples\": [\n          \"15.05.2025\",\n          \"23.09.2025\",\n          \"18.05.2025\",\n          \"19.05.2025\",\n          \"16.06.2025\"\n        ],\n        \"null_rate\": 0.982\n      },\n      {\n        \"name\": \"realisierungsdatum\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 18,\n        \"null_count\": 982,\n        \"examples\": [\n          \"15.05.2025\",\n          \"23.09.2025\",\n          \"18.05.2025\",\n          \"19.05.2025\",\n          \"16.06.2025\"\n        ],\n        \"null_rate\": 0.982\n      },\n      {\n        \"name\": \"ruhver_mim_abstellverbot_ts.gueltigkeit_datum_start\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 3,\n        \"null_count\": 997,\n        \"examples\": [\n          \"18.06.2025\",\n          \"22.05.2025\"\n        ],\n        \"null_rate\": 0.997\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"ruhver_mim_abstellverbot_ts.objectid\",\n      \"ruhver_mim_abstellverbot_ts.status\",\n      \"objectid\",\n      \"status\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"ruhver_mim_abstellverbot_ts.bearbeitung_datum\",\n      \"bearbeitung_datum\",\n      \"featureMember.ruhver_mim_abstellverbot_ts.bearbeitung_datum\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"ruhver_mim_abstellverbot_ts.objectid\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Abstellverbotszonen für E-Tretroller\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include ruhver_mim_abstellverbot_ts.objectid, ruhver_mim_abstellverbot_ts.status, objectid.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"63\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"6.5\")\nc1 = Col(\"Column\", [\"ruhver_mim_abstellverbot_ts.objectid\",\"ruhver_mim_abstellverbot_ts.status\",\"objectid\",\"status\",\"featureMember.ruhver_mim_abstellverbot_ts.objectid\",\"featureMember.ruhver_mim_abstellverbot_ts.status\",\"ruhver_mim_abstellverbot_ts.bearbeitung_datum\",\"bearbeitung_datum\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"date\",\"date\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"877\",\"877\",\"877\",\"877\",\"999\",\"999\",\"877\",\"877\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"ruhver_mim_abstellverbot_ts.objectid\", [603.0,604.0,605.0,606.0,607.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"ruhver_mim_abstellverbot_ts.objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 47 lower-ranked columns, and removed 4 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

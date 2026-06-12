@@ -1,0 +1,326 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of tag in Katalogdaten - Abfrage aller Titelsätze.",
+  "query_result": {
+    "dataset_title": "Katalogdaten - Abfrage aller Titelsätze",
+    "package_id": "8a081bbb-fcb8-4409-b546-ee87a3e3f2ad",
+    "package_name": "katalogdaten-abfrage-aller-titelsaetze",
+    "resource_id": "ad9ced00-3b49-4d6e-9a1b-926de5a4b1ec",
+    "resource_name": "Abfrage aller Titelsätze im Ausgabeformat MARC21",
+    "resource_format": "xml",
+    "description": "Die bibliographischen Metadaten aus dem Bibliotheksmanagementsystem aDIS/BMS werden über eine offene OAI-PMH API Schnittstelle zur Verfügung gestellt. Die Schnittstelle wurde in Kooperation mit it@M realisiert und ermöglicht zielgerichtete Suchanfragen nach einzelnen Datensätzen, Abfragen inhaltlicher Sets des Onlinekatalogs oder über bestimmte Zeiträume sowie des gesamten Katalogbestands im MARC21 und im Dublin Core-Datenformat. Davon ausgenommen sind die digitalen Angebote. Für alle notwendige",
+    "organization": " Münchner Stadtbibliothek",
+    "tags": [
+      "Author",
+      "Bibliothek",
+      "Bücher",
+      "Katalog",
+      "Metadaten",
+      "Online-Katalog",
+      "Titel"
+    ],
+    "groups": [
+      "educ",
+      "tech"
+    ],
+    "row_count": 917,
+    "sampled_rows": 917,
+    "column_count": 55,
+    "columns": [
+      {
+        "name": "tag",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 715,
+        "null_count": 202,
+        "examples": [
+          "020",
+          "035",
+          "041",
+          "044",
+          "100"
+        ],
+        "numeric": {
+          "count": 715.0,
+          "min": 20.0,
+          "max": 876.0,
+          "mean": 340.3399,
+          "median": 300.0
+        },
+        "null_rate": 0.2203
+      },
+      {
+        "name": "ind1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 715,
+        "null_count": 202,
+        "examples": [
+          "",
+          "1",
+          "0",
+          "4",
+          "2"
+        ],
+        "numeric": {
+          "count": 165.0,
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 0.8424,
+          "median": 0.0
+        },
+        "null_rate": 0.2203
+      },
+      {
+        "name": "ind2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 715,
+        "null_count": 202,
+        "examples": [
+          "",
+          "0",
+          "4",
+          "7",
+          "1"
+        ],
+        "numeric": {
+          "count": 156.0,
+          "min": 0.0,
+          "max": 7.0,
+          "mean": 2.5962,
+          "median": 1.0
+        },
+        "null_rate": 0.2203
+      },
+      {
+        "name": "subfield",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 715,
+        "null_count": 202,
+        "examples": [
+          "978-3-423-26274-3",
+          "3-423-26274-5",
+          "(DE-M36)AK4323338",
+          "ISO-639-1",
+          "ISO-3166-1"
+        ],
+        "numeric": {
+          "count": 107.0,
+          "min": 1.0,
+          "max": 9783939080350.0,
+          "mean": 398448073464.9532,
+          "median": 7.0
+        },
+        "null_rate": 0.2203
+      },
+      {
+        "name": "metadata.record.datafield.tag",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "876",
+          "689"
+        ],
+        "numeric": {
+          "count": 50.0,
+          "min": 689.0,
+          "max": 876.0,
+          "mean": 868.52,
+          "median": 876.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "metadata.record.datafield.ind1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "metadata.record.datafield.ind2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "",
+          "4",
+          "2"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 2.0,
+          "max": 4.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "metadata.record.datafield.subfield",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "5",
+          "1",
+          "DE-M36",
+          "6",
+          "3"
+        ],
+        "numeric": {
+          "count": 48.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 1.4792,
+          "median": 1.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "record.datafield.tag",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "876",
+          "689"
+        ],
+        "numeric": {
+          "count": 50.0,
+          "min": 689.0,
+          "max": 876.0,
+          "mean": 868.52,
+          "median": 876.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "record.datafield.ind1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "record.datafield.ind2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "",
+          "4",
+          "2"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 2.0,
+          "max": 4.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "record.datafield.subfield",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "5",
+          "1",
+          "DE-M36",
+          "6",
+          "3"
+        ],
+        "numeric": {
+          "count": 48.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 1.4792,
+          "median": 1.0
+        },
+        "null_rate": 0.9455
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "tag",
+      "ind1",
+      "ind2",
+      "subfield"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "tag"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 39,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Katalogdaten - Abfrage aller Titelsätze\", \"Abfrage aller Titelsätze im Ausgabeformat MARC21\")\nsummary = TextContent(\"Abfrage aller Titelsätze im Ausgabeformat MARC21 belongs to Münchner Stadtbibliothek. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include tag, ind1, ind2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"917\")\nm2 = ListItem(\"Columns\", \"55\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"tag\",\"ind1\",\"ind2\",\"subfield\",\"metadata.record.datafield.tag\",\"metadata.record.datafield.ind1\",\"metadata.record.datafield.ind2\",\"metadata.record.datafield.subfield\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"202\",\"202\",\"202\",\"202\",\"867\",\"867\",\"867\",\"867\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"tag\", [20.0,35.0,41.0,44.0,100.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"tag\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 39 lower-ranked columns, and removed 4 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of tag in Katalogdaten - Abfrage aller Titelsätze.\",\n  \"query_result\": {\n    \"dataset_title\": \"Katalogdaten - Abfrage aller Titelsätze\",\n    \"package_id\": \"8a081bbb-fcb8-4409-b546-ee87a3e3f2ad\",\n    \"package_name\": \"katalogdaten-abfrage-aller-titelsaetze\",\n    \"resource_id\": \"ad9ced00-3b49-4d6e-9a1b-926de5a4b1ec\",\n    \"resource_name\": \"Abfrage aller Titelsätze im Ausgabeformat MARC21\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Die bibliographischen Metadaten aus dem Bibliotheksmanagementsystem aDIS/BMS werden über eine offene OAI-PMH API Schnittstelle zur Verfügung gestellt. Die Schnittstelle wurde in Kooperation mit it@M realisiert und ermöglicht zielgerichtete Suchanfragen nach einzelnen Datensätzen, Abfragen inhaltlicher Sets des Onlinekatalogs oder über bestimmte Zeiträume sowie des gesamten Katalogbestands im MARC21 und im Dublin Core-Datenformat. Davon ausgenommen sind die digitalen Angebote. Für alle notwendige\",\n    \"organization\": \" Münchner Stadtbibliothek\",\n    \"tags\": [\n      \"Author\",\n      \"Bibliothek\",\n      \"Bücher\",\n      \"Katalog\",\n      \"Metadaten\",\n      \"Online-Katalog\",\n      \"Titel\"\n    ],\n    \"groups\": [\n      \"educ\",\n      \"tech\"\n    ],\n    \"row_count\": 917,\n    \"sampled_rows\": 917,\n    \"column_count\": 55,\n    \"columns\": [\n      {\n        \"name\": \"tag\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 715,\n        \"null_count\": 202,\n        \"examples\": [\n          \"020\",\n          \"035\",\n          \"041\",\n          \"044\",\n          \"100\"\n        ],\n        \"numeric\": {\n          \"count\": 715.0,\n          \"min\": 20.0,\n          \"max\": 876.0,\n          \"mean\": 340.3399,\n          \"median\": 300.0\n        },\n        \"null_rate\": 0.2203\n      },\n      {\n        \"name\": \"ind1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 715,\n        \"null_count\": 202,\n        \"examples\": [\n          \"\",\n          \"1\",\n          \"0\",\n          \"4\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 165.0,\n          \"min\": 0.0,\n          \"max\": 5.0,\n          \"mean\": 0.8424,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.2203\n      },\n      {\n        \"name\": \"ind2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 715,\n        \"null_count\": 202,\n        \"examples\": [\n          \"\",\n          \"0\",\n          \"4\",\n          \"7\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 156.0,\n          \"min\": 0.0,\n          \"max\": 7.0,\n          \"mean\": 2.5962,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.2203\n      },\n      {\n        \"name\": \"subfield\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 715,\n        \"null_count\": 202,\n        \"examples\": [\n          \"978-3-423-26274-3\",\n          \"3-423-26274-5\",\n          \"(DE-M36)AK4323338\",\n          \"ISO-639-1\",\n          \"ISO-3166-1\"\n        ],\n        \"numeric\": {\n          \"count\": 107.0,\n          \"min\": 1.0,\n          \"max\": 9783939080350.0,\n          \"mean\": 398448073464.9532,\n          \"median\": 7.0\n        },\n        \"null_rate\": 0.2203\n      },\n      {\n        \"name\": \"metadata.record.datafield.tag\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 50,\n        \"null_count\": 867,\n        \"examples\": [\n          \"876\",\n          \"689\"\n        ],\n        \"numeric\": {\n          \"count\": 50.0,\n          \"min\": 689.0,\n          \"max\": 876.0,\n          \"mean\": 868.52,\n          \"median\": 876.0\n        },\n        \"null_rate\": 0.9455\n      },\n      {\n        \"name\": \"metadata.record.datafield.ind1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 50,\n        \"null_count\": 867,\n        \"examples\": [\n          \"\",\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.9455\n      },\n      {\n        \"name\": \"metadata.record.datafield.ind2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 50,\n        \"null_count\": 867,\n        \"examples\": [\n          \"\",\n          \"4\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 2.0,\n          \"max\": 4.0,\n          \"mean\": 3.0,\n          \"median\": 3.0\n        },\n        \"null_rate\": 0.9455\n      },\n      {\n        \"name\": \"metadata.record.datafield.subfield\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 50,\n        \"null_count\": 867,\n        \"examples\": [\n          \"5\",\n          \"1\",\n          \"DE-M36\",\n          \"6\",\n          \"3\"\n        ],\n        \"numeric\": {\n          \"count\": 48.0,\n          \"min\": 1.0,\n          \"max\": 6.0,\n          \"mean\": 1.4792,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9455\n      },\n      {\n        \"name\": \"record.datafield.tag\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 50,\n        \"null_count\": 867,\n        \"examples\": [\n          \"876\",\n          \"689\"\n        ],\n        \"numeric\": {\n          \"count\": 50.0,\n          \"min\": 689.0,\n          \"max\": 876.0,\n          \"mean\": 868.52,\n          \"median\": 876.0\n        },\n        \"null_rate\": 0.9455\n      },\n      {\n        \"name\": \"record.datafield.ind1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 50,\n        \"null_count\": 867,\n        \"examples\": [\n          \"\",\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.9455\n      },\n      {\n        \"name\": \"record.datafield.ind2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 50,\n        \"null_count\": 867,\n        \"examples\": [\n          \"\",\n          \"4\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 2.0,\n          \"max\": 4.0,\n          \"mean\": 3.0,\n          \"median\": 3.0\n        },\n        \"null_rate\": 0.9455\n      },\n      {\n        \"name\": \"record.datafield.subfield\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 50,\n        \"null_count\": 867,\n        \"examples\": [\n          \"5\",\n          \"1\",\n          \"DE-M36\",\n          \"6\",\n          \"3\"\n        ],\n        \"numeric\": {\n          \"count\": 48.0,\n          \"min\": 1.0,\n          \"max\": 6.0,\n          \"mean\": 1.4792,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9455\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"tag\",\n      \"ind1\",\n      \"ind2\",\n      \"subfield\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"tag\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Katalogdaten - Abfrage aller Titelsätze\", \"Abfrage aller Titelsätze im Ausgabeformat MARC21\")\nsummary = TextContent(\"Abfrage aller Titelsätze im Ausgabeformat MARC21 belongs to Münchner Stadtbibliothek. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include tag, ind1, ind2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"917\")\nm2 = ListItem(\"Columns\", \"55\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"tag\",\"ind1\",\"ind2\",\"subfield\",\"metadata.record.datafield.tag\",\"metadata.record.datafield.ind1\",\"metadata.record.datafield.ind2\",\"metadata.record.datafield.subfield\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"202\",\"202\",\"202\",\"202\",\"867\",\"867\",\"867\",\"867\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"tag\", [20.0,35.0,41.0,44.0,100.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"tag\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 39 lower-ranked columns, and removed 4 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

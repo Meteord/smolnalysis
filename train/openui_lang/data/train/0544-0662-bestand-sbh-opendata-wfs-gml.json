@@ -1,0 +1,328 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Sozialbürgerhaus.",
+  "query_result": {
+    "dataset_title": "Sozialbürgerhaus",
+    "package_id": "5b2abead-f1b2-477e-8595-c55528854c7b",
+    "package_name": "bestand_sbh_opendata",
+    "resource_id": "74106a38-495f-4d66-b6b4-5c73b5416fb0",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Im SBH werden die bürgerorientierten sozialen Dienstleistungen unter einem Dach und einer gemeinsamen regionalen Zuständigkeit angeboten. Das SBH besteht aus dem SBH Soziales und dem SBH Arbeit (JC).",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 38,
+    "sampled_rows": 38,
+    "column_count": 63,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "1.0",
+          "2.0",
+          "3.0",
+          "4.0",
+          "5.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 6.5,
+          "median": 6.5
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "lfdnr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "1.0",
+          "2.0",
+          "3.0",
+          "4.0",
+          "6.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 6.5,
+          "median": 6.5
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "zs3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "2.0",
+          "12.0",
+          "5.0",
+          "6.0",
+          "10.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2.0,
+          "max": 21.0,
+          "mean": 11.75,
+          "median": 11.5
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "sozialregi",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "1,2,3",
+          "4,12",
+          "5,13",
+          "6,7",
+          "9,10"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 16.0,
+          "max": 16.0,
+          "mean": 16.0,
+          "median": 16.0
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "kat",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "1.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "62.0",
+          "170.0",
+          "11.0",
+          "16.0",
+          "24.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2.0,
+          "max": 486.0,
+          "mean": 82.9167,
+          "median": 23.5
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "za4",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "0.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "za2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "4292.0",
+          "1857.0",
+          "3400.0",
+          "3074.0",
+          "5613.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 872.0,
+          "max": 6598.0,
+          "mean": 3782.6667,
+          "median": 3768.0
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "zk1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "690088.68",
+          "693734.6069",
+          "693784.976",
+          "688877.6799",
+          "688063.0637"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 683134.4679,
+          "max": 696885.6383,
+          "mean": 690676.3561,
+          "median": 690625.311
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "zk2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "5334761.4562",
+          "5341708.2319",
+          "5333751.7565",
+          "5332530.5042",
+          "5339913.479"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 5330190.9298,
+          "max": 5341708.2319,
+          "mean": 5335021.0983,
+          "median": 5334409.1287
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "zv03",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "282.0",
+          "1216.0",
+          "544.0",
+          "611.0",
+          "1012.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 282.0,
+          "max": 2134.0,
+          "mean": 1202.1667,
+          "median": 1173.5
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "zt03",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "28.0",
+          "121.0",
+          "54.0",
+          "61.0",
+          "101.0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 28.0,
+          "max": 213.0,
+          "mean": 119.9167,
+          "median": 117.0
+        },
+        "null_rate": 0.6842
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "lfdnr",
+      "zs3",
+      "sozialregi"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 51,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Sozialbürgerhaus\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Sozialreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include objectid, lfdnr, zs3.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"38\")\nm2 = ListItem(\"Columns\", \"63\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"4.25\")\nc1 = Col(\"Column\", [\"objectid\",\"lfdnr\",\"zs3\",\"sozialregi\",\"kat\",\"za3\",\"za4\",\"za2\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"26\",\"26\",\"26\",\"26\",\"26\",\"26\",\"26\",\"26\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"objectid\", [1.0,2.0,3.0,4.0,5.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 51 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of objectid in Sozialbürgerhaus.\",\n  \"query_result\": {\n    \"dataset_title\": \"Sozialbürgerhaus\",\n    \"package_id\": \"5b2abead-f1b2-477e-8595-c55528854c7b\",\n    \"package_name\": \"bestand_sbh_opendata\",\n    \"resource_id\": \"74106a38-495f-4d66-b6b4-5c73b5416fb0\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Im SBH werden die bürgerorientierten sozialen Dienstleistungen unter einem Dach und einer gemeinsamen regionalen Zuständigkeit angeboten. Das SBH besteht aus dem SBH Soziales und dem SBH Arbeit (JC).\",\n    \"organization\": \"Sozialreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Opendata\",\n      \"Planungsunterlagen Kataster\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 38,\n    \"sampled_rows\": 38,\n    \"column_count\": 63,\n    \"columns\": [\n      {\n        \"name\": \"objectid\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"1.0\",\n          \"2.0\",\n          \"3.0\",\n          \"4.0\",\n          \"5.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 1.0,\n          \"max\": 12.0,\n          \"mean\": 6.5,\n          \"median\": 6.5\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"lfdnr\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"1.0\",\n          \"2.0\",\n          \"3.0\",\n          \"4.0\",\n          \"6.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 1.0,\n          \"max\": 12.0,\n          \"mean\": 6.5,\n          \"median\": 6.5\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"zs3\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"2.0\",\n          \"12.0\",\n          \"5.0\",\n          \"6.0\",\n          \"10.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 2.0,\n          \"max\": 21.0,\n          \"mean\": 11.75,\n          \"median\": 11.5\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"sozialregi\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"1,2,3\",\n          \"4,12\",\n          \"5,13\",\n          \"6,7\",\n          \"9,10\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 16.0,\n          \"max\": 16.0,\n          \"mean\": 16.0,\n          \"median\": 16.0\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"kat\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"1.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"za3\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"62.0\",\n          \"170.0\",\n          \"11.0\",\n          \"16.0\",\n          \"24.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 2.0,\n          \"max\": 486.0,\n          \"mean\": 82.9167,\n          \"median\": 23.5\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"za4\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"0.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"za2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"4292.0\",\n          \"1857.0\",\n          \"3400.0\",\n          \"3074.0\",\n          \"5613.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 872.0,\n          \"max\": 6598.0,\n          \"mean\": 3782.6667,\n          \"median\": 3768.0\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"zk1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"690088.68\",\n          \"693734.6069\",\n          \"693784.976\",\n          \"688877.6799\",\n          \"688063.0637\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 683134.4679,\n          \"max\": 696885.6383,\n          \"mean\": 690676.3561,\n          \"median\": 690625.311\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"zk2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"5334761.4562\",\n          \"5341708.2319\",\n          \"5333751.7565\",\n          \"5332530.5042\",\n          \"5339913.479\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 5330190.9298,\n          \"max\": 5341708.2319,\n          \"mean\": 5335021.0983,\n          \"median\": 5334409.1287\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"zv03\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"282.0\",\n          \"1216.0\",\n          \"544.0\",\n          \"611.0\",\n          \"1012.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 282.0,\n          \"max\": 2134.0,\n          \"mean\": 1202.1667,\n          \"median\": 1173.5\n        },\n        \"null_rate\": 0.6842\n      },\n      {\n        \"name\": \"zt03\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 12,\n        \"null_count\": 26,\n        \"examples\": [\n          \"28.0\",\n          \"121.0\",\n          \"54.0\",\n          \"61.0\",\n          \"101.0\"\n        ],\n        \"numeric\": {\n          \"count\": 12.0,\n          \"min\": 28.0,\n          \"max\": 213.0,\n          \"mean\": 119.9167,\n          \"median\": 117.0\n        },\n        \"null_rate\": 0.6842\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"objectid\",\n      \"lfdnr\",\n      \"zs3\",\n      \"sozialregi\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"objectid\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Sozialbürgerhaus\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Sozialreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include objectid, lfdnr, zs3.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"38\")\nm2 = ListItem(\"Columns\", \"63\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"4.25\")\nc1 = Col(\"Column\", [\"objectid\",\"lfdnr\",\"zs3\",\"sozialregi\",\"kat\",\"za3\",\"za4\",\"za2\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"26\",\"26\",\"26\",\"26\",\"26\",\"26\",\"26\",\"26\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"objectid\", [1.0,2.0,3.0,4.0,5.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 51 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

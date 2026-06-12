@@ -1,0 +1,177 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Informationen zu Straßennamen and compare namenserlaeuterung by namenstyp.",
+  "query_result": {
+    "dataset_title": "Informationen zu Straßennamen",
+    "package_id": "c063d350-14a3-4b65-a63a-23863edc786e",
+    "package_name": "erlaeuterung_strassennamen",
+    "resource_id": "4d562f1a-692e-439a-a137-19c91a90fea3",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Informationen über die Namen von Straßen und Plätzen ab 1996: Amtliche Namenserläuterung, Benennungsdatum, weiblich/männlich/sächlich, Stadtbezirk",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshaupstadt München"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          1100,
+          1200,
+          1250,
+          1293,
+          1299
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1100.0,
+          "max": 1904.0,
+          "mean": 1856.534,
+          "median": 1893.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "benennungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "01.01.1100",
+          "01.01.1200",
+          "01.01.1250",
+          "01.01.1293",
+          "31.12.1299"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "namenstyp",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Sache",
+          "Männlich",
+          "Weiblich",
+          "Personengruppe"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "POINT (691708.0024008395 5334955.101197964)",
+          "POINT (691566.7450008364 5334807.809597974)",
+          "POINT (691322.8175008311 5334877.709397988)",
+          "POINT (692686.192800861 5334212.707197902)",
+          "POINT (691340.6746008317 5334526.970397987)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strassenname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Schrammerstraße",
+          "Weinstraße",
+          "Augustinerstraße",
+          "Am Gasteig",
+          "Oberanger"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sb_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 998,
+        "null_count": 2,
+        "examples": [
+          "Altstadt-Lehel",
+          "Au-Haidhausen",
+          "Sendling",
+          "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln",
+          "Ludwigsvorstadt-Isarvorstadt"
+        ],
+        "null_rate": 0.002
+      },
+      {
+        "name": "namenserlaeuterung",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "namenserlaeuterung"
+    ],
+    "category_columns": [
+      "namenstyp"
+    ],
+    "time_columns": [
+      "jahr",
+      "benennungsdatum"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "namenstyp",
+      "y": "namenserlaeuterung"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Informationen zu Straßennamen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include namenserlaeuterung. Categorical fields include namenstyp.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"8\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"jahr\",\"benennungsdatum\",\"namenstyp\",\"shape\",\"strassenname\",\"sb_name\",\"namenserlaeuterung\"], \"string\")\nc2 = Col(\"Kind\", [\"year\",\"date\",\"category\",\"geospatial\",\"string\",\"string\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"object\",\"object\",\"object\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"2\",\"1,000\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"namenserlaeuterung\", [0.0])\nchart = BarChart([\"sample\"], [series], \"grouped\", \"namenstyp\", \"namenserlaeuterung\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Informationen zu Straßennamen and compare namenserlaeuterung by namenstyp.\",\n  \"query_result\": {\n    \"dataset_title\": \"Informationen zu Straßennamen\",\n    \"package_id\": \"c063d350-14a3-4b65-a63a-23863edc786e\",\n    \"package_name\": \"erlaeuterung_strassennamen\",\n    \"resource_id\": \"4d562f1a-692e-439a-a137-19c91a90fea3\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Informationen über die Namen von Straßen und Plätzen ab 1996: Amtliche Namenserläuterung, Benennungsdatum, weiblich/männlich/sächlich, Stadtbezirk\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshaupstadt München\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 8,\n    \"columns\": [\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          1100,\n          1200,\n          1250,\n          1293,\n          1299\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 1100.0,\n          \"max\": 1904.0,\n          \"mean\": 1856.534,\n          \"median\": 1893.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"benennungsdatum\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"01.01.1100\",\n          \"01.01.1200\",\n          \"01.01.1250\",\n          \"01.01.1293\",\n          \"31.12.1299\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"namenstyp\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Sache\",\n          \"Männlich\",\n          \"Weiblich\",\n          \"Personengruppe\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POINT (691708.0024008395 5334955.101197964)\",\n          \"POINT (691566.7450008364 5334807.809597974)\",\n          \"POINT (691322.8175008311 5334877.709397988)\",\n          \"POINT (692686.192800861 5334212.707197902)\",\n          \"POINT (691340.6746008317 5334526.970397987)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"strassenname\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Schrammerstraße\",\n          \"Weinstraße\",\n          \"Augustinerstraße\",\n          \"Am Gasteig\",\n          \"Oberanger\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"sb_name\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 998,\n        \"null_count\": 2,\n        \"examples\": [\n          \"Altstadt-Lehel\",\n          \"Au-Haidhausen\",\n          \"Sendling\",\n          \"Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln\",\n          \"Ludwigsvorstadt-Isarvorstadt\"\n        ],\n        \"null_rate\": 0.002\n      },\n      {\n        \"name\": \"namenserlaeuterung\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 0,\n        \"null_count\": 1000,\n        \"null_rate\": 1.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"namenserlaeuterung\"\n    ],\n    \"category_columns\": [\n      \"namenstyp\"\n    ],\n    \"time_columns\": [\n      \"jahr\",\n      \"benennungsdatum\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"namenstyp\",\n      \"y\": \"namenserlaeuterung\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Informationen zu Straßennamen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include namenserlaeuterung. Categorical fields include namenstyp.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"8\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"jahr\",\"benennungsdatum\",\"namenstyp\",\"shape\",\"strassenname\",\"sb_name\",\"namenserlaeuterung\"], \"string\")\nc2 = Col(\"Kind\", [\"year\",\"date\",\"category\",\"geospatial\",\"string\",\"string\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"object\",\"object\",\"object\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"2\",\"1,000\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"namenserlaeuterung\", [0.0])\nchart = BarChart([\"sample\"], [series], \"grouped\", \"namenstyp\", \"namenserlaeuterung\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

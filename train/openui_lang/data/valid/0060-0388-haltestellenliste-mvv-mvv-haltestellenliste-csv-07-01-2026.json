@@ -1,0 +1,170 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Haltestellenliste MVV and compare HstNummer by Ort.",
+  "query_result": {
+    "dataset_title": "Haltestellenliste MVV",
+    "package_id": "27ac7c01-b947-4c94-a7dd-c74fd966c138",
+    "package_name": "haltestellenliste-mvv",
+    "resource_id": "54c11bc1-8909-4a07-b0e1-aa96cd86b058",
+    "resource_name": "MVV Haltestellenliste (CSV, 07.01.2026)",
+    "resource_format": "csv",
+    "description": "Die Liste der Haltestellen wird in der Regel im Turnus von einem Jahr aktualisiert. Die angebotenen Haltestellenlisten stehen unter der Creative Commons Attribution License (cc-by). Als Quellenangabe notieren Sie bitte \"Münchner Verkehrs- und Tarifverbund GmbH (MVV)\" sowie das Datum des Abrufs.",
+    "organization": "Münchner Verkehrs- und Tarifverbund GmbH (MVV)",
+    "tags": [
+      "MVV",
+      "Mobilität",
+      "Stadtratsauftrag",
+      "ÖPNV"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 11061,
+    "sampled_rows": 1000,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "HstNummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 1714.0,
+          "mean": 771.646,
+          "median": 789.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "München",
+          "Garching (b München)",
+          "Dornach (b München)",
+          "Haar (b München)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name ohne Ort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Karlsplatz (Stachus)",
+          "Marienplatz",
+          "Isartor",
+          "Rosenheimer Platz",
+          "Ostbahnhof"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Globale ID",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "de:09162:1",
+          "de:09162:2",
+          "de:09162:3",
+          "de:09162:4",
+          "de:09162:5"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "WGS84 X",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 998,
+        "null_count": 2,
+        "examples": [
+          "48,1393673",
+          "48,1364359",
+          "48,1338939",
+          "48,1285878",
+          "48,1281381"
+        ],
+        "null_rate": 0.002
+      },
+      {
+        "name": "WGS84 Y",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 998,
+        "null_count": 2,
+        "examples": [
+          "11,565396",
+          "11,577658",
+          "11,5828233",
+          "11,5938996",
+          "11,6040685"
+        ],
+        "null_rate": 0.002
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "HstNummer"
+    ],
+    "category_columns": [
+      "Ort"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Ort",
+      "y": "HstNummer"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Haltestellenliste MVV\", \"MVV Haltestellenliste (CSV, 07.01.2026)\")\nsummary = TextContent(\"MVV Haltestellenliste (CSV, 07.01.2026) belongs to Münchner Verkehrs- und Tarifverbund GmbH (MVV). It exposes 6 profiled columns for OpenUI rendering. Numeric fields include HstNummer. Categorical fields include Ort.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"11,061\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"HstNummer\",\"Ort\",\"Name ohne Ort\",\"Globale ID\",\"WGS84 X\",\"WGS84 Y\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"2\",\"2\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"HstNummer\", [1.0,2.0,3.0,4.0])\nchart = BarChart([\"München\",\"Garching (b München)\",\"Dornach (b München)\",\"Haar (b München)\"], [series], \"grouped\", \"Ort\", \"HstNummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Haltestellenliste MVV and compare HstNummer by Ort.\",\n  \"query_result\": {\n    \"dataset_title\": \"Haltestellenliste MVV\",\n    \"package_id\": \"27ac7c01-b947-4c94-a7dd-c74fd966c138\",\n    \"package_name\": \"haltestellenliste-mvv\",\n    \"resource_id\": \"54c11bc1-8909-4a07-b0e1-aa96cd86b058\",\n    \"resource_name\": \"MVV Haltestellenliste (CSV, 07.01.2026)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Die Liste der Haltestellen wird in der Regel im Turnus von einem Jahr aktualisiert. Die angebotenen Haltestellenlisten stehen unter der Creative Commons Attribution License (cc-by). Als Quellenangabe notieren Sie bitte \\\"Münchner Verkehrs- und Tarifverbund GmbH (MVV)\\\" sowie das Datum des Abrufs.\",\n    \"organization\": \"Münchner Verkehrs- und Tarifverbund GmbH (MVV)\",\n    \"tags\": [\n      \"MVV\",\n      \"Mobilität\",\n      \"Stadtratsauftrag\",\n      \"ÖPNV\"\n    ],\n    \"groups\": [\n      \"tran\"\n    ],\n    \"row_count\": 11061,\n    \"sampled_rows\": 1000,\n    \"column_count\": 7,\n    \"columns\": [\n      {\n        \"name\": \"HstNummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1\",\n          \"2\",\n          \"3\",\n          \"4\",\n          \"5\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 1.0,\n          \"max\": 1714.0,\n          \"mean\": 771.646,\n          \"median\": 789.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Ort\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"München\",\n          \"Garching (b München)\",\n          \"Dornach (b München)\",\n          \"Haar (b München)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name ohne Ort\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Karlsplatz (Stachus)\",\n          \"Marienplatz\",\n          \"Isartor\",\n          \"Rosenheimer Platz\",\n          \"Ostbahnhof\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Globale ID\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"de:09162:1\",\n          \"de:09162:2\",\n          \"de:09162:3\",\n          \"de:09162:4\",\n          \"de:09162:5\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"WGS84 X\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 998,\n        \"null_count\": 2,\n        \"examples\": [\n          \"48,1393673\",\n          \"48,1364359\",\n          \"48,1338939\",\n          \"48,1285878\",\n          \"48,1281381\"\n        ],\n        \"null_rate\": 0.002\n      },\n      {\n        \"name\": \"WGS84 Y\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 998,\n        \"null_count\": 2,\n        \"examples\": [\n          \"11,565396\",\n          \"11,577658\",\n          \"11,5828233\",\n          \"11,5938996\",\n          \"11,6040685\"\n        ],\n        \"null_rate\": 0.002\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"HstNummer\"\n    ],\n    \"category_columns\": [\n      \"Ort\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"Ort\",\n      \"y\": \"HstNummer\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Haltestellenliste MVV\", \"MVV Haltestellenliste (CSV, 07.01.2026)\")\nsummary = TextContent(\"MVV Haltestellenliste (CSV, 07.01.2026) belongs to Münchner Verkehrs- und Tarifverbund GmbH (MVV). It exposes 6 profiled columns for OpenUI rendering. Numeric fields include HstNummer. Categorical fields include Ort.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"11,061\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"HstNummer\",\"Ort\",\"Name ohne Ort\",\"Globale ID\",\"WGS84 X\",\"WGS84 Y\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"2\",\"2\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"HstNummer\", [1.0,2.0,3.0,4.0])\nchart = BarChart([\"München\",\"Garching (b München)\",\"Dornach (b München)\",\"Haar (b München)\"], [series], \"grouped\", \"Ort\", \"HstNummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

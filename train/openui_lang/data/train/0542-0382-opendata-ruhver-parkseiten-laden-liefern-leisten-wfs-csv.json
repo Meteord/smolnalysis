@@ -1,0 +1,217 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Laden, Liefern, Leisten and compare status by status_bedeutung.",
+  "query_result": {
+    "dataset_title": "Laden, Liefern, Leisten",
+    "package_id": "58b8759c-2841-4817-911c-e3eb146767cf",
+    "package_name": "opendata_ruhver_parkseiten_laden_liefern_leisten",
+    "resource_id": "5c00c557-4143-4fc1-92f7-44a7c1e848e1",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Haltebereiche für Fahrzeuge von Lieferdiensten bzw. Handwerksbetrieben in der Landeshauptstadt München. Die Daten beinhalten \"Bereiche zum Laden und Liefern\", die zum Be- und Entladen genutzt werden dürfen und \"Bereiche zum Laden, Liefern und Leisten\", in denen auch Fahrzeuge von Handwerksbetrieben abgestellt werden dürfen. Die Haltebereiche sind häufig zeitlich begrenzt. Beide Nutzungen können in einem Bereich im zeitlichen Wechsel angeordnet sein.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Verkehrswesen",
+      "Wirschaftsverkehr"
+    ],
+    "groups": [],
+    "row_count": 561,
+    "sampled_rows": 561,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 561,
+        "null_count": 0,
+        "examples": [
+          2,
+          1
+        ],
+        "numeric": {
+          "count": 561.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.9786,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 561,
+        "null_count": 0,
+        "examples": [
+          0,
+          3
+        ],
+        "numeric": {
+          "count": 561.0,
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 0.0642,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "angebot",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 556,
+        "null_count": 5,
+        "examples": [
+          1.0,
+          3.0,
+          2.0,
+          4.0,
+          10.0
+        ],
+        "numeric": {
+          "count": 556.0,
+          "min": 0.0,
+          "max": 20.0,
+          "mean": 3.2806,
+          "median": 3.0
+        },
+        "null_rate": 0.0089
+      },
+      {
+        "name": "status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 561,
+        "null_count": 0,
+        "examples": [
+          "in Bestand / in Betrieb",
+          "in Planung / in Entwuf"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsstatus_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 561,
+        "null_count": 0,
+        "examples": [
+          "--",
+          "Umsetzung beschlossen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wirtschaftsverkehr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 561,
+        "null_count": 0,
+        "examples": [
+          "Bereich zum Laden, Leisten und Liefern (auch temporär)",
+          "Lade- und Lieferbereich (auch temporär)",
+          "Bereich zum Laden-, Liefern und zum Laden, Leisten und Liefern in zeitlichem Wechsel (auch temporär)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 561,
+        "null_count": 0,
+        "examples": [
+          "LINESTRING (691852.4972008426 5334767.831197955, 691848.7132008427 5334770.058597955)",
+          "LINESTRING (691848.7132008427 5334770.058597955, 691844.9821008424 5334772.254897955)",
+          "LINESTRING (691837.6284008424 5334776.554497954, 691833.8790008421 5334778.723797956)",
+          "LINESTRING (691844.9821008424 5334772.254897955, 691841.3131008425 5334774.414597955)",
+          "LINESTRING (691841.3131008425 5334774.414597955, 691837.6284008424 5334776.554497954)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "parkregel_beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 561,
+        "null_count": 0,
+        "examples": [
+          "Eingeschränktes Halteverbot 0-24 Uhr",
+          "Eingeschränktes Halteverbot 7-20 Uhr, Bewohnerparken 20 -23 Uhr",
+          "Eingeschränktes Halteverbot 8-18 Uhr werktags, sonst Bewohnerparken",
+          "Eingeschränktes Halteverbot 7-19 Uhr, sonst frei",
+          "Eingeschränktes Halteverbot 7-17 Uhr, Blaue Zone Messestadt Riem 17-18 Uhr"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bemerkung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 10,
+        "null_count": 551,
+        "examples": [
+          "",
+          "EHV werktags Mo-Fr 7-18:30; Sa 7-14; sonst M",
+          "EHV werktags Mo-Fr 7:30-17h; sonst Bew",
+          "EHV werktags Mo-Fr 9-18h; Sa 9-12; sonst frei"
+        ],
+        "null_rate": 0.9822
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "status",
+      "planungsstatus",
+      "angebot"
+    ],
+    "category_columns": [
+      "status_bedeutung",
+      "planungsstatus_bedeutung",
+      "wirtschaftsverkehr",
+      "bemerkung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "status_bedeutung",
+      "y": "status"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Laden, Liefern, Leisten\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include status, planungsstatus, angebot. Categorical fields include status_bedeutung, planungsstatus_bedeutung, wirtschaftsverkehr.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"561\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"status\",\"planungsstatus\",\"angebot\",\"status_bedeutung\",\"planungsstatus_bedeutung\",\"wirtschaftsverkehr\",\"shape\",\"parkregel_beschreibung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"category\",\"category\",\"category\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"float64\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"5\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"status\", [2.0,1.0])\nchart = BarChart([\"in Bestand / in Betrieb\",\"in Planung / in Entwuf\"], [series], \"grouped\", \"status_bedeutung\", \"status\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Laden, Liefern, Leisten and compare status by status_bedeutung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Laden, Liefern, Leisten\",\n    \"package_id\": \"58b8759c-2841-4817-911c-e3eb146767cf\",\n    \"package_name\": \"opendata_ruhver_parkseiten_laden_liefern_leisten\",\n    \"resource_id\": \"5c00c557-4143-4fc1-92f7-44a7c1e848e1\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Haltebereiche für Fahrzeuge von Lieferdiensten bzw. Handwerksbetrieben in der Landeshauptstadt München. Die Daten beinhalten \\\"Bereiche zum Laden und Liefern\\\", die zum Be- und Entladen genutzt werden dürfen und \\\"Bereiche zum Laden, Liefern und Leisten\\\", in denen auch Fahrzeuge von Handwerksbetrieben abgestellt werden dürfen. Die Haltebereiche sind häufig zeitlich begrenzt. Beide Nutzungen können in einem Bereich im zeitlichen Wechsel angeordnet sein.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Verkehrswesen\",\n      \"Wirschaftsverkehr\"\n    ],\n    \"groups\": [],\n    \"row_count\": 561,\n    \"sampled_rows\": 561,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"status\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 561,\n        \"null_count\": 0,\n        \"examples\": [\n          2,\n          1\n        ],\n        \"numeric\": {\n          \"count\": 561.0,\n          \"min\": 1.0,\n          \"max\": 2.0,\n          \"mean\": 1.9786,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"planungsstatus\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 561,\n        \"null_count\": 0,\n        \"examples\": [\n          0,\n          3\n        ],\n        \"numeric\": {\n          \"count\": 561.0,\n          \"min\": 0.0,\n          \"max\": 3.0,\n          \"mean\": 0.0642,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"angebot\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 556,\n        \"null_count\": 5,\n        \"examples\": [\n          1.0,\n          3.0,\n          2.0,\n          4.0,\n          10.0\n        ],\n        \"numeric\": {\n          \"count\": 556.0,\n          \"min\": 0.0,\n          \"max\": 20.0,\n          \"mean\": 3.2806,\n          \"median\": 3.0\n        },\n        \"null_rate\": 0.0089\n      },\n      {\n        \"name\": \"status_bedeutung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 561,\n        \"null_count\": 0,\n        \"examples\": [\n          \"in Bestand / in Betrieb\",\n          \"in Planung / in Entwuf\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"planungsstatus_bedeutung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 561,\n        \"null_count\": 0,\n        \"examples\": [\n          \"--\",\n          \"Umsetzung beschlossen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wirtschaftsverkehr\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 561,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Bereich zum Laden, Leisten und Liefern (auch temporär)\",\n          \"Lade- und Lieferbereich (auch temporär)\",\n          \"Bereich zum Laden-, Liefern und zum Laden, Leisten und Liefern in zeitlichem Wechsel (auch temporär)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 561,\n        \"null_count\": 0,\n        \"examples\": [\n          \"LINESTRING (691852.4972008426 5334767.831197955, 691848.7132008427 5334770.058597955)\",\n          \"LINESTRING (691848.7132008427 5334770.058597955, 691844.9821008424 5334772.254897955)\",\n          \"LINESTRING (691837.6284008424 5334776.554497954, 691833.8790008421 5334778.723797956)\",\n          \"LINESTRING (691844.9821008424 5334772.254897955, 691841.3131008425 5334774.414597955)\",\n          \"LINESTRING (691841.3131008425 5334774.414597955, 691837.6284008424 5334776.554497954)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"parkregel_beschreibung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 561,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Eingeschränktes Halteverbot 0-24 Uhr\",\n          \"Eingeschränktes Halteverbot 7-20 Uhr, Bewohnerparken 20 -23 Uhr\",\n          \"Eingeschränktes Halteverbot 8-18 Uhr werktags, sonst Bewohnerparken\",\n          \"Eingeschränktes Halteverbot 7-19 Uhr, sonst frei\",\n          \"Eingeschränktes Halteverbot 7-17 Uhr, Blaue Zone Messestadt Riem 17-18 Uhr\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bemerkung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 10,\n        \"null_count\": 551,\n        \"examples\": [\n          \"\",\n          \"EHV werktags Mo-Fr 7-18:30; Sa 7-14; sonst M\",\n          \"EHV werktags Mo-Fr 7:30-17h; sonst Bew\",\n          \"EHV werktags Mo-Fr 9-18h; Sa 9-12; sonst frei\"\n        ],\n        \"null_rate\": 0.9822\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"status\",\n      \"planungsstatus\",\n      \"angebot\"\n    ],\n    \"category_columns\": [\n      \"status_bedeutung\",\n      \"planungsstatus_bedeutung\",\n      \"wirtschaftsverkehr\",\n      \"bemerkung\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"status_bedeutung\",\n      \"y\": \"status\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Laden, Liefern, Leisten\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include status, planungsstatus, angebot. Categorical fields include status_bedeutung, planungsstatus_bedeutung, wirtschaftsverkehr.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"561\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"status\",\"planungsstatus\",\"angebot\",\"status_bedeutung\",\"planungsstatus_bedeutung\",\"wirtschaftsverkehr\",\"shape\",\"parkregel_beschreibung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"category\",\"category\",\"category\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"float64\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"5\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"status\", [2.0,1.0])\nchart = BarChart([\"in Bestand / in Betrieb\",\"in Planung / in Entwuf\"], [series], \"grouped\", \"status_bedeutung\", \"status\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Stadtgüter Stadt München and compare betriebsflaeche_(hektar) by zertifizierungen.",
+  "query_result": {
+    "dataset_title": "Stadtgüter Stadt München",
+    "package_id": "346afe24-64b3-40b0-819e-7c28c5ca9dbb",
+    "package_name": "stadtgueter-stadt-muenchen",
+    "resource_id": "45906e99-0966-4cda-9bfb-ed5fff4982a1",
+    "resource_name": "Liste Stadtgüter Stadt München",
+    "resource_format": "csv",
+    "description": "Die landwirtschaftlichen Betriebe schaffen Raum für nachhaltige Entwicklung im Einklang mit der Natur. Durch konsequenten Einsatz ökologischer Anbaumethoden und die Nutzung regenerativer Energien nehmen sie im Agrarsektor eine Vorbildfunktion ein. Außerdem sind sie Teil der vorausschauenden Flächenpolitik Münchens. 8 der 10 städtischen Güter sind Bioland- oder Naturland-zertifiziert, die restlichen zwei Güter befinden sich in der Umstellungsphase. 9 Güter sind nach EMAS-zertifiziert. Über vier M",
+    "organization": "Kommunalreferat der Landeshauptstadt München",
+    "tags": [
+      "Landwirtschaft"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 10,
+    "sampled_rows": 10,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "betriebsflaeche_(hektar)",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          215,
+          305,
+          268,
+          448,
+          482
+        ],
+        "numeric": {
+          "count": 10.0,
+          "min": 52.0,
+          "max": 482.0,
+          "mean": 287.3,
+          "median": 286.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "biobetrieb_seit",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          1989,
+          2001,
+          1995,
+          2024,
+          2018
+        ],
+        "numeric": {
+          "count": 10.0,
+          "min": 1989.0,
+          "max": 2024.0,
+          "mean": 2004.2,
+          "median": 1999.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zertifizierungen",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          "Naturland: DE-ÖKO-005, EMAS zertifiziert",
+          "EMAS zertifiziert, \"Münchner ÖKOPROFIT-Betrieb\"",
+          "Bioland:DE-ÖKO-006, EMAS zertifiziert",
+          "Bioland:DE-ÖKO-006"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "gut",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          "Gut Beigarten",
+          "Gut Buchhof",
+          "Gut Delling",
+          "Gut Dietersheim",
+          "Gut Großlappen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse_hausnummer",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          "Beigarten 5",
+          "Buchhof 3",
+          "Mühlstraße 2",
+          "Echinger Straße 37",
+          "Freisinger Landstraße 153"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "plz_ort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          "82064 Straßlach",
+          "82319 Starnberg",
+          "82229 Seefeld",
+          "85386 Dietersheim",
+          "80939 München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "betriebsschwerpunkte",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          "Ackerbau, Kompostierung",
+          "Ackerbau, Grünlandwirtschaft",
+          "Ackerbau",
+          "Zentrale Verwaltung der Stadtgüter München, Ackerbau, Ausgleichsflächen, Landschaftspflege",
+          "Ackerbau, Ochsenmast, Biogasanlage, Direktvermarktung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          "Gut Beigarten, seit 1961 im städtischen Besitz, wurde 1989 als erster städtischer Gutsbetrieb auf ökologischen Landbau umgestellt und Mitglied eines anerkannten",
+          "Gut Buchhof, seit 1965 im Besitz der Stadt München, wurde durch den Erwerb des \"Schmalzhofs\" 1991 erweitert. Zwischen 1994 und 1998 wurden umfangreiche Renovier",
+          "Gut Delling, dessen Ursprünge bis ins 12. Jahrhundert zurückreichen, liegt malerisch im Aubachtal nahe dem Ammersee und ist seit 1980 im Besitz der Stadt Münche",
+          "Gut Dietersheim befindet sich seit 1944 im Besitz der Stadt München. Nach einem Brand im Jahr 1955 wurde hier der erste viehlose städtische Gutsbetrieb etablier",
+          "Gut Großlappen wurde zwischen 1916 und 1921 erworben. Bis in die 1980er Jahre wurde auf den Flächen Klärschlamm ausgebracht. Nach der Aufgabe der Schweine- und"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strom_durch_photovoltaik_(kwh_pro_jahr)",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 7,
+        "examples": [
+          "ca. 100.000",
+          "ca. 190.000",
+          "ca 10.000"
+        ],
+        "null_rate": 0.7
+      },
+      {
+        "name": "strom_durch_biogas_(kwh_pro_jahr)",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 9,
+        "examples": [
+          "ca. 4.500.000"
+        ],
+        "null_rate": 0.9
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "betriebsflaeche_(hektar)",
+      "biobetrieb_seit"
+    ],
+    "category_columns": [
+      "zertifizierungen",
+      "strom_durch_photovoltaik_(kwh_pro_jahr)",
+      "strom_durch_biogas_(kwh_pro_jahr)"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "zertifizierungen",
+      "y": "betriebsflaeche_(hektar)"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtgüter Stadt München\", \"Liste Stadtgüter Stadt München\")\nsummary = TextContent(\"Liste Stadtgüter Stadt München belongs to Kommunalreferat der Landeshauptstadt München. It exposes 10 profiled columns for OpenUI rendering. Numeric fields include betriebsflaeche_(hektar), biobetrieb_seit. Categorical fields include zertifizierungen, strom_durch_photovoltaik_(kwh_pro_jahr), strom_durch_biogas_(kwh_pro_jahr).\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"10\")\nm2 = ListItem(\"Columns\", \"11\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"betriebsflaeche_(hektar)\",\"biobetrieb_seit\",\"zertifizierungen\",\"gut\",\"strasse_hausnummer\",\"plz_ort\",\"betriebsschwerpunkte\",\"beschreibung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"category\",\"string\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"betriebsflaeche_(hektar)\", [215.0,305.0,268.0,448.0])\nchart = BarChart([\"Naturland: DE-ÖKO-005, EMAS zertifiziert\",\"EMAS zertifiziert, \\\"Münchner ÖKOPROFIT-Betrieb\\\"\",\"Bioland:DE-ÖKO-006, EMAS zertifiziert\",\"Bioland:DE-ÖKO-006\"], [series], \"grouped\", \"zertifizierungen\", \"betriebsflaeche_(hektar)\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Stadtgüter Stadt München and compare betriebsflaeche_(hektar) by zertifizierungen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Stadtgüter Stadt München\",\n    \"package_id\": \"346afe24-64b3-40b0-819e-7c28c5ca9dbb\",\n    \"package_name\": \"stadtgueter-stadt-muenchen\",\n    \"resource_id\": \"45906e99-0966-4cda-9bfb-ed5fff4982a1\",\n    \"resource_name\": \"Liste Stadtgüter Stadt München\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Die landwirtschaftlichen Betriebe schaffen Raum für nachhaltige Entwicklung im Einklang mit der Natur. Durch konsequenten Einsatz ökologischer Anbaumethoden und die Nutzung regenerativer Energien nehmen sie im Agrarsektor eine Vorbildfunktion ein. Außerdem sind sie Teil der vorausschauenden Flächenpolitik Münchens. 8 der 10 städtischen Güter sind Bioland- oder Naturland-zertifiziert, die restlichen zwei Güter befinden sich in der Umstellungsphase. 9 Güter sind nach EMAS-zertifiziert. Über vier M\",\n    \"organization\": \"Kommunalreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Landwirtschaft\"\n    ],\n    \"groups\": [\n      \"econ\"\n    ],\n    \"row_count\": 10,\n    \"sampled_rows\": 10,\n    \"column_count\": 11,\n    \"columns\": [\n      {\n        \"name\": \"betriebsflaeche_(hektar)\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 10,\n        \"null_count\": 0,\n        \"examples\": [\n          215,\n          305,\n          268,\n          448,\n          482\n        ],\n        \"numeric\": {\n          \"count\": 10.0,\n          \"min\": 52.0,\n          \"max\": 482.0,\n          \"mean\": 287.3,\n          \"median\": 286.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"biobetrieb_seit\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 10,\n        \"null_count\": 0,\n        \"examples\": [\n          1989,\n          2001,\n          1995,\n          2024,\n          2018\n        ],\n        \"numeric\": {\n          \"count\": 10.0,\n          \"min\": 1989.0,\n          \"max\": 2024.0,\n          \"mean\": 2004.2,\n          \"median\": 1999.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zertifizierungen\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 10,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Naturland: DE-ÖKO-005, EMAS zertifiziert\",\n          \"EMAS zertifiziert, \\\"Münchner ÖKOPROFIT-Betrieb\\\"\",\n          \"Bioland:DE-ÖKO-006, EMAS zertifiziert\",\n          \"Bioland:DE-ÖKO-006\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"gut\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 10,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Gut Beigarten\",\n          \"Gut Buchhof\",\n          \"Gut Delling\",\n          \"Gut Dietersheim\",\n          \"Gut Großlappen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"strasse_hausnummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 10,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Beigarten 5\",\n          \"Buchhof 3\",\n          \"Mühlstraße 2\",\n          \"Echinger Straße 37\",\n          \"Freisinger Landstraße 153\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"plz_ort\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 10,\n        \"null_count\": 0,\n        \"examples\": [\n          \"82064 Straßlach\",\n          \"82319 Starnberg\",\n          \"82229 Seefeld\",\n          \"85386 Dietersheim\",\n          \"80939 München\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"betriebsschwerpunkte\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 10,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Ackerbau, Kompostierung\",\n          \"Ackerbau, Grünlandwirtschaft\",\n          \"Ackerbau\",\n          \"Zentrale Verwaltung der Stadtgüter München, Ackerbau, Ausgleichsflächen, Landschaftspflege\",\n          \"Ackerbau, Ochsenmast, Biogasanlage, Direktvermarktung\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"beschreibung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 10,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Gut Beigarten, seit 1961 im städtischen Besitz, wurde 1989 als erster städtischer Gutsbetrieb auf ökologischen Landbau umgestellt und Mitglied eines anerkannten\",\n          \"Gut Buchhof, seit 1965 im Besitz der Stadt München, wurde durch den Erwerb des \\\"Schmalzhofs\\\" 1991 erweitert. Zwischen 1994 und 1998 wurden umfangreiche Renovier\",\n          \"Gut Delling, dessen Ursprünge bis ins 12. Jahrhundert zurückreichen, liegt malerisch im Aubachtal nahe dem Ammersee und ist seit 1980 im Besitz der Stadt Münche\",\n          \"Gut Dietersheim befindet sich seit 1944 im Besitz der Stadt München. Nach einem Brand im Jahr 1955 wurde hier der erste viehlose städtische Gutsbetrieb etablier\",\n          \"Gut Großlappen wurde zwischen 1916 und 1921 erworben. Bis in die 1980er Jahre wurde auf den Flächen Klärschlamm ausgebracht. Nach der Aufgabe der Schweine- und\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"strom_durch_photovoltaik_(kwh_pro_jahr)\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 3,\n        \"null_count\": 7,\n        \"examples\": [\n          \"ca. 100.000\",\n          \"ca. 190.000\",\n          \"ca 10.000\"\n        ],\n        \"null_rate\": 0.7\n      },\n      {\n        \"name\": \"strom_durch_biogas_(kwh_pro_jahr)\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 9,\n        \"examples\": [\n          \"ca. 4.500.000\"\n        ],\n        \"null_rate\": 0.9\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"betriebsflaeche_(hektar)\",\n      \"biobetrieb_seit\"\n    ],\n    \"category_columns\": [\n      \"zertifizierungen\",\n      \"strom_durch_photovoltaik_(kwh_pro_jahr)\",\n      \"strom_durch_biogas_(kwh_pro_jahr)\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"zertifizierungen\",\n      \"y\": \"betriebsflaeche_(hektar)\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtgüter Stadt München\", \"Liste Stadtgüter Stadt München\")\nsummary = TextContent(\"Liste Stadtgüter Stadt München belongs to Kommunalreferat der Landeshauptstadt München. It exposes 10 profiled columns for OpenUI rendering. Numeric fields include betriebsflaeche_(hektar), biobetrieb_seit. Categorical fields include zertifizierungen, strom_durch_photovoltaik_(kwh_pro_jahr), strom_durch_biogas_(kwh_pro_jahr).\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"10\")\nm2 = ListItem(\"Columns\", \"11\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"betriebsflaeche_(hektar)\",\"biobetrieb_seit\",\"zertifizierungen\",\"gut\",\"strasse_hausnummer\",\"plz_ort\",\"betriebsschwerpunkte\",\"beschreibung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"category\",\"string\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"betriebsflaeche_(hektar)\", [215.0,305.0,268.0,448.0])\nchart = BarChart([\"Naturland: DE-ÖKO-005, EMAS zertifiziert\",\"EMAS zertifiziert, \\\"Münchner ÖKOPROFIT-Betrieb\\\"\",\"Bioland:DE-ÖKO-006, EMAS zertifiziert\",\"Bioland:DE-ÖKO-006\"], [series], \"grouped\", \"zertifizierungen\", \"betriebsflaeche_(hektar)\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

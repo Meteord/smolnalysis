@@ -1,0 +1,128 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München",
+    "package_id": "abb46a62-d39e-40f9-ae87-411209f55fde",
+    "package_name": "vagrund_hoeh_symbol_opendata",
+    "resource_id": "e023a63f-72fb-4ab0-8812-adf05c3e2dbf",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Der Dienst stellt die Lage der Höhenfestpunkte im Hoheitsgebiet der Landeshauptstadt München dar.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "opendata",
+      "planningCadastre"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          5288,
+          5289,
+          5290,
+          5291,
+          5293
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2278.0,
+          "max": 8687.0,
+          "mean": 4523.975,
+          "median": 2851.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "hfp_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "3253",
+          "9826",
+          "5965",
+          "9787",
+          "6931"
+        ],
+        "numeric": {
+          "count": 935.0,
+          "min": 12.0,
+          "max": 13065.0,
+          "mean": 7170.6856,
+          "median": 7424.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOINT ((686558.8760007332 5334165.127498268))",
+          "MULTIPOINT ((686499.014900732 5334221.186198273))",
+          "MULTIPOINT ((686691.0056007358 5334188.804398261))",
+          "MULTIPOINT ((687170.9329007454 5334175.742798236))",
+          "MULTIPOINT ((688038.9919007628 5334258.418398186))"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "hfp_nr"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include objectid, hfp_nr.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"objectid\",\"hfp_nr\",\"shape\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"objectid\", [5288.0,5289.0,5290.0,5291.0,5293.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of objectid in Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München\",\n    \"package_id\": \"abb46a62-d39e-40f9-ae87-411209f55fde\",\n    \"package_name\": \"vagrund_hoeh_symbol_opendata\",\n    \"resource_id\": \"e023a63f-72fb-4ab0-8812-adf05c3e2dbf\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Dienst stellt die Lage der Höhenfestpunkte im Hoheitsgebiet der Landeshauptstadt München dar.\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"opendata\",\n      \"planningCadastre\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 4,\n    \"columns\": [\n      {\n        \"name\": \"objectid\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          5288,\n          5289,\n          5290,\n          5291,\n          5293\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2278.0,\n          \"max\": 8687.0,\n          \"mean\": 4523.975,\n          \"median\": 2851.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"hfp_nr\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"3253\",\n          \"9826\",\n          \"5965\",\n          \"9787\",\n          \"6931\"\n        ],\n        \"numeric\": {\n          \"count\": 935.0,\n          \"min\": 12.0,\n          \"max\": 13065.0,\n          \"mean\": 7170.6856,\n          \"median\": 7424.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"MULTIPOINT ((686558.8760007332 5334165.127498268))\",\n          \"MULTIPOINT ((686499.014900732 5334221.186198273))\",\n          \"MULTIPOINT ((686691.0056007358 5334188.804398261))\",\n          \"MULTIPOINT ((687170.9329007454 5334175.742798236))\",\n          \"MULTIPOINT ((688038.9919007628 5334258.418398186))\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"objectid\",\n      \"hfp_nr\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"objectid\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include objectid, hfp_nr.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"objectid\",\"hfp_nr\",\"shape\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"objectid\", [5288.0,5289.0,5290.0,5291.0,5293.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

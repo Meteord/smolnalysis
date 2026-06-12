@@ -7,7 +7,7 @@ from unittest import TestCase, main
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from training.scripts.clean_basic_statistics import CleanerConfig, MunichBasicStatisticsCleaner
+from training.scripts.clean_basic_statistics import CleanerConfig, MunichBasicStatisticsCleaner, validate_openui_chat_lang
 
 
 class MunichBasicStatisticsCleanerTests(TestCase):
@@ -78,6 +78,13 @@ class MunichBasicStatisticsCleanerTests(TestCase):
         self.assertNotIn("_id", column_names)
         self.assertIn("gesamt", column_names)
         self.assertEqual(sample["query_result"]["columns"][0]["kind"], "numeric")
+        self.assertIn("openui_lang", sample)
+        self.assertIn("messages", sample)
+        self.assertEqual(sample["messages"][-1]["role"], "assistant")
+        self.assertEqual(sample["messages"][-1]["content"], sample["openui_lang"])
+        self.assertIn("root = Card", sample["openui_lang"])
+        self.assertIn("chart = BarChart", sample["openui_lang"])
+        validate_openui_chat_lang(sample["openui_lang"])
 
     def test_skips_unsupported_resource_without_notice_mode(self) -> None:
         package = {
@@ -121,6 +128,8 @@ class MunichBasicStatisticsCleanerTests(TestCase):
         self.assertEqual(len(samples), 1)
         self.assertEqual(samples[0]["component_hints"]["recommended_components"][0], "Notice")
         self.assertEqual(samples[0]["query_result"]["resource_format"], "wms")
+        self.assertIn("callout = Callout", samples[0]["openui_lang"])
+        validate_openui_chat_lang(samples[0]["openui_lang"])
 
 
 if __name__ == "__main__":

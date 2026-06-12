@@ -1,0 +1,301 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of rad_gruene_welle_line.laenge_m in Grüne Welle Radverkehr.",
+  "query_result": {
+    "dataset_title": "Grüne Welle Radverkehr",
+    "package_id": "228b638f-b11f-4656-9a38-e66240196ef4",
+    "package_name": "rad_gruene_welle",
+    "resource_id": "73a69bb7-0b54-4640-a26f-b61464c3d7d9",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Synchronisierte Ampelschaltungen ermöglichen es Radfahrenden, durch die Erhaltung der Richtgeschwindigkeit (ca. 20 km/h) mehrere Kreuzungen ohne Halt zu passieren. In der Regel ist die Koordinierungsrichtung tageszeitabhängig. Eine gleichzeitige Koordinierung in beiden Richtungen ist jedoch nur unter bestimmten Bedingungen möglich (geeigneter Knotenpunktabstand für gegebene Signalprogrammumlauf- und Freigabezeiten). Die Eingriffsmöglichkeiten von ÖPNV-Fahrzeugen auf die dortigen Ampeln können je",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 22,
+    "sampled_rows": 22,
+    "column_count": 40,
+    "columns": [
+      {
+        "name": "rad_gruene_welle_line.laenge_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "795",
+          "1860",
+          "675",
+          "1203",
+          "595"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 595.0,
+          "max": 1860.0,
+          "mean": 1025.6,
+          "median": 795.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "rad_gruene_welle_line.planungsst",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "rad_gruene_welle_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "rad_gruene_welle_line.vpr_kmh",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "20",
+          "22",
+          "21",
+          "18"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 18.0,
+          "max": 22.0,
+          "mean": 20.2,
+          "median": 20.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "laenge_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "795",
+          "1860",
+          "675",
+          "1203",
+          "595"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 595.0,
+          "max": 1860.0,
+          "mean": 1025.6,
+          "median": 795.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "planungsst",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "vpr_kmh",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "20",
+          "22",
+          "21",
+          "18"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 18.0,
+          "max": 22.0,
+          "mean": 20.2,
+          "median": 20.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "featureMember.rad_gruene_welle_line.laenge_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 21,
+        "examples": [
+          "595"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 595.0,
+          "max": 595.0,
+          "mean": 595.0,
+          "median": 595.0
+        },
+        "null_rate": 0.9545
+      },
+      {
+        "name": "featureMember.rad_gruene_welle_line.planungsst",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 21,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9545
+      },
+      {
+        "name": "featureMember.rad_gruene_welle_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 21,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9545
+      },
+      {
+        "name": "featureMember.rad_gruene_welle_line.vpr_kmh",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 21,
+        "examples": [
+          "18"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 18.0,
+          "max": 18.0,
+          "mean": 18.0,
+          "median": 18.0
+        },
+        "null_rate": 0.9545
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_gruene_welle_line.laenge_m",
+      "rad_gruene_welle_line.planungsst",
+      "rad_gruene_welle_line.status",
+      "rad_gruene_welle_line.vpr_kmh"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "rad_gruene_welle_line.laenge_m"
+    }
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 27,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Grüne Welle Radverkehr\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include rad_gruene_welle_line.laenge_m, rad_gruene_welle_line.planungsst, rad_gruene_welle_line.status.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"22\")\nm2 = ListItem(\"Columns\", \"40\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"4.25\")\nc1 = Col(\"Column\", [\"rad_gruene_welle_line.laenge_m\",\"rad_gruene_welle_line.planungsst\",\"rad_gruene_welle_line.status\",\"rad_gruene_welle_line.vpr_kmh\",\"laenge_m\",\"planungsst\",\"status\",\"vpr_kmh\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"17\",\"17\",\"17\",\"17\",\"17\",\"17\",\"17\",\"17\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"rad_gruene_welle_line.laenge_m\", [795.0,1860.0,675.0,1203.0,595.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"rad_gruene_welle_line.laenge_m\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 27 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of rad_gruene_welle_line.laenge_m in Grüne Welle Radverkehr.\",\n  \"query_result\": {\n    \"dataset_title\": \"Grüne Welle Radverkehr\",\n    \"package_id\": \"228b638f-b11f-4656-9a38-e66240196ef4\",\n    \"package_name\": \"rad_gruene_welle\",\n    \"resource_id\": \"73a69bb7-0b54-4640-a26f-b61464c3d7d9\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Synchronisierte Ampelschaltungen ermöglichen es Radfahrenden, durch die Erhaltung der Richtgeschwindigkeit (ca. 20 km/h) mehrere Kreuzungen ohne Halt zu passieren. In der Regel ist die Koordinierungsrichtung tageszeitabhängig. Eine gleichzeitige Koordinierung in beiden Richtungen ist jedoch nur unter bestimmten Bedingungen möglich (geeigneter Knotenpunktabstand für gegebene Signalprogrammumlauf- und Freigabezeiten). Die Eingriffsmöglichkeiten von ÖPNV-Fahrzeugen auf die dortigen Ampeln können je\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": 22,\n    \"sampled_rows\": 22,\n    \"column_count\": 40,\n    \"columns\": [\n      {\n        \"name\": \"rad_gruene_welle_line.laenge_m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 17,\n        \"examples\": [\n          \"795\",\n          \"1860\",\n          \"675\",\n          \"1203\",\n          \"595\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 595.0,\n          \"max\": 1860.0,\n          \"mean\": 1025.6,\n          \"median\": 795.0\n        },\n        \"null_rate\": 0.7727\n      },\n      {\n        \"name\": \"rad_gruene_welle_line.planungsst\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 17,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.7727\n      },\n      {\n        \"name\": \"rad_gruene_welle_line.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 17,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.7727\n      },\n      {\n        \"name\": \"rad_gruene_welle_line.vpr_kmh\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 17,\n        \"examples\": [\n          \"20\",\n          \"22\",\n          \"21\",\n          \"18\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 18.0,\n          \"max\": 22.0,\n          \"mean\": 20.2,\n          \"median\": 20.0\n        },\n        \"null_rate\": 0.7727\n      },\n      {\n        \"name\": \"laenge_m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 17,\n        \"examples\": [\n          \"795\",\n          \"1860\",\n          \"675\",\n          \"1203\",\n          \"595\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 595.0,\n          \"max\": 1860.0,\n          \"mean\": 1025.6,\n          \"median\": 795.0\n        },\n        \"null_rate\": 0.7727\n      },\n      {\n        \"name\": \"planungsst\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 17,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.7727\n      },\n      {\n        \"name\": \"status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 17,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.7727\n      },\n      {\n        \"name\": \"vpr_kmh\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 17,\n        \"examples\": [\n          \"20\",\n          \"22\",\n          \"21\",\n          \"18\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 18.0,\n          \"max\": 22.0,\n          \"mean\": 20.2,\n          \"median\": 20.0\n        },\n        \"null_rate\": 0.7727\n      },\n      {\n        \"name\": \"featureMember.rad_gruene_welle_line.laenge_m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 21,\n        \"examples\": [\n          \"595\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 595.0,\n          \"max\": 595.0,\n          \"mean\": 595.0,\n          \"median\": 595.0\n        },\n        \"null_rate\": 0.9545\n      },\n      {\n        \"name\": \"featureMember.rad_gruene_welle_line.planungsst\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 21,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.9545\n      },\n      {\n        \"name\": \"featureMember.rad_gruene_welle_line.status\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 21,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.9545\n      },\n      {\n        \"name\": \"featureMember.rad_gruene_welle_line.vpr_kmh\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 21,\n        \"examples\": [\n          \"18\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 18.0,\n          \"max\": 18.0,\n          \"mean\": 18.0,\n          \"median\": 18.0\n        },\n        \"null_rate\": 0.9545\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"rad_gruene_welle_line.laenge_m\",\n      \"rad_gruene_welle_line.planungsst\",\n      \"rad_gruene_welle_line.status\",\n      \"rad_gruene_welle_line.vpr_kmh\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"rad_gruene_welle_line.laenge_m\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Grüne Welle Radverkehr\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include rad_gruene_welle_line.laenge_m, rad_gruene_welle_line.planungsst, rad_gruene_welle_line.status.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"22\")\nm2 = ListItem(\"Columns\", \"40\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"4.25\")\nc1 = Col(\"Column\", [\"rad_gruene_welle_line.laenge_m\",\"rad_gruene_welle_line.planungsst\",\"rad_gruene_welle_line.status\",\"rad_gruene_welle_line.vpr_kmh\",\"laenge_m\",\"planungsst\",\"status\",\"vpr_kmh\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"17\",\"17\",\"17\",\"17\",\"17\",\"17\",\"17\",\"17\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"rad_gruene_welle_line.laenge_m\", [795.0,1860.0,675.0,1203.0,595.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"rad_gruene_welle_line.laenge_m\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 27 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

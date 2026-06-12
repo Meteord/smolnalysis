@@ -1,0 +1,184 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of insgesamt in Aktiv Beschäftigte der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Aktiv Beschäftigte der Landeshauptstadt München",
+    "package_id": "c2e76db8-48b0-40e3-9070-be943548ff9d",
+    "package_name": "aktiv-beschaftigte-der-landeshauptstadt-muenchen",
+    "resource_id": "c49554db-becb-4bff-a16e-694bcda23376",
+    "resource_name": "Aktiv Beschäftigte der Landeshauptstadt München",
+    "resource_format": "csv",
+    "description": "Aktiv Beschäftigte der Landeshauptstadt München ab 2017 zum 31.12. des jeweiligen Jahres.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Personal",
+      "Personalreferat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 8,
+    "sampled_rows": 8,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "insgesamt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          42480,
+          41078,
+          40532,
+          40589,
+          40971
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 38399.0,
+          "max": 42480.0,
+          "mean": 40460.875,
+          "median": 40560.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "davon-gemeindehaushalt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          37494,
+          36347,
+          35856,
+          35896,
+          36396
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 34461.0,
+          "max": 37494.0,
+          "mean": 35959.375,
+          "median": 35876.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "davon-eigenbetriebe",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          4797,
+          4580,
+          4529,
+          4545,
+          4420
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 3818.0,
+          "max": 4797.0,
+          "mean": 4352.875,
+          "median": 4474.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "davon-rechtllich-selbststaendige-stiftungen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          189,
+          151,
+          147,
+          148,
+          155
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 120.0,
+          "max": 189.0,
+          "mean": 148.625,
+          "median": 148.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 8,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 2017.0,
+          "max": 2024.0,
+          "mean": 2020.5,
+          "median": 2020.5
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "insgesamt",
+      "davon-gemeindehaushalt",
+      "davon-eigenbetriebe",
+      "davon-rechtllich-selbststaendige-stiftungen"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "insgesamt"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Aktiv Beschäftigte der Landeshauptstadt München\", \"Aktiv Beschäftigte der Landeshauptstadt München\")\nsummary = TextContent(\"Aktiv Beschäftigte der Landeshauptstadt München belongs to Statistisches Amt München. It exposes 5 profiled columns for OpenUI rendering. Numeric fields include insgesamt, davon-gemeindehaushalt, davon-eigenbetriebe.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"8\")\nm2 = ListItem(\"Columns\", \"6\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"insgesamt\",\"davon-gemeindehaushalt\",\"davon-eigenbetriebe\",\"davon-rechtllich-selbststaendige-stiftungen\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"insgesamt\", [42480.0,41078.0,40532.0,40589.0,40971.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"insgesamt\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of insgesamt in Aktiv Beschäftigte der Landeshauptstadt München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Aktiv Beschäftigte der Landeshauptstadt München\",\n    \"package_id\": \"c2e76db8-48b0-40e3-9070-be943548ff9d\",\n    \"package_name\": \"aktiv-beschaftigte-der-landeshauptstadt-muenchen\",\n    \"resource_id\": \"c49554db-becb-4bff-a16e-694bcda23376\",\n    \"resource_name\": \"Aktiv Beschäftigte der Landeshauptstadt München\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Aktiv Beschäftigte der Landeshauptstadt München ab 2017 zum 31.12. des jeweiligen Jahres.\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Personal\",\n      \"Personalreferat\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 8,\n    \"sampled_rows\": 8,\n    \"column_count\": 6,\n    \"columns\": [\n      {\n        \"name\": \"insgesamt\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          42480,\n          41078,\n          40532,\n          40589,\n          40971\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 38399.0,\n          \"max\": 42480.0,\n          \"mean\": 40460.875,\n          \"median\": 40560.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"davon-gemeindehaushalt\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          37494,\n          36347,\n          35856,\n          35896,\n          36396\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 34461.0,\n          \"max\": 37494.0,\n          \"mean\": 35959.375,\n          \"median\": 35876.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"davon-eigenbetriebe\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          4797,\n          4580,\n          4529,\n          4545,\n          4420\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 3818.0,\n          \"max\": 4797.0,\n          \"mean\": 4352.875,\n          \"median\": 4474.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"davon-rechtllich-selbststaendige-stiftungen\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          189,\n          151,\n          147,\n          148,\n          155\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 120.0,\n          \"max\": 189.0,\n          \"mean\": 148.625,\n          \"median\": 148.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 8,\n        \"null_count\": 0,\n        \"examples\": [\n          2024,\n          2023,\n          2022,\n          2021,\n          2020\n        ],\n        \"numeric\": {\n          \"count\": 8.0,\n          \"min\": 2017.0,\n          \"max\": 2024.0,\n          \"mean\": 2020.5,\n          \"median\": 2020.5\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"insgesamt\",\n      \"davon-gemeindehaushalt\",\n      \"davon-eigenbetriebe\",\n      \"davon-rechtllich-selbststaendige-stiftungen\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"insgesamt\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Aktiv Beschäftigte der Landeshauptstadt München\", \"Aktiv Beschäftigte der Landeshauptstadt München\")\nsummary = TextContent(\"Aktiv Beschäftigte der Landeshauptstadt München belongs to Statistisches Amt München. It exposes 5 profiled columns for OpenUI rendering. Numeric fields include insgesamt, davon-gemeindehaushalt, davon-eigenbetriebe.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"8\")\nm2 = ListItem(\"Columns\", \"6\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"insgesamt\",\"davon-gemeindehaushalt\",\"davon-eigenbetriebe\",\"davon-rechtllich-selbststaendige-stiftungen\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"insgesamt\", [42480.0,41078.0,40532.0,40589.0,40971.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"insgesamt\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

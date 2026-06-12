@@ -1,0 +1,265 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Außenwanderungsziffer 65 Jahre und älter and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Außenwanderungsziffer 65 Jahre und älter",
+    "package_id": "9da2d950-f30d-46c3-97d2-da43419e788b",
+    "package_name": "indikatorenatlas-bevoelkerung-aussenwanderungsziffer-65-jahre-und-aelter-83r65mct",
+    "resource_id": "9cd50ecb-6b04-4d2a-9be0-753800737068",
+    "resource_name": "Außenwanderungsziffer 65 Jahre und älter",
+    "resource_format": "csv",
+    "description": "(auch als Außenwanderungssaldo je 1000 Einwohner/innen 65 Jahre und älter bezeichnet) Differenz der 65-jährigen und älteren außerstädtisch Zugezogenen (Hauptwohnsitz) der entsprechenden Kategorie und Weggezogenen (Hauptwohnsitz) der entsprechenden Kategorie pro 1 000 deutsche Hauptwohnsitzpersonen (mittlere deutsche Hauptwohnsitzbevölkerung im Kalenderjahr) der entsprechenden Kategorie. Es werden nur außerstädtische (über die Stadtgrenze Münchens hinaus) Zugezogene und Weggezogene berücksichtigt",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Alter",
+      "Bevölkerung",
+      "Indikatorenatlas",
+      "Wanderungen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 4056,
+    "sampled_rows": 1000,
+    "column_count": 12,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          -1.7,
+          -2.7,
+          -1.3,
+          -0.6,
+          -2.3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": -60.4,
+          "max": 14.6,
+          "mean": -4.0336,
+          "median": -1.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "683",
+          "13",
+          "29",
+          "31",
+          "22"
+        ],
+        "numeric": {
+          "count": 997.0,
+          "min": 3.0,
+          "max": 4514.0,
+          "mean": 102.661,
+          "median": 33.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1145",
+          "22",
+          "37",
+          "35",
+          "42"
+        ],
+        "numeric": {
+          "count": 997.0,
+          "min": 5.0,
+          "max": 8536.0,
+          "mean": 176.9408,
+          "median": 45.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "273598.4",
+          "3346.5",
+          "6129.9",
+          "6335.7",
+          "11518.2"
+        ],
+        "numeric": {
+          "count": 997.0,
+          "min": 2788.1,
+          "max": 273598.4,
+          "mean": 19641.3238,
+          "median": 10053.3
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Ausland",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "außerstädtisch Zugezogene (65 Jahre und älter) (Ausland)",
+          "außerstädtisch Zugezogene (65 Jahre und älter) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "außerstädtisch Weggezogene (65 Jahre und älter) (Ausland)",
+          "außerstädtisch Weggezogene (65 Jahre und älter) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Außenwanderungsziffer 65 Jahre und älter"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 3",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "mittlere Hauptwohnsitzbevölkerung (65 Jahre und älter)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2",
+      "Basiswert 3"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Bevölkerung - Außenwanderungsziffer 65 Jahre und älter\", \"Außenwanderungsziffer 65 Jahre und älter\")\nsummary = TextContent(\"Außenwanderungsziffer 65 Jahre und älter belongs to Statistisches Amt München. It exposes 11 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Auspragung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"4,056\")\nm2 = ListItem(\"Columns\", \"12\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Basiswert 3\",\"Jahr\",\"Auspragung\",\"Name Basiswert 1\",\"Name Basiswert 2\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [-1.7,-2.7])\nchart = BarChart([\"Ausland\",\"insgesamt\"], [series], \"grouped\", \"Auspragung\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Indikatorenatlas: Bevölkerung - Außenwanderungsziffer 65 Jahre und älter and compare Indikatorwert by Auspragung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Indikatorenatlas: Bevölkerung - Außenwanderungsziffer 65 Jahre und älter\",\n    \"package_id\": \"9da2d950-f30d-46c3-97d2-da43419e788b\",\n    \"package_name\": \"indikatorenatlas-bevoelkerung-aussenwanderungsziffer-65-jahre-und-aelter-83r65mct\",\n    \"resource_id\": \"9cd50ecb-6b04-4d2a-9be0-753800737068\",\n    \"resource_name\": \"Außenwanderungsziffer 65 Jahre und älter\",\n    \"resource_format\": \"csv\",\n    \"description\": \"(auch als Außenwanderungssaldo je 1000 Einwohner/innen 65 Jahre und älter bezeichnet) Differenz der 65-jährigen und älteren außerstädtisch Zugezogenen (Hauptwohnsitz) der entsprechenden Kategorie und Weggezogenen (Hauptwohnsitz) der entsprechenden Kategorie pro 1 000 deutsche Hauptwohnsitzpersonen (mittlere deutsche Hauptwohnsitzbevölkerung im Kalenderjahr) der entsprechenden Kategorie. Es werden nur außerstädtische (über die Stadtgrenze Münchens hinaus) Zugezogene und Weggezogene berücksichtigt\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Alter\",\n      \"Bevölkerung\",\n      \"Indikatorenatlas\",\n      \"Wanderungen\"\n    ],\n    \"groups\": [\n      \"soci\"\n    ],\n    \"row_count\": 4056,\n    \"sampled_rows\": 1000,\n    \"column_count\": 12,\n    \"columns\": [\n      {\n        \"name\": \"Indikatorwert\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          -1.7,\n          -2.7,\n          -1.3,\n          -0.6,\n          -2.3\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": -60.4,\n          \"max\": 14.6,\n          \"mean\": -4.0336,\n          \"median\": -1.8\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"683\",\n          \"13\",\n          \"29\",\n          \"31\",\n          \"22\"\n        ],\n        \"numeric\": {\n          \"count\": 997.0,\n          \"min\": 3.0,\n          \"max\": 4514.0,\n          \"mean\": 102.661,\n          \"median\": 33.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1145\",\n          \"22\",\n          \"37\",\n          \"35\",\n          \"42\"\n        ],\n        \"numeric\": {\n          \"count\": 997.0,\n          \"min\": 5.0,\n          \"max\": 8536.0,\n          \"mean\": 176.9408,\n          \"median\": 45.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 3\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"273598.4\",\n          \"3346.5\",\n          \"6129.9\",\n          \"6335.7\",\n          \"11518.2\"\n        ],\n        \"numeric\": {\n          \"count\": 997.0,\n          \"min\": 2788.1,\n          \"max\": 273598.4,\n          \"mean\": 19641.3238,\n          \"median\": 10053.3\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          2025,\n          2024,\n          2023,\n          2022,\n          2021\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2000.0,\n          \"max\": 2025.0,\n          \"mean\": 2014.69,\n          \"median\": 2016.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Auspragung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Ausland\",\n          \"insgesamt\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"außerstädtisch Zugezogene (65 Jahre und älter) (Ausland)\",\n          \"außerstädtisch Zugezogene (65 Jahre und älter) (insgesamt)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"außerstädtisch Weggezogene (65 Jahre und älter) (Ausland)\",\n          \"außerstädtisch Weggezogene (65 Jahre und älter) (insgesamt)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Indikator\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Außenwanderungsziffer 65 Jahre und älter\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Raumbezug\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Stadt München\",\n          \"01 Altstadt - Lehel\",\n          \"02 Ludwigsvorstadt - Isarvorstadt\",\n          \"03 Maxvorstadt\",\n          \"04 Schwabing - West\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 3\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"mittlere Hauptwohnsitzbevölkerung (65 Jahre und älter)\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Indikatorwert\",\n      \"Basiswert 1\",\n      \"Basiswert 2\",\n      \"Basiswert 3\"\n    ],\n    \"category_columns\": [\n      \"Auspragung\",\n      \"Name Basiswert 1\",\n      \"Name Basiswert 2\",\n      \"Indikator\"\n    ],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"Auspragung\",\n      \"y\": \"Indikatorwert\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Bevölkerung - Außenwanderungsziffer 65 Jahre und älter\", \"Außenwanderungsziffer 65 Jahre und älter\")\nsummary = TextContent(\"Außenwanderungsziffer 65 Jahre und älter belongs to Statistisches Amt München. It exposes 11 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Auspragung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"4,056\")\nm2 = ListItem(\"Columns\", \"12\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Basiswert 3\",\"Jahr\",\"Auspragung\",\"Name Basiswert 1\",\"Name Basiswert 2\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [-1.7,-2.7])\nchart = BarChart([\"Ausland\",\"insgesamt\"], [series], \"grouped\", \"Auspragung\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

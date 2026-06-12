@@ -1,0 +1,224 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Gesundheit - Zahnärzt*Zahnärztin-Dichte and compare Indikatorwert by Indikator.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Gesundheit - Zahnärzt*Zahnärztin-Dichte",
+    "package_id": "a9a165ce-61e7-4af5-93cf-11b999845f1f",
+    "package_name": "indikatorenatlas-gesundheit-zahnaerztedichte-83r65mct",
+    "resource_id": "c3e8a012-c888-475a-8250-c650e318cbb9",
+    "resource_name": "Zahnärzt*Zahnärztin-Dichte",
+    "resource_format": "csv",
+    "description": "Hauptwohnsitzbevölkerung je Zahnarzt*Zahnärztin (inkl. Kieferorthopädie). **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Gesundheit",
+      "Indikatorenatlas"
+    ],
+    "groups": [],
+    "row_count": 286,
+    "sampled_rows": 286,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          909,
+          73,
+          443,
+          632,
+          994
+        ],
+        "numeric": {
+          "count": 286.0,
+          "min": 73.0,
+          "max": 4434.0,
+          "mean": 1323.8951,
+          "median": 1219.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          "1603776",
+          "20876",
+          "50081",
+          "52434",
+          "68610"
+        ],
+        "numeric": {
+          "count": 286.0,
+          "min": 20626.0,
+          "max": 1603776.0,
+          "mean": 119502.6748,
+          "median": 57950.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          "1765",
+          "285",
+          "113",
+          "83",
+          "69"
+        ],
+        "numeric": {
+          "count": 286.0,
+          "min": 13.0,
+          "max": 1782.0,
+          "mean": 129.8811,
+          "median": 55.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 286.0,
+          "min": 2014.0,
+          "max": 2024.0,
+          "mean": 2019.0,
+          "median": 2019.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          "Zahnarzt*Zahnärztin-Dichte"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 286,
+        "null_count": 0,
+        "examples": [
+          "Zahnärzte*Zahnärztinnen (inklusive Kieferorthopädie)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Indikator",
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Indikator",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Gesundheit - Zahnärzt*Zahnärztin-Dichte\", \"Zahnärzt*Zahnärztin-Dichte\")\nsummary = TextContent(\"Zahnärzt*Zahnärztin-Dichte belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Indikator, Auspragung, Name Basiswert 1.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"286\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Indikator\",\"Auspragung\",\"Raumbezug\",\"Name Basiswert 1\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"string\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [909.0])\nchart = BarChart([\"Zahnarzt*Zahnärztin-Dichte\"], [series], \"grouped\", \"Indikator\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Indikatorenatlas: Gesundheit - Zahnärzt*Zahnärztin-Dichte and compare Indikatorwert by Indikator.\",\n  \"query_result\": {\n    \"dataset_title\": \"Indikatorenatlas: Gesundheit - Zahnärzt*Zahnärztin-Dichte\",\n    \"package_id\": \"a9a165ce-61e7-4af5-93cf-11b999845f1f\",\n    \"package_name\": \"indikatorenatlas-gesundheit-zahnaerztedichte-83r65mct\",\n    \"resource_id\": \"c3e8a012-c888-475a-8250-c650e318cbb9\",\n    \"resource_name\": \"Zahnärzt*Zahnärztin-Dichte\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Hauptwohnsitzbevölkerung je Zahnarzt*Zahnärztin (inkl. Kieferorthopädie). **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Gesundheit\",\n      \"Indikatorenatlas\"\n    ],\n    \"groups\": [],\n    \"row_count\": 286,\n    \"sampled_rows\": 286,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"Indikatorwert\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          909,\n          73,\n          443,\n          632,\n          994\n        ],\n        \"numeric\": {\n          \"count\": 286.0,\n          \"min\": 73.0,\n          \"max\": 4434.0,\n          \"mean\": 1323.8951,\n          \"median\": 1219.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1603776\",\n          \"20876\",\n          \"50081\",\n          \"52434\",\n          \"68610\"\n        ],\n        \"numeric\": {\n          \"count\": 286.0,\n          \"min\": 20626.0,\n          \"max\": 1603776.0,\n          \"mean\": 119502.6748,\n          \"median\": 57950.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1765\",\n          \"285\",\n          \"113\",\n          \"83\",\n          \"69\"\n        ],\n        \"numeric\": {\n          \"count\": 286.0,\n          \"min\": 13.0,\n          \"max\": 1782.0,\n          \"mean\": 129.8811,\n          \"median\": 55.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          2024,\n          2023,\n          2022,\n          2021,\n          2020\n        ],\n        \"numeric\": {\n          \"count\": 286.0,\n          \"min\": 2014.0,\n          \"max\": 2024.0,\n          \"mean\": 2019.0,\n          \"median\": 2019.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Indikator\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Zahnarzt*Zahnärztin-Dichte\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Auspragung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          \"insgesamt\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Raumbezug\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Stadt München\",\n          \"01 Altstadt - Lehel\",\n          \"02 Ludwigsvorstadt - Isarvorstadt\",\n          \"03 Maxvorstadt\",\n          \"04 Schwabing - West\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Hauptwohnsitzbevölkerung (insgesamt)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 286,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Zahnärzte*Zahnärztinnen (inklusive Kieferorthopädie)\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Indikatorwert\",\n      \"Basiswert 1\",\n      \"Basiswert 2\"\n    ],\n    \"category_columns\": [\n      \"Indikator\",\n      \"Auspragung\",\n      \"Name Basiswert 1\",\n      \"Name Basiswert 2\"\n    ],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"Indikator\",\n      \"y\": \"Indikatorwert\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Gesundheit - Zahnärzt*Zahnärztin-Dichte\", \"Zahnärzt*Zahnärztin-Dichte\")\nsummary = TextContent(\"Zahnärzt*Zahnärztin-Dichte belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Indikator, Auspragung, Name Basiswert 1.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"286\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Indikator\",\"Auspragung\",\"Raumbezug\",\"Name Basiswert 1\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"string\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [909.0])\nchart = BarChart([\"Zahnarzt*Zahnärztin-Dichte\"], [series], \"grouped\", \"Indikator\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

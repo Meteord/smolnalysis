@@ -1,0 +1,134 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of preis in Oktoberfest.",
+  "query_result": {
+    "dataset_title": "Oktoberfest",
+    "package_id": "8d6c8251-7956-4f92-8c96-f79106aab828",
+    "package_name": "oktoberfest",
+    "resource_id": "0a430b93-46fc-4cf7-808c-53c81a2dd5db",
+    "resource_name": "Oktoberfest Bierpreise in den Festzelten 2000 - 2024",
+    "resource_format": "csv",
+    "description": "Statistiken zum Oktoberfest (Wiesn). Das Oktoberfest in München (mundartlich Wiesn) ist das größte Volksfest der Welt. Es findet seit 1810 auf der Theresienwiese in der bayerischen Landeshauptstadt München statt und wird Jahr für Jahr von rund sechs Millionen Menschen besucht. 2020 und 2021 wurde das Oktoberfest wegen der Corona-Pandemie abgesagt. Alle 4 Jahre (bis 1996 alle 3 Jahre) fand zusätzlich das [Bayerische Zentral-Landwirtschaftsfest](https://de.wikipedia.org/wiki/Bayerisches_Zentral-La",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bier",
+      "Bierpreis",
+      "Hendl",
+      "Oktoberfest",
+      "Wiesn"
+    ],
+    "groups": [
+      "educ",
+      "econ"
+    ],
+    "row_count": 256,
+    "sampled_rows": 256,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "preis",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 256,
+        "null_count": 0,
+        "examples": [
+          "6.29",
+          "6.34",
+          "6.39",
+          "6.44",
+          "NA"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 6.29,
+          "max": 15.1,
+          "mean": 9.754,
+          "median": 9.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 256,
+        "null_count": 0,
+        "examples": [
+          "2000",
+          "2001",
+          "2002",
+          "2003",
+          "2004"
+        ],
+        "numeric": {
+          "count": 256.0,
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2012.1172,
+          "median": 2013.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zelt",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 256,
+        "null_count": 0,
+        "examples": [
+          "Bräurosl",
+          "Löwenbräu",
+          "Hofbräuhaus",
+          "Hacker",
+          "Armbrustschützen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "preis"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "preis"
+    }
+  },
+  "quality_score": 7.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Oktoberfest\", \"Oktoberfest Bierpreise in den Festzelten 2000 - 2024\")\nsummary = TextContent(\"Oktoberfest Bierpreise in den Festzelten 2000 - 2024 belongs to Statistisches Amt München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include preis.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"256\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.5\")\nc1 = Col(\"Column\", [\"preis\",\"jahr\",\"zelt\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"preis\", [6.29,6.34,6.39,6.44])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"preis\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of preis in Oktoberfest.\",\n  \"query_result\": {\n    \"dataset_title\": \"Oktoberfest\",\n    \"package_id\": \"8d6c8251-7956-4f92-8c96-f79106aab828\",\n    \"package_name\": \"oktoberfest\",\n    \"resource_id\": \"0a430b93-46fc-4cf7-808c-53c81a2dd5db\",\n    \"resource_name\": \"Oktoberfest Bierpreise in den Festzelten 2000 - 2024\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Statistiken zum Oktoberfest (Wiesn). Das Oktoberfest in München (mundartlich Wiesn) ist das größte Volksfest der Welt. Es findet seit 1810 auf der Theresienwiese in der bayerischen Landeshauptstadt München statt und wird Jahr für Jahr von rund sechs Millionen Menschen besucht. 2020 und 2021 wurde das Oktoberfest wegen der Corona-Pandemie abgesagt. Alle 4 Jahre (bis 1996 alle 3 Jahre) fand zusätzlich das [Bayerische Zentral-Landwirtschaftsfest](https://de.wikipedia.org/wiki/Bayerisches_Zentral-La\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bier\",\n      \"Bierpreis\",\n      \"Hendl\",\n      \"Oktoberfest\",\n      \"Wiesn\"\n    ],\n    \"groups\": [\n      \"educ\",\n      \"econ\"\n    ],\n    \"row_count\": 256,\n    \"sampled_rows\": 256,\n    \"column_count\": 4,\n    \"columns\": [\n      {\n        \"name\": \"preis\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 256,\n        \"null_count\": 0,\n        \"examples\": [\n          \"6.29\",\n          \"6.34\",\n          \"6.39\",\n          \"6.44\",\n          \"NA\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 6.29,\n          \"max\": 15.1,\n          \"mean\": 9.754,\n          \"median\": 9.8\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 256,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2000\",\n          \"2001\",\n          \"2002\",\n          \"2003\",\n          \"2004\"\n        ],\n        \"numeric\": {\n          \"count\": 256.0,\n          \"min\": 2000.0,\n          \"max\": 2024.0,\n          \"mean\": 2012.1172,\n          \"median\": 2013.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zelt\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 256,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Bräurosl\",\n          \"Löwenbräu\",\n          \"Hofbräuhaus\",\n          \"Hacker\",\n          \"Armbrustschützen\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"preis\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"preis\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Oktoberfest\", \"Oktoberfest Bierpreise in den Festzelten 2000 - 2024\")\nsummary = TextContent(\"Oktoberfest Bierpreise in den Festzelten 2000 - 2024 belongs to Statistisches Amt München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include preis.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"256\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.5\")\nc1 = Col(\"Column\", [\"preis\",\"jahr\",\"zelt\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"preis\", [6.29,6.34,6.39,6.44])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"preis\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

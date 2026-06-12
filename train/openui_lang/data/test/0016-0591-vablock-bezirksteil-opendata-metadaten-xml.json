@@ -1,0 +1,295 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Bezirksteil.",
+  "query_result": {
+    "dataset_title": "Bezirksteil",
+    "package_id": "cef955ef-7242-4e5d-bb5f-697df6bbe224",
+    "package_name": "vablock_bezirksteil_opendata",
+    "resource_id": "52e6a919-6ca2-43d3-af09-1b7faa355ee9",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtbezirksteilen der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 205,
+    "sampled_rows": 205,
+    "column_count": 376,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 83,
+        "null_count": 122,
+        "examples": [
+          "a62c0dd8-90a2-4c7f-a8b6-1c923e8b2084",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat",
+          "+49 89 233-722269"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 1.0,
+          "max": 80335.0,
+          "mean": 48201.4,
+          "median": 80335.0
+        },
+        "null_rate": 0.5951
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 201,
+        "examples": [
+          "11.3267",
+          "11.7319",
+          "48.0171",
+          "48.2436"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3267,
+          "max": 48.2436,
+          "mean": 29.8298,
+          "median": 29.8745
+        },
+        "null_rate": 0.9805
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 203,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.5,
+          "median": 0.5
+        },
+        "null_rate": 0.9902
+      },
+      {
+        "name": "MD_Format.version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 203,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9902
+      },
+      {
+        "name": "version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 203,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9902
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "distributionInfo.MD_Distribution.distributionFormat.MD_Format.version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "dataQualityInfo.DQ_DataQuality.report.DQ_DomainConsistency.result.DQ_ConformanceResult.pass.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "Decimal",
+      "Boolean",
+      "MD_Format.version.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 363,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bezirksteil\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include CharacterString, Decimal, Boolean.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"205\")\nm2 = ListItem(\"Columns\", \"376\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"CharacterString\",\"Decimal\",\"Boolean\",\"MD_Format.version.CharacterString\",\"version.CharacterString\",\"identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\"distributionInfo.MD_Distribution.distributionFormat.MD_Format.version.CharacterString\",\"dataQualityInfo.DQ_DataQuality.report.DQ_DomainConsistency.result.DQ_ConformanceResult.pass.Boolean\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"122\",\"201\",\"203\",\"203\",\"203\",\"204\",\"204\",\"204\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"CharacterString\", [1.0,80335.0,48201.4,80335.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"CharacterString\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 363 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of CharacterString in Bezirksteil.\",\n  \"query_result\": {\n    \"dataset_title\": \"Bezirksteil\",\n    \"package_id\": \"cef955ef-7242-4e5d-bb5f-697df6bbe224\",\n    \"package_name\": \"vablock_bezirksteil_opendata\",\n    \"resource_id\": \"52e6a919-6ca2-43d3-af09-1b7faa355ee9\",\n    \"resource_name\": \"Metadaten (XML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtbezirksteilen der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Planungsunterlagen\",\n      \"opendata\"\n    ],\n    \"groups\": [],\n    \"row_count\": 205,\n    \"sampled_rows\": 205,\n    \"column_count\": 376,\n    \"columns\": [\n      {\n        \"name\": \"CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 83,\n        \"null_count\": 122,\n        \"examples\": [\n          \"a62c0dd8-90a2-4c7f-a8b6-1c923e8b2084\",\n          \"WMS\",\n          \"GeodatenService München\",\n          \"Landeshauptstadt München - Kommunalreferat\",\n          \"+49 89 233-722269\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 1.0,\n          \"max\": 80335.0,\n          \"mean\": 48201.4,\n          \"median\": 80335.0\n        },\n        \"null_rate\": 0.5951\n      },\n      {\n        \"name\": \"Decimal\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 4,\n        \"null_count\": 201,\n        \"examples\": [\n          \"11.3267\",\n          \"11.7319\",\n          \"48.0171\",\n          \"48.2436\"\n        ],\n        \"numeric\": {\n          \"count\": 4.0,\n          \"min\": 11.3267,\n          \"max\": 48.2436,\n          \"mean\": 29.8298,\n          \"median\": 29.8745\n        },\n        \"null_rate\": 0.9805\n      },\n      {\n        \"name\": \"Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 203,\n        \"examples\": [\n          \"1\",\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.5,\n          \"median\": 0.5\n        },\n        \"null_rate\": 0.9902\n      },\n      {\n        \"name\": \"MD_Format.version.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 203,\n        \"examples\": [\n          \"01\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9902\n      },\n      {\n        \"name\": \"version.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 203,\n        \"examples\": [\n          \"01\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9902\n      },\n      {\n        \"name\": \"identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 204,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9951\n      },\n      {\n        \"name\": \"distributionInfo.MD_Distribution.distributionFormat.MD_Format.version.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 204,\n        \"examples\": [\n          \"01\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9951\n      },\n      {\n        \"name\": \"dataQualityInfo.DQ_DataQuality.report.DQ_DomainConsistency.result.DQ_ConformanceResult.pass.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 204,\n        \"examples\": [\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.9951\n      },\n      {\n        \"name\": \"SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 204,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9951\n      },\n      {\n        \"name\": \"extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 204,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9951\n      },\n      {\n        \"name\": \"EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 204,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9951\n      },\n      {\n        \"name\": \"geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 204,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9951\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"CharacterString\",\n      \"Decimal\",\n      \"Boolean\",\n      \"MD_Format.version.CharacterString\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"CharacterString\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bezirksteil\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include CharacterString, Decimal, Boolean.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"205\")\nm2 = ListItem(\"Columns\", \"376\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"CharacterString\",\"Decimal\",\"Boolean\",\"MD_Format.version.CharacterString\",\"version.CharacterString\",\"identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\"distributionInfo.MD_Distribution.distributionFormat.MD_Format.version.CharacterString\",\"dataQualityInfo.DQ_DataQuality.report.DQ_DomainConsistency.result.DQ_ConformanceResult.pass.Boolean\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"122\",\"201\",\"203\",\"203\",\"203\",\"204\",\"204\",\"204\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"CharacterString\", [1.0,80335.0,48201.4,80335.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"CharacterString\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 363 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

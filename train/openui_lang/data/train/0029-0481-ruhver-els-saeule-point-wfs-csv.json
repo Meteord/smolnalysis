@@ -1,0 +1,198 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of anzahl_lp_ac in Ladeeinrichtungen.",
+  "query_result": {
+    "dataset_title": "Ladeeinrichtungen",
+    "package_id": "33ffd8b4-c127-4754-931e-b4deeb972148",
+    "package_name": "ruhver_els_saeule_point",
+    "resource_id": "1e152ebd-b96b-48ee-8897-824d3496564e",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Verortung der Ladeeinrichtungen auf öffentlichem Grund.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 592,
+    "sampled_rows": 592,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "anzahl_lp_ac",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          2,
+          1,
+          8,
+          0
+        ],
+        "numeric": {
+          "count": 592.0,
+          "min": 0.0,
+          "max": 8.0,
+          "mean": 1.9189,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_lp_dc",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          0,
+          2
+        ],
+        "numeric": {
+          "count": 592.0,
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 0.0608,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ladeleistung_kw",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          22,
+          50,
+          11
+        ],
+        "numeric": {
+          "count": 592.0,
+          "min": 11.0,
+          "max": 50.0,
+          "mean": 22.8142,
+          "median": 22.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          17,
+          5,
+          12,
+          9,
+          20
+        ],
+        "numeric": {
+          "count": 592.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.6166,
+          "median": 12.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          "POINT (692254.4227008519 5332381.142597934)",
+          "POINT (692955.519700867 5334237.321097882)",
+          "POINT (692525.6356008565 5338879.256497903)",
+          "POINT (692858.2836008639 5338425.969697881)",
+          "POINT (693033.7813008676 5339514.015997866)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          "Herzogstand 6",
+          "Holzhofstraße 4",
+          "Berliner Straße 68 / Ecke Schinkelstraße",
+          "Stengelstraße 2",
+          "Grünecker Straße 14 / Ecke Kohlrauschstraße 19"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "evesid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 591,
+        "null_count": 1,
+        "examples": [
+          "DESWME0137",
+          "DESWME0418",
+          "DESWME0472",
+          "DESWME0473",
+          "DESWME0470"
+        ],
+        "null_rate": 0.0017
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl_lp_ac",
+      "anzahl_lp_dc",
+      "ladeleistung_kw",
+      "stadtbezirk"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "anzahl_lp_ac"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Ladeeinrichtungen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include anzahl_lp_ac, anzahl_lp_dc, ladeleistung_kw.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"592\")\nm2 = ListItem(\"Columns\", \"8\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"anzahl_lp_ac\",\"anzahl_lp_dc\",\"ladeleistung_kw\",\"stadtbezirk\",\"shape\",\"standort\",\"evesid\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"anzahl_lp_ac\", [2.0,1.0,8.0,0.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"anzahl_lp_ac\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of anzahl_lp_ac in Ladeeinrichtungen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Ladeeinrichtungen\",\n    \"package_id\": \"33ffd8b4-c127-4754-931e-b4deeb972148\",\n    \"package_name\": \"ruhver_els_saeule_point\",\n    \"resource_id\": \"1e152ebd-b96b-48ee-8897-824d3496564e\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Verortung der Ladeeinrichtungen auf öffentlichem Grund.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": 592,\n    \"sampled_rows\": 592,\n    \"column_count\": 8,\n    \"columns\": [\n      {\n        \"name\": \"anzahl_lp_ac\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 592,\n        \"null_count\": 0,\n        \"examples\": [\n          2,\n          1,\n          8,\n          0\n        ],\n        \"numeric\": {\n          \"count\": 592.0,\n          \"min\": 0.0,\n          \"max\": 8.0,\n          \"mean\": 1.9189,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"anzahl_lp_dc\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 592,\n        \"null_count\": 0,\n        \"examples\": [\n          0,\n          2\n        ],\n        \"numeric\": {\n          \"count\": 592.0,\n          \"min\": 0.0,\n          \"max\": 2.0,\n          \"mean\": 0.0608,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ladeleistung_kw\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 592,\n        \"null_count\": 0,\n        \"examples\": [\n          22,\n          50,\n          11\n        ],\n        \"numeric\": {\n          \"count\": 592.0,\n          \"min\": 11.0,\n          \"max\": 50.0,\n          \"mean\": 22.8142,\n          \"median\": 22.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"stadtbezirk\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 592,\n        \"null_count\": 0,\n        \"examples\": [\n          17,\n          5,\n          12,\n          9,\n          20\n        ],\n        \"numeric\": {\n          \"count\": 592.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 11.6166,\n          \"median\": 12.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 592,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POINT (692254.4227008519 5332381.142597934)\",\n          \"POINT (692955.519700867 5334237.321097882)\",\n          \"POINT (692525.6356008565 5338879.256497903)\",\n          \"POINT (692858.2836008639 5338425.969697881)\",\n          \"POINT (693033.7813008676 5339514.015997866)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"standort\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 592,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Herzogstand 6\",\n          \"Holzhofstraße 4\",\n          \"Berliner Straße 68 / Ecke Schinkelstraße\",\n          \"Stengelstraße 2\",\n          \"Grünecker Straße 14 / Ecke Kohlrauschstraße 19\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"evesid\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 591,\n        \"null_count\": 1,\n        \"examples\": [\n          \"DESWME0137\",\n          \"DESWME0418\",\n          \"DESWME0472\",\n          \"DESWME0473\",\n          \"DESWME0470\"\n        ],\n        \"null_rate\": 0.0017\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"anzahl_lp_ac\",\n      \"anzahl_lp_dc\",\n      \"ladeleistung_kw\",\n      \"stadtbezirk\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"anzahl_lp_ac\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Ladeeinrichtungen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include anzahl_lp_ac, anzahl_lp_dc, ladeleistung_kw.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"592\")\nm2 = ListItem(\"Columns\", \"8\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"anzahl_lp_ac\",\"anzahl_lp_dc\",\"ladeleistung_kw\",\"stadtbezirk\",\"shape\",\"standort\",\"evesid\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"anzahl_lp_ac\", [2.0,1.0,8.0,0.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"anzahl_lp_ac\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

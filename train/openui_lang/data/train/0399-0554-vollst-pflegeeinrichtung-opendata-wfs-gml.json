@@ -1,0 +1,308 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Vollstationäre Pflegeeinrichtungen.",
+  "query_result": {
+    "dataset_title": "Vollstationäre Pflegeeinrichtungen",
+    "package_id": "d94c0885-dd40-41e4-9102-66e2546802e1",
+    "package_name": "vollst_pflegeeinrichtung_opendata",
+    "resource_id": "b8a773da-0f44-4ba0-aaa8-770dc916f88a",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Standorte und Adressen der vollstationären Pflegeeinrichtungen",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 164,
+    "sampled_rows": 164,
+    "column_count": 48,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 110,
+        "examples": [
+          "327.0",
+          "1.0",
+          "2.0",
+          "3.0",
+          "4.0"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 1.0,
+          "max": 327.0,
+          "mean": 33.5556,
+          "median": 28.5
+        },
+        "null_rate": 0.6707
+      },
+      {
+        "name": "sb_nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 110,
+        "examples": [
+          "13",
+          "02",
+          "10",
+          "19",
+          "01"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.3333,
+          "median": 15.5
+        },
+        "null_rate": 0.6707
+      },
+      {
+        "name": "x",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 110,
+        "examples": [
+          "695626.254",
+          "691214.8944",
+          "686801.3239",
+          "685079.3149",
+          "692900.3166"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 681518.1627,
+          "max": 699085.1129,
+          "mean": 690803.3235,
+          "median": 691239.3519
+        },
+        "null_rate": 0.6707
+      },
+      {
+        "name": "y",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 110,
+        "examples": [
+          "5337712.6939",
+          "5333624.4519",
+          "5338754.3795",
+          "5328743.5758",
+          "5335519.6999"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 5326740.7247,
+          "max": 5344122.4259,
+          "mean": 5334199.317,
+          "median": 5333578.5079
+        },
+        "null_rate": 0.6707
+      },
+      {
+        "name": "za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 110,
+        "examples": [
+          "4.0",
+          "70.0",
+          "10.0",
+          "34.0",
+          "16.0"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 1.0,
+          "max": 367.0,
+          "mean": 47.6481,
+          "median": 22.0
+        },
+        "null_rate": 0.6707
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 110,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6707
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "54"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 54.0,
+          "max": 54.0,
+          "mean": 54.0,
+          "median": 54.0
+        },
+        "null_rate": 0.9939
+      },
+      {
+        "name": "featureMembers.vollst_pflegeeinrichtung.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "57.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 57.0,
+          "max": 57.0,
+          "mean": 57.0,
+          "median": 57.0
+        },
+        "null_rate": 0.9939
+      },
+      {
+        "name": "featureMembers.vollst_pflegeeinrichtung.sb_nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "24"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 24.0,
+          "max": 24.0,
+          "mean": 24.0,
+          "median": 24.0
+        },
+        "null_rate": 0.9939
+      },
+      {
+        "name": "featureMembers.vollst_pflegeeinrichtung.x",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "689899.2723"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 689899.2723,
+          "max": 689899.2723,
+          "mean": 689899.2723,
+          "median": 689899.2723
+        },
+        "null_rate": 0.9939
+      },
+      {
+        "name": "featureMembers.vollst_pflegeeinrichtung.y",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "5344122.4259"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 5344122.4259,
+          "max": 5344122.4259,
+          "mean": 5344122.4259,
+          "median": 5344122.4259
+        },
+        "null_rate": 0.9939
+      },
+      {
+        "name": "featureMembers.vollst_pflegeeinrichtung.za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "14.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 14.0,
+          "max": 14.0,
+          "mean": 14.0,
+          "median": 14.0
+        },
+        "null_rate": 0.9939
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "sb_nummer",
+      "x",
+      "y"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 36,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Vollstationäre Pflegeeinrichtungen\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Sozialreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include objectid, sb_nummer, x.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"164\")\nm2 = ListItem(\"Columns\", \"48\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"objectid\",\"sb_nummer\",\"x\",\"y\",\"za3\",\"srsDimension\",\"numberOfFeatures\",\"featureMembers.vollst_pflegeeinrichtung.objectid\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"110\",\"110\",\"110\",\"110\",\"110\",\"110\",\"163\",\"163\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"objectid\", [327.0,1.0,2.0,3.0,4.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 36 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of objectid in Vollstationäre Pflegeeinrichtungen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Vollstationäre Pflegeeinrichtungen\",\n    \"package_id\": \"d94c0885-dd40-41e4-9102-66e2546802e1\",\n    \"package_name\": \"vollst_pflegeeinrichtung_opendata\",\n    \"resource_id\": \"b8a773da-0f44-4ba0-aaa8-770dc916f88a\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Standorte und Adressen der vollstationären Pflegeeinrichtungen\",\n    \"organization\": \"Sozialreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Opendata\",\n      \"Planungsunterlagen Kataster\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 164,\n    \"sampled_rows\": 164,\n    \"column_count\": 48,\n    \"columns\": [\n      {\n        \"name\": \"objectid\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 54,\n        \"null_count\": 110,\n        \"examples\": [\n          \"327.0\",\n          \"1.0\",\n          \"2.0\",\n          \"3.0\",\n          \"4.0\"\n        ],\n        \"numeric\": {\n          \"count\": 54.0,\n          \"min\": 1.0,\n          \"max\": 327.0,\n          \"mean\": 33.5556,\n          \"median\": 28.5\n        },\n        \"null_rate\": 0.6707\n      },\n      {\n        \"name\": \"sb_nummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 54,\n        \"null_count\": 110,\n        \"examples\": [\n          \"13\",\n          \"02\",\n          \"10\",\n          \"19\",\n          \"01\"\n        ],\n        \"numeric\": {\n          \"count\": 54.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 13.3333,\n          \"median\": 15.5\n        },\n        \"null_rate\": 0.6707\n      },\n      {\n        \"name\": \"x\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 54,\n        \"null_count\": 110,\n        \"examples\": [\n          \"695626.254\",\n          \"691214.8944\",\n          \"686801.3239\",\n          \"685079.3149\",\n          \"692900.3166\"\n        ],\n        \"numeric\": {\n          \"count\": 54.0,\n          \"min\": 681518.1627,\n          \"max\": 699085.1129,\n          \"mean\": 690803.3235,\n          \"median\": 691239.3519\n        },\n        \"null_rate\": 0.6707\n      },\n      {\n        \"name\": \"y\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 54,\n        \"null_count\": 110,\n        \"examples\": [\n          \"5337712.6939\",\n          \"5333624.4519\",\n          \"5338754.3795\",\n          \"5328743.5758\",\n          \"5335519.6999\"\n        ],\n        \"numeric\": {\n          \"count\": 54.0,\n          \"min\": 5326740.7247,\n          \"max\": 5344122.4259,\n          \"mean\": 5334199.317,\n          \"median\": 5333578.5079\n        },\n        \"null_rate\": 0.6707\n      },\n      {\n        \"name\": \"za3\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 54,\n        \"null_count\": 110,\n        \"examples\": [\n          \"4.0\",\n          \"70.0\",\n          \"10.0\",\n          \"34.0\",\n          \"16.0\"\n        ],\n        \"numeric\": {\n          \"count\": 54.0,\n          \"min\": 1.0,\n          \"max\": 367.0,\n          \"mean\": 47.6481,\n          \"median\": 22.0\n        },\n        \"null_rate\": 0.6707\n      },\n      {\n        \"name\": \"srsDimension\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 54,\n        \"null_count\": 110,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 54.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.6707\n      },\n      {\n        \"name\": \"numberOfFeatures\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"54\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 54.0,\n          \"max\": 54.0,\n          \"mean\": 54.0,\n          \"median\": 54.0\n        },\n        \"null_rate\": 0.9939\n      },\n      {\n        \"name\": \"featureMembers.vollst_pflegeeinrichtung.objectid\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"57.0\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 57.0,\n          \"max\": 57.0,\n          \"mean\": 57.0,\n          \"median\": 57.0\n        },\n        \"null_rate\": 0.9939\n      },\n      {\n        \"name\": \"featureMembers.vollst_pflegeeinrichtung.sb_nummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"24\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 24.0,\n          \"max\": 24.0,\n          \"mean\": 24.0,\n          \"median\": 24.0\n        },\n        \"null_rate\": 0.9939\n      },\n      {\n        \"name\": \"featureMembers.vollst_pflegeeinrichtung.x\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"689899.2723\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 689899.2723,\n          \"max\": 689899.2723,\n          \"mean\": 689899.2723,\n          \"median\": 689899.2723\n        },\n        \"null_rate\": 0.9939\n      },\n      {\n        \"name\": \"featureMembers.vollst_pflegeeinrichtung.y\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"5344122.4259\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 5344122.4259,\n          \"max\": 5344122.4259,\n          \"mean\": 5344122.4259,\n          \"median\": 5344122.4259\n        },\n        \"null_rate\": 0.9939\n      },\n      {\n        \"name\": \"featureMembers.vollst_pflegeeinrichtung.za3\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"14.0\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 14.0,\n          \"max\": 14.0,\n          \"mean\": 14.0,\n          \"median\": 14.0\n        },\n        \"null_rate\": 0.9939\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"objectid\",\n      \"sb_nummer\",\n      \"x\",\n      \"y\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"objectid\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Vollstationäre Pflegeeinrichtungen\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Sozialreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include objectid, sb_nummer, x.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"164\")\nm2 = ListItem(\"Columns\", \"48\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"objectid\",\"sb_nummer\",\"x\",\"y\",\"za3\",\"srsDimension\",\"numberOfFeatures\",\"featureMembers.vollst_pflegeeinrichtung.objectid\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"110\",\"110\",\"110\",\"110\",\"110\",\"110\",\"163\",\"163\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"objectid\", [327.0,1.0,2.0,3.0,4.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 36 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

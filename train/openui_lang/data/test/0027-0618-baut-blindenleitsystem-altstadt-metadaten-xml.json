@@ -1,0 +1,200 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Blindenleitsystem Altstadt – Fußgängerzone.",
+  "query_result": {
+    "dataset_title": "Blindenleitsystem Altstadt – Fußgängerzone",
+    "package_id": "07151bcf-af95-4a1e-a03a-f5a464968d54",
+    "package_name": "baut_blindenleitsystem_altstadt",
+    "resource_id": "76ac6f56-6aa2-4773-a3ab-48a5a7c97707",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukturen oder Bodenindikatoren sein. Ein Bodenindikator ist ein Bodenelement mit einem hohen taktilen, visuellen (Hell-Dunkel) und akustischen Kontrast zum angrenzenden Bodenbelag.",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 20,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:46:47"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:46:47"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Blindenleitsystem Altstadt – Fußgängerzone"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Verkehrswesen"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukt"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukt"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "otherRestrictions"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/portal/opendata/"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Blindenleitsystem Altstadt – Fußgängerzone"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 6,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Blindenleitsystem Altstadt – Fußgängerzone\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to Baureferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Categorical fields include Record.title, Record.type, Record.subject.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"2\")\nm2 = ListItem(\"Columns\", \"20\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"4.75\")\nc1 = Col(\"Column\", [\"Record.date\",\"date\",\"Record.title\",\"Record.type\",\"Record.subject\",\"Record.format\",\"Record.abstract\",\"Record.description\"], \"string\")\nc2 = Col(\"Kind\", [\"date\",\"date\",\"category\",\"category\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 6 lower-ranked columns, and removed 2 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Create a compact OpenUI summary for Metadaten (XML) from Blindenleitsystem Altstadt – Fußgängerzone.\",\n  \"query_result\": {\n    \"dataset_title\": \"Blindenleitsystem Altstadt – Fußgängerzone\",\n    \"package_id\": \"07151bcf-af95-4a1e-a03a-f5a464968d54\",\n    \"package_name\": \"baut_blindenleitsystem_altstadt\",\n    \"resource_id\": \"76ac6f56-6aa2-4773-a3ab-48a5a7c97707\",\n    \"resource_name\": \"Metadaten (XML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukturen oder Bodenindikatoren sein. Ein Bodenindikator ist ein Bodenelement mit einem hohen taktilen, visuellen (Hell-Dunkel) und akustischen Kontrast zum angrenzenden Bodenbelag.\",\n    \"organization\": \"Baureferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": 2,\n    \"sampled_rows\": 2,\n    \"column_count\": 20,\n    \"columns\": [\n      {\n        \"name\": \"Record.date\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"2026-05-27T14:46:47\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"date\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"2026-05-27T14:46:47\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"Record.title\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"Blindenleitsystem Altstadt – Fußgängerzone\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"Record.type\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"service\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"Record.subject\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"Verkehrswesen\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"Record.format\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"WMS\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"Record.abstract\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukt\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"Record.description\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukt\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"Record.rights\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"otherRestrictions\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"Record.URI\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"https://geoportal.muenchen.de/portal/opendata/\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"title\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"Blindenleitsystem Altstadt – Fußgängerzone\"\n        ],\n        \"null_rate\": 0.5\n      },\n      {\n        \"name\": \"type\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 1,\n        \"examples\": [\n          \"service\"\n        ],\n        \"null_rate\": 0.5\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [],\n    \"category_columns\": [\n      \"Record.title\",\n      \"Record.type\",\n      \"Record.subject\",\n      \"Record.format\"\n    ],\n    \"time_columns\": [\n      \"Record.date\",\n      \"date\"\n    ]\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Blindenleitsystem Altstadt – Fußgängerzone\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to Baureferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Categorical fields include Record.title, Record.type, Record.subject.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"2\")\nm2 = ListItem(\"Columns\", \"20\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"4.75\")\nc1 = Col(\"Column\", [\"Record.date\",\"date\",\"Record.title\",\"Record.type\",\"Record.subject\",\"Record.format\",\"Record.abstract\",\"Record.description\"], \"string\")\nc2 = Col(\"Kind\", [\"date\",\"date\",\"category\",\"category\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 6 lower-ranked columns, and removed 2 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

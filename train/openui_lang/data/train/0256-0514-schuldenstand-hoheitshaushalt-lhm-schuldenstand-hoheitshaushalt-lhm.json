@@ -1,0 +1,115 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ist_in_mio_euro in Schuldenstand Hoheitshaushalt LHM.",
+  "query_result": {
+    "dataset_title": "Schuldenstand Hoheitshaushalt LHM",
+    "package_id": "f650123e-d1a4-46d5-9d0a-43b5bbfd4502",
+    "package_name": "schuldenstand-hoheitshaushalt-lhm",
+    "resource_id": "e34bcccf-6fe0-45a5-be4d-e08feb4acc6e",
+    "resource_name": "Schuldenstand Hoheitshaushalt LHM",
+    "resource_format": "csv",
+    "description": "Darstellung der Entwicklung des Schuldenstands des Hoheitshaushalts der Landeshauptstadt München (LHM) ab 1974 in Millionen € (Stand jeweils 31.12.)",
+    "organization": "Stadtkämmerei der Landeshauptstadt München",
+    "tags": [
+      "Finanzen",
+      "Haushalt"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 51,
+    "sampled_rows": 51,
+    "column_count": 3,
+    "columns": [
+      {
+        "name": "ist_in_mio_euro",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 51,
+        "null_count": 0,
+        "examples": [
+          "723",
+          "751",
+          "762",
+          "717",
+          "625"
+        ],
+        "numeric": {
+          "count": 51.0,
+          "min": 564.0,
+          "max": 5386.0,
+          "mean": 1656.6078,
+          "median": 1373.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 51,
+        "null_count": 0,
+        "examples": [
+          "1974",
+          "1975",
+          "1976",
+          "1977",
+          "1978"
+        ],
+        "numeric": {
+          "count": 51.0,
+          "min": 1974.0,
+          "max": 2024.0,
+          "mean": 1999.0,
+          "median": 1999.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ist_in_mio_euro"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ist_in_mio_euro"
+    }
+  },
+  "quality_score": 5.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Schuldenstand Hoheitshaushalt LHM\", \"Schuldenstand Hoheitshaushalt LHM\")\nsummary = TextContent(\"Schuldenstand Hoheitshaushalt LHM belongs to Stadtkämmerei der Landeshauptstadt München. It exposes 2 profiled columns for OpenUI rendering. Numeric fields include ist_in_mio_euro.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"51\")\nm2 = ListItem(\"Columns\", \"3\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.75\")\nc1 = Col(\"Column\", [\"ist_in_mio_euro\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"ist_in_mio_euro\", [723.0,751.0,762.0,717.0,625.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"ist_in_mio_euro\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of ist_in_mio_euro in Schuldenstand Hoheitshaushalt LHM.\",\n  \"query_result\": {\n    \"dataset_title\": \"Schuldenstand Hoheitshaushalt LHM\",\n    \"package_id\": \"f650123e-d1a4-46d5-9d0a-43b5bbfd4502\",\n    \"package_name\": \"schuldenstand-hoheitshaushalt-lhm\",\n    \"resource_id\": \"e34bcccf-6fe0-45a5-be4d-e08feb4acc6e\",\n    \"resource_name\": \"Schuldenstand Hoheitshaushalt LHM\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Darstellung der Entwicklung des Schuldenstands des Hoheitshaushalts der Landeshauptstadt München (LHM) ab 1974 in Millionen € (Stand jeweils 31.12.)\",\n    \"organization\": \"Stadtkämmerei der Landeshauptstadt München\",\n    \"tags\": [\n      \"Finanzen\",\n      \"Haushalt\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 51,\n    \"sampled_rows\": 51,\n    \"column_count\": 3,\n    \"columns\": [\n      {\n        \"name\": \"ist_in_mio_euro\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 51,\n        \"null_count\": 0,\n        \"examples\": [\n          \"723\",\n          \"751\",\n          \"762\",\n          \"717\",\n          \"625\"\n        ],\n        \"numeric\": {\n          \"count\": 51.0,\n          \"min\": 564.0,\n          \"max\": 5386.0,\n          \"mean\": 1656.6078,\n          \"median\": 1373.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 51,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1974\",\n          \"1975\",\n          \"1976\",\n          \"1977\",\n          \"1978\"\n        ],\n        \"numeric\": {\n          \"count\": 51.0,\n          \"min\": 1974.0,\n          \"max\": 2024.0,\n          \"mean\": 1999.0,\n          \"median\": 1999.0\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"ist_in_mio_euro\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"ist_in_mio_euro\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Schuldenstand Hoheitshaushalt LHM\", \"Schuldenstand Hoheitshaushalt LHM\")\nsummary = TextContent(\"Schuldenstand Hoheitshaushalt LHM belongs to Stadtkämmerei der Landeshauptstadt München. It exposes 2 profiled columns for OpenUI rendering. Numeric fields include ist_in_mio_euro.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"51\")\nm2 = ListItem(\"Columns\", \"3\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.75\")\nc1 = Col(\"Column\", [\"ist_in_mio_euro\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"ist_in_mio_euro\", [723.0,751.0,762.0,717.0,625.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"ist_in_mio_euro\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of START_X in Radverkehrsanlagen im Straßenunterhalt der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Radverkehrsanlagen im Straßenunterhalt der Landeshauptstadt München",
+    "package_id": "7ad3bc6c-4c1a-4a63-9cb2-0d613f5b69fa",
+    "package_name": "radverkehrsanlagen-im-strassenunterhalt-der-landeshauptstadt-muenchen",
+    "resource_id": "14977232-94f3-4cdb-94fc-1e709698ba3f",
+    "resource_name": "Radwege CSV-Datei",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz umfasst die Radverkehrsanlagen, die vom Straßenunterhalt- und Betrieb der Landeshauptstadt München betreut werden mit Information zur Radwegeart. **Hinweis**: keine Gewährleistung der Daten hinsichtlich Vollständigkeit, Qualität und Richtigkeit.",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Fahrrad",
+      "Fahrradweg",
+      "Rad",
+      "Radverkehr",
+      "Radweg"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 21172,
+    "sampled_rows": 1000,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "START_X",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          682779.2316,
+          682823.9375,
+          686740.5708,
+          693648.8775,
+          693653.6114
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 678786.0896,
+          "max": 699773.814,
+          "mean": 691061.0599,
+          "median": 691387.34
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "START_Y",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          5334790.039,
+          5334738.483,
+          5338656.127,
+          5340915.69,
+          5340915.665
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 5328161.793,
+          "max": 5343280.452,
+          "mean": 5339088.8936,
+          "median": 5339999.3935
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "END_X",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          682823.9375,
+          682830.2181,
+          682822.3478,
+          686742.3456,
+          693653.6114
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 678811.6084,
+          "max": 699930.6418,
+          "mean": 691063.1062,
+          "median": 691438.0088
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "END_Y",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          5334738.483,
+          5334734.616,
+          5334715.073,
+          5338665.367,
+          5340915.665
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 5328075.992,
+          "max": 5343286.155,
+          "mean": 5339100.7305,
+          "median": 5340009.0645
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Shape_Leng",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          68.37723801,
+          7.453105966,
+          23.49634591,
+          9.409102565,
+          4.733965487
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.805,
+          "max": 927.2096,
+          "mean": 47.1267,
+          "median": 10.0823
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "STRASSENNA",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Blumenauer Straße",
+          "Haidelweg",
+          "Hugo-Troendle-Straße",
+          "Lilienthalallee",
+          "Georg-Brauchle-Ring"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "d_RADWEGAR",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Getrennter Rad- und Gehweg",
+          "Übergang",
+          "Getrennter Rad- und Gehweg (Zweirichtungsradweg)",
+          "Radweg",
+          "Radweg (Zweirichtungsradweg)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "START_X",
+      "START_Y",
+      "END_X",
+      "END_Y"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "START_X"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radverkehrsanlagen im Straßenunterhalt der Landeshauptstadt München\", \"Radwege CSV-Datei\")\nsummary = TextContent(\"Radwege CSV-Datei belongs to Baureferat der Landeshauptstadt München. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include START_X, START_Y, END_X.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"21,172\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"START_X\",\"START_Y\",\"END_X\",\"END_Y\",\"Shape_Leng\",\"STRASSENNA\",\"d_RADWEGAR\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"float64\",\"float64\",\"float64\",\"float64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"START_X\", [682779.2316,682823.9375,686740.5708,693648.8775,693653.6114])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"START_X\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 2 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of START_X in Radverkehrsanlagen im Straßenunterhalt der Landeshauptstadt München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Radverkehrsanlagen im Straßenunterhalt der Landeshauptstadt München\",\n    \"package_id\": \"7ad3bc6c-4c1a-4a63-9cb2-0d613f5b69fa\",\n    \"package_name\": \"radverkehrsanlagen-im-strassenunterhalt-der-landeshauptstadt-muenchen\",\n    \"resource_id\": \"14977232-94f3-4cdb-94fc-1e709698ba3f\",\n    \"resource_name\": \"Radwege CSV-Datei\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Dieser Datensatz umfasst die Radverkehrsanlagen, die vom Straßenunterhalt- und Betrieb der Landeshauptstadt München betreut werden mit Information zur Radwegeart. **Hinweis**: keine Gewährleistung der Daten hinsichtlich Vollständigkeit, Qualität und Richtigkeit.\",\n    \"organization\": \"Baureferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Fahrrad\",\n      \"Fahrradweg\",\n      \"Rad\",\n      \"Radverkehr\",\n      \"Radweg\"\n    ],\n    \"groups\": [\n      \"tran\"\n    ],\n    \"row_count\": 21172,\n    \"sampled_rows\": 1000,\n    \"column_count\": 9,\n    \"columns\": [\n      {\n        \"name\": \"START_X\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          682779.2316,\n          682823.9375,\n          686740.5708,\n          693648.8775,\n          693653.6114\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 678786.0896,\n          \"max\": 699773.814,\n          \"mean\": 691061.0599,\n          \"median\": 691387.34\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"START_Y\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          5334790.039,\n          5334738.483,\n          5338656.127,\n          5340915.69,\n          5340915.665\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 5328161.793,\n          \"max\": 5343280.452,\n          \"mean\": 5339088.8936,\n          \"median\": 5339999.3935\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"END_X\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          682823.9375,\n          682830.2181,\n          682822.3478,\n          686742.3456,\n          693653.6114\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 678811.6084,\n          \"max\": 699930.6418,\n          \"mean\": 691063.1062,\n          \"median\": 691438.0088\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"END_Y\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          5334738.483,\n          5334734.616,\n          5334715.073,\n          5338665.367,\n          5340915.665\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 5328075.992,\n          \"max\": 5343286.155,\n          \"mean\": 5339100.7305,\n          \"median\": 5340009.0645\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Shape_Leng\",\n        \"dtype\": \"float64\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          68.37723801,\n          7.453105966,\n          23.49634591,\n          9.409102565,\n          4.733965487\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 0.805,\n          \"max\": 927.2096,\n          \"mean\": 47.1267,\n          \"median\": 10.0823\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"STRASSENNA\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Blumenauer Straße\",\n          \"Haidelweg\",\n          \"Hugo-Troendle-Straße\",\n          \"Lilienthalallee\",\n          \"Georg-Brauchle-Ring\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"d_RADWEGAR\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Getrennter Rad- und Gehweg\",\n          \"Übergang\",\n          \"Getrennter Rad- und Gehweg (Zweirichtungsradweg)\",\n          \"Radweg\",\n          \"Radweg (Zweirichtungsradweg)\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"START_X\",\n      \"START_Y\",\n      \"END_X\",\n      \"END_Y\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"START_X\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radverkehrsanlagen im Straßenunterhalt der Landeshauptstadt München\", \"Radwege CSV-Datei\")\nsummary = TextContent(\"Radwege CSV-Datei belongs to Baureferat der Landeshauptstadt München. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include START_X, START_Y, END_X.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"21,172\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"START_X\",\"START_Y\",\"END_X\",\"END_Y\",\"Shape_Leng\",\"STRASSENNA\",\"d_RADWEGAR\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"float64\",\"float64\",\"float64\",\"float64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"START_X\", [682779.2316,682823.9375,686740.5708,693648.8775,693653.6114])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"START_X\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 2 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

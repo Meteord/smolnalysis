@@ -1,0 +1,302 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Borkenkäfer Quarantänezonen.",
+  "query_result": {
+    "dataset_title": "Borkenkäfer Quarantänezonen",
+    "package_id": "732099c3-762f-4ef4-8753-b49add7a3e65",
+    "package_name": "qz_borkenkaefer",
+    "resource_id": "401fafa6-c268-40c0-ba91-e1a66076a3a3",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Dieser Dienst enthält die Borkenkäfer Quarantänezonen.",
+    "organization": "Kreisverwaltungsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Landeshauptstadt München",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 223,
+    "sampled_rows": 223,
+    "column_count": 386,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 85,
+        "null_count": 138,
+        "examples": [
+          "07a4b5f0-f3af-48f2-8211-9c0483974d50",
+          "basemaps",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 4326.0,
+          "max": 80466.0,
+          "mean": 54258.8,
+          "median": 80335.0
+        },
+        "null_rate": 0.6188
+      },
+      {
+        "name": "code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 219,
+        "examples": [
+          "4326",
+          "25832",
+          "07a4b5f0-f3af-48f2-8211-9c0483974d50",
+          "Landeshauptstadt München"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9821
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 219,
+        "examples": [
+          "11.3379",
+          "11.7938",
+          "48.019",
+          "48.2408"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3379,
+          "max": 48.2408,
+          "mean": 29.8479,
+          "median": 29.9064
+        },
+        "null_rate": 0.9821
+      },
+      {
+        "name": "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 221,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.991
+      },
+      {
+        "name": "referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 221,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.991
+      },
+      {
+        "name": "RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 221,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.991
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 221,
+        "examples": [
+          "1",
+          "false"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.991
+      },
+      {
+        "name": "referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 222,
+        "examples": [
+          "25832"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 25832.0,
+          "max": 25832.0,
+          "mean": 25832.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 222,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 222,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 222,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 222,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "code.CharacterString",
+      "Decimal",
+      "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 374,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Borkenkäfer Quarantänezonen\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to Kreisverwaltungsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include CharacterString, code.CharacterString, Decimal.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"223\")\nm2 = ListItem(\"Columns\", \"386\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"CharacterString\",\"code.CharacterString\",\"Decimal\",\"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"RS_Identifier.code.CharacterString\",\"Boolean\",\"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"138\",\"219\",\"219\",\"221\",\"221\",\"221\",\"221\",\"222\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"CharacterString\", [4326.0,80335.0,54258.8,80466.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"CharacterString\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 374 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of CharacterString in Borkenkäfer Quarantänezonen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Borkenkäfer Quarantänezonen\",\n    \"package_id\": \"732099c3-762f-4ef4-8753-b49add7a3e65\",\n    \"package_name\": \"qz_borkenkaefer\",\n    \"resource_id\": \"401fafa6-c268-40c0-ba91-e1a66076a3a3\",\n    \"resource_name\": \"Metadaten (XML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Dieser Dienst enthält die Borkenkäfer Quarantänezonen.\",\n    \"organization\": \"Kreisverwaltungsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Karte\",\n      \"Landeshauptstadt München\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 223,\n    \"sampled_rows\": 223,\n    \"column_count\": 386,\n    \"columns\": [\n      {\n        \"name\": \"CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 85,\n        \"null_count\": 138,\n        \"examples\": [\n          \"07a4b5f0-f3af-48f2-8211-9c0483974d50\",\n          \"basemaps\",\n          \"WMS\",\n          \"GeodatenService München\",\n          \"Landeshauptstadt München - Kommunalreferat\"\n        ],\n        \"numeric\": {\n          \"count\": 5.0,\n          \"min\": 4326.0,\n          \"max\": 80466.0,\n          \"mean\": 54258.8,\n          \"median\": 80335.0\n        },\n        \"null_rate\": 0.6188\n      },\n      {\n        \"name\": \"code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 4,\n        \"null_count\": 219,\n        \"examples\": [\n          \"4326\",\n          \"25832\",\n          \"07a4b5f0-f3af-48f2-8211-9c0483974d50\",\n          \"Landeshauptstadt München\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 4326.0,\n          \"max\": 25832.0,\n          \"mean\": 15079.0,\n          \"median\": 15079.0\n        },\n        \"null_rate\": 0.9821\n      },\n      {\n        \"name\": \"Decimal\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 4,\n        \"null_count\": 219,\n        \"examples\": [\n          \"11.3379\",\n          \"11.7938\",\n          \"48.019\",\n          \"48.2408\"\n        ],\n        \"numeric\": {\n          \"count\": 4.0,\n          \"min\": 11.3379,\n          \"max\": 48.2408,\n          \"mean\": 29.8479,\n          \"median\": 29.9064\n        },\n        \"null_rate\": 0.9821\n      },\n      {\n        \"name\": \"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 221,\n        \"examples\": [\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 4326.0,\n          \"max\": 25832.0,\n          \"mean\": 15079.0,\n          \"median\": 15079.0\n        },\n        \"null_rate\": 0.991\n      },\n      {\n        \"name\": \"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 221,\n        \"examples\": [\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 4326.0,\n          \"max\": 25832.0,\n          \"mean\": 15079.0,\n          \"median\": 15079.0\n        },\n        \"null_rate\": 0.991\n      },\n      {\n        \"name\": \"RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 221,\n        \"examples\": [\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 2.0,\n          \"min\": 4326.0,\n          \"max\": 25832.0,\n          \"mean\": 15079.0,\n          \"median\": 15079.0\n        },\n        \"null_rate\": 0.991\n      },\n      {\n        \"name\": \"Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 221,\n        \"examples\": [\n          \"1\",\n          \"false\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.991\n      },\n      {\n        \"name\": \"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 222,\n        \"examples\": [\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 25832.0,\n          \"max\": 25832.0,\n          \"mean\": 25832.0,\n          \"median\": 25832.0\n        },\n        \"null_rate\": 0.9955\n      },\n      {\n        \"name\": \"identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 222,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9955\n      },\n      {\n        \"name\": \"SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 222,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9955\n      },\n      {\n        \"name\": \"extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 222,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9955\n      },\n      {\n        \"name\": \"EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 222,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9955\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"CharacterString\",\n      \"code.CharacterString\",\n      \"Decimal\",\n      \"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"CharacterString\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Borkenkäfer Quarantänezonen\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to Kreisverwaltungsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include CharacterString, code.CharacterString, Decimal.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"223\")\nm2 = ListItem(\"Columns\", \"386\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"CharacterString\",\"code.CharacterString\",\"Decimal\",\"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"RS_Identifier.code.CharacterString\",\"Boolean\",\"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"138\",\"219\",\"219\",\"221\",\"221\",\"221\",\"221\",\"222\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"CharacterString\", [4326.0,80335.0,54258.8,80466.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"CharacterString\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 374 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Museen and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Museen",
+    "package_id": "bfb4a286-bea5-4bfe-82ce-b9bd354284a5",
+    "package_name": "monatszahlen-museen",
+    "resource_id": "6c6a809e-91ee-4f3e-9268-a8b7bc38311c",
+    "resource_name": "Monatszahlen Museen",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Museen__ enthält das Thema * Besucher/innen. Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 3429,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 934.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201354.8833,
+          "median": 201401.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "189996",
+          "16098",
+          "12462",
+          "17194"
+        ],
+        "numeric": {
+          "count": 856.0,
+          "min": 0.0,
+          "max": 1090854.0,
+          "mean": 65813.5164,
+          "median": 21054.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "16098",
+          "12462",
+          "17194",
+          "15918"
+        ],
+        "numeric": {
+          "count": 866.0,
+          "min": 0.0,
+          "max": 1090854.0,
+          "mean": 65805.8048,
+          "median": 21391.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "4.91",
+          "-22.59",
+          "37.97",
+          "-7.42"
+        ],
+        "numeric": {
+          "count": 779.0,
+          "min": -100.0,
+          "max": 364.49,
+          "mean": 9.6183,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-24.73",
+          "-70.33",
+          "-56.05",
+          "42.26"
+        ],
+        "numeric": {
+          "count": 821.0,
+          "min": -100.0,
+          "max": 879.93,
+          "mean": 12.2146,
+          "median": -0.47
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "17853",
+          "16529",
+          "16955",
+          "17219"
+        ],
+        "numeric": {
+          "count": 790.0,
+          "min": 1454.0,
+          "max": 93460.0,
+          "mean": 35587.4696,
+          "median": 20662.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2013.377,
+          "median": 2013.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Alte Pinakothek",
+          "Bayerisches Nationalmuseum",
+          "Deutsches Museum - Museumsinsel"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Besucher*innen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Museen\", \"Monatszahlen Museen\")\nsummary = TextContent(\"Monatszahlen Museen belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include AUSPRAEGUNG, MONATSZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"3,429\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0,202603.0])\nchart = BarChart([\"Alte Pinakothek\",\"Bayerisches Nationalmuseum\",\"Deutsches Museum - Museumsinsel\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Monatszahlen Museen and compare MONAT by AUSPRAEGUNG.\",\n  \"query_result\": {\n    \"dataset_title\": \"Monatszahlen Museen\",\n    \"package_id\": \"bfb4a286-bea5-4bfe-82ce-b9bd354284a5\",\n    \"package_name\": \"monatszahlen-museen\",\n    \"resource_id\": \"6c6a809e-91ee-4f3e-9268-a8b7bc38311c\",\n    \"resource_name\": \"Monatszahlen Museen\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz __Monatszahlen Museen__ enthält das Thema * Besucher/innen. Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Monatszahlen\"\n    ],\n    \"groups\": [\n      \"educ\"\n    ],\n    \"row_count\": 3429,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"MONAT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"202601\",\n          \"202602\",\n          \"202603\",\n          \"202604\",\n          \"202605\"\n        ],\n        \"numeric\": {\n          \"count\": 934.0,\n          \"min\": 200001.0,\n          \"max\": 202612.0,\n          \"mean\": 201354.8833,\n          \"median\": 201401.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"WERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"189996\",\n          \"16098\",\n          \"12462\",\n          \"17194\"\n        ],\n        \"numeric\": {\n          \"count\": 856.0,\n          \"min\": 0.0,\n          \"max\": 1090854.0,\n          \"mean\": 65813.5164,\n          \"median\": 21054.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VORJAHRESWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"16098\",\n          \"12462\",\n          \"17194\",\n          \"15918\"\n        ],\n        \"numeric\": {\n          \"count\": 866.0,\n          \"min\": 0.0,\n          \"max\": 1090854.0,\n          \"mean\": 65805.8048,\n          \"median\": 21391.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"4.91\",\n          \"-22.59\",\n          \"37.97\",\n          \"-7.42\"\n        ],\n        \"numeric\": {\n          \"count\": 779.0,\n          \"min\": -100.0,\n          \"max\": 364.49,\n          \"mean\": 9.6183,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORJAHRESMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"-24.73\",\n          \"-70.33\",\n          \"-56.05\",\n          \"42.26\"\n        ],\n        \"numeric\": {\n          \"count\": 821.0,\n          \"min\": -100.0,\n          \"max\": 879.93,\n          \"mean\": 12.2146,\n          \"median\": -0.47\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ZWOELF_MONATE_MITTELWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"17853\",\n          \"16529\",\n          \"16955\",\n          \"17219\"\n        ],\n        \"numeric\": {\n          \"count\": 790.0,\n          \"min\": 1454.0,\n          \"max\": 93460.0,\n          \"mean\": 35587.4696,\n          \"median\": 20662.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"JAHR\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2026\",\n          \"2025\",\n          \"2024\",\n          \"2023\",\n          \"2022\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2000.0,\n          \"max\": 2026.0,\n          \"mean\": 2013.377,\n          \"median\": 2013.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"AUSPRAEGUNG\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Alte Pinakothek\",\n          \"Bayerisches Nationalmuseum\",\n          \"Deutsches Museum - Museumsinsel\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"MONATSZAHL\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Besucher*innen\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"MONAT\",\n      \"WERT\",\n      \"VORJAHRESWERT\",\n      \"VERAEND_VORMONAT_PROZENT\"\n    ],\n    \"category_columns\": [\n      \"AUSPRAEGUNG\",\n      \"MONATSZAHL\"\n    ],\n    \"time_columns\": [\n      \"JAHR\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"AUSPRAEGUNG\",\n      \"y\": \"MONAT\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Museen\", \"Monatszahlen Museen\")\nsummary = TextContent(\"Monatszahlen Museen belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include AUSPRAEGUNG, MONATSZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"3,429\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0,202603.0])\nchart = BarChart([\"Alte Pinakothek\",\"Bayerisches Nationalmuseum\",\"Deutsches Museum - Museumsinsel\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

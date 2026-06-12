@@ -1,0 +1,330 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of gebietsnummer in Bundestagswahlen 2013 - Ergebnisse München.",
+  "query_result": {
+    "dataset_title": "Bundestagswahlen 2013 - Ergebnisse München",
+    "package_id": "8dc20a65-a7d3-4786-82fa-4a8b1faba836",
+    "package_name": "bundestagswahlen-2013",
+    "resource_id": "0d8ce841-841f-45da-be03-ff7711765031",
+    "resource_name": "Bundestagswahl 2013 Erststimmen nach Wahlbezirken (STAT. Amt)",
+    "resource_format": "csv",
+    "description": "Ergebnisse der Bundestagswahl 2013 in München",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bundestagswahl",
+      "Wahlen"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 941,
+    "sampled_rows": 941,
+    "column_count": 56,
+    "columns": [
+      {
+        "name": "gebietsnummer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          1001,
+          1002,
+          1003,
+          1004,
+          1005
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 1001.0,
+          "max": 162000.0,
+          "mean": 13606.6302,
+          "median": 13081.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stimmbezirksart",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          11,
+          21
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 11.0,
+          "max": 21.0,
+          "mean": 13.5292,
+          "median": 11.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "wahlberechtigte_gesamt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          1252,
+          1329,
+          1341,
+          1276,
+          1267
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 0.0,
+          "max": 917063.0,
+          "mean": 1949.1243,
+          "median": 1289.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "wahlberechtigte_ohne_wahlschein",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          787,
+          851,
+          876,
+          798,
+          794
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 0.0,
+          "max": 634960.0,
+          "mean": 1349.543,
+          "median": 881.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "wahlberechtigte_mit_wahlschein",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          465,
+          478,
+          473,
+          545,
+          517
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 0.0,
+          "max": 282103.0,
+          "mean": 599.5813,
+          "median": 354.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "wahlberechtigte_nicht_im_waehlerverzeichnis",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          0,
+          85
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 0.0,
+          "max": 85.0,
+          "mean": 0.0903,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "waehler_gesamt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          457,
+          519,
+          538,
+          462,
+          521
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 59.0,
+          "max": 391113.0,
+          "mean": 1388.3209,
+          "median": 609.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "waehler_mit_wahlschein",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          9,
+          4,
+          5,
+          3,
+          13
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 0.0,
+          "max": 262092.0,
+          "mean": 565.745,
+          "median": 7.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ungueltige_stimmen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          7,
+          5,
+          4,
+          3,
+          2
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 0.0,
+          "max": 2897.0,
+          "mean": 10.2402,
+          "median": 5.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_stimmen_01",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          202,
+          216,
+          238,
+          221,
+          217
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 26.0,
+          "max": 166540.0,
+          "mean": 599.0414,
+          "median": 259.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_stimmen_02",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          118,
+          157,
+          160,
+          113,
+          140
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 11.0,
+          "max": 120992.0,
+          "mean": 403.1158,
+          "median": 188.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_stimmen_03",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 941,
+        "null_count": 0,
+        "examples": [
+          22,
+          30,
+          17,
+          27,
+          31
+        ],
+        "numeric": {
+          "count": 941.0,
+          "min": 0.0,
+          "max": 12422.0,
+          "mean": 51.6536,
+          "median": 19.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "gebietsnummer",
+      "stimmbezirksart",
+      "wahlberechtigte_gesamt",
+      "wahlberechtigte_ohne_wahlschein"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "gebietsnummer"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 43,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bundestagswahlen 2013 - Ergebnisse München\", \"Bundestagswahl 2013 Erststimmen nach Wahlbezirken (STAT. Amt)\")\nsummary = TextContent(\"Bundestagswahl 2013 Erststimmen nach Wahlbezirken (STAT. Amt) belongs to Statistisches Amt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include gebietsnummer, stimmbezirksart, wahlberechtigte_gesamt.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"941\")\nm2 = ListItem(\"Columns\", \"56\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"gebietsnummer\",\"stimmbezirksart\",\"wahlberechtigte_gesamt\",\"wahlberechtigte_ohne_wahlschein\",\"wahlberechtigte_mit_wahlschein\",\"wahlberechtigte_nicht_im_waehlerverzeichnis\",\"waehler_gesamt\",\"waehler_mit_wahlschein\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"gebietsnummer\", [1001.0,1002.0,1003.0,1004.0,1005.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"gebietsnummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 43 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of gebietsnummer in Bundestagswahlen 2013 - Ergebnisse München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Bundestagswahlen 2013 - Ergebnisse München\",\n    \"package_id\": \"8dc20a65-a7d3-4786-82fa-4a8b1faba836\",\n    \"package_name\": \"bundestagswahlen-2013\",\n    \"resource_id\": \"0d8ce841-841f-45da-be03-ff7711765031\",\n    \"resource_name\": \"Bundestagswahl 2013 Erststimmen nach Wahlbezirken (STAT. Amt)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Ergebnisse der Bundestagswahl 2013 in München\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bundestagswahl\",\n      \"Wahlen\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 941,\n    \"sampled_rows\": 941,\n    \"column_count\": 56,\n    \"columns\": [\n      {\n        \"name\": \"gebietsnummer\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          1001,\n          1002,\n          1003,\n          1004,\n          1005\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 1001.0,\n          \"max\": 162000.0,\n          \"mean\": 13606.6302,\n          \"median\": 13081.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"stimmbezirksart\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          11,\n          21\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 11.0,\n          \"max\": 21.0,\n          \"mean\": 13.5292,\n          \"median\": 11.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wahlberechtigte_gesamt\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          1252,\n          1329,\n          1341,\n          1276,\n          1267\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 0.0,\n          \"max\": 917063.0,\n          \"mean\": 1949.1243,\n          \"median\": 1289.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wahlberechtigte_ohne_wahlschein\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          787,\n          851,\n          876,\n          798,\n          794\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 0.0,\n          \"max\": 634960.0,\n          \"mean\": 1349.543,\n          \"median\": 881.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wahlberechtigte_mit_wahlschein\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          465,\n          478,\n          473,\n          545,\n          517\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 0.0,\n          \"max\": 282103.0,\n          \"mean\": 599.5813,\n          \"median\": 354.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wahlberechtigte_nicht_im_waehlerverzeichnis\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          0,\n          85\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 0.0,\n          \"max\": 85.0,\n          \"mean\": 0.0903,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"waehler_gesamt\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          457,\n          519,\n          538,\n          462,\n          521\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 59.0,\n          \"max\": 391113.0,\n          \"mean\": 1388.3209,\n          \"median\": 609.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"waehler_mit_wahlschein\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          9,\n          4,\n          5,\n          3,\n          13\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 0.0,\n          \"max\": 262092.0,\n          \"mean\": 565.745,\n          \"median\": 7.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ungueltige_stimmen\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          7,\n          5,\n          4,\n          3,\n          2\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 0.0,\n          \"max\": 2897.0,\n          \"mean\": 10.2402,\n          \"median\": 5.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"anzahl_stimmen_01\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          202,\n          216,\n          238,\n          221,\n          217\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 26.0,\n          \"max\": 166540.0,\n          \"mean\": 599.0414,\n          \"median\": 259.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"anzahl_stimmen_02\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          118,\n          157,\n          160,\n          113,\n          140\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 11.0,\n          \"max\": 120992.0,\n          \"mean\": 403.1158,\n          \"median\": 188.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"anzahl_stimmen_03\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 941,\n        \"null_count\": 0,\n        \"examples\": [\n          22,\n          30,\n          17,\n          27,\n          31\n        ],\n        \"numeric\": {\n          \"count\": 941.0,\n          \"min\": 0.0,\n          \"max\": 12422.0,\n          \"mean\": 51.6536,\n          \"median\": 19.0\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"gebietsnummer\",\n      \"stimmbezirksart\",\n      \"wahlberechtigte_gesamt\",\n      \"wahlberechtigte_ohne_wahlschein\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"gebietsnummer\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bundestagswahlen 2013 - Ergebnisse München\", \"Bundestagswahl 2013 Erststimmen nach Wahlbezirken (STAT. Amt)\")\nsummary = TextContent(\"Bundestagswahl 2013 Erststimmen nach Wahlbezirken (STAT. Amt) belongs to Statistisches Amt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include gebietsnummer, stimmbezirksart, wahlberechtigte_gesamt.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"941\")\nm2 = ListItem(\"Columns\", \"56\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"gebietsnummer\",\"stimmbezirksart\",\"wahlberechtigte_gesamt\",\"wahlberechtigte_ohne_wahlschein\",\"wahlberechtigte_mit_wahlschein\",\"wahlberechtigte_nicht_im_waehlerverzeichnis\",\"waehler_gesamt\",\"waehler_mit_wahlschein\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"gebietsnummer\", [1001.0,1002.0,1003.0,1004.0,1005.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"gebietsnummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 43 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

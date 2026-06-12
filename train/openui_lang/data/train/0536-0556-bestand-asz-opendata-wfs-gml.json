@@ -1,0 +1,324 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of za3 in Alten- und Servicezentrum.",
+  "query_result": {
+    "dataset_title": "Alten- und Servicezentrum",
+    "package_id": "b4f2a44d-a941-4f8f-b912-7537856d9b5c",
+    "package_name": "bestand_asz_opendata",
+    "resource_id": "f9c48f43-1d13-4acb-8c2f-10dfaaf16cf0",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Standorte und Adressen der Alten-und Service-Zentren.<br> für weitere Informationen siehe <a target=\"_blank\" href=\"stadt.muenchen.de/infos/asz-alten-service-zentrum.html\">Sozialreferat München</a>",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 104,
+    "sampled_rows": 104,
+    "column_count": 60,
+    "columns": [
+      {
+        "name": "za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "5.0",
+          "22.0",
+          "37.0",
+          "71.0",
+          "61.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 378.0,
+          "mean": 56.0588,
+          "median": 32.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "za2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "1675.0",
+          "2429.0",
+          "806.0",
+          "5092.0",
+          "3994.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 96.0,
+          "max": 6601.0,
+          "mean": 3286.2647,
+          "median": 3386.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zk1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "686822.3199",
+          "687059.5946",
+          "689328.3189",
+          "693119.7422",
+          "694877.8061"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 679717.9227,
+          "max": 700189.7134,
+          "mean": 690356.3096,
+          "median": 690871.26
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zk2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "5339190.5177",
+          "5334291.9966",
+          "5332600.1131",
+          "5332361.6507",
+          "5332906.656"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 5327868.1748,
+          "max": 5343574.2343,
+          "mean": 5335033.8403,
+          "median": 5334410.3389
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zv03",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "1025.0",
+          "2514.0",
+          "623.0",
+          "1712.0",
+          "1612.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 123.0,
+          "max": 2514.0,
+          "mean": 1310.1176,
+          "median": 1337.0
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zt03",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "102.0",
+          "251.0",
+          "62.0",
+          "171.0",
+          "161.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 12.0,
+          "max": 251.0,
+          "mean": 130.7353,
+          "median": 133.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "1.0",
+          "2.0",
+          "3.0",
+          "4.0",
+          "5.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 377.0,
+          "mean": 27.5882,
+          "median": 17.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "lfdnr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "18.0",
+          "14.0",
+          "28.0",
+          "20.0",
+          "24.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 33.0,
+          "mean": 17.0588,
+          "median": 17.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zs03",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "10.0",
+          "25.0",
+          "6.0",
+          "17.0",
+          "16.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.2059,
+          "median": 13.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 103,
+        "examples": [
+          "34"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 34.0,
+          "max": 34.0,
+          "mean": 34.0,
+          "median": 34.0
+        },
+        "null_rate": 0.9904
+      },
+      {
+        "name": "featureMembers.bestand_asz.za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 103,
+        "examples": [
+          "34.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 34.0,
+          "max": 34.0,
+          "mean": 34.0,
+          "median": 34.0
+        },
+        "null_rate": 0.9904
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "za3",
+      "za2",
+      "zk1",
+      "zk2"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "za3"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 48,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Alten- und Servicezentrum\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Sozialreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include za3, za2, zk1.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"104\")\nm2 = ListItem(\"Columns\", \"60\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"za3\",\"za2\",\"zk1\",\"zk2\",\"zv03\",\"zt03\",\"objectid\",\"lfdnr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"70\",\"70\",\"70\",\"70\",\"70\",\"70\",\"70\",\"70\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"za3\", [5.0,22.0,37.0,71.0,61.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"za3\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 48 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of za3 in Alten- und Servicezentrum.\",\n  \"query_result\": {\n    \"dataset_title\": \"Alten- und Servicezentrum\",\n    \"package_id\": \"b4f2a44d-a941-4f8f-b912-7537856d9b5c\",\n    \"package_name\": \"bestand_asz_opendata\",\n    \"resource_id\": \"f9c48f43-1d13-4acb-8c2f-10dfaaf16cf0\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Standorte und Adressen der Alten-und Service-Zentren.<br> für weitere Informationen siehe <a target=\\\"_blank\\\" href=\\\"stadt.muenchen.de/infos/asz-alten-service-zentrum.html\\\">Sozialreferat München</a>\",\n    \"organization\": \"Sozialreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Opendata\",\n      \"Planungsunterlagen Kataster\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 104,\n    \"sampled_rows\": 104,\n    \"column_count\": 60,\n    \"columns\": [\n      {\n        \"name\": \"za3\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"5.0\",\n          \"22.0\",\n          \"37.0\",\n          \"71.0\",\n          \"61.0\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 1.0,\n          \"max\": 378.0,\n          \"mean\": 56.0588,\n          \"median\": 32.5\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"za2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"1675.0\",\n          \"2429.0\",\n          \"806.0\",\n          \"5092.0\",\n          \"3994.0\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 96.0,\n          \"max\": 6601.0,\n          \"mean\": 3286.2647,\n          \"median\": 3386.5\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"zk1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"686822.3199\",\n          \"687059.5946\",\n          \"689328.3189\",\n          \"693119.7422\",\n          \"694877.8061\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 679717.9227,\n          \"max\": 700189.7134,\n          \"mean\": 690356.3096,\n          \"median\": 690871.26\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"zk2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"5339190.5177\",\n          \"5334291.9966\",\n          \"5332600.1131\",\n          \"5332361.6507\",\n          \"5332906.656\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 5327868.1748,\n          \"max\": 5343574.2343,\n          \"mean\": 5335033.8403,\n          \"median\": 5334410.3389\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"zv03\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"1025.0\",\n          \"2514.0\",\n          \"623.0\",\n          \"1712.0\",\n          \"1612.0\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 123.0,\n          \"max\": 2514.0,\n          \"mean\": 1310.1176,\n          \"median\": 1337.0\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"zt03\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"102.0\",\n          \"251.0\",\n          \"62.0\",\n          \"171.0\",\n          \"161.0\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 12.0,\n          \"max\": 251.0,\n          \"mean\": 130.7353,\n          \"median\": 133.5\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"objectid\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"1.0\",\n          \"2.0\",\n          \"3.0\",\n          \"4.0\",\n          \"5.0\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 1.0,\n          \"max\": 377.0,\n          \"mean\": 27.5882,\n          \"median\": 17.5\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"lfdnr\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"18.0\",\n          \"14.0\",\n          \"28.0\",\n          \"20.0\",\n          \"24.0\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 1.0,\n          \"max\": 33.0,\n          \"mean\": 17.0588,\n          \"median\": 17.5\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"zs03\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"10.0\",\n          \"25.0\",\n          \"6.0\",\n          \"17.0\",\n          \"16.0\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 13.2059,\n          \"median\": 13.5\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"srsDimension\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 34,\n        \"null_count\": 70,\n        \"examples\": [\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 34.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.6731\n      },\n      {\n        \"name\": \"numberOfFeatures\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 103,\n        \"examples\": [\n          \"34\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 34.0,\n          \"max\": 34.0,\n          \"mean\": 34.0,\n          \"median\": 34.0\n        },\n        \"null_rate\": 0.9904\n      },\n      {\n        \"name\": \"featureMembers.bestand_asz.za3\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 103,\n        \"examples\": [\n          \"34.0\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 34.0,\n          \"max\": 34.0,\n          \"mean\": 34.0,\n          \"median\": 34.0\n        },\n        \"null_rate\": 0.9904\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"za3\",\n      \"za2\",\n      \"zk1\",\n      \"zk2\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"za3\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Alten- und Servicezentrum\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Sozialreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include za3, za2, zk1.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"104\")\nm2 = ListItem(\"Columns\", \"60\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"za3\",\"za2\",\"zk1\",\"zk2\",\"zv03\",\"zt03\",\"objectid\",\"lfdnr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"70\",\"70\",\"70\",\"70\",\"70\",\"70\",\"70\",\"70\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"za3\", [5.0,22.0,37.0,71.0,61.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"za3\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 48 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

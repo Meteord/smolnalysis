@@ -1,0 +1,121 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of anzahl in Tierbestandsliste Tierpark Hellabrunn.",
+  "query_result": {
+    "dataset_title": "Tierbestandsliste Tierpark Hellabrunn",
+    "package_id": "9818ae8c-b902-428b-91a2-9cba54aa6e22",
+    "package_name": "tierbestandsliste-tierpark-hellabrunn",
+    "resource_id": "635568a2-63d9-403a-827d-18466ed6edfd",
+    "resource_name": "Tierbestand Fischarten 2023",
+    "resource_format": "csv",
+    "description": "Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z",
+    "organization": "Münchener Tierpark Hellabrunn AG",
+    "tags": [
+      "Tierpark",
+      "Zoo"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 28,
+    "sampled_rows": 28,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "anzahl",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 28,
+        "null_count": 0,
+        "examples": [
+          2,
+          3,
+          1,
+          22,
+          49
+        ],
+        "numeric": {
+          "count": 28.0,
+          "min": 1.0,
+          "max": 49.0,
+          "mean": 8.0,
+          "median": 2.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "fischart",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 28,
+        "null_count": 0,
+        "examples": [
+          "Aalartige",
+          "Ährenfische",
+          "Ammenhaiartige",
+          "Barschartige",
+          "Buntbarschartige"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wiss_namen",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 28,
+        "null_count": 0,
+        "examples": [
+          "Anguilliformes",
+          "Atheriniformes",
+          "Orectolobiformes",
+          "Perciformes",
+          "Cichliformes"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "anzahl"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Tierbestandsliste Tierpark Hellabrunn\", \"Tierbestand Fischarten 2023\")\nsummary = TextContent(\"Tierbestand Fischarten 2023 belongs to Münchener Tierpark Hellabrunn AG. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include anzahl.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"28\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.25\")\nc1 = Col(\"Column\", [\"anzahl\",\"fischart\",\"wiss_namen\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"anzahl\", [2.0,3.0,1.0,22.0,49.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"anzahl\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of anzahl in Tierbestandsliste Tierpark Hellabrunn.\",\n  \"query_result\": {\n    \"dataset_title\": \"Tierbestandsliste Tierpark Hellabrunn\",\n    \"package_id\": \"9818ae8c-b902-428b-91a2-9cba54aa6e22\",\n    \"package_name\": \"tierbestandsliste-tierpark-hellabrunn\",\n    \"resource_id\": \"635568a2-63d9-403a-827d-18466ed6edfd\",\n    \"resource_name\": \"Tierbestand Fischarten 2023\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z\",\n    \"organization\": \"Münchener Tierpark Hellabrunn AG\",\n    \"tags\": [\n      \"Tierpark\",\n      \"Zoo\"\n    ],\n    \"groups\": [\n      \"educ\"\n    ],\n    \"row_count\": 28,\n    \"sampled_rows\": 28,\n    \"column_count\": 4,\n    \"columns\": [\n      {\n        \"name\": \"anzahl\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 28,\n        \"null_count\": 0,\n        \"examples\": [\n          2,\n          3,\n          1,\n          22,\n          49\n        ],\n        \"numeric\": {\n          \"count\": 28.0,\n          \"min\": 1.0,\n          \"max\": 49.0,\n          \"mean\": 8.0,\n          \"median\": 2.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"fischart\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 28,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Aalartige\",\n          \"Ährenfische\",\n          \"Ammenhaiartige\",\n          \"Barschartige\",\n          \"Buntbarschartige\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wiss_namen\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 28,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Anguilliformes\",\n          \"Atheriniformes\",\n          \"Orectolobiformes\",\n          \"Perciformes\",\n          \"Cichliformes\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"anzahl\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"anzahl\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Tierbestandsliste Tierpark Hellabrunn\", \"Tierbestand Fischarten 2023\")\nsummary = TextContent(\"Tierbestand Fischarten 2023 belongs to Münchener Tierpark Hellabrunn AG. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include anzahl.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"28\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.25\")\nc1 = Col(\"Column\", [\"anzahl\",\"fischart\",\"wiss_namen\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"anzahl\", [2.0,3.0,1.0,22.0,49.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"anzahl\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

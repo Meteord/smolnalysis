@@ -1,0 +1,240 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of stadtbezirksnummer in Privathaushalte in den Stadtbezirken.",
+  "query_result": {
+    "dataset_title": "Privathaushalte in den Stadtbezirken",
+    "package_id": "cb0e5a0b-2a87-4a29-9b70-69e1db4fb529",
+    "package_name": "privathaushalte-in-den-stadtbezirken",
+    "resource_id": "c62cd985-c4ae-40f6-a84e-9faa9c61e46b",
+    "resource_name": "Privathaushalte 2024 in den Stadtbezirken",
+    "resource_format": "csv",
+    "description": "Privathaushalte am 31.12. des jeweiligen Jahres nach Haushaltsgröße in den Stadtbezirken.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Haushalte",
+      "Stadtbezirke"
+    ],
+    "groups": [],
+    "row_count": 25,
+    "sampled_rows": 25,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "stadtbezirksnummer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.0,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_zusammen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          12656,
+          30399,
+          32693,
+          40883,
+          37377
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 12656.0,
+          "max": 61251.0,
+          "mean": 34533.36,
+          "median": 32693.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_1_person",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          8041,
+          19609,
+          22043,
+          25038,
+          22178
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 7096.0,
+          "max": 32893.0,
+          "mean": 18741.6,
+          "median": 19498.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_2_personen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          2800,
+          6584,
+          6754,
+          9409,
+          8718
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 2800.0,
+          "max": 16321.0,
+          "mean": 8605.92,
+          "median": 8000.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_3_personen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          956,
+          2301,
+          2166,
+          3512,
+          3390
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 956.0,
+          "max": 7162.0,
+          "mean": 3561.44,
+          "median": 3390.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_4_personen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          656,
+          1492,
+          1317,
+          2261,
+          2405
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 656.0,
+          "max": 5433.0,
+          "mean": 2661.16,
+          "median": 2405.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_5_personen_und_mehr",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          203,
+          413,
+          663,
+          686,
+          403
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 203.0,
+          "max": 2443.0,
+          "mean": 963.24,
+          "median": 815.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          "Altstadt-Lehel",
+          "Ludwigsvorstadt-Isarvorstadt",
+          "Maxvorstadt",
+          "Schwabing West",
+          "Au-Haidhausen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "stadtbezirksnummer",
+      "haushalte_zusammen",
+      "haushalte_mit_1_person",
+      "haushalte_mit_2_personen"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "stadtbezirksnummer"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Privathaushalte in den Stadtbezirken\", \"Privathaushalte 2024 in den Stadtbezirken\")\nsummary = TextContent(\"Privathaushalte 2024 in den Stadtbezirken belongs to Statistisches Amt München. It exposes 8 profiled columns for OpenUI rendering. Numeric fields include stadtbezirksnummer, haushalte_zusammen, haushalte_mit_1_person.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"25\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.25\")\nc1 = Col(\"Column\", [\"stadtbezirksnummer\",\"haushalte_zusammen\",\"haushalte_mit_1_person\",\"haushalte_mit_2_personen\",\"haushalte_mit_3_personen\",\"haushalte_mit_4_personen\",\"haushalte_mit_5_personen_und_mehr\",\"stadtbezirk\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"stadtbezirksnummer\", [1.0,2.0,3.0,4.0,5.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"stadtbezirksnummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of stadtbezirksnummer in Privathaushalte in den Stadtbezirken.\",\n  \"query_result\": {\n    \"dataset_title\": \"Privathaushalte in den Stadtbezirken\",\n    \"package_id\": \"cb0e5a0b-2a87-4a29-9b70-69e1db4fb529\",\n    \"package_name\": \"privathaushalte-in-den-stadtbezirken\",\n    \"resource_id\": \"c62cd985-c4ae-40f6-a84e-9faa9c61e46b\",\n    \"resource_name\": \"Privathaushalte 2024 in den Stadtbezirken\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Privathaushalte am 31.12. des jeweiligen Jahres nach Haushaltsgröße in den Stadtbezirken.\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bevölkerung\",\n      \"Haushalte\",\n      \"Stadtbezirke\"\n    ],\n    \"groups\": [],\n    \"row_count\": 25,\n    \"sampled_rows\": 25,\n    \"column_count\": 9,\n    \"columns\": [\n      {\n        \"name\": \"stadtbezirksnummer\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 25,\n        \"null_count\": 0,\n        \"examples\": [\n          1,\n          2,\n          3,\n          4,\n          5\n        ],\n        \"numeric\": {\n          \"count\": 25.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 13.0,\n          \"median\": 13.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"haushalte_zusammen\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 25,\n        \"null_count\": 0,\n        \"examples\": [\n          12656,\n          30399,\n          32693,\n          40883,\n          37377\n        ],\n        \"numeric\": {\n          \"count\": 25.0,\n          \"min\": 12656.0,\n          \"max\": 61251.0,\n          \"mean\": 34533.36,\n          \"median\": 32693.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"haushalte_mit_1_person\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 25,\n        \"null_count\": 0,\n        \"examples\": [\n          8041,\n          19609,\n          22043,\n          25038,\n          22178\n        ],\n        \"numeric\": {\n          \"count\": 25.0,\n          \"min\": 7096.0,\n          \"max\": 32893.0,\n          \"mean\": 18741.6,\n          \"median\": 19498.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"haushalte_mit_2_personen\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 25,\n        \"null_count\": 0,\n        \"examples\": [\n          2800,\n          6584,\n          6754,\n          9409,\n          8718\n        ],\n        \"numeric\": {\n          \"count\": 25.0,\n          \"min\": 2800.0,\n          \"max\": 16321.0,\n          \"mean\": 8605.92,\n          \"median\": 8000.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"haushalte_mit_3_personen\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 25,\n        \"null_count\": 0,\n        \"examples\": [\n          956,\n          2301,\n          2166,\n          3512,\n          3390\n        ],\n        \"numeric\": {\n          \"count\": 25.0,\n          \"min\": 956.0,\n          \"max\": 7162.0,\n          \"mean\": 3561.44,\n          \"median\": 3390.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"haushalte_mit_4_personen\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 25,\n        \"null_count\": 0,\n        \"examples\": [\n          656,\n          1492,\n          1317,\n          2261,\n          2405\n        ],\n        \"numeric\": {\n          \"count\": 25.0,\n          \"min\": 656.0,\n          \"max\": 5433.0,\n          \"mean\": 2661.16,\n          \"median\": 2405.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"haushalte_mit_5_personen_und_mehr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 25,\n        \"null_count\": 0,\n        \"examples\": [\n          203,\n          413,\n          663,\n          686,\n          403\n        ],\n        \"numeric\": {\n          \"count\": 25.0,\n          \"min\": 203.0,\n          \"max\": 2443.0,\n          \"mean\": 963.24,\n          \"median\": 815.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"stadtbezirk\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 25,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Altstadt-Lehel\",\n          \"Ludwigsvorstadt-Isarvorstadt\",\n          \"Maxvorstadt\",\n          \"Schwabing West\",\n          \"Au-Haidhausen\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"stadtbezirksnummer\",\n      \"haushalte_zusammen\",\n      \"haushalte_mit_1_person\",\n      \"haushalte_mit_2_personen\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"stadtbezirksnummer\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Privathaushalte in den Stadtbezirken\", \"Privathaushalte 2024 in den Stadtbezirken\")\nsummary = TextContent(\"Privathaushalte 2024 in den Stadtbezirken belongs to Statistisches Amt München. It exposes 8 profiled columns for OpenUI rendering. Numeric fields include stadtbezirksnummer, haushalte_zusammen, haushalte_mit_1_person.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"25\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"5.25\")\nc1 = Col(\"Column\", [\"stadtbezirksnummer\",\"haushalte_zusammen\",\"haushalte_mit_1_person\",\"haushalte_mit_2_personen\",\"haushalte_mit_3_personen\",\"haushalte_mit_4_personen\",\"haushalte_mit_5_personen_und_mehr\",\"stadtbezirk\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"stadtbezirksnummer\", [1.0,2.0,3.0,4.0,5.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"stadtbezirksnummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

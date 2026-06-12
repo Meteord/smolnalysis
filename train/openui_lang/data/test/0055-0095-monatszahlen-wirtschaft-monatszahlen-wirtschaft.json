@@ -1,0 +1,257 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Wirtschaft and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Wirtschaft",
+    "package_id": "daeaf20a-9e7c-4e68-8a97-175242d43c7f",
+    "package_name": "monatszahlen-wirtschaft",
+    "resource_id": "cdf75551-993c-4410-8621-2709400629eb",
+    "resource_name": "Monatszahlen Wirtschaft",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Wirtschaft__ beinhaltet die Themen * Handwerksbetriebe * Bauhauptgewerbe * Verarbeitendes Gewerbe * Gewerbean- und -abmeldungen * Steuern Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 5996,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Summe",
+          "202601",
+          "202602",
+          "202603",
+          "202604"
+        ],
+        "numeric": {
+          "count": 939.0,
+          "min": 200901.0,
+          "max": 202612.0,
+          "mean": 201803.2907,
+          "median": 201810.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "55124",
+          "NA",
+          "1478347",
+          "103251",
+          "83499"
+        ],
+        "numeric": {
+          "count": 945.0,
+          "min": 48.0,
+          "max": 1478347.0,
+          "mean": 40807.3418,
+          "median": 640.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1478347",
+          "103251",
+          "83499",
+          "499396",
+          "62621"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 48.0,
+          "max": 1478347.0,
+          "mean": 39733.331,
+          "median": 617.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-44.3",
+          "86.7",
+          "-19.13",
+          "498.09"
+        ],
+        "numeric": {
+          "count": 884.0,
+          "min": -89.75,
+          "max": 1177.64,
+          "mean": 8.6234,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "-96.27",
+          "-46.61",
+          "NA",
+          "29.4",
+          "18.36"
+        ],
+        "numeric": {
+          "count": 945.0,
+          "min": -96.27,
+          "max": 676.06,
+          "mean": 9.3164,
+          "median": 3.53
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "119185",
+          "96539",
+          "97549",
+          "124587"
+        ],
+        "numeric": {
+          "count": 884.0,
+          "min": 50.0,
+          "max": 138732.0,
+          "mean": 21347.3213,
+          "median": 540.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2009.0,
+          "max": 2026.0,
+          "mean": 2017.978,
+          "median": 2018.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Auftragseingänge",
+          "Betriebe",
+          "Entgelte",
+          "Geleistete Arbeitsstunden - insgesamt",
+          "Geleistete Arbeitsstunden - Wohnungsbau"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Bauhauptgewerbe"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Wirtschaft\", \"Monatszahlen Wirtschaft\")\nsummary = TextContent(\"Monatszahlen Wirtschaft belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include AUSPRAEGUNG, MONATSZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"5,996\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0,202603.0,202604.0])\nchart = BarChart([\"Auftragseingänge\",\"Betriebe\",\"Entgelte\",\"Geleistete Arbeitsstunden - insgesamt\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Monatszahlen Wirtschaft and compare MONAT by AUSPRAEGUNG.\",\n  \"query_result\": {\n    \"dataset_title\": \"Monatszahlen Wirtschaft\",\n    \"package_id\": \"daeaf20a-9e7c-4e68-8a97-175242d43c7f\",\n    \"package_name\": \"monatszahlen-wirtschaft\",\n    \"resource_id\": \"cdf75551-993c-4410-8621-2709400629eb\",\n    \"resource_name\": \"Monatszahlen Wirtschaft\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz __Monatszahlen Wirtschaft__ beinhaltet die Themen * Handwerksbetriebe * Bauhauptgewerbe * Verarbeitendes Gewerbe * Gewerbean- und -abmeldungen * Steuern Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Monatszahlen\"\n    ],\n    \"groups\": [\n      \"econ\"\n    ],\n    \"row_count\": 5996,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"MONAT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Summe\",\n          \"202601\",\n          \"202602\",\n          \"202603\",\n          \"202604\"\n        ],\n        \"numeric\": {\n          \"count\": 939.0,\n          \"min\": 200901.0,\n          \"max\": 202612.0,\n          \"mean\": 201803.2907,\n          \"median\": 201810.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"WERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"55124\",\n          \"NA\",\n          \"1478347\",\n          \"103251\",\n          \"83499\"\n        ],\n        \"numeric\": {\n          \"count\": 945.0,\n          \"min\": 48.0,\n          \"max\": 1478347.0,\n          \"mean\": 40807.3418,\n          \"median\": 640.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VORJAHRESWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1478347\",\n          \"103251\",\n          \"83499\",\n          \"499396\",\n          \"62621\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 48.0,\n          \"max\": 1478347.0,\n          \"mean\": 39733.331,\n          \"median\": 617.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"-44.3\",\n          \"86.7\",\n          \"-19.13\",\n          \"498.09\"\n        ],\n        \"numeric\": {\n          \"count\": 884.0,\n          \"min\": -89.75,\n          \"max\": 1177.64,\n          \"mean\": 8.6234,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORJAHRESMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"-96.27\",\n          \"-46.61\",\n          \"NA\",\n          \"29.4\",\n          \"18.36\"\n        ],\n        \"numeric\": {\n          \"count\": 945.0,\n          \"min\": -96.27,\n          \"max\": 676.06,\n          \"mean\": 9.3164,\n          \"median\": 3.53\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ZWOELF_MONATE_MITTELWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"119185\",\n          \"96539\",\n          \"97549\",\n          \"124587\"\n        ],\n        \"numeric\": {\n          \"count\": 884.0,\n          \"min\": 50.0,\n          \"max\": 138732.0,\n          \"mean\": 21347.3213,\n          \"median\": 540.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"JAHR\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2026\",\n          \"2025\",\n          \"2024\",\n          \"2023\",\n          \"2022\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2009.0,\n          \"max\": 2026.0,\n          \"mean\": 2017.978,\n          \"median\": 2018.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"AUSPRAEGUNG\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Auftragseingänge\",\n          \"Betriebe\",\n          \"Entgelte\",\n          \"Geleistete Arbeitsstunden - insgesamt\",\n          \"Geleistete Arbeitsstunden - Wohnungsbau\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"MONATSZAHL\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Bauhauptgewerbe\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"MONAT\",\n      \"WERT\",\n      \"VORJAHRESWERT\",\n      \"VERAEND_VORMONAT_PROZENT\"\n    ],\n    \"category_columns\": [\n      \"AUSPRAEGUNG\",\n      \"MONATSZAHL\"\n    ],\n    \"time_columns\": [\n      \"JAHR\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"AUSPRAEGUNG\",\n      \"y\": \"MONAT\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Wirtschaft\", \"Monatszahlen Wirtschaft\")\nsummary = TextContent(\"Monatszahlen Wirtschaft belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include AUSPRAEGUNG, MONATSZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"5,996\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0,202603.0,202604.0])\nchart = BarChart([\"Auftragseingänge\",\"Betriebe\",\"Entgelte\",\"Geleistete Arbeitsstunden - insgesamt\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Bundestagswahl 2025 - Wahlräume in München and compare WBZ by BARRIEREFREIHEIT.",
+  "query_result": {
+    "dataset_title": "Bundestagswahl 2025 - Wahlräume in München",
+    "package_id": "2d671619-88a0-4629-9b73-f0661fbf5f93",
+    "package_name": "bundestagswahl-2025-wahlraeume-in-muenchen",
+    "resource_id": "8a6495c1-e90f-456c-8626-00d305d791ca",
+    "resource_name": "Wahlräume Bundestagswahl 2025",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst die Wahlräume zur Bundestagswahl 2025 in München. [Mehr Informationen zur Bundestagswahl 2025 auf muenchen.de](https://stadt.muenchen.de/infos/bundestagswahlen.html)",
+    "organization": "Kreisverwaltungsreferat der Landeshauptstadt München",
+    "tags": [
+      "Bundestagswahl 2025",
+      "Wahl",
+      "Wahlen"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 470,
+    "sampled_rows": 470,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "WBZ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "101",
+          "102",
+          "103",
+          "104",
+          "105"
+        ],
+        "numeric": {
+          "count": 470.0,
+          "min": 101.0,
+          "max": 2517.0,
+          "mean": 1340.2404,
+          "median": 1324.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "STBZ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 470.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.2915,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "NR",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "19",
+          "33",
+          "13",
+          "22"
+        ],
+        "numeric": {
+          "count": 460.0,
+          "min": 1.0,
+          "max": 510.0,
+          "mean": 40.9913,
+          "median": 21.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "PLZ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "80331",
+          "80469",
+          "80538",
+          "80336",
+          "80337"
+        ],
+        "numeric": {
+          "count": 470.0,
+          "min": 80331.0,
+          "max": 81929.0,
+          "mean": 81183.6468,
+          "median": 81245.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "BARRIEREFREIHEIT",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "barrierefrei",
+          "teilweise barrierefrei"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ROLLSTUHLFAHRENDE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 80,
+        "null_count": 390,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 80.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.8298
+      },
+      {
+        "name": "GEHBEHINDERTE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 78,
+        "null_count": 392,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 78.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.834
+      },
+      {
+        "name": "BLINDE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 63,
+        "null_count": 407,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 63.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.866
+      },
+      {
+        "name": "SEHBEEINTRACHTIGTE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 61,
+        "null_count": 409,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 61.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.8702
+      },
+      {
+        "name": "WAHLLOKAL_NAME",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "Jugendinformationszentrum JIZ",
+          "Riemerschmid-Wirtschaftsschule",
+          "Rechtsanwaltskammer",
+          "Kerschensteiner Gewerbeschule",
+          "St.-Anna-Grundschule"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "STRANAM",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "Oberanger",
+          "Frauenstr.",
+          "Tal",
+          "Liebherrstr.",
+          "St.-Anna-Str."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ORT",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "München"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "WBZ",
+      "STBZ",
+      "NR",
+      "PLZ"
+    ],
+    "category_columns": [
+      "BARRIEREFREIHEIT",
+      "ORT"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "BARRIEREFREIHEIT",
+      "y": "WBZ"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bundestagswahl 2025 - Wahlräume in München\", \"Wahlräume Bundestagswahl 2025\")\nsummary = TextContent(\"Wahlräume Bundestagswahl 2025 belongs to Kreisverwaltungsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include WBZ, STBZ, NR. Categorical fields include BARRIEREFREIHEIT, ORT.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"470\")\nm2 = ListItem(\"Columns\", \"15\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"WBZ\",\"STBZ\",\"NR\",\"PLZ\",\"BARRIEREFREIHEIT\",\"ROLLSTUHLFAHRENDE\",\"GEHBEHINDERTE\",\"BLINDE\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"category\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"390\",\"392\",\"407\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"WBZ\", [101.0,102.0])\nchart = BarChart([\"barrierefrei\",\"teilweise barrierefrei\"], [series], \"grouped\", \"BARRIEREFREIHEIT\", \"WBZ\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 2 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Bundestagswahl 2025 - Wahlräume in München and compare WBZ by BARRIEREFREIHEIT.\",\n  \"query_result\": {\n    \"dataset_title\": \"Bundestagswahl 2025 - Wahlräume in München\",\n    \"package_id\": \"2d671619-88a0-4629-9b73-f0661fbf5f93\",\n    \"package_name\": \"bundestagswahl-2025-wahlraeume-in-muenchen\",\n    \"resource_id\": \"8a6495c1-e90f-456c-8626-00d305d791ca\",\n    \"resource_name\": \"Wahlräume Bundestagswahl 2025\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz umfasst die Wahlräume zur Bundestagswahl 2025 in München. [Mehr Informationen zur Bundestagswahl 2025 auf muenchen.de](https://stadt.muenchen.de/infos/bundestagswahlen.html)\",\n    \"organization\": \"Kreisverwaltungsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Bundestagswahl 2025\",\n      \"Wahl\",\n      \"Wahlen\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 470,\n    \"sampled_rows\": 470,\n    \"column_count\": 15,\n    \"columns\": [\n      {\n        \"name\": \"WBZ\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 470,\n        \"null_count\": 0,\n        \"examples\": [\n          \"101\",\n          \"102\",\n          \"103\",\n          \"104\",\n          \"105\"\n        ],\n        \"numeric\": {\n          \"count\": 470.0,\n          \"min\": 101.0,\n          \"max\": 2517.0,\n          \"mean\": 1340.2404,\n          \"median\": 1324.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"STBZ\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 470,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1\",\n          \"2\",\n          \"3\",\n          \"4\",\n          \"5\"\n        ],\n        \"numeric\": {\n          \"count\": 470.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 13.2915,\n          \"median\": 13.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"NR\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 470,\n        \"null_count\": 0,\n        \"examples\": [\n          \"6\",\n          \"19\",\n          \"33\",\n          \"13\",\n          \"22\"\n        ],\n        \"numeric\": {\n          \"count\": 460.0,\n          \"min\": 1.0,\n          \"max\": 510.0,\n          \"mean\": 40.9913,\n          \"median\": 21.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"PLZ\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 470,\n        \"null_count\": 0,\n        \"examples\": [\n          \"80331\",\n          \"80469\",\n          \"80538\",\n          \"80336\",\n          \"80337\"\n        ],\n        \"numeric\": {\n          \"count\": 470.0,\n          \"min\": 80331.0,\n          \"max\": 81929.0,\n          \"mean\": 81183.6468,\n          \"median\": 81245.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"BARRIEREFREIHEIT\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 470,\n        \"null_count\": 0,\n        \"examples\": [\n          \"barrierefrei\",\n          \"teilweise barrierefrei\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ROLLSTUHLFAHRENDE\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 80,\n        \"null_count\": 390,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 80.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.8298\n      },\n      {\n        \"name\": \"GEHBEHINDERTE\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 78,\n        \"null_count\": 392,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 78.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.834\n      },\n      {\n        \"name\": \"BLINDE\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 63,\n        \"null_count\": 407,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 63.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.866\n      },\n      {\n        \"name\": \"SEHBEEINTRACHTIGTE\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 61,\n        \"null_count\": 409,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 61.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.8702\n      },\n      {\n        \"name\": \"WAHLLOKAL_NAME\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 470,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Jugendinformationszentrum JIZ\",\n          \"Riemerschmid-Wirtschaftsschule\",\n          \"Rechtsanwaltskammer\",\n          \"Kerschensteiner Gewerbeschule\",\n          \"St.-Anna-Grundschule\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"STRANAM\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 470,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Oberanger\",\n          \"Frauenstr.\",\n          \"Tal\",\n          \"Liebherrstr.\",\n          \"St.-Anna-Str.\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ORT\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 470,\n        \"null_count\": 0,\n        \"examples\": [\n          \"München\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"WBZ\",\n      \"STBZ\",\n      \"NR\",\n      \"PLZ\"\n    ],\n    \"category_columns\": [\n      \"BARRIEREFREIHEIT\",\n      \"ORT\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"BARRIEREFREIHEIT\",\n      \"y\": \"WBZ\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bundestagswahl 2025 - Wahlräume in München\", \"Wahlräume Bundestagswahl 2025\")\nsummary = TextContent(\"Wahlräume Bundestagswahl 2025 belongs to Kreisverwaltungsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include WBZ, STBZ, NR. Categorical fields include BARRIEREFREIHEIT, ORT.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"470\")\nm2 = ListItem(\"Columns\", \"15\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"WBZ\",\"STBZ\",\"NR\",\"PLZ\",\"BARRIEREFREIHEIT\",\"ROLLSTUHLFAHRENDE\",\"GEHBEHINDERTE\",\"BLINDE\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"category\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"390\",\"392\",\"407\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"WBZ\", [101.0,102.0])\nchart = BarChart([\"barrierefrei\",\"teilweise barrierefrei\"], [series], \"grouped\", \"BARRIEREFREIHEIT\", \"WBZ\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 2 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

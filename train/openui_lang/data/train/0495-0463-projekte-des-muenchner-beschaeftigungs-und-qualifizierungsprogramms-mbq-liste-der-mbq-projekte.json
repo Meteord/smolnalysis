@@ -1,0 +1,228 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ) and compare plz by foerdergruppe.",
+  "query_result": {
+    "dataset_title": "Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ)",
+    "package_id": "e7e8c4b8-6466-4edb-b25f-44129faa56ed",
+    "package_name": "projekte-des-muenchner-beschaeftigungs-und-qualifizierungsprogramms-mbq",
+    "resource_id": "dccc59bf-9561-4587-b7b8-38b2562e9eff",
+    "resource_name": "Liste der MBQ-Projekte",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst die Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ). Das MBQ ist das Arbeitsmarktprogramm der Stadt München. Ziel ist die berufliche und soziale Integration von Menschen in den Arbeitsmarkt und Fachkräftesicherung.",
+    "organization": "Referat für Arbeit und Wirtschaft (RAW) der Landeshauptstadt München",
+    "tags": [
+      "Arbeit",
+      "Integration",
+      "Stadtratsauftrag",
+      "Wirtschaft"
+    ],
+    "groups": [],
+    "row_count": 77,
+    "sampled_rows": 77,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "81667",
+          "80337",
+          "81829",
+          "80939",
+          "85609"
+        ],
+        "numeric": {
+          "count": 77.0,
+          "min": 80331.0,
+          "max": 85622.0,
+          "mean": 81222.5974,
+          "median": 80992.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "foerdergruppe",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "Abbau von Langzeitarbeitslosigkeit",
+          "Berufliche Gleichstellung von Frauen und Männern",
+          "Förderung von Jugendlichen und Studierenden beim Übergang Schule-Studium-Arbeitswelt",
+          "Kompetenzentwicklung in Unternehmen und Branchen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "München",
+          "Aschheim",
+          "Feldkirchen",
+          "Baierbrunn"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "projektname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "ABBA",
+          "Aids-Hilfe Beschäftigungsprojekte",
+          "avanta Lettershop",
+          "Münchner Arbeit",
+          "Beschäftigungsbetrieb Transport und Sortierung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "projekttraeger",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "Perspektive GmbH München",
+          "Münchner Aids-Hilfe e. V.",
+          "avanta München e. V.",
+          "Münchner Arbeit gGmbH",
+          "Weißer Rabe Soziale Betriebe und Dienste GmbH"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "Gravelottestraße 6 - 8",
+          "Lindwurmstraße 71 - 73",
+          "Stahlgruberring 22",
+          "Edmund-Rumpler-Str. 13",
+          "Margaretha-Ley-Ring 17"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "projekt-e-mail",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 76,
+        "null_count": 1,
+        "examples": [
+          "abba@perspektive-muenchen.de",
+          "regenbogen@muenchner-aidshilfe.de",
+          "info@avanta-muenchen.de",
+          "info@muenchner-arbeit.de",
+          "recycling@weisser-rabe.de"
+        ],
+        "null_rate": 0.013
+      },
+      {
+        "name": "projektbeschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 69,
+        "null_count": 8,
+        "examples": [
+          "Langzeitarbeitslose Menschen und/oder Menschen mit Behinderung sollen durch die Beschäftigung und Qualifizierung zuerst psychisch und sozial stabilisiert werden",
+          "Die Hauptziele der Aids-Hilfe Beschäftigungsprojekte, Café Regenbogen und Tagungszentrum, sind die Wiederherstellung, Erhaltung und Förderung der Arbeitsfähigke",
+          "Der avanta Lettershop fördert die berufliche und soziale Integration von langzeitarbeitslosen Frauen. Er bietet seinen Teilnehmerinnen Arbeitsplätze mit begleit",
+          "Die Münchner Arbeit GmbH ist ein kommunaler Beschäftigungsbetrieb und eine 100prozentige Tochter der Stadt München. Sie unterhält an ihrem Standort in Freimann",
+          "Der soziale Beschäftigungsbetrieb übernimmt für Privat- und Geschäftskunden Wohnungs- und Firmenauflösungen und transportiert dabei anfallende Haushaltsgegenstä"
+        ],
+        "null_rate": 0.1039
+      },
+      {
+        "name": "telefon",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 69,
+        "null_count": 8,
+        "examples": [
+          "089 48 00 48 35",
+          "089 54 33 31 02",
+          "089 18 93 490",
+          "089 31 88 09 0",
+          "089 86 49 78 0"
+        ],
+        "null_rate": 0.1039
+      },
+      {
+        "name": "internet-adresse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 69,
+        "null_count": 8,
+        "examples": [
+          "https://www.perspektive-muenchen.de/abba/",
+          "https://www.muenchner-aidshilfe.de",
+          "https://www.avanta-muenchen.de",
+          "https://www.muenchner-arbeit.de/beschaeftigung-qualifizierung",
+          "https://www.weisser-rabe.de"
+        ],
+        "null_rate": 0.1039
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "plz"
+    ],
+    "category_columns": [
+      "foerdergruppe",
+      "ort"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "foerdergruppe",
+      "y": "plz"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ)\", \"Liste der MBQ-Projekte\")\nsummary = TextContent(\"Liste der MBQ-Projekte belongs to Referat für Arbeit und Wirtschaft (RAW) der Landeshauptstadt München. It exposes 10 profiled columns for OpenUI rendering. Numeric fields include plz. Categorical fields include foerdergruppe, ort.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"77\")\nm2 = ListItem(\"Columns\", \"11\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"plz\",\"foerdergruppe\",\"ort\",\"projektname\",\"projekttraeger\",\"strasse\",\"projekt-e-mail\",\"projektbeschreibung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"category\",\"string\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"8\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"plz\", [81667.0,80337.0,81829.0,80939.0])\nchart = BarChart([\"Abbau von Langzeitarbeitslosigkeit\",\"Berufliche Gleichstellung von Frauen und Männern\",\"Förderung von Jugendlichen und Studierenden beim Übergang Schule-Studium-Arbeitswelt\",\"Kompetenzentwicklung in Unternehmen und Branchen\"], [series], \"grouped\", \"foerdergruppe\", \"plz\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ) and compare plz by foerdergruppe.\",\n  \"query_result\": {\n    \"dataset_title\": \"Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ)\",\n    \"package_id\": \"e7e8c4b8-6466-4edb-b25f-44129faa56ed\",\n    \"package_name\": \"projekte-des-muenchner-beschaeftigungs-und-qualifizierungsprogramms-mbq\",\n    \"resource_id\": \"dccc59bf-9561-4587-b7b8-38b2562e9eff\",\n    \"resource_name\": \"Liste der MBQ-Projekte\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz umfasst die Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ). Das MBQ ist das Arbeitsmarktprogramm der Stadt München. Ziel ist die berufliche und soziale Integration von Menschen in den Arbeitsmarkt und Fachkräftesicherung.\",\n    \"organization\": \"Referat für Arbeit und Wirtschaft (RAW) der Landeshauptstadt München\",\n    \"tags\": [\n      \"Arbeit\",\n      \"Integration\",\n      \"Stadtratsauftrag\",\n      \"Wirtschaft\"\n    ],\n    \"groups\": [],\n    \"row_count\": 77,\n    \"sampled_rows\": 77,\n    \"column_count\": 11,\n    \"columns\": [\n      {\n        \"name\": \"plz\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 77,\n        \"null_count\": 0,\n        \"examples\": [\n          \"81667\",\n          \"80337\",\n          \"81829\",\n          \"80939\",\n          \"85609\"\n        ],\n        \"numeric\": {\n          \"count\": 77.0,\n          \"min\": 80331.0,\n          \"max\": 85622.0,\n          \"mean\": 81222.5974,\n          \"median\": 80992.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"foerdergruppe\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 77,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Abbau von Langzeitarbeitslosigkeit\",\n          \"Berufliche Gleichstellung von Frauen und Männern\",\n          \"Förderung von Jugendlichen und Studierenden beim Übergang Schule-Studium-Arbeitswelt\",\n          \"Kompetenzentwicklung in Unternehmen und Branchen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ort\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 77,\n        \"null_count\": 0,\n        \"examples\": [\n          \"München\",\n          \"Aschheim\",\n          \"Feldkirchen\",\n          \"Baierbrunn\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"projektname\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 77,\n        \"null_count\": 0,\n        \"examples\": [\n          \"ABBA\",\n          \"Aids-Hilfe Beschäftigungsprojekte\",\n          \"avanta Lettershop\",\n          \"Münchner Arbeit\",\n          \"Beschäftigungsbetrieb Transport und Sortierung\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"projekttraeger\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 77,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Perspektive GmbH München\",\n          \"Münchner Aids-Hilfe e. V.\",\n          \"avanta München e. V.\",\n          \"Münchner Arbeit gGmbH\",\n          \"Weißer Rabe Soziale Betriebe und Dienste GmbH\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"strasse\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 77,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Gravelottestraße 6 - 8\",\n          \"Lindwurmstraße 71 - 73\",\n          \"Stahlgruberring 22\",\n          \"Edmund-Rumpler-Str. 13\",\n          \"Margaretha-Ley-Ring 17\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"projekt-e-mail\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 76,\n        \"null_count\": 1,\n        \"examples\": [\n          \"abba@perspektive-muenchen.de\",\n          \"regenbogen@muenchner-aidshilfe.de\",\n          \"info@avanta-muenchen.de\",\n          \"info@muenchner-arbeit.de\",\n          \"recycling@weisser-rabe.de\"\n        ],\n        \"null_rate\": 0.013\n      },\n      {\n        \"name\": \"projektbeschreibung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 69,\n        \"null_count\": 8,\n        \"examples\": [\n          \"Langzeitarbeitslose Menschen und/oder Menschen mit Behinderung sollen durch die Beschäftigung und Qualifizierung zuerst psychisch und sozial stabilisiert werden\",\n          \"Die Hauptziele der Aids-Hilfe Beschäftigungsprojekte, Café Regenbogen und Tagungszentrum, sind die Wiederherstellung, Erhaltung und Förderung der Arbeitsfähigke\",\n          \"Der avanta Lettershop fördert die berufliche und soziale Integration von langzeitarbeitslosen Frauen. Er bietet seinen Teilnehmerinnen Arbeitsplätze mit begleit\",\n          \"Die Münchner Arbeit GmbH ist ein kommunaler Beschäftigungsbetrieb und eine 100prozentige Tochter der Stadt München. Sie unterhält an ihrem Standort in Freimann\",\n          \"Der soziale Beschäftigungsbetrieb übernimmt für Privat- und Geschäftskunden Wohnungs- und Firmenauflösungen und transportiert dabei anfallende Haushaltsgegenstä\"\n        ],\n        \"null_rate\": 0.1039\n      },\n      {\n        \"name\": \"telefon\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 69,\n        \"null_count\": 8,\n        \"examples\": [\n          \"089 48 00 48 35\",\n          \"089 54 33 31 02\",\n          \"089 18 93 490\",\n          \"089 31 88 09 0\",\n          \"089 86 49 78 0\"\n        ],\n        \"null_rate\": 0.1039\n      },\n      {\n        \"name\": \"internet-adresse\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 69,\n        \"null_count\": 8,\n        \"examples\": [\n          \"https://www.perspektive-muenchen.de/abba/\",\n          \"https://www.muenchner-aidshilfe.de\",\n          \"https://www.avanta-muenchen.de\",\n          \"https://www.muenchner-arbeit.de/beschaeftigung-qualifizierung\",\n          \"https://www.weisser-rabe.de\"\n        ],\n        \"null_rate\": 0.1039\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"plz\"\n    ],\n    \"category_columns\": [\n      \"foerdergruppe\",\n      \"ort\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"foerdergruppe\",\n      \"y\": \"plz\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ)\", \"Liste der MBQ-Projekte\")\nsummary = TextContent(\"Liste der MBQ-Projekte belongs to Referat für Arbeit und Wirtschaft (RAW) der Landeshauptstadt München. It exposes 10 profiled columns for OpenUI rendering. Numeric fields include plz. Categorical fields include foerdergruppe, ort.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"77\")\nm2 = ListItem(\"Columns\", \"11\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.25\")\nc1 = Col(\"Column\", [\"plz\",\"foerdergruppe\",\"ort\",\"projektname\",\"projekttraeger\",\"strasse\",\"projekt-e-mail\",\"projektbeschreibung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"category\",\"string\",\"string\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"8\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"plz\", [81667.0,80337.0,81829.0,80939.0])\nchart = BarChart([\"Abbau von Langzeitarbeitslosigkeit\",\"Berufliche Gleichstellung von Frauen und Männern\",\"Förderung von Jugendlichen und Studierenden beim Übergang Schule-Studium-Arbeitswelt\",\"Kompetenzentwicklung in Unternehmen und Branchen\"], [series], \"grouped\", \"foerdergruppe\", \"plz\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Soziale Leistungen and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Soziale Leistungen",
+    "package_id": "145a8fcf-5fdf-4fb2-98c3-436b6adbd847",
+    "package_name": "monatszahlen-soziale-leistungen",
+    "resource_id": "bee7fdb6-7333-4c21-a3a7-d2fb96f61dfe",
+    "resource_name": "Monatszahlen Soziale Leistungen",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Soziale Leistungen__ besteht aus folgenden Themen: * Empfänger nach SGB XII * Hilfe zum Lebensunterhalt * Grundsicherung im Alter und bei Erwerbsminderung Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 3420,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 200801.0,
+          "max": 202612.0,
+          "mean": 201757.684,
+          "median": 201805.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "12223",
+          "12254",
+          "12567",
+          "12192"
+        ],
+        "numeric": {
+          "count": 940.0,
+          "min": 7244.0,
+          "max": 24101.0,
+          "mean": 13461.7011,
+          "median": 11890.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "12223",
+          "12254",
+          "12567",
+          "12192",
+          "12159"
+        ],
+        "numeric": {
+          "count": 964.0,
+          "min": 7244.0,
+          "max": 24101.0,
+          "mean": 13443.8952,
+          "median": 11890.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-0.54",
+          "0.25",
+          "2.55",
+          "-2.98"
+        ],
+        "numeric": {
+          "count": 937.0,
+          "min": -4.45,
+          "max": 7.57,
+          "mean": 0.1358,
+          "median": 0.21
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-5.39",
+          "-5.29",
+          "1.65",
+          "-1.4"
+        ],
+        "numeric": {
+          "count": 904.0,
+          "min": -10.93,
+          "max": 20.84,
+          "mean": 1.9676,
+          "median": 2.555
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "12379",
+          "12322",
+          "12339",
+          "12324"
+        ],
+        "numeric": {
+          "count": 940.0,
+          "min": 7394.0,
+          "max": 23931.0,
+          "mean": 13361.867,
+          "median": 11763.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2008.0,
+          "max": 2026.0,
+          "mean": 2017.512,
+          "median": 2018.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Deutsche",
+          "Frauen",
+          "insgesamt",
+          "Männer",
+          "Nichtdeutsche"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Empfänger*innen nach SGB XII"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Soziale Leistungen\", \"Monatszahlen Soziale Leistungen\")\nsummary = TextContent(\"Monatszahlen Soziale Leistungen belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include AUSPRAEGUNG, MONATSZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"3,420\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0,202603.0,202604.0,202605.0])\nchart = BarChart([\"Deutsche\",\"Frauen\",\"insgesamt\",\"Männer\",\"Nichtdeutsche\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Monatszahlen Soziale Leistungen and compare MONAT by AUSPRAEGUNG.\",\n  \"query_result\": {\n    \"dataset_title\": \"Monatszahlen Soziale Leistungen\",\n    \"package_id\": \"145a8fcf-5fdf-4fb2-98c3-436b6adbd847\",\n    \"package_name\": \"monatszahlen-soziale-leistungen\",\n    \"resource_id\": \"bee7fdb6-7333-4c21-a3a7-d2fb96f61dfe\",\n    \"resource_name\": \"Monatszahlen Soziale Leistungen\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz __Monatszahlen Soziale Leistungen__ besteht aus folgenden Themen: * Empfänger nach SGB XII * Hilfe zum Lebensunterhalt * Grundsicherung im Alter und bei Erwerbsminderung Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Monatszahlen\"\n    ],\n    \"groups\": [\n      \"soci\"\n    ],\n    \"row_count\": 3420,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"MONAT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"202601\",\n          \"202602\",\n          \"202603\",\n          \"202604\",\n          \"202605\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 200801.0,\n          \"max\": 202612.0,\n          \"mean\": 201757.684,\n          \"median\": 201805.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"WERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"12223\",\n          \"12254\",\n          \"12567\",\n          \"12192\"\n        ],\n        \"numeric\": {\n          \"count\": 940.0,\n          \"min\": 7244.0,\n          \"max\": 24101.0,\n          \"mean\": 13461.7011,\n          \"median\": 11890.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VORJAHRESWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"12223\",\n          \"12254\",\n          \"12567\",\n          \"12192\",\n          \"12159\"\n        ],\n        \"numeric\": {\n          \"count\": 964.0,\n          \"min\": 7244.0,\n          \"max\": 24101.0,\n          \"mean\": 13443.8952,\n          \"median\": 11890.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"-0.54\",\n          \"0.25\",\n          \"2.55\",\n          \"-2.98\"\n        ],\n        \"numeric\": {\n          \"count\": 937.0,\n          \"min\": -4.45,\n          \"max\": 7.57,\n          \"mean\": 0.1358,\n          \"median\": 0.21\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORJAHRESMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"-5.39\",\n          \"-5.29\",\n          \"1.65\",\n          \"-1.4\"\n        ],\n        \"numeric\": {\n          \"count\": 904.0,\n          \"min\": -10.93,\n          \"max\": 20.84,\n          \"mean\": 1.9676,\n          \"median\": 2.555\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ZWOELF_MONATE_MITTELWERT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"NA\",\n          \"12379\",\n          \"12322\",\n          \"12339\",\n          \"12324\"\n        ],\n        \"numeric\": {\n          \"count\": 940.0,\n          \"min\": 7394.0,\n          \"max\": 23931.0,\n          \"mean\": 13361.867,\n          \"median\": 11763.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"JAHR\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2026\",\n          \"2025\",\n          \"2024\",\n          \"2023\",\n          \"2022\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2008.0,\n          \"max\": 2026.0,\n          \"mean\": 2017.512,\n          \"median\": 2018.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"AUSPRAEGUNG\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Deutsche\",\n          \"Frauen\",\n          \"insgesamt\",\n          \"Männer\",\n          \"Nichtdeutsche\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"MONATSZAHL\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Empfänger*innen nach SGB XII\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"MONAT\",\n      \"WERT\",\n      \"VORJAHRESWERT\",\n      \"VERAEND_VORMONAT_PROZENT\"\n    ],\n    \"category_columns\": [\n      \"AUSPRAEGUNG\",\n      \"MONATSZAHL\"\n    ],\n    \"time_columns\": [\n      \"JAHR\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"AUSPRAEGUNG\",\n      \"y\": \"MONAT\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Soziale Leistungen\", \"Monatszahlen Soziale Leistungen\")\nsummary = TextContent(\"Monatszahlen Soziale Leistungen belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, VORJAHRESWERT. Categorical fields include AUSPRAEGUNG, MONATSZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"3,420\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"VORJAHRESWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"ZWOELF_MONATE_MITTELWERT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [202601.0,202602.0,202603.0,202604.0,202605.0])\nchart = BarChart([\"Deutsche\",\"Frauen\",\"insgesamt\",\"Männer\",\"Nichtdeutsche\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

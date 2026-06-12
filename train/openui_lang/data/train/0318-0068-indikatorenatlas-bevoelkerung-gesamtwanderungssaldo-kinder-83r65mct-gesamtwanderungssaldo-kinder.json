@@ -1,0 +1,231 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Gesamtwanderungssaldo Kinder and compare Basiswert 1 by Ausprägung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Gesamtwanderungssaldo Kinder",
+    "package_id": "4a8cfb08-a95e-431e-ba68-f282f2958a2d",
+    "package_name": "indikatorenatlas-bevoelkerung-gesamtwanderungssaldo-kinder-83r65mct",
+    "resource_id": "247e071b-b46e-4523-862c-db2ccd2ed302",
+    "resource_name": "Gesamtwanderungssaldo Kinder",
+    "resource_format": "csv",
+    "description": "Differenz der Zugezogenen (Hauptwohnsitz) der entsprechenden Kategorie und Weggezogenen (Hauptwohnsitz) der entsprechenden Kategorie. Es werden sowohl außerstädtische (über die Stadtgrenze Münchens hinaus) als auch innerstädtische Zugezogene und Weggezogene (= Umgezogene innerhalb des Stadtgebiets, auch innerhalb der räumlichen Einheit) berücksichtigt. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas",
+      "Kinder",
+      "Wanderungen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "Basiswert 1",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          10373,
+          72,
+          175,
+          194,
+          303
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 40.0,
+          "max": 15722.0,
+          "mean": 764.862,
+          "median": 360.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          13504,
+          161,
+          443,
+          471,
+          538
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 54.0,
+          "max": 18005.0,
+          "mean": 885.529,
+          "median": 453.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 999,
+        "null_count": 1,
+        "examples": [
+          -3131.0,
+          -89.0,
+          -268.0,
+          -277.0,
+          -235.0
+        ],
+        "numeric": {
+          "count": 999.0,
+          "min": -4120.0,
+          "max": 575.0,
+          "mean": -120.8759,
+          "median": -47.0
+        },
+        "null_rate": 0.001
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Ausprägung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "bis 5 Jahre",
+          "6 bis 9 Jahre"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "außer- und innerstädtisch Zugezogene (bis 5 Jahre)",
+          "außer- und innerstädtisch Zugezogene (6 bis 9 Jahre)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "außer- und innerstädtisch Weggezogene (bis 5 Jahre)",
+          "außer- und innerstädtisch Weggezogene (6 bis 9 Jahre)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Gesamtwanderungssaldo Kinder"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Basiswert 1",
+      "Basiswert 2",
+      "Indikatorwert"
+    ],
+    "category_columns": [
+      "Ausprägung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Ausprägung",
+      "y": "Basiswert 1"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Bevölkerung - Gesamtwanderungssaldo Kinder\", \"Gesamtwanderungssaldo Kinder\")\nsummary = TextContent(\"Gesamtwanderungssaldo Kinder belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Basiswert 1, Basiswert 2, Indikatorwert. Categorical fields include Ausprägung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Basiswert 1\",\"Basiswert 2\",\"Indikatorwert\",\"Jahr\",\"Ausprägung\",\"Name Basiswert 1\",\"Name Basiswert 2\",\"Indikator\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"float64\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"1\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Basiswert 1\", [10373.0,72.0])\nchart = BarChart([\"bis 5 Jahre\",\"6 bis 9 Jahre\"], [series], \"grouped\", \"Ausprägung\", \"Basiswert 1\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Indikatorenatlas: Bevölkerung - Gesamtwanderungssaldo Kinder and compare Basiswert 1 by Ausprägung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Indikatorenatlas: Bevölkerung - Gesamtwanderungssaldo Kinder\",\n    \"package_id\": \"4a8cfb08-a95e-431e-ba68-f282f2958a2d\",\n    \"package_name\": \"indikatorenatlas-bevoelkerung-gesamtwanderungssaldo-kinder-83r65mct\",\n    \"resource_id\": \"247e071b-b46e-4523-862c-db2ccd2ed302\",\n    \"resource_name\": \"Gesamtwanderungssaldo Kinder\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Differenz der Zugezogenen (Hauptwohnsitz) der entsprechenden Kategorie und Weggezogenen (Hauptwohnsitz) der entsprechenden Kategorie. Es werden sowohl außerstädtische (über die Stadtgrenze Münchens hinaus) als auch innerstädtische Zugezogene und Weggezogene (= Umgezogene innerhalb des Stadtgebiets, auch innerhalb der räumlichen Einheit) berücksichtigt. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bevölkerung\",\n      \"Indikatorenatlas\",\n      \"Kinder\",\n      \"Wanderungen\"\n    ],\n    \"groups\": [\n      \"soci\"\n    ],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 9,\n    \"columns\": [\n      {\n        \"name\": \"Basiswert 1\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          10373,\n          72,\n          175,\n          194,\n          303\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 40.0,\n          \"max\": 15722.0,\n          \"mean\": 764.862,\n          \"median\": 360.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 2\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          13504,\n          161,\n          443,\n          471,\n          538\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 54.0,\n          \"max\": 18005.0,\n          \"mean\": 885.529,\n          \"median\": 453.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Indikatorwert\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 999,\n        \"null_count\": 1,\n        \"examples\": [\n          -3131.0,\n          -89.0,\n          -268.0,\n          -277.0,\n          -235.0\n        ],\n        \"numeric\": {\n          \"count\": 999.0,\n          \"min\": -4120.0,\n          \"max\": 575.0,\n          \"mean\": -120.8759,\n          \"median\": -47.0\n        },\n        \"null_rate\": 0.001\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          2025,\n          2024,\n          2023,\n          2022,\n          2021\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2000.0,\n          \"max\": 2025.0,\n          \"mean\": 2014.69,\n          \"median\": 2016.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Ausprägung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"bis 5 Jahre\",\n          \"6 bis 9 Jahre\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"außer- und innerstädtisch Zugezogene (bis 5 Jahre)\",\n          \"außer- und innerstädtisch Zugezogene (6 bis 9 Jahre)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"außer- und innerstädtisch Weggezogene (bis 5 Jahre)\",\n          \"außer- und innerstädtisch Weggezogene (6 bis 9 Jahre)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Indikator\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Gesamtwanderungssaldo Kinder\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Raumbezug\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Stadt München\",\n          \"01 Altstadt - Lehel\",\n          \"02 Ludwigsvorstadt - Isarvorstadt\",\n          \"03 Maxvorstadt\",\n          \"04 Schwabing - West\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Basiswert 1\",\n      \"Basiswert 2\",\n      \"Indikatorwert\"\n    ],\n    \"category_columns\": [\n      \"Ausprägung\",\n      \"Name Basiswert 1\",\n      \"Name Basiswert 2\",\n      \"Indikator\"\n    ],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"Ausprägung\",\n      \"y\": \"Basiswert 1\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Bevölkerung - Gesamtwanderungssaldo Kinder\", \"Gesamtwanderungssaldo Kinder\")\nsummary = TextContent(\"Gesamtwanderungssaldo Kinder belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Basiswert 1, Basiswert 2, Indikatorwert. Categorical fields include Ausprägung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"9\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Basiswert 1\",\"Basiswert 2\",\"Indikatorwert\",\"Jahr\",\"Ausprägung\",\"Name Basiswert 1\",\"Name Basiswert 2\",\"Indikator\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"float64\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"1\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Basiswert 1\", [10373.0,72.0])\nchart = BarChart([\"bis 5 Jahre\",\"6 bis 9 Jahre\"], [series], \"grouped\", \"Ausprägung\", \"Basiswert 1\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of beamtet_weiblich in Kernbeschäftigte nach Altersgruppen, Statusgruppen und Geschlecht - Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Kernbeschäftigte nach Altersgruppen, Statusgruppen und Geschlecht - Landeshauptstadt München",
+    "package_id": "f3483c93-6c43-496b-8b48-2bde05bc57ed",
+    "package_name": "kernbeschaeftigte-nach-altersgruppen-statusgruppen-und-geschlecht-landeshauptstadt-muenchen",
+    "resource_id": "08970fa5-d143-44d7-8e22-06cd0bc0d4f6",
+    "resource_name": "Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Statusgruppen und Geschlecht",
+    "resource_format": "csv",
+    "description": "Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Statusgruppen und Geschlecht zum 31.12. des jeweiligen Jahres.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Personal",
+      "Personalreferat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 33,
+    "sampled_rows": 33,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "beamtet_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          5,
+          110,
+          302,
+          494,
+          822
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 5.0,
+          "max": 2843.0,
+          "mean": 824.1818,
+          "median": 707.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "beamtet_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          6,
+          73,
+          322,
+          669,
+          789
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 6.0,
+          "max": 920.0,
+          "mean": 499.0303,
+          "median": 625.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "tarifbeschaeftigt_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          34,
+          848,
+          1593,
+          1719,
+          1947
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 34.0,
+          "max": 2448.0,
+          "mean": 1573.4545,
+          "median": 1740.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "tarifbeschaeftigt_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          20,
+          438,
+          967,
+          1066,
+          1266
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 20.0,
+          "max": 1986.0,
+          "mean": 1001.4848,
+          "median": 1133.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 2022.0,
+          "max": 2024.0,
+          "mean": 2023.0,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "alter",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          "unter 20",
+          "20–24",
+          "25–29",
+          "30–34",
+          "35–39"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "beamtet_weiblich",
+      "beamtet_maennlich",
+      "tarifbeschaeftigt_weiblich",
+      "tarifbeschaeftigt_maennlich"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "beamtet_weiblich"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Kernbeschäftigte nach Altersgruppen, Statusgruppen und Geschlecht - Landeshauptstadt Münch\", \"Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Statusgruppen und Geschl\")\nsummary = TextContent(\"Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Statusgruppen und Geschlecht belongs to Statistisches Amt München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include beamtet_weiblich, beamtet_maennlich, tarifbeschaeftigt_weiblich.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"33\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"beamtet_weiblich\",\"beamtet_maennlich\",\"tarifbeschaeftigt_weiblich\",\"tarifbeschaeftigt_maennlich\",\"jahr\",\"alter\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"beamtet_weiblich\", [5.0,110.0,302.0,494.0,822.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"beamtet_weiblich\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of beamtet_weiblich in Kernbeschäftigte nach Altersgruppen, Statusgruppen und Geschlecht - Landeshauptstadt München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Kernbeschäftigte nach Altersgruppen, Statusgruppen und Geschlecht - Landeshauptstadt München\",\n    \"package_id\": \"f3483c93-6c43-496b-8b48-2bde05bc57ed\",\n    \"package_name\": \"kernbeschaeftigte-nach-altersgruppen-statusgruppen-und-geschlecht-landeshauptstadt-muenchen\",\n    \"resource_id\": \"08970fa5-d143-44d7-8e22-06cd0bc0d4f6\",\n    \"resource_name\": \"Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Statusgruppen und Geschlecht\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Statusgruppen und Geschlecht zum 31.12. des jeweiligen Jahres.\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Personal\",\n      \"Personalreferat\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 33,\n    \"sampled_rows\": 33,\n    \"column_count\": 7,\n    \"columns\": [\n      {\n        \"name\": \"beamtet_weiblich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 33,\n        \"null_count\": 0,\n        \"examples\": [\n          5,\n          110,\n          302,\n          494,\n          822\n        ],\n        \"numeric\": {\n          \"count\": 33.0,\n          \"min\": 5.0,\n          \"max\": 2843.0,\n          \"mean\": 824.1818,\n          \"median\": 707.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"beamtet_maennlich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 33,\n        \"null_count\": 0,\n        \"examples\": [\n          6,\n          73,\n          322,\n          669,\n          789\n        ],\n        \"numeric\": {\n          \"count\": 33.0,\n          \"min\": 6.0,\n          \"max\": 920.0,\n          \"mean\": 499.0303,\n          \"median\": 625.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"tarifbeschaeftigt_weiblich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 33,\n        \"null_count\": 0,\n        \"examples\": [\n          34,\n          848,\n          1593,\n          1719,\n          1947\n        ],\n        \"numeric\": {\n          \"count\": 33.0,\n          \"min\": 34.0,\n          \"max\": 2448.0,\n          \"mean\": 1573.4545,\n          \"median\": 1740.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"tarifbeschaeftigt_maennlich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 33,\n        \"null_count\": 0,\n        \"examples\": [\n          20,\n          438,\n          967,\n          1066,\n          1266\n        ],\n        \"numeric\": {\n          \"count\": 33.0,\n          \"min\": 20.0,\n          \"max\": 1986.0,\n          \"mean\": 1001.4848,\n          \"median\": 1133.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 33,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2024\",\n          \"2023\",\n          \"2022\"\n        ],\n        \"numeric\": {\n          \"count\": 33.0,\n          \"min\": 2022.0,\n          \"max\": 2024.0,\n          \"mean\": 2023.0,\n          \"median\": 2023.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"alter\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 33,\n        \"null_count\": 0,\n        \"examples\": [\n          \"unter 20\",\n          \"20–24\",\n          \"25–29\",\n          \"30–34\",\n          \"35–39\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"beamtet_weiblich\",\n      \"beamtet_maennlich\",\n      \"tarifbeschaeftigt_weiblich\",\n      \"tarifbeschaeftigt_maennlich\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"beamtet_weiblich\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Kernbeschäftigte nach Altersgruppen, Statusgruppen und Geschlecht - Landeshauptstadt Münch\", \"Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Statusgruppen und Geschl\")\nsummary = TextContent(\"Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Statusgruppen und Geschlecht belongs to Statistisches Amt München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include beamtet_weiblich, beamtet_maennlich, tarifbeschaeftigt_weiblich.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"33\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"beamtet_weiblich\",\"beamtet_maennlich\",\"tarifbeschaeftigt_weiblich\",\"tarifbeschaeftigt_maennlich\",\"jahr\",\"alter\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"beamtet_weiblich\", [5.0,110.0,302.0,494.0,822.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"beamtet_weiblich\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

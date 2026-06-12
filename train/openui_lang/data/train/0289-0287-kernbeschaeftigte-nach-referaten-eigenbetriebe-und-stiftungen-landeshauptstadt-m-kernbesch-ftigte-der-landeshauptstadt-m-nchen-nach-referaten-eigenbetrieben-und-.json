@@ -1,0 +1,213 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Kernbeschäftigte nach Referaten, Eigenbetriebe und Stiftungen - Landeshauptstadt München and compare vollzeit_weiblich by referat_typ.",
+  "query_result": {
+    "dataset_title": "Kernbeschäftigte nach Referaten, Eigenbetriebe und Stiftungen - Landeshauptstadt München",
+    "package_id": "8c85bb83-7112-4711-9e25-f0dc25f21568",
+    "package_name": "kernbeschaeftigte-nach-referaten-eigenbetriebe-und-stiftungen-landeshauptstadt-muenchen",
+    "resource_id": "1eb5022e-4cf1-4d08-bf08-cbdbf0dabb14",
+    "resource_name": "Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftungen",
+    "resource_format": "csv",
+    "description": "Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftungen zum 31.12. des jeweiligen Jahres.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Personal",
+      "Personalreferat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 69,
+    "sampled_rows": 69,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "vollzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          474,
+          204,
+          300,
+          39,
+          273
+        ],
+        "numeric": {
+          "count": 69.0,
+          "min": 8.0,
+          "max": 4743.0,
+          "mean": 464.9275,
+          "median": 171.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "vollzeit_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          2056,
+          236,
+          394,
+          75,
+          411
+        ],
+        "numeric": {
+          "count": 69.0,
+          "min": 5.0,
+          "max": 2760.0,
+          "mean": 604.3623,
+          "median": 236.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          475,
+          181,
+          344,
+          28,
+          188
+        ],
+        "numeric": {
+          "count": 69.0,
+          "min": 0.0,
+          "max": 6907.0,
+          "mean": 522.8406,
+          "median": 135.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_maennlich",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 68,
+        "null_count": 1,
+        "examples": [
+          288.0,
+          43.0,
+          45.0,
+          16.0,
+          63.0
+        ],
+        "numeric": {
+          "count": 68.0,
+          "min": 0.0,
+          "max": 1064.0,
+          "mean": 119.4412,
+          "median": 52.0
+        },
+        "null_rate": 0.0145
+      },
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 69.0,
+          "min": 2022.0,
+          "max": 2024.0,
+          "mean": 2023.0,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "referat_typ",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          "Gemeindehaushalt",
+          "Eigenbetriebe",
+          "rechtlich selbständige Stiftungen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "referate",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          "Baureferat",
+          "Direktorium",
+          "Gesundheitsreferat",
+          "IT-Referat",
+          "Kommunalreferat"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vollzeit_weiblich",
+      "vollzeit_maennlich",
+      "teilzeit_weiblich",
+      "teilzeit_maennlich"
+    ],
+    "category_columns": [
+      "referat_typ"
+    ],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "referat_typ",
+      "y": "vollzeit_weiblich"
+    }
+  },
+  "quality_score": 7.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Kernbeschäftigte nach Referaten, Eigenbetriebe und Stiftungen - Landeshauptstadt München\", \"Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftunge\")\nsummary = TextContent(\"Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftungen belongs to Statistisches Amt München. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include vollzeit_weiblich, vollzeit_maennlich, teilzeit_weiblich. Categorical fields include referat_typ.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"69\")\nm2 = ListItem(\"Columns\", \"8\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.75\")\nc1 = Col(\"Column\", [\"vollzeit_weiblich\",\"vollzeit_maennlich\",\"teilzeit_weiblich\",\"teilzeit_maennlich\",\"jahr\",\"referat_typ\",\"referate\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"float64\",\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"1\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"vollzeit_weiblich\", [474.0,204.0,300.0])\nchart = BarChart([\"Gemeindehaushalt\",\"Eigenbetriebe\",\"rechtlich selbständige Stiftungen\"], [series], \"grouped\", \"referat_typ\", \"vollzeit_weiblich\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Kernbeschäftigte nach Referaten, Eigenbetriebe und Stiftungen - Landeshauptstadt München and compare vollzeit_weiblich by referat_typ.\",\n  \"query_result\": {\n    \"dataset_title\": \"Kernbeschäftigte nach Referaten, Eigenbetriebe und Stiftungen - Landeshauptstadt München\",\n    \"package_id\": \"8c85bb83-7112-4711-9e25-f0dc25f21568\",\n    \"package_name\": \"kernbeschaeftigte-nach-referaten-eigenbetriebe-und-stiftungen-landeshauptstadt-muenchen\",\n    \"resource_id\": \"1eb5022e-4cf1-4d08-bf08-cbdbf0dabb14\",\n    \"resource_name\": \"Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftungen\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftungen zum 31.12. des jeweiligen Jahres.\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Personal\",\n      \"Personalreferat\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 69,\n    \"sampled_rows\": 69,\n    \"column_count\": 8,\n    \"columns\": [\n      {\n        \"name\": \"vollzeit_weiblich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 69,\n        \"null_count\": 0,\n        \"examples\": [\n          474,\n          204,\n          300,\n          39,\n          273\n        ],\n        \"numeric\": {\n          \"count\": 69.0,\n          \"min\": 8.0,\n          \"max\": 4743.0,\n          \"mean\": 464.9275,\n          \"median\": 171.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"vollzeit_maennlich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 69,\n        \"null_count\": 0,\n        \"examples\": [\n          2056,\n          236,\n          394,\n          75,\n          411\n        ],\n        \"numeric\": {\n          \"count\": 69.0,\n          \"min\": 5.0,\n          \"max\": 2760.0,\n          \"mean\": 604.3623,\n          \"median\": 236.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"teilzeit_weiblich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 69,\n        \"null_count\": 0,\n        \"examples\": [\n          475,\n          181,\n          344,\n          28,\n          188\n        ],\n        \"numeric\": {\n          \"count\": 69.0,\n          \"min\": 0.0,\n          \"max\": 6907.0,\n          \"mean\": 522.8406,\n          \"median\": 135.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"teilzeit_maennlich\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 68,\n        \"null_count\": 1,\n        \"examples\": [\n          288.0,\n          43.0,\n          45.0,\n          16.0,\n          63.0\n        ],\n        \"numeric\": {\n          \"count\": 68.0,\n          \"min\": 0.0,\n          \"max\": 1064.0,\n          \"mean\": 119.4412,\n          \"median\": 52.0\n        },\n        \"null_rate\": 0.0145\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 69,\n        \"null_count\": 0,\n        \"examples\": [\n          2024,\n          2023,\n          2022\n        ],\n        \"numeric\": {\n          \"count\": 69.0,\n          \"min\": 2022.0,\n          \"max\": 2024.0,\n          \"mean\": 2023.0,\n          \"median\": 2023.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"referat_typ\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 69,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Gemeindehaushalt\",\n          \"Eigenbetriebe\",\n          \"rechtlich selbständige Stiftungen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"referate\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 69,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Baureferat\",\n          \"Direktorium\",\n          \"Gesundheitsreferat\",\n          \"IT-Referat\",\n          \"Kommunalreferat\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"vollzeit_weiblich\",\n      \"vollzeit_maennlich\",\n      \"teilzeit_weiblich\",\n      \"teilzeit_maennlich\"\n    ],\n    \"category_columns\": [\n      \"referat_typ\"\n    ],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"referat_typ\",\n      \"y\": \"vollzeit_weiblich\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Kernbeschäftigte nach Referaten, Eigenbetriebe und Stiftungen - Landeshauptstadt München\", \"Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftunge\")\nsummary = TextContent(\"Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftungen belongs to Statistisches Amt München. It exposes 7 profiled columns for OpenUI rendering. Numeric fields include vollzeit_weiblich, vollzeit_maennlich, teilzeit_weiblich. Categorical fields include referat_typ.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"69\")\nm2 = ListItem(\"Columns\", \"8\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.75\")\nc1 = Col(\"Column\", [\"vollzeit_weiblich\",\"vollzeit_maennlich\",\"teilzeit_weiblich\",\"teilzeit_maennlich\",\"jahr\",\"referat_typ\",\"referate\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"float64\",\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"1\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"vollzeit_weiblich\", [474.0,204.0,300.0])\nchart = BarChart([\"Gemeindehaushalt\",\"Eigenbetriebe\",\"rechtlich selbständige Stiftungen\"], [series], \"grouped\", \"referat_typ\", \"vollzeit_weiblich\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

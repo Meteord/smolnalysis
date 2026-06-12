@@ -1,0 +1,197 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München and compare vollzeit_weiblich by statusgruppe.",
+  "query_result": {
+    "dataset_title": "Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München",
+    "package_id": "e88d11dc-f186-47d0-a032-57ce7714a358",
+    "package_name": "kernbeschaeftigte-nach-statusgruppen-arbeitszeit-und-geschlecht-landeshauptstadt-muenchen",
+    "resource_id": "1ed5e4ff-6f51-4c60-9806-e803026d7e92",
+    "resource_name": "Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht",
+    "resource_format": "csv",
+    "description": "Kernbeschäftigte der Landeshauptstadt München nach Statusgruppen, Arbeitszeit und Geschlecht zum 31.12. des jeweiligen Jahres.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Personal",
+      "Personalreferat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 6,
+    "sampled_rows": 6,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "vollzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          2676,
+          8187,
+          2668,
+          7969,
+          2662
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 2662.0,
+          "max": 8187.0,
+          "mean": 5337.3333,
+          "median": 5269.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          2727,
+          9808,
+          2711,
+          9214,
+          2671
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 2671.0,
+          "max": 9808.0,
+          "mean": 6002.5,
+          "median": 5805.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "vollzeit_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          4817,
+          9268,
+          4827,
+          8940,
+          4910
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 4817.0,
+          "max": 9268.0,
+          "mean": 6947.6667,
+          "median": 6917.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          753,
+          2121,
+          738,
+          1917,
+          703
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 703.0,
+          "max": 2121.0,
+          "mean": 1351.8333,
+          "median": 1316.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 2022.0,
+          "max": 2024.0,
+          "mean": 2023.0,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "statusgruppe",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "Beamte*innen",
+          "Tarifbeschäftigte"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vollzeit_weiblich",
+      "teilzeit_weiblich",
+      "vollzeit_maennlich",
+      "teilzeit_maennlich"
+    ],
+    "category_columns": [
+      "statusgruppe"
+    ],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "statusgruppe",
+      "y": "vollzeit_weiblich"
+    }
+  },
+  "quality_score": 7.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München\", \"Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht\")\nsummary = TextContent(\"Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht belongs to Statistisches Amt München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include vollzeit_weiblich, teilzeit_weiblich, vollzeit_maennlich. Categorical fields include statusgruppe.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"6\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.75\")\nc1 = Col(\"Column\", [\"vollzeit_weiblich\",\"teilzeit_weiblich\",\"vollzeit_maennlich\",\"teilzeit_maennlich\",\"jahr\",\"statusgruppe\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"vollzeit_weiblich\", [2676.0,8187.0])\nchart = BarChart([\"Beamte*innen\",\"Tarifbeschäftigte\"], [series], \"grouped\", \"statusgruppe\", \"vollzeit_weiblich\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München and compare vollzeit_weiblich by statusgruppe.\",\n  \"query_result\": {\n    \"dataset_title\": \"Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München\",\n    \"package_id\": \"e88d11dc-f186-47d0-a032-57ce7714a358\",\n    \"package_name\": \"kernbeschaeftigte-nach-statusgruppen-arbeitszeit-und-geschlecht-landeshauptstadt-muenchen\",\n    \"resource_id\": \"1ed5e4ff-6f51-4c60-9806-e803026d7e92\",\n    \"resource_name\": \"Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Kernbeschäftigte der Landeshauptstadt München nach Statusgruppen, Arbeitszeit und Geschlecht zum 31.12. des jeweiligen Jahres.\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Personal\",\n      \"Personalreferat\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 6,\n    \"sampled_rows\": 6,\n    \"column_count\": 7,\n    \"columns\": [\n      {\n        \"name\": \"vollzeit_weiblich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 6,\n        \"null_count\": 0,\n        \"examples\": [\n          2676,\n          8187,\n          2668,\n          7969,\n          2662\n        ],\n        \"numeric\": {\n          \"count\": 6.0,\n          \"min\": 2662.0,\n          \"max\": 8187.0,\n          \"mean\": 5337.3333,\n          \"median\": 5269.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"teilzeit_weiblich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 6,\n        \"null_count\": 0,\n        \"examples\": [\n          2727,\n          9808,\n          2711,\n          9214,\n          2671\n        ],\n        \"numeric\": {\n          \"count\": 6.0,\n          \"min\": 2671.0,\n          \"max\": 9808.0,\n          \"mean\": 6002.5,\n          \"median\": 5805.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"vollzeit_maennlich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 6,\n        \"null_count\": 0,\n        \"examples\": [\n          4817,\n          9268,\n          4827,\n          8940,\n          4910\n        ],\n        \"numeric\": {\n          \"count\": 6.0,\n          \"min\": 4817.0,\n          \"max\": 9268.0,\n          \"mean\": 6947.6667,\n          \"median\": 6917.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"teilzeit_maennlich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 6,\n        \"null_count\": 0,\n        \"examples\": [\n          753,\n          2121,\n          738,\n          1917,\n          703\n        ],\n        \"numeric\": {\n          \"count\": 6.0,\n          \"min\": 703.0,\n          \"max\": 2121.0,\n          \"mean\": 1351.8333,\n          \"median\": 1316.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 6,\n        \"null_count\": 0,\n        \"examples\": [\n          2024,\n          2023,\n          2022\n        ],\n        \"numeric\": {\n          \"count\": 6.0,\n          \"min\": 2022.0,\n          \"max\": 2024.0,\n          \"mean\": 2023.0,\n          \"median\": 2023.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"statusgruppe\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 6,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Beamte*innen\",\n          \"Tarifbeschäftigte\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"vollzeit_weiblich\",\n      \"teilzeit_weiblich\",\n      \"vollzeit_maennlich\",\n      \"teilzeit_maennlich\"\n    ],\n    \"category_columns\": [\n      \"statusgruppe\"\n    ],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"statusgruppe\",\n      \"y\": \"vollzeit_weiblich\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München\", \"Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht\")\nsummary = TextContent(\"Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht belongs to Statistisches Amt München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include vollzeit_weiblich, teilzeit_weiblich, vollzeit_maennlich. Categorical fields include statusgruppe.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"6\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.75\")\nc1 = Col(\"Column\", [\"vollzeit_weiblich\",\"teilzeit_weiblich\",\"vollzeit_maennlich\",\"teilzeit_maennlich\",\"jahr\",\"statusgruppe\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"int64\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"vollzeit_weiblich\", [2676.0,8187.0])\nchart = BarChart([\"Beamte*innen\",\"Tarifbeschäftigte\"], [series], \"grouped\", \"statusgruppe\", \"vollzeit_weiblich\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

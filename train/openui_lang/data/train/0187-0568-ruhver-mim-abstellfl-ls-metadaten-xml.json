@@ -1,0 +1,305 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Lastenradsharing Abstellflächen.",
+  "query_result": {
+    "dataset_title": "Lastenradsharing Abstellflächen",
+    "package_id": "cfa9c6ae-f5c6-4d89-91c4-2e38dafc0545",
+    "package_name": "ruhver_mim_abstellfl_ls",
+    "resource_id": "0c9a8aa2-4000-4d89-9189-b525d520b872",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet geteilte Abstellflächen für Mikromobilität, auf denen Fahrzeuge des Lastenradsharings geparkt werden dürfen. Ein durchgestrichenes Symbol zeigt an, dass diese geteilte Abstellfläche derzeit außer Betrieb ist (beispielsweise wegen Veranstaltungen oder Baustellen). Das Hinweisfeld gibt Informationen zu Dauer der Einschränkung und verweist, sofern vorhanden, auf Ersatzflächen. Ersatzflächen oder temporäre Ergänzungsflächen werden in Ocker dargestellt.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 225,
+    "sampled_rows": 225,
+    "column_count": 365,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 89,
+        "null_count": 136,
+        "examples": [
+          "fea17d75-0548-4fc6-8de0-f0e1414090d7",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat",
+          "(Dateneigentümer)"
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 3857.0,
+          "max": 80335.0,
+          "mean": 45836.6667,
+          "median": 53083.5
+        },
+        "null_rate": 0.6044
+      },
+      {
+        "name": "code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 220,
+        "examples": [
+          "3857",
+          "4326",
+          "25832",
+          "fea17d75-0548-4fc6-8de0-f0e1414090d7",
+          "Carsharing"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9778
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 221,
+        "examples": [
+          "11.3579",
+          "11.725",
+          "48.0599",
+          "48.252"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3579,
+          "max": 48.252,
+          "mean": 29.8487,
+          "median": 29.8925
+        },
+        "null_rate": 0.9822
+      },
+      {
+        "name": "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 222,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9867
+      },
+      {
+        "name": "referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 222,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9867
+      },
+      {
+        "name": "RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 222,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9867
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 223,
+        "examples": [
+          "1",
+          "false"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9911
+      },
+      {
+        "name": "referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "25832"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 25832.0,
+          "max": 25832.0,
+          "mean": 25832.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "code.CharacterString",
+      "Decimal",
+      "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 353,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Lastenradsharing Abstellflächen\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include CharacterString, code.CharacterString, Decimal.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"225\")\nm2 = ListItem(\"Columns\", \"365\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"CharacterString\",\"code.CharacterString\",\"Decimal\",\"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"RS_Identifier.code.CharacterString\",\"Boolean\",\"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"136\",\"220\",\"221\",\"222\",\"222\",\"222\",\"223\",\"224\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"CharacterString\", [3857.0,53083.5,45836.6667,80335.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"CharacterString\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 353 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of CharacterString in Lastenradsharing Abstellflächen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Lastenradsharing Abstellflächen\",\n    \"package_id\": \"cfa9c6ae-f5c6-4d89-91c4-2e38dafc0545\",\n    \"package_name\": \"ruhver_mim_abstellfl_ls\",\n    \"resource_id\": \"0c9a8aa2-4000-4d89-9189-b525d520b872\",\n    \"resource_name\": \"Metadaten (XML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Dieser Layer beinhaltet geteilte Abstellflächen für Mikromobilität, auf denen Fahrzeuge des Lastenradsharings geparkt werden dürfen. Ein durchgestrichenes Symbol zeigt an, dass diese geteilte Abstellfläche derzeit außer Betrieb ist (beispielsweise wegen Veranstaltungen oder Baustellen). Das Hinweisfeld gibt Informationen zu Dauer der Einschränkung und verweist, sofern vorhanden, auf Ersatzflächen. Ersatzflächen oder temporäre Ergänzungsflächen werden in Ocker dargestellt.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": 225,\n    \"sampled_rows\": 225,\n    \"column_count\": 365,\n    \"columns\": [\n      {\n        \"name\": \"CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 89,\n        \"null_count\": 136,\n        \"examples\": [\n          \"fea17d75-0548-4fc6-8de0-f0e1414090d7\",\n          \"WMS\",\n          \"GeodatenService München\",\n          \"Landeshauptstadt München - Kommunalreferat\",\n          \"(Dateneigentümer)\"\n        ],\n        \"numeric\": {\n          \"count\": 6.0,\n          \"min\": 3857.0,\n          \"max\": 80335.0,\n          \"mean\": 45836.6667,\n          \"median\": 53083.5\n        },\n        \"null_rate\": 0.6044\n      },\n      {\n        \"name\": \"code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 5,\n        \"null_count\": 220,\n        \"examples\": [\n          \"3857\",\n          \"4326\",\n          \"25832\",\n          \"fea17d75-0548-4fc6-8de0-f0e1414090d7\",\n          \"Carsharing\"\n        ],\n        \"numeric\": {\n          \"count\": 3.0,\n          \"min\": 3857.0,\n          \"max\": 25832.0,\n          \"mean\": 11338.3333,\n          \"median\": 4326.0\n        },\n        \"null_rate\": 0.9778\n      },\n      {\n        \"name\": \"Decimal\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 4,\n        \"null_count\": 221,\n        \"examples\": [\n          \"11.3579\",\n          \"11.725\",\n          \"48.0599\",\n          \"48.252\"\n        ],\n        \"numeric\": {\n          \"count\": 4.0,\n          \"min\": 11.3579,\n          \"max\": 48.252,\n          \"mean\": 29.8487,\n          \"median\": 29.8925\n        },\n        \"null_rate\": 0.9822\n      },\n      {\n        \"name\": \"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 3,\n        \"null_count\": 222,\n        \"examples\": [\n          \"3857\",\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 3.0,\n          \"min\": 3857.0,\n          \"max\": 25832.0,\n          \"mean\": 11338.3333,\n          \"median\": 4326.0\n        },\n        \"null_rate\": 0.9867\n      },\n      {\n        \"name\": \"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 3,\n        \"null_count\": 222,\n        \"examples\": [\n          \"3857\",\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 3.0,\n          \"min\": 3857.0,\n          \"max\": 25832.0,\n          \"mean\": 11338.3333,\n          \"median\": 4326.0\n        },\n        \"null_rate\": 0.9867\n      },\n      {\n        \"name\": \"RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 3,\n        \"null_count\": 222,\n        \"examples\": [\n          \"3857\",\n          \"4326\",\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 3.0,\n          \"min\": 3857.0,\n          \"max\": 25832.0,\n          \"mean\": 11338.3333,\n          \"median\": 4326.0\n        },\n        \"null_rate\": 0.9867\n      },\n      {\n        \"name\": \"Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 2,\n        \"null_count\": 223,\n        \"examples\": [\n          \"1\",\n          \"false\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9911\n      },\n      {\n        \"name\": \"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 224,\n        \"examples\": [\n          \"25832\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 25832.0,\n          \"max\": 25832.0,\n          \"mean\": 25832.0,\n          \"median\": 25832.0\n        },\n        \"null_rate\": 0.9956\n      },\n      {\n        \"name\": \"identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 224,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9956\n      },\n      {\n        \"name\": \"SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 224,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9956\n      },\n      {\n        \"name\": \"extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 224,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9956\n      },\n      {\n        \"name\": \"EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 224,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.9956\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"CharacterString\",\n      \"code.CharacterString\",\n      \"Decimal\",\n      \"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"CharacterString\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Lastenradsharing Abstellflächen\", \"Metadaten (XML)\")\nsummary = TextContent(\"Metadaten (XML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include CharacterString, code.CharacterString, Decimal.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"225\")\nm2 = ListItem(\"Columns\", \"365\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"CharacterString\",\"code.CharacterString\",\"Decimal\",\"MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"referenceSystemIdentifier.RS_Identifier.code.CharacterString\",\"RS_Identifier.code.CharacterString\",\"Boolean\",\"referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"136\",\"220\",\"221\",\"222\",\"222\",\"222\",\"223\",\"224\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"CharacterString\", [3857.0,53083.5,45836.6667,80335.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\"], [series], \"grouped\", \"Example\", \"CharacterString\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 353 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

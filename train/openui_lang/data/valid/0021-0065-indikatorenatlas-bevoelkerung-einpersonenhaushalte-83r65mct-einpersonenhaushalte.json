@@ -1,0 +1,231 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Einpersonenhaushalte and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Einpersonenhaushalte",
+    "package_id": "86612b72-4312-4905-a0c5-581baac650c5",
+    "package_name": "indikatorenatlas-bevoelkerung-einpersonenhaushalte-83r65mct",
+    "resource_id": "bfedaa2b-e096-40b4-a48a-51faff42adf3",
+    "resource_name": "Einpersonenhaushalte",
+    "resource_format": "csv",
+    "description": "Anteil der Einpersonen-Privathaushalte (mit einer Hauptwohnsitzperson) an allen Privathaus-halten (mit mindestens einer Hauptwohnsitzperson) in Prozent. bzw. Anteil der Einpersonen-Privathaushalte (mit einer Hauptwohnsitzperson) der entsprechenden Kategorie an allen Einpersonen-Privathaushalten (mit einer Hauptwohnsitzperson) in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 3276,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          21.2,
+          23.4,
+          24.8,
+          30.7,
+          25.4
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 16.7,
+          "max": 82.3,
+          "mean": 49.4875,
+          "median": 55.1
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "100204",
+          "1870",
+          "4955",
+          "6831",
+          "6466"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 862.0,
+          "max": 472378.0,
+          "mean": 21711.917,
+          "median": 10374.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "472378",
+          "7986",
+          "19941",
+          "22235",
+          "25426"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 4988.0,
+          "max": 868183.0,
+          "mean": 43010.896,
+          "median": 20419.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2012.0,
+          "max": 2025.0,
+          "mean": 2018.978,
+          "median": 2019.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "bis 29 Jahre",
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Privathaushalte (Einpersonen) (bis 29 Jahre)",
+          "Privathaushalte (Einpersonen) (deutsch)",
+          "Privathaushalte (Einpersonen)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Privathaushalte (Einpersonen)",
+          "Privathaushalte (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Einpersonenhaushalte"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Bevölkerung - Einpersonenhaushalte\", \"Einpersonenhaushalte\")\nsummary = TextContent(\"Einpersonenhaushalte belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Auspragung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"3,276\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Auspragung\",\"Name Basiswert 1\",\"Name Basiswert 2\",\"Indikator\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [21.2,23.4,24.8])\nchart = BarChart([\"bis 29 Jahre\",\"deutsch\",\"insgesamt\"], [series], \"grouped\", \"Auspragung\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Indikatorenatlas: Bevölkerung - Einpersonenhaushalte and compare Indikatorwert by Auspragung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Indikatorenatlas: Bevölkerung - Einpersonenhaushalte\",\n    \"package_id\": \"86612b72-4312-4905-a0c5-581baac650c5\",\n    \"package_name\": \"indikatorenatlas-bevoelkerung-einpersonenhaushalte-83r65mct\",\n    \"resource_id\": \"bfedaa2b-e096-40b4-a48a-51faff42adf3\",\n    \"resource_name\": \"Einpersonenhaushalte\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Anteil der Einpersonen-Privathaushalte (mit einer Hauptwohnsitzperson) an allen Privathaus-halten (mit mindestens einer Hauptwohnsitzperson) in Prozent. bzw. Anteil der Einpersonen-Privathaushalte (mit einer Hauptwohnsitzperson) der entsprechenden Kategorie an allen Einpersonen-Privathaushalten (mit einer Hauptwohnsitzperson) in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bevölkerung\",\n      \"Indikatorenatlas\"\n    ],\n    \"groups\": [\n      \"soci\"\n    ],\n    \"row_count\": 3276,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"Indikatorwert\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          21.2,\n          23.4,\n          24.8,\n          30.7,\n          25.4\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 16.7,\n          \"max\": 82.3,\n          \"mean\": 49.4875,\n          \"median\": 55.1\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"100204\",\n          \"1870\",\n          \"4955\",\n          \"6831\",\n          \"6466\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 862.0,\n          \"max\": 472378.0,\n          \"mean\": 21711.917,\n          \"median\": 10374.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"472378\",\n          \"7986\",\n          \"19941\",\n          \"22235\",\n          \"25426\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 4988.0,\n          \"max\": 868183.0,\n          \"mean\": 43010.896,\n          \"median\": 20419.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          2025,\n          2024,\n          2023,\n          2022,\n          2021\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2012.0,\n          \"max\": 2025.0,\n          \"mean\": 2018.978,\n          \"median\": 2019.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Auspragung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"bis 29 Jahre\",\n          \"deutsch\",\n          \"insgesamt\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Privathaushalte (Einpersonen) (bis 29 Jahre)\",\n          \"Privathaushalte (Einpersonen) (deutsch)\",\n          \"Privathaushalte (Einpersonen)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Privathaushalte (Einpersonen)\",\n          \"Privathaushalte (insgesamt)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Indikator\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Einpersonenhaushalte\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Raumbezug\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Stadt München\",\n          \"01 Altstadt - Lehel\",\n          \"02 Ludwigsvorstadt - Isarvorstadt\",\n          \"03 Maxvorstadt\",\n          \"04 Schwabing - West\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Indikatorwert\",\n      \"Basiswert 1\",\n      \"Basiswert 2\"\n    ],\n    \"category_columns\": [\n      \"Auspragung\",\n      \"Name Basiswert 1\",\n      \"Name Basiswert 2\",\n      \"Indikator\"\n    ],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"Auspragung\",\n      \"y\": \"Indikatorwert\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Bevölkerung - Einpersonenhaushalte\", \"Einpersonenhaushalte\")\nsummary = TextContent(\"Einpersonenhaushalte belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Auspragung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"3,276\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Auspragung\",\"Name Basiswert 1\",\"Name Basiswert 2\",\"Indikator\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [21.2,23.4,24.8])\nchart = BarChart([\"bis 29 Jahre\",\"deutsch\",\"insgesamt\"], [series], \"grouped\", \"Auspragung\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

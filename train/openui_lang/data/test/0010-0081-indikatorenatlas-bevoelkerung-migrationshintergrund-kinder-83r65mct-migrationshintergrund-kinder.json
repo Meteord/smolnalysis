@@ -1,0 +1,234 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Migrationshintergrund - Kinder and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Migrationshintergrund - Kinder",
+    "package_id": "dd3347aa-73cc-444e-bafa-6530272a7146",
+    "package_name": "indikatorenatlas-bevoelkerung-migrationshintergrund-kinder-83r65mct",
+    "resource_id": "ea396629-1814-4465-b711-3658c213dc4a",
+    "resource_name": "Migrationshintergrund - Kinder",
+    "resource_format": "csv",
+    "description": "Anteil der Hauptwohnsitzbevölkerung mit Migrationshintergrund der entsprechenden Kategorie an der Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas",
+      "Kinder",
+      "Migrationshintergrund"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 4940,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          56.0,
+          45.0,
+          41.7,
+          48.1,
+          47.3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 21.9,
+          "max": 81.0,
+          "mean": 47.6724,
+          "median": 46.7
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "109530",
+          "941",
+          "2020",
+          "2117",
+          "3492"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 153.0,
+          "max": 158971.0,
+          "mean": 4187.526,
+          "median": 1502.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "195719",
+          "2091",
+          "4842",
+          "4402",
+          "7379"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 442.0,
+          "max": 245160.0,
+          "mean": 8550.895,
+          "median": 3083.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2006.0,
+          "max": 2025.0,
+          "mean": 2015.64,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "deutsch bis 2 Jahre",
+          "deutsch und nichtdeutsch"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (mit Migrationshintergrund) (deutsch) (bis 17 Jahre)",
+          "Hauptwohnsitzbevölkerung (mit Migrationshintergrund) (deutsch) (bis 2 Jahre)",
+          "Hauptwohnsitzbevölkerung (mit Migrationshintergrund) (deutsch und nichtdeutsch) (bis 17 Jahre)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (deutsch) (bis 17 Jahre)",
+          "Hauptwohnsitzbevölkerung (deutsch) (bis 2 Jahre)",
+          "Hauptwohnsitzbevölkerung (deutsch und nichtdeutsch) (bis 17 Jahre)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Migrationshintergrund Kinder"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Bevölkerung - Migrationshintergrund - Kinder\", \"Migrationshintergrund - Kinder\")\nsummary = TextContent(\"Migrationshintergrund - Kinder belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Auspragung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"4,940\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Auspragung\",\"Name Basiswert 1\",\"Name Basiswert 2\",\"Indikator\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [56.0,45.0,41.7])\nchart = BarChart([\"deutsch\",\"deutsch bis 2 Jahre\",\"deutsch und nichtdeutsch\"], [series], \"grouped\", \"Auspragung\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Indikatorenatlas: Bevölkerung - Migrationshintergrund - Kinder and compare Indikatorwert by Auspragung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Indikatorenatlas: Bevölkerung - Migrationshintergrund - Kinder\",\n    \"package_id\": \"dd3347aa-73cc-444e-bafa-6530272a7146\",\n    \"package_name\": \"indikatorenatlas-bevoelkerung-migrationshintergrund-kinder-83r65mct\",\n    \"resource_id\": \"ea396629-1814-4465-b711-3658c213dc4a\",\n    \"resource_name\": \"Migrationshintergrund - Kinder\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Anteil der Hauptwohnsitzbevölkerung mit Migrationshintergrund der entsprechenden Kategorie an der Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bevölkerung\",\n      \"Indikatorenatlas\",\n      \"Kinder\",\n      \"Migrationshintergrund\"\n    ],\n    \"groups\": [\n      \"soci\"\n    ],\n    \"row_count\": 4940,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"Indikatorwert\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          56.0,\n          45.0,\n          41.7,\n          48.1,\n          47.3\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 21.9,\n          \"max\": 81.0,\n          \"mean\": 47.6724,\n          \"median\": 46.7\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"109530\",\n          \"941\",\n          \"2020\",\n          \"2117\",\n          \"3492\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 153.0,\n          \"max\": 158971.0,\n          \"mean\": 4187.526,\n          \"median\": 1502.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"195719\",\n          \"2091\",\n          \"4842\",\n          \"4402\",\n          \"7379\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 442.0,\n          \"max\": 245160.0,\n          \"mean\": 8550.895,\n          \"median\": 3083.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          2025,\n          2024,\n          2023,\n          2022,\n          2021\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2006.0,\n          \"max\": 2025.0,\n          \"mean\": 2015.64,\n          \"median\": 2016.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Auspragung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"deutsch\",\n          \"deutsch bis 2 Jahre\",\n          \"deutsch und nichtdeutsch\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Hauptwohnsitzbevölkerung (mit Migrationshintergrund) (deutsch) (bis 17 Jahre)\",\n          \"Hauptwohnsitzbevölkerung (mit Migrationshintergrund) (deutsch) (bis 2 Jahre)\",\n          \"Hauptwohnsitzbevölkerung (mit Migrationshintergrund) (deutsch und nichtdeutsch) (bis 17 Jahre)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Hauptwohnsitzbevölkerung (deutsch) (bis 17 Jahre)\",\n          \"Hauptwohnsitzbevölkerung (deutsch) (bis 2 Jahre)\",\n          \"Hauptwohnsitzbevölkerung (deutsch und nichtdeutsch) (bis 17 Jahre)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Indikator\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Migrationshintergrund Kinder\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Raumbezug\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Stadt München\",\n          \"01 Altstadt - Lehel\",\n          \"02 Ludwigsvorstadt - Isarvorstadt\",\n          \"03 Maxvorstadt\",\n          \"04 Schwabing - West\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Indikatorwert\",\n      \"Basiswert 1\",\n      \"Basiswert 2\"\n    ],\n    \"category_columns\": [\n      \"Auspragung\",\n      \"Name Basiswert 1\",\n      \"Name Basiswert 2\",\n      \"Indikator\"\n    ],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"Auspragung\",\n      \"y\": \"Indikatorwert\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Bevölkerung - Migrationshintergrund - Kinder\", \"Migrationshintergrund - Kinder\")\nsummary = TextContent(\"Migrationshintergrund - Kinder belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Auspragung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"4,940\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Auspragung\",\"Name Basiswert 1\",\"Name Basiswert 2\",\"Indikator\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [56.0,45.0,41.7])\nchart = BarChart([\"deutsch\",\"deutsch bis 2 Jahre\",\"deutsch und nichtdeutsch\"], [series], \"grouped\", \"Auspragung\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of bt_nummer in Bezirksteil.",
+  "query_result": {
+    "dataset_title": "Bezirksteil",
+    "package_id": "cef955ef-7242-4e5d-bb5f-697df6bbe224",
+    "package_name": "vablock_bezirksteil_opendata",
+    "resource_id": "cdc486d0-221d-4c6d-80a8-4e3f3f2ec38c",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtbezirksteilen der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 110,
+    "sampled_rows": 110,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "bt_nummer",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 0,
+        "examples": [
+          25.2,
+          12.8,
+          5.3,
+          4.2,
+          2.8
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 1.1,
+          "max": 25.2,
+          "mean": 12.0991,
+          "median": 12.55
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "flaeche_qm",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 0,
+        "examples": [
+          3417644.26132839,
+          522800.17408729,
+          1027501.41873557,
+          2280929.38432131,
+          1192871.78919677
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 193377.6628,
+          "max": 16404853.4421,
+          "mean": 2880508.299,
+          "median": 2060580.0274
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 110,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((685647.2678007155 5335476.679298313, 685606.4248007146 5335490.828898317, 685522.6544007128 5335519.84769832, 685458.3931007117 5335535.582098324, 685",
+          "POLYGON ((692373.4541008528 5340428.062997909, 692246.80980085 5340423.647897916, 692171.8246008484 5340420.718997922, 692075.0411008464 5340412.897897928, 6920",
+          "POLYGON ((694870.8260009103 5334883.713897745, 694747.0426009075 5334859.362997756, 694685.4777009061 5334847.321797761, 694630.9749009048 5334836.822397764, 69",
+          "POLYGON ((691821.8368008411 5339259.124697947, 691767.2908008397 5339263.317497951, 691722.8645008388 5339268.3197979545, 691549.2958008351 5339287.898797965, 6",
+          "POLYGON ((689722.840600797 5335359.370198087, 689570.3854007939 5335405.352398097, 689566.4565007938 5335391.821798096, 689575.222000794 5335382.437398097, 6895"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "bt_nummer",
+      "flaeche_qm"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "bt_nummer"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bezirksteil\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include bt_nummer, flaeche_qm.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"110\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"bt_nummer\",\"flaeche_qm\",\"shape\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"float64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"bt_nummer\", [25.2,12.8,5.3,4.2,2.8])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"bt_nummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of bt_nummer in Bezirksteil.\",\n  \"query_result\": {\n    \"dataset_title\": \"Bezirksteil\",\n    \"package_id\": \"cef955ef-7242-4e5d-bb5f-697df6bbe224\",\n    \"package_name\": \"vablock_bezirksteil_opendata\",\n    \"resource_id\": \"cdc486d0-221d-4c6d-80a8-4e3f3f2ec38c\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtbezirksteilen der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Planungsunterlagen\",\n      \"opendata\"\n    ],\n    \"groups\": [],\n    \"row_count\": 110,\n    \"sampled_rows\": 110,\n    \"column_count\": 4,\n    \"columns\": [\n      {\n        \"name\": \"bt_nummer\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 110,\n        \"null_count\": 0,\n        \"examples\": [\n          25.2,\n          12.8,\n          5.3,\n          4.2,\n          2.8\n        ],\n        \"numeric\": {\n          \"count\": 110.0,\n          \"min\": 1.1,\n          \"max\": 25.2,\n          \"mean\": 12.0991,\n          \"median\": 12.55\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"flaeche_qm\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 110,\n        \"null_count\": 0,\n        \"examples\": [\n          3417644.26132839,\n          522800.17408729,\n          1027501.41873557,\n          2280929.38432131,\n          1192871.78919677\n        ],\n        \"numeric\": {\n          \"count\": 110.0,\n          \"min\": 193377.6628,\n          \"max\": 16404853.4421,\n          \"mean\": 2880508.299,\n          \"median\": 2060580.0274\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 110,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POLYGON ((685647.2678007155 5335476.679298313, 685606.4248007146 5335490.828898317, 685522.6544007128 5335519.84769832, 685458.3931007117 5335535.582098324, 685\",\n          \"POLYGON ((692373.4541008528 5340428.062997909, 692246.80980085 5340423.647897916, 692171.8246008484 5340420.718997922, 692075.0411008464 5340412.897897928, 6920\",\n          \"POLYGON ((694870.8260009103 5334883.713897745, 694747.0426009075 5334859.362997756, 694685.4777009061 5334847.321797761, 694630.9749009048 5334836.822397764, 69\",\n          \"POLYGON ((691821.8368008411 5339259.124697947, 691767.2908008397 5339263.317497951, 691722.8645008388 5339268.3197979545, 691549.2958008351 5339287.898797965, 6\",\n          \"POLYGON ((689722.840600797 5335359.370198087, 689570.3854007939 5335405.352398097, 689566.4565007938 5335391.821798096, 689575.222000794 5335382.437398097, 6895\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"bt_nummer\",\n      \"flaeche_qm\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"bt_nummer\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Bezirksteil\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include bt_nummer, flaeche_qm.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"110\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"bt_nummer\",\"flaeche_qm\",\"shape\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"float64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"bt_nummer\", [25.2,12.8,5.3,4.2,2.8])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"bt_nummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

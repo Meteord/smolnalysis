@@ -1,0 +1,333 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of bestand2022_m in Tierbestandsliste Tierpark Hellabrunn.",
+  "query_result": {
+    "dataset_title": "Tierbestandsliste Tierpark Hellabrunn",
+    "package_id": "9818ae8c-b902-428b-91a2-9cba54aa6e22",
+    "package_name": "tierbestandsliste-tierpark-hellabrunn",
+    "resource_id": "28465686-d73a-4bec-8bf0-9b415be7f96d",
+    "resource_name": "Veränderungen im Tierbestand 2023",
+    "resource_format": "csv",
+    "description": "Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z",
+    "organization": "Münchener Tierpark Hellabrunn AG",
+    "tags": [
+      "Tierpark",
+      "Zoo"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 190,
+    "sampled_rows": 190,
+    "column_count": 23,
+    "columns": [
+      {
+        "name": "bestand2022_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "2",
+          "1",
+          "7",
+          "3",
+          "4"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 48.0,
+          "mean": 2.4586,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bestand2022_w",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "5",
+          "2",
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 48.0,
+          "mean": 3.0166,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bestand2022_u",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "2",
+          "1",
+          "4",
+          "X"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 20.0,
+          "mean": 0.5525,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zugang_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "0",
+          "3",
+          "2",
+          "X"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 0.1547,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zugang_w",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "1",
+          "4",
+          "10",
+          "2"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 10.0,
+          "mean": 0.1878,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zugang_u",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "X"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "geboren_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "2",
+          "1",
+          "6",
+          "7"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 45.0,
+          "mean": 0.6243,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "geboren_w",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "2",
+          "3",
+          "0",
+          "1",
+          "30"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 38.0,
+          "mean": 0.7459,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "geboren_u",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "1",
+          "9",
+          "5",
+          "150"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 150.0,
+          "mean": 2.0829,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gestorben_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "0",
+          "4",
+          "5",
+          "45"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 45.0,
+          "mean": 0.779,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gestorben_w",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "2",
+          "1",
+          "0",
+          "20",
+          "30"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 30.0,
+          "mean": 0.5856,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gestorben_u",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "9",
+          "5",
+          "1",
+          "150"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 150.0,
+          "mean": 1.8122,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "bestand2022_m",
+      "bestand2022_w",
+      "bestand2022_u",
+      "zugang_m"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "bestand2022_m"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 10,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Tierbestandsliste Tierpark Hellabrunn\", \"Veränderungen im Tierbestand 2023\")\nsummary = TextContent(\"Veränderungen im Tierbestand 2023 belongs to Münchener Tierpark Hellabrunn AG. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include bestand2022_m, bestand2022_w, bestand2022_u.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"190\")\nm2 = ListItem(\"Columns\", \"23\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"bestand2022_m\",\"bestand2022_w\",\"bestand2022_u\",\"zugang_m\",\"zugang_w\",\"zugang_u\",\"geboren_m\",\"geboren_w\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"bestand2022_m\", [2.0,1.0,7.0,3.0,4.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"bestand2022_m\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 10 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of bestand2022_m in Tierbestandsliste Tierpark Hellabrunn.\",\n  \"query_result\": {\n    \"dataset_title\": \"Tierbestandsliste Tierpark Hellabrunn\",\n    \"package_id\": \"9818ae8c-b902-428b-91a2-9cba54aa6e22\",\n    \"package_name\": \"tierbestandsliste-tierpark-hellabrunn\",\n    \"resource_id\": \"28465686-d73a-4bec-8bf0-9b415be7f96d\",\n    \"resource_name\": \"Veränderungen im Tierbestand 2023\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z\",\n    \"organization\": \"Münchener Tierpark Hellabrunn AG\",\n    \"tags\": [\n      \"Tierpark\",\n      \"Zoo\"\n    ],\n    \"groups\": [\n      \"educ\"\n    ],\n    \"row_count\": 190,\n    \"sampled_rows\": 190,\n    \"column_count\": 23,\n    \"columns\": [\n      {\n        \"name\": \"bestand2022_m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2\",\n          \"1\",\n          \"7\",\n          \"3\",\n          \"4\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 48.0,\n          \"mean\": 2.4586,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bestand2022_w\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"6\",\n          \"5\",\n          \"2\",\n          \"1\",\n          \"0\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 48.0,\n          \"mean\": 3.0166,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bestand2022_u\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"0\",\n          \"2\",\n          \"1\",\n          \"4\",\n          \"X\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 20.0,\n          \"mean\": 0.5525,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zugang_m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1\",\n          \"0\",\n          \"3\",\n          \"2\",\n          \"X\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 3.0,\n          \"mean\": 0.1547,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zugang_w\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"0\",\n          \"1\",\n          \"4\",\n          \"10\",\n          \"2\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 10.0,\n          \"mean\": 0.1878,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zugang_u\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"0\",\n          \"X\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"geboren_m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"0\",\n          \"2\",\n          \"1\",\n          \"6\",\n          \"7\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 45.0,\n          \"mean\": 0.6243,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"geboren_w\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2\",\n          \"3\",\n          \"0\",\n          \"1\",\n          \"30\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 38.0,\n          \"mean\": 0.7459,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"geboren_u\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"0\",\n          \"1\",\n          \"9\",\n          \"5\",\n          \"150\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 150.0,\n          \"mean\": 2.0829,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"gestorben_m\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1\",\n          \"0\",\n          \"4\",\n          \"5\",\n          \"45\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 45.0,\n          \"mean\": 0.779,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"gestorben_w\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2\",\n          \"1\",\n          \"0\",\n          \"20\",\n          \"30\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 30.0,\n          \"mean\": 0.5856,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"gestorben_u\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 190,\n        \"null_count\": 0,\n        \"examples\": [\n          \"0\",\n          \"9\",\n          \"5\",\n          \"1\",\n          \"150\"\n        ],\n        \"numeric\": {\n          \"count\": 181.0,\n          \"min\": 0.0,\n          \"max\": 150.0,\n          \"mean\": 1.8122,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"bestand2022_m\",\n      \"bestand2022_w\",\n      \"bestand2022_u\",\n      \"zugang_m\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"bestand2022_m\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Tierbestandsliste Tierpark Hellabrunn\", \"Veränderungen im Tierbestand 2023\")\nsummary = TextContent(\"Veränderungen im Tierbestand 2023 belongs to Münchener Tierpark Hellabrunn AG. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include bestand2022_m, bestand2022_w, bestand2022_u.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"190\")\nm2 = ListItem(\"Columns\", \"23\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"bestand2022_m\",\"bestand2022_w\",\"bestand2022_u\",\"zugang_m\",\"zugang_w\",\"zugang_u\",\"geboren_m\",\"geboren_w\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"bestand2022_m\", [2.0,1.0,7.0,3.0,4.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"bestand2022_m\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 10 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

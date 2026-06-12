@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "openui": {
+      "source": "thesysdev/openui",
+      "sourceType": "github",
+      "skillPath": "skills/openui/SKILL.md",
+      "computedHash": "094ca9fb2701f1b4e879e59c74033aaefcc295ecb1ae1c7fd9717b8c23a1b78a"
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Gewerbe and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Gewerbe",
+    "package_id": "92d4a8dc-bc7f-487c-a624-903033abe355",
+    "package_name": "monatszahlen-gewerbe",
+    "resource_id": "208435d3-e3a9-46a2-b2ed-69218ee6d7c3",
+    "resource_name": "Monatszahlen Gewerbe",
+    "resource_format": "csv",
+    "description": "__Datensatz wird nicht mehr aktualisiert__, Gewerbean- und -abmeldungen jetzt unter [Monatszahlen Wirtschaft.](https://opendata.muenchen.de/dataset/monatszahlen-wirtschaft) Der Datensatz __Monatszahlen Gewerbe__ beinhaltet das Thema * An-/ Abmeldungen Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 424,
+    "sampled_rows": 424,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          201708,
+          201707,
+          201706,
+          201705,
+          201704
+        ],
+        "numeric": {
+          "count": 424.0,
+          "min": 200001.0,
+          "max": 201708.0,
+          "mean": 200840.3868,
+          "median": 200810.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          1134,
+          1080,
+          1061,
+          1097,
+          1129
+        ],
+        "numeric": {
+          "count": 424.0,
+          "min": 818.0,
+          "max": 2701.0,
+          "mean": 1557.0708,
+          "median": 1504.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          1218,
+          1215,
+          1223,
+          1211,
+          1221
+        ],
+        "numeric": {
+          "count": 424.0,
+          "min": 950.0,
+          "max": 2111.0,
+          "mean": 1562.2099,
+          "median": 1487.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 422,
+        "null_count": 2,
+        "examples": [
+          "5",
+          "1,79",
+          "-3,28",
+          "-2,83",
+          "-17,95"
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": -25.0,
+          "max": 46.0,
+          "mean": -1.0,
+          "median": -5.5
+        },
+        "null_rate": 0.0047
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 400,
+        "null_count": 24,
+        "examples": [
+          1098.0,
+          1079.0,
+          1154.0,
+          959.0,
+          1214.0
+        ],
+        "numeric": {
+          "count": 400.0,
+          "min": 818.0,
+          "max": 2701.0,
+          "mean": 1570.5025,
+          "median": 1521.5
+        },
+        "null_rate": 0.0566
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 400,
+        "null_count": 24,
+        "examples": [
+          "3,28",
+          "0,09",
+          "-8,06",
+          "14,39",
+          "-7"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": -36.0,
+          "max": 0.0,
+          "mean": -11.25,
+          "median": -4.5
+        },
+        "null_rate": 0.0566
+      },
+      {
+        "name": "JAHR",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          2017,
+          2016,
+          2015,
+          2014,
+          2013
+        ],
+        "numeric": {
+          "count": 424.0,
+          "min": 2000.0,
+          "max": 2017.0,
+          "mean": 2008.3396,
+          "median": 2008.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          "Gewerbeabmeldungen",
+          "Gewerbeanmeldungen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          "An-/ Abmeldungen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "ZWOELF_MONATE_MITTELWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "ZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Gewerbe\", \"Monatszahlen Gewerbe\")\nsummary = TextContent(\"Monatszahlen Gewerbe belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, ZWOELF_MONATE_MITTELWERT. Categorical fields include AUSPRAEGUNG, ZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"424\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"ZWOELF_MONATE_MITTELWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VORJAHRESWERT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"object\",\"float64\",\"object\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"2\",\"24\",\"24\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [201708.0,201707.0])\nchart = BarChart([\"Gewerbeabmeldungen\",\"Gewerbeanmeldungen\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Monatszahlen Gewerbe and compare MONAT by AUSPRAEGUNG.\",\n  \"query_result\": {\n    \"dataset_title\": \"Monatszahlen Gewerbe\",\n    \"package_id\": \"92d4a8dc-bc7f-487c-a624-903033abe355\",\n    \"package_name\": \"monatszahlen-gewerbe\",\n    \"resource_id\": \"208435d3-e3a9-46a2-b2ed-69218ee6d7c3\",\n    \"resource_name\": \"Monatszahlen Gewerbe\",\n    \"resource_format\": \"csv\",\n    \"description\": \"__Datensatz wird nicht mehr aktualisiert__, Gewerbean- und -abmeldungen jetzt unter [Monatszahlen Wirtschaft.](https://opendata.muenchen.de/dataset/monatszahlen-wirtschaft) Der Datensatz __Monatszahlen Gewerbe__ beinhaltet das Thema * An-/ Abmeldungen Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Monatszahlen\"\n    ],\n    \"groups\": [\n      \"econ\"\n    ],\n    \"row_count\": 424,\n    \"sampled_rows\": 424,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"MONAT\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 424,\n        \"null_count\": 0,\n        \"examples\": [\n          201708,\n          201707,\n          201706,\n          201705,\n          201704\n        ],\n        \"numeric\": {\n          \"count\": 424.0,\n          \"min\": 200001.0,\n          \"max\": 201708.0,\n          \"mean\": 200840.3868,\n          \"median\": 200810.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"WERT\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 424,\n        \"null_count\": 0,\n        \"examples\": [\n          1134,\n          1080,\n          1061,\n          1097,\n          1129\n        ],\n        \"numeric\": {\n          \"count\": 424.0,\n          \"min\": 818.0,\n          \"max\": 2701.0,\n          \"mean\": 1557.0708,\n          \"median\": 1504.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ZWOELF_MONATE_MITTELWERT\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 424,\n        \"null_count\": 0,\n        \"examples\": [\n          1218,\n          1215,\n          1223,\n          1211,\n          1221\n        ],\n        \"numeric\": {\n          \"count\": 424.0,\n          \"min\": 950.0,\n          \"max\": 2111.0,\n          \"mean\": 1562.2099,\n          \"median\": 1487.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"VERAEND_VORMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 422,\n        \"null_count\": 2,\n        \"examples\": [\n          \"5\",\n          \"1,79\",\n          \"-3,28\",\n          \"-2,83\",\n          \"-17,95\"\n        ],\n        \"numeric\": {\n          \"count\": 6.0,\n          \"min\": -25.0,\n          \"max\": 46.0,\n          \"mean\": -1.0,\n          \"median\": -5.5\n        },\n        \"null_rate\": 0.0047\n      },\n      {\n        \"name\": \"VORJAHRESWERT\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 400,\n        \"null_count\": 24,\n        \"examples\": [\n          1098.0,\n          1079.0,\n          1154.0,\n          959.0,\n          1214.0\n        ],\n        \"numeric\": {\n          \"count\": 400.0,\n          \"min\": 818.0,\n          \"max\": 2701.0,\n          \"mean\": 1570.5025,\n          \"median\": 1521.5\n        },\n        \"null_rate\": 0.0566\n      },\n      {\n        \"name\": \"VERAEND_VORJAHRESMONAT_PROZENT\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 400,\n        \"null_count\": 24,\n        \"examples\": [\n          \"3,28\",\n          \"0,09\",\n          \"-8,06\",\n          \"14,39\",\n          \"-7\"\n        ],\n        \"numeric\": {\n          \"count\": 4.0,\n          \"min\": -36.0,\n          \"max\": 0.0,\n          \"mean\": -11.25,\n          \"median\": -4.5\n        },\n        \"null_rate\": 0.0566\n      },\n      {\n        \"name\": \"JAHR\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 424,\n        \"null_count\": 0,\n        \"examples\": [\n          2017,\n          2016,\n          2015,\n          2014,\n          2013\n        ],\n        \"numeric\": {\n          \"count\": 424.0,\n          \"min\": 2000.0,\n          \"max\": 2017.0,\n          \"mean\": 2008.3396,\n          \"median\": 2008.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"AUSPRAEGUNG\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 424,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Gewerbeabmeldungen\",\n          \"Gewerbeanmeldungen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"ZAHL\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 424,\n        \"null_count\": 0,\n        \"examples\": [\n          \"An-/ Abmeldungen\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"MONAT\",\n      \"WERT\",\n      \"ZWOELF_MONATE_MITTELWERT\",\n      \"VERAEND_VORMONAT_PROZENT\"\n    ],\n    \"category_columns\": [\n      \"AUSPRAEGUNG\",\n      \"ZAHL\"\n    ],\n    \"time_columns\": [\n      \"JAHR\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"AUSPRAEGUNG\",\n      \"y\": \"MONAT\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Monatszahlen Gewerbe\", \"Monatszahlen Gewerbe\")\nsummary = TextContent(\"Monatszahlen Gewerbe belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include MONAT, WERT, ZWOELF_MONATE_MITTELWERT. Categorical fields include AUSPRAEGUNG, ZAHL.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"424\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"MONAT\",\"WERT\",\"ZWOELF_MONATE_MITTELWERT\",\"VERAEND_VORMONAT_PROZENT\",\"VORJAHRESWERT\",\"VERAEND_VORJAHRESMONAT_PROZENT\",\"JAHR\",\"AUSPRAEGUNG\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"object\",\"float64\",\"object\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"2\",\"24\",\"24\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"MONAT\", [201708.0,201707.0])\nchart = BarChart([\"Gewerbeabmeldungen\",\"Gewerbeanmeldungen\"], [series], \"grouped\", \"AUSPRAEGUNG\", \"MONAT\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

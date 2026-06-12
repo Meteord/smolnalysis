@@ -1,0 +1,224 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Grundschüler*innen - Grundschüler*innen and compare Indikatorwert by Indikator.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Grundschüler*innen - Grundschüler*innen",
+    "package_id": "2a89ad4b-dfe9-499e-b106-29bc5ac0cad9",
+    "package_name": "indikatorenatlas-grundschueler-innen-grundschueler-innen",
+    "resource_id": "ca81526f-c7f5-493c-8f72-65dd422d84bf",
+    "resource_name": "Grundschüler*innen",
+    "resource_format": "csv",
+    "description": "Anteil der Grundschüler\\*innen in der ausgewählten räumlichen Einheit (z. B. Stadtbezirk) an allen Grundschüler\\*innen in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Indikatorenatlas",
+      "Schule"
+    ],
+    "groups": [],
+    "row_count": 468,
+    "sampled_rows": 468,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          100.0,
+          0.8,
+          2.4,
+          1.7,
+          3.8
+        ],
+        "numeric": {
+          "count": 468.0,
+          "min": 0.8,
+          "max": 100.0,
+          "mean": 7.6925,
+          "median": 3.7
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "47113",
+          "385",
+          "1122",
+          "1117",
+          "798"
+        ],
+        "numeric": {
+          "count": 468.0,
+          "min": 315.0,
+          "max": 47113.0,
+          "mean": 3136.906,
+          "median": 1459.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "47113",
+          "46652",
+          "45826",
+          "44229",
+          "43680"
+        ],
+        "numeric": {
+          "count": 468.0,
+          "min": 35852.0,
+          "max": 47113.0,
+          "mean": 40779.7778,
+          "median": 41243.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 468.0,
+          "min": 2007.0,
+          "max": 2024.0,
+          "mean": 2015.5,
+          "median": 2015.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "Grundschüler*innen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "Grundschüler*innen (ausgewählte räumliche Einheit)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "Grundschüler*innen (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Indikator",
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Indikator",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Grundschüler*innen - Grundschüler*innen\", \"Grundschüler*innen\")\nsummary = TextContent(\"Grundschüler*innen belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Indikator, Auspragung, Name Basiswert 1.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"468\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Indikator\",\"Auspragung\",\"Raumbezug\",\"Name Basiswert 1\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"string\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [100.0])\nchart = BarChart([\"Grundschüler*innen\"], [series], \"grouped\", \"Indikator\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Indikatorenatlas: Grundschüler*innen - Grundschüler*innen and compare Indikatorwert by Indikator.\",\n  \"query_result\": {\n    \"dataset_title\": \"Indikatorenatlas: Grundschüler*innen - Grundschüler*innen\",\n    \"package_id\": \"2a89ad4b-dfe9-499e-b106-29bc5ac0cad9\",\n    \"package_name\": \"indikatorenatlas-grundschueler-innen-grundschueler-innen\",\n    \"resource_id\": \"ca81526f-c7f5-493c-8f72-65dd422d84bf\",\n    \"resource_name\": \"Grundschüler*innen\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Anteil der Grundschüler\\\\*innen in der ausgewählten räumlichen Einheit (z. B. Stadtbezirk) an allen Grundschüler\\\\*innen in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Indikatorenatlas\",\n      \"Schule\"\n    ],\n    \"groups\": [],\n    \"row_count\": 468,\n    \"sampled_rows\": 468,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"Indikatorwert\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          100.0,\n          0.8,\n          2.4,\n          1.7,\n          3.8\n        ],\n        \"numeric\": {\n          \"count\": 468.0,\n          \"min\": 0.8,\n          \"max\": 100.0,\n          \"mean\": 7.6925,\n          \"median\": 3.7\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          \"47113\",\n          \"385\",\n          \"1122\",\n          \"1117\",\n          \"798\"\n        ],\n        \"numeric\": {\n          \"count\": 468.0,\n          \"min\": 315.0,\n          \"max\": 47113.0,\n          \"mean\": 3136.906,\n          \"median\": 1459.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          \"47113\",\n          \"46652\",\n          \"45826\",\n          \"44229\",\n          \"43680\"\n        ],\n        \"numeric\": {\n          \"count\": 468.0,\n          \"min\": 35852.0,\n          \"max\": 47113.0,\n          \"mean\": 40779.7778,\n          \"median\": 41243.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          2024,\n          2023,\n          2022,\n          2021,\n          2020\n        ],\n        \"numeric\": {\n          \"count\": 468.0,\n          \"min\": 2007.0,\n          \"max\": 2024.0,\n          \"mean\": 2015.5,\n          \"median\": 2015.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Indikator\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Grundschüler*innen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Auspragung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          \"insgesamt\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Raumbezug\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Stadt München\",\n          \"01 Altstadt - Lehel\",\n          \"02 Ludwigsvorstadt - Isarvorstadt\",\n          \"03 Maxvorstadt\",\n          \"04 Schwabing - West\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Grundschüler*innen (ausgewählte räumliche Einheit)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 468,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Grundschüler*innen (insgesamt)\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Indikatorwert\",\n      \"Basiswert 1\",\n      \"Basiswert 2\"\n    ],\n    \"category_columns\": [\n      \"Indikator\",\n      \"Auspragung\",\n      \"Name Basiswert 1\",\n      \"Name Basiswert 2\"\n    ],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"Indikator\",\n      \"y\": \"Indikatorwert\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Grundschüler*innen - Grundschüler*innen\", \"Grundschüler*innen\")\nsummary = TextContent(\"Grundschüler*innen belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Indikator, Auspragung, Name Basiswert 1.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"468\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Indikator\",\"Auspragung\",\"Raumbezug\",\"Name Basiswert 1\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"string\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [100.0])\nchart = BarChart([\"Grundschüler*innen\"], [series], \"grouped\", \"Indikator\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

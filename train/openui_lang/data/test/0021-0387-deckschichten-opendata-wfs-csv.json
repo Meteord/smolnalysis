@@ -1,0 +1,169 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Deckschichten (Opendata) and compare area by mergel_bedeutung.",
+  "query_result": {
+    "dataset_title": "Deckschichten (Opendata)",
+    "package_id": "c9c72aef-038d-44a9-a7c4-5ebfcb374592",
+    "package_name": "deckschichten_opendata",
+    "resource_id": "dcfbc223-8a55-466b-ad53-676e60e78465",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Die Deckschichten bilden einen Teil der Grundwasserüberdeckung. Sie bestehen im Stadtgebiet von München aus tonigen, schluffigen und sandigen Bestandteilen. Die Deckschichten sind nicht im gesamten Stadtgebiet verbreitet, stehen oberflächlich oder oberflächennah an und können in stark wechselnden Mächtigkeiten vorkommen.",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Deckschichten",
+      "Digitaler Zwilling München",
+      "Umweltschutz",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 123,
+    "sampled_rows": 123,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "area",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 0,
+        "examples": [
+          78290.609,
+          40519.242,
+          22972.596,
+          73990.789,
+          13771.346
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 0.414,
+          "max": 3553982.5,
+          "mean": 123421.6017,
+          "median": 15834.228
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "perimeter",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 0,
+        "examples": [
+          1681.865,
+          1347.87,
+          571.846,
+          1104.746,
+          532.884
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 4.082,
+          "max": 17123.506,
+          "mean": 1291.6958,
+          "median": 574.622
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "mergel",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 0,
+        "examples": [
+          2,
+          1,
+          0,
+          3,
+          4
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 0.0,
+          "max": 4.0,
+          "mean": 1.6016,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "mergel_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 116,
+        "null_count": 7,
+        "examples": [
+          "Tertiärer Mergel überragt den oberen Grundwasserspiegel",
+          "Tertiärer Sand überragt den oberen Grundwasserspiegel",
+          "Tertiärer Mergel deckt das obere GW-Stockwerk",
+          "Lehmüberdeckung im Bereich der Aubinger Lohe"
+        ],
+        "null_rate": 0.0569
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 123,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOLYGON (((688091.7328007638 5333980.081698185, 688091.5894007639 5333970.071398184, 688092.2803007638 5333960.113298184, 688093.6337007638 5333950.2005981",
+          "MULTIPOLYGON (((688549.0060007732 5334087.209198158, 688532.1108007728 5334087.340898161, 688530.8607007727 5334084.50859816, 688528.3544007726 5334082.69469816",
+          "MULTIPOLYGON (((689991.782700803 5334104.3933980735, 689990.8443008029 5334094.600698073, 689991.3800008029 5334084.517098074, 689992.6890008029 5334074.6174980",
+          "MULTIPOLYGON (((695369.2509009195 5343765.221597689, 695374.9155009198 5343773.528997689, 695377.8427009197 5343783.04809769, 695378.5547009199 5343793.02339768",
+          "MULTIPOLYGON (((695192.8411009155 5343596.211197702, 695182.8435009153 5343596.131097702, 695173.015100916 5343594.525097705, 695164.4212009149 5343589.54869770"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "area",
+      "perimeter",
+      "mergel"
+    ],
+    "category_columns": [
+      "mergel_bedeutung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "mergel_bedeutung",
+      "y": "area"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Deckschichten (Opendata)\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Referat für Klima- und Umweltschutz der Landeshauptstadt München. It exposes 5 profiled columns for OpenUI rendering. Numeric fields include area, perimeter, mergel. Categorical fields include mergel_bedeutung.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"123\")\nm2 = ListItem(\"Columns\", \"6\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"area\",\"perimeter\",\"mergel\",\"mergel_bedeutung\",\"shape\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"category\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"float64\",\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"7\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"area\", [78290.609,40519.242,22972.596,73990.789])\nchart = BarChart([\"Tertiärer Mergel überragt den oberen Grundwasserspiegel\",\"Tertiärer Sand überragt den oberen Grundwasserspiegel\",\"Tertiärer Mergel deckt das obere GW-Stockwerk\",\"Lehmüberdeckung im Bereich der Aubinger Lohe\"], [series], \"grouped\", \"mergel_bedeutung\", \"area\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Deckschichten (Opendata) and compare area by mergel_bedeutung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Deckschichten (Opendata)\",\n    \"package_id\": \"c9c72aef-038d-44a9-a7c4-5ebfcb374592\",\n    \"package_name\": \"deckschichten_opendata\",\n    \"resource_id\": \"dcfbc223-8a55-466b-ad53-676e60e78465\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Die Deckschichten bilden einen Teil der Grundwasserüberdeckung. Sie bestehen im Stadtgebiet von München aus tonigen, schluffigen und sandigen Bestandteilen. Die Deckschichten sind nicht im gesamten Stadtgebiet verbreitet, stehen oberflächlich oder oberflächennah an und können in stark wechselnden Mächtigkeiten vorkommen.\",\n    \"organization\": \"Referat für Klima- und Umweltschutz der Landeshauptstadt München\",\n    \"tags\": [\n      \"Deckschichten\",\n      \"Digitaler Zwilling München\",\n      \"Umweltschutz\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 123,\n    \"sampled_rows\": 123,\n    \"column_count\": 6,\n    \"columns\": [\n      {\n        \"name\": \"area\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 123,\n        \"null_count\": 0,\n        \"examples\": [\n          78290.609,\n          40519.242,\n          22972.596,\n          73990.789,\n          13771.346\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 0.414,\n          \"max\": 3553982.5,\n          \"mean\": 123421.6017,\n          \"median\": 15834.228\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"perimeter\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 123,\n        \"null_count\": 0,\n        \"examples\": [\n          1681.865,\n          1347.87,\n          571.846,\n          1104.746,\n          532.884\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 4.082,\n          \"max\": 17123.506,\n          \"mean\": 1291.6958,\n          \"median\": 574.622\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"mergel\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 123,\n        \"null_count\": 0,\n        \"examples\": [\n          2,\n          1,\n          0,\n          3,\n          4\n        ],\n        \"numeric\": {\n          \"count\": 123.0,\n          \"min\": 0.0,\n          \"max\": 4.0,\n          \"mean\": 1.6016,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"mergel_bedeutung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 116,\n        \"null_count\": 7,\n        \"examples\": [\n          \"Tertiärer Mergel überragt den oberen Grundwasserspiegel\",\n          \"Tertiärer Sand überragt den oberen Grundwasserspiegel\",\n          \"Tertiärer Mergel deckt das obere GW-Stockwerk\",\n          \"Lehmüberdeckung im Bereich der Aubinger Lohe\"\n        ],\n        \"null_rate\": 0.0569\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 123,\n        \"null_count\": 0,\n        \"examples\": [\n          \"MULTIPOLYGON (((688091.7328007638 5333980.081698185, 688091.5894007639 5333970.071398184, 688092.2803007638 5333960.113298184, 688093.6337007638 5333950.2005981\",\n          \"MULTIPOLYGON (((688549.0060007732 5334087.209198158, 688532.1108007728 5334087.340898161, 688530.8607007727 5334084.50859816, 688528.3544007726 5334082.69469816\",\n          \"MULTIPOLYGON (((689991.782700803 5334104.3933980735, 689990.8443008029 5334094.600698073, 689991.3800008029 5334084.517098074, 689992.6890008029 5334074.6174980\",\n          \"MULTIPOLYGON (((695369.2509009195 5343765.221597689, 695374.9155009198 5343773.528997689, 695377.8427009197 5343783.04809769, 695378.5547009199 5343793.02339768\",\n          \"MULTIPOLYGON (((695192.8411009155 5343596.211197702, 695182.8435009153 5343596.131097702, 695173.015100916 5343594.525097705, 695164.4212009149 5343589.54869770\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"area\",\n      \"perimeter\",\n      \"mergel\"\n    ],\n    \"category_columns\": [\n      \"mergel_bedeutung\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"mergel_bedeutung\",\n      \"y\": \"area\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Deckschichten (Opendata)\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Referat für Klima- und Umweltschutz der Landeshauptstadt München. It exposes 5 profiled columns for OpenUI rendering. Numeric fields include area, perimeter, mergel. Categorical fields include mergel_bedeutung.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"123\")\nm2 = ListItem(\"Columns\", \"6\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"area\",\"perimeter\",\"mergel\",\"mergel_bedeutung\",\"shape\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"category\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"float64\",\"int64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"7\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"area\", [78290.609,40519.242,22972.596,73990.789])\nchart = BarChart([\"Tertiärer Mergel überragt den oberen Grundwasserspiegel\",\"Tertiärer Sand überragt den oberen Grundwasserspiegel\",\"Tertiärer Mergel deckt das obere GW-Stockwerk\",\"Lehmüberdeckung im Bereich der Aubinger Lohe\"], [series], \"grouped\", \"mergel_bedeutung\", \"area\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

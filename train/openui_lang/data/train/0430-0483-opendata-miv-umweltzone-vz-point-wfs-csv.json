@@ -1,0 +1,120 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of drehung in Umweltzone - Verkehrszeichen.",
+  "query_result": {
+    "dataset_title": "Umweltzone - Verkehrszeichen",
+    "package_id": "01e601b2-932d-4450-a389-78e87412cfe5",
+    "package_name": "opendata_miv_umweltzone_vz_point",
+    "resource_id": "43803673-cae8-4b90-830e-0bcbe4f0cae9",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiterten Umweltzone eingeführt. Bei den Transferflächen handelt es sich um Fahrbeziehungen, die aufgrund fehlender Alternativstrecken trotz ihrer Lage in der Umweltzone für Fahrzeuge ohne die erforderlichen Voraussetzungen freigegeben sind. Die weiteren Bestimmungen der Allgemeinverfügung sind zu beachten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 188,
+    "sampled_rows": 188,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "drehung",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 187,
+        "null_count": 1,
+        "examples": [
+          210.65094991,
+          217.50410155,
+          296.39860024,
+          291.33382357,
+          353.81476051
+        ],
+        "numeric": {
+          "count": 187.0,
+          "min": 1.1494,
+          "max": 357.7168,
+          "mean": 183.6564,
+          "median": 167.7657
+        },
+        "null_rate": 0.0053
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 0,
+        "examples": [
+          "POINT (693996.84150089 5336888.647197805)",
+          "POINT (694260.576700896 5336767.950897787)",
+          "POINT (690101.2349008057 5331961.520898071)",
+          "POINT (690098.8172008058 5331957.55639807)",
+          "POINT (693942.34370089 5331653.46869782)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 18,
+        "null_count": 170,
+        "examples": [
+          "Siegenburger Str.",
+          "Dachauer Str.",
+          "Traunsteiner Straße",
+          "Balanstraße",
+          "Hechtseestraße"
+        ],
+        "null_rate": 0.9043
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "drehung"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "drehung"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Umweltzone - Verkehrszeichen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include drehung.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"188\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"drehung\",\"shape\",\"bezeichnung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"1\",\"0\",\"170\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"drehung\", [210.6509,217.5041,296.3986,291.3338,353.8148])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"drehung\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of drehung in Umweltzone - Verkehrszeichen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Umweltzone - Verkehrszeichen\",\n    \"package_id\": \"01e601b2-932d-4450-a389-78e87412cfe5\",\n    \"package_name\": \"opendata_miv_umweltzone_vz_point\",\n    \"resource_id\": \"43803673-cae8-4b90-830e-0bcbe4f0cae9\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiterten Umweltzone eingeführt. Bei den Transferflächen handelt es sich um Fahrbeziehungen, die aufgrund fehlender Alternativstrecken trotz ihrer Lage in der Umweltzone für Fahrzeuge ohne die erforderlichen Voraussetzungen freigegeben sind. Die weiteren Bestimmungen der Allgemeinverfügung sind zu beachten.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": 188,\n    \"sampled_rows\": 188,\n    \"column_count\": 4,\n    \"columns\": [\n      {\n        \"name\": \"drehung\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 187,\n        \"null_count\": 1,\n        \"examples\": [\n          210.65094991,\n          217.50410155,\n          296.39860024,\n          291.33382357,\n          353.81476051\n        ],\n        \"numeric\": {\n          \"count\": 187.0,\n          \"min\": 1.1494,\n          \"max\": 357.7168,\n          \"mean\": 183.6564,\n          \"median\": 167.7657\n        },\n        \"null_rate\": 0.0053\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 188,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POINT (693996.84150089 5336888.647197805)\",\n          \"POINT (694260.576700896 5336767.950897787)\",\n          \"POINT (690101.2349008057 5331961.520898071)\",\n          \"POINT (690098.8172008058 5331957.55639807)\",\n          \"POINT (693942.34370089 5331653.46869782)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"bezeichnung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 18,\n        \"null_count\": 170,\n        \"examples\": [\n          \"Siegenburger Str.\",\n          \"Dachauer Str.\",\n          \"Traunsteiner Straße\",\n          \"Balanstraße\",\n          \"Hechtseestraße\"\n        ],\n        \"null_rate\": 0.9043\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"drehung\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"drehung\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Umweltzone - Verkehrszeichen\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 3 profiled columns for OpenUI rendering. Numeric fields include drehung.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"188\")\nm2 = ListItem(\"Columns\", \"4\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"drehung\",\"shape\",\"bezeichnung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"float64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"1\",\"0\",\"170\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"drehung\", [210.6509,217.5041,296.3986,291.3338,353.8148])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"drehung\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

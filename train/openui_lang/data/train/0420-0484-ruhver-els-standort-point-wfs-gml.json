@@ -1,0 +1,305 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Standorte der Ladeinfrastruktur and compare anzahl_els by kat_ladegeschwindigkeit.",
+  "query_result": {
+    "dataset_title": "Standorte der Ladeinfrastruktur",
+    "package_id": "7d42e702-9b1c-413c-9445-b3a29d016958",
+    "package_name": "ruhver_els_standort_point",
+    "resource_id": "8af10ea4-99ba-4552-bd75-a8d9c2289b82",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Standort von Ladeinfrastruktur mit Informationen zu Ladeeinrichtung und Ladepunkten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 43,
+    "columns": [
+      {
+        "name": "anzahl_els",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "2",
+          "1",
+          "3"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 3.0,
+          "mean": 1.64,
+          "median": 2.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "anzahl_ladepunkte",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "4",
+          "2",
+          "3",
+          "6",
+          "1"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 3.22,
+          "median": 4.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "4",
+          "2",
+          "6"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 2.0,
+          "max": 6.0,
+          "mean": 3.264,
+          "median": 4.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "21",
+          "13",
+          "12",
+          "22",
+          "15"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.808,
+          "median": 12.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "typ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "kat_ladegeschwindigkeit",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Normalladen",
+          "Schnellladen"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_standort_point.anzahl_els",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "2",
+          "1",
+          "3"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 3.0,
+          "mean": 1.64,
+          "median": 2.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_standort_point.anzahl_ladepunkte",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "4",
+          "2",
+          "3",
+          "6",
+          "1"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 3.22,
+          "median": 4.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_standort_point.anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "4",
+          "2",
+          "6"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 2.0,
+          "max": 6.0,
+          "mean": 3.264,
+          "median": 4.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_standort_point.stadtbezirk",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "21",
+          "13",
+          "12",
+          "22",
+          "15"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.808,
+          "median": 12.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_standort_point.typ",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_standort_point.fid",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "ruhver_els_standort_point.1",
+          "ruhver_els_standort_point.2",
+          "ruhver_els_standort_point.3",
+          "ruhver_els_standort_point.4",
+          "ruhver_els_standort_point.5"
+        ],
+        "null_rate": 0.75
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl_els",
+      "anzahl_ladepunkte",
+      "anzahl_stellplaetze",
+      "stadtbezirk"
+    ],
+    "category_columns": [
+      "kat_ladegeschwindigkeit"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "kat_ladegeschwindigkeit",
+      "y": "anzahl_els"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 30,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Standorte der Ladeinfrastruktur\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include anzahl_els, anzahl_ladepunkte, anzahl_stellplaetze. Categorical fields include kat_ladegeschwindigkeit.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"43\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"anzahl_els\",\"anzahl_ladepunkte\",\"anzahl_stellplaetze\",\"stadtbezirk\",\"typ\",\"kat_ladegeschwindigkeit\",\"ruhver_els_standort_point.anzahl_els\",\"ruhver_els_standort_point.anzahl_ladepunkte\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"category\",\"geospatial\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"750\",\"750\",\"750\",\"750\",\"750\",\"750\",\"750\",\"750\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"anzahl_els\", [2.0,1.0])\nchart = BarChart([\"Normalladen\",\"Schnellladen\"], [series], \"grouped\", \"kat_ladegeschwindigkeit\", \"anzahl_els\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 30 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Standorte der Ladeinfrastruktur and compare anzahl_els by kat_ladegeschwindigkeit.\",\n  \"query_result\": {\n    \"dataset_title\": \"Standorte der Ladeinfrastruktur\",\n    \"package_id\": \"7d42e702-9b1c-413c-9445-b3a29d016958\",\n    \"package_name\": \"ruhver_els_standort_point\",\n    \"resource_id\": \"8af10ea4-99ba-4552-bd75-a8d9c2289b82\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Standort von Ladeinfrastruktur mit Informationen zu Ladeeinrichtung und Ladepunkten.\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Verkehrswesen\"\n    ],\n    \"groups\": [],\n    \"row_count\": null,\n    \"sampled_rows\": 1000,\n    \"column_count\": 43,\n    \"columns\": [\n      {\n        \"name\": \"anzahl_els\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"2\",\n          \"1\",\n          \"3\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 3.0,\n          \"mean\": 1.64,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"anzahl_ladepunkte\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"4\",\n          \"2\",\n          \"3\",\n          \"6\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 6.0,\n          \"mean\": 3.22,\n          \"median\": 4.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"anzahl_stellplaetze\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"4\",\n          \"2\",\n          \"6\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 2.0,\n          \"max\": 6.0,\n          \"mean\": 3.264,\n          \"median\": 4.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"stadtbezirk\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"21\",\n          \"13\",\n          \"12\",\n          \"22\",\n          \"15\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 11.808,\n          \"median\": 12.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"typ\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"kat_ladegeschwindigkeit\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"Normalladen\",\n          \"Schnellladen\"\n        ],\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_els_standort_point.anzahl_els\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"2\",\n          \"1\",\n          \"3\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 3.0,\n          \"mean\": 1.64,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_els_standort_point.anzahl_ladepunkte\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"4\",\n          \"2\",\n          \"3\",\n          \"6\",\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 6.0,\n          \"mean\": 3.22,\n          \"median\": 4.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_els_standort_point.anzahl_stellplaetze\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"4\",\n          \"2\",\n          \"6\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 2.0,\n          \"max\": 6.0,\n          \"mean\": 3.264,\n          \"median\": 4.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_els_standort_point.stadtbezirk\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"21\",\n          \"13\",\n          \"12\",\n          \"22\",\n          \"15\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 11.808,\n          \"median\": 12.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_els_standort_point.typ\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"1\"\n        ],\n        \"numeric\": {\n          \"count\": 250.0,\n          \"min\": 1.0,\n          \"max\": 1.0,\n          \"mean\": 1.0,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"ruhver_els_standort_point.fid\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 250,\n        \"null_count\": 750,\n        \"examples\": [\n          \"ruhver_els_standort_point.1\",\n          \"ruhver_els_standort_point.2\",\n          \"ruhver_els_standort_point.3\",\n          \"ruhver_els_standort_point.4\",\n          \"ruhver_els_standort_point.5\"\n        ],\n        \"null_rate\": 0.75\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"anzahl_els\",\n      \"anzahl_ladepunkte\",\n      \"anzahl_stellplaetze\",\n      \"stadtbezirk\"\n    ],\n    \"category_columns\": [\n      \"kat_ladegeschwindigkeit\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"kat_ladegeschwindigkeit\",\n      \"y\": \"anzahl_els\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Standorte der Ladeinfrastruktur\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include anzahl_els, anzahl_ladepunkte, anzahl_stellplaetze. Categorical fields include kat_ladegeschwindigkeit.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"unknown\")\nm2 = ListItem(\"Columns\", \"43\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"anzahl_els\",\"anzahl_ladepunkte\",\"anzahl_stellplaetze\",\"stadtbezirk\",\"typ\",\"kat_ladegeschwindigkeit\",\"ruhver_els_standort_point.anzahl_els\",\"ruhver_els_standort_point.anzahl_ladepunkte\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"category\",\"geospatial\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"750\",\"750\",\"750\",\"750\",\"750\",\"750\",\"750\",\"750\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"anzahl_els\", [2.0,1.0])\nchart = BarChart([\"Normalladen\",\"Schnellladen\"], [series], \"grouped\", \"kat_ladegeschwindigkeit\", \"anzahl_els\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 30 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

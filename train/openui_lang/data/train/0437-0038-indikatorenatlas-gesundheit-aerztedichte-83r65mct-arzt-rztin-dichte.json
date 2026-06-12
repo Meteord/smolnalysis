@@ -1,0 +1,233 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Gesundheit - Arzt*Ärztin-Dichte and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Gesundheit - Arzt*Ärztin-Dichte",
+    "package_id": "b6c5bd72-76f0-4bb9-83b5-b56933818465",
+    "package_name": "indikatorenatlas-gesundheit-aerztedichte-83r65mct",
+    "resource_id": "734c005e-233b-4a2c-9ecc-3b789782ec2b",
+    "resource_name": "Arzt*Ärztin-Dichte",
+    "resource_format": "csv",
+    "description": "Hauptwohnsitzbevölkerung je Arzt*Ärztin der entsprechenden Kategorie. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Gesundheit",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "heal"
+    ],
+    "row_count": 2002,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2234,
+          337,
+          894,
+          1808,
+          2144
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 33.0,
+          "max": 37336.0,
+          "mean": 3841.24,
+          "median": 2365.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1603776",
+          "20876",
+          "50081",
+          "52434",
+          "68610"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 10370.0,
+          "max": 1603776.0,
+          "mean": 103644.43,
+          "median": 52700.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "718",
+          "62",
+          "56",
+          "29",
+          "32"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 4123.0,
+          "mean": 86.043,
+          "median": 25.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2014.0,
+          "max": 2024.0,
+          "mean": 2019.39,
+          "median": 2020.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Allgemeinmedizin",
+          "Frauenheilkunde und Geburtshilfe",
+          "Innere Medizin",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (insgesamt)",
+          "Hauptwohnsitzbevölkerung (weiblich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Ärzte*Ärztinnen für Allgemeinmedizin",
+          "Ärzte*Ärztinnen für Frauenheilkunde und Geburtshilfe",
+          "Ärzte*Ärztinnen für Innere Medizin",
+          "Ärzte*Ärztinnen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Arzt*Ärztin-Dichte"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Gesundheit - Arzt*Ärztin-Dichte\", \"Arzt*Ärztin-Dichte\")\nsummary = TextContent(\"Arzt*Ärztin-Dichte belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Auspragung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"2,002\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Auspragung\",\"Name Basiswert 1\",\"Name Basiswert 2\",\"Indikator\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [2234.0,337.0,894.0,1808.0])\nchart = BarChart([\"Allgemeinmedizin\",\"Frauenheilkunde und Geburtshilfe\",\"Innere Medizin\",\"insgesamt\"], [series], \"grouped\", \"Auspragung\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Indikatorenatlas: Gesundheit - Arzt*Ärztin-Dichte and compare Indikatorwert by Auspragung.\",\n  \"query_result\": {\n    \"dataset_title\": \"Indikatorenatlas: Gesundheit - Arzt*Ärztin-Dichte\",\n    \"package_id\": \"b6c5bd72-76f0-4bb9-83b5-b56933818465\",\n    \"package_name\": \"indikatorenatlas-gesundheit-aerztedichte-83r65mct\",\n    \"resource_id\": \"734c005e-233b-4a2c-9ecc-3b789782ec2b\",\n    \"resource_name\": \"Arzt*Ärztin-Dichte\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Hauptwohnsitzbevölkerung je Arzt*Ärztin der entsprechenden Kategorie. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Gesundheit\",\n      \"Indikatorenatlas\"\n    ],\n    \"groups\": [\n      \"heal\"\n    ],\n    \"row_count\": 2002,\n    \"sampled_rows\": 1000,\n    \"column_count\": 10,\n    \"columns\": [\n      {\n        \"name\": \"Indikatorwert\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          2234,\n          337,\n          894,\n          1808,\n          2144\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 33.0,\n          \"max\": 37336.0,\n          \"mean\": 3841.24,\n          \"median\": 2365.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1603776\",\n          \"20876\",\n          \"50081\",\n          \"52434\",\n          \"68610\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 10370.0,\n          \"max\": 1603776.0,\n          \"mean\": 103644.43,\n          \"median\": 52700.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"718\",\n          \"62\",\n          \"56\",\n          \"29\",\n          \"32\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 1.0,\n          \"max\": 4123.0,\n          \"mean\": 86.043,\n          \"median\": 25.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          2024,\n          2023,\n          2022,\n          2021,\n          2020\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 2014.0,\n          \"max\": 2024.0,\n          \"mean\": 2019.39,\n          \"median\": 2020.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Auspragung\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Allgemeinmedizin\",\n          \"Frauenheilkunde und Geburtshilfe\",\n          \"Innere Medizin\",\n          \"insgesamt\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 1\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Hauptwohnsitzbevölkerung (insgesamt)\",\n          \"Hauptwohnsitzbevölkerung (weiblich)\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Name Basiswert 2\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Ärzte*Ärztinnen für Allgemeinmedizin\",\n          \"Ärzte*Ärztinnen für Frauenheilkunde und Geburtshilfe\",\n          \"Ärzte*Ärztinnen für Innere Medizin\",\n          \"Ärzte*Ärztinnen\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Indikator\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Arzt*Ärztin-Dichte\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Raumbezug\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Stadt München\",\n          \"01 Altstadt - Lehel\",\n          \"02 Ludwigsvorstadt - Isarvorstadt\",\n          \"03 Maxvorstadt\",\n          \"04 Schwabing - West\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Indikatorwert\",\n      \"Basiswert 1\",\n      \"Basiswert 2\"\n    ],\n    \"category_columns\": [\n      \"Auspragung\",\n      \"Name Basiswert 1\",\n      \"Name Basiswert 2\",\n      \"Indikator\"\n    ],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"Auspragung\",\n      \"y\": \"Indikatorwert\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Indikatorenatlas: Gesundheit - Arzt*Ärztin-Dichte\", \"Arzt*Ärztin-Dichte\")\nsummary = TextContent(\"Arzt*Ärztin-Dichte belongs to Statistisches Amt München. It exposes 9 profiled columns for OpenUI rendering. Numeric fields include Indikatorwert, Basiswert 1, Basiswert 2. Categorical fields include Auspragung, Name Basiswert 1, Name Basiswert 2.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"2,002\")\nm2 = ListItem(\"Columns\", \"10\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"8.5\")\nc1 = Col(\"Column\", [\"Indikatorwert\",\"Basiswert 1\",\"Basiswert 2\",\"Jahr\",\"Auspragung\",\"Name Basiswert 1\",\"Name Basiswert 2\",\"Indikator\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"year\",\"category\",\"category\",\"category\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"object\",\"object\",\"int64\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Indikatorwert\", [2234.0,337.0,894.0,1808.0])\nchart = BarChart([\"Allgemeinmedizin\",\"Frauenheilkunde und Geburtshilfe\",\"Innere Medizin\",\"insgesamt\"], [series], \"grouped\", \"Auspragung\", \"Indikatorwert\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

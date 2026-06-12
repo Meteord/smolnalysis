@@ -1,0 +1,269 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of vablock_stadtbezirk.sb_nummer in Stadtbezirke.",
+  "query_result": {
+    "dataset_title": "Stadtbezirke",
+    "package_id": "906f9c9b-5416-4168-86fe-44aa7c2ac486",
+    "package_name": "vablock_stadtbezirke_opendata",
+    "resource_id": "346f8fe5-e255-428e-9650-a099c44dcb7e",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den 25 Stadtbezirken der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 164,
+    "sampled_rows": 164,
+    "column_count": 27,
+    "columns": [
+      {
+        "name": "vablock_stadtbezirk.sb_nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 27,
+        "null_count": 137,
+        "examples": [
+          "04",
+          "19",
+          "15",
+          "21",
+          "02"
+        ],
+        "numeric": {
+          "count": 27.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.4074,
+          "median": 14.0
+        },
+        "null_rate": 0.8354
+      },
+      {
+        "name": "vablock_stadtbezirk.flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 27,
+        "null_count": 137,
+        "examples": [
+          "4363287.49516",
+          "1.776348971034E7",
+          "2.245392162629E7",
+          "1.649753892504E7",
+          "4401650.66894"
+        ],
+        "numeric": {
+          "count": 27.0,
+          "min": 2070313.1777,
+          "max": 34057321.8029,
+          "mean": 12464798.1688,
+          "median": 9223789.3511
+        },
+        "null_rate": 0.8354
+      },
+      {
+        "name": "sb_nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 27,
+        "null_count": 137,
+        "examples": [
+          "04",
+          "19",
+          "15",
+          "21",
+          "02"
+        ],
+        "numeric": {
+          "count": 27.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.4074,
+          "median": 14.0
+        },
+        "null_rate": 0.8354
+      },
+      {
+        "name": "flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 27,
+        "null_count": 137,
+        "examples": [
+          "4363287.49516",
+          "1.776348971034E7",
+          "2.245392162629E7",
+          "1.649753892504E7",
+          "4401650.66894"
+        ],
+        "numeric": {
+          "count": 27.0,
+          "min": 2070313.1777,
+          "max": 34057321.8029,
+          "mean": 12464798.1688,
+          "median": 9223789.3511
+        },
+        "null_rate": 0.8354
+      },
+      {
+        "name": "featureMember.vablock_stadtbezirk.sb_nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "12"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 12.0,
+          "max": 12.0,
+          "mean": 12.0,
+          "median": 12.0
+        },
+        "null_rate": 0.9939
+      },
+      {
+        "name": "featureMember.vablock_stadtbezirk.flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "2.567476745549E7"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 25674767.4555,
+          "max": 25674767.4555,
+          "mean": 25674767.4555,
+          "median": 25674767.4555
+        },
+        "null_rate": 0.9939
+      },
+      {
+        "name": "vablock_stadtbezirk.shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 27,
+        "null_count": 137,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.8354
+      },
+      {
+        "name": "vablock_stadtbezirk.shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 27,
+        "null_count": 137,
+        "examples": [
+          "691821.83680084,5339259.12469795 691767.29080084,5339263.31749795 691722.86450084,5339268.31979795 691549.29580084,5339287.89879796 691466.06530083,5339294.3453",
+          "685540.46640071,5327534.64919833 685543.41010071,5327538.09229833 685533.91110071,5327546.26659833 685526.67010071,5327552.49469833 685524.06800071,5327554.7326",
+          "689968.4955008,5331316.39589808 689963.0302008,5331316.44229808 689962.9825008,5331314.57879808 689958.3600008,5331314.56879808 689958.3703008,5331314.81939808",
+          "698523.624501,5337387.29879746 698428.43840099,5337405.85949746 698326.87930099,5337432.91109747 698326.11160099,5337394.33299747 698329.55870099,5337269.175197",
+          "682919.35680066,5338681.10589844 682929.13080066,5338739.67329844 682932.48410066,5338790.02169844 682927.56530066,5338848.87029844 682886.32480066,5338829.3900"
+        ],
+        "null_rate": 0.8354
+      },
+      {
+        "name": "shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 27,
+        "null_count": 137,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.8354
+      },
+      {
+        "name": "shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 27,
+        "null_count": 137,
+        "examples": [
+          "691821.83680084,5339259.12469795 691767.29080084,5339263.31749795 691722.86450084,5339268.31979795 691549.29580084,5339287.89879796 691466.06530083,5339294.3453",
+          "685540.46640071,5327534.64919833 685543.41010071,5327538.09229833 685533.91110071,5327546.26659833 685526.67010071,5327552.49469833 685524.06800071,5327554.7326",
+          "689968.4955008,5331316.39589808 689963.0302008,5331316.44229808 689962.9825008,5331314.57879808 689958.3600008,5331314.56879808 689958.3703008,5331314.81939808",
+          "698523.624501,5337387.29879746 698428.43840099,5337405.85949746 698326.87930099,5337432.91109747 698326.11160099,5337394.33299747 698329.55870099,5337269.175197",
+          "682919.35680066,5338681.10589844 682929.13080066,5338739.67329844 682932.48410066,5338790.02169844 682927.56530066,5338848.87029844 682886.32480066,5338829.3900"
+        ],
+        "null_rate": 0.8354
+      },
+      {
+        "name": "featureMember.vablock_stadtbezirk.shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.9939
+      },
+      {
+        "name": "featureMember.vablock_stadtbezirk.shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 163,
+        "examples": [
+          "694974.91160091,5345089.52109772 694907.44730091,5345110.76169772 694881.24410091,5345068.35229772 694872.36920091,5345049.17969772 694822.73160091,5345052.4982"
+        ],
+        "null_rate": 0.9939
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vablock_stadtbezirk.sb_nummer",
+      "vablock_stadtbezirk.flaeche_qm",
+      "sb_nummer",
+      "flaeche_qm"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "vablock_stadtbezirk.sb_nummer"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 14,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtbezirke\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include vablock_stadtbezirk.sb_nummer, vablock_stadtbezirk.flaeche_qm, sb_nummer.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"164\")\nm2 = ListItem(\"Columns\", \"27\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"vablock_stadtbezirk.sb_nummer\",\"vablock_stadtbezirk.flaeche_qm\",\"sb_nummer\",\"flaeche_qm\",\"featureMember.vablock_stadtbezirk.sb_nummer\",\"featureMember.vablock_stadtbezirk.flaeche_qm\",\"vablock_stadtbezirk.shape.Polygon.srsName\",\"vablock_stadtbezirk.shape.Polygon.outerBoundaryIs.LinearRing.coordinates\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"137\",\"137\",\"137\",\"137\",\"163\",\"163\",\"137\",\"137\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"vablock_stadtbezirk.sb_nummer\", [4.0,19.0,15.0,21.0,2.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"vablock_stadtbezirk.sb_nummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 14 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of vablock_stadtbezirk.sb_nummer in Stadtbezirke.\",\n  \"query_result\": {\n    \"dataset_title\": \"Stadtbezirke\",\n    \"package_id\": \"906f9c9b-5416-4168-86fe-44aa7c2ac486\",\n    \"package_name\": \"vablock_stadtbezirke_opendata\",\n    \"resource_id\": \"346f8fe5-e255-428e-9650-a099c44dcb7e\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Flächenhafte Darstellung der Verwaltungsgrenzen von den 25 Stadtbezirken der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Planungsunterlagen\",\n      \"opendata\"\n    ],\n    \"groups\": [],\n    \"row_count\": 164,\n    \"sampled_rows\": 164,\n    \"column_count\": 27,\n    \"columns\": [\n      {\n        \"name\": \"vablock_stadtbezirk.sb_nummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 27,\n        \"null_count\": 137,\n        \"examples\": [\n          \"04\",\n          \"19\",\n          \"15\",\n          \"21\",\n          \"02\"\n        ],\n        \"numeric\": {\n          \"count\": 27.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 13.4074,\n          \"median\": 14.0\n        },\n        \"null_rate\": 0.8354\n      },\n      {\n        \"name\": \"vablock_stadtbezirk.flaeche_qm\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 27,\n        \"null_count\": 137,\n        \"examples\": [\n          \"4363287.49516\",\n          \"1.776348971034E7\",\n          \"2.245392162629E7\",\n          \"1.649753892504E7\",\n          \"4401650.66894\"\n        ],\n        \"numeric\": {\n          \"count\": 27.0,\n          \"min\": 2070313.1777,\n          \"max\": 34057321.8029,\n          \"mean\": 12464798.1688,\n          \"median\": 9223789.3511\n        },\n        \"null_rate\": 0.8354\n      },\n      {\n        \"name\": \"sb_nummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 27,\n        \"null_count\": 137,\n        \"examples\": [\n          \"04\",\n          \"19\",\n          \"15\",\n          \"21\",\n          \"02\"\n        ],\n        \"numeric\": {\n          \"count\": 27.0,\n          \"min\": 1.0,\n          \"max\": 25.0,\n          \"mean\": 13.4074,\n          \"median\": 14.0\n        },\n        \"null_rate\": 0.8354\n      },\n      {\n        \"name\": \"flaeche_qm\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 27,\n        \"null_count\": 137,\n        \"examples\": [\n          \"4363287.49516\",\n          \"1.776348971034E7\",\n          \"2.245392162629E7\",\n          \"1.649753892504E7\",\n          \"4401650.66894\"\n        ],\n        \"numeric\": {\n          \"count\": 27.0,\n          \"min\": 2070313.1777,\n          \"max\": 34057321.8029,\n          \"mean\": 12464798.1688,\n          \"median\": 9223789.3511\n        },\n        \"null_rate\": 0.8354\n      },\n      {\n        \"name\": \"featureMember.vablock_stadtbezirk.sb_nummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"12\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 12.0,\n          \"max\": 12.0,\n          \"mean\": 12.0,\n          \"median\": 12.0\n        },\n        \"null_rate\": 0.9939\n      },\n      {\n        \"name\": \"featureMember.vablock_stadtbezirk.flaeche_qm\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"2.567476745549E7\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 25674767.4555,\n          \"max\": 25674767.4555,\n          \"mean\": 25674767.4555,\n          \"median\": 25674767.4555\n        },\n        \"null_rate\": 0.9939\n      },\n      {\n        \"name\": \"vablock_stadtbezirk.shape.Polygon.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 27,\n        \"null_count\": 137,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.8354\n      },\n      {\n        \"name\": \"vablock_stadtbezirk.shape.Polygon.outerBoundaryIs.LinearRing.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 27,\n        \"null_count\": 137,\n        \"examples\": [\n          \"691821.83680084,5339259.12469795 691767.29080084,5339263.31749795 691722.86450084,5339268.31979795 691549.29580084,5339287.89879796 691466.06530083,5339294.3453\",\n          \"685540.46640071,5327534.64919833 685543.41010071,5327538.09229833 685533.91110071,5327546.26659833 685526.67010071,5327552.49469833 685524.06800071,5327554.7326\",\n          \"689968.4955008,5331316.39589808 689963.0302008,5331316.44229808 689962.9825008,5331314.57879808 689958.3600008,5331314.56879808 689958.3703008,5331314.81939808\",\n          \"698523.624501,5337387.29879746 698428.43840099,5337405.85949746 698326.87930099,5337432.91109747 698326.11160099,5337394.33299747 698329.55870099,5337269.175197\",\n          \"682919.35680066,5338681.10589844 682929.13080066,5338739.67329844 682932.48410066,5338790.02169844 682927.56530066,5338848.87029844 682886.32480066,5338829.3900\"\n        ],\n        \"null_rate\": 0.8354\n      },\n      {\n        \"name\": \"shape.Polygon.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 27,\n        \"null_count\": 137,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.8354\n      },\n      {\n        \"name\": \"shape.Polygon.outerBoundaryIs.LinearRing.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 27,\n        \"null_count\": 137,\n        \"examples\": [\n          \"691821.83680084,5339259.12469795 691767.29080084,5339263.31749795 691722.86450084,5339268.31979795 691549.29580084,5339287.89879796 691466.06530083,5339294.3453\",\n          \"685540.46640071,5327534.64919833 685543.41010071,5327538.09229833 685533.91110071,5327546.26659833 685526.67010071,5327552.49469833 685524.06800071,5327554.7326\",\n          \"689968.4955008,5331316.39589808 689963.0302008,5331316.44229808 689962.9825008,5331314.57879808 689958.3600008,5331314.56879808 689958.3703008,5331314.81939808\",\n          \"698523.624501,5337387.29879746 698428.43840099,5337405.85949746 698326.87930099,5337432.91109747 698326.11160099,5337394.33299747 698329.55870099,5337269.175197\",\n          \"682919.35680066,5338681.10589844 682929.13080066,5338739.67329844 682932.48410066,5338790.02169844 682927.56530066,5338848.87029844 682886.32480066,5338829.3900\"\n        ],\n        \"null_rate\": 0.8354\n      },\n      {\n        \"name\": \"featureMember.vablock_stadtbezirk.shape.Polygon.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.9939\n      },\n      {\n        \"name\": \"featureMember.vablock_stadtbezirk.shape.Polygon.outerBoundaryIs.LinearRing.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1,\n        \"null_count\": 163,\n        \"examples\": [\n          \"694974.91160091,5345089.52109772 694907.44730091,5345110.76169772 694881.24410091,5345068.35229772 694872.36920091,5345049.17969772 694822.73160091,5345052.4982\"\n        ],\n        \"null_rate\": 0.9939\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"vablock_stadtbezirk.sb_nummer\",\n      \"vablock_stadtbezirk.flaeche_qm\",\n      \"sb_nummer\",\n      \"flaeche_qm\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"vablock_stadtbezirk.sb_nummer\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtbezirke\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include vablock_stadtbezirk.sb_nummer, vablock_stadtbezirk.flaeche_qm, sb_nummer.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"164\")\nm2 = ListItem(\"Columns\", \"27\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"5.0\")\nc1 = Col(\"Column\", [\"vablock_stadtbezirk.sb_nummer\",\"vablock_stadtbezirk.flaeche_qm\",\"sb_nummer\",\"flaeche_qm\",\"featureMember.vablock_stadtbezirk.sb_nummer\",\"featureMember.vablock_stadtbezirk.flaeche_qm\",\"vablock_stadtbezirk.shape.Polygon.srsName\",\"vablock_stadtbezirk.shape.Polygon.outerBoundaryIs.LinearRing.coordinates\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"137\",\"137\",\"137\",\"137\",\"163\",\"163\",\"137\",\"137\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"vablock_stadtbezirk.sb_nummer\", [4.0,19.0,15.0,21.0,2.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"vablock_stadtbezirk.sb_nummer\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 14 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

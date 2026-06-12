@@ -1,0 +1,221 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Aktuelle Bezirksausschuss-Anträge and compare version by title.",
+  "query_result": {
+    "dataset_title": "Aktuelle Bezirksausschuss-Anträge",
+    "package_id": "dc7f256a-6da1-45d5-8e22-9a0881f34e1e",
+    "package_name": "aktuelle-bezirksausschuss-antraege",
+    "resource_id": "efac0076-c41c-4584-90fe-f54fe79868c1",
+    "resource_name": "BA-Anträge - RSS-Feed",
+    "resource_format": "xml",
+    "description": "Der Datensatz listet aktuelle Anträge der Münchner Bezirksausschüsse als RSS-Feed auf.",
+    "organization": "Direktorium der Landeshauptstadt München",
+    "tags": [
+      "Bezirksausschüsse",
+      "RIS"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 3,
+    "sampled_rows": 3,
+    "column_count": 19,
+    "columns": [
+      {
+        "name": "version",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "2.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6667
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 2,
+        "null_count": 1,
+        "examples": [
+          "BA-Anträge",
+          "BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026"
+        ],
+        "null_rate": 0.3333
+      },
+      {
+        "name": "link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 2,
+        "null_count": 1,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=BA-Antraege",
+          "https://risi.muenchen.de/risi/antrag/detail/9720040"
+        ],
+        "null_rate": 0.3333
+      },
+      {
+        "name": "description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 2,
+        "null_count": 1,
+        "examples": [
+          "RSS Feed der neusten BA-Anträge der Landeshauptstadt München.",
+          "<strong>BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</str"
+        ],
+        "null_rate": 0.3333
+      },
+      {
+        "name": "channel.item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "Thu, 21 May 2026 00:00:00 +0200"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "Thu, 21 May 2026 00:00:00 +0200"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "Thu, 21 May 2026 00:00:00 +0200"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "BA-Anträge"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=BA-Antraege"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "RSS Feed der neusten BA-Anträge der Landeshauptstadt München."
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.item.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.item.link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "https://risi.muenchen.de/risi/antrag/detail/9720040"
+        ],
+        "null_rate": 0.6667
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "version"
+    ],
+    "category_columns": [
+      "title",
+      "link",
+      "description",
+      "channel.title"
+    ],
+    "time_columns": [
+      "channel.item.pubDate",
+      "item.pubDate",
+      "pubDate"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "title",
+      "y": "version"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 7,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Aktuelle Bezirksausschuss-Anträge\", \"BA-Anträge - RSS-Feed\")\nsummary = TextContent(\"BA-Anträge - RSS-Feed belongs to Direktorium der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include version. Categorical fields include title, link, description.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"3\")\nm2 = ListItem(\"Columns\", \"19\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"version\",\"title\",\"link\",\"description\",\"channel.item.pubDate\",\"item.pubDate\",\"pubDate\",\"channel.title\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"category\",\"category\",\"date\",\"date\",\"date\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"2\",\"1\",\"1\",\"1\",\"2\",\"2\",\"2\",\"2\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"version\", [2.0])\nchart = BarChart([\"BA-Anträge\"], [series], \"grouped\", \"title\", \"version\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 7 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize Aktuelle Bezirksausschuss-Anträge and compare version by title.\",\n  \"query_result\": {\n    \"dataset_title\": \"Aktuelle Bezirksausschuss-Anträge\",\n    \"package_id\": \"dc7f256a-6da1-45d5-8e22-9a0881f34e1e\",\n    \"package_name\": \"aktuelle-bezirksausschuss-antraege\",\n    \"resource_id\": \"efac0076-c41c-4584-90fe-f54fe79868c1\",\n    \"resource_name\": \"BA-Anträge - RSS-Feed\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Der Datensatz listet aktuelle Anträge der Münchner Bezirksausschüsse als RSS-Feed auf.\",\n    \"organization\": \"Direktorium der Landeshauptstadt München\",\n    \"tags\": [\n      \"Bezirksausschüsse\",\n      \"RIS\"\n    ],\n    \"groups\": [\n      \"gove\"\n    ],\n    \"row_count\": 3,\n    \"sampled_rows\": 3,\n    \"column_count\": 19,\n    \"columns\": [\n      {\n        \"name\": \"version\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"2.0\"\n        ],\n        \"numeric\": {\n          \"count\": 1.0,\n          \"min\": 2.0,\n          \"max\": 2.0,\n          \"mean\": 2.0,\n          \"median\": 2.0\n        },\n        \"null_rate\": 0.6667\n      },\n      {\n        \"name\": \"title\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 2,\n        \"null_count\": 1,\n        \"examples\": [\n          \"BA-Anträge\",\n          \"BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026\"\n        ],\n        \"null_rate\": 0.3333\n      },\n      {\n        \"name\": \"link\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 2,\n        \"null_count\": 1,\n        \"examples\": [\n          \"https://risi.muenchen.de/risi/rss?feed=BA-Antraege\",\n          \"https://risi.muenchen.de/risi/antrag/detail/9720040\"\n        ],\n        \"null_rate\": 0.3333\n      },\n      {\n        \"name\": \"description\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 2,\n        \"null_count\": 1,\n        \"examples\": [\n          \"RSS Feed der neusten BA-Anträge der Landeshauptstadt München.\",\n          \"<strong>BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026</strong><hr style=\\\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\\\"><strong>Betreff:</str\"\n        ],\n        \"null_rate\": 0.3333\n      },\n      {\n        \"name\": \"channel.item.pubDate\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"Thu, 21 May 2026 00:00:00 +0200\"\n        ],\n        \"null_rate\": 0.6667\n      },\n      {\n        \"name\": \"item.pubDate\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"Thu, 21 May 2026 00:00:00 +0200\"\n        ],\n        \"null_rate\": 0.6667\n      },\n      {\n        \"name\": \"pubDate\",\n        \"dtype\": \"object\",\n        \"kind\": \"date\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"Thu, 21 May 2026 00:00:00 +0200\"\n        ],\n        \"null_rate\": 0.6667\n      },\n      {\n        \"name\": \"channel.title\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"BA-Anträge\"\n        ],\n        \"null_rate\": 0.6667\n      },\n      {\n        \"name\": \"channel.link\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"https://risi.muenchen.de/risi/rss?feed=BA-Antraege\"\n        ],\n        \"null_rate\": 0.6667\n      },\n      {\n        \"name\": \"channel.description\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"RSS Feed der neusten BA-Anträge der Landeshauptstadt München.\"\n        ],\n        \"null_rate\": 0.6667\n      },\n      {\n        \"name\": \"channel.item.title\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026\"\n        ],\n        \"null_rate\": 0.6667\n      },\n      {\n        \"name\": \"channel.item.link\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 1,\n        \"null_count\": 2,\n        \"examples\": [\n          \"https://risi.muenchen.de/risi/antrag/detail/9720040\"\n        ],\n        \"null_rate\": 0.6667\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"version\"\n    ],\n    \"category_columns\": [\n      \"title\",\n      \"link\",\n      \"description\",\n      \"channel.title\"\n    ],\n    \"time_columns\": [\n      \"channel.item.pubDate\",\n      \"item.pubDate\",\n      \"pubDate\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"title\",\n      \"y\": \"version\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Aktuelle Bezirksausschuss-Anträge\", \"BA-Anträge - RSS-Feed\")\nsummary = TextContent(\"BA-Anträge - RSS-Feed belongs to Direktorium der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include version. Categorical fields include title, link, description.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"3\")\nm2 = ListItem(\"Columns\", \"19\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"version\",\"title\",\"link\",\"description\",\"channel.item.pubDate\",\"item.pubDate\",\"pubDate\",\"channel.title\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"category\",\"category\",\"category\",\"date\",\"date\",\"date\",\"category\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"2\",\"1\",\"1\",\"1\",\"2\",\"2\",\"2\",\"2\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"version\", [2.0])\nchart = BarChart([\"BA-Anträge\"], [series], \"grouped\", \"title\", \"version\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 7 lower-ranked columns, and removed 0 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

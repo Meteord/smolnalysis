@@ -1,0 +1,189 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Stadtviertel München.",
+  "query_result": {
+    "dataset_title": "Stadtviertel München",
+    "package_id": "6d6cba91-53d1-427e-8b49-3e6750b5e953",
+    "package_name": "vablock_viertel_opendata",
+    "resource_id": "b24dd56b-3ab2-44a6-9bfc-dcc09c4346aa",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtvierteln der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 477,
+    "sampled_rows": 477,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          369,
+          458,
+          66,
+          328,
+          298
+        ],
+        "numeric": {
+          "count": 477.0,
+          "min": 1.0,
+          "max": 475.0,
+          "mean": 237.696,
+          "median": 237.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "x",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          690986.5884,
+          692574.6957,
+          684887.5808,
+          696480.1084,
+          683925.1374
+        ],
+        "numeric": {
+          "count": 477.0,
+          "min": 677364.7601,
+          "max": 701081.536,
+          "mean": 690067.976,
+          "median": 690295.4197
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "y",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          5338347.8,
+          5333034.4822,
+          5343031.2363,
+          5330191.5225,
+          5332234.9287
+        ],
+        "numeric": {
+          "count": 477.0,
+          "min": 5326841.8578,
+          "max": 5345553.1762,
+          "mean": 5335292.1316,
+          "median": 5335071.2991
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "flaeche_qm",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          583744.3232644,
+          239345.8658026,
+          1190290.43550623,
+          497477.08539691,
+          439938.17950796
+        ],
+        "numeric": {
+          "count": 477.0,
+          "min": 28943.2871,
+          "max": 5858498.4656,
+          "mean": 654602.9333,
+          "median": 469240.2532
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((691263.765200829 5339003.582997983, 691252.2285008288 5339116.486697987, 691248.0984008284 5339156.031497986, 691247.2769008286 5339180.844397985, 691",
+          "POLYGON ((692580.1231008589 5332950.618997911, 692788.1930008635 5333014.202997896, 692866.7730008655 5333037.651197892, 692871.7758008654 5333039.17839789, 692",
+          "POLYGON ((684323.0328006891 5343799.61439837, 684322.417400689 5343802.552698369, 684291.8176006883 5343791.37399837, 684224.2189006871 5343766.684098375, 68410",
+          "POLYGON ((696557.3946009511 5329927.221497633, 696577.1725009517 5329917.535797632, 696591.6626009521 5329909.9134976305, 696609.2993009526 5329900.1926976275,",
+          "POLYGON ((683958.346700684 5332042.800698404, 684031.4562006854 5332054.713598399, 684119.1697006868 5332067.541198394, 684268.3219006897 5332089.553298387, 684"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "vi_nummer",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          "04.2.3",
+          "05.5.3",
+          "24.3.1",
+          "16.4.6",
+          "20.2.2"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "x",
+      "y",
+      "flaeche_qm"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtviertel München\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include objectid, x, y.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"477\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"objectid\",\"x\",\"y\",\"flaeche_qm\",\"shape\",\"vi_nummer\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"float64\",\"float64\",\"float64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"objectid\", [369.0,458.0,66.0,328.0,298.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of objectid in Stadtviertel München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Stadtviertel München\",\n    \"package_id\": \"6d6cba91-53d1-427e-8b49-3e6750b5e953\",\n    \"package_name\": \"vablock_viertel_opendata\",\n    \"resource_id\": \"b24dd56b-3ab2-44a6-9bfc-dcc09c4346aa\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtvierteln der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Planungsunterlagen\",\n      \"opendata\"\n    ],\n    \"groups\": [],\n    \"row_count\": 477,\n    \"sampled_rows\": 477,\n    \"column_count\": 7,\n    \"columns\": [\n      {\n        \"name\": \"objectid\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 477,\n        \"null_count\": 0,\n        \"examples\": [\n          369,\n          458,\n          66,\n          328,\n          298\n        ],\n        \"numeric\": {\n          \"count\": 477.0,\n          \"min\": 1.0,\n          \"max\": 475.0,\n          \"mean\": 237.696,\n          \"median\": 237.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"x\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 477,\n        \"null_count\": 0,\n        \"examples\": [\n          690986.5884,\n          692574.6957,\n          684887.5808,\n          696480.1084,\n          683925.1374\n        ],\n        \"numeric\": {\n          \"count\": 477.0,\n          \"min\": 677364.7601,\n          \"max\": 701081.536,\n          \"mean\": 690067.976,\n          \"median\": 690295.4197\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"y\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 477,\n        \"null_count\": 0,\n        \"examples\": [\n          5338347.8,\n          5333034.4822,\n          5343031.2363,\n          5330191.5225,\n          5332234.9287\n        ],\n        \"numeric\": {\n          \"count\": 477.0,\n          \"min\": 5326841.8578,\n          \"max\": 5345553.1762,\n          \"mean\": 5335292.1316,\n          \"median\": 5335071.2991\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"flaeche_qm\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 477,\n        \"null_count\": 0,\n        \"examples\": [\n          583744.3232644,\n          239345.8658026,\n          1190290.43550623,\n          497477.08539691,\n          439938.17950796\n        ],\n        \"numeric\": {\n          \"count\": 477.0,\n          \"min\": 28943.2871,\n          \"max\": 5858498.4656,\n          \"mean\": 654602.9333,\n          \"median\": 469240.2532\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"shape\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 477,\n        \"null_count\": 0,\n        \"examples\": [\n          \"POLYGON ((691263.765200829 5339003.582997983, 691252.2285008288 5339116.486697987, 691248.0984008284 5339156.031497986, 691247.2769008286 5339180.844397985, 691\",\n          \"POLYGON ((692580.1231008589 5332950.618997911, 692788.1930008635 5333014.202997896, 692866.7730008655 5333037.651197892, 692871.7758008654 5333039.17839789, 692\",\n          \"POLYGON ((684323.0328006891 5343799.61439837, 684322.417400689 5343802.552698369, 684291.8176006883 5343791.37399837, 684224.2189006871 5343766.684098375, 68410\",\n          \"POLYGON ((696557.3946009511 5329927.221497633, 696577.1725009517 5329917.535797632, 696591.6626009521 5329909.9134976305, 696609.2993009526 5329900.1926976275,\",\n          \"POLYGON ((683958.346700684 5332042.800698404, 684031.4562006854 5332054.713598399, 684119.1697006868 5332067.541198394, 684268.3219006897 5332089.553298387, 684\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"vi_nummer\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 477,\n        \"null_count\": 0,\n        \"examples\": [\n          \"04.2.3\",\n          \"05.5.3\",\n          \"24.3.1\",\n          \"16.4.6\",\n          \"20.2.2\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"objectid\",\n      \"x\",\n      \"y\",\n      \"flaeche_qm\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"objectid\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Stadtviertel München\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include objectid, x, y.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"477\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"objectid\",\"x\",\"y\",\"flaeche_qm\",\"shape\",\"vi_nummer\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"geospatial\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"float64\",\"float64\",\"float64\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"objectid\", [369.0,458.0,66.0,328.0,298.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"objectid\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

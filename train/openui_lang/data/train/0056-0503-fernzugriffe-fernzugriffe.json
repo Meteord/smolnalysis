@@ -1,0 +1,133 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of fernzugriffe in Fernzugriffsberechtigungen.",
+  "query_result": {
+    "dataset_title": "Fernzugriffsberechtigungen",
+    "package_id": "45e46e90-ff50-47bf-8f13-b334b5262c06",
+    "package_name": "fernzugriffe",
+    "resource_id": "6c9f6138-2a33-4801-9010-ea84b56721b7",
+    "resource_name": "Fernzugriffe",
+    "resource_format": "csv",
+    "description": "Unter Fernzugriffsberechtigungen werden die Berechtigungen für Personen gezählt, die grundsätzlich von außerhalb des städtischen Netzwerks auf die IT-Infrastruktur der Landeshauptstadt München zugreifen können.",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [
+      "Stadtratsauftrag"
+    ],
+    "groups": [],
+    "row_count": 1054,
+    "sampled_rows": 1000,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "fernzugriffe",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "589",
+          "2347",
+          "714",
+          "40",
+          "855"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 11411.0,
+          "mean": 1120.038,
+          "median": 753.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "tag",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "30.06.2025",
+          "31.03.2025",
+          "31.12.2024",
+          "30.09.2024",
+          "30.06.2024"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "kunde_langname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Abfallwirtschaftsbetrieb München",
+          "Baureferat",
+          "Direktorium",
+          "Friedhöfe und Bestattung München",
+          "Gesundheitsreferat"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "kunde_abkuerzung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "AWM",
+          "BAU",
+          "DIR",
+          "FBM",
+          "GSR"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "fernzugriffe"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "fernzugriffe"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Fernzugriffsberechtigungen\", \"Fernzugriffe\")\nsummary = TextContent(\"Fernzugriffe belongs to IT-Referat der Landeshauptstadt München. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include fernzugriffe.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"1,054\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"fernzugriffe\",\"tag\",\"kunde_langname\",\"kunde_abkuerzung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"fernzugriffe\", [589.0,2347.0,714.0,40.0,855.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"fernzugriffe\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of fernzugriffe in Fernzugriffsberechtigungen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Fernzugriffsberechtigungen\",\n    \"package_id\": \"45e46e90-ff50-47bf-8f13-b334b5262c06\",\n    \"package_name\": \"fernzugriffe\",\n    \"resource_id\": \"6c9f6138-2a33-4801-9010-ea84b56721b7\",\n    \"resource_name\": \"Fernzugriffe\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Unter Fernzugriffsberechtigungen werden die Berechtigungen für Personen gezählt, die grundsätzlich von außerhalb des städtischen Netzwerks auf die IT-Infrastruktur der Landeshauptstadt München zugreifen können.\",\n    \"organization\": \"IT-Referat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Stadtratsauftrag\"\n    ],\n    \"groups\": [],\n    \"row_count\": 1054,\n    \"sampled_rows\": 1000,\n    \"column_count\": 5,\n    \"columns\": [\n      {\n        \"name\": \"fernzugriffe\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"589\",\n          \"2347\",\n          \"714\",\n          \"40\",\n          \"855\"\n        ],\n        \"numeric\": {\n          \"count\": 1000.0,\n          \"min\": 0.0,\n          \"max\": 11411.0,\n          \"mean\": 1120.038,\n          \"median\": 753.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"tag\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"30.06.2025\",\n          \"31.03.2025\",\n          \"31.12.2024\",\n          \"30.09.2024\",\n          \"30.06.2024\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"kunde_langname\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Abfallwirtschaftsbetrieb München\",\n          \"Baureferat\",\n          \"Direktorium\",\n          \"Friedhöfe und Bestattung München\",\n          \"Gesundheitsreferat\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"kunde_abkuerzung\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 1000,\n        \"null_count\": 0,\n        \"examples\": [\n          \"AWM\",\n          \"BAU\",\n          \"DIR\",\n          \"FBM\",\n          \"GSR\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"fernzugriffe\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"fernzugriffe\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Fernzugriffsberechtigungen\", \"Fernzugriffe\")\nsummary = TextContent(\"Fernzugriffe belongs to IT-Referat der Landeshauptstadt München. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include fernzugriffe.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"1,054\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.0\")\nc1 = Col(\"Column\", [\"fernzugriffe\",\"tag\",\"kunde_langname\",\"kunde_abkuerzung\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"string\",\"string\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"fernzugriffe\", [589.0,2347.0,714.0,40.0,855.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"fernzugriffe\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

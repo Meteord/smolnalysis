@@ -1,0 +1,222 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (GML) from Radschnellverbindungen.",
+  "query_result": {
+    "dataset_title": "Radschnellverbindungen",
+    "package_id": "eb5c734c-f680-4b88-8e55-0c765ab801e7",
+    "package_name": "opendata_radschnellverb_line",
+    "resource_id": "55de6d3c-6562-4e66-986a-f99cd63f420c",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Gezeigt sind die beschlossenen Radschnellverbindungen innerhalb des Münchner Stadtgebiets. Radschnellverbindungen sind ausreichend breite Verbindungen einer Kommune oder einer Stadt-Umland-Region, die möglichst direkt Ziele über größere Entfernungen verbinden und durchgängig ein sicheres und attraktives Befahren mit hohen Reisegeschwindigkeiten ermöglichen. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/information/radschnellverbindungen\">muenchenunterwegs.de",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 100,
+    "sampled_rows": 100,
+    "column_count": 33,
+    "columns": [
+      {
+        "name": "rad_radschnellverb_line.link_infoseite",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 88,
+        "examples": [
+          "https://muenchenunterwegs.de/angebote/radschnellverbindung-nach-garching-und-unterschleissheim",
+          "https://muenchenunterwegs.de/angebote/fuenf-radschnellverbindungen-von-muenchen-in-das-umland"
+        ],
+        "null_rate": 0.88
+      },
+      {
+        "name": "rad_radschnellverb_line.projektstatus",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 88,
+        "examples": [
+          "in Planung (BAU)",
+          "Planung beschlossen (MOR)",
+          "Umsetzung erfolgt (BAU)",
+          "in Planung (MOR)"
+        ],
+        "null_rate": 0.88
+      },
+      {
+        "name": "link_infoseite",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 88,
+        "examples": [
+          "https://muenchenunterwegs.de/angebote/radschnellverbindung-nach-garching-und-unterschleissheim",
+          "https://muenchenunterwegs.de/angebote/fuenf-radschnellverbindungen-von-muenchen-in-das-umland"
+        ],
+        "null_rate": 0.88
+      },
+      {
+        "name": "projektstatus",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 88,
+        "examples": [
+          "in Planung (BAU)",
+          "Planung beschlossen (MOR)",
+          "Umsetzung erfolgt (BAU)",
+          "in Planung (MOR)"
+        ],
+        "null_rate": 0.88
+      },
+      {
+        "name": "rad_radschnellverb_line.shape.MultiLineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 88,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.88
+      },
+      {
+        "name": "rad_radschnellverb_line.shape.MultiLineString.lineStringMember.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 88,
+        "examples": [
+          "691842.47640084,5335750.87649795 691865.33080084,5335837.08859795 691914.48940084,5335999.56489795 691935.75760084,5336080.22009795 691971.19030085,5336207.1668",
+          "688496.80650077,5338116.28769815 688465.65450077,5338139.31359816 688369.14190077,5338230.01549816 688314.06020077,5338274.12429816 688187.90200076,5338386.1198",
+          "690868.65680082,5335012.80989802 690906.44090082,5335063.54649801 690927.35150082,5335090.82619801 690942.19510082,5335097.70219801 690960.05450082,5335102.0677",
+          "680321.12080062,5337090.37789856 680305.79420062,5337096.90739856 680294.65040062,5337099.37369856 680285.07870062,5337100.43939856 680275.48430062,5337100.4878",
+          "692027.06430085,5336404.49429794 692019.77160085,5336429.07839794 692018.74120085,5336433.92179794 692018.05890085,5336437.77019794 692017.59650085,5336441.2140"
+        ],
+        "null_rate": 0.88
+      },
+      {
+        "name": "shape.MultiLineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 88,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.88
+      },
+      {
+        "name": "shape.MultiLineString.lineStringMember.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 88,
+        "examples": [
+          "691842.47640084,5335750.87649795 691865.33080084,5335837.08859795 691914.48940084,5335999.56489795 691935.75760084,5336080.22009795 691971.19030085,5336207.1668",
+          "688496.80650077,5338116.28769815 688465.65450077,5338139.31359816 688369.14190077,5338230.01549816 688314.06020077,5338274.12429816 688187.90200076,5338386.1198",
+          "690868.65680082,5335012.80989802 690906.44090082,5335063.54649801 690927.35150082,5335090.82619801 690942.19510082,5335097.70219801 690960.05450082,5335102.0677",
+          "680321.12080062,5337090.37789856 680305.79420062,5337096.90739856 680294.65040062,5337099.37369856 680285.07870062,5337100.43939856 680275.48430062,5337100.4878",
+          "692027.06430085,5336404.49429794 692019.77160085,5336429.07839794 692018.74120085,5336433.92179794 692018.05890085,5336437.77019794 692017.59650085,5336441.2140"
+        ],
+        "null_rate": 0.88
+      },
+      {
+        "name": "LineString.coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 25,
+        "null_count": 75,
+        "examples": [
+          "691842.47640084,5335750.87649795 691865.33080084,5335837.08859795 691914.48940084,5335999.56489795 691935.75760084,5336080.22009795 691971.19030085,5336207.1668",
+          "690927.35150082,5335090.82619801 690912.03260082,5335128.26159802 690910.97420082,5335139.77099801 690905.53080082,5335153.15919801 690904.12320082,5335160.2119",
+          "688636.42910077,5338062.17339815 688619.25710077,5338050.94929815 688601.81410077,5338040.65269815 688590.06960077,5338033.71989815 688516.68560077,5337990.4011",
+          "688636.42910077,5338062.17339815 688640.15560077,5338037.08749815 688641.93280077,5338020.88119815 688640.61380077,5338010.41289815 688636.22680077,5337998.6594",
+          "688496.80650077,5338116.28769815 688465.65450077,5338139.31359816 688369.14190077,5338230.01549816 688314.06020077,5338274.12429816 688187.90200076,5338386.1198"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 25,
+        "null_count": 75,
+        "examples": [
+          "691842.47640084,5335750.87649795 691865.33080084,5335837.08859795 691914.48940084,5335999.56489795 691935.75760084,5336080.22009795 691971.19030085,5336207.1668",
+          "690927.35150082,5335090.82619801 690912.03260082,5335128.26159802 690910.97420082,5335139.77099801 690905.53080082,5335153.15919801 690904.12320082,5335160.2119",
+          "688636.42910077,5338062.17339815 688619.25710077,5338050.94929815 688601.81410077,5338040.65269815 688590.06960077,5338033.71989815 688516.68560077,5337990.4011",
+          "688636.42910077,5338062.17339815 688640.15560077,5338037.08749815 688641.93280077,5338020.88119815 688640.61380077,5338010.41289815 688636.22680077,5337998.6594",
+          "688496.80650077,5338116.28769815 688465.65450077,5338139.31359816 688369.14190077,5338230.01549816 688314.06020077,5338274.12429816 688187.90200076,5338386.1198"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "featureMember.rad_radschnellverb_line.shape.MultiLineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 99,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.99
+      },
+      {
+        "name": "featureMember.rad_radschnellverb_line.shape.MultiLineString.lineStringMember.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 99,
+        "examples": [
+          "693088.32710087,5335298.56739787 693096.83470087,5335288.68549787 693101.24000087,5335281.22889787 693103.36410087,5335268.88839787 693099.39700087,5335250.1713"
+        ],
+        "null_rate": 0.99
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "rad_radschnellverb_line.link_infoseite",
+      "rad_radschnellverb_line.projektstatus",
+      "link_infoseite",
+      "projektstatus"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.0,
+  "cleaning_notes": {
+    "dropped_columns": 20,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radschnellverbindungen\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Categorical fields include rad_radschnellverb_line.link_infoseite, rad_radschnellverb_line.projektstatus, link_infoseite.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"100\")\nm2 = ListItem(\"Columns\", \"33\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"4.0\")\nc1 = Col(\"Column\", [\"rad_radschnellverb_line.link_infoseite\",\"rad_radschnellverb_line.projektstatus\",\"link_infoseite\",\"projektstatus\",\"rad_radschnellverb_line.shape.MultiLineString.srsName\",\"rad_radschnellverb_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\"shape.MultiLineString.srsName\",\"shape.MultiLineString.lineStringMember.LineString.coordinates\"], \"string\")\nc2 = Col(\"Kind\", [\"category\",\"category\",\"category\",\"category\",\"geospatial\",\"geospatial\",\"geospatial\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"88\",\"88\",\"88\",\"88\",\"88\",\"88\",\"88\",\"88\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 20 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Create a compact OpenUI summary for WFS (GML) from Radschnellverbindungen.\",\n  \"query_result\": {\n    \"dataset_title\": \"Radschnellverbindungen\",\n    \"package_id\": \"eb5c734c-f680-4b88-8e55-0c765ab801e7\",\n    \"package_name\": \"opendata_radschnellverb_line\",\n    \"resource_id\": \"55de6d3c-6562-4e66-986a-f99cd63f420c\",\n    \"resource_name\": \"WFS (GML)\",\n    \"resource_format\": \"xml\",\n    \"description\": \"Gezeigt sind die beschlossenen Radschnellverbindungen innerhalb des Münchner Stadtgebiets. Radschnellverbindungen sind ausreichend breite Verbindungen einer Kommune oder einer Stadt-Umland-Region, die möglichst direkt Ziele über größere Entfernungen verbinden und durchgängig ein sicheres und attraktives Befahren mit hohen Reisegeschwindigkeiten ermöglichen. Mehr Informationen erhalten Sie hier: <a target=\\\"_blank\\\" href=\\\"muenchenunterwegs.de/information/radschnellverbindungen\\\">muenchenunterwegs.de\",\n    \"organization\": \"Mobilitätsreferat der Landeshauptstadt München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"Landeshauptstadt München\",\n      \"Planungsunterlagen Kataster\",\n      \"infoMapAccessService\"\n    ],\n    \"groups\": [],\n    \"row_count\": 100,\n    \"sampled_rows\": 100,\n    \"column_count\": 33,\n    \"columns\": [\n      {\n        \"name\": \"rad_radschnellverb_line.link_infoseite\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 12,\n        \"null_count\": 88,\n        \"examples\": [\n          \"https://muenchenunterwegs.de/angebote/radschnellverbindung-nach-garching-und-unterschleissheim\",\n          \"https://muenchenunterwegs.de/angebote/fuenf-radschnellverbindungen-von-muenchen-in-das-umland\"\n        ],\n        \"null_rate\": 0.88\n      },\n      {\n        \"name\": \"rad_radschnellverb_line.projektstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 12,\n        \"null_count\": 88,\n        \"examples\": [\n          \"in Planung (BAU)\",\n          \"Planung beschlossen (MOR)\",\n          \"Umsetzung erfolgt (BAU)\",\n          \"in Planung (MOR)\"\n        ],\n        \"null_rate\": 0.88\n      },\n      {\n        \"name\": \"link_infoseite\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 12,\n        \"null_count\": 88,\n        \"examples\": [\n          \"https://muenchenunterwegs.de/angebote/radschnellverbindung-nach-garching-und-unterschleissheim\",\n          \"https://muenchenunterwegs.de/angebote/fuenf-radschnellverbindungen-von-muenchen-in-das-umland\"\n        ],\n        \"null_rate\": 0.88\n      },\n      {\n        \"name\": \"projektstatus\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 12,\n        \"null_count\": 88,\n        \"examples\": [\n          \"in Planung (BAU)\",\n          \"Planung beschlossen (MOR)\",\n          \"Umsetzung erfolgt (BAU)\",\n          \"in Planung (MOR)\"\n        ],\n        \"null_rate\": 0.88\n      },\n      {\n        \"name\": \"rad_radschnellverb_line.shape.MultiLineString.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 12,\n        \"null_count\": 88,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.88\n      },\n      {\n        \"name\": \"rad_radschnellverb_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 12,\n        \"null_count\": 88,\n        \"examples\": [\n          \"691842.47640084,5335750.87649795 691865.33080084,5335837.08859795 691914.48940084,5335999.56489795 691935.75760084,5336080.22009795 691971.19030085,5336207.1668\",\n          \"688496.80650077,5338116.28769815 688465.65450077,5338139.31359816 688369.14190077,5338230.01549816 688314.06020077,5338274.12429816 688187.90200076,5338386.1198\",\n          \"690868.65680082,5335012.80989802 690906.44090082,5335063.54649801 690927.35150082,5335090.82619801 690942.19510082,5335097.70219801 690960.05450082,5335102.0677\",\n          \"680321.12080062,5337090.37789856 680305.79420062,5337096.90739856 680294.65040062,5337099.37369856 680285.07870062,5337100.43939856 680275.48430062,5337100.4878\",\n          \"692027.06430085,5336404.49429794 692019.77160085,5336429.07839794 692018.74120085,5336433.92179794 692018.05890085,5336437.77019794 692017.59650085,5336441.2140\"\n        ],\n        \"null_rate\": 0.88\n      },\n      {\n        \"name\": \"shape.MultiLineString.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 12,\n        \"null_count\": 88,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.88\n      },\n      {\n        \"name\": \"shape.MultiLineString.lineStringMember.LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 12,\n        \"null_count\": 88,\n        \"examples\": [\n          \"691842.47640084,5335750.87649795 691865.33080084,5335837.08859795 691914.48940084,5335999.56489795 691935.75760084,5336080.22009795 691971.19030085,5336207.1668\",\n          \"688496.80650077,5338116.28769815 688465.65450077,5338139.31359816 688369.14190077,5338230.01549816 688314.06020077,5338274.12429816 688187.90200076,5338386.1198\",\n          \"690868.65680082,5335012.80989802 690906.44090082,5335063.54649801 690927.35150082,5335090.82619801 690942.19510082,5335097.70219801 690960.05450082,5335102.0677\",\n          \"680321.12080062,5337090.37789856 680305.79420062,5337096.90739856 680294.65040062,5337099.37369856 680285.07870062,5337100.43939856 680275.48430062,5337100.4878\",\n          \"692027.06430085,5336404.49429794 692019.77160085,5336429.07839794 692018.74120085,5336433.92179794 692018.05890085,5336437.77019794 692017.59650085,5336441.2140\"\n        ],\n        \"null_rate\": 0.88\n      },\n      {\n        \"name\": \"LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 25,\n        \"null_count\": 75,\n        \"examples\": [\n          \"691842.47640084,5335750.87649795 691865.33080084,5335837.08859795 691914.48940084,5335999.56489795 691935.75760084,5336080.22009795 691971.19030085,5336207.1668\",\n          \"690927.35150082,5335090.82619801 690912.03260082,5335128.26159802 690910.97420082,5335139.77099801 690905.53080082,5335153.15919801 690904.12320082,5335160.2119\",\n          \"688636.42910077,5338062.17339815 688619.25710077,5338050.94929815 688601.81410077,5338040.65269815 688590.06960077,5338033.71989815 688516.68560077,5337990.4011\",\n          \"688636.42910077,5338062.17339815 688640.15560077,5338037.08749815 688641.93280077,5338020.88119815 688640.61380077,5338010.41289815 688636.22680077,5337998.6594\",\n          \"688496.80650077,5338116.28769815 688465.65450077,5338139.31359816 688369.14190077,5338230.01549816 688314.06020077,5338274.12429816 688187.90200076,5338386.1198\"\n        ],\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 25,\n        \"null_count\": 75,\n        \"examples\": [\n          \"691842.47640084,5335750.87649795 691865.33080084,5335837.08859795 691914.48940084,5335999.56489795 691935.75760084,5336080.22009795 691971.19030085,5336207.1668\",\n          \"690927.35150082,5335090.82619801 690912.03260082,5335128.26159802 690910.97420082,5335139.77099801 690905.53080082,5335153.15919801 690904.12320082,5335160.2119\",\n          \"688636.42910077,5338062.17339815 688619.25710077,5338050.94929815 688601.81410077,5338040.65269815 688590.06960077,5338033.71989815 688516.68560077,5337990.4011\",\n          \"688636.42910077,5338062.17339815 688640.15560077,5338037.08749815 688641.93280077,5338020.88119815 688640.61380077,5338010.41289815 688636.22680077,5337998.6594\",\n          \"688496.80650077,5338116.28769815 688465.65450077,5338139.31359816 688369.14190077,5338230.01549816 688314.06020077,5338274.12429816 688187.90200076,5338386.1198\"\n        ],\n        \"null_rate\": 0.75\n      },\n      {\n        \"name\": \"featureMember.rad_radschnellverb_line.shape.MultiLineString.srsName\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1,\n        \"null_count\": 99,\n        \"examples\": [\n          \"http://www.opengis.net/gml/srs/epsg.xml#25832\"\n        ],\n        \"null_rate\": 0.99\n      },\n      {\n        \"name\": \"featureMember.rad_radschnellverb_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\n        \"dtype\": \"object\",\n        \"kind\": \"geospatial\",\n        \"non_null_count\": 1,\n        \"null_count\": 99,\n        \"examples\": [\n          \"693088.32710087,5335298.56739787 693096.83470087,5335288.68549787 693101.24000087,5335281.22889787 693103.36410087,5335268.88839787 693099.39700087,5335250.1713\"\n        ],\n        \"null_rate\": 0.99\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [],\n    \"category_columns\": [\n      \"rad_radschnellverb_line.link_infoseite\",\n      \"rad_radschnellverb_line.projektstatus\",\n      \"link_infoseite\",\n      \"projektstatus\"\n    ],\n    \"time_columns\": []\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Radschnellverbindungen\", \"WFS (GML)\")\nsummary = TextContent(\"WFS (GML) belongs to Mobilitätsreferat der Landeshauptstadt München. It exposes 12 profiled columns for OpenUI rendering. Categorical fields include rad_radschnellverb_line.link_infoseite, rad_radschnellverb_line.projektstatus, link_infoseite.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"100\")\nm2 = ListItem(\"Columns\", \"33\")\nm3 = ListItem(\"Format\", \"XML\")\nm4 = ListItem(\"Quality\", \"4.0\")\nc1 = Col(\"Column\", [\"rad_radschnellverb_line.link_infoseite\",\"rad_radschnellverb_line.projektstatus\",\"link_infoseite\",\"projektstatus\",\"rad_radschnellverb_line.shape.MultiLineString.srsName\",\"rad_radschnellverb_line.shape.MultiLineString.lineStringMember.LineString.coordinates\",\"shape.MultiLineString.srsName\",\"shape.MultiLineString.lineStringMember.LineString.coordinates\"], \"string\")\nc2 = Col(\"Kind\", [\"category\",\"category\",\"category\",\"category\",\"geospatial\",\"geospatial\",\"geospatial\",\"geospatial\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"88\",\"88\",\"88\",\"88\",\"88\",\"88\",\"88\",\"88\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 20 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

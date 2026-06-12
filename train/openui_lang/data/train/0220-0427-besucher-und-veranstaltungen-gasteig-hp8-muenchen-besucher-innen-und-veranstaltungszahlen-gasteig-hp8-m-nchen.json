@@ -1,0 +1,155 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of Anzahl Veranstaltungen in Besucher*innen und Veranstaltungen Gasteig HP8 München.",
+  "query_result": {
+    "dataset_title": "Besucher*innen und Veranstaltungen Gasteig HP8 München",
+    "package_id": "745f95eb-0a97-4741-bffc-c8d23a190299",
+    "package_name": "besucher-und-veranstaltungen-gasteig-hp8-muenchen",
+    "resource_id": "cd89279a-7a70-4786-bcb1-3fc7b14f6752",
+    "resource_name": "Besucher*innen und Veranstaltungszahlen Gasteig HP8 München",
+    "resource_format": "csv",
+    "description": "Besucher*innen und Veranstaltungszahlen für die Säle des Gasteigs HP8 München.",
+    "organization": "Landeshauptstadt München",
+    "tags": [
+      "Besucherzahlen",
+      "Gasteig",
+      "HP8",
+      "Kultur",
+      "Stadtratsauftrag",
+      "Veranstaltungen"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 16,
+    "sampled_rows": 16,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "Anzahl Veranstaltungen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          281,
+          35,
+          47,
+          216,
+          105
+        ],
+        "numeric": {
+          "count": 16.0,
+          "min": 10.0,
+          "max": 281.0,
+          "mean": 162.5625,
+          "median": 209.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Besucher*innen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          371476,
+          30081,
+          1479,
+          10559,
+          8639
+        ],
+        "numeric": {
+          "count": 16.0,
+          "min": 633.0,
+          "max": 371476.0,
+          "mean": 68726.75,
+          "median": 9199.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 16.0,
+          "min": 2022.0,
+          "max": 2024.0,
+          "mean": 2023.125,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Veranstaltungsort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "Isarphilharmonie",
+          "Saal X",
+          "Kleiner Saal",
+          "Projektor",
+          "Halle E"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Anzahl Veranstaltungen",
+      "Besucher*innen"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "Anzahl Veranstaltungen"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Besucher*innen und Veranstaltungen Gasteig HP8 München\", \"Besucher*innen und Veranstaltungszahlen Gasteig HP8 München\")\nsummary = TextContent(\"Besucher*innen und Veranstaltungszahlen Gasteig HP8 München belongs to Landeshauptstadt München. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include Anzahl Veranstaltungen, Besucher*innen.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"16\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"Anzahl Veranstaltungen\",\"Besucher*innen\",\"Jahr\",\"Veranstaltungsort\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Anzahl Veranstaltungen\", [281.0,35.0,47.0,216.0,105.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"Anzahl Veranstaltungen\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of Anzahl Veranstaltungen in Besucher*innen und Veranstaltungen Gasteig HP8 München.\",\n  \"query_result\": {\n    \"dataset_title\": \"Besucher*innen und Veranstaltungen Gasteig HP8 München\",\n    \"package_id\": \"745f95eb-0a97-4741-bffc-c8d23a190299\",\n    \"package_name\": \"besucher-und-veranstaltungen-gasteig-hp8-muenchen\",\n    \"resource_id\": \"cd89279a-7a70-4786-bcb1-3fc7b14f6752\",\n    \"resource_name\": \"Besucher*innen und Veranstaltungszahlen Gasteig HP8 München\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Besucher*innen und Veranstaltungszahlen für die Säle des Gasteigs HP8 München.\",\n    \"organization\": \"Landeshauptstadt München\",\n    \"tags\": [\n      \"Besucherzahlen\",\n      \"Gasteig\",\n      \"HP8\",\n      \"Kultur\",\n      \"Stadtratsauftrag\",\n      \"Veranstaltungen\"\n    ],\n    \"groups\": [\n      \"educ\"\n    ],\n    \"row_count\": 16,\n    \"sampled_rows\": 16,\n    \"column_count\": 5,\n    \"columns\": [\n      {\n        \"name\": \"Anzahl Veranstaltungen\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 16,\n        \"null_count\": 0,\n        \"examples\": [\n          281,\n          35,\n          47,\n          216,\n          105\n        ],\n        \"numeric\": {\n          \"count\": 16.0,\n          \"min\": 10.0,\n          \"max\": 281.0,\n          \"mean\": 162.5625,\n          \"median\": 209.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Besucher*innen\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 16,\n        \"null_count\": 0,\n        \"examples\": [\n          371476,\n          30081,\n          1479,\n          10559,\n          8639\n        ],\n        \"numeric\": {\n          \"count\": 16.0,\n          \"min\": 633.0,\n          \"max\": 371476.0,\n          \"mean\": 68726.75,\n          \"median\": 9199.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"int64\",\n        \"kind\": \"year\",\n        \"non_null_count\": 16,\n        \"null_count\": 0,\n        \"examples\": [\n          2024,\n          2023,\n          2022\n        ],\n        \"numeric\": {\n          \"count\": 16.0,\n          \"min\": 2022.0,\n          \"max\": 2024.0,\n          \"mean\": 2023.125,\n          \"median\": 2023.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Veranstaltungsort\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 16,\n        \"null_count\": 0,\n        \"examples\": [\n          \"Isarphilharmonie\",\n          \"Saal X\",\n          \"Kleiner Saal\",\n          \"Projektor\",\n          \"Halle E\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"Anzahl Veranstaltungen\",\n      \"Besucher*innen\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"Jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"Anzahl Veranstaltungen\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Besucher*innen und Veranstaltungen Gasteig HP8 München\", \"Besucher*innen und Veranstaltungszahlen Gasteig HP8 München\")\nsummary = TextContent(\"Besucher*innen und Veranstaltungszahlen Gasteig HP8 München belongs to Landeshauptstadt München. It exposes 4 profiled columns for OpenUI rendering. Numeric fields include Anzahl Veranstaltungen, Besucher*innen.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"16\")\nm2 = ListItem(\"Columns\", \"5\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"Anzahl Veranstaltungen\",\"Besucher*innen\",\"Jahr\",\"Veranstaltungsort\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"Anzahl Veranstaltungen\", [281.0,35.0,47.0,216.0,105.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"Anzahl Veranstaltungen\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

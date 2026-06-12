@@ -1,0 +1,205 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of einwohner_Insgesamt in Die Bevölkerung seit 1900.",
+  "query_result": {
+    "dataset_title": "Die Bevölkerung seit 1900",
+    "package_id": "40ed9397-06ec-4271-8fe6-54b67fbe45fb",
+    "package_name": "bevoelkerung",
+    "resource_id": "6c7165dc-0958-4213-a004-2515be292887",
+    "resource_name": "Die Bevölkerung seit 1900 ",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst die Einwohnerzahl von München nach Geschlecht und Staatsangehörigkeit seit 1900.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 60,
+    "sampled_rows": 60,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "einwohner_Insgesamt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 60,
+        "null_count": 0,
+        "examples": [
+          499932,
+          680704,
+          735388,
+          831937,
+          1085014
+        ],
+        "numeric": {
+          "count": 60.0,
+          "min": 499932.0,
+          "max": 1603776.0,
+          "mean": 1310633.9833,
+          "median": 1314718.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "einwohner_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 60,
+        "null_count": 0,
+        "examples": [
+          243762,
+          318761,
+          339611,
+          383984,
+          501290
+        ],
+        "numeric": {
+          "count": 60.0,
+          "min": 243762.0,
+          "max": 792449.0,
+          "mean": 636332.6167,
+          "median": 635229.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "einwohner_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 60,
+        "null_count": 0,
+        "examples": [
+          256170,
+          361943,
+          395777,
+          447953,
+          583724
+        ],
+        "numeric": {
+          "count": 60.0,
+          "min": 256170.0,
+          "max": 811327.0,
+          "mean": 674301.3667,
+          "median": 677712.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "einwohner_deutsche",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 59,
+        "null_count": 1,
+        "examples": [
+          660016.0,
+          720198.0,
+          798442.0,
+          1010659.0,
+          1107091.0
+        ],
+        "numeric": {
+          "count": 59.0,
+          "min": 660016.0,
+          "max": 1142586.0,
+          "mean": 1050357.3729,
+          "median": 1074966.0
+        },
+        "null_rate": 0.0167
+      },
+      {
+        "name": "einwohner_auslaender_innen",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 59,
+        "null_count": 1,
+        "examples": [
+          20688.0,
+          15190.0,
+          33495.0,
+          74355.0,
+          107512.0
+        ],
+        "numeric": {
+          "count": 59.0,
+          "min": 15190.0,
+          "max": 490821.0,
+          "mean": 274017.322,
+          "median": 273056.0
+        },
+        "null_rate": 0.0167
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 60,
+        "null_count": 0,
+        "examples": [
+          "1900",
+          "1925",
+          "1933",
+          "1950",
+          "1961"
+        ],
+        "numeric": {
+          "count": 60.0,
+          "min": 1900.0,
+          "max": 2024.0,
+          "mean": 1991.65,
+          "median": 1994.5
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "einwohner_Insgesamt",
+      "einwohner_maennlich",
+      "einwohner_weiblich",
+      "einwohner_deutsche"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "einwohner_Insgesamt"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Die Bevölkerung seit 1900\", \"Die Bevölkerung seit 1900\")\nsummary = TextContent(\"Die Bevölkerung seit 1900 belongs to Statistisches Amt München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include einwohner_Insgesamt, einwohner_maennlich, einwohner_weiblich.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"60\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"einwohner_Insgesamt\",\"einwohner_maennlich\",\"einwohner_weiblich\",\"einwohner_deutsche\",\"einwohner_auslaender_innen\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"float64\",\"float64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"1\",\"1\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"einwohner_Insgesamt\", [499932.0,680704.0,735388.0,831937.0,1085014.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"einwohner_Insgesamt\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Show the distribution of einwohner_Insgesamt in Die Bevölkerung seit 1900.\",\n  \"query_result\": {\n    \"dataset_title\": \"Die Bevölkerung seit 1900\",\n    \"package_id\": \"40ed9397-06ec-4271-8fe6-54b67fbe45fb\",\n    \"package_name\": \"bevoelkerung\",\n    \"resource_id\": \"6c7165dc-0958-4213-a004-2515be292887\",\n    \"resource_name\": \"Die Bevölkerung seit 1900 \",\n    \"resource_format\": \"csv\",\n    \"description\": \"Der Datensatz umfasst die Einwohnerzahl von München nach Geschlecht und Staatsangehörigkeit seit 1900.\",\n    \"organization\": \"Statistisches Amt München\",\n    \"tags\": [\n      \"Bevölkerung\"\n    ],\n    \"groups\": [\n      \"soci\"\n    ],\n    \"row_count\": 60,\n    \"sampled_rows\": 60,\n    \"column_count\": 7,\n    \"columns\": [\n      {\n        \"name\": \"einwohner_Insgesamt\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 60,\n        \"null_count\": 0,\n        \"examples\": [\n          499932,\n          680704,\n          735388,\n          831937,\n          1085014\n        ],\n        \"numeric\": {\n          \"count\": 60.0,\n          \"min\": 499932.0,\n          \"max\": 1603776.0,\n          \"mean\": 1310633.9833,\n          \"median\": 1314718.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"einwohner_maennlich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 60,\n        \"null_count\": 0,\n        \"examples\": [\n          243762,\n          318761,\n          339611,\n          383984,\n          501290\n        ],\n        \"numeric\": {\n          \"count\": 60.0,\n          \"min\": 243762.0,\n          \"max\": 792449.0,\n          \"mean\": 636332.6167,\n          \"median\": 635229.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"einwohner_weiblich\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 60,\n        \"null_count\": 0,\n        \"examples\": [\n          256170,\n          361943,\n          395777,\n          447953,\n          583724\n        ],\n        \"numeric\": {\n          \"count\": 60.0,\n          \"min\": 256170.0,\n          \"max\": 811327.0,\n          \"mean\": 674301.3667,\n          \"median\": 677712.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"einwohner_deutsche\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 59,\n        \"null_count\": 1,\n        \"examples\": [\n          660016.0,\n          720198.0,\n          798442.0,\n          1010659.0,\n          1107091.0\n        ],\n        \"numeric\": {\n          \"count\": 59.0,\n          \"min\": 660016.0,\n          \"max\": 1142586.0,\n          \"mean\": 1050357.3729,\n          \"median\": 1074966.0\n        },\n        \"null_rate\": 0.0167\n      },\n      {\n        \"name\": \"einwohner_auslaender_innen\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 59,\n        \"null_count\": 1,\n        \"examples\": [\n          20688.0,\n          15190.0,\n          33495.0,\n          74355.0,\n          107512.0\n        ],\n        \"numeric\": {\n          \"count\": 59.0,\n          \"min\": 15190.0,\n          \"max\": 490821.0,\n          \"mean\": 274017.322,\n          \"median\": 273056.0\n        },\n        \"null_rate\": 0.0167\n      },\n      {\n        \"name\": \"jahr\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 60,\n        \"null_count\": 0,\n        \"examples\": [\n          \"1900\",\n          \"1925\",\n          \"1933\",\n          \"1950\",\n          \"1961\"\n        ],\n        \"numeric\": {\n          \"count\": 60.0,\n          \"min\": 1900.0,\n          \"max\": 2024.0,\n          \"mean\": 1991.65,\n          \"median\": 1994.5\n        },\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"Histogram\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"einwohner_Insgesamt\",\n      \"einwohner_maennlich\",\n      \"einwohner_weiblich\",\n      \"einwohner_deutsche\"\n    ],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"jahr\"\n    ],\n    \"primary_chart\": {\n      \"type\": \"Histogram\",\n      \"x\": \"einwohner_Insgesamt\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Die Bevölkerung seit 1900\", \"Die Bevölkerung seit 1900\")\nsummary = TextContent(\"Die Bevölkerung seit 1900 belongs to Statistisches Amt München. It exposes 6 profiled columns for OpenUI rendering. Numeric fields include einwohner_Insgesamt, einwohner_maennlich, einwohner_weiblich.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"60\")\nm2 = ListItem(\"Columns\", \"7\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"6.75\")\nc1 = Col(\"Column\", [\"einwohner_Insgesamt\",\"einwohner_maennlich\",\"einwohner_weiblich\",\"einwohner_deutsche\",\"einwohner_auslaender_innen\",\"jahr\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"year\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"int64\",\"int64\",\"float64\",\"float64\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\",\"0\",\"1\",\"1\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"einwohner_Insgesamt\", [499932.0,680704.0,735388.0,831937.0,1085014.0])\nchart = BarChart([\"v1\",\"v2\",\"v3\",\"v4\",\"v5\"], [series], \"grouped\", \"Example\", \"einwohner_Insgesamt\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}

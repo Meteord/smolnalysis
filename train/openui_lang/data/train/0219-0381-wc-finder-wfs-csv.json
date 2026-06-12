@@ -1,0 +1,296 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize WC-Standorte der Landeshauptstadt München and compare plz by stadt.",
+  "query_result": {
+    "dataset_title": "WC-Standorte der Landeshauptstadt München",
+    "package_id": "80832bca-499b-4b24-bb41-9e77f0ef31ee",
+    "package_name": "wc_finder",
+    "resource_id": "76dc1295-e1f1-400e-b0b4-e805a39c50e3",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Die Daten beinhalten die Standorte der öffentlichen Toiletten, die sich im Besitz der Landeshauptstadt München befinden. Es werden sowohl barrierefreie als auch nicht barrierefreie Toiletten dargestellt. Der Nutzer kann auf ausführliche Informationen hinsichtlich Zugänglichkeit, Ausstattung und Zustand der Toiletten zugreifen. Wir bemühen uns, die Informationen zu den Maßnahmen aktuell und inhaltlich richtig anzubieten, die Karte bietet dennoch keine Gewähr auf Richtigkeit, Vollständigkeit und A",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "WC-Finder",
+      "planningCadastre"
+    ],
+    "groups": [],
+    "row_count": 310,
+    "sampled_rows": 310,
+    "column_count": 91,
+    "columns": [
+      {
+        "name": "plz",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 310,
+        "null_count": 0,
+        "examples": [
+          80804,
+          80339,
+          80992,
+          81667,
+          80637
+        ],
+        "numeric": {
+          "count": 310.0,
+          "min": 80331.0,
+          "max": 85764.0,
+          "mean": 81191.071,
+          "median": 81373.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "wickeln",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 302,
+        "null_count": 8,
+        "examples": [
+          0.0,
+          1.0
+        ],
+        "numeric": {
+          "count": 302.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2219,
+          "median": 0.0
+        },
+        "null_rate": 0.0258
+      },
+      {
+        "name": "telefon",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 239,
+        "null_count": 71,
+        "examples": [
+          "089/23326198",
+          "089/23326199",
+          "089/23326200",
+          "891465590",
+          "858367910"
+        ],
+        "numeric": {
+          "count": 26.0,
+          "min": 93921770.0,
+          "max": 4028794380.0,
+          "mean": 1603177706.0769,
+          "median": 858367910.0
+        },
+        "null_rate": 0.229
+      },
+      {
+        "name": "preis",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 225,
+        "null_count": 85,
+        "examples": [
+          0.5,
+          0.0,
+          0.60000002,
+          1.0
+        ],
+        "numeric": {
+          "count": 225.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2711,
+          "median": 0.0
+        },
+        "null_rate": 0.2742
+      },
+      {
+        "name": "stadt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 310,
+        "null_count": 0,
+        "examples": [
+          "München",
+          "Pullach im Isartal"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zustand",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 310,
+        "null_count": 0,
+        "examples": [
+          "voll funktionsfähig",
+          "teilweise Beeinträchtigung",
+          "defekt oder nicht zugänglich"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wc_buegel_rechts",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 200,
+        "examples": [
+          1.0,
+          0.0
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.6545,
+          "median": 1.0
+        },
+        "null_rate": 0.6452
+      },
+      {
+        "name": "wc_buegel_links",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 200,
+        "examples": [
+          1.0,
+          0.0
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.6636,
+          "median": 1.0
+        },
+        "null_rate": 0.6452
+      },
+      {
+        "name": "toilette_fuer_alle",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 204,
+        "examples": [
+          1.0,
+          0.0
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2547,
+          "median": 0.0
+        },
+        "null_rate": 0.6581
+      },
+      {
+        "name": "wc_badewanne",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 204,
+        "examples": [
+          0.0
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.6581
+      },
+      {
+        "name": "wc_dusche",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 204,
+        "examples": [
+          0.0
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.6581
+      },
+      {
+        "name": "wc_spiegel",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 204,
+        "examples": [
+          1.0,
+          0.0
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.566,
+          "median": 1.0
+        },
+        "null_rate": 0.6581
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "plz",
+      "wickeln",
+      "telefon",
+      "preis"
+    ],
+    "category_columns": [
+      "stadt",
+      "zustand"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "stadt",
+      "y": "plz"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 78,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"WC-Standorte der Landeshauptstadt München\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include plz, wickeln, telefon. Categorical fields include stadt, zustand.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"310\")\nm2 = ListItem(\"Columns\", \"91\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"plz\",\"wickeln\",\"telefon\",\"preis\",\"stadt\",\"zustand\",\"wc_buegel_rechts\",\"wc_buegel_links\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"category\",\"category\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"float64\",\"object\",\"float64\",\"object\",\"object\",\"float64\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"8\",\"71\",\"85\",\"0\",\"0\",\"200\",\"200\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"plz\", [80804.0,80339.0])\nchart = BarChart([\"München\",\"Pullach im Isartal\"], [series], \"grouped\", \"stadt\", \"plz\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 78 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Summarize WC-Standorte der Landeshauptstadt München and compare plz by stadt.\",\n  \"query_result\": {\n    \"dataset_title\": \"WC-Standorte der Landeshauptstadt München\",\n    \"package_id\": \"80832bca-499b-4b24-bb41-9e77f0ef31ee\",\n    \"package_name\": \"wc_finder\",\n    \"resource_id\": \"76dc1295-e1f1-400e-b0b4-e805a39c50e3\",\n    \"resource_name\": \"WFS (CSV)\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Die Daten beinhalten die Standorte der öffentlichen Toiletten, die sich im Besitz der Landeshauptstadt München befinden. Es werden sowohl barrierefreie als auch nicht barrierefreie Toiletten dargestellt. Der Nutzer kann auf ausführliche Informationen hinsichtlich Zugänglichkeit, Ausstattung und Zustand der Toiletten zugreifen. Wir bemühen uns, die Informationen zu den Maßnahmen aktuell und inhaltlich richtig anzubieten, die Karte bietet dennoch keine Gewähr auf Richtigkeit, Vollständigkeit und A\",\n    \"organization\": \" GeodatenService München\",\n    \"tags\": [\n      \"Digitaler Zwilling München\",\n      \"WC-Finder\",\n      \"planningCadastre\"\n    ],\n    \"groups\": [],\n    \"row_count\": 310,\n    \"sampled_rows\": 310,\n    \"column_count\": 91,\n    \"columns\": [\n      {\n        \"name\": \"plz\",\n        \"dtype\": \"int64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 310,\n        \"null_count\": 0,\n        \"examples\": [\n          80804,\n          80339,\n          80992,\n          81667,\n          80637\n        ],\n        \"numeric\": {\n          \"count\": 310.0,\n          \"min\": 80331.0,\n          \"max\": 85764.0,\n          \"mean\": 81191.071,\n          \"median\": 81373.0\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wickeln\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 302,\n        \"null_count\": 8,\n        \"examples\": [\n          0.0,\n          1.0\n        ],\n        \"numeric\": {\n          \"count\": 302.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.2219,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.0258\n      },\n      {\n        \"name\": \"telefon\",\n        \"dtype\": \"object\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 239,\n        \"null_count\": 71,\n        \"examples\": [\n          \"089/23326198\",\n          \"089/23326199\",\n          \"089/23326200\",\n          \"891465590\",\n          \"858367910\"\n        ],\n        \"numeric\": {\n          \"count\": 26.0,\n          \"min\": 93921770.0,\n          \"max\": 4028794380.0,\n          \"mean\": 1603177706.0769,\n          \"median\": 858367910.0\n        },\n        \"null_rate\": 0.229\n      },\n      {\n        \"name\": \"preis\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 225,\n        \"null_count\": 85,\n        \"examples\": [\n          0.5,\n          0.0,\n          0.60000002,\n          1.0\n        ],\n        \"numeric\": {\n          \"count\": 225.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.2711,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.2742\n      },\n      {\n        \"name\": \"stadt\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 310,\n        \"null_count\": 0,\n        \"examples\": [\n          \"München\",\n          \"Pullach im Isartal\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"zustand\",\n        \"dtype\": \"object\",\n        \"kind\": \"category\",\n        \"non_null_count\": 310,\n        \"null_count\": 0,\n        \"examples\": [\n          \"voll funktionsfähig\",\n          \"teilweise Beeinträchtigung\",\n          \"defekt oder nicht zugänglich\"\n        ],\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"wc_buegel_rechts\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 110,\n        \"null_count\": 200,\n        \"examples\": [\n          1.0,\n          0.0\n        ],\n        \"numeric\": {\n          \"count\": 110.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.6545,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.6452\n      },\n      {\n        \"name\": \"wc_buegel_links\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 110,\n        \"null_count\": 200,\n        \"examples\": [\n          1.0,\n          0.0\n        ],\n        \"numeric\": {\n          \"count\": 110.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.6636,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.6452\n      },\n      {\n        \"name\": \"toilette_fuer_alle\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 204,\n        \"examples\": [\n          1.0,\n          0.0\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.2547,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.6581\n      },\n      {\n        \"name\": \"wc_badewanne\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 204,\n        \"examples\": [\n          0.0\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.6581\n      },\n      {\n        \"name\": \"wc_dusche\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 204,\n        \"examples\": [\n          0.0\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 0.0,\n          \"mean\": 0.0,\n          \"median\": 0.0\n        },\n        \"null_rate\": 0.6581\n      },\n      {\n        \"name\": \"wc_spiegel\",\n        \"dtype\": \"float64\",\n        \"kind\": \"numeric\",\n        \"non_null_count\": 106,\n        \"null_count\": 204,\n        \"examples\": [\n          1.0,\n          0.0\n        ],\n        \"numeric\": {\n          \"count\": 106.0,\n          \"min\": 0.0,\n          \"max\": 1.0,\n          \"mean\": 0.566,\n          \"median\": 1.0\n        },\n        \"null_rate\": 0.6581\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"MetricGrid\",\n      \"BarChart\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [\n      \"plz\",\n      \"wickeln\",\n      \"telefon\",\n      \"preis\"\n    ],\n    \"category_columns\": [\n      \"stadt\",\n      \"zustand\"\n    ],\n    \"time_columns\": [],\n    \"primary_chart\": {\n      \"type\": \"BarChart\",\n      \"x\": \"stadt\",\n      \"y\": \"plz\"\n    }\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"WC-Standorte der Landeshauptstadt München\", \"WFS (CSV)\")\nsummary = TextContent(\"WFS (CSV) belongs to GeodatenService München. It exposes 12 profiled columns for OpenUI rendering. Numeric fields include plz, wickeln, telefon. Categorical fields include stadt, zustand.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"310\")\nm2 = ListItem(\"Columns\", \"91\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"7.0\")\nc1 = Col(\"Column\", [\"plz\",\"wickeln\",\"telefon\",\"preis\",\"stadt\",\"zustand\",\"wc_buegel_rechts\",\"wc_buegel_links\"], \"string\")\nc2 = Col(\"Kind\", [\"numeric\",\"numeric\",\"numeric\",\"numeric\",\"category\",\"category\",\"numeric\",\"numeric\"], \"string\")\nc3 = Col(\"Type\", [\"int64\",\"float64\",\"object\",\"float64\",\"object\",\"object\",\"float64\",\"float64\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"8\",\"71\",\"85\",\"0\",\"0\",\"200\",\"200\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"plz\", [80804.0,80339.0])\nchart = BarChart([\"München\",\"Pullach im Isartal\"], [series], \"grouped\", \"stadt\", \"plz\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 78 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
+  }
+}
