@@ -52,6 +52,16 @@ class CkanAgentWorkflowTests(TestCase):
 
         self.assertEqual(fallback.args["query"], "population")
 
+    def test_fallback_search_extracts_openui_clicked_content(self) -> None:
+        session = AgentSession(
+            '<content>Find CKAN bike counter datasets</content><context>["User clicked: Find CKAN bike counter datasets",{}]</context>',
+            "https://opendata.muenchen.de/",
+        )
+
+        fallback = fallback_action(session)
+
+        self.assertEqual(fallback.args["query"], "bike counter")
+
     def test_unknown_action_is_rejected(self) -> None:
         session = AgentSession("Find data", "https://opendata.muenchen.de/")
         action = AgentAction("delete_everything", {}, "bad", 1)
@@ -220,6 +230,42 @@ class CkanAgentWorkflowTests(TestCase):
         self.assertIn("progress1 = ListItem", content)
         self.assertIn("Selected Population CSV", content)
         parse_openui_lang(content)
+
+    @patch("app.ckan_agent.package_search")
+    def test_chat_route_cleans_clicked_followup_payload(self, package_search_mock) -> None:
+        package_search_mock.return_value = {"count": 0, "results": []}
+        client = TestClient(app)
+
+        with patch.object(app_module, "call_role_model", side_effect=_FailingModel()):
+            response = client.post(
+                "/api/chat",
+                json={
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": '<content>Find CKAN bike counter datasets</content><context>["User clicked: Find CKAN bike counter datasets",{}]</context>',
+                        }
+                    ]
+                },
+            )
+
+        queries = [call.args[1] for call in package_search_mock.call_args_list]
+        self.assertEqual(queries[0], "bike counter")
+        self.assertTrue(all("content" not in query and "context" not in query for query in queries))
+        self.assertIn("Request: Find CKAN bike counter datasets", response.text)
+        self.assertNotIn("content bike counter content", response.text)
+
+    @patch("app.ckan_agent.package_search")
+    def test_chat_route_treats_bycycles_as_retrieval(self, package_search_mock) -> None:
+        package_search_mock.return_value = {"count": 0, "results": []}
+        client = TestClient(app)
+
+        with patch.object(app_module, "call_role_model", side_effect=_FailingModel()):
+            response = client.post("/api/chat", json={"messages": [{"role": "user", "content": "what about bycycles"}]})
+
+        self.assertIsNotNone(package_search_mock.call_args)
+        self.assertIn("Finding dataset", response.text)
+        self.assertNotIn("Dataset analysis", response.text)
 
     @patch("app.ckan_agent.package_show")
     @patch("app.ckan_agent.package_search")

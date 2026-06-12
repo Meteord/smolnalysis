@@ -102,6 +102,7 @@ def run_ckan_agent(
     model_caller: Callable[[str, list[dict[str, str]], str], ModelResponse] = call_role_model,
     max_tool_calls: int = MAX_TOOL_CALLS,
 ) -> AgentResult:
+    prompt = _clean_prompt(prompt)
     session = AgentSession(
         prompt=prompt.strip() or "Find a dataset",
         endpoint=_normalize_endpoint_or_default(endpoint),
@@ -328,7 +329,14 @@ def _next_model_action(
 
 
 def _initial_messages(prompt: str, endpoint: str | None, history: list[dict[str, str]] | None) -> list[dict[str, str]]:
-    messages = list(history or [])
+    messages = []
+    for message in history or []:
+        role = str(message.get("role", "")).strip()
+        content = str(message.get("content", "")).strip()
+        if role == "user":
+            content = _clean_prompt(content)
+        if role and content:
+            messages.append({"role": role, "content": content})
     messages.append(
         {
             "role": "user",
@@ -456,6 +464,7 @@ def _fallback_query(prompt: str, searched_queries: list[str] | int | None = None
 
 
 def _search_terms(prompt: str) -> list[str]:
+    prompt = _clean_prompt(prompt)
     stopwords = {
         "api",
         "assistant",
@@ -495,6 +504,17 @@ def _unique_queries(queries: list[str]) -> list[str]:
         if clean and clean not in unique:
             unique.append(clean)
     return unique or ["open data"]
+
+
+def _clean_prompt(prompt: str) -> str:
+    value = str(prompt or "").strip()
+    content_match = re.search(r"<content>(.*?)</content>", value, re.IGNORECASE | re.DOTALL)
+    if content_match:
+        value = content_match.group(1).strip()
+    value = re.sub(r"<context>.*?</context>", " ", value, flags=re.IGNORECASE | re.DOTALL)
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = re.sub(r"\s+", " ", value).strip()
+    return value
 
 
 def _normalize_endpoint_or_default(endpoint: str | None) -> str:

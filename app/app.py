@@ -4,6 +4,7 @@ import asyncio
 import json
 import logging
 import os
+import re
 import time
 import traceback
 import uuid
@@ -95,10 +96,21 @@ def _message_text(message: dict[str, Any]) -> str:
     return str(content)
 
 
+def _clean_user_prompt(text: str) -> str:
+    value = str(text or "").strip()
+    content_match = re.search(r"<content>(.*?)</content>", value, re.IGNORECASE | re.DOTALL)
+    if content_match:
+        value = content_match.group(1).strip()
+    value = re.sub(r"<context>.*?</context>", " ", value, flags=re.IGNORECASE | re.DOTALL)
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = re.sub(r"\s+", " ", value).strip()
+    return value
+
+
 def _last_user_prompt(messages: list[dict[str, Any]]) -> str:
     for message in reversed(messages):
         if message.get("role") == "user":
-            return _message_text(message).strip()
+            return _clean_user_prompt(_message_text(message))
     return ""
 
 
@@ -109,12 +121,15 @@ def _chat_messages(messages: list[dict[str, Any]]) -> list[dict[str, str]]:
         if role not in {"system", "user", "assistant"}:
             continue
         content = _message_text(message).strip()
+        if role == "user":
+            content = _clean_user_prompt(content)
         if content:
             chat_messages.append({"role": role, "content": content})
     return chat_messages
 
 
 def build_openui_response(prompt: str) -> str:
+    prompt = _clean_user_prompt(prompt)
     return build_workflow_response(prompt, dataset_path=_default_dataset_path_for_prompt(prompt))
 
 
@@ -123,11 +138,12 @@ def build_workflow_response(prompt: str, ckan_endpoint: str | None = None, datas
 
 
 def _default_dataset_path_for_prompt(prompt: str) -> str | None:
+    prompt = _clean_user_prompt(prompt)
     lower = prompt.casefold()
     analysis_terms = ("this dataset", "summarize", "summary", "schema", "columns", "quality", "missing", "trend", "statistics", "chart", "histogram")
     if any(term in lower for term in analysis_terms):
         return str(DEMO_CSV) if DEMO_CSV.exists() else None
-    retrieval_terms = ("ckan", "resource", "catalog", "search", "find", "retrieve", "open data")
+    retrieval_terms = ("ckan", "resource", "catalog", "search", "find", "retrieve", "open data", "bike", "bicycle", "bycycle", "bycycles", "fahrrad", "counter", "traffic")
     if any(term in lower for term in retrieval_terms):
         return None
     return str(DEMO_CSV) if DEMO_CSV.exists() else None
@@ -391,8 +407,8 @@ def _json_arg_safe(value: Any) -> str:
 def _is_retrieval_prompt(prompt: str, has_dataset: bool) -> bool:
     if has_dataset:
         return False
-    lower = prompt.casefold()
-    return any(term in lower for term in ("ckan", "dataset", "resource", "catalog", "search", "find", "retrieve", "open data"))
+    lower = _clean_user_prompt(prompt).casefold()
+    return any(term in lower for term in ("ckan", "dataset", "resource", "catalog", "search", "find", "retrieve", "open data", "bike", "bicycle", "bycycle", "bycycles", "fahrrad", "counter", "traffic"))
 
 
 async def _stream_retrieval_workflow_response(
