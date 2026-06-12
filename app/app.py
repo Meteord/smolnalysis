@@ -398,6 +398,18 @@ async def minicpm_status() -> dict[str, Any]:
         return {"backend": "llama.cpp", "model_family": "MiniCPM", "error": str(exc)}
 
 
+@app.get("/api/minicpm/probe")
+async def minicpm_probe(role: str = "general_agent") -> dict[str, Any]:
+    try:
+        try:
+            from .backend.minicpm_llama_cpp import probe_runtime
+        except ImportError:
+            from backend.minicpm_llama_cpp import probe_runtime
+        return await asyncio.to_thread(probe_runtime, role)
+    except Exception as exc:
+        return {"backend": "llama.cpp", "model_family": "MiniCPM", "error": _exception_detail(exc)}
+
+
 @app.get("/api/traces/latest")
 async def traces_latest(limit: int = 10) -> dict[str, Any]:
     traces = await _latest_traces(limit)

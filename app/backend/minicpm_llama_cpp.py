@@ -449,12 +449,60 @@ def runtime_status() -> dict[str, Any]:
             "resolved_lora_path": status.get("lora_path", ""),
             "model_error": status.get("model_error", ""),
             "lora_error": status.get("lora_error", ""),
+            "options": status.get("options", {}),
+            "llama_cpp": status.get("llama_cpp", {}),
         }
     return {
         "backend": "llama.cpp",
         "model_family": "MiniCPM",
+        "llama_cpp": llama_cpp_runtime_info(),
         "roles": roles,
         "n_ctx": DEFAULT_N_CTX,
         "n_gpu_layers": DEFAULT_N_GPU_LAYERS,
         "max_new_tokens": DEFAULT_MAX_NEW_TOKENS,
     }
+
+
+def probe_runtime(role: str = "general_agent") -> dict[str, Any]:
+    started = time.perf_counter()
+    normalized_role = normalize_role(role)
+    if normalized_role == "auto":
+        normalized_role = "general_agent"
+    result: dict[str, Any] = {
+        "role": normalized_role,
+        "llama_cpp": llama_cpp_runtime_info(),
+        "status": role_runtime_status(normalized_role),
+        "load": {},
+        "duration_ms": 0,
+    }
+    config = role_config(normalized_role)
+    try:
+        model_path = _resolve_model_path(config)
+        lora_path = _resolve_lora_path(config)
+        options = _role_runtime_options(normalized_role)
+        result["load"] = {
+            "ok": False,
+            "model_path": model_path,
+            "lora_path": lora_path,
+            "options": options,
+        }
+        from llama_cpp import Llama
+
+        kwargs: dict[str, Any] = {
+            "model_path": model_path,
+            "n_ctx": min(options["n_ctx"], 512),
+            "n_batch": min(options["n_batch"], 128),
+            "n_gpu_layers": options["n_gpu_layers"],
+            "verbose": True,
+        }
+        if options.get("n_threads") is not None:
+            kwargs["n_threads"] = options["n_threads"]
+        if lora_path:
+            kwargs["lora_path"] = lora_path
+        Llama(**kwargs)
+        result["load"]["ok"] = True
+    except Exception as exc:
+        result["load"]["error_type"] = type(exc).__name__
+        result["load"]["error"] = str(exc).strip() or type(exc).__name__
+    result["duration_ms"] = round((time.perf_counter() - started) * 1000, 1)
+    return result
