@@ -40,14 +40,18 @@ logging.basicConfig(
 
 try:
     from .agent_workflow import run_agent_workflow
+    from .ckan_agent import AgentEvent, AgentResult, run_ckan_agent
     from .ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from .backend import minicpm_transformers as _minicpm_startup
     from .llm_support import llm_status, validate_llms
+    from .model_roles import call_role_model
 except ImportError:
     from agent_workflow import run_agent_workflow
     from backend import minicpm_transformers as _minicpm_startup
+    from ckan_agent import AgentEvent, AgentResult, run_ckan_agent
     from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from llm_support import llm_status, validate_llms
+    from model_roles import call_role_model
 
 
 APP_DIR = Path(__file__).parent
@@ -305,7 +309,7 @@ def _fallback_trace(
         ],
     ]
     return {
-        "backend": "langgraph_fallback",
+        "backend": "agent_fallback",
         "model_family": "stub",
         "requested_adapter": adapter,
         "role": "fallback",
@@ -328,6 +332,156 @@ async def _stream_openui_response(openui_lang: str):
     await asyncio.sleep(0)
     yield _openai_sse_chunk({"content": openui_lang})
     await asyncio.sleep(0)
+    yield _openai_sse_chunk({}, "stop")
+    yield "data: [DONE]\n\n"
+
+
+def _retrieval_stream_prefix(prompt: str, endpoint: str) -> str:
+    progress_refs = ", ".join(f"progress{index}" for index in range(1, 13))
+    return "\n".join(
+        [
+            "root = Card([header, suggestion, progress, candidates, callout, followups])",
+            'header = CardHeader("Finding dataset", "Searching CKAN and inspecting candidates")',
+            f'context = TextContent({_json_arg_safe(f"Request: {prompt} | Endpoint: {endpoint}")}, "small")',
+            f'progress = ListBlock([{progress_refs}], "number")',
+        ]
+    )
+
+
+def _agent_stream_suffix(result: AgentResult, progress_count: int) -> str:
+    rows = [
+        {
+            "title": str(package.get("title") or package.get("name") or ""),
+            "name": str(package.get("name") or package.get("id") or ""),
+            "resources": len(package.get("resources") or []),
+        }
+        for package in result.packages[:8]
+    ]
+    if not rows:
+        rows = [{"title": "No candidates", "name": result.prompt, "resources": 0}]
+    lines = []
+    for step in range(progress_count + 1, 13):
+        lines.append(f'progress{step} = ListItem("waiting", "")')
+    columns = list(rows[0].keys())
+    for index, column in enumerate(columns):
+        lines.append(f'candidate_col{index + 1} = Col({_json_arg_safe(column)}, {_json_arg_safe([row.get(column) for row in rows])}, "string")')
+    lines.append(f'candidates = Table([{", ".join(f"candidate_col{index + 1}" for index in range(len(columns))) }])')
+    if result.selected_resource:
+        message = f"Selected {result.selected_resource.name} from {result.selected_resource.package_title}."
+    elif result.clarification:
+        message = result.clarification
+    else:
+        message = f"Stopped with status {result.status}."
+    lines.append(f'callout = Callout("info", "Retrieval result", {_json_arg_safe(message)})')
+    lines.extend(
+        [
+            'followup1 = FollowUpItem("Try a narrower CKAN search")',
+            'followup2 = FollowUpItem("Search for CSV resources only")',
+            'followup3 = FollowUpItem("Inspect the selected dataset")',
+            "followups = FollowUpBlock([followup1, followup2, followup3])",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def _json_arg_safe(value: Any) -> str:
+    return json.dumps(value, ensure_ascii=False, default=str)
+
+
+def _is_retrieval_prompt(prompt: str, has_dataset: bool) -> bool:
+    if has_dataset:
+        return False
+    lower = prompt.casefold()
+    return any(term in lower for term in ("ckan", "dataset", "resource", "catalog", "search", "find", "retrieve", "open data"))
+
+
+async def _stream_retrieval_workflow_response(
+    *,
+    prompt: str,
+    endpoint: str,
+    request_id: str,
+    request_started: str,
+    thread_id: Any,
+    ckan: dict[str, Any],
+    chat_messages: list[dict[str, str]],
+    adapter: str,
+):
+    started = time.perf_counter()
+    queue: asyncio.Queue[dict[str, Any]] = asyncio.Queue()
+    loop = asyncio.get_running_loop()
+
+    def on_event(event: AgentEvent) -> None:
+        loop.call_soon_threadsafe(queue.put_nowait, {"type": "event", "event": event})
+
+    chunks: list[str] = []
+    trace_events: list[dict[str, str]] = [{"name": "route_intent", "detail": f"dataset_retrieval: streaming CKAN agent loop for {endpoint}"}]
+    yield _openai_sse_chunk({"role": "assistant"})
+    prefix = _retrieval_stream_prefix(prompt, endpoint)
+    chunks.append(prefix)
+    yield _openai_sse_chunk({"content": f"{prefix}\n"})
+    suggestion_line = 'suggestion = Callout("info", "CKAN specialist", "The CKAN retrieval model chooses each search or inspection action; Python validates and runs the tools.")'
+    chunks.append(suggestion_line)
+    yield _openai_sse_chunk({"content": f"{suggestion_line}\n"})
+
+    def run_loop() -> None:
+        try:
+            result = run_ckan_agent(prompt, endpoint, history=chat_messages, on_event=on_event, model_caller=call_role_model)
+            loop.call_soon_threadsafe(queue.put_nowait, {"type": "done", "result": result})
+        except Exception as exc:
+            loop.call_soon_threadsafe(queue.put_nowait, {"type": "error", "error": _exception_detail(exc)})
+
+    task = asyncio.create_task(asyncio.to_thread(run_loop))
+
+    final_result: AgentResult | None = None
+    progress_count = 0
+    while True:
+        item = await queue.get()
+        if item["type"] == "event":
+            event: AgentEvent = item["event"]
+            progress_count += 1
+            trace_events.append({"name": event.type, "detail": event.detail})
+            if progress_count <= 12:
+                line = f"progress{progress_count} = ListItem({_json_arg_safe(event.type)}, {_json_arg_safe(event.detail)})"
+                chunks.append(line)
+                yield _openai_sse_chunk({"content": f"{line}\n"})
+            await asyncio.sleep(0)
+            continue
+        if item["type"] == "done":
+            final_result = item["result"]
+            suffix = _agent_stream_suffix(final_result, progress_count)
+            chunks.append(suffix)
+            yield _openai_sse_chunk({"content": suffix})
+            break
+        error_suffix = _agent_stream_error_suffix(str(item.get("error", "unknown error")), progress_count)
+        chunks.append(error_suffix)
+        yield _openai_sse_chunk({"content": error_suffix})
+        break
+
+    await task
+    openui_lang = "\n".join(chunks)
+    trace = {
+        "request_id": request_id,
+        "thread_id": thread_id,
+        "created_at": request_started,
+        "completed_at": _now_iso(),
+        "ckan": ckan,
+        "backend": "simple_ckan_agent",
+        "model_family": "python",
+        "requested_adapter": adapter,
+        "role": "dataset_retrieval",
+        "message_count": len(chat_messages),
+        "events": trace_events,
+        "runtime": {"ckan_endpoint": endpoint, "streaming": True},
+        "duration_ms": round((time.perf_counter() - started) * 1000, 1),
+        "output_chars": len(openui_lang),
+    }
+    if final_result is not None:
+        trace["retrieval"] = {
+            "status": final_result.status,
+            "selected": final_result.selected_resource.name if final_result.selected_resource else "",
+            "confidence": final_result.confidence,
+        }
+    await _remember_trace(trace)
     yield _openai_sse_chunk({}, "stop")
     yield "data: [DONE]\n\n"
 
@@ -368,6 +522,22 @@ async def chat(request: Request) -> StreamingResponse:
     prompt = _last_user_prompt(messages if isinstance(messages, list) else []) or "Summarize this dataset"
     ckan_base_url = ckan.get("base_url") if isinstance(ckan, dict) else None
     dataset_path = _default_dataset_path_for_prompt(prompt)
+    if _is_retrieval_prompt(prompt, has_dataset=bool(dataset_path)):
+        endpoint = ckan_base_url or DEFAULT_CKAN_ENDPOINT
+        return StreamingResponse(
+            _stream_retrieval_workflow_response(
+                prompt=prompt,
+                endpoint=endpoint,
+                request_id=request_id,
+                request_started=request_started,
+                thread_id=body.get("threadId"),
+                ckan=ckan if isinstance(ckan, dict) else {},
+                chat_messages=chat_messages,
+                adapter=adapter,
+            ),
+            media_type="text/event-stream",
+            headers={"x-smolnalysis-trace-id": request_id},
+        )
     workflow = await asyncio.to_thread(run_agent_workflow, prompt, ckan_base_url, dataset_path)
     assistant_text = str(workflow.get("openui_lang", ""))
     trace = _workflow_trace(chat_messages, adapter, workflow)
@@ -392,7 +562,7 @@ async def chat(request: Request) -> StreamingResponse:
 def _workflow_trace(messages: list[dict[str, str]], adapter: str, workflow: dict[str, Any]) -> dict[str, Any]:
     steps = workflow.get("steps", [])
     return {
-        "backend": "deterministic_workflow",
+        "backend": "simple_agent_workflow",
         "model_family": "python",
         "requested_adapter": adapter,
         "role": workflow.get("intent", {}).get("task_type", "workflow") if isinstance(workflow.get("intent"), dict) else "workflow",
@@ -409,6 +579,26 @@ def _workflow_trace(messages: list[dict[str, str]], adapter: str, workflow: dict
         "duration_ms": 0,
         "output_chars": len(str(workflow.get("openui_lang", ""))),
     }
+
+
+def _agent_stream_error_suffix(error: str, progress_count: int) -> str:
+    lines = []
+    for step in range(progress_count + 1, 13):
+        lines.append(f'progress{step} = ListItem("waiting", "")')
+    lines.extend(
+        [
+            f'candidate_col1 = Col("title", {_json_arg_safe(["No candidates"])}, "string")',
+            f'candidate_col2 = Col("name", {_json_arg_safe(["retrieval failed"])}, "string")',
+            f'candidate_col3 = Col("resources", {_json_arg_safe([0])}, "number")',
+            "candidates = Table([candidate_col1, candidate_col2, candidate_col3])",
+            f'callout = Callout("error", "Retrieval failed", {_json_arg_safe(error)})',
+            'followup1 = FollowUpItem("Try a narrower CKAN search")',
+            'followup2 = FollowUpItem("Check the CKAN endpoint")',
+            'followup3 = FollowUpItem("Search for CSV resources only")',
+            "followups = FollowUpBlock([followup1, followup2, followup3])",
+        ]
+    )
+    return "\n".join(lines)
 
 
 @app.get("/api/ckan/default")

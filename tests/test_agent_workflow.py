@@ -2,11 +2,9 @@ from __future__ import annotations
 
 import json
 import importlib
-import os
 import sys
-import tempfile
 from pathlib import Path
-from typing import Any, cast
+from typing import Any
 from unittest import TestCase, main
 from unittest.mock import patch
 
@@ -15,149 +13,256 @@ from fastapi.testclient import TestClient
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from app.agent_workflow import (
-    DEFAULT_CKAN_ENDPOINT,
-    build_agent_workflow,
-    build_openui_lang,
-    classify_intent,
-    run_agent_workflow,
+from app.ckan_agent import (
+    AgentAction,
+    AgentSession,
+    ModelResponse,
+    fallback_action,
+    generate_openui_for_result,
+    parse_agent_action,
+    run_ckan_agent,
+    validate_action,
 )
-from app.openui_support import OpenUIValidationError, parse_openui_lang
+from app.openui_support import parse_openui_lang
 
 app_module = importlib.import_module("app.app")
 app = app_module.app
 
 
-class AgentWorkflowTests(TestCase):
-    def test_graph_compiles_and_returns_valid_openui_lang(self) -> None:
-        graph = build_agent_workflow()
-        result = graph.invoke({"prompt": "Summarize this dataset", "ckan_endpoint": DEFAULT_CKAN_ENDPOINT, "dataset_path": _csv_fixture(), "steps": []})
+class CkanAgentWorkflowTests(TestCase):
+    def test_valid_json_action_parses(self) -> None:
+        action = parse_agent_action('{"action":"package_search","args":{"query":"population","rows":5},"reason":"start","confidence":0.7}')
 
-        self.assertIn("openui_lang", result)
-        self.assertIn("root = Card", result["openui_lang"])
-        parse_openui_lang(result["openui_lang"])
+        self.assertEqual(action.action, "package_search")
+        self.assertEqual(action.args["query"], "population")
+        self.assertEqual(action.confidence, 0.7)
 
-    def test_deterministic_router_selects_retrieval(self) -> None:
-        intent = classify_intent("Find CKAN population datasets", has_dataset=False)
+    def test_invalid_json_falls_back_to_search(self) -> None:
+        session = AgentSession("Find population datasets", "https://opendata.muenchen.de/")
 
-        self.assertEqual(intent.task_type, "dataset_retrieval")
+        fallback = fallback_action(session)
 
-    def test_deterministic_router_selects_analysis_when_dataset_exists(self) -> None:
-        intent = classify_intent("List the columns and missing values", has_dataset=True)
+        self.assertEqual(fallback.action, "package_search")
+        self.assertIn("population", fallback.args["query"])
 
-        self.assertEqual(intent.task_type, "analysis")
-        self.assertEqual(intent.desired_visualization, "schema")
+    def test_unknown_action_is_rejected(self) -> None:
+        session = AgentSession("Find data", "https://opendata.muenchen.de/")
+        action = AgentAction("delete_everything", {}, "bad", 1)
 
-    def test_deterministic_router_selects_openui_without_data(self) -> None:
-        intent = classify_intent("Render this as OpenUI cards", has_dataset=False)
+        _validated, error = validate_action(action, session)
 
-        self.assertEqual(intent.task_type, "openui_generation")
+        self.assertIn("Unknown action", error)
 
-    @patch("app.agent_workflow.package_show")
-    @patch("app.agent_workflow.package_search")
-    def test_ckan_workflow_uses_tool_results(self, package_search_mock, package_show_mock) -> None:
+    def test_unobserved_package_show_is_rejected(self) -> None:
+        session = AgentSession("Find data", "https://opendata.muenchen.de/")
+        action = AgentAction("package_show", {"package_id": "missing"}, "inspect", 0.5)
+
+        _validated, error = validate_action(action, session)
+
+        self.assertIn("not observed", error)
+
+    def test_unobserved_resource_selection_is_rejected(self) -> None:
+        session = AgentSession("Find data", "https://opendata.muenchen.de/")
+        action = AgentAction("select_resource", {"resource_id": "missing"}, "select", 0.5)
+
+        _validated, error = validate_action(action, session)
+
+        self.assertIn("not observed", error)
+
+    @patch("app.ckan_agent.package_show")
+    @patch("app.ckan_agent.package_search")
+    def test_agent_loop_searches_inspects_and_selects(self, package_search_mock, package_show_mock) -> None:
         package = _ckan_package()
         package_search_mock.return_value = {"count": 1, "results": [package]}
         package_show_mock.return_value = package
-
-        result = cast(dict[str, Any], run_agent_workflow("Find CKAN population datasets", "https://opendata.muenchen.de/"))
-
-        retrieval = result["retrieval_result"]
-        self.assertEqual(retrieval["query"], "population")
-        self.assertEqual(retrieval["selected"]["resource_id"], "res-1")
-        self.assertTrue(result["analysis_result"]["errors"])
-        parse_openui_lang(result["openui_lang"])
-
-    @patch("app.agent_workflow.package_search")
-    def test_ckan_workflow_handles_no_suitable_resource(self, package_search_mock) -> None:
-        package_search_mock.return_value = {"count": 1, "results": [{**_ckan_package(), "resources": []}]}
-
-        result = cast(dict[str, Any], run_agent_workflow("Find CKAN budget datasets", "https://opendata.muenchen.de/"))
-
-        self.assertIsNone(result["retrieval_result"]["selected"])
-        self.assertIn("No CSV-like dataset", result["analysis_result"]["errors"][0])
-        parse_openui_lang(result["openui_lang"])
-
-    def test_analysis_uses_csv_fixture_for_schema(self) -> None:
-        result = cast(dict[str, Any], run_agent_workflow("List the columns and missing values", dataset_path=_csv_fixture()))
-
-        analysis = result["analysis_result"]
-        self.assertGreaterEqual(analysis["rows"], 3)
-        self.assertGreaterEqual(analysis["columns"], 3)
-        self.assertIn("city", [column["column"] for column in analysis["schema"]])
-        self.assertIn("table = Table", result["openui_lang"])
-        parse_openui_lang(result["openui_lang"])
-
-    def test_analysis_builds_bar_chart_data(self) -> None:
-        result = cast(dict[str, Any], run_agent_workflow("Show a bar chart of population by city", dataset_path=_csv_fixture()))
-
-        analysis = result["analysis_result"]
-        self.assertEqual(analysis["chart_x"], "city")
-        self.assertEqual(analysis["chart_y"], "population")
-        self.assertIn("chart = BarChart", result["openui_lang"])
-
-    def test_analysis_handles_no_numeric_columns(self) -> None:
-        path = _temp_csv("name,type\nAlpha,A\nBeta,B\n")
-
-        result = cast(dict[str, Any], run_agent_workflow("Show a histogram", dataset_path=path))
-
-        self.assertEqual(result["analysis_result"]["numeric_column"], "")
-        parse_openui_lang(result["openui_lang"])
-
-    def test_openui_parser_rejects_undefined_references(self) -> None:
-        with self.assertRaises(OpenUIValidationError):
-            parse_openui_lang('root = Card([missing])\nheader = CardHeader("x", "y")')
-
-    def test_template_openui_parses(self) -> None:
-        result = cast(dict[str, Any], run_agent_workflow("Summarize this dataset", dataset_path=_csv_fixture()))
-
-        parse_openui_lang(result["openui_lang"])
-
-    def test_chat_route_streams_workflow_openui_lang(self) -> None:
-        client = TestClient(app)
-        response = client.post(
-            "/api/chat",
-            json={
-                "messages": [{"role": "user", "content": "List the columns and missing values"}],
-                "ckan": {"connected": False, "base_url": "https://opendata.muenchen.de/"},
-            },
+        model = _ModelScript(
+            [
+                {"action": "package_search", "args": {"query": "population", "rows": 5}, "reason": "search", "confidence": 0.6},
+                {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect", "confidence": 0.7},
+                {"action": "select_resource", "args": {"resource_id": "res-1"}, "reason": "best csv", "confidence": 0.9},
+            ]
         )
 
-        self.assertEqual(response.status_code, 200)
-        self.assertTrue(response.headers.get("x-smolnalysis-trace-id"))
+        result = run_ckan_agent("Find population datasets", "https://opendata.muenchen.de/", model_caller=model)
+
+        self.assertEqual(result.status, "selected")
+        self.assertEqual(result.selected_resource.resource_id, "res-1")
+        self.assertEqual([event.type for event in result.events if event.type == "tool_call"], ["tool_call", "tool_call"])
+        self.assertTrue(any("Tool observation" in message["content"] for message in result.messages if message["role"] == "user"))
+
+    @patch("app.ckan_agent.package_show")
+    @patch("app.ckan_agent.package_search")
+    def test_agent_loop_refines_after_weak_results(self, package_search_mock, package_show_mock) -> None:
+        weak_package = {**_ckan_package(), "resources": [{"id": "meta", "name": "Metadata XML", "format": "XML", "url": "https://example.org/meta.xml"}]}
+        strong_package = _ckan_package()
+        package_search_mock.side_effect = [
+            {"count": 1, "results": [weak_package]},
+            {"count": 1, "results": [strong_package]},
+        ]
+        package_show_mock.side_effect = [weak_package, strong_package]
+        model = _ModelScript(
+            [
+                {"action": "package_search", "args": {"query": "population metadata", "rows": 5}, "reason": "start", "confidence": 0.5},
+                {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect weak", "confidence": 0.5},
+                {"action": "package_search", "args": {"query": "population csv", "rows": 5}, "reason": "refine", "confidence": 0.6},
+                {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect strong", "confidence": 0.7},
+                {"action": "select_resource", "args": {"resource_id": "res-1"}, "reason": "csv", "confidence": 0.9},
+            ]
+        )
+
+        result = run_ckan_agent("Find population datasets", "https://opendata.muenchen.de/", model_caller=model)
+
+        self.assertEqual(package_search_mock.call_count, 2)
+        self.assertEqual(result.selected_resource.resource_id, "res-1")
+
+    @patch("app.ckan_agent.package_search")
+    def test_model_failure_falls_back_to_deterministic_query(self, package_search_mock) -> None:
+        package_search_mock.return_value = {"count": 0, "results": []}
+
+        result = run_ckan_agent("Find schools", "https://opendata.muenchen.de/", model_caller=_FailingModel(), max_tool_calls=1)
+
+        self.assertEqual(result.status, "max_tool_calls")
+        self.assertEqual(package_search_mock.call_args.args[1], "schools")
+        self.assertTrue(any(event.type == "retry" for event in result.events))
+
+    @patch("app.ckan_agent.package_search")
+    def test_loop_stops_at_max_tool_calls(self, package_search_mock) -> None:
+        package_search_mock.return_value = {"count": 0, "results": []}
+        model = _ModelScript([{"action": "package_search", "args": {"query": "nothing", "rows": 5}, "reason": "again", "confidence": 0.4}] * 4)
+
+        result = run_ckan_agent("Find nothing", "https://opendata.muenchen.de/", model_caller=model, max_tool_calls=2)
+
+        self.assertEqual(result.status, "max_tool_calls")
+        self.assertEqual(package_search_mock.call_count, 2)
+
+    def test_openui_generation_accepts_valid_model_output(self) -> None:
+        result = _selected_result()
+        model = _TextModel('root = Card([header])\nheader = CardHeader("Dataset", "Selected")')
+
+        openui_lang = generate_openui_for_result(result, model_caller=model)
+
+        parse_openui_lang(openui_lang)
+        self.assertIn("Dataset", openui_lang)
+
+    def test_openui_generation_repairs_once(self) -> None:
+        result = _selected_result()
+        model = _TextSequence(["not openui", 'root = Card([header])\nheader = CardHeader("Fixed", "OK")'])
+
+        openui_lang = generate_openui_for_result(result, model_caller=model)
+
+        self.assertIn("Fixed", openui_lang)
+        self.assertEqual(model.calls, 2)
+
+    def test_openui_generation_falls_back_after_invalid_output(self) -> None:
+        result = _selected_result()
+        model = _TextSequence(["not openui", "still not openui"])
+
+        openui_lang = generate_openui_for_result(result, model_caller=model)
+
+        self.assertIn("Dataset search", openui_lang)
+        parse_openui_lang(openui_lang)
+
+    @patch("app.ckan_agent.package_show")
+    @patch("app.ckan_agent.package_search")
+    def test_chat_route_streams_retrieval_progress(self, package_search_mock, package_show_mock) -> None:
+        package = _ckan_package()
+        package_search_mock.return_value = {"count": 1, "results": [package]}
+        package_show_mock.return_value = package
+        model = _ModelScript(
+            [
+                {"action": "package_search", "args": {"query": "population", "rows": 5}, "reason": "search", "confidence": 0.6},
+                {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect", "confidence": 0.7},
+                {"action": "select_resource", "args": {"resource_id": "res-1"}, "reason": "select", "confidence": 0.9},
+            ]
+        )
+        client = TestClient(app)
+
+        with patch.object(app_module, "call_role_model", side_effect=model):
+            response = client.post(
+                "/api/chat",
+                json={
+                    "messages": [{"role": "user", "content": "Find CKAN population datasets"}],
+                    "ckan": {"connected": True, "base_url": "https://opendata.muenchen.de/"},
+                },
+            )
+
         chunks = [line.removeprefix("data: ") for line in response.text.splitlines() if line.startswith("data: ") and line != "data: [DONE]"]
         payloads = [json.loads(chunk) for chunk in chunks]
-        content = "".join(payload["choices"][0]["delta"].get("content", "") for payload in payloads)
-        self.assertIn("root = Card", content)
-        self.assertIn("table = Table", content)
+        content_chunks = [payload["choices"][0]["delta"].get("content", "") for payload in payloads]
+        content = "".join(content_chunks)
+
+        self.assertGreaterEqual(len([chunk for chunk in content_chunks if chunk]), 4)
+        self.assertIn("Finding dataset", content)
+        self.assertIn("progress1 = ListItem", content)
+        self.assertIn("Selected Population CSV", content)
         parse_openui_lang(content)
 
-    def test_chat_trace_can_be_read_back(self) -> None:
+    @patch("app.ckan_agent.package_show")
+    @patch("app.ckan_agent.package_search")
+    def test_chat_trace_records_model_and_tool_events(self, package_search_mock, package_show_mock) -> None:
+        package = _ckan_package()
+        package_search_mock.return_value = {"count": 1, "results": [package]}
+        package_show_mock.return_value = package
         client = TestClient(app)
-        response = client.post("/api/chat", json={"messages": [{"role": "user", "content": "Show a histogram of median_age"}]})
+
+        with patch.object(app_module, "call_role_model", side_effect=_ModelScript([
+            {"action": "package_search", "args": {"query": "population", "rows": 5}, "reason": "search", "confidence": 0.6},
+            {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect", "confidence": 0.7},
+            {"action": "select_resource", "args": {"resource_id": "res-1"}, "reason": "select", "confidence": 0.9},
+        ])):
+            response = client.post("/api/chat", json={"messages": [{"role": "user", "content": "Find CKAN population datasets"}]})
+
         trace_id = response.headers["x-smolnalysis-trace-id"]
+        trace = client.get(f"/api/traces/{trace_id}").json()
 
-        trace_response = client.get(f"/api/traces/{trace_id}")
-
-        self.assertEqual(trace_response.status_code, 200)
-        payload = trace_response.json()
-        self.assertEqual(payload["request_id"], trace_id)
-        self.assertEqual(payload["backend"], "deterministic_workflow")
-        self.assertEqual(payload["role"], "analysis")
+        self.assertEqual(trace["backend"], "simple_ckan_agent")
+        self.assertTrue(any(event["name"] == "model_action" for event in trace["events"]))
+        self.assertTrue(any(event["name"] == "tool_call" for event in trace["events"]))
+        self.assertEqual(trace["retrieval"]["selected"], "Population CSV")
 
 
-def _csv_fixture() -> str:
-    path = Path(__file__).resolve().parents[1] / "app" / "examples" / "demo_cities.csv"
-    if path.exists():
-        return str(path)
-    return _temp_csv("city,population,median_age\nBerlin,3677000,42.6\nHamburg,1906000,42.1\nMunich,1512000,41.5\n")
+class _ModelScript:
+    def __init__(self, actions: list[dict[str, Any]]) -> None:
+        self.actions = list(actions)
+
+    def __call__(self, role: str, messages: list[dict[str, str]], response_contract: str = "") -> ModelResponse:
+        if not self.actions:
+            action = {"action": "finish", "args": {}, "reason": "done", "confidence": 0.1}
+        else:
+            action = self.actions.pop(0)
+        return ModelResponse(json.dumps(action), {"role": role, "events": [{"name": "generate", "detail": "ok"}]})
 
 
-def _temp_csv(content: str) -> str:
-    handle = tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False, encoding="utf-8")
-    handle.write(content)
-    handle.close()
-    return handle.name
+class _FailingModel:
+    def __call__(self, role: str, messages: list[dict[str, str]], response_contract: str = "") -> ModelResponse:
+        raise RuntimeError("model unavailable")
+
+
+class _TextModel:
+    def __init__(self, text: str) -> None:
+        self.text = text
+
+    def __call__(self, role: str, messages: list[dict[str, str]], response_contract: str = "") -> ModelResponse:
+        return ModelResponse(self.text, {"role": role})
+
+
+class _TextSequence:
+    def __init__(self, texts: list[str]) -> None:
+        self.texts = list(texts)
+        self.calls = 0
+
+    def __call__(self, role: str, messages: list[dict[str, str]], response_contract: str = "") -> ModelResponse:
+        self.calls += 1
+        return ModelResponse(self.texts.pop(0), {"role": role})
+
+
+def _selected_result():
+    return run_ckan_agent(
+        "Find population datasets",
+        "https://opendata.muenchen.de/",
+        model_caller=_ModelScript([{"action": "finish", "args": {}, "reason": "done", "confidence": 0.1}]),
+        max_tool_calls=0,
+    )
 
 
 def _ckan_package() -> dict[str, Any]:

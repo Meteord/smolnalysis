@@ -43,7 +43,7 @@ Longer term, the Space should keep this Gradio Server app as the public UI and r
 - Gradio `Server` backend with custom FastAPI routes
 - Public CKAN endpoint configuration and validation
 - Server-side OpenAI-compatible LLM role configuration
-- Deterministic LangGraph workflow behind `/api/chat`
+- Simple CKAN agent loop behind `/api/chat`, with streaming tool progress
 - Dataset-aware deterministic chat interaction using `examples/demo_cities.csv`
 - Template-backed OpenUI-Lang backend contract
 - OpenUI's native `FullScreen` chat component
@@ -60,7 +60,8 @@ The app keeps OpenUI support modular:
 - `app.py` owns the Gradio `Server`, serves the frontend, and exposes `/api/chat` plus the Gradio `respond` API.
 - MiniCPM backend modules own the optional model runtimes used for status/probe endpoints and later LoRA-backed specialists.
 - `backend/adapter_registry.py` maps backend adapter names to checkpoints under `models/gemma`.
-- `agent_workflow.py` defines the deterministic LangGraph workflow, typed artifacts, CKAN retrieval, pandas analysis, and OpenUI templates.
+- `ckan_agent.py` defines the explicit CKAN retrieval loop, role action contract, tool execution, progress events, and retrieval OpenUI fallback.
+- `agent_workflow.py` is a small compatibility wrapper for the Gradio `respond` API and demo dataset fallback.
 - `ckan_support.py` validates public CKAN endpoints through the Action API v3.
 - `llm_support.py` parses server-side LLM role settings with `pydantic-settings`.
 - `openui_support.py` defines OpenUI-Lang parsing, validation, rendering support, and legacy demo helpers.
@@ -76,7 +77,7 @@ The app keeps OpenUI support modular:
 The backend exposes four configurable OpenAI-compatible LLM roles:
 
 - `general_agent`: plans the overall workflow
-- `ckan_tool`: works with CKAN search/tool-calling
+- `ckan_retrieval`: proposes CKAN search, package inspection, and resource selection actions
 - `data_analysis`: analyzes loaded resource data
 - `openui_translator`: converts analysis results to OpenUI-Lang
 
@@ -105,7 +106,7 @@ SMOLNALYSIS_LLM_<ROLE>_BASE_URL=...
 SMOLNALYSIS_LLM_<ROLE>_API_KEY=...
 ```
 
-The current `/api/chat` path runs the deterministic workflow and streams the assistant OpenUI-Lang response as OpenAI-compatible SSE chunks. The MiniCPM role backends are still available for status/probe endpoints and future LoRA specialist integration.
+The current `/api/chat` path runs the CKAN retrieval loop for dataset search prompts and streams OpenUI-Lang progress as OpenAI-compatible SSE chunks. The `ckan_tool` environment variable names remain supported as compatibility aliases, but runtime logic normalizes that role to `ckan_retrieval`.
 
 ## Hugging Face Tracing
 
@@ -118,17 +119,15 @@ Set `SMOLNALYSIS_HF_TRACING_ENABLED=true` to emit OpenTelemetry spans around the
 
 For local debugging, set `SMOLNALYSIS_HF_TRACING_CONSOLE=true`. To export to a collector, set `SMOLNALYSIS_HF_TRACING_OTLP_ENDPOINT`, for example `http://localhost:4318/v1/traces`. Spans include model, adapter, generation parameters, and token counts, but not prompt or response text.
 
-## LangGraph Workflow
+## CKAN Agent Loop
 
-`/api/chat` and the Gradio `respond` API invoke a compiled LangGraph `StateGraph` with these nodes:
+Dataset/catalog prompts run a small Python-owned loop:
 
-- `route_intent`
-- `retrieve_ckan`
-- `analyze_data`
-- `plan_openui`
-- `translate_openui`
-
-The router is deterministic for the MVP: dataset/catalog prompts use CKAN retrieval, local/demo dataset prompts use pandas analysis, and OpenUI-Lang is generated from validated templates. The workflow records structured artifacts for intent, retrieval, analysis, UI planning, final OpenUI-Lang, and trace events.
+- `ckan_retrieval` receives the user request, endpoint, message history, and compact tool observations.
+- The role may emit only strict JSON actions: `package_search`, `package_show`, `select_resource`, `finish`, or `ask_clarification`.
+- Python validates every action, executes CKAN Action API calls, records progress events, and stops after a bounded number of tool calls.
+- `/api/chat` streams those events as OpenUI-Lang list items, then renders a retrieval result table and selected resource callout.
+- Later, `openui_translator` can turn the selected resource plus analysis payload into richer OpenUI-Lang; the fallback template stays available when generated OpenUI is invalid.
 
 ## CKAN Endpoint Connection
 
@@ -138,7 +137,7 @@ The current CKAN slice is intentionally small:
 - Authentication: public/anonymous only
 - Validation: `/api/3/action/site_read` plus `/api/3/action/package_search?rows=0`
 - UI state: the last successful endpoint is stored in browser `localStorage`
-- Included in the MVP workflow: CKAN package search/package inspection, CSV-like resource selection, bounded CSV loading, and basic deterministic analysis
+- Included in the MVP workflow: CKAN package search/package inspection, CSV-like resource selection, progress streaming, and deterministic retrieval result UI
 
 For deployed safety, private and link-local endpoint addresses are blocked unless `SMOLNALYSIS_ALLOW_LOCAL_CKAN=true` is set.
 
