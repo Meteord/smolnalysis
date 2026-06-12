@@ -13,8 +13,10 @@ sys.path.insert(0, str(DATA_DIR))
 
 from demo_adapters import (  # noqa: E402
     DemoResult,
+    apply_question_override,
     clean_model_output,
     discover_adapters,
+    prompt_messages_for_generation,
     parse_openui_assignments,
     render_openui_preview,
     select_sample,
@@ -40,6 +42,31 @@ class OpenUIDemoAdaptersTest(unittest.TestCase):
 
         self.assertTrue(sample_path.name.endswith(".json"))
         self.assertIn("messages", sample)
+
+    def test_question_override_updates_json_user_payload_without_mutating_sample(self):
+        _, sample = select_sample(None, "test", 0)
+        original_content = sample["messages"][1]["content"]
+
+        updated = apply_question_override(sample, "Show average sunshine hours.")
+        prompt_messages = prompt_messages_for_generation(updated)
+
+        self.assertEqual(sample["messages"][1]["content"], original_content)
+        self.assertIn("Show average sunshine hours.", prompt_messages[-1]["content"])
+        self.assertNotIn("Show average sunshine hours.", original_content)
+
+    def test_question_override_updates_dict_user_payload(self):
+        sample = {
+            "messages": [
+                {"role": "system", "content": "system"},
+                {"role": "user", "content": {"task": "render_openui", "user_question": "old"}},
+                {"role": "assistant", "content": "root = Card([])"},
+            ]
+        }
+
+        updated = apply_question_override(sample, "new question")
+
+        self.assertIn('"user_question": "new question"', updated["messages"][1]["content"])
+        self.assertEqual(sample["messages"][1]["content"]["user_question"], "old")
 
     def test_clean_model_output_removes_fences_and_prefix(self):
         output = clean_model_output('notes first\n```openui-lang\nroot = Card([header])\nheader = CardHeader("A", "B")\n```')

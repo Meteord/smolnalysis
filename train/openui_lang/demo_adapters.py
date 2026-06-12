@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import argparse
-import base64
+import copy
 import html
 import json
 import re
@@ -44,6 +44,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-new-tokens", type=int, default=1800)
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--top-p", type=float, default=1.0)
+    parser.add_argument(
+        "--question",
+        help="Override the sample user_question in memory. The JSON sample file is not modified.",
+    )
     parser.add_argument("--load-in-4bit", action="store_true", help="Use bitsandbytes 4-bit loading.")
     parser.add_argument("--no-open", action="store_true", help="Do not print a browser-open hint.")
     return parser
@@ -80,6 +84,56 @@ def select_sample(sample_file: Path | None, split: str, sample_index: int) -> tu
 
     with sample_file.open(encoding="utf-8") as file:
         return sample_file, json.load(file)
+
+
+def apply_question_override(sample: dict[str, Any], question: str | None) -> dict[str, Any]:
+    if question is None:
+        return normalize_message_content(sample)
+
+    sample = copy.deepcopy(sample)
+    if isinstance(sample.get("user_question"), str):
+        sample["user_question"] = question
+
+    messages = sample.get("messages")
+    if isinstance(messages, list):
+        user_indexes = [index for index, message in enumerate(messages) if message.get("role") == "user"]
+        if not user_indexes:
+            raise ValueError("Sample messages do not contain a user message.")
+
+        user_message = messages[user_indexes[-1]]
+        content = user_message.get("content")
+        if isinstance(content, str):
+            user_message["content"] = replace_user_question_in_content(content, question)
+        elif isinstance(content, dict):
+            content["user_question"] = question
+        else:
+            raise ValueError(f"Unsupported user message content type: {type(content).__name__}")
+    return normalize_message_content(sample)
+
+
+def normalize_message_content(sample: dict[str, Any]) -> dict[str, Any]:
+    messages = sample.get("messages")
+    if not isinstance(messages, list):
+        return sample
+
+    sample = copy.deepcopy(sample)
+    for message in sample["messages"]:
+        content = message.get("content")
+        if isinstance(content, dict):
+            message["content"] = json.dumps(content, ensure_ascii=False, indent=2)
+    return sample
+
+
+def replace_user_question_in_content(content: str, question: str) -> str:
+    try:
+        payload = json.loads(content)
+    except json.JSONDecodeError:
+        return question
+
+    if isinstance(payload, dict):
+        payload["user_question"] = question
+        return json.dumps(payload, ensure_ascii=False, indent=2)
+    return question
 
 
 def prompt_messages_for_generation(sample: dict[str, Any]) -> list[dict[str, str]]:
@@ -177,12 +231,15 @@ def clean_model_output(output: str) -> str:
     return output
 
 
-def run_generation(args: argparse.Namespace, sample: dict[str, Any], adapter_paths: list[Path]) -> list[DemoResult]:
+def run_generation(
+    args: argparse.Namespace,
+    messages: list[dict[str, str]],
+    adapter_paths: list[Path],
+) -> list[DemoResult]:
     tokenizer = load_tokenizer(args.model_name, adapter_paths)
     model = load_model(args.model_name, args.load_in_4bit)
     model = load_adapters(model, adapter_paths)
     model.eval()
-    messages = prompt_messages_for_generation(sample)
 
     results = []
     if args.include_base:
@@ -517,8 +574,9 @@ def main() -> int:
         raise SystemExit(f"No adapters found. Pass --adapter or use --include-base. Searched: {args.adapter_root}")
 
     sample_path, sample = select_sample(args.sample_file, args.split, args.sample_index)
+    sample = apply_question_override(sample, args.question)
     messages = prompt_messages_for_generation(sample)
-    results = run_generation(args, sample, adapter_paths)
+    results = run_generation(args, messages, adapter_paths)
     write_report(
         output_path=args.output_html,
         sample_path=sample_path,
