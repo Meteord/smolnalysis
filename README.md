@@ -1,3 +1,15 @@
+---
+title: smolnalysis
+emoji: 📊
+colorFrom: green
+colorTo: indigo
+sdk: gradio
+app_file: app.py
+pinned: false
+license: mit
+short_description: Interactive open data analysis app for CKAN datasets.
+---
+
 # smolnalysis
 Interactive open data agent for the build small hackathon
 
@@ -14,6 +26,39 @@ uv run python app/app.py
 ```
 
 Open the app at [http://127.0.0.1:7860/](http://127.0.0.1:7860/).
+
+## Hugging Face Space
+
+This repository is ready to run as a Hugging Face Gradio Space from the repository root. Create or sync the Space under the target organisation, for example:
+
+```bash
+huggingface-cli repo create YOUR_ORG/smolnalysis --type space --space_sdk gradio
+```
+
+The Space uses the root [app.py](app.py) launcher, [requirements.txt](requirements.txt), and the metadata above so it appears as a Gradio Space in the organisation namespace at `https://huggingface.co/spaces/YOUR_ORG/smolnalysis`.
+
+### llama.cpp Deployment Target
+
+The intended production path should use the `build-small-hackathon/CodeFlow` llama.cpp pattern: the Gradio Space runs `llama-cpp-python` directly, downloads a GGUF with `huggingface_hub`, and serves a custom frontend through `gr.Server`.
+
+For `smolnalysis`, prefer an in-Space llama.cpp runtime because the target MiniCPM model is small. The desired hosted hardware is Hugging Face ZeroGPU, not Modal. Because ZeroGPU is Gradio-only and primarily designed around `@spaces.GPU` GPU sections, the first deployment task is to verify whether `llama-cpp-python` with CUDA offload works correctly under ZeroGPU. If it does not, keep the same self-contained Space and run a quantized MiniCPM GGUF on CPU.
+
+The deployed model stack should be MiniCPM-only, not Gemma. Use `openbmb/MiniCPM5-1B` as the shared base model unless later benchmarks select another MiniCPM checkpoint. Deployment artifacts should be GGUF:
+
+- MiniCPM base GGUF, preferably quantized for the selected Space hardware
+- `ckan_retrieval` LoRA GGUF
+- `openui_translator` LoRA GGUF
+- optional future `data_analysis` LoRA GGUF
+
+The app should call a local llama.cpp adapter when running inside the Space. If per-request LoRA switching is not reliable enough for this workflow, use pre-merged role-specific GGUF models.
+
+ZeroGPU deployment notes:
+
+- Keep `sdk: gradio`.
+- Select ZeroGPU hardware in the Space settings.
+- Add the `spaces` package only when GPU-decorated functions are introduced.
+- Wrap generation in `@spaces.GPU(duration=...)` if llama.cpp GPU offload is compatible with ZeroGPU.
+- Do not use Modal for the deployed path.
 
 ## Current MVP
 

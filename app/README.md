@@ -26,13 +26,16 @@ npm run build:openui-chat
 
 ## Hugging Face Space
 
-For a later Hugging Face Space, use this folder as the Space root or copy this app structure into the Space root. The Space needs:
+The repository root is prepared as the Space root. Hugging Face runs the root `app.py` launcher, which loads this app module while keeping the existing local command `uv run python app/app.py` working.
 
-- `app.py`
-- `requirements.txt`
-- `openui_support.py`
-- files in `examples/`
-- built assets in `static/`
+The Space needs the root `README.md` metadata, root `requirements.txt`, and these app assets:
+
+- `app/app.py`
+- `app/openui_support.py`
+- files in `app/examples/`
+- built assets in `app/static/`
+
+Longer term, the Space should keep this Gradio Server app as the public UI and run llama.cpp through `llama-cpp-python` in the Space, following the `build-small-hackathon/CodeFlow` pattern. The target hosted hardware is Hugging Face ZeroGPU, with CPU GGUF inference as the fallback if llama.cpp CUDA offload is not compatible with ZeroGPU. The model backend should become MiniCPM-only with GGUF base/LoRA artifacts, replacing the current lazy Gemma backend. Modal is not part of the desired deployed path.
 
 ## MVP Features
 
