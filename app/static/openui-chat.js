@@ -150593,6 +150593,32 @@ ${verifyLines.join("\n")}`;
   // app/frontend/openui-chat.jsx
   var CKAN_STORAGE_KEY = "smolnalysis.ckanEndpoint";
   var CHAT_ADAPTER = "auto";
+  var RUNTIME_ROLE_KEYS = {
+    general_agent: "general_agent",
+    ckan_tool: "ckan_retrieval",
+    data_analysis: "data_analysis",
+    openui_translator: "openui_translator"
+  };
+  function modelArtifactLabel(repoId, filename, fallback = "Model") {
+    if (repoId && filename) return `${repoId}/${filename}`;
+    if (repoId) return repoId;
+    if (filename) return filename;
+    return fallback;
+  }
+  function runtimeForRole(runtimeStatus, roleKey) {
+    const runtimeRoleKey = RUNTIME_ROLE_KEYS[roleKey] || roleKey;
+    if (runtimeStatus?.roles && !Array.isArray(runtimeStatus.roles)) {
+      return runtimeStatus.roles[runtimeRoleKey] || null;
+    }
+    if (Array.isArray(runtimeStatus?.roles) && runtimeStatus.roles.includes(runtimeRoleKey)) {
+      return {
+        model_repo_id: runtimeStatus.model,
+        model_hub_url: runtimeStatus.model_hub_url,
+        configured: runtimeStatus.configured
+      };
+    }
+    return null;
+  }
   function CkanEndpointPanel({ onConnectionChange }) {
     const [defaultEndpoint, setDefaultEndpoint] = (0, import_react89.useState)("https://opendata.muenchen.de/");
     const [endpoint, setEndpoint] = (0, import_react89.useState)("https://opendata.muenchen.de/");
@@ -150659,14 +150685,19 @@ ${verifyLines.join("\n")}`;
   }
   function LlmRolesPanel() {
     const [roles, setRoles] = (0, import_react89.useState)([]);
+    const [runtimeStatus, setRuntimeStatus] = (0, import_react89.useState)(null);
     const [isValidating, setIsValidating] = (0, import_react89.useState)(false);
-    const [message2, setMessage] = (0, import_react89.useState)("Loading LLM roles...");
+    const [message2, setMessage] = (0, import_react89.useState)("Loading model roles...");
     const loadStatus = () => {
-      fetch("/api/llms/status").then((response) => response.json()).then((data) => {
-        setRoles(data.roles || []);
-        setMessage("Server-side LLM role configuration.");
+      Promise.all([
+        fetch("/api/llms/status").then((response) => response.json()),
+        fetch("/api/minicpm/status").then((response) => response.json())
+      ]).then(([llmData, minicpmData]) => {
+        setRoles(llmData.roles || []);
+        setRuntimeStatus(minicpmData);
+        setMessage(`${minicpmData.backend || "MiniCPM"} role configuration.`);
       }).catch(() => {
-        setMessage("Could not load LLM role status.");
+        setMessage("Could not load model role status.");
       });
     };
     (0, import_react89.useEffect)(() => {
@@ -150686,7 +150717,19 @@ ${verifyLines.join("\n")}`;
         setIsValidating(false);
       }
     };
-    return /* @__PURE__ */ import_react89.default.createElement("section", { className: "llm-panel", "aria-label": "LLM role configuration" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-panel__header" }, /* @__PURE__ */ import_react89.default.createElement("div", null, /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-panel__label" }, "LLM roles"), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-panel__message" }, message2)), /* @__PURE__ */ import_react89.default.createElement("button", { className: "ckan-panel__button ckan-panel__button--primary", type: "button", onClick: validate2, disabled: isValidating }, isValidating ? "Validating" : "Validate")), /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-panel__roles" }, roles.map((role) => /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-role", key: role.key }, /* @__PURE__ */ import_react89.default.createElement("span", { className: `llm-role__dot llm-role__dot--${role.validation_status || "missing"}`, "aria-hidden": "true" }), /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-role__body" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__name" }, role.label), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__meta" }, role.model || "No model", role.base_url_display ? ` \xB7 ${role.base_url_display}` : ""), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__status" }, role.message))))));
+    return /* @__PURE__ */ import_react89.default.createElement("section", { className: "llm-panel", "aria-label": "Model role configuration" }, /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-panel__header" }, /* @__PURE__ */ import_react89.default.createElement("div", null, /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-panel__label" }, "Model roles"), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-panel__message" }, message2)), /* @__PURE__ */ import_react89.default.createElement("button", { className: "ckan-panel__button ckan-panel__button--primary", type: "button", onClick: validate2, disabled: isValidating }, isValidating ? "Validating" : "Validate")), /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-panel__roles" }, roles.map((role) => /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-role", key: role.key }, /* @__PURE__ */ import_react89.default.createElement("span", { className: `llm-role__dot llm-role__dot--${role.validation_status || "missing"}`, "aria-hidden": "true" }), /* @__PURE__ */ import_react89.default.createElement("div", { className: "llm-role__body" }, /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__name" }, role.label), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__links" }, runtimeForRole(runtimeStatus, role.key)?.model_hub_url ? /* @__PURE__ */ import_react89.default.createElement("a", { href: runtimeForRole(runtimeStatus, role.key).model_hub_url, target: "_blank", rel: "noreferrer" }, "Base: ", modelArtifactLabel(
+      runtimeForRole(runtimeStatus, role.key)?.model_repo_id,
+      runtimeForRole(runtimeStatus, role.key)?.model_filename,
+      role.model || "No model"
+    )) : /* @__PURE__ */ import_react89.default.createElement("span", null, "Base: ", modelArtifactLabel(
+      runtimeForRole(runtimeStatus, role.key)?.model_repo_id,
+      runtimeForRole(runtimeStatus, role.key)?.model_filename,
+      role.model || "No model"
+    )), runtimeForRole(runtimeStatus, role.key)?.lora_hub_url ? /* @__PURE__ */ import_react89.default.createElement("a", { href: runtimeForRole(runtimeStatus, role.key).lora_hub_url, target: "_blank", rel: "noreferrer" }, "Adapter: ", modelArtifactLabel(
+      runtimeForRole(runtimeStatus, role.key)?.lora_repo_id,
+      runtimeForRole(runtimeStatus, role.key)?.lora_filename,
+      "Role adapter"
+    )) : null), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__meta" }, role.description), /* @__PURE__ */ import_react89.default.createElement("span", { className: "llm-role__status" }, role.message))))));
   }
   function TracePanel({ traceId }) {
     const [trace, setTrace] = (0, import_react89.useState)(null);

@@ -28,6 +28,7 @@ class MiniCpmTransformersTests(TestCase):
         self.assertEqual(status["backend"], "transformers")
         self.assertEqual(status["model_family"], "MiniCPM")
         self.assertEqual(status["model"], "openbmb/MiniCPM5-1B")
+        self.assertEqual(status["model_hub_url"], "https://huggingface.co/openbmb/MiniCPM5-1B")
         self.assertFalse(status["eager_load"]["enabled"])
         self.assertEqual(status["cache"]["loaded_models"], 0)
 

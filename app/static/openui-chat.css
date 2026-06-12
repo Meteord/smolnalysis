@@ -8182,11 +8182,24 @@ body {
   font-weight: 700;
 }
 .llm-role__meta,
-.llm-role__status {
+.llm-role__status,
+.llm-role__links {
   color: #64748b;
   font-size: 11px;
   line-height: 1.35;
   overflow-wrap: anywhere;
+}
+.llm-role__links {
+  display: grid;
+  gap: 2px;
+}
+.llm-role__links a {
+  color: #0369a1;
+  font-weight: 650;
+  text-decoration: none;
+}
+.llm-role__links a:hover {
+  text-decoration: underline;
 }
 .trace-panel {
   display: grid;

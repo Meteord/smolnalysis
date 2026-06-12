@@ -71,6 +71,13 @@ ROLE_ENV_KEYS = {
 }
 
 
+def _hub_url(repo_id: str) -> str:
+    value = repo_id.strip().strip("/")
+    if not value or "/" not in value:
+        return ""
+    return f"https://huggingface.co/{value}"
+
+
 def normalize_role(adapter: str | None) -> str:
     value = (adapter or "auto").strip().casefold()
     return ROLE_ALIASES.get(value, value)
@@ -227,6 +234,7 @@ def runtime_status() -> dict[str, Any]:
         "backend": "transformers",
         "model_family": "MiniCPM",
         "model": DEFAULT_MODEL_ID,
+        "model_hub_url": _hub_url(DEFAULT_MODEL_ID),
         "configured": bool(DEFAULT_MODEL_ID),
         "roles": list(ROLE_ENV_KEYS),
         "cache": {

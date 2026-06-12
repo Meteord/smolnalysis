@@ -317,15 +317,29 @@ def role_runtime_status(role: str) -> dict[str, Any]:
         "model_path": model_path or config.model_path,
         "model_repo_id": config.model_repo_id,
         "model_filename": config.model_filename,
+        "model_hub_url": _hub_url(config.model_repo_id, config.model_filename),
         "model_error": model_error,
         "lora_path": lora_path or config.lora_path,
         "lora_repo_id": config.lora_repo_id,
         "lora_filename": config.lora_filename,
+        "lora_hub_url": _hub_url(config.lora_repo_id, config.lora_filename),
         "lora_error": lora_error,
         "options": options,
         "configured": bool(config.model_path or (config.model_repo_id and config.model_filename)),
         "loaded_models": _load_llama_cached.cache_info().currsize,
     }
+
+
+def _hub_url(repo_id: str, filename: str = "") -> str:
+    if not repo_id or "/" not in repo_id:
+        return ""
+    clean_repo_id = "/".join(part.strip("/") for part in repo_id.split("/") if part.strip("/"))
+    if not clean_repo_id:
+        return ""
+    clean_filename = filename.strip().lstrip("/")
+    if clean_filename:
+        return f"https://huggingface.co/{clean_repo_id}/blob/main/{clean_filename}"
+    return f"https://huggingface.co/{clean_repo_id}"
 
 
 def llama_cpp_runtime_info() -> dict[str, Any]:
@@ -490,9 +504,11 @@ def runtime_status() -> dict[str, Any]:
             "model_path": config.model_path,
             "model_repo_id": config.model_repo_id,
             "model_filename": config.model_filename,
+            "model_hub_url": status.get("model_hub_url", ""),
             "lora_path": config.lora_path,
             "lora_repo_id": config.lora_repo_id,
             "lora_filename": config.lora_filename,
+            "lora_hub_url": status.get("lora_hub_url", ""),
             "configured": bool(config.model_path or (config.model_repo_id and config.model_filename)),
             "loaded": _load_llama_cached.cache_info().currsize > 0,
             "resolved_model_path": status.get("model_path", ""),

@@ -66,6 +66,18 @@ class MiniCpmLlamaCppTests(TestCase):
         self.assertEqual(config.lora_repo_id, "org/smolnalysis-loras")
         self.assertEqual(config.lora_filename, "openui-adapter.gguf")
 
+    def test_runtime_status_includes_hub_links(self) -> None:
+        os.environ["MODEL_REPO_ID"] = "org/minicpm-gguf"
+        os.environ["MODEL_FILENAME"] = "minicpm.Q4_K_M.gguf"
+        os.environ["SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_LORA_REPO_ID"] = "org/smolnalysis-loras"
+        os.environ["SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_LORA_FILENAME"] = "ckan.gguf"
+
+        status = minicpm_llama_cpp.runtime_status()
+
+        role = status["roles"]["ckan_retrieval"]
+        self.assertEqual(role["model_hub_url"], "https://huggingface.co/org/minicpm-gguf/blob/main/minicpm.Q4_K_M.gguf")
+        self.assertEqual(role["lora_hub_url"], "https://huggingface.co/org/smolnalysis-loras/blob/main/ckan.gguf")
+
     def test_role_system_prompt_is_added_once(self) -> None:
         messages = [{"role": "user", "content": "Search CKAN"}]
 
