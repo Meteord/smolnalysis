@@ -21,6 +21,7 @@ AgentEventType = Literal["model_action", "tool_call", "tool_result", "selection"
 
 ALLOWED_ACTIONS = {"tag_search", "group_list", "organization_list", "package_search", "package_show", "select_resource", "finish", "ask_clarification"}
 MAX_TOOL_CALLS = 8
+MIN_SELECTION_CONFIDENCE = 0.85
 CKAN_ACTION_CONTRACT = (
     "You are the smolnalysis CKAN retrieval specialist. Choose the next action to find the correct dataset/resource. "
     "Return exactly one JSON object and nothing else. No markdown, no explanation outside JSON. Shape: "
@@ -28,6 +29,8 @@ CKAN_ACTION_CONTRACT = (
     "Use tag_search first when the user's terms may not match the catalog language. "
     "Use group_list or organization_list to discover catalog vocabulary when package_search returns weak or empty results. "
     "Use package_show only with observed package_id values. Use select_resource only with observed resource_id values. "
+    "Only select_resource when the resource directly answers the user request; set confidence >= 0.85 and put a concrete match_evidence string in args. "
+    "If candidates are broad or only loosely related, continue searching or ask_clarification instead of selecting. "
     "Do not invent URLs."
 )
 OPENUI_CONTRACT = "You translate structured smolnalysis results into OpenUI-Lang. Output OpenUI-Lang only. No markdown, no prose."
@@ -227,6 +230,11 @@ def validate_action(action: AgentAction, session: AgentSession) -> tuple[AgentAc
         resource_id = str(action.args.get("resource_id", "")).strip()
         if resource_id not in session.resources:
             return action, f"select_resource resource_id was not observed: {resource_id}"
+        evidence = str(action.args.get("match_evidence", "")).strip()
+        if action.confidence < MIN_SELECTION_CONFIDENCE:
+            return action, f"select_resource confidence is too low: {action.confidence:.2f}"
+        if len(evidence) < 12:
+            return action, "select_resource requires concrete match_evidence in args."
     return action, ""
 
 

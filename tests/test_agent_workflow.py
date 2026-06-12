@@ -17,6 +17,7 @@ from app.ckan_agent import (
     AgentAction,
     AgentSession,
     ModelResponse,
+    RetrievalResource,
     fallback_action,
     generate_openui_for_result,
     parse_agent_action,
@@ -123,7 +124,7 @@ class CkanAgentWorkflowTests(TestCase):
             [
                 {"action": "package_search", "args": {"query": "population", "rows": 5}, "reason": "search", "confidence": 0.6},
                 {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect", "confidence": 0.7},
-                {"action": "select_resource", "args": {"resource_id": "res-1"}, "reason": "best csv", "confidence": 0.9},
+                {"action": "select_resource", "args": {"resource_id": "res-1", "match_evidence": "Population CSV directly matches population dataset request."}, "reason": "best csv", "confidence": 0.9},
             ]
         )
 
@@ -150,7 +151,7 @@ class CkanAgentWorkflowTests(TestCase):
                 {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect weak", "confidence": 0.5},
                 {"action": "package_search", "args": {"query": "population csv", "rows": 5}, "reason": "refine", "confidence": 0.6},
                 {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect strong", "confidence": 0.7},
-                {"action": "select_resource", "args": {"resource_id": "res-1"}, "reason": "csv", "confidence": 0.9},
+                {"action": "select_resource", "args": {"resource_id": "res-1", "match_evidence": "Population CSV directly matches population dataset request."}, "reason": "csv", "confidence": 0.9},
             ]
         )
 
@@ -192,6 +193,21 @@ class CkanAgentWorkflowTests(TestCase):
 
         self.assertEqual(result.status, "max_tool_calls")
         self.assertEqual(package_search_mock.call_count, 2)
+
+    def test_select_resource_requires_high_confidence_and_evidence(self) -> None:
+        session = AgentSession("what about bycycles", "https://opendata.muenchen.de/")
+        session.resources["res-1"] = _resource("res-1", "Erstzulassungsanteil Personenkraftwagen")
+        low_confidence = AgentAction("select_resource", {"resource_id": "res-1"}, "loose match", 0.4)
+
+        _validated, error = validate_action(low_confidence, session)
+
+        self.assertIn("confidence is too low", error)
+
+        missing_evidence = AgentAction("select_resource", {"resource_id": "res-1"}, "select", 0.9)
+
+        _validated, error = validate_action(missing_evidence, session)
+
+        self.assertIn("match_evidence", error)
 
     @patch("app.ckan_agent.package_search")
     def test_repeated_503_stops_without_hammering_endpoint(self, package_search_mock) -> None:
@@ -247,7 +263,7 @@ class CkanAgentWorkflowTests(TestCase):
             [
                 {"action": "package_search", "args": {"query": "population", "rows": 5}, "reason": "search", "confidence": 0.6},
                 {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect", "confidence": 0.7},
-                {"action": "select_resource", "args": {"resource_id": "res-1"}, "reason": "select", "confidence": 0.9},
+                {"action": "select_resource", "args": {"resource_id": "res-1", "match_evidence": "Population CSV directly matches population dataset request."}, "reason": "select", "confidence": 0.9},
             ]
         )
         client = TestClient(app)
@@ -327,7 +343,7 @@ class CkanAgentWorkflowTests(TestCase):
         with patch.object(app_module, "call_role_model", side_effect=_ModelScript([
             {"action": "package_search", "args": {"query": "population", "rows": 5}, "reason": "search", "confidence": 0.6},
             {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect", "confidence": 0.7},
-            {"action": "select_resource", "args": {"resource_id": "res-1"}, "reason": "select", "confidence": 0.9},
+            {"action": "select_resource", "args": {"resource_id": "res-1", "match_evidence": "Population CSV directly matches population dataset request."}, "reason": "select", "confidence": 0.9},
         ])):
             response = client.post("/api/chat", json={"messages": [{"role": "user", "content": "Find CKAN population datasets"}]})
 
@@ -398,6 +414,17 @@ def _ckan_package() -> dict[str, Any]:
             }
         ],
     }
+
+
+def _resource(resource_id: str, title: str) -> RetrievalResource:
+    return RetrievalResource(
+        package_id="pkg-1",
+        package_title=title,
+        resource_id=resource_id,
+        name=title,
+        format="csv",
+        url=f"https://example.org/{resource_id}.csv",
+    )
 
 
 if __name__ == "__main__":
