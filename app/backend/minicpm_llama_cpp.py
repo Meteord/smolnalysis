@@ -38,6 +38,7 @@ DEFAULT_N_CTX = int(os.getenv("SMOLNALYSIS_MINICPM_N_CTX", os.getenv("N_CTX", "4
 DEFAULT_N_BATCH = int(os.getenv("SMOLNALYSIS_MINICPM_N_BATCH", os.getenv("N_BATCH", "512")))
 DEFAULT_N_GPU_LAYERS = int(os.getenv("SMOLNALYSIS_MINICPM_N_GPU_LAYERS", os.getenv("N_GPU_LAYERS", "0")))
 ZERO_GPU_DURATION_SECONDS = int(os.getenv("SMOLNALYSIS_MINICPM_ZEROGPU_DURATION_SECONDS", "120"))
+EAGER_LOAD_ROLES_ENV = "SMOLNALYSIS_MINICPM_EAGER_LOAD_ROLES"
 
 ROLE_ALIASES = {
     "auto": "auto",
@@ -63,6 +64,8 @@ ROLE_ENV_KEYS = {
     "data_analysis": "DATA_ANALYSIS",
     "openui_translator": "OPENUI_TRANSLATOR",
 }
+
+EAGER_LOAD_STATUS: dict[str, Any] = {"enabled": False, "roles": {}, "duration_ms": 0}
 
 
 @dataclass(frozen=True)
@@ -503,6 +506,7 @@ def runtime_status() -> dict[str, Any]:
         "backend": "llama.cpp",
         "model_family": "MiniCPM",
         "llama_cpp": llama_cpp_runtime_info(),
+        "eager_load": EAGER_LOAD_STATUS,
         "roles": roles,
         "n_ctx": DEFAULT_N_CTX,
         "n_gpu_layers": DEFAULT_N_GPU_LAYERS,
@@ -554,3 +558,54 @@ def probe_runtime(role: str = "general_agent") -> dict[str, Any]:
         result["load"]["error"] = str(exc).strip() or type(exc).__name__
     result["duration_ms"] = round((time.perf_counter() - started) * 1000, 1)
     return result
+
+
+def _configured_for_role(role: str) -> bool:
+    config = role_config(role)
+    return bool(config.model_path or (config.model_repo_id and config.model_filename))
+
+
+def _eager_load_roles() -> list[str]:
+    raw = _clean_env_value(EAGER_LOAD_ROLES_ENV, "general_agent").casefold()
+    if raw in {"0", "false", "no", "off", "none", "disabled"}:
+        return []
+    if raw in {"1", "true", "yes", "on", "default"}:
+        return ["general_agent"]
+    if raw == "all":
+        return list(ROLE_ENV_KEYS)
+    roles = []
+    for item in raw.replace(";", ",").split(","):
+        role = normalize_role(item.strip())
+        if role == "auto":
+            role = "general_agent"
+        if role in ROLE_ENV_KEYS and role not in roles:
+            roles.append(role)
+    return roles
+
+
+def _eager_load_configured_roles() -> None:
+    roles = _eager_load_roles()
+    EAGER_LOAD_STATUS["enabled"] = bool(roles)
+    if not roles:
+        return
+
+    started = time.perf_counter()
+    for role in roles:
+        role_status: dict[str, Any] = {"configured": False, "loaded": False, "error": "", "effective_options": {}}
+        EAGER_LOAD_STATUS["roles"][role] = role_status
+        try:
+            role_status["configured"] = _configured_for_role(role)
+            if not role_status["configured"]:
+                role_status["error"] = "Model is not configured for this role."
+                continue
+            _llm, effective_options, gpu_fallback_error = _load_llama_with_gpu_fallback(role)
+            role_status["loaded"] = True
+            role_status["effective_options"] = effective_options
+            role_status["gpu_fallback_error"] = gpu_fallback_error
+        except Exception as exc:
+            logger.exception("MiniCPM eager load failed for role=%s.", role)
+            role_status["error"] = f"{type(exc).__name__}: {str(exc).strip() or type(exc).__name__}"
+    EAGER_LOAD_STATUS["duration_ms"] = round((time.perf_counter() - started) * 1000, 1)
+
+
+_eager_load_configured_roles()

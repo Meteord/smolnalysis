@@ -41,9 +41,11 @@ logging.basicConfig(
 try:
     from .agent_workflow import run_agent_workflow
     from .ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
+    from .backend import minicpm_llama_cpp as _minicpm_startup
     from .llm_support import llm_status, validate_llms
 except ImportError:
     from agent_workflow import run_agent_workflow
+    from backend import minicpm_llama_cpp as _minicpm_startup
     from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from llm_support import llm_status, validate_llms
 
