@@ -73,5 +73,25 @@
     "dropped_columns": 0,
     "dropped_identifier_columns": 1,
     "source_profile_error": null
+  },
+  "openui_lang": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Belegung Gewerbehöfe\", \"Belegung Gewerbehöfe\")\nsummary = TextContent(\"Belegung Gewerbehöfe belongs to Münchner Gewerbehof- und Technologiezentrumsgesellschaft mbH. It exposes 2 profiled columns for OpenUI rendering.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"14\")\nm2 = ListItem(\"Columns\", \"3\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"3.75\")\nc1 = Col(\"Column\", [\"Jahr\",\"Belegungsquote\"], \"string\")\nc2 = Col(\"Kind\", [\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You translate smolnalysis workflow results into OpenUI-Lang. Output OpenUI-Lang only."
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"task\": \"render_openui\",\n  \"user_question\": \"Create a compact OpenUI summary for Belegung Gewerbehöfe from Belegung Gewerbehöfe.\",\n  \"query_result\": {\n    \"dataset_title\": \"Belegung Gewerbehöfe\",\n    \"package_id\": \"6c8f0118-441d-47fc-a0c3-9dd2789b1cfd\",\n    \"package_name\": \"belegung-gewerbehoefe\",\n    \"resource_id\": \"eb8f8471-9993-485c-81d9-1d3a8e6e8094\",\n    \"resource_name\": \"Belegung Gewerbehöfe\",\n    \"resource_format\": \"csv\",\n    \"description\": \"Prozentuale Belegung der Gewerbehöfe nach Jahr.\",\n    \"organization\": \"Münchner Gewerbehof- und Technologiezentrumsgesellschaft mbH\",\n    \"tags\": [\n      \"Stadtratsauftrag\"\n    ],\n    \"groups\": [],\n    \"row_count\": 14,\n    \"sampled_rows\": 14,\n    \"column_count\": 3,\n    \"columns\": [\n      {\n        \"name\": \"Jahr\",\n        \"dtype\": \"object\",\n        \"kind\": \"year\",\n        \"non_null_count\": 14,\n        \"null_count\": 0,\n        \"examples\": [\n          \"2010\",\n          \"2011\",\n          \"2012\",\n          \"2013\",\n          \"2014\"\n        ],\n        \"numeric\": {\n          \"count\": 14.0,\n          \"min\": 2010.0,\n          \"max\": 2023.0,\n          \"mean\": 2016.5,\n          \"median\": 2016.5\n        },\n        \"null_rate\": 0.0\n      },\n      {\n        \"name\": \"Belegungsquote\",\n        \"dtype\": \"object\",\n        \"kind\": \"string\",\n        \"non_null_count\": 14,\n        \"null_count\": 0,\n        \"examples\": [\n          \"92.90%\",\n          \"93.00%\",\n          \"95.49%\",\n          \"96.57%\",\n          \"97.13%\"\n        ],\n        \"null_rate\": 0.0\n      }\n    ]\n  },\n  \"component_hints\": {\n    \"recommended_components\": [\n      \"InsightCard\",\n      \"DataTable\"\n    ],\n    \"numeric_columns\": [],\n    \"category_columns\": [],\n    \"time_columns\": [\n      \"Jahr\"\n    ]\n  }\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "root = Card([header, summary, metrics, schema, chart, quality, followups])\nheader = CardHeader(\"Belegung Gewerbehöfe\", \"Belegung Gewerbehöfe\")\nsummary = TextContent(\"Belegung Gewerbehöfe belongs to Münchner Gewerbehof- und Technologiezentrumsgesellschaft mbH. It exposes 2 profiled columns for OpenUI rendering.\", \"default\")\nmetrics = ListBlock([m1, m2, m3, m4], \"number\")\nm1 = ListItem(\"Rows\", \"14\")\nm2 = ListItem(\"Columns\", \"3\")\nm3 = ListItem(\"Format\", \"CSV\")\nm4 = ListItem(\"Quality\", \"3.75\")\nc1 = Col(\"Column\", [\"Jahr\",\"Belegungsquote\"], \"string\")\nc2 = Col(\"Kind\", [\"year\",\"string\"], \"string\")\nc3 = Col(\"Type\", [\"object\",\"object\"], \"string\")\nc4 = Col(\"Missing\", [\"0\",\"0\"], \"string\")\nschema = Table([c1, c2, c3, c4])\nseries = Series(\"value\", [0.0])\nchart = BarChart([\"v1\"], [series], \"grouped\", \"Example\", \"Value\")\nquality = Callout(\"info\", \"Training signal\", \"The cleaner kept the most useful columns, dropped 0 lower-ranked columns, and removed 1 identifier columns before creating this OpenUI target.\")\nfollowups = FollowUpBlock([f1, f2, f3])\nf1 = FollowUpItem(\"Show a bar chart\")\nf2 = FollowUpItem(\"Check missing values\")\nf3 = FollowUpItem(\"Summarize another resource\")"
+    }
+  ],
+  "validation": {
+    "openui_chat_components": true,
+    "root_component": "Card",
+    "assistant_output": "openui_lang_only"
   }
 }
