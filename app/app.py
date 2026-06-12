@@ -106,14 +106,17 @@ def build_workflow_response(prompt: str, ckan_endpoint: str | None = None) -> st
     return run_agent_workflow(prompt or "Summarize this dataset", ckan_endpoint).get("openui_lang", "")
 
 
-def build_gemma_openui_response(assistant_text: str) -> str:
+def build_model_openui_response(assistant_text: str, backend_label: str = "MiniCPM") -> str:
     return "\n".join(
         [
             "root = Card([header, response])",
-            'header = CardHeader("Gemma", "Backend response")',
+            f"header = CardHeader({json.dumps(backend_label)}, \"Backend response\")",
             f"response = TextContent({json.dumps(assistant_text)}, \"default\")",
         ]
     )
+
+
+build_gemma_openui_response = build_model_openui_response
 
 
 @spaces.GPU(duration=5)
@@ -124,18 +127,18 @@ def zerogpu_probe() -> dict[str, Any]:
 def generate_chat_response(messages: list[dict[str, str]], *, adapter: str = "auto") -> str:
     try:
         try:
-            from .backend.gemma_chat import generate_chat_response as backend_generate_chat_response
+            from .backend.minicpm_llama_cpp import generate_chat_response as backend_generate_chat_response
         except ImportError:
-            from backend.gemma_chat import generate_chat_response as backend_generate_chat_response
+            from backend.minicpm_llama_cpp import generate_chat_response as backend_generate_chat_response
     except Exception as exc:
-        logger.warning("Gemma backend unavailable, using workflow fallback: %s", exc)
+        logger.warning("MiniCPM llama.cpp backend unavailable, using workflow fallback: %s", exc)
         prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
         return run_agent_workflow(prompt or "Summarize this dataset").get("openui_lang", "")
 
     try:
         return backend_generate_chat_response(messages, adapter=adapter)
     except Exception as exc:
-        logger.warning("Gemma generation failed, using workflow fallback: %s", exc)
+        logger.warning("MiniCPM llama.cpp generation failed, using workflow fallback: %s", exc)
         prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
         return run_agent_workflow(prompt or "Summarize this dataset").get("openui_lang", "")
 
@@ -212,6 +215,18 @@ async def llms_status() -> dict[str, Any]:
 @app.post("/api/llms/validate")
 async def llms_validate() -> dict[str, Any]:
     return validate_llms()
+
+
+@app.get("/api/minicpm/status")
+async def minicpm_status() -> dict[str, Any]:
+    try:
+        try:
+            from .backend.minicpm_llama_cpp import runtime_status
+        except ImportError:
+            from backend.minicpm_llama_cpp import runtime_status
+        return runtime_status()
+    except Exception as exc:
+        return {"backend": "llama.cpp", "model_family": "MiniCPM", "error": str(exc)}
 
 
 @app.get("/", response_class=HTMLResponse)

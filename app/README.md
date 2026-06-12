@@ -69,6 +69,7 @@ The app keeps OpenUI support modular:
 - `app/static/openui-chat.js` and `app/static/openui-chat.css` are the bundled browser assets loaded by `/`.
 - The frontend chat contract streams assistant content through OpenAI-compatible SSE chunks.
 - The Gradio `respond` API still exposes the mocked OpenUI-Lang workflow.
+- `backend/minicpm_llama_cpp.py` owns the MiniCPM llama.cpp runtime path for `general_agent`, `ckan_retrieval`, `data_analysis`, and `openui_translator`.
 
 ## LLM Backend Configuration
 

@@ -54,6 +54,27 @@ The deployed model stack should be MiniCPM-only, not Gemma. Use `openbmb/MiniCPM
 
 The app should call a local llama.cpp adapter when running inside the Space. If per-request LoRA switching is not reliable enough for this workflow, use pre-merged role-specific GGUF models.
 
+Runtime configuration:
+
+```text
+MODEL_REPO_ID=your-org/minicpm5-1b-gguf
+MODEL_FILENAME=minicpm5-1b.Q4_K_M.gguf
+SMOLNALYSIS_MINICPM_N_CTX=4096
+SMOLNALYSIS_MINICPM_N_GPU_LAYERS=0
+SMOLNALYSIS_MINICPM_MAX_NEW_TOKENS=850
+```
+
+Optional per-role overrides use the same GGUF base with role-specific LoRAs or pre-merged model files:
+
+```text
+SMOLNALYSIS_MINICPM_GENERAL_AGENT_MODEL_PATH=/models/general.gguf
+SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_LORA_PATH=/models/ckan-retrieval-lora.gguf
+SMOLNALYSIS_MINICPM_DATA_ANALYSIS_LORA_PATH=/models/data-analysis-lora.gguf
+SMOLNALYSIS_MINICPM_OPENUI_TRANSLATOR_LORA_PATH=/models/openui-translator-lora.gguf
+```
+
+Supported runtime roles are `general_agent`, `ckan_retrieval`, `data_analysis`, and `openui_translator`. The frontend can still send `adapter: "auto"`; the backend routes to the best role from the latest user message.
+
 ZeroGPU deployment notes:
 
 - Keep `sdk: gradio`.

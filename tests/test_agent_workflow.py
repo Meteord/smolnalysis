@@ -63,7 +63,7 @@ class AgentWorkflowTests(TestCase):
 
     def test_chat_route_keeps_openai_compatible_sse_shape(self) -> None:
         client = TestClient(app)
-        with patch.object(app_module, "generate_chat_response", return_value="Gemma backend response") as generate:
+        with patch.object(app_module, "generate_chat_response", return_value="MiniCPM backend response") as generate:
             response = client.post(
                 "/api/chat",
                 json={
@@ -79,8 +79,8 @@ class AgentWorkflowTests(TestCase):
         self.assertEqual(payloads[0]["choices"][0]["delta"]["role"], "assistant")
         content = "".join(payload["choices"][0]["delta"].get("content", "") for payload in payloads)
         self.assertIn("root = Card", content)
-        self.assertIn('header = CardHeader("Gemma", "Backend response")', content)
-        self.assertIn("Gemma backend response", content)
+        self.assertIn('header = CardHeader("MiniCPM", "Backend response")', content)
+        self.assertIn("MiniCPM backend response", content)
 
 
 if __name__ == "__main__":
