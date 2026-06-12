@@ -39,6 +39,18 @@ huggingface-cli repo create YOUR_ORG/smolnalysis --type space --space_sdk gradio
 
 The Space uses the root [app.py](app.py) launcher, [requirements.txt](requirements.txt), and the metadata above so it appears as a Gradio Space in the organisation namespace at `https://huggingface.co/spaces/build-small-hackathon/smolnalysis`.
 
+### GitHub Actions Deployment
+
+The Space can be updated automatically from GitHub with [.github/workflows/sync-space.yml](.github/workflows/sync-space.yml). The workflow builds the OpenUI frontend bundle, creates a clean `_space/` snapshot containing only runtime files, and syncs that snapshot to `build-small-hackathon/smolnalysis` with `huggingface/hub-sync`.
+
+Required GitHub repository secret:
+
+```text
+HF_TOKEN=<a Hugging Face token with write access to build-small-hackathon/smolnalysis>
+```
+
+The sync action mirrors files over the Hub API rather than pushing Git history. This avoids the previous large-file history problem as long as generated training data and model artifacts are not copied into `_space/`.
+
 ### llama.cpp Deployment Target
 
 The intended production path should use the `build-small-hackathon/CodeFlow` llama.cpp pattern: the Gradio Space runs `llama-cpp-python` directly, downloads a GGUF with `huggingface_hub`, and serves a custom frontend through `gr.Server`.
