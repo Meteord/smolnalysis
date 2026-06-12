@@ -111,11 +111,22 @@ def _chat_messages(messages: list[dict[str, Any]]) -> list[dict[str, str]]:
 
 
 def build_openui_response(prompt: str) -> str:
-    return build_workflow_response(prompt)
+    return build_workflow_response(prompt, dataset_path=_default_dataset_path_for_prompt(prompt))
 
 
-def build_workflow_response(prompt: str, ckan_endpoint: str | None = None) -> str:
-    return run_agent_workflow(prompt or "Summarize this dataset", ckan_endpoint).get("openui_lang", "")
+def build_workflow_response(prompt: str, ckan_endpoint: str | None = None, dataset_path: str | None = None) -> str:
+    return run_agent_workflow(prompt or "Summarize this dataset", ckan_endpoint, dataset_path).get("openui_lang", "")
+
+
+def _default_dataset_path_for_prompt(prompt: str) -> str | None:
+    lower = prompt.casefold()
+    analysis_terms = ("this dataset", "summarize", "summary", "schema", "columns", "quality", "missing", "trend", "statistics", "chart", "histogram")
+    if any(term in lower for term in analysis_terms):
+        return str(DEMO_CSV) if DEMO_CSV.exists() else None
+    retrieval_terms = ("ckan", "resource", "catalog", "search", "find", "retrieve", "open data")
+    if any(term in lower for term in retrieval_terms):
+        return None
+    return str(DEMO_CSV) if DEMO_CSV.exists() else None
 
 
 def build_model_openui_response(assistant_text: str, backend_label: str = "MiniCPM") -> str:
@@ -354,7 +365,12 @@ async def chat(request: Request) -> StreamingResponse:
     )
     if chat_messages:
         logger.debug("chat last message: role=%s chars=%d", chat_messages[-1]["role"], len(chat_messages[-1]["content"]))
-    assistant_text, trace = await asyncio.to_thread(generate_chat_response_with_trace, chat_messages, adapter=adapter)
+    prompt = _last_user_prompt(messages if isinstance(messages, list) else []) or "Summarize this dataset"
+    ckan_base_url = ckan.get("base_url") if isinstance(ckan, dict) else None
+    dataset_path = _default_dataset_path_for_prompt(prompt)
+    workflow = await asyncio.to_thread(run_agent_workflow, prompt, ckan_base_url, dataset_path)
+    assistant_text = str(workflow.get("openui_lang", ""))
+    trace = _workflow_trace(chat_messages, adapter, workflow)
     trace = {
         "request_id": request_id,
         "thread_id": body.get("threadId"),
@@ -371,6 +387,28 @@ async def chat(request: Request) -> StreamingResponse:
         media_type="text/event-stream",
         headers={"x-smolnalysis-trace-id": request_id},
     )
+
+
+def _workflow_trace(messages: list[dict[str, str]], adapter: str, workflow: dict[str, Any]) -> dict[str, Any]:
+    steps = workflow.get("steps", [])
+    return {
+        "backend": "deterministic_workflow",
+        "model_family": "python",
+        "requested_adapter": adapter,
+        "role": workflow.get("intent", {}).get("task_type", "workflow") if isinstance(workflow.get("intent"), dict) else "workflow",
+        "message_count": len(messages),
+        "events": [
+            {"name": str(step.get("node", "workflow_step")), "detail": f"{step.get('title', '')}: {step.get('detail', '')}".strip()}
+            for step in steps
+            if isinstance(step, dict)
+        ],
+        "runtime": {
+            "ckan_endpoint": workflow.get("ckan_endpoint", DEFAULT_CKAN_ENDPOINT),
+            "dataset_path": workflow.get("dataset_path", ""),
+        },
+        "duration_ms": 0,
+        "output_chars": len(str(workflow.get("openui_lang", ""))),
+    }
 
 
 @app.get("/api/ckan/default")

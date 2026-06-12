@@ -340,7 +340,7 @@ function App() {
       threadHeader={<BackendConfigHeader onCkanConnectionChange={setCkanConnection} traceId={traceId} />}
       welcomeMessage={{
         title: "smolnalysis",
-        description: "Ask about the demo dataset and receive mocked OpenUI-Lang responses.",
+        description: "Ask about CKAN datasets or the demo CSV and receive validated OpenUI responses.",
       }}
       conversationStarters={{
         variant: "short",
