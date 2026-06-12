@@ -1,0 +1,208 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Arbeitsmarkt - Sozialversicherungspflichtig Beschäftigte and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Arbeitsmarkt - Sozialversicherungspflichtig Beschäftigte",
+    "package_id": "d2656d0a-dba8-4ea7-bdec-705f47a7c49c",
+    "package_name": "indikatorenatlas-2014-arbeitsmarkt-sozialversicherungspflichtig-beschaeftigte-83r65mct",
+    "resource_id": "8ae97812-e077-4bc4-8a21-a1deb2b61adb",
+    "resource_name": "Sozialversicherungspflichtig Beschäftigte",
+    "resource_format": "csv",
+    "description": "Anteil der sozialversicherungspflichtig Beschäftigten am Wohnort der entsprechenden Kategorie an allen sozialversicherungspflichtig Beschäftigten am Wohnort in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Arbeitsmarkt",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 2750,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          66.7,
+          72.3,
+          73.1,
+          72.6,
+          74.3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 47.8,
+          "max": 88.5,
+          "mean": 66.498,
+          "median": 69.6
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          480692.3,
+          6724.0,
+          18798.5,
+          19897.0,
+          23816.5
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 3551.3,
+          "max": 482024.3,
+          "mean": 30157.8946,
+          "median": 14955.05
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          720496.0,
+          9299.0,
+          25715.5,
+          27224.3,
+          32820.0
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 6508.0,
+          "max": 720496.0,
+          "mean": 45999.4426,
+          "median": 23262.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2014.016,
+          "median": 2015.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "männlich"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "sozialversicherungspflichtig Beschäftigte (deutsch)",
+          "sozialversicherungspflichtig Beschäftigte (männlich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Sozialversicherungspflichtig Beschäftigte"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "sozialversicherungspflichtig Beschäftigte (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Indikator",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

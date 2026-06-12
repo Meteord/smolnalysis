@@ -1,0 +1,252 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Parkhäuser München and compare places__streetNumber by places__media__listPictureUrl.",
+  "query_result": {
+    "dataset_title": "Parkhäuser München",
+    "package_id": "addaa7d4-40be-4621-846e-c5358cbe3f26",
+    "package_name": "parkhaeuser-munchen",
+    "resource_id": "e0e0e4e1-1b25-4c04-a0ea-cf9cc8335c57",
+    "resource_name": "Parkhäuser München CSV",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz beinhaltet Informationen zu Parkhäusern im Stadtgebiet München.",
+    "organization": "muenchen.de",
+    "tags": [
+      "Auto",
+      "Parken",
+      "Parkhaus"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 72,
+    "sampled_rows": 72,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "places__streetNumber",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "40",
+          "65",
+          "62",
+          "19",
+          "57"
+        ],
+        "numeric": {
+          "count": 58.0,
+          "min": 1.0,
+          "max": 506.0,
+          "mean": 34.8793,
+          "median": 14.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__location__lng",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          11.4847368,
+          11.52276568,
+          11.5026,
+          11.5309121,
+          11.52306
+        ],
+        "numeric": {
+          "count": 72.0,
+          "min": 11.4847,
+          "max": 11.706,
+          "mean": 11.5765,
+          "median": 11.5711
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__ratingAverage",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "0.00",
+          "5.00",
+          "4.50",
+          "3.00",
+          "4.67"
+        ],
+        "numeric": {
+          "count": 72.0,
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 0.7818,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__media__listPictureUrl",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "null",
+          "https://images.portal.muenchen.de/upload/media/000/000/218/604/scaled-down/0178x0117/pschorr-garage.jpg",
+          "https://images.portal.muenchen.de/upload/media/000/000/221/011/scaled-down/0178x0117/listing-parkgarage-marienplatz.jpg"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__location__lat",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          48.087114,
+          48.12738543,
+          48.13591,
+          48.1314008,
+          48.13744
+        ],
+        "numeric": {
+          "count": 72.0,
+          "min": 48.0871,
+          "max": 48.2186,
+          "mean": 48.1495,
+          "median": 48.1396
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__title",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "Tiefgarage P&R Fürstenried",
+          "Parkhaus Audi Dome",
+          "Parkhaus Laimer Platz",
+          "Tiefgarage P&R Heimeranplatz",
+          "West 4"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__city",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__street",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "Neurieder Str.",
+          "Siegenburger Str.",
+          "Fürstenrieder Str.",
+          "Garmischer Str.",
+          "Elsenheimerstr."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__isProduct",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "False"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__detailUrl",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "https://muenchenapis.de/places/api/v2/places/1224104.json",
+          "https://muenchenapis.de/places/api/v2/places/1253403.json",
+          "https://muenchenapis.de/places/api/v2/places/1253402.json",
+          "https://muenchenapis.de/places/api/v2/places/1224105.json",
+          "https://muenchenapis.de/places/api/v2/places/1224110.json"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__urlInPortal",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "null",
+          "https://www.muenchen.de/verkehr/orte/1253404.html",
+          "https://www.muenchen.de/verkehr/orte/121106.html",
+          "https://www.muenchen.de/verkehr/orte/121094.html",
+          "https://www.muenchen.de/verkehr/orte/121105.html"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "places__allowPhotoUpload",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 72,
+        "null_count": 0,
+        "examples": [
+          "True"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "places__streetNumber",
+      "places__location__lng",
+      "places__ratingAverage"
+    ],
+    "category_columns": [
+      "places__media__listPictureUrl",
+      "places__city",
+      "places__isProduct",
+      "places__allowPhotoUpload"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "places__media__listPictureUrl",
+      "y": "places__streetNumber"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 1,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

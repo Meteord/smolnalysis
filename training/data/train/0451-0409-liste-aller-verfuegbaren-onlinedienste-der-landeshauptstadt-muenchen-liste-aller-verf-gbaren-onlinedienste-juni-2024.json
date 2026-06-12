@@ -1,0 +1,159 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Liste aller verfügbaren Onlinedienste der Landeshauptstadt München and compare leika-schluessel by eigentuemerbehoerde.",
+  "query_result": {
+    "dataset_title": "Liste aller verfügbaren Onlinedienste der Landeshauptstadt München",
+    "package_id": "d818c8c6-6612-480e-9ca9-68dd56995805",
+    "package_name": "liste-aller-verfuegbaren-onlinedienste-der-landeshauptstadt-muenchen",
+    "resource_id": "c02cd764-a6ec-43f0-9539-f886bf51207c",
+    "resource_name": "Liste aller verfügbaren Onlinedienste Juni 2024",
+    "resource_format": "csv",
+    "description": "Die Daten bilden die verfügbaren Onlinedienste für die Bürger*innen und Unternehmen der Landeshauptstadt München ab. Hierin enthalten sind die jeweiligen Links auf den Onlinedienst, dort finden Sie weitere Rahmenbedingungen für die Nutzung des Dienstes und den Umfang der möglichen Onlinebeantragung. Das Angebot wird sukzessive erweitert. Weitere Informationen und Übersichten finden Sie auch im Bayernportal: [Landeshauptstadt München, Kreisfreie Stadt - BayernPortal](https://www.freistaat.bayern/",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [
+      "E-Government"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 236,
+    "sampled_rows": 236,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "leika-schluessel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 236,
+        "null_count": 0,
+        "examples": [
+          "99115005070000",
+          "99012091261000",
+          "99010020001001 99010038001000",
+          "9000000053143",
+          "77000000000026"
+        ],
+        "numeric": {
+          "count": 214.0,
+          "min": 9000000000114.0,
+          "max": 99400236017000.0,
+          "mean": 79200164054707.72,
+          "median": 99027002012000.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "kurzbeschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 236,
+        "null_count": 0,
+        "examples": [
+          "Abmeldung ins Ausland",
+          "Abnahme Fliegender Bauten",
+          "Akademische Beschäftigung (Blaue Karte EU)",
+          "Akteneinsicht zum Aufenthalt",
+          "Akteneinsicht zur Einbürgerung oder Staatsangehörigkeit"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 236,
+        "null_count": 0,
+        "examples": [
+          "https://www.buergerservice-portal.de/bayern/muenchen/bsp_abmeldung_ausland/",
+          "https://stadt.muenchen.de/service/info/team-12-statik-u-bautechnische-sonderverfahren/1099270/",
+          "https://stadt.muenchen.de/service/info/hauptabteilung-ii-buergerangelegenheiten/1080627/",
+          "https://service.muenchen.de/intelliform/forms/01/02/02/akteneinsicht_aufenthalt/index",
+          "https://service.muenchen.de/intelliform/forms/01/02/02/akteneinsicht_einbuergerung/index"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "eigentuemerbehoerde",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 236,
+        "null_count": 0,
+        "examples": [
+          "Landeshauptstadt München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "leistung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 236,
+        "null_count": 0,
+        "examples": [
+          "Wohnsitz; Abmeldung (ID: 12466)",
+          "Fliegende Bauten; Anzeige der Aufstellung und der Gebrauchsabnahme (ID: 80641)",
+          "Aufenthaltserlaubnis; Beantragung zum Zweck der Erwerbstätigkeit bei qualifizierter Beschäftigung als Fachkraft mit akademischer Ausbildung (ID: 61346) Blaue Ka",
+          "Kommunikation mit Kommunen; Übermittlung von Nachrichten und Dokumenten (ID: 53143)",
+          "Öffentlicher Raum; Meldung eines Schadens bei der Gemeinde (ID: 50574)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "regionale ergaenzung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 236,
+        "null_count": 0,
+        "examples": [
+          "Wohnsitz; Abmeldung (ID: 148633)",
+          "Fliegende Bauten; Anzeige der Aufstellung und der Gebrauchsabnahme (ID: 80744)",
+          "Aufenthaltserlaubnis; Beantragung zum Zweck der Erwerbstätigkeit bei qualifizierter Beschäftigung als Fachkraft mit akademischer Ausbildung (ID: 123017) Blaue K",
+          "Elektronische Kommunikation mit Kommunen; Übermittlung von Nachrichten und Dokumenten (ID: 80746)",
+          "Meldung Schaden o.ä. (ID: 78334)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uebersichtsseite",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 224,
+        "null_count": 12,
+        "examples": [
+          "Umzug ins Ausland online melden (ID: 241)",
+          "Fliegende Bauten - Aufstellung oder Gebrauchsabnahme online beantragen (ID: 1366)",
+          "Aufenthaltstitel für Fachkräfte zur Ausübung einer qualifizierten Beschäftigung online beantragen (ID: 2049)",
+          "Schaden, Mangel, Unregelmäßigkeit oder Verstoß im öffentlichen Raum online melden (ID: 584)",
+          "Lageplan oder Katasterauszug online bestellen (ID: 341)"
+        ],
+        "null_rate": 0.0508
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "leika-schluessel"
+    ],
+    "category_columns": [
+      "eigentuemerbehoerde"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "eigentuemerbehoerde",
+      "y": "leika-schluessel"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

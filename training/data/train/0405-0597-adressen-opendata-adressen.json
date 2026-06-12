@@ -1,0 +1,131 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ﻿STRASSE in Münchner Adressen.",
+  "query_result": {
+    "dataset_title": "Münchner Adressen",
+    "package_id": "543b0f4d-4798-4e87-9c48-13c8c854e4f4",
+    "package_name": "adressen_opendata",
+    "resource_id": "f7e10fe0-54ba-4dc5-80ff-4880902b5092",
+    "resource_name": "Adressen",
+    "resource_format": "txt",
+    "description": "Der Datensatz beinhaltet die aktuellen, amtlichen Münchner Adressen mit Straßennummer, Straßennamen, Hausnummer und Zusatz.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Adressen",
+      "Digitaler Zwilling München",
+      "Geodaten"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "﻿STRASSE",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          1735,
+          8,
+          3265,
+          5054,
+          4586
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 8.0,
+          "max": 6778.0,
+          "mean": 2902.204,
+          "median": 3052.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "HSZ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "37",
+          "10",
+          "68",
+          "64",
+          "23"
+        ],
+        "numeric": {
+          "count": 915.0,
+          "min": 1.0,
+          "max": 457.0,
+          "mean": 32.4623,
+          "median": 18.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "STADTBEZIRK",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          15,
+          6,
+          20,
+          21,
+          24
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.062,
+          "median": 12.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "STRANAM",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Haffstr.",
+          "Aberlestr.",
+          "Neufriedenheimer Str.",
+          "Weinbergerstr.",
+          "Stösserstr."
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "﻿STRASSE",
+      "HSZ",
+      "STADTBEZIRK"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "﻿STRASSE"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

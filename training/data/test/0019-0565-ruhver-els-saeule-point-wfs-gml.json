@@ -1,0 +1,269 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of anzahl_lp_ac in Ladeeinrichtungen.",
+  "query_result": {
+    "dataset_title": "Ladeeinrichtungen",
+    "package_id": "33ffd8b4-c127-4754-931e-b4deeb972148",
+    "package_name": "ruhver_els_saeule_point",
+    "resource_id": "4674ee66-45b1-4d5b-9eb2-95fed7495372",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Verortung der Ladeeinrichtungen auf öffentlichem Grund.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 34,
+    "columns": [
+      {
+        "name": "anzahl_lp_ac",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "2",
+          "1",
+          "8"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 8.0,
+          "mean": 1.928,
+          "median": 2.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "anzahl_lp_dc",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "0",
+          "2"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 0.128,
+          "median": 0.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ladeleistung_kw",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "22",
+          "50",
+          "11"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 11.0,
+          "max": 50.0,
+          "mean": 23.748,
+          "median": 22.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "17",
+          "5",
+          "12",
+          "9",
+          "20"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 24.0,
+          "mean": 11.72,
+          "median": 12.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_saeule_point.anzahl_lp_ac",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "2",
+          "1",
+          "8"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 8.0,
+          "mean": 1.928,
+          "median": 2.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_saeule_point.anzahl_lp_dc",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "0",
+          "2"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 0.128,
+          "median": 0.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_saeule_point.ladeleistung_kw",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "22",
+          "50",
+          "11"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 11.0,
+          "max": 50.0,
+          "mean": 23.748,
+          "median": 22.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_saeule_point.stadtbezirk",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "17",
+          "5",
+          "12",
+          "9",
+          "20"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 24.0,
+          "mean": 11.72,
+          "median": 12.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_saeule_point.fid",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "ruhver_els_saeule_point.1",
+          "ruhver_els_saeule_point.2",
+          "ruhver_els_saeule_point.3",
+          "ruhver_els_saeule_point.4",
+          "ruhver_els_saeule_point.5"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_saeule_point.standort",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Herzogstand 6",
+          "Holzhofstraße 4",
+          "Berliner Straße 68 / Ecke Schinkelstraße",
+          "Stengelstraße 2",
+          "Grünecker Straße 14 / Ecke Kohlrauschstraße 19"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_saeule_point.shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "ruhver_els_saeule_point.shape.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "692254.42270085,5332381.14259793",
+          "692955.51970087,5334237.32109788",
+          "692525.63560086,5338879.2564979",
+          "692858.28360086,5338425.96969788",
+          "693033.78130087,5339514.01599787"
+        ],
+        "null_rate": 0.75
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl_lp_ac",
+      "anzahl_lp_dc",
+      "ladeleistung_kw",
+      "stadtbezirk"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "anzahl_lp_ac"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 21,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

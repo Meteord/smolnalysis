@@ -1,0 +1,159 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Liste aller verfügbaren Onlinedienste der Landeshauptstadt München and compare Leika-Schlussel by Eigentumerbehorde.",
+  "query_result": {
+    "dataset_title": "Liste aller verfügbaren Onlinedienste der Landeshauptstadt München",
+    "package_id": "d818c8c6-6612-480e-9ca9-68dd56995805",
+    "package_name": "liste-aller-verfuegbaren-onlinedienste-der-landeshauptstadt-muenchen",
+    "resource_id": "9292d1f9-4ac2-422d-ad6f-ad92070a66e0",
+    "resource_name": "Liste aller verfügbaren Onlinedienste Januar 2024",
+    "resource_format": "csv",
+    "description": "Die Daten bilden die verfügbaren Onlinedienste für die Bürger*innen und Unternehmen der Landeshauptstadt München ab. Hierin enthalten sind die jeweiligen Links auf den Onlinedienst, dort finden Sie weitere Rahmenbedingungen für die Nutzung des Dienstes und den Umfang der möglichen Onlinebeantragung. Das Angebot wird sukzessive erweitert. Weitere Informationen und Übersichten finden Sie auch im Bayernportal: [Landeshauptstadt München, Kreisfreie Stadt - BayernPortal](https://www.freistaat.bayern/",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [
+      "E-Government"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 221,
+    "sampled_rows": 221,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "Leika-Schlussel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 220,
+        "null_count": 1,
+        "examples": [
+          "99115005070000",
+          "99012091261000",
+          "99010020001001 99010038001000",
+          "77000000000026",
+          "99012005033000"
+        ],
+        "numeric": {
+          "count": 198.0,
+          "min": 9000000000114.0,
+          "max": 99400087017000.0,
+          "mean": 83506314482818.33,
+          "median": 99035004067001.0
+        },
+        "null_rate": 0.0045
+      },
+      {
+        "name": "Kurzbeschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 221,
+        "null_count": 0,
+        "examples": [
+          "Abmeldung ins Ausland",
+          "Abnahme Fliegender Bauten",
+          "Akademische Beschäftigung (Blaue Karte EU)",
+          "Ampel-Störung melden",
+          "Amtlichen Lageplan bestellen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "URL",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 221,
+        "null_count": 0,
+        "examples": [
+          "https://www.buergerservice-portal.de/bayern/muenchen/bsp_abmeldung_ausland/",
+          "https://stadt.muenchen.de/service/info/team-12-statik-u-bautechnische-sonderverfahren/1099270/",
+          "https://stadt.muenchen.de/service/info/hauptabteilung-ii-buergerangelegenheiten/1080627/",
+          "https://www.muenchen.de/dienstleistungsfinder/muenchen/1072683/",
+          "https://www.muenchen.de/dienstleistungsfinder/muenchen/1071891/"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Eigentumerbehorde",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 221,
+        "null_count": 0,
+        "examples": [
+          "Landeshauptstadt München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Leistung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 220,
+        "null_count": 1,
+        "examples": [
+          "Wohnsitz; Abmeldung (ID: 12466)",
+          "Fliegende Bauten; Anzeige der Aufstellung und der Gebrauchsabnahme (ID: 80641)",
+          "Aufenthaltserlaubnis; Beantragung zum Zweck der Erwerbstätigkeit bei qualifizierter Beschäftigung als Fachkraft mit akademischer Ausbildung (ID: 61346) Blaue Ka",
+          "Öffentlicher Raum; Meldung eines Schadens bei der Gemeinde (ID: 50574)",
+          "Liegenschaftskataster; Beantragung eines Auszugs zur Bauvorlage (ID: 104)"
+        ],
+        "null_rate": 0.0045
+      },
+      {
+        "name": "Regionale Eranzung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 220,
+        "null_count": 1,
+        "examples": [
+          "Wohnsitz; Abmeldung (ID: 104032)",
+          "Fliegende Bauten; Anzeige der Aufstellung und der Gebrauchsabnahme (ID: 80744)",
+          "Aufenthaltserlaubnis; Beantragung zum Zweck der Erwerbstätigkeit bei qualifizierter Beschäftigung als Fachkraft mit akademischer Ausbildung (ID: 123017) Blaue K",
+          "Meldung Schaden o.ä. (ID: 78334)",
+          "Liegenschaftskataster; Beantragung eines Auszugs zur Bauvorlage (ID: 80747)"
+        ],
+        "null_rate": 0.0045
+      },
+      {
+        "name": "Ubersichtsseite",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 213,
+        "null_count": 8,
+        "examples": [
+          "Umzug ins Ausland online melden (ID: 241)",
+          "Fliegende Bauten - Aufstellung oder Gebrauchsabnahme online beantragen (ID: 1366)",
+          "Aufenthaltstitel für Fachkräfte zur Ausübung einer qualifizierten Beschäftigung online beantragen (ID: 2049)",
+          "Schaden, Mangel, Unregelmäßigkeit oder Verstoß im öffentlichen Raum online melden (ID: 584)",
+          "Lageplan oder Katasterauszug online bestellen (ID: 341)"
+        ],
+        "null_rate": 0.0362
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Leika-Schlussel"
+    ],
+    "category_columns": [
+      "Eigentumerbehorde"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Eigentumerbehorde",
+      "y": "Leika-Schlussel"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

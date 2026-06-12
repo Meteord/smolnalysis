@@ -1,0 +1,245 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Außenwanderungsziffer Gesamt and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Außenwanderungsziffer Gesamt",
+    "package_id": "11a5b37f-9e59-41eb-a857-1ae0ebc743ac",
+    "package_name": "indikatorenatlas-bevoelkerung-aussenwanderungsziffer-gesamt-83r65mct",
+    "resource_id": "951b196b-9965-4a84-a9fc-93feffcdc6dd",
+    "resource_name": "Außenwanderungsziffer Gesamt",
+    "resource_format": "csv",
+    "description": "(auch als Außenwanderungssaldo je 1000 Einwohner/innen bezeichnet) Differenz der außerstädtisch Zugezogenen (Hauptwohnsitz) der entsprechenden Kategorie und Weggezogenen (Hauptwohnsitz) der entsprechenden Kategorie pro 1 000 Hauptwohnsitzpersonen (mittlere Hauptwohnsitzbevölkerung im Kalenderjahr) der entsprechenden Kategorie. Es werden nur außerstädtische (über die Stadtgrenze Münchens hinaus) Zugezogene und Weg-gezogene berücksichtigt. **Bitte beachten Sie die Datenbeschreibungen: [Information",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas",
+      "Wanderungen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 4056,
+    "sampled_rows": 1000,
+    "column_count": 12,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          7.8,
+          2.7,
+          7.9,
+          10.3,
+          1.7
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": -47.9,
+          "max": 102.5,
+          "mean": 11.515,
+          "median": 10.3
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "40592",
+          "596",
+          "1487",
+          "1824",
+          "1482"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 328.0,
+          "max": 133060.0,
+          "mean": 5195.328,
+          "median": 2158.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "28046",
+          "541",
+          "1091",
+          "1283",
+          "1368"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 204.0,
+          "max": 137439.0,
+          "mean": 3887.261,
+          "median": 1234.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1606986.1",
+          "20662.6",
+          "50005.7",
+          "52365.6",
+          "69038.8"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 18114.1,
+          "max": 1606986.1,
+          "mean": 113746.1358,
+          "median": 54777.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Ausland",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "außerstädtisch Zugezogene (Ausland)",
+          "außerstädtisch Zugezogene (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "außerstädtisch Weggezogene (Ausland)",
+          "außerstädtisch Weggezogene (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 3",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "mittlere Hauptwohnsitzbevölkerung",
+          "mittlere Hauptwohnsitzbevölkerung (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Außenwanderungsziffer"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2",
+      "Basiswert 3"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Name Basiswert 3"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

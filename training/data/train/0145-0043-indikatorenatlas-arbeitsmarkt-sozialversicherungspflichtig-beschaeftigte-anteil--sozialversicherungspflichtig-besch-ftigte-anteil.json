@@ -1,0 +1,209 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Arbeitsmarkt - Sozialversicherungspflichtig Beschäftigte - Anteil and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Arbeitsmarkt - Sozialversicherungspflichtig Beschäftigte - Anteil",
+    "package_id": "d7c53755-150d-4904-966b-e13c462485ce",
+    "package_name": "indikatorenatlas-arbeitsmarkt-sozialversicherungspflichtig-beschaeftigte-anteil-83r65mct",
+    "resource_id": "3a7ba604-9f53-476b-8711-f8aab7a6c159",
+    "resource_name": "Sozialversicherungspflichtig Beschäftigte - Anteil",
+    "resource_format": "csv",
+    "description": "Anteil der sozialversicherungspflichtig Beschäftigen am Wohnort der entsprechenden Kategorie an der erwerbsfähigen (15- bis 64-jährigen) Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Arbeitsmarkt",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 3250,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          66.1,
+          61.0,
+          67.0,
+          67.6,
+          66.3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 48.1,
+          "max": 70.7,
+          "mean": 60.1635,
+          "median": 60.3
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "480692.3",
+          "6724",
+          "18798.5",
+          "19897",
+          "23816.5"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 5245.8,
+          "max": 720496.0,
+          "mean": 38700.1537,
+          "median": 18936.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "726741",
+          "11023.5",
+          "28076.8",
+          "29447",
+          "35939"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 10097.5,
+          "max": 1117076.3,
+          "mean": 64336.137,
+          "median": 31975.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2014.016,
+          "median": 2015.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "sozialversicherungspflichtig Beschäftigte (deutsch)",
+          "sozialversicherungspflichtig Beschäftige (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (deutsch)",
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Sozialversicherungspflichtig Beschäftigte - Anteil"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

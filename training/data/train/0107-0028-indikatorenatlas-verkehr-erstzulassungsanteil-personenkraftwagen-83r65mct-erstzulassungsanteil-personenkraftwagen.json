@@ -1,0 +1,210 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Verkehr - Erstzulassungsanteil Personenkraftwagen and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Verkehr - Erstzulassungsanteil Personenkraftwagen",
+    "package_id": "a0355288-1460-4969-bf5a-40f5a7b33051",
+    "package_name": "indikatorenatlas-verkehr-erstzulassungsanteil-personenkraftwagen-83r65mct",
+    "resource_id": "4e6bbebd-c5b9-43ee-ac6b-272f1f448105",
+    "resource_name": "Erstzulassungsanteil Personenkraftwagen",
+    "resource_format": "csv",
+    "description": "Anteil der erfolgten Erstzulassungen von Personenkraftwagen (Pkw) der entsprechenden Kategorie an allen privaten Pkw (mittlerer privater Pkw-Bestand im Kalenderjahr) in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Indikatorenatlas",
+      "PKW",
+      "Verkehr"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 1040,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          25.3,
+          134.8,
+          6.0,
+          9.7,
+          3.8
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.7,
+          "max": 160.1,
+          "mean": 10.115,
+          "median": 4.9
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "192301",
+          "90987",
+          "1033",
+          "2217",
+          "841"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 174.0,
+          "max": 213422.0,
+          "mean": 6799.799,
+          "median": 1141.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "760402.5",
+          "67472.8",
+          "17078.8",
+          "22879.9",
+          "22187.8"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 6855.5,
+          "max": 760402.5,
+          "mean": 46417.0059,
+          "median": 20570.65
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2006.0,
+          "max": 2025.0,
+          "mean": 2015.866,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "insgesamt",
+          "privat"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Personenkraftwagen Erstzulassungen (insgesamt)",
+          "Personenkraftwagen Erstzulassungen (privat)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "mittlerer Personenkraftwagen-Bestand (insgesamt)",
+          "mittlerer Personenkraftwagen-Bestand (privat)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Erstzulassungsanteil Personenkraftwagen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

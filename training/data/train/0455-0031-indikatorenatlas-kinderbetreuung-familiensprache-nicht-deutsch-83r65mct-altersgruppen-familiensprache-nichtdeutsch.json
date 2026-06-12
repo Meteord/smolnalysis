@@ -1,0 +1,212 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Kinderbetreuung - Altersgruppen Familiensprache nichtdeutsch and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Kinderbetreuung - Altersgruppen Familiensprache nichtdeutsch",
+    "package_id": "262f11dc-41cd-4609-9b86-4f0684224aab",
+    "package_name": "indikatorenatlas-kinderbetreuung-familiensprache-nicht-deutsch-83r65mct",
+    "resource_id": "9f489d4f-3416-4c1a-b559-0d3ca83cc91c",
+    "resource_name": "Altersgruppen Familiensprache nichtdeutsch",
+    "resource_format": "csv",
+    "description": "Anteil der betreuten Kinder mit nichtdeutscher Familiensprache (vorrangig in der Familie gesprochene Sprache) der entsprechenden Kategorie an allen betreuten Kindern der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Indikatorenatlas",
+      "Kinderbetreuung"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 1482,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          29.5,
+          19.0,
+          28.0,
+          23.4,
+          15.3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 4.2,
+          "max": 63.5,
+          "mean": 28.7289,
+          "median": 27.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "5096",
+          "59",
+          "184",
+          "164",
+          "82"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 8.0,
+          "max": 18998.0,
+          "mean": 702.712,
+          "median": 263.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "17258",
+          "311",
+          "657",
+          "701",
+          "535"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 56.0,
+          "max": 47769.0,
+          "mean": 2117.398,
+          "median": 986.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2007.0,
+          "max": 2025.0,
+          "mean": 2016.108,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "bis 2 Jahre",
+          "3 bis 7 Jahre (ohne Schulkinder)",
+          "5 bis 13 Jahre (Schulkinder)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "betreute Kinder (nichtdeutsche Familiensprache) (bis 2 Jahre)",
+          "betreute Kinder (nichtdeutsche Familiensprache) (3 bis 7 Jahre)",
+          "betreute Kinder (nichtdeutsche Familiensprache) (5 bis 13 Jahre)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "betreute Kinder (bis 2 Jahre)",
+          "betreute Kinder (3 bis 7 Jahre)",
+          "betreute Kinder (5 bis 13 Jahre)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Altersgruppen Familiensprache nichtdeutsch"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

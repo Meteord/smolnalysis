@@ -1,0 +1,182 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Abfallentsorgungsanlagen der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Abfallentsorgungsanlagen der Landeshauptstadt München",
+    "package_id": "4572937c-44df-49bd-af87-26f740286327",
+    "package_name": "abfall_betrieb_opendata",
+    "resource_id": "a8256917-bc67-48cb-a4bb-3573b214e463",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Anlagen zur Behandlung, Lagerung und Ablagerung von Abfällen",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Umweltschutz",
+      "Ver- und Entsorgung Nachrichtenwesen",
+      "Versorgungswirtschaft und staatliche Dienste"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 24,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:21"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:21"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Abfallentsorgungsanlagen der Landeshauptstadt München"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Ver- und Entsorgung/Nachrichtenwesen"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.modified",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2024-05-13"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Anlagen zur Behandlung, Lagerung und Ablagerung von Abfällen"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Anlagen zur Behandlung, Lagerung und Ablagerung von Abfällen"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "license"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.source",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Anlagen zur Behandlung, Lagerung und Ablagerung von Abfällen"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/portal/opendata"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 10,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

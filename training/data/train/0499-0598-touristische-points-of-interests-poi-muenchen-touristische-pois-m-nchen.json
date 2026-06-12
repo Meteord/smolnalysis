@@ -1,0 +1,218 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Touristische POIs München from Touristische Points of Interests (POI) München.",
+  "query_result": {
+    "dataset_title": "Touristische Points of Interests (POI) München",
+    "package_id": "5447d89c-256a-4091-92e2-e248e0ed6758",
+    "package_name": "touristische-points-of-interests-poi-muenchen",
+    "resource_id": "b6b45b42-2e6c-43af-898f-c5cfa1d660b8",
+    "resource_name": "Touristische POIs München",
+    "resource_format": "csv",
+    "description": "Sammlung an touristischen Points of Interest in München, welche im offiziellen Tourismusportal der Landeshauptstadt München, [einfach-muenchen.de](https://einfach-muenchen.de), gepflegt werden und über die [BayernCloud Tourismus der ByTM](https://bayerncloud.digital/) (Bayern Tourismus Marketing GmbH) in den Knowledge Graph der DZT (Deutsche Zentrale für Tourismus) eingespielt werden. Verlinkte Fotos unterliegen unter Umständen einer anderen Lizenz (siehe jeweilige Zeile).",
+    "organization": "Referat für Arbeit und Wirtschaft (RAW) der Landeshauptstadt München",
+    "tags": [
+      "Tourismus"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 175,
+    "sampled_rows": 175,
+    "column_count": 22,
+    "columns": [
+      {
+        "name": "licence",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+          "https://creativecommons.org/licenses/by/4.0/legalcode.de"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "image-license",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 167,
+        "null_count": 8,
+        "examples": [
+          "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+          "https://creativecommons.org/licenses/by-sa/4.0/legalcode.de",
+          "https://creativecommons.org/licenses/by/4.0/legalcode.de"
+        ],
+        "null_rate": 0.0457
+      },
+      {
+        "name": "geo-longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 171,
+        "null_count": 4,
+        "examples": [
+          11.578152179718,
+          11.5888,
+          11.5595113,
+          11.554578,
+          11.555872
+        ],
+        "numeric": {
+          "count": 171.0,
+          "min": 9.9278,
+          "max": 13.0435,
+          "mean": 11.5911,
+          "median": 11.5754
+        },
+        "null_rate": 0.0229
+      },
+      {
+        "name": "geo-latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 171,
+        "null_count": 4,
+        "examples": [
+          48.140252736163,
+          48.13019,
+          48.1461731,
+          48.158278,
+          48.123641
+        ],
+        "numeric": {
+          "count": 171.0,
+          "min": 47.4211,
+          "max": 49.8916,
+          "mean": 48.1358,
+          "median": 48.1405
+        },
+        "null_rate": 0.0229
+      },
+      {
+        "name": "@context",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "https://schema.org"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "@type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "TouristAttraction"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "@id",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "31e79f84c5efcd784d5060996f40b803",
+          "a4008fa27836977a0e03c0de944d27b6",
+          "8023720f4f022e5c304d0dd3c37e7812",
+          "3e53aafe4846d4fc994274d95f139d72",
+          "88651f7c4eba76ad74badcdba6a10301"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "Schatzkammer in der Residenz",
+          "Sudetendeutsches Museum",
+          "Theater für Kinder",
+          "Utopia",
+          "Volkstheater"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "description",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "Die Schatzkammer der Münchner Residenz zählt mit ihren kostbaren Objekten zu den hochrangigen Sammlungen ihrer Art.",
+          "Eines der neuesten Museen Münchens – das Sudetendeutsche Museum, eröffnete erst im Oktober 2020. Es dokumentiert das Leben der deutschsprachigen Bevölkerung in",
+          "Seit über 50 Jahren inszeniert das Münchner Theater für Kinder in familiärer Atmosphäre bezaubernde Stücke für große und kleine Gäste. Vorhang auf!",
+          "Die denkmalgeschützte Reithalle ist seit November 2019 die Heimat eines neuen Konzepts – Utopia. Auf einer großen Fläche werden hier viele Ideen aus dem Kunst-",
+          "Seit 1983 steht das Haus in der Tradition des Volksschauspiels. Im Oktober 2021 ist das Volkstheater in einen Neubau im Schlachthofviertel umgezogen und verfügt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "http://www.residenz-muenchen.de/deutsch/skammer/index.htm",
+          "https://www.sudetendeutsches-museum.de/",
+          "http://mtfk.de/",
+          "http://www.facebook.com/utopiahappeningplace",
+          "https://www.muenchner-volkstheater.de/"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "publicAccess",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "true"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "geo-@type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "GeoCoordinates"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "licence",
+      "image-license",
+      "@context",
+      "@type"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 9,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

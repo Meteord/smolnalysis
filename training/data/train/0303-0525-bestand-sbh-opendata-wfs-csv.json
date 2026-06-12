@@ -1,0 +1,308 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Sozialbürgerhaus.",
+  "query_result": {
+    "dataset_title": "Sozialbürgerhaus",
+    "package_id": "5b2abead-f1b2-477e-8595-c55528854c7b",
+    "package_name": "bestand_sbh_opendata",
+    "resource_id": "51d16eee-d946-44e8-ad1f-23d8ba0e761e",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Im SBH werden die bürgerorientierten sozialen Dienstleistungen unter einem Dach und einer gemeinsamen regionalen Zuständigkeit angeboten. Das SBH besteht aus dem SBH Soziales und dem SBH Arbeit (JC).",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 12,
+    "sampled_rows": 12,
+    "column_count": 17,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 6.5,
+          "median": 6.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "lfdnr",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 6.5,
+          "median": 6.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zs3",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          2,
+          12,
+          5,
+          6,
+          10
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2.0,
+          "max": 21.0,
+          "mean": 11.75,
+          "median": 11.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sozialregi",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "1,2,3",
+          "4,12",
+          "5,13",
+          "6,7",
+          "9,10"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 16.0,
+          "max": 16.0,
+          "mean": 16.0,
+          "median": 16.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "kat",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "za3",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          62,
+          170,
+          11,
+          16,
+          24
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2.0,
+          "max": 486.0,
+          "mean": 82.9167,
+          "median": 23.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "za4",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          0
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "za2",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          4292,
+          1857,
+          3400,
+          3074,
+          5613
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 872.0,
+          "max": 6598.0,
+          "mean": 3782.6667,
+          "median": 3768.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zk1",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          690088.68,
+          693734.6069,
+          693784.976,
+          688877.6799,
+          688063.0637
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 683134.4679,
+          "max": 696885.6383,
+          "mean": 690676.3561,
+          "median": 690625.311
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zk2",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          5334761.4562,
+          5341708.2319,
+          5333751.7565,
+          5332530.5042,
+          5339913.479
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 5330190.9298,
+          "max": 5341708.2319,
+          "mean": 5335021.0983,
+          "median": 5334409.1287
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zv03",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          282,
+          1216,
+          544,
+          611,
+          1012
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 282.0,
+          "max": 2134.0,
+          "mean": 1202.1667,
+          "median": 1173.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zt03",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          28,
+          121,
+          54,
+          61,
+          101
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 28.0,
+          "max": 213.0,
+          "mean": 119.9167,
+          "median": 117.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "lfdnr",
+      "zs3",
+      "sozialregi"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 4,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

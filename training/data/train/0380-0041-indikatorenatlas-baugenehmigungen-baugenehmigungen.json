@@ -1,0 +1,210 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Baugenehmigungen and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Baugenehmigungen",
+    "package_id": "aa33f2a4-11b6-48cb-a21a-8060c9009f8f",
+    "package_name": "indikatorenatlas-baugenehmigungen",
+    "resource_id": "72f8105d-dacc-4c5f-8f9f-1591d2738da9",
+    "resource_name": "Baugenehmigungen",
+    "resource_format": "csv",
+    "description": "Erteilte Baugenehmigungen für Wohnungen (Neubau, Um-, An- und Ausbau) in Wohn- und Nichtwohngebäuden je 1 000 Einwohner/innen mit Hauptwohnsitz. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bauen",
+      "Indikatorenatlas"
+    ],
+    "groups": [],
+    "row_count": 1872,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          72.6,
+          216.4,
+          94.0,
+          73.1,
+          57.2
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": -88888888.0,
+          "max": 216.4,
+          "mean": -1155511.3016,
+          "median": 43.3
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "517122",
+          "1082",
+          "4698",
+          "1901",
+          "25617"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 782305.0,
+          "mean": 14872.698,
+          "median": 113.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "7118",
+          "5",
+          "50",
+          "26",
+          "448"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 11910.0,
+          "mean": 654.381,
+          "median": 239.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2013.0,
+          "max": 2024.0,
+          "mean": 2018.802,
+          "median": 2019.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Wohnfläche",
+          "Wohnungen Ein- und Zweifamilienhaus",
+          "Wohnungen 1 und 2 Räume",
+          "Wohnungen 3 und 4 Räume"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Summe (Wohnflächen genehmigter Neubauwohnungen)",
+          "genehmigte Neubauwohnungen (Ein- und Zweifamilienhaus)",
+          "genehmigte Neubauwohnungen (1 und 2 Räume)",
+          "genehmigte Neubauwohnungen (3 und 4 Räume)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Baugenehmigungen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "genehmigte Neubauwohnungen (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Indikator",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

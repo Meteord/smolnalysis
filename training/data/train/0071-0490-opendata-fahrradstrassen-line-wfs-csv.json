@@ -1,0 +1,131 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of laenge_5m in Fahrradstraßen.",
+  "query_result": {
+    "dataset_title": "Fahrradstraßen",
+    "package_id": "54828acb-7a9b-4c03-8a1b-4da3569648cb",
+    "package_name": "opendata_fahrradstrassen_line",
+    "resource_id": "5eb07d1c-4978-4e93-8c51-69cbb3291cff",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "In Fahrradstraßen haben Radfahrende Vorrang, dürfen nebeneinander fahren und die Geschwindigkeit bestimmen. Nur, wenn das Zusatzschild „Kraftfahrzeuge frei“ hängt, dürfen auch andere motorisierte Verkehrsteilnehmende hier fahren. Für alle gilt eine Höchstgeschwindigkeit von 30 Stundenkilometern, an Kreuzungen und Einmündungen gilt rechts vor links. Ein großes Fahrrad-Piktogramm im blauen Kreis mit der zusätzlichen Beschriftung „Fahrradstraße“ als Verkehrsschild und als Bodenmarkierung kennzeichn",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 104,
+    "sampled_rows": 104,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "laenge_5m",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 104,
+        "null_count": 0,
+        "examples": [
+          180,
+          815,
+          525,
+          405,
+          290
+        ],
+        "numeric": {
+          "count": 104.0,
+          "min": 50.0,
+          "max": 1785.0,
+          "mean": 444.7596,
+          "median": 310.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 104,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((693412.9230008773 5334281.793597852, 693429.7508008777 5334295.316897849, 693475.5224008786 5334329.279297846, 693500.2533008794 5334348.47189",
+          "MULTILINESTRING ((689936.3812008024 5331430.317798081, 689930.1599008021 5331422.411098081, 689928.4687008021 5331413.309898082, 689928.0189008022 5331386.46889",
+          "MULTILINESTRING ((681529.9080006392 5337719.840698509, 681517.9487006388 5337753.702298508, 681507.7651006386 5337782.17169851, 681505.2932006386 5337783.134198",
+          "MULTILINESTRING ((686546.4810007329 5335747.952198267, 686537.5326007325 5335720.2473982675, 686524.2697007323 5335698.613398268, 686503.821700732 5335664.16059",
+          "MULTILINESTRING ((691943.8646008444 5334977.724997947, 691956.4450008449 5335028.287597947, 691968.8574008452 5335078.209497946, 691992.3947008457 5335170.14639"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 104,
+        "null_count": 0,
+        "examples": [
+          "Wolfgangstraße",
+          "Am Isarkanal",
+          "Mooswiesenstraße",
+          "Winfriedstraße",
+          "Alfons-Goppel-Straße"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "von_querst",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 96,
+        "null_count": 8,
+        "examples": [
+          "Preysingstraße",
+          "Schinderbrücke",
+          "Langwieder Haide",
+          "Wotanstraße",
+          ""
+        ],
+        "null_rate": 0.0769
+      },
+      {
+        "name": "bis_querst",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 95,
+        "null_count": 9,
+        "examples": [
+          "Leonhardstraße",
+          "Thalkirchner Brücke",
+          "Breiter Weg",
+          "De-La-Paz-Straße",
+          ""
+        ],
+        "null_rate": 0.0865
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "laenge_5m"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "laenge_5m"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

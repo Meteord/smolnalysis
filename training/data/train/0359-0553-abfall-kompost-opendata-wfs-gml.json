@@ -1,0 +1,306 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of strnr in Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden (Opendata).",
+  "query_result": {
+    "dataset_title": "Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden (Opendata)",
+    "package_id": "b23266ed-c048-41af-8255-5f01a673beaa",
+    "package_name": "abfall_kompost_opendata",
+    "resource_id": "92ce6c29-b87a-46d3-877d-687e0a731ed9",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Anlagen zur Lagerung und Behandlung von Kompost, Biomüll und Erden",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Umweltschutz",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 116,
+    "sampled_rows": 116,
+    "column_count": 78,
+    "columns": [
+      {
+        "name": "strnr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 78,
+        "examples": [
+          "5390",
+          "797",
+          "1574",
+          "2853",
+          "3167"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 6563.0,
+          "mean": 4413.2632,
+          "median": 5390.0
+        },
+        "null_rate": 0.6724
+      },
+      {
+        "name": "bezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 78,
+        "examples": [
+          "24",
+          "10",
+          "23",
+          "21",
+          "11"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 24.0,
+          "mean": 16.4211,
+          "median": 15.5
+        },
+        "null_rate": 0.6724
+      },
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 78,
+        "examples": [
+          "80639",
+          "80997",
+          "80993",
+          "80999",
+          "81249"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 82008.0,
+          "mean": 79113.1053,
+          "median": 81122.0
+        },
+        "null_rate": 0.6724
+      },
+      {
+        "name": "stadtbez_",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 78,
+        "examples": [
+          "24",
+          "10",
+          "23",
+          "22",
+          "11"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 24.0,
+          "mean": 15.5,
+          "median": 15.5
+        },
+        "null_rate": 0.6724
+      },
+      {
+        "name": "spalte",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 78,
+        "examples": [
+          "2",
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 0.9737,
+          "median": 1.0
+        },
+        "null_rate": 0.6724
+      },
+      {
+        "name": "leg_code",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 78,
+        "examples": [
+          "22",
+          "42",
+          "41",
+          "32",
+          "12"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 82.0,
+          "mean": 24.4737,
+          "median": 22.0
+        },
+        "null_rate": 0.6724
+      },
+      {
+        "name": "leg_neu",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 78,
+        "examples": [
+          "2.0",
+          "1.0",
+          "3.0",
+          "7.0",
+          "4.0"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 1.0,
+          "max": 7.0,
+          "mean": 3.8158,
+          "median": 3.0
+        },
+        "null_rate": 0.6724
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 78,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6724
+      },
+      {
+        "name": "nr_4__bims",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 20,
+        "null_count": 96,
+        "examples": [
+          "08.04",
+          "08.09.",
+          "08.09",
+          "08.05",
+          "08.11"
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 8.04,
+          "max": 8.12,
+          "mean": 8.0811,
+          "median": 8.09
+        },
+        "null_rate": 0.8276
+      },
+      {
+        "name": "bims_nr_4",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 20,
+        "null_count": 96,
+        "examples": [
+          "08.04 und 08.12",
+          "08.09.",
+          "08.09",
+          "08.05",
+          "08.04"
+        ],
+        "numeric": {
+          "count": 13.0,
+          "min": 8.04,
+          "max": 8.12,
+          "mean": 8.0785,
+          "median": 8.09
+        },
+        "null_rate": 0.8276
+      },
+      {
+        "name": "betr_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 104,
+        "examples": [
+          "96 (Pelkovenstr. 145)",
+          "16238 (Rupert-Bodner-Str. 25)",
+          "933 (Riesenfeldstraße 87)",
+          "13646 u. 13134",
+          "696"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 669.0,
+          "max": 30046.0,
+          "mean": 9244.0,
+          "median": 4735.5
+        },
+        "null_rate": 0.8966
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 115,
+        "examples": [
+          "38"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 38.0,
+          "max": 38.0,
+          "mean": 38.0,
+          "median": 38.0
+        },
+        "null_rate": 0.9914
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "strnr",
+      "bezirk",
+      "plz",
+      "stadtbez_"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "strnr"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 66,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

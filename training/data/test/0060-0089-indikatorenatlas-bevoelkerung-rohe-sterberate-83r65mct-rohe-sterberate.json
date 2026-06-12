@@ -1,0 +1,209 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Rohe Sterberate and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Rohe Sterberate",
+    "package_id": "a3a18ecb-b0f9-42f2-b92b-d4d5a9ce24a2",
+    "package_name": "indikatorenatlas-bevoelkerung-rohe-sterberate-83r65mct",
+    "resource_id": "fcbee553-afeb-4751-946e-25bfc8854c7d",
+    "resource_name": "Rohe Sterberate",
+    "resource_format": "csv",
+    "description": "(auch als Rohe Sterbeziffer bezeichnet) Gestorbene (Hauptwohnsitz) der entsprechenden Kategorie pro 1 000 Hauptwohnsitzpersonen (mittlere Hauptwohnsitzbevölkerung im Kalenderjahr). der entsprechenden Kategorie. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 2028,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          9.6,
+          8.8,
+          5.5,
+          5.8,
+          9.1
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 4.2,
+          "max": 14.4,
+          "mean": 9.0674,
+          "median": 9.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "10721",
+          "137",
+          "202",
+          "221",
+          "477"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 113.0,
+          "max": 13205.0,
+          "mean": 838.108,
+          "median": 430.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1115884.7",
+          "15591.3",
+          "36968.9",
+          "38404.5",
+          "52414.7"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 14008.0,
+          "max": 1606986.1,
+          "mean": 94460.8411,
+          "median": 45447.95
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Gestorbene (deutsch)",
+          "Gestorbene (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "mittlere Hauptwohnsitzbevölkerung (deutsch)",
+          "mittlere Hauptwohnsitzbevölkerung (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Rohe Sterberate"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

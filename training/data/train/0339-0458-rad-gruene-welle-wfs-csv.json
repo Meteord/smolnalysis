@@ -1,0 +1,209 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Grüne Welle Radverkehr and compare laenge_m by beginn.",
+  "query_result": {
+    "dataset_title": "Grüne Welle Radverkehr",
+    "package_id": "228b638f-b11f-4656-9a38-e66240196ef4",
+    "package_name": "rad_gruene_welle",
+    "resource_id": "d5db7169-eb1f-40c2-9058-5bd1d5be8333",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Synchronisierte Ampelschaltungen ermöglichen es Radfahrenden, durch die Erhaltung der Richtgeschwindigkeit (ca. 20 km/h) mehrere Kreuzungen ohne Halt zu passieren. In der Regel ist die Koordinierungsrichtung tageszeitabhängig. Eine gleichzeitige Koordinierung in beiden Richtungen ist jedoch nur unter bestimmten Bedingungen möglich (geeigneter Knotenpunktabstand für gegebene Signalprogrammumlauf- und Freigabezeiten). Die Eingriffsmöglichkeiten von ÖPNV-Fahrzeugen auf die dortigen Ampeln können je",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 5,
+    "sampled_rows": 5,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "laenge_m",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          795,
+          1860,
+          675,
+          1203,
+          595
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 595.0,
+          "max": 1860.0,
+          "mean": 1025.6,
+          "median": 795.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsst",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          0
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          2
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "vpr_kmh",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          20,
+          22,
+          21,
+          18
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 18.0,
+          "max": 22.0,
+          "mean": 20.2,
+          "median": 20.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "beginn",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          "Luisenstr.",
+          "Lindwurmstr.",
+          "Dachauer Str.",
+          "Arcisstr."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ende",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          "Amalienstr.",
+          "Baldeplatz",
+          "Barerstr.",
+          "Türkenstr."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "gr_welle",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          "Schellingstr.",
+          "Kapuziner Str.",
+          "Karlstr.",
+          "Gabelsberger Str.",
+          "Adalbertstr."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "seit",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          "14.03.2017",
+          "29.08.2019",
+          "12.02.2021",
+          "13.03.2023",
+          "18.10.2019"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 5,
+        "null_count": 0,
+        "examples": [
+          "LINESTRING (691744.61180084 5336151.438697959, 691697.663100839 5336169.032697963, 691636.8629008376 5336192.253497965, 691586.3707008365 5336211.062197969, 691",
+          "LINESTRING (691055.0005008257 5333174.127898008, 691035.2558008254 5333186.14619801, 691017.9692008249 5333196.325898011, 691002.7515008246 5333205.103398013, 6",
+          "LINESTRING (691015.2460008244 5335349.443898007, 690823.3548008204 5335424.74499802, 690627.0087008161 5335503.711898033, 690438.3518008121 5335577.527398044, 6",
+          "LINESTRING (690272.9947008085 5336165.2642980525, 690377.1239008107 5336136.7930980455, 690622.9421008159 5336042.213098029, 690815.6623008199 5335971.876198018",
+          "LINESTRING (691845.5134008422 5336403.836697952, 691759.7589008403 5336438.407797956, 691689.2031008389 5336466.569697962, 691621.2531008372 5336494.683697966,"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "laenge_m",
+      "planungsst",
+      "status",
+      "vpr_kmh"
+    ],
+    "category_columns": [
+      "beginn",
+      "ende",
+      "gr_welle",
+      "seit"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "beginn",
+      "y": "laenge_m"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

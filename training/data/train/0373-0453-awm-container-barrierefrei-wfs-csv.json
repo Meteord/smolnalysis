@@ -1,0 +1,166 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Barrierefreie Container für Altglas and compare glas_braun by adresse.",
+  "query_result": {
+    "dataset_title": "Barrierefreie Container für Altglas",
+    "package_id": "297f0915-eb0e-44b8-b2ed-77f6d4590d7c",
+    "package_name": "awm_container_barrierefrei",
+    "resource_id": "30cd2965-54f1-4d07-9712-6b8dee49f939",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Der Dienst liefert einen Überblick über die Standorte der barrierefreien Container für Altglas. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die jeweilige Wertstoffinsel zuständige Firma.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Ver- und Entsorgung",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 4,
+    "sampled_rows": 4,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "glas_braun",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "glas_gruen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "glas_weiss",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "barrierefrei",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "adresse",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 4,
+        "null_count": 0,
+        "examples": [
+          "Döderleinstr. 8",
+          "Schyrenstraße 4",
+          "Berliner Str. 72",
+          "Am Gleisdreieck 22"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 4,
+        "null_count": 0,
+        "examples": [
+          "POINT (688191.4585007664 5331157.289298184)",
+          "POINT (691271.3008008305 5332905.703197997)",
+          "POINT (692568.6296008574 5338916.256997899)",
+          "POINT (680857.4739006279 5334722.5186985405)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url_glas",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 4,
+        "null_count": 0,
+        "examples": [
+          "depotcontainer-muenchen@remondis.de"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "glas_braun",
+      "glas_gruen",
+      "glas_weiss",
+      "barrierefrei"
+    ],
+    "category_columns": [
+      "adresse",
+      "url_glas"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "adresse",
+      "y": "glas_braun"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

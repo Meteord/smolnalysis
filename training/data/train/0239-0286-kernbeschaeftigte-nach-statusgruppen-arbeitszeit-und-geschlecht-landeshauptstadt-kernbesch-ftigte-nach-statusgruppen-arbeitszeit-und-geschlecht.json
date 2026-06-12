@@ -1,0 +1,177 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München and compare vollzeit_weiblich by statusgruppe.",
+  "query_result": {
+    "dataset_title": "Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München",
+    "package_id": "e88d11dc-f186-47d0-a032-57ce7714a358",
+    "package_name": "kernbeschaeftigte-nach-statusgruppen-arbeitszeit-und-geschlecht-landeshauptstadt-muenchen",
+    "resource_id": "1ed5e4ff-6f51-4c60-9806-e803026d7e92",
+    "resource_name": "Kernbeschäftigte nach Statusgruppen, Arbeitszeit und Geschlecht",
+    "resource_format": "csv",
+    "description": "Kernbeschäftigte der Landeshauptstadt München nach Statusgruppen, Arbeitszeit und Geschlecht zum 31.12. des jeweiligen Jahres.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Personal",
+      "Personalreferat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 6,
+    "sampled_rows": 6,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "vollzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          2676,
+          8187,
+          2668,
+          7969,
+          2662
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 2662.0,
+          "max": 8187.0,
+          "mean": 5337.3333,
+          "median": 5269.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          2727,
+          9808,
+          2711,
+          9214,
+          2671
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 2671.0,
+          "max": 9808.0,
+          "mean": 6002.5,
+          "median": 5805.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "vollzeit_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          4817,
+          9268,
+          4827,
+          8940,
+          4910
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 4817.0,
+          "max": 9268.0,
+          "mean": 6947.6667,
+          "median": 6917.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          753,
+          2121,
+          738,
+          1917,
+          703
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 703.0,
+          "max": 2121.0,
+          "mean": 1351.8333,
+          "median": 1316.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 2022.0,
+          "max": 2024.0,
+          "mean": 2023.0,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "statusgruppe",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "Beamte*innen",
+          "Tarifbeschäftigte"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vollzeit_weiblich",
+      "teilzeit_weiblich",
+      "vollzeit_maennlich",
+      "teilzeit_maennlich"
+    ],
+    "category_columns": [
+      "statusgruppe"
+    ],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "statusgruppe",
+      "y": "vollzeit_weiblich"
+    }
+  },
+  "quality_score": 7.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

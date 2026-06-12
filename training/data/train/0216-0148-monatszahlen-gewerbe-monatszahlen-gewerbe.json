@@ -1,0 +1,234 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Gewerbe and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Gewerbe",
+    "package_id": "92d4a8dc-bc7f-487c-a624-903033abe355",
+    "package_name": "monatszahlen-gewerbe",
+    "resource_id": "208435d3-e3a9-46a2-b2ed-69218ee6d7c3",
+    "resource_name": "Monatszahlen Gewerbe",
+    "resource_format": "csv",
+    "description": "__Datensatz wird nicht mehr aktualisiert__, Gewerbean- und -abmeldungen jetzt unter [Monatszahlen Wirtschaft.](https://opendata.muenchen.de/dataset/monatszahlen-wirtschaft) Der Datensatz __Monatszahlen Gewerbe__ beinhaltet das Thema * An-/ Abmeldungen Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 424,
+    "sampled_rows": 424,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          201708,
+          201707,
+          201706,
+          201705,
+          201704
+        ],
+        "numeric": {
+          "count": 424.0,
+          "min": 200001.0,
+          "max": 201708.0,
+          "mean": 200840.3868,
+          "median": 200810.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          1134,
+          1080,
+          1061,
+          1097,
+          1129
+        ],
+        "numeric": {
+          "count": 424.0,
+          "min": 818.0,
+          "max": 2701.0,
+          "mean": 1557.0708,
+          "median": 1504.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          1218,
+          1215,
+          1223,
+          1211,
+          1221
+        ],
+        "numeric": {
+          "count": 424.0,
+          "min": 950.0,
+          "max": 2111.0,
+          "mean": 1562.2099,
+          "median": 1487.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 422,
+        "null_count": 2,
+        "examples": [
+          "5",
+          "1,79",
+          "-3,28",
+          "-2,83",
+          "-17,95"
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": -25.0,
+          "max": 46.0,
+          "mean": -1.0,
+          "median": -5.5
+        },
+        "null_rate": 0.0047
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 400,
+        "null_count": 24,
+        "examples": [
+          1098.0,
+          1079.0,
+          1154.0,
+          959.0,
+          1214.0
+        ],
+        "numeric": {
+          "count": 400.0,
+          "min": 818.0,
+          "max": 2701.0,
+          "mean": 1570.5025,
+          "median": 1521.5
+        },
+        "null_rate": 0.0566
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 400,
+        "null_count": 24,
+        "examples": [
+          "3,28",
+          "0,09",
+          "-8,06",
+          "14,39",
+          "-7"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": -36.0,
+          "max": 0.0,
+          "mean": -11.25,
+          "median": -4.5
+        },
+        "null_rate": 0.0566
+      },
+      {
+        "name": "JAHR",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          2017,
+          2016,
+          2015,
+          2014,
+          2013
+        ],
+        "numeric": {
+          "count": 424.0,
+          "min": 2000.0,
+          "max": 2017.0,
+          "mean": 2008.3396,
+          "median": 2008.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          "Gewerbeabmeldungen",
+          "Gewerbeanmeldungen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 424,
+        "null_count": 0,
+        "examples": [
+          "An-/ Abmeldungen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "ZWOELF_MONATE_MITTELWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "ZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

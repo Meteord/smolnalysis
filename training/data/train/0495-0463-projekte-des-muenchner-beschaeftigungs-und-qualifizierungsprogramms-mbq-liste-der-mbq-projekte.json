@@ -1,0 +1,208 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ) and compare plz by foerdergruppe.",
+  "query_result": {
+    "dataset_title": "Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ)",
+    "package_id": "e7e8c4b8-6466-4edb-b25f-44129faa56ed",
+    "package_name": "projekte-des-muenchner-beschaeftigungs-und-qualifizierungsprogramms-mbq",
+    "resource_id": "dccc59bf-9561-4587-b7b8-38b2562e9eff",
+    "resource_name": "Liste der MBQ-Projekte",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst die Projekte des Münchner Beschäftigungs- und Qualifizierungsprogramms (MBQ). Das MBQ ist das Arbeitsmarktprogramm der Stadt München. Ziel ist die berufliche und soziale Integration von Menschen in den Arbeitsmarkt und Fachkräftesicherung.",
+    "organization": "Referat für Arbeit und Wirtschaft (RAW) der Landeshauptstadt München",
+    "tags": [
+      "Arbeit",
+      "Integration",
+      "Stadtratsauftrag",
+      "Wirtschaft"
+    ],
+    "groups": [],
+    "row_count": 77,
+    "sampled_rows": 77,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "81667",
+          "80337",
+          "81829",
+          "80939",
+          "85609"
+        ],
+        "numeric": {
+          "count": 77.0,
+          "min": 80331.0,
+          "max": 85622.0,
+          "mean": 81222.5974,
+          "median": 80992.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "foerdergruppe",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "Abbau von Langzeitarbeitslosigkeit",
+          "Berufliche Gleichstellung von Frauen und Männern",
+          "Förderung von Jugendlichen und Studierenden beim Übergang Schule-Studium-Arbeitswelt",
+          "Kompetenzentwicklung in Unternehmen und Branchen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "München",
+          "Aschheim",
+          "Feldkirchen",
+          "Baierbrunn"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "projektname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "ABBA",
+          "Aids-Hilfe Beschäftigungsprojekte",
+          "avanta Lettershop",
+          "Münchner Arbeit",
+          "Beschäftigungsbetrieb Transport und Sortierung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "projekttraeger",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "Perspektive GmbH München",
+          "Münchner Aids-Hilfe e. V.",
+          "avanta München e. V.",
+          "Münchner Arbeit gGmbH",
+          "Weißer Rabe Soziale Betriebe und Dienste GmbH"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 77,
+        "null_count": 0,
+        "examples": [
+          "Gravelottestraße 6 - 8",
+          "Lindwurmstraße 71 - 73",
+          "Stahlgruberring 22",
+          "Edmund-Rumpler-Str. 13",
+          "Margaretha-Ley-Ring 17"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "projekt-e-mail",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 76,
+        "null_count": 1,
+        "examples": [
+          "abba@perspektive-muenchen.de",
+          "regenbogen@muenchner-aidshilfe.de",
+          "info@avanta-muenchen.de",
+          "info@muenchner-arbeit.de",
+          "recycling@weisser-rabe.de"
+        ],
+        "null_rate": 0.013
+      },
+      {
+        "name": "projektbeschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 69,
+        "null_count": 8,
+        "examples": [
+          "Langzeitarbeitslose Menschen und/oder Menschen mit Behinderung sollen durch die Beschäftigung und Qualifizierung zuerst psychisch und sozial stabilisiert werden",
+          "Die Hauptziele der Aids-Hilfe Beschäftigungsprojekte, Café Regenbogen und Tagungszentrum, sind die Wiederherstellung, Erhaltung und Förderung der Arbeitsfähigke",
+          "Der avanta Lettershop fördert die berufliche und soziale Integration von langzeitarbeitslosen Frauen. Er bietet seinen Teilnehmerinnen Arbeitsplätze mit begleit",
+          "Die Münchner Arbeit GmbH ist ein kommunaler Beschäftigungsbetrieb und eine 100prozentige Tochter der Stadt München. Sie unterhält an ihrem Standort in Freimann",
+          "Der soziale Beschäftigungsbetrieb übernimmt für Privat- und Geschäftskunden Wohnungs- und Firmenauflösungen und transportiert dabei anfallende Haushaltsgegenstä"
+        ],
+        "null_rate": 0.1039
+      },
+      {
+        "name": "telefon",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 69,
+        "null_count": 8,
+        "examples": [
+          "089 48 00 48 35",
+          "089 54 33 31 02",
+          "089 18 93 490",
+          "089 31 88 09 0",
+          "089 86 49 78 0"
+        ],
+        "null_rate": 0.1039
+      },
+      {
+        "name": "internet-adresse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 69,
+        "null_count": 8,
+        "examples": [
+          "https://www.perspektive-muenchen.de/abba/",
+          "https://www.muenchner-aidshilfe.de",
+          "https://www.avanta-muenchen.de",
+          "https://www.muenchner-arbeit.de/beschaeftigung-qualifizierung",
+          "https://www.weisser-rabe.de"
+        ],
+        "null_rate": 0.1039
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "plz"
+    ],
+    "category_columns": [
+      "foerdergruppe",
+      "ort"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "foerdergruppe",
+      "y": "plz"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

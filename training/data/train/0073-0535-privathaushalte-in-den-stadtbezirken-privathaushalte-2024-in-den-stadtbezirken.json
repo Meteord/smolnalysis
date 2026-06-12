@@ -1,0 +1,220 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of stadtbezirksnummer in Privathaushalte in den Stadtbezirken.",
+  "query_result": {
+    "dataset_title": "Privathaushalte in den Stadtbezirken",
+    "package_id": "cb0e5a0b-2a87-4a29-9b70-69e1db4fb529",
+    "package_name": "privathaushalte-in-den-stadtbezirken",
+    "resource_id": "c62cd985-c4ae-40f6-a84e-9faa9c61e46b",
+    "resource_name": "Privathaushalte 2024 in den Stadtbezirken",
+    "resource_format": "csv",
+    "description": "Privathaushalte am 31.12. des jeweiligen Jahres nach Haushaltsgröße in den Stadtbezirken.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Haushalte",
+      "Stadtbezirke"
+    ],
+    "groups": [],
+    "row_count": 25,
+    "sampled_rows": 25,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "stadtbezirksnummer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.0,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_zusammen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          12656,
+          30399,
+          32693,
+          40883,
+          37377
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 12656.0,
+          "max": 61251.0,
+          "mean": 34533.36,
+          "median": 32693.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_1_person",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          8041,
+          19609,
+          22043,
+          25038,
+          22178
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 7096.0,
+          "max": 32893.0,
+          "mean": 18741.6,
+          "median": 19498.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_2_personen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          2800,
+          6584,
+          6754,
+          9409,
+          8718
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 2800.0,
+          "max": 16321.0,
+          "mean": 8605.92,
+          "median": 8000.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_3_personen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          956,
+          2301,
+          2166,
+          3512,
+          3390
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 956.0,
+          "max": 7162.0,
+          "mean": 3561.44,
+          "median": 3390.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_4_personen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          656,
+          1492,
+          1317,
+          2261,
+          2405
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 656.0,
+          "max": 5433.0,
+          "mean": 2661.16,
+          "median": 2405.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "haushalte_mit_5_personen_und_mehr",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          203,
+          413,
+          663,
+          686,
+          403
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 203.0,
+          "max": 2443.0,
+          "mean": 963.24,
+          "median": 815.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          "Altstadt-Lehel",
+          "Ludwigsvorstadt-Isarvorstadt",
+          "Maxvorstadt",
+          "Schwabing West",
+          "Au-Haidhausen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "stadtbezirksnummer",
+      "haushalte_zusammen",
+      "haushalte_mit_1_person",
+      "haushalte_mit_2_personen"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "stadtbezirksnummer"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

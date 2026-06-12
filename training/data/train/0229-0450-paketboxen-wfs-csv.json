@@ -1,0 +1,222 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Paketboxen and compare objectid by betreiber.",
+  "query_result": {
+    "dataset_title": "Paketboxen",
+    "package_id": "b3166b0c-316b-4660-a0e8-9a3031f2a99c",
+    "package_name": "paketboxen",
+    "resource_id": "58e0f116-5530-4327-99fc-a643552405c0",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Darstellung von anbieteroffenen Paketboxen auf Privatgrund und im öffentlichen Raum.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 15,
+    "sampled_rows": 15,
+    "column_count": 18,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 1.0,
+          "max": 15.0,
+          "mean": 8.0,
+          "median": 8.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "betreiberid",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 6,
+        "examples": [
+          1018.0,
+          1016.0,
+          1019.0,
+          1020.0,
+          1017.0
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 602.0,
+          "max": 1020.0,
+          "mean": 833.7778,
+          "median": 1016.0
+        },
+        "null_rate": 0.4
+      },
+      {
+        "name": "betreiber",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "myflexbox",
+          "DeinFach",
+          "DF"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "in Bestand / in Betrieb",
+          "in Planung / in Entwuf"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "dhl",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 6,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.4
+      },
+      {
+        "name": "gls",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 6,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.4
+      },
+      {
+        "name": "dpd",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 6,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.4
+      },
+      {
+        "name": "fedex",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 6,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.4
+      },
+      {
+        "name": "oeffnungszeiten",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 6,
+        "examples": [
+          "00:00-24:00",
+          "06:00-22:00"
+        ],
+        "null_rate": 0.4
+      },
+      {
+        "name": "barrierefreiheit",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 6,
+        "examples": [
+          "kA",
+          "Nein"
+        ],
+        "null_rate": 0.4
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOINT ((692514.2271008575 5333833.073797914))",
+          "MULTIPOINT ((691910.3092008426 5341205.365797937))",
+          "MULTIPOINT ((690623.0413008173 5329164.762198044))",
+          "MULTIPOINT ((691959.3281008435 5341713.880797933))",
+          "MULTIPOINT ((690889.8435008207 5340206.883498005))"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "muenchenbox",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "betreiberid"
+    ],
+    "category_columns": [
+      "betreiber",
+      "status",
+      "dhl",
+      "gls"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "betreiber",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 5,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

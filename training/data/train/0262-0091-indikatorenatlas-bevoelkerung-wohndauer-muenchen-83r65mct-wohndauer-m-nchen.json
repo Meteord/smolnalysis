@@ -1,0 +1,210 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Wohndauer München and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Wohndauer München",
+    "package_id": "8a2e197b-69ff-4456-aff1-48763cb5dea3",
+    "package_name": "indikatorenatlas-bevoelkerung-wohndauer-muenchen-83r65mct",
+    "resource_id": "773a81c6-1467-4c4a-adde-329776f4b44e",
+    "resource_name": "Wohndauer München",
+    "resource_format": "csv",
+    "description": "Durchschnittliche Wohndauer in München der Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Jahren. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas",
+      "Wohnen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 2028,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          22.8,
+          18.9,
+          17.8,
+          17.0,
+          21.0
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 14.1,
+          "max": 27.8,
+          "mean": 21.367,
+          "median": 21.3
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "25521935",
+          "294434",
+          "659053",
+          "654200",
+          "1107220"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 271150.0,
+          "max": 31518781.0,
+          "mean": 2005517.022,
+          "median": 976725.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1119484",
+          "15583",
+          "37098",
+          "38498",
+          "52749"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 12949.0,
+          "max": 1612414.0,
+          "mean": 94415.908,
+          "median": 45421.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Summe (Wohndauer in München) (deutsch)",
+          "Summe (Wohndauer in München) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (deutsch)",
+          "Hauptwohnsitzbevölkerung (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Wohndauer München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

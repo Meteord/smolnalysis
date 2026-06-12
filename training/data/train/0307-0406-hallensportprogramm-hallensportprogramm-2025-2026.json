@@ -1,0 +1,256 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Hallensportprogramm and compare hausnummer by wochentag.",
+  "query_result": {
+    "dataset_title": "Hallensportprogramm",
+    "package_id": "2e8a06d3-3b9d-4a4f-a19d-bc9bb74db160",
+    "package_name": "hallensportprogramm",
+    "resource_id": "c242c94b-4d18-4259-90a5-7e474179de47",
+    "resource_name": "Hallensportprogramm 2025 - 2026",
+    "resource_format": "csv",
+    "description": "Der Datensatz enthält die Angebote des FreizeitSports der Stadt München Indoor und Outdoor (1. Oktober 2025 bis 31. Juli 2026). Aktuelle Informationen zu den Terminen (hier werden auch Stundenausfälle oder sonstige Infos veröffentlicht): https://www.muenchen.de/muckis Hinweis: Fit im Park ist vom 1. Mai bis 30. September 2026, Angebotsdetails folgen im Frühjahr.",
+    "organization": "Referat für Bildung und Sport der Landeshauptstadt München",
+    "tags": [
+      "Freizeitsport",
+      "Hallensport",
+      "Sport"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 121,
+    "sampled_rows": 121,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "hausnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          "29",
+          "9",
+          "18",
+          "10",
+          "110"
+        ],
+        "numeric": {
+          "count": 121.0,
+          "min": 2.0,
+          "max": 322.0,
+          "mean": 36.1405,
+          "median": 17.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "wochentag",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          "Donnerstag",
+          "Dienstag",
+          "Montag",
+          "Mittwoch",
+          "Freitag"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_start",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          "20:00",
+          "19:00",
+          "18:00",
+          "17:00",
+          "17:30"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_ende",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          "21:30",
+          "20:30",
+          "19:00",
+          "20:00",
+          "18:00"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          48.1454129828542,
+          48.1279771401509,
+          48.1246735599684,
+          48.1256629590613,
+          48.100660948552
+        ],
+        "numeric": {
+          "count": 121.0,
+          "min": 48.1007,
+          "max": 48.2143,
+          "mean": 48.1429,
+          "median": 48.1412
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          11.562628207656,
+          11.5075067600768,
+          11.5820517686975,
+          11.6093521360076,
+          11.6346674370314
+        ],
+        "numeric": {
+          "count": 121.0,
+          "min": 11.4609,
+          "max": 11.668,
+          "mean": 11.5565,
+          "median": 11.5616
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sportangebot",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          "Basketball",
+          "BodyART®",
+          "Bodystyling",
+          "Core - Power für Bauch und Rücken",
+          "Eltern-Kind-Turnen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          "Luisenstr.",
+          "Droste-Hülshoff-Str.",
+          "Mariahilfplatz",
+          "Haagerstr.",
+          "Böglstr."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "schulnamen",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          "Städtische Berufsschule für Spedition und Touristik (EH1) Luisenstr. 29",
+          "Grundschule Droste Hülshoff Straße 9",
+          "Städtische Berufsschule für Spedition und Touristik (EH2) Luisenstr. 29",
+          "Staatl. GS Mariahilfplatz",
+          "Grundschule an der Haagerstraße"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "webseite",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 121,
+        "null_count": 0,
+        "examples": [
+          "https://www.muenchen.de/freizeit/freizeitsportprogramm/basketball-das-staedtische-freizeitsport-angebot-muenchen",
+          "https://www.muenchen.de/freizeit/freizeitsportprogramm/bodyart-das-staedtische-freizeitsport-angebot-muenchen",
+          "https://www.muenchen.de/freizeit/freizeitsportprogramm/bodystyling-das-staedtische-freizeitsport-angebot-muenchen",
+          "https://www.muenchen.de/freizeit/freizeitsportprogramm/core-power-fuer-bauch-und-ruecken-freizeitsport-muenchen",
+          "https://www.muenchen.de/freizeit/freizeitsportprogramm/eltern-kind-turnen-staedtisches-freizeitsport-angebot-muenchen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadteil",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 118,
+        "null_count": 3,
+        "examples": [
+          "Königsplatz",
+          "Laim",
+          "BergamLaim",
+          "Perlach",
+          "Harthof"
+        ],
+        "null_rate": 0.0248
+      },
+      {
+        "name": "zusatzinfomationen",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 112,
+        "examples": [
+          "Kosten: 1 FreizeitSport-Ticket pro Elternteil",
+          "Noch bis zum 21.10.2025, Winterpause vom 28.10.2025 - 7.4.2026, Start wieder ab 14.4.2026 (auch in den Ferien)",
+          "Im Sommer (Mai-September) findet Qi Gong nicht mehr in der Simmernstraße statt, sondern von 18-18.45 Uhr im Luitpoldpark, siehe Flyer Fit im Park"
+        ],
+        "null_rate": 0.9256
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "hausnummer"
+    ],
+    "category_columns": [
+      "wochentag",
+      "zusatzinfomationen"
+    ],
+    "time_columns": [
+      "uhrzeit_start",
+      "uhrzeit_ende"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "wochentag",
+      "y": "hausnummer"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

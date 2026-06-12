@@ -1,0 +1,263 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Raddauerzählstellen and compare raddauerzaehlstellen.gesamt_sum_2025 by raddauerzaehlstellen.richtung_1.",
+  "query_result": {
+    "dataset_title": "Raddauerzählstellen",
+    "package_id": "2ce14406-7ff8-4435-a612-dfd4dc051316",
+    "package_name": "opendata_raddauerzaehlstellen",
+    "resource_id": "d939eb5a-38b2-451d-88e3-ca8e8869f5c4",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Derzeit gibt es im Stadtgebiet verteilt sechs Raddauerzählstellen. Ein unter der Straßenoberfläche verlegter Sensor erfasst die Anzahl der Radlerinnen und Radler. Die Zählergebnisse werden mit den jeweils aktuellen Wetterdaten vor Ort gespeichert und können als Tages-, Stunden- oder Viertelstundenwerte abgerufen werden. Zu den Rohdaten (Open Data Portal): <a target=\"_blank\" href=\"opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen\">opendata.muenchen.de/dataset/daten",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Raddauerzählstelle",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 26,
+    "sampled_rows": 26,
+    "column_count": 52,
+    "columns": [
+      {
+        "name": "raddauerzaehlstellen.gesamt_sum_2025",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 21,
+        "examples": [
+          "432000",
+          "42000",
+          "831000",
+          "558000",
+          "1415000"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 42000.0,
+          "max": 1415000.0,
+          "mean": 655600.0,
+          "median": 558000.0
+        },
+        "null_rate": 0.8077
+      },
+      {
+        "name": "raddauerzaehlstellen.gesamt_sum_monat_2026",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 21,
+        "examples": [
+          "33000",
+          "19000",
+          "67000",
+          "47000",
+          "115000"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 19000.0,
+          "max": 115000.0,
+          "mean": 56200.0,
+          "median": 47000.0
+        },
+        "null_rate": 0.8077
+      },
+      {
+        "name": "gesamt_sum_2025",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 21,
+        "examples": [
+          "432000",
+          "42000",
+          "831000",
+          "558000",
+          "1415000"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 42000.0,
+          "max": 1415000.0,
+          "mean": 655600.0,
+          "median": 558000.0
+        },
+        "null_rate": 0.8077
+      },
+      {
+        "name": "gesamt_sum_monat_2026",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 21,
+        "examples": [
+          "33000",
+          "19000",
+          "67000",
+          "47000",
+          "115000"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 19000.0,
+          "max": 115000.0,
+          "mean": 56200.0,
+          "median": 47000.0
+        },
+        "null_rate": 0.8077
+      },
+      {
+        "name": "featureMember.raddauerzaehlstellen.gesamt_sum_2025",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 25,
+        "examples": [
+          "1415000"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1415000.0,
+          "max": 1415000.0,
+          "mean": 1415000.0,
+          "median": 1415000.0
+        },
+        "null_rate": 0.9615
+      },
+      {
+        "name": "featureMember.raddauerzaehlstellen.gesamt_sum_monat_2026",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 25,
+        "examples": [
+          "115000"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 115000.0,
+          "max": 115000.0,
+          "mean": 115000.0,
+          "median": 115000.0
+        },
+        "null_rate": 0.9615
+      },
+      {
+        "name": "raddauerzaehlstellen.richtung_1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 20,
+        "examples": [
+          "Ost",
+          "West",
+          "Nord",
+          "Süd"
+        ],
+        "null_rate": 0.7692
+      },
+      {
+        "name": "raddauerzaehlstellen.richtung_2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 20,
+        "examples": [
+          "West",
+          "Ost",
+          "Süd",
+          "Nord"
+        ],
+        "null_rate": 0.7692
+      },
+      {
+        "name": "richtung_1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 20,
+        "examples": [
+          "Ost",
+          "West",
+          "Nord",
+          "Süd"
+        ],
+        "null_rate": 0.7692
+      },
+      {
+        "name": "richtung_2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 20,
+        "examples": [
+          "West",
+          "Ost",
+          "Süd",
+          "Nord"
+        ],
+        "null_rate": 0.7692
+      },
+      {
+        "name": "raddauerzaehlstellen.besonderheiten",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 23,
+        "examples": [
+          "nur Stadteinwärts. Die Zählungen der Zählstelle Arnulfstraße sind seit Anfang 2021 stark von der dortigen Baustelle beeinflusst.",
+          "Im April 2020 wurde die Zählschleife am Joseph-Hörwick-Weg auf den gesamten Querschnitt des Fuß- und Radweges ausgeweitet. Die Breite der Zählschleife hat sich",
+          "Es wird auf dem Fahrradweg als auch auf dem Fußweg gezählt."
+        ],
+        "null_rate": 0.8846
+      },
+      {
+        "name": "besonderheiten",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 23,
+        "examples": [
+          "nur Stadteinwärts. Die Zählungen der Zählstelle Arnulfstraße sind seit Anfang 2021 stark von der dortigen Baustelle beeinflusst.",
+          "Im April 2020 wurde die Zählschleife am Joseph-Hörwick-Weg auf den gesamten Querschnitt des Fuß- und Radweges ausgeweitet. Die Breite der Zählschleife hat sich",
+          "Es wird auf dem Fahrradweg als auch auf dem Fußweg gezählt."
+        ],
+        "null_rate": 0.8846
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "raddauerzaehlstellen.gesamt_sum_2025",
+      "raddauerzaehlstellen.gesamt_sum_monat_2026",
+      "gesamt_sum_2025",
+      "gesamt_sum_monat_2026"
+    ],
+    "category_columns": [
+      "raddauerzaehlstellen.richtung_1",
+      "raddauerzaehlstellen.richtung_2",
+      "richtung_1",
+      "richtung_2"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "raddauerzaehlstellen.richtung_1",
+      "y": "raddauerzaehlstellen.gesamt_sum_2025"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 39,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

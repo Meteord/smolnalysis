@@ -1,0 +1,206 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Arbeitsmarkt - (Regel-)Leistungsberechtigte - nicht erwerbsfähig - Anteil and compare Indikatorwert by Indikator.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Arbeitsmarkt - (Regel-)Leistungsberechtigte - nicht erwerbsfähig - Anteil",
+    "package_id": "db1b4889-9b7f-498d-b96f-3883b87a5a83",
+    "package_name": "indikatorenatlas-arbeitsmarkt-regel-leistungsberechtigte-nicht-erwerbsfaehig-anteil-83r65mct",
+    "resource_id": "ea8d933b-8ae8-434c-95c2-9f9722b267e4",
+    "resource_name": "(Regel-)Leistungsberechtigte - nicht erwerbsfähig - Anteil",
+    "resource_format": "csv",
+    "description": "Anteil der Sozialgeld-Empfänger*innen bzw. nicht erwerbsfähigen (Regel-)Leistungsberechtigten nach SGB II an der nicht erwerbsfähigen (bis 14-jährigen) Hauptwohnsitzbevölkerung in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Arbeitsmarkt",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 494,
+    "sampled_rows": 494,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          9.7,
+          4.5,
+          6.9,
+          6.2,
+          4.8
+        ],
+        "numeric": {
+          "count": 494.0,
+          "min": 2.9,
+          "max": 20.7,
+          "mean": 10.9749,
+          "median": 10.4
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          "20284.8",
+          "94.8",
+          "335.3",
+          "283.8",
+          "342.3"
+        ],
+        "numeric": {
+          "count": 494.0,
+          "min": 53.8,
+          "max": 22622.0,
+          "mean": 1631.4943,
+          "median": 802.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          "208534.8",
+          "2119.8",
+          "4875.5",
+          "4566.3",
+          "7137.8"
+        ],
+        "numeric": {
+          "count": 494.0,
+          "min": 1610.3,
+          "max": 209548.8,
+          "mean": 14305.8275,
+          "median": 6609.65
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 494.0,
+          "min": 2006.0,
+          "max": 2024.0,
+          "mean": 2015.0,
+          "median": 2015.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          "(Regel-)Leistungsberechtigte - nicht erwerbsfähig - Anteil"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          "(Regel-)Leistungsberechtigte (nicht erwerbsfähig)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 494,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (bis 14 Jahre)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Indikator",
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Indikator",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

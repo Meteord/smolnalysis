@@ -1,0 +1,285 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt).",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt)",
+    "package_id": "b089ca29-8f22-4fd5-959b-95ce2e36e9c8",
+    "package_name": "rad_rsp_rad_freig_einbahn",
+    "resource_id": "8a81a42d-2859-4ec4-9338-48d2a36a0901",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Die Öffnung von Einbahnstraßen für den gegenläufigen Radverkehr bedeutet eine bessere Erschließung des jeweiligen Viertels und erspart Radelnden häufig Umwege. Mittlerweile sind in München deutlich mehr als die Hälfte aller etwa 700 Einbahnstraßen für den Radverkehr auch in die Gegenrichtung freigegeben, ohne dass hier die Unfallzahlen höher sind als in „normalen“ Straßen mit Zweirichtungsverkehr. Für alle Verkehrsteilnehmenden gilt es dabei zu beachten, dass für jedwede Fahrtrichtung rechts vor",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Einbahnstraßen",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 224,
+    "sampled_rows": 224,
+    "column_count": 368,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 92,
+        "null_count": 132,
+        "examples": [
+          "727ba9e4-d822-4514-8189-8010e91757bb",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat",
+          "+49 89 233-722269"
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 3857.0,
+          "max": 80335.0,
+          "mean": 45836.6667,
+          "median": 53083.5
+        },
+        "null_rate": 0.5893
+      },
+      {
+        "name": "code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 219,
+        "examples": [
+          "3857",
+          "4326",
+          "25832",
+          "https://karten.muenchen.de/metadata/srv/api/records/727ba9e4-d822-4514-8189-8010e91757bb/formatters/xml",
+          "Carsharing"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9777
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 220,
+        "examples": [
+          "11.3579",
+          "11.725",
+          "48.0599",
+          "48.252"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3579,
+          "max": 48.252,
+          "mean": 29.8487,
+          "median": 29.8925
+        },
+        "null_rate": 0.9821
+      },
+      {
+        "name": "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 221,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9866
+      },
+      {
+        "name": "referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 221,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9866
+      },
+      {
+        "name": "RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 221,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9866
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 222,
+        "examples": [
+          "1",
+          "false"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9911
+      },
+      {
+        "name": "referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "25832"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 25832.0,
+          "max": 25832.0,
+          "mean": 25832.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "code.CharacterString",
+      "Decimal",
+      "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 356,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

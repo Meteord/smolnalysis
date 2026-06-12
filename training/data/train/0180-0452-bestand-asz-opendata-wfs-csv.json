@@ -1,0 +1,295 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Alten- und Servicezentrum and compare za3 by za4.",
+  "query_result": {
+    "dataset_title": "Alten- und Servicezentrum",
+    "package_id": "b4f2a44d-a941-4f8f-b912-7537856d9b5c",
+    "package_name": "bestand_asz_opendata",
+    "resource_id": "578d8f12-8585-4844-8a7e-db6e67b11999",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Standorte und Adressen der Alten-und Service-Zentren.<br> für weitere Informationen siehe <a target=\"_blank\" href=\"stadt.muenchen.de/infos/asz-alten-service-zentrum.html\">Sozialreferat München</a>",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 34,
+    "sampled_rows": 34,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "za3",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          5,
+          22,
+          37,
+          71,
+          61
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 378.0,
+          "mean": 56.0588,
+          "median": 32.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "za2",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          1675,
+          2429,
+          806,
+          5092,
+          3994
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 96.0,
+          "max": 6601.0,
+          "mean": 3286.2647,
+          "median": 3386.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zk1",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          686822.3199,
+          687059.5946,
+          689328.3189,
+          693119.7422,
+          694877.8061
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 679717.9227,
+          "max": 700189.7134,
+          "mean": 690356.3096,
+          "median": 690871.26
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zk2",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          5339190.5177,
+          5334291.9966,
+          5332600.1131,
+          5332361.6507,
+          5332906.656
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 5327868.1748,
+          "max": 5343574.2343,
+          "mean": 5335033.8403,
+          "median": 5334410.3389
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zv03",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          1025,
+          2514,
+          623,
+          1712,
+          1612
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 123.0,
+          "max": 2514.0,
+          "mean": 1310.1176,
+          "median": 1337.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zt03",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          102,
+          251,
+          62,
+          171,
+          161
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 12.0,
+          "max": 251.0,
+          "mean": 130.7353,
+          "median": 133.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 377.0,
+          "mean": 27.5882,
+          "median": 17.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "lfdnr",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          18,
+          14,
+          28,
+          20,
+          24
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 33.0,
+          "mean": 17.0588,
+          "median": 17.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zs03",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          10,
+          25,
+          6,
+          17,
+          16
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.2059,
+          "median": 13.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "za4",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 33,
+        "null_count": 1,
+        "examples": [
+          "",
+          "A"
+        ],
+        "null_rate": 0.0294
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "POINT (686822.3199007375 5339190.517698247)",
+          "POINT (687059.594600743 5334291.996598242)",
+          "POINT (689328.3189007894 5332600.113098115)",
+          "POINT (693119.7422008711 5332361.650697876)",
+          "POINT (694877.806100911 5332906.655997751)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "Alten- und Service-Zentrum Moosach",
+          "Alten- und Service-Zentrum Laim",
+          "Alten- und Service-Zentrum Sendling",
+          "Alten- und Service-Zentrum Obergiesing",
+          "Alten- und Service-Zentrum Ramersdorf"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "za3",
+      "za2",
+      "zk1",
+      "zk2"
+    ],
+    "category_columns": [
+      "za4"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "za4",
+      "y": "za3"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

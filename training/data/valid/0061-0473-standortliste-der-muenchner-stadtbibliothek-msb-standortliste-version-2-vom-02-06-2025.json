@@ -1,0 +1,269 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Standortliste der Münchner Stadtbibliothek and compare bib_plz by bib_type.",
+  "query_result": {
+    "dataset_title": "Standortliste der Münchner Stadtbibliothek",
+    "package_id": "f381bf54-42c0-48a8-8406-70fd659e2df9",
+    "package_name": "standortliste-der-muenchner-stadtbibliothek",
+    "resource_id": "d98395ee-a58f-43c9-a69d-8242e7638e4c",
+    "resource_name": "MSB Standortliste - Version 2 vom 02.06.2025",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst alle öffentlichen Standorte der Münchner Stadtbibliothek als Liste im CSV-Format. Die Daten wurden von der Münchner Stadtbibliothek erhoben. Der Datensatz enthält neben der Standortbeschreibung deren Geokoordinaten, Angaben zur Teilnahme am Open Library Konzept, Angaben zur Barrierefreiheit, die Publikumsfläche sowie die Anzahl der Arbeitsplätze. Wenn Sie Fragen zum Datensatz haben oder unseren Datensatz für Ihr Projekt nutzen und mit uns dazu in Kontakt treten möchten, um",
+    "organization": " Münchner Stadtbibliothek",
+    "tags": [
+      "Bibliothek",
+      "Bücher",
+      "Bücherei",
+      "Kultur",
+      "Open Library"
+    ],
+    "groups": [
+      "educ",
+      "tech"
+    ],
+    "row_count": 26,
+    "sampled_rows": 26,
+    "column_count": 13,
+    "columns": [
+      {
+        "name": "bib_plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          "81669",
+          "81379",
+          "81673",
+          "81827",
+          "81829"
+        ],
+        "numeric": {
+          "count": 26.0,
+          "min": 80331.0,
+          "max": 81925.0,
+          "mean": 81203.3462,
+          "median": 81306.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "publikumsflaeche",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          2835,
+          1800,
+          265,
+          310,
+          784
+        ],
+        "numeric": {
+          "count": 26.0,
+          "min": 192.0,
+          "max": 2835.0,
+          "mean": 744.2692,
+          "median": 596.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_arbeitsplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          150,
+          90,
+          10,
+          6,
+          30
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 6.0,
+          "max": 150.0,
+          "mean": 38.96,
+          "median": 30.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bib_type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          "Zentralbibliothek",
+          "Stadtteilbibliothek",
+          "Sonderbibliothek"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "open_library",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          "JA",
+          "NEIN"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "lat",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          48.129840896735296,
+          48.111897633744356,
+          48.129553538726036,
+          48.112259715099796,
+          48.13273036929666
+        ],
+        "numeric": {
+          "count": 26.0,
+          "min": 48.0958,
+          "max": 48.2135,
+          "mean": 48.1398,
+          "median": 48.1365
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "lon",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          11.591276751174135,
+          11.55394900122587,
+          11.622333094525215,
+          11.70651043512925,
+          11.704447808208412
+        ],
+        "numeric": {
+          "count": 26.0,
+          "min": 11.4351,
+          "max": 11.7065,
+          "mean": 11.5631,
+          "median": 11.5622
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bib_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          "Stadtbibliothek im Motorama",
+          "Stadtbibliothek im HP8",
+          "Stadtteilbibliothek Berg am Laim",
+          "Stadtteilbibliothek Waldtrudering",
+          "Stadtteilbibliothek Riem"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bib_abkuerzung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          "MOT",
+          "HP8",
+          "BAL",
+          "WAL",
+          "RIE"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bib_strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          "Rosenheimer Str. 30-32",
+          "Hans-Preisinger-Straße 8",
+          "Schlüsselbergstr. 4",
+          "Wasserburger Landstr. 241",
+          "Elisabeth-Castonier-Platz 19"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "webseite",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          "https://www.muenchner-stadtbibliothek.de/stadtbibliothek-im-motorama",
+          "https://www.muenchner-stadtbibliothek.de/stadtbibliothek-im-hp8",
+          "https://www.muenchner-stadtbibliothek.de/stadtbibliothek-berg-am-laim",
+          "https://www.muenchner-stadtbibliothek.de/stadtbibliothek-waldtrudering",
+          "https://www.muenchner-stadtbibliothek.de/stadtbibliothek-riem"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "barrierefreiheit",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 26,
+        "null_count": 0,
+        "examples": [
+          "für Rollstuhlfahrer*innen geeignet",
+          "nur Erdgeschoss",
+          "barrierefrei",
+          "ebenerdig",
+          "ebenerdiger Eingang, Aufzug"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "bib_plz",
+      "publikumsflaeche",
+      "anzahl_arbeitsplaetze"
+    ],
+    "category_columns": [
+      "bib_type",
+      "open_library"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "bib_type",
+      "y": "bib_plz"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

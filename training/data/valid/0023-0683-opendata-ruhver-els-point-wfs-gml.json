@@ -1,0 +1,77 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (GML) from Ladeinfrastruktur.",
+  "query_result": {
+    "dataset_title": "Ladeinfrastruktur",
+    "package_id": "f9f75a53-879e-4676-8ba8-4f2b8d712672",
+    "package_name": "opendata_ruhver_els_point",
+    "resource_id": "a6032909-2000-4682-be38-9bf467864e6a",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "PKW-Ladesäulen auf öffentlichem Grund.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 1,
+    "sampled_rows": 1,
+    "column_count": 3,
+    "columns": [
+      {
+        "name": "version",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 0,
+        "examples": [
+          "1.2.0"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "{http://www.w3.org/2001/XMLSchema-instance}schemaLocation",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 0,
+        "examples": [
+          "http://www.opengis.net/ogc http://schemas.opengis.net/wfs/1.0.0/OGC-exception.xsd"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ServiceException",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 0,
+        "examples": [
+          "Feature type mor_wfs:opendata_ruhver_els_point unknown"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "version",
+      "{http://www.w3.org/2001/XMLSchema-instance}schemaLocation",
+      "ServiceException"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 3.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Wohnungen Münchner Wohnen and compare wohnungsbestand_gesamt by unternehmen.",
+  "query_result": {
+    "dataset_title": "Wohnungen Münchner Wohnen",
+    "package_id": "7796e955-81f4-4541-93d6-52f5ca1c4810",
+    "package_name": "wohnungen-muenchner-wohnen",
+    "resource_id": "cdaff819-a83c-490c-848c-7324f6dcc1ad",
+    "resource_name": "Zahl der Wohnungen der Münchner Wohnen",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst Zahlen zu den Wohnungen der München Wohnen GmbH bzw. der Ursprungsgesellschaften GWG München und GWOFAG. Im Datensatz sind enthalten: * Wohnungsbestand gesamt * Freifinanzierte Wohnungen * Wohnungen in Fremdverwaltung * Öffentlich geförderte Wohnungen * Objekte in Sonderwohnformen Für 2018 - 2023 sind die Werte getrennt nach GWG München und GEWOFAG aufgeführt, ab 2024 werden sie als \"Münchner Wohnen\" weitergeführt.",
+    "organization": "Münchner Wohnen",
+    "tags": [
+      "Miete",
+      "Mietwohnungen",
+      "Wohnen",
+      "Wohnungen"
+    ],
+    "groups": [],
+    "row_count": 12,
+    "sampled_rows": 12,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "wohnungsbestand_gesamt",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "35559",
+          "36301",
+          "37509",
+          "38318",
+          "38966"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 29645.0,
+          "max": 39551.0,
+          "mean": 34409.3333,
+          "median": 34092.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "freifinanzierte_wohnungen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "20384",
+          "20638",
+          "21059",
+          "21279",
+          "21396"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 16737.0,
+          "max": 21465.0,
+          "mean": 19358.25,
+          "median": 19464.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "fremdverwaltung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "1425",
+          "1485",
+          "1476",
+          "1474",
+          "1502"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 476.0,
+          "max": 1810.0,
+          "mean": 1244.5833,
+          "median": 1425.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "oeffentlich_gefoerderte_wohnungen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "13606",
+          "14034",
+          "14635",
+          "15081",
+          "15661"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 11098.0,
+          "max": 16005.0,
+          "mean": 13625.3333,
+          "median": 13605.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "objekte_in_sonderwohnformen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "144",
+          "339",
+          "484",
+          "579",
+          "0"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 0.0,
+          "max": 579.0,
+          "mean": 181.1667,
+          "median": 72.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2018.0,
+          "max": 2023.0,
+          "mean": 2020.5,
+          "median": 2020.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "unternehmen",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "GEWOFAG",
+          "GWG"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "wohnungsbestand_gesamt",
+      "freifinanzierte_wohnungen",
+      "fremdverwaltung",
+      "oeffentlich_gefoerderte_wohnungen"
+    ],
+    "category_columns": [
+      "unternehmen"
+    ],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "unternehmen",
+      "y": "wohnungsbestand_gesamt"
+    }
+  },
+  "quality_score": 7.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

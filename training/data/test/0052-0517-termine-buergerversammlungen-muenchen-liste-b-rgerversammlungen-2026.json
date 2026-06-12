@@ -1,0 +1,189 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Liste Bürgerversammlungen 2026 from Bürgerversammlungen - Termine.",
+  "query_result": {
+    "dataset_title": "Bürgerversammlungen - Termine",
+    "package_id": "2210e04c-8a66-4e61-ac06-8dcd5297fb3c",
+    "package_name": "termine-buergerversammlungen-muenchen",
+    "resource_id": "b0dca618-38cb-4548-a022-592afef1c51b",
+    "resource_name": "Liste Bürgerversammlungen 2026",
+    "resource_format": "csv",
+    "description": "Der Datensatz enthält die Termine aller Bürgerversammlungen 2026 in München. Mehr Informationen zu Bürgerversammlungen: https://stadt.muenchen.de/infos/buergerversammlungen.html",
+    "organization": "Direktorium der Landeshauptstadt München",
+    "tags": [
+      "Bürgerversammlungen"
+    ],
+    "groups": [
+      "soci",
+      "gove"
+    ],
+    "row_count": 29,
+    "sampled_rows": 29,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "2026-03-23",
+          "2026-03-24",
+          "2026-03-26",
+          "2026-04-13",
+          "2026-04-20"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wochentag",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Montag",
+          "Dienstag",
+          "Donnerstag",
+          "Mittwoch"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "weitere_informationen",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "",
+          "Eingang über Zwiedineckstraße 31"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "19 Uhr"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk_nummer",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Stadtbezirk 21",
+          "Stadtbezirk 5",
+          "Stadtbezirk 16",
+          "Stadtbezirk 14",
+          "Stadtbezirk 8"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Pasing-Obermenzing",
+          "Au-Haidhausen",
+          "Ramersdorf-Perlach",
+          "Berg am Laim",
+          "Schwanthalerhöhe"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk_teil",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "BT Obermenzing",
+          "BT Haidhausen",
+          "BT Ramersdorf",
+          "",
+          "BT Au"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "veranstaltungsort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Aula der Grundschule an der Grandlstraße 5",
+          "Hörsaal Kath. Stiftungshochschule",
+          "Dreifachturnhalle Grundschule",
+          "Turnhalle Michaeligymnasium",
+          "Sporthalle Grundschule am Mariahilfplatz"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Grandlstraße 5",
+          "Preysingstraße 95",
+          "An der Führichstraße 53",
+          "Hachinger-Bach-Straße 25",
+          "Mariahilfplatz 18"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "81247 München",
+          "81667 München",
+          "81671 München",
+          "81541 München",
+          "81243 München"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "wochentag",
+      "weitere_informationen"
+    ],
+    "time_columns": [
+      "datum",
+      "uhrzeit"
+    ]
+  },
+  "quality_score": 5.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

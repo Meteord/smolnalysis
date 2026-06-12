@@ -1,0 +1,143 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of dauer in Oktoberfest.",
+  "query_result": {
+    "dataset_title": "Oktoberfest",
+    "package_id": "8d6c8251-7956-4f92-8c96-f79106aab828",
+    "package_name": "oktoberfest",
+    "resource_id": "902cafb5-0523-4114-a46c-7cd8240b1347",
+    "resource_name": "Oktoberfest Besucherinnen und Besucher 1985 - 2024",
+    "resource_format": "csv",
+    "description": "Statistiken zum Oktoberfest (Wiesn). Das Oktoberfest in München (mundartlich Wiesn) ist das größte Volksfest der Welt. Es findet seit 1810 auf der Theresienwiese in der bayerischen Landeshauptstadt München statt und wird Jahr für Jahr von rund sechs Millionen Menschen besucht. 2020 und 2021 wurde das Oktoberfest wegen der Corona-Pandemie abgesagt. Alle 4 Jahre (bis 1996 alle 3 Jahre) fand zusätzlich das [Bayerische Zentral-Landwirtschaftsfest](https://de.wikipedia.org/wiki/Bayerisches_Zentral-La",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bier",
+      "Bierpreis",
+      "Hendl",
+      "Oktoberfest",
+      "Wiesn"
+    ],
+    "groups": [
+      "educ",
+      "econ"
+    ],
+    "row_count": 38,
+    "sampled_rows": 38,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "dauer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          16,
+          18,
+          17
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 16.0,
+          "max": 18.0,
+          "mean": 16.3421,
+          "median": 16.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "besucher_gesamtbesucher_tag",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          7.1,
+          6.7,
+          6.5,
+          5.7,
+          6.2
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 5.5,
+          "max": 7.2,
+          "mean": 6.3342,
+          "median": 6.4
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "besucher_tag",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          444,
+          419,
+          406,
+          356,
+          388
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 329.0,
+          "max": 444.0,
+          "mean": 388.0526,
+          "median": 394.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          1985,
+          1986,
+          1987,
+          1988,
+          1989
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 1985.0,
+          "max": 2024.0,
+          "mean": 2003.6579,
+          "median": 2003.5
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "dauer",
+      "besucher_gesamtbesucher_tag",
+      "besucher_tag"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "dauer"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

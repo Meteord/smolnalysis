@@ -1,0 +1,148 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Preise und Stipendien and compare dotierung in euro by art.",
+  "query_result": {
+    "dataset_title": "Preise und Stipendien",
+    "package_id": "a5ec87ea-9877-4fa2-a41e-8628770a15d3",
+    "package_name": "preise_stipendien",
+    "resource_id": "f54d353e-745d-4680-91b1-3b3e0f00c5b3",
+    "resource_name": "Preise und Stipendien",
+    "resource_format": "csv",
+    "description": "Der Datensatz enthält Informationen zu den vom Kulturreferat der Landeshauptstadt München vergebenen Preisen und Stipendien. Neben der Beschreibung des Preises / Stipendiums sind Angaben zum Vergabeturnus und der Dotierung erfasst. Bitte beachten sie auch die Verweise auf muenchen.de, mit welchen man zu einer ausführlicheren Beschreibung navigieren kann.",
+    "organization": "Kulturreferat",
+    "tags": [
+      "Kulturreferat",
+      "Preise",
+      "Stipendien"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 42,
+    "sampled_rows": 42,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "dotierung in euro",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "8000",
+          "10000",
+          "5000",
+          "0",
+          "20000"
+        ],
+        "numeric": {
+          "count": 41.0,
+          "min": 0.0,
+          "max": 30000.0,
+          "mean": 9146.5244,
+          "median": 8000.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "Stipendium",
+          "Preis",
+          "Preis mit Eigenbewerbung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "vergabeturnus",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "jährlich",
+          "triennal",
+          "biennal",
+          "unregelmäßig"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "Arbeitsstipendien für Münchner Autor*innen",
+          "Architekturpreis",
+          "Designpreis",
+          "Dieter-Hildebrandt-Preis",
+          "Ernst-Hoferichter-Preise"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "Mit den Arbeitsstipendien fördert das Kulturreferat der Landeshauptstadt München literarische Projekte von etablierten Münchner Autor*innen.",
+          "Als Anerkennung eines Gesamtwerkes vergibt die Landeshauptstadt München alle drei Jahre den Architekturpreis.",
+          "Als Anerkennung eines Gesamtwerkes vergibt die Landeshauptstadt München alle drei Jahre den Designpreis.",
+          "Eine Auszeichnung für anspruchsvolles politisches bzw. dezidiert gesellschaftskritisches Kabarett.",
+          "Auszeichnung für Autor*innen , die in ihrem Werk „Originalität mit Weltoffenheit und Humor“ verbinden."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 42,
+        "null_count": 0,
+        "examples": [
+          "https://stadt.muenchen.de/service/info/abteilung-1/10314712/",
+          "https://stadt.muenchen.de/infos/architekturpreis.html",
+          "https://stadt.muenchen.de/infos/designpreis.html",
+          "https://stadt.muenchen.de/infos/dieter-hildebrandt-preis.html",
+          "https://stadt.muenchen.de/infos/ernst-hoferichter-preis.html"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "dotierung in euro"
+    ],
+    "category_columns": [
+      "art",
+      "vergabeturnus"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "art",
+      "y": "dotierung in euro"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

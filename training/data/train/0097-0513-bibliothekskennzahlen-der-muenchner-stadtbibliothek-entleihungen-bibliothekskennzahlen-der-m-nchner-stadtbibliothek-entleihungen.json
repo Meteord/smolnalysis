@@ -1,0 +1,131 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of bibliothekssigel in Bibliothekskennzahlen der Münchner Stadtbibliothek - Entleihungen.",
+  "query_result": {
+    "dataset_title": "Bibliothekskennzahlen der Münchner Stadtbibliothek - Entleihungen",
+    "package_id": "81d997b5-d210-4899-93e2-db8b59f19bec",
+    "package_name": "bibliothekskennzahlen-der-muenchner-stadtbibliothek-entleihungen",
+    "resource_id": "c1058e2e-0607-4c55-8de5-b0413b2add99",
+    "resource_name": "Bibliothekskennzahlen der Münchner Stadtbibliothek - Entleihungen",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst Werte zu Entleihungen der Münchner Stadtbibliothek auf Monatsebene für den Zeitraum Januar 2024 bis Juni 2025 als Liste im CSV-Format. Die Daten wurden von der Münchner Stadtbibliothek erhoben. Der Datensatz enthält neben den Jahr- und Monatsangaben und den Bezeichnungen der Standorte Zahlenangaben zu den Entleihungen. Wenn Sie Fragen zum Datensatz haben oder unseren Datensatz für Ihr Projekt nutzen und mit uns dazu in Kontakt treten möchten, um Ihr Vorhaben vorzustellen, w",
+    "organization": " Münchner Stadtbibliothek",
+    "tags": [
+      "Ausleihe",
+      "Bibliothek",
+      "Bücher",
+      "Bücherei",
+      "Entleihungen",
+      "Kennzahlen",
+      "Kultur",
+      "Open Library"
+    ],
+    "groups": [
+      "educ",
+      "tech"
+    ],
+    "row_count": 540,
+    "sampled_rows": 540,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "bibliothekssigel",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 540,
+        "null_count": 0,
+        "examples": [
+          19,
+          51,
+          111,
+          112,
+          115
+        ],
+        "numeric": {
+          "count": 540.0,
+          "min": 19.0,
+          "max": 175.0,
+          "mean": 133.4,
+          "median": 133.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_entleihungen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 540,
+        "null_count": 0,
+        "examples": [
+          63178,
+          63115,
+          65582,
+          62284,
+          62430
+        ],
+        "numeric": {
+          "count": 540.0,
+          "min": 4.0,
+          "max": 67780.0,
+          "mean": 24862.7759,
+          "median": 21304.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr_monat",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 540,
+        "null_count": 0,
+        "examples": [
+          "2024-01",
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bibliothek",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 540,
+        "null_count": 0,
+        "examples": [
+          "Stadtbibliothek im Motorama",
+          "Stadtbibliothek im HP8",
+          "Berg am Laim",
+          "Waldtrudering",
+          "Riem"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "bibliothekssigel",
+      "anzahl_entleihungen"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "bibliothekssigel"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

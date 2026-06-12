@@ -1,0 +1,236 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Arbeitsmarkt and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Arbeitsmarkt",
+    "package_id": "5508548a-db7e-49f1-a77e-b0763b00eb97",
+    "package_name": "monatszahlen-arbeitsmarkt",
+    "resource_id": "0b6fe83d-4bf9-4789-9752-a3aefb073020",
+    "resource_name": "Monatszahlen Arbeitsmarkt",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Arbeitsmarkt__ besteht aus den Themen: * Arbeitslose * Gemeldete offene Stellen * Arbeitslosenquote Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 3276,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          202601,
+          202602,
+          202603,
+          202604,
+          202605
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 200601.0,
+          "max": 202612.0,
+          "mean": 201614.484,
+          "median": 201607.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "3370",
+          "3661",
+          "3710",
+          "NA",
+          "3125"
+        ],
+        "numeric": {
+          "count": 964.0,
+          "min": 1610.0,
+          "max": 61998.0,
+          "mean": 21141.4046,
+          "median": 20258.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "3125",
+          "3152",
+          "3251",
+          "3166",
+          "3147"
+        ],
+        "numeric": {
+          "count": 960.0,
+          "min": 1610.0,
+          "max": 61998.0,
+          "mean": 21320.8708,
+          "median": 20279.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "5.44",
+          "8.64",
+          "1.34",
+          "NA",
+          "7.31"
+        ],
+        "numeric": {
+          "count": 960.0,
+          "min": -21.79,
+          "max": 48.02,
+          "mean": 0.0959,
+          "median": -1.11
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "7.84",
+          "16.15",
+          "14.12",
+          "NA",
+          "17.35"
+        ],
+        "numeric": {
+          "count": 924.0,
+          "min": -37.36,
+          "max": 137.39,
+          "mean": 0.3596,
+          "median": -3.26
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "3328",
+          "3370",
+          "3409",
+          "NA",
+          "2941"
+        ],
+        "numeric": {
+          "count": 964.0,
+          "min": 1772.0,
+          "max": 61998.0,
+          "mean": 21232.2884,
+          "median": 20066.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2026,
+          2025,
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2006.0,
+          "max": 2026.0,
+          "mean": 2016.08,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "bis 24 Jahre",
+          "Deutsche",
+          "Frauen",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Arbeitslose"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

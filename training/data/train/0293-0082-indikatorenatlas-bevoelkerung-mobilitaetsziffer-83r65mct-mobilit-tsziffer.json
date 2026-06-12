@@ -1,0 +1,275 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Mobilitätsziffer and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Mobilitätsziffer",
+    "package_id": "80774e31-aa60-492b-8900-fd09179371f5",
+    "package_name": "indikatorenatlas-bevoelkerung-mobilitaetsziffer-83r65mct",
+    "resource_id": "cd6f8183-e559-4864-8545-8062e2f867d7",
+    "resource_name": "Mobilitätsziffer",
+    "resource_format": "csv",
+    "description": "(auch als Gesamtmobilität bzw. Wanderungsvolumen bezeichnet) Summe der Zugezogenen (Hauptwohnsitz) der entsprechenden Kategorie und Weggezogenen (Hauptwohnsitz) der entsprechenden Kategorie pro 1 000 Hauptwohnsitzpersonen (mittlere Hauptwohnsitzbevölkerung im Kalenderjahr) der entsprechenden Kategorie. Es werden sowohl außerstädtische (über die Stadtgrenze Münchens hinaus) als auch innerstädtische Zugezogene und Weggezogene (= Umgezogene innerhalb des Stadtgebiets, auch innerhalb der räumlichen",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas",
+      "Wanderungen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 2028,
+    "sampled_rows": 1000,
+    "column_count": 16,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          177.2,
+          219.3,
+          233.4,
+          267.1,
+          207.8
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 135.6,
+          "max": 761.3,
+          "mean": 241.419,
+          "median": 235.7
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "40665",
+          "788",
+          "1997",
+          "2528",
+          "2422"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 643.0,
+          "max": 133060.0,
+          "mean": 5303.908,
+          "median": 2347.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "55795",
+          "865",
+          "2215",
+          "2366",
+          "3149"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 865.0,
+          "max": 125414.0,
+          "mean": 6281.942,
+          "median": 3030.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "45431",
+          "778",
+          "1739",
+          "2150",
+          "2206"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 702.0,
+          "max": 137439.0,
+          "mean": 5191.174,
+          "median": 2300.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 4",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "55795",
+          "988",
+          "2679",
+          "3215",
+          "3115"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 862.0,
+          "max": 125414.0,
+          "mean": 6283.696,
+          "median": 3090.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 5",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1115884.7",
+          "15591.3",
+          "36968.9",
+          "38404.5",
+          "52414.7"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 14008.0,
+          "max": 1606986.1,
+          "mean": 94460.8444,
+          "median": 45447.95
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "außerstädtisch Zugezogene (deutsch)",
+          "außerstädtisch Zugezogene (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "innerstädtisch Zugezogene (auch innerhalb der räumlichen Einheit) (deutsch)",
+          "innerstädtisch Zugezogene (auch innerhalb der räumlichen Einheit) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 3",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "außerstädtisch Weggezogene (deutsch)",
+          "außerstädtisch Weggezogene (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 4",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "innerstädtisch Weggezogene (auch innerhalb der räumlichen Einheit) (deutsch)",
+          "innerstädtisch Weggezogene (auch innerhalb der räumlichen Einheit) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2",
+      "Basiswert 3"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Name Basiswert 3"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 3,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

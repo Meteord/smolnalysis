@@ -1,0 +1,313 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of Gebietsnummer in Bundestagswahlen 2017 - Ergebnisse München.",
+  "query_result": {
+    "dataset_title": "Bundestagswahlen 2017 - Ergebnisse München",
+    "package_id": "d95b5aa1-83d0-4c15-9a12-661c2e3622ff",
+    "package_name": "bundestagswahlen-2017-ergebnisse-munchen",
+    "resource_id": "fba0bca0-aaa6-4888-a5d9-ecf25c845575",
+    "resource_name": "Bundestagswahl 2017 Zweitstimmen nach Wahlbezirken",
+    "resource_format": "csv",
+    "description": "Bitte beachten Sie die [\"Erläuterungen zu den Ergebnistabellen\"](https://www.muenchen.de/rathaus/dam/jcr:79b60f9c-6be9-4feb-a640-8bf1e94c45de/btw_2017_Erlaeuterungen_Download.pdf) (PDF). Der Datensatz Bundestagswahl 2017 beinhaltet die Wahlergebnisse der Bundestagswahl 2017 in München und umfasst folgende Ressourcen: * Erststimmen_Stadtbezirke * Erststimmen_Wahlbezirke * Erststimmen_Wahlkreise * Zweitstimmen_Stadtbezirke * Zweitstimmen_Wahlbezirke * Zweitstimmen_Wahlkreise [Informationsseite des",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bundestagswahl",
+      "Wahlen"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 944,
+    "sampled_rows": 944,
+    "column_count": 53,
+    "columns": [
+      {
+        "name": "Gebietsnummer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          1001,
+          1002,
+          1003,
+          1004,
+          1005
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 162.0,
+          "max": 25082.0,
+          "mean": 13291.7797,
+          "median": 13075.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Stimmbezirksart",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          11,
+          21
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 11.0,
+          "max": 21.0,
+          "mean": 14.4534,
+          "median": 11.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahlberechtigte gesamt",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          1534,
+          1496,
+          1505,
+          1456,
+          1513
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 1242.0,
+          "max": 923612.0,
+          "mean": 3913.6102,
+          "median": 1524.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahlberechtigte ohne Wahlschein",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          877,
+          805,
+          900,
+          847,
+          863
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 729.0,
+          "max": 594743.0,
+          "mean": 2520.0975,
+          "median": 1007.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahlberechtigte mit Wahlschein",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          657,
+          691,
+          605,
+          609,
+          650
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 124.0,
+          "max": 328833.0,
+          "mean": 1393.3602,
+          "median": 604.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahlberechtigte nicht im Wahlerverzeichnis",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "36"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 0.0,
+          "max": 36.0,
+          "mean": 0.1525,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahler gesamt",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "586",
+          "582",
+          "674",
+          "591",
+          "641"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 298.0,
+          "max": 416213.0,
+          "mean": 1535.9979,
+          "median": 707.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Wahler mit Wahlschein",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "15",
+          "11",
+          "13",
+          "16"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 0.0,
+          "max": 308778.0,
+          "mean": 666.0551,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Ungultige Stimmen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "0",
+          "3",
+          "2",
+          "4"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 0.0,
+          "max": 1993.0,
+          "mean": 6.0381,
+          "median": 3.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl CSU",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          152,
+          145,
+          185,
+          138,
+          179
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 76.0,
+          "max": 115605.0,
+          "mean": 458.5678,
+          "median": 209.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl SPD",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          55,
+          85,
+          91,
+          78,
+          76
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 37.0,
+          "max": 71675.0,
+          "mean": 247.3814,
+          "median": 122.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl GRUNE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 944,
+        "null_count": 0,
+        "examples": [
+          "120",
+          "141",
+          "122",
+          "137",
+          "112"
+        ],
+        "numeric": {
+          "count": 944.0,
+          "min": 25.0,
+          "max": 72092.0,
+          "mean": 263.4852,
+          "median": 123.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Gebietsnummer",
+      "Stimmbezirksart",
+      "Wahlberechtigte gesamt",
+      "Wahlberechtigte ohne Wahlschein"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "Gebietsnummer"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 40,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

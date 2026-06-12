@@ -1,0 +1,285 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Fahrverbotszonen für E-Tretroller.",
+  "query_result": {
+    "dataset_title": "Fahrverbotszonen für E-Tretroller",
+    "package_id": "ebaeedf2-0dee-47f4-8c6b-1b85d5218739",
+    "package_name": "ruhver_mim_fahrverbot_ts",
+    "resource_id": "e08aecec-0cf8-47e2-a110-60daa6a495d5",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet Fahrverbotszonen für Fahrzeuge des E-Tretrollersharings. Innerhalb dieser Zonen ist das Fahren mit E-Tretrollern verboten. Temporäre Fahrverbotszonen (bspw. aufgrund von Baustellen oder Veranstaltungen) werden Ocker angezeigt. Das Hinweisfeld gibt Informationen zur Dauer und Art.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 225,
+    "sampled_rows": 225,
+    "column_count": 365,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 89,
+        "null_count": 136,
+        "examples": [
+          "81961bdb-3214-45fd-bcc5-42292895658f",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat",
+          "(Dateneigentümer)"
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 3857.0,
+          "max": 80335.0,
+          "mean": 45836.6667,
+          "median": 53083.5
+        },
+        "null_rate": 0.6044
+      },
+      {
+        "name": "code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 220,
+        "examples": [
+          "3857",
+          "4326",
+          "25832",
+          "81961bdb-3214-45fd-bcc5-42292895658f",
+          "Carsharing"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9778
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 221,
+        "examples": [
+          "11.3579",
+          "11.725",
+          "48.0599",
+          "48.252"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3579,
+          "max": 48.252,
+          "mean": 29.8487,
+          "median": 29.8925
+        },
+        "null_rate": 0.9822
+      },
+      {
+        "name": "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 222,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9867
+      },
+      {
+        "name": "referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 222,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9867
+      },
+      {
+        "name": "RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 222,
+        "examples": [
+          "3857",
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 3857.0,
+          "max": 25832.0,
+          "mean": 11338.3333,
+          "median": 4326.0
+        },
+        "null_rate": 0.9867
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 223,
+        "examples": [
+          "1",
+          "false"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9911
+      },
+      {
+        "name": "referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "25832"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 25832.0,
+          "max": 25832.0,
+          "mean": 25832.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 224,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "code.CharacterString",
+      "Decimal",
+      "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 353,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

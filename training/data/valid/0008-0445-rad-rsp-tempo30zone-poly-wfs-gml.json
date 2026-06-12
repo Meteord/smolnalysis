@@ -1,0 +1,231 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of rad_rsp_tempo30zone_poly.status in Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone).",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone)",
+    "package_id": "11fee3cf-7b56-413b-98b5-539a7ac1c244",
+    "package_name": "rad_rsp_tempo30zone_poly",
+    "resource_id": "fca6ab8a-d941-4c11-86a0-2f65c27a356d",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Ausweisung von Tempo-30-Zonen ist ein Beitrag zur Verkehrssicherheit, zum Lärmschutz, zur Reduktion von Luftschadstoffen und der Erhöhung der Aufenthaltsqualität. Darüber hinaus bieten sie auch direkte Vorteile für den Radverkehr. In München sind über 80 Prozent aller Straßen als Tempo-30-Zonen ausgewiesen. Hier gilt grundsätzlich rechts vor links und der Radverkehr kann sicherer im Mischverkehr auf der Straße fahren als dies bei höheren Geschwindigkeitsbegrenzungen der Fall wäre. Alte Radwe",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Tempo-30-Zone",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 45,
+    "columns": [
+      {
+        "name": "rad_rsp_tempo30zone_poly.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 80,
+        "null_count": 920,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 80.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.92
+      },
+      {
+        "name": "rad_rsp_tempo30zone_poly.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 80,
+        "null_count": 920,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 80.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.92
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 80,
+        "null_count": 920,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 80.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.92
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 80,
+        "null_count": 920,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 80.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.92
+      },
+      {
+        "name": "featureMember.rad_rsp_tempo30zone_poly.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.rad_rsp_tempo30zone_poly.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.rad_rsp_tempo30zone_poly.realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2025-07-27T22:00:00Z"
+        ],
+        "null_rate": 0.999
+      },
+      {
+        "name": "rad_rsp_tempo30zone_poly.realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      },
+      {
+        "name": "LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 259,
+        "null_count": 741,
+        "examples": [
+          "679152.5220006,5338511.81129861 679044.5796006,5338558.79189861 679039.8148006,5338561.98679861 679036.3507006,5338566.56609861 679034.5684006,5338572.02809861",
+          "679124.2620006,5338492.08419861 679148.6492006,5338481.55839861 679180.4389006,5338467.83609861 679157.1141006,5338329.89409861 679156.2195006,5338327.64549861",
+          "679188.3525006,5338339.39549861 679198.5645006,5338394.49349861 679199.6510006,5338396.75549861 679292.1638006,5338329.2115986 679262.0532006,5338283.0906986 67",
+          "679315.6338006,5338311.2232986 679419.2897006,5338234.2246986 679421.5497006,5338233.1469986 679439.2516006,5338227.5334986 679438.4720006,5338225.0796986 67943",
+          "679308.2393006,5338071.7798986 679367.0418006,5338089.0528986 679408.0279006,5337948.9946986 679408.6323006,5337945.0073986 679407.2373006,5337941.2226986 67940"
+        ],
+        "null_rate": 0.741
+      },
+      {
+        "name": "coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 259,
+        "null_count": 741,
+        "examples": [
+          "679152.5220006,5338511.81129861 679044.5796006,5338558.79189861 679039.8148006,5338561.98679861 679036.3507006,5338566.56609861 679034.5684006,5338572.02809861",
+          "679124.2620006,5338492.08419861 679148.6492006,5338481.55839861 679180.4389006,5338467.83609861 679157.1141006,5338329.89409861 679156.2195006,5338327.64549861",
+          "679188.3525006,5338339.39549861 679198.5645006,5338394.49349861 679199.6510006,5338396.75549861 679292.1638006,5338329.2115986 679262.0532006,5338283.0906986 67",
+          "679315.6338006,5338311.2232986 679419.2897006,5338234.2246986 679421.5497006,5338233.1469986 679439.2516006,5338227.5334986 679438.4720006,5338225.0796986 67943",
+          "679308.2393006,5338071.7798986 679367.0418006,5338089.0528986 679408.0279006,5337948.9946986 679408.6323006,5337945.0073986 679407.2373006,5337941.2226986 67940"
+        ],
+        "null_rate": 0.741
+      },
+      {
+        "name": "rad_rsp_tempo30zone_poly.shape.MultiPolygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 80,
+        "null_count": 920,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.92
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_rsp_tempo30zone_poly.status",
+      "rad_rsp_tempo30zone_poly.planungsstatus",
+      "status",
+      "planungsstatus"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "featureMember.rad_rsp_tempo30zone_poly.realisierungsdatum",
+      "rad_rsp_tempo30zone_poly.realisierungsdatum",
+      "realisierungsdatum"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "rad_rsp_tempo30zone_poly.status"
+    }
+  },
+  "quality_score": 6.5,
+  "cleaning_notes": {
+    "dropped_columns": 32,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

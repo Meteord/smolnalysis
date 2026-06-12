@@ -1,0 +1,207 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Grundschüler*innen - Staatsangehörigkeit and compare Indikatorwert by Indikator.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Grundschüler*innen - Staatsangehörigkeit",
+    "package_id": "46216c4a-93cf-4bf4-aa50-ceaab3bcc6d3",
+    "package_name": "indikatorenatlas-grundschueler-innen-staatsangehoerigkeit-83r65mct",
+    "resource_id": "450a8be2-76b4-45f2-9c9f-1517db8beea5",
+    "resource_name": "Staatsangehörigkeit",
+    "resource_format": "csv",
+    "description": "Anteil der Grundschüler\\*innen der entsprechenden Kategorie an allen Grundschüler\\*innen in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Indikatorenatlas",
+      "Schule"
+    ],
+    "groups": [
+      "educ",
+      "tech"
+    ],
+    "row_count": 250,
+    "sampled_rows": 250,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          78.6,
+          79.7,
+          83.1,
+          82.0,
+          83.0
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 72.6,
+          "max": 88.5,
+          "mean": 81.4924,
+          "median": 82.2
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          37040,
+          307,
+          932,
+          916,
+          662
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 304.0,
+          "max": 37040.0,
+          "mean": 2782.5,
+          "median": 1251.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          47113,
+          385,
+          1122,
+          1117,
+          798
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 348.0,
+          "max": 47113.0,
+          "mean": 3433.508,
+          "median": 1552.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 2015.0,
+          "max": 2024.0,
+          "mean": 2019.68,
+          "median": 2020.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          "Staatsangehörigkeit"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          "deutsch"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          "Grundschüler*innen (deutsch)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 0,
+        "examples": [
+          "Grundschüler*innen (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Indikator",
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Indikator",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

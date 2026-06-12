@@ -1,0 +1,182 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Flexzonen für MyRadl.",
+  "query_result": {
+    "dataset_title": "Flexzonen für MyRadl",
+    "package_id": "af63a45e-84fb-4dae-8529-b03947fd780c",
+    "package_name": "ruhver_mim_flexzone_myradl",
+    "resource_id": "c2b68e10-f4e8-43b8-b60d-daae14ff4812",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Dieser Layer beinhaltet Flexzonen für das regionale Bikesharing-System MyRadl. Diese Flexzonen sind virtuell und umfassen einen Bereich von 100 m Durchmesser. Sie befinden sich im Umfeld zukünftiger Standorte. Sobald der Standort physisch errichtet wurde, werden die Flexzonen zu regulären Standorten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 144,
+    "sampled_rows": 144,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 144,
+        "null_count": 0,
+        "examples": [
+          40,
+          13,
+          29,
+          26,
+          14
+        ],
+        "numeric": {
+          "count": 144.0,
+          "min": 7.0,
+          "max": 455.0,
+          "mean": 204.8264,
+          "median": 93.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 144,
+        "null_count": 0,
+        "examples": [
+          6,
+          5,
+          7,
+          2,
+          3
+        ],
+        "numeric": {
+          "count": 144.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 12.6597,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anz_bs_oeff",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 144,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 144.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 144,
+        "null_count": 0,
+        "examples": [
+          2
+        ],
+        "numeric": {
+          "count": 144.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "int64",
+        "kind": "date",
+        "non_null_count": 144,
+        "null_count": 0,
+        "examples": [
+          20260416220000
+        ],
+        "numeric": {
+          "count": 144.0,
+          "min": 20260416220000.0,
+          "max": 20260416220000.0,
+          "mean": 20260416220000.0,
+          "median": 20260416220000.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 144,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOLYGON (((688969.2514007825 5332427.365298136, 688973.6704060123 5332427.16963924, 688978.0548265349 5332426.584193847, 688982.3703483149 5332425.61354386",
+          "MULTIPOLYGON (((689061.3078007834 5332809.81309813, 689065.7268060134 5332809.617439236, 689070.1112265361 5332809.031993841, 689074.4267483158 5332808.06134385",
+          "MULTIPOLYGON (((689483.221900793 5331198.54349811, 689487.6409060231 5331198.347839214, 689492.0253265457 5331197.76239382, 689496.3408483255 5331196.791743834,",
+          "MULTIPOLYGON (((693028.6416008684 5334150.027297878, 693033.0606060983 5334149.831638982, 693037.445026621 5334149.246193589, 693041.7605484009 5334148.27554360",
+          "MULTIPOLYGON (((689726.7894007979 5332015.534798092, 689731.2084060281 5332015.339139195, 689735.5928265505 5332014.753693802, 689739.9083483303 5332013.7830438"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 144,
+        "null_count": 0,
+        "examples": [
+          "Am Harras Süd",
+          "Margaretenplatz",
+          "Pullacher Platz",
+          "Kellerstraße",
+          "Resi-Huber-Platz"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "stadtbezirk",
+      "anz_bs_oeff",
+      "status"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "realisierungsdatum"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 7.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 3,
+    "source_profile_error": null
+  }
+}

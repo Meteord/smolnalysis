@@ -1,0 +1,209 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Natürlicher Saldo and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Natürlicher Saldo",
+    "package_id": "5ccc1322-41c7-4b40-b504-20f558bf6722",
+    "package_name": "indikatorenatlas-bevoelkerung-natuerlicher-saldo-83r65mct",
+    "resource_id": "e2bd77e9-a3cd-4d4d-98ca-4457f7d18232",
+    "resource_name": "Natürlicher Saldo ",
+    "resource_format": "csv",
+    "description": "Differenz der Geborenen (Hauptwohnsitz) der entsprechenden Kategorie und Gestorbenen (Hauptwohnsitz) der entsprechenden Kategorie pro 1 000 Hauptwohnsitzpersonen (mittlere Hauptwohnsitzbevölkerung im Kalenderjahr) der entsprechenden Kategorie. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 2028,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2.5,
+          6.8,
+          7.7,
+          3.4,
+          6.7
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": -5.5,
+          "max": 11.0,
+          "mean": 2.5727,
+          "median": 2.4
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2802",
+          "39",
+          "252",
+          "297",
+          "176"
+        ],
+        "numeric": {
+          "count": 994.0,
+          "min": -1525.0,
+          "max": 6910.0,
+          "mean": 247.1761,
+          "median": 116.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1115884.7",
+          "15591.3",
+          "36968.9",
+          "38404.5",
+          "52414.7"
+        ],
+        "numeric": {
+          "count": 994.0,
+          "min": 14073.4,
+          "max": 1606986.1,
+          "mean": 94848.5244,
+          "median": 45551.15
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Geborene (deutsch) minus Gestorbene (deutsch)",
+          "Geborene (insgesamt) minus Gestorbene (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "mittlere Hauptwohnsitzbevölkerung (deutsch)",
+          "mittlere Hauptwohnsitzbevölkerung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Natürlicher Saldo"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

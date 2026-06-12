@@ -1,0 +1,210 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Altenquotient and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Altenquotient",
+    "package_id": "4d161816-0583-4713-8048-9ada492ecfae",
+    "package_name": "indikatorenatlas-bevoelkerung-altenquotient-83r65mct",
+    "resource_id": "0a471ad2-0e4e-4a6b-815d-b461253a9ee2",
+    "resource_name": "Altenquotient",
+    "resource_format": "csv",
+    "description": "Der Indikator weist darauf hin, in welchem Umfang durch alte Menschen bedingte Versorgungskosten für die erwerbsfähige Bevölkerung auftreten. Anteil der 65-jährigen und älteren Hauptwohnsitzbevölkerung der entsprechenden Kategorie an der erwerbsfähigen (15- bis 64-jährigen) Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Alter",
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 2028,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          30.1,
+          24.7,
+          16.3,
+          16.7,
+          26.3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 13.8,
+          "max": 44.5,
+          "mean": 28.0085,
+          "median": 27.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "220577",
+          "2741",
+          "4610",
+          "4971",
+          "9680"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2214.0,
+          "max": 275032.0,
+          "mean": 17868.956,
+          "median": 8913.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "733343",
+          "11076",
+          "28349",
+          "29693",
+          "36839"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 10130.0,
+          "max": 1130608.0,
+          "mean": 64250.012,
+          "median": 31867.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (65 Jahre und älter) (deutsch)",
+          "Hauptwohnsitzbevölkerung (65 Jahre und älter) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (deutsch)",
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Altenquotient"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

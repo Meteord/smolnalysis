@@ -1,0 +1,183 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Daten der Raddauerzählstellen München 2025 and compare richtung_1 by zaehlstelle.",
+  "query_result": {
+    "dataset_title": "Daten der Raddauerzählstellen München 2025",
+    "package_id": "69307443-8de6-4f48-93ac-8cd410998d49",
+    "package_name": "daten-der-raddauerzaehlstellen-muenchen-2025",
+    "resource_id": "de75e274-423d-40ee-bd47-acf905d05079",
+    "resource_name": "15 Minuten-Werte - September 2025 - Daten der Raddauerzählstellen",
+    "resource_format": "csv",
+    "description": "Folgende Fahrrad-Zählstellen sind derzeit im Betrieb - bitte beachten Sie die ergänzenden Hinweise: * Arnulfstr. 9 - 11 Südseite (Die Zählstelle Arnulfstraße ist aktuell die einzige im Stadtgebiet, die nicht an einem Zweirichtungsradweg liegt. Richtung 2 verzeichnet daher Fahrräder entgegen der Fahrtrichtung) * Bad-Kreuther-Str. (Joseph-Hörwick-Weg) * Erhardtstr. (Deutsches Museum) * Hirsch HLP (Birketweg) * Margaretenstr. (Harras): Defekt an Sensor nach Bauarbeiten * Olympia Park (Rudolf-Harbig",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Fahrrad",
+      "Rad",
+      "Raddauerzählstellen",
+      "Raddauerzählstellen 2025"
+    ],
+    "groups": [
+      "educ",
+      "tran"
+    ],
+    "row_count": 11520,
+    "sampled_rows": 1000,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "richtung_1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "3",
+          "1",
+          "0",
+          "2"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 62.0,
+          "mean": 13.506,
+          "median": 10.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "richtung_2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 6.0,
+          "mean": 0.81,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gesamt",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "4",
+          "2",
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 63.0,
+          "mean": 14.316,
+          "median": 11.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2025.09.01",
+          "2025.09.02",
+          "2025.09.03",
+          "2025.09.04",
+          "2025.09.05"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_start",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "00:00",
+          "00:15",
+          "00:30",
+          "00:45",
+          "01:00"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_ende",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "00:15",
+          "00:30",
+          "00:45",
+          "01:00",
+          "01:15"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zaehlstelle",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Arnulf"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "richtung_1",
+      "richtung_2",
+      "gesamt"
+    ],
+    "category_columns": [
+      "zaehlstelle"
+    ],
+    "time_columns": [
+      "datum",
+      "uhrzeit_start",
+      "uhrzeit_ende"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "zaehlstelle",
+      "y": "richtung_1"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

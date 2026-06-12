@@ -1,0 +1,143 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of behandelte_jahresabwassermenge in Ausgewählte Kennzahlen Münchner Stadtentwässerung.",
+  "query_result": {
+    "dataset_title": "Ausgewählte Kennzahlen Münchner Stadtentwässerung",
+    "package_id": "90e5a919-7955-4f4f-b73d-52efacb97400",
+    "package_name": "kennzahlen-muenchner-stadtentwaesserung",
+    "resource_id": "bc7c5cbe-8059-4fc6-bdbb-9b0c99762d61",
+    "resource_name": "Ausgewählte Kennzahlen Münchner Stadtentwässerung",
+    "resource_format": "csv",
+    "description": "Der Datensatz enthält ausgewählte, wichtige Kennzahlen zu Jahresabwassermenge, Bilanzsumme und Investitionen des Unternehmens.",
+    "organization": "Münchner Stadtentwässerung",
+    "tags": [
+      "Abwasser",
+      "Abwasserreinigung",
+      "Daseinsvorsorge",
+      "Entwässerungsbetrieb",
+      "Kanal",
+      "Klärwerke"
+    ],
+    "groups": [],
+    "row_count": 9,
+    "sampled_rows": 9,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "behandelte_jahresabwassermenge",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 0,
+        "examples": [
+          "164.6",
+          "155.3",
+          "173.4",
+          "160.5",
+          "169.3"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 155.3,
+          "max": 176.1,
+          "mean": 166.6889,
+          "median": 167.2
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bilanzsumme",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 0,
+        "examples": [
+          "1782506.326",
+          "1714054.149",
+          "1663351.361",
+          "1693534.746",
+          "1726305.435"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 1551870.241,
+          "max": 1782506.326,
+          "mean": 1668883.7514,
+          "median": 1663351.361
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "investitionen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 0,
+        "examples": [
+          "101321",
+          "85919",
+          "69577",
+          "67412",
+          "102916"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 62771.0,
+          "max": 102916.0,
+          "mean": 77800.2222,
+          "median": 69577.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 9,
+        "null_count": 0,
+        "examples": [
+          "2023",
+          "2022",
+          "2021",
+          "2020",
+          "2019"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 2015.0,
+          "max": 2023.0,
+          "mean": 2019.0,
+          "median": 2019.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "behandelte_jahresabwassermenge",
+      "bilanzsumme",
+      "investitionen"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "behandelte_jahresabwassermenge"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Standorte der Ladeinfrastruktur and compare anzahl_els by typ_bedeutung.",
+  "query_result": {
+    "dataset_title": "Standorte der Ladeinfrastruktur",
+    "package_id": "7d42e702-9b1c-413c-9445-b3a29d016958",
+    "package_name": "ruhver_els_standort_point",
+    "resource_id": "11e814c3-7392-4b78-8ccd-3cfb0fd3d050",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Standort von Ladeinfrastruktur mit Informationen zu Ladeeinrichtung und Ladepunkten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 369,
+    "sampled_rows": 369,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "anzahl_els",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          2,
+          1,
+          3,
+          0,
+          4
+        ],
+        "numeric": {
+          "count": 369.0,
+          "min": 0.0,
+          "max": 4.0,
+          "mean": 1.607,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_ladepunkte",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          4,
+          2,
+          3,
+          6,
+          1
+        ],
+        "numeric": {
+          "count": 369.0,
+          "min": 0.0,
+          "max": 8.0,
+          "mean": 3.1816,
+          "median": 4.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_stellplaetze",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          4,
+          2,
+          6,
+          8,
+          3
+        ],
+        "numeric": {
+          "count": 369.0,
+          "min": 2.0,
+          "max": 80.0,
+          "mean": 3.4553,
+          "median": 4.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          21,
+          13,
+          12,
+          22,
+          15
+        ],
+        "numeric": {
+          "count": 369.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.9864,
+          "median": 12.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "typ",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          1,
+          4,
+          3
+        ],
+        "numeric": {
+          "count": 369.0,
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 1.0352,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "typ_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          "IHFEM/Betrauung",
+          "Sonstige",
+          "Dritte"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "kat_ladegeschwindigkeit",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          "Normalladen",
+          "Schnellladen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          "POINT (681866.5744006453 5336945.255398494)",
+          "POINT (694713.526000906 5337436.920197751)",
+          "POINT (693001.9676008667 5340006.362297868)",
+          "POINT (680253.8522006172 5335025.018998567)",
+          "POINT (679545.781800605 5336411.088298595)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 369,
+        "null_count": 0,
+        "examples": [
+          "Peter-Kreuder-Straße 5",
+          "Titurelstraße 3",
+          "Gertrud-Grunow-Str. 7",
+          "Mobilitätsstation Neuaubing, Bodenseestraße",
+          "Mobilitätsstation Aubing"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "betreiber",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 16,
+        "null_count": 353,
+        "examples": [
+          "SWM",
+          "qwello"
+        ],
+        "null_rate": 0.9566
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl_els",
+      "anzahl_ladepunkte",
+      "anzahl_stellplaetze",
+      "stadtbezirk"
+    ],
+    "category_columns": [
+      "typ_bedeutung",
+      "kat_ladegeschwindigkeit",
+      "betreiber"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "typ_bedeutung",
+      "y": "anzahl_els"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

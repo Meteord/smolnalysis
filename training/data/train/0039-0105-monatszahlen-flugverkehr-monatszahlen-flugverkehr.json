@@ -1,0 +1,236 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Flugverkehr and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Flugverkehr",
+    "package_id": "9a648dad-0b55-42c7-8ba6-24b7c6bcc599",
+    "package_name": "monatszahlen-flugverkehr",
+    "resource_id": "ad408efa-528e-409b-bfe2-e1f547992cde",
+    "resource_name": "Monatszahlen Flugverkehr",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Flugverkehr München__ beinhaltet die Themen * Flugzeugbewegungen * Fluggäste Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Flughafen",
+      "Monatszahlen"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 2800,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 925.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201365.0886,
+          "median": 201402.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "21756389",
+          "1334771",
+          "1192038",
+          "1558189"
+        ],
+        "numeric": {
+          "count": 964.0,
+          "min": 7892.0,
+          "max": 47941348.0,
+          "mean": 3436771.6089,
+          "median": 1693945.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1334771",
+          "1192038",
+          "1558189",
+          "1822638",
+          "1988285"
+        ],
+        "numeric": {
+          "count": 974.0,
+          "min": 7892.0,
+          "max": 47941348.0,
+          "mean": 3360748.1396,
+          "median": 1703526.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-10.07",
+          "-10.69",
+          "30.72",
+          "16.97"
+        ],
+        "numeric": {
+          "count": 887.0,
+          "min": -98.72,
+          "max": 502.61,
+          "mean": 3.7261,
+          "median": 0.95
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "4.36",
+          "5.81",
+          "-4.32",
+          "6.25"
+        ],
+        "numeric": {
+          "count": 938.0,
+          "min": -99.61,
+          "max": 1655.52,
+          "mean": 28.4102,
+          "median": 5.045
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "1743372",
+          "1738887",
+          "1746529",
+          "1751787"
+        ],
+        "numeric": {
+          "count": 889.0,
+          "min": 173905.0,
+          "max": 4001551.0,
+          "mean": 1826805.613,
+          "median": 1604301.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2013.539,
+          "median": 2014.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Aussteigende",
+          "Einsteigende",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Fluggäste"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

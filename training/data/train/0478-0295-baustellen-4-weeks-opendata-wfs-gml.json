@@ -1,0 +1,235 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata) and compare srsDimension by kontakt_oeffentlich.",
+  "query_result": {
+    "dataset_title": "Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)",
+    "package_id": "f58c0902-654c-4f51-9605-c8bc93f05e1e",
+    "package_name": "baustellen_4_weeks_opendata",
+    "resource_id": "24a066e4-8615-479b-8f7f-ab2d508a4508",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Servicekarte Baustellen bietet einen Überblick über aktuelle und geplante Baustellen und Haltverbote in München, die innerhalb der kommenden vier Wochen Einschränkungen beim Fahren, Gehen und Parken verursachen. Vorübergehende Haltverbote werden in der Regel im gesamten Stadtgebiet angezeigt, bei Baustellen liegt der Fokus derzeit im Bereich der dicht bebauten und stark frequentierten Stadtviertel der Innenstadt sowie der Hauptverkehrsstraßen im gesamten Stadtgebiet. Außerhalb dieser Bereich",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 76,
+    "columns": [
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 93,
+        "null_count": 907,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 93.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.907
+      },
+      {
+        "name": "MultiSurface.srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 72,
+        "null_count": 928,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 72.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.928
+      },
+      {
+        "name": "Polygon.srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 21,
+        "null_count": 979,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 21.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.979
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "5959"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 5959.0,
+          "max": 5959.0,
+          "mean": 5959.0,
+          "median": 5959.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "beginn_datum_kombiniert",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 93,
+        "null_count": 907,
+        "examples": [
+          "15.06.2026",
+          "18.05.2026",
+          "01.05.2026",
+          "06.07.2026",
+          "07.04.2026"
+        ],
+        "null_rate": 0.907
+      },
+      {
+        "name": "ende_datum_kombiniert",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 93,
+        "null_count": 907,
+        "examples": [
+          "17.07.2026",
+          "19.06.2026",
+          "31.12.2026",
+          "09.11.2026",
+          "01.12.2027"
+        ],
+        "null_rate": 0.907
+      },
+      {
+        "name": "featureMembers.baustellen_opendata.beginn_datum_kombiniert",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "23.03.2026"
+        ],
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.baustellen_opendata.ende_datum_kombiniert",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "01.01.2027"
+        ],
+        "null_rate": 0.999
+      },
+      {
+        "name": "baustellen_opendata.beginn_datum_kombiniert",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "23.03.2026"
+        ],
+        "null_rate": 0.999
+      },
+      {
+        "name": "baustellen_opendata.ende_datum_kombiniert",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "01.01.2027"
+        ],
+        "null_rate": 0.999
+      },
+      {
+        "name": "kontakt_oeffentlich",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 67,
+        "null_count": 933,
+        "examples": [
+          "baustellen@swm.de oder +49 89 2361-2604",
+          "kundendialog@mvg.de"
+        ],
+        "null_rate": 0.933
+      },
+      {
+        "name": "shape.MultiSurface.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 72,
+        "null_count": 928,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 72.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.928
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "srsDimension",
+      "MultiSurface.srsDimension",
+      "Polygon.srsDimension",
+      "numberOfFeatures"
+    ],
+    "category_columns": [
+      "kontakt_oeffentlich"
+    ],
+    "time_columns": [
+      "beginn_datum_kombiniert",
+      "ende_datum_kombiniert",
+      "featureMembers.baustellen_opendata.beginn_datum_kombiniert"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "kontakt_oeffentlich",
+      "y": "srsDimension"
+    }
+  },
+  "quality_score": 7.5,
+  "cleaning_notes": {
+    "dropped_columns": 61,
+    "dropped_identifier_columns": 3,
+    "source_profile_error": null
+  }
+}

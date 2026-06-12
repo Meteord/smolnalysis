@@ -1,0 +1,208 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Kinderbetreuung - Einrichtungsträger and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Kinderbetreuung - Einrichtungsträger",
+    "package_id": "5a8b5eb8-caa9-4ec5-93ac-db431365cb96",
+    "package_name": "indikatorenatlas-kinderbetreuung-einrichtungstraeger-83r65mct",
+    "resource_id": "305de6c4-09f7-4964-9da6-74630d289c90",
+    "resource_name": "Träger der Einrichtung",
+    "resource_format": "csv",
+    "description": "Anteil der betreuten Kinder der entsprechenden Kategorie an allen betreuten Kindern in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Indikatorenatlas",
+      "Kinderbetreuung"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 988,
+    "sampled_rows": 988,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          58.1,
+          79.5,
+          62.2,
+          66.5,
+          77.0
+        ],
+        "numeric": {
+          "count": 988.0,
+          "min": 18.3,
+          "max": 81.7,
+          "mean": 50.0,
+          "median": 50.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          "51888",
+          "782",
+          "1480",
+          "1770",
+          "1811"
+        ],
+        "numeric": {
+          "count": 988.0,
+          "min": 201.0,
+          "max": 51888.0,
+          "mean": 2767.1964,
+          "median": 1376.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          "89249",
+          "984",
+          "2379",
+          "2661",
+          "2352"
+        ],
+        "numeric": {
+          "count": 988.0,
+          "min": 815.0,
+          "max": 89249.0,
+          "mean": 5534.3927,
+          "median": 2652.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 988.0,
+          "min": 2007.0,
+          "max": 2025.0,
+          "mean": 2016.0,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          "nicht städtisch",
+          "städtisch"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          "betreute Kinder (nicht städtisch)",
+          "betreute Kinder (städtisch)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          "Einrichtungsträger"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 988,
+        "null_count": 0,
+        "examples": [
+          "betreute Kinder (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Indikator",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,2194 @@
+{
+  "split": "train",
+  "count": 547,
+  "files": [
+    {
+      "file": "0001-0264-daten-der-raddauerzaehlstellen-muenchen-april-2018-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-april-2018.json",
+      "source_index": 264
+    },
+    {
+      "file": "0002-0311-daten-der-raddauerzaehlstellen-muenchen-september-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-september-2019.json",
+      "source_index": 311
+    },
+    {
+      "file": "0003-0118-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2010.json",
+      "source_index": 118
+    },
+    {
+      "file": "0004-0493-baden-isar-opendata-wfs-gml.json",
+      "source_index": 493
+    },
+    {
+      "file": "0005-0397-vornamen-von-neugeborenen-vornamen-2019.json",
+      "source_index": 397
+    },
+    {
+      "file": "0006-0646-baden-isar-opendata-metadaten-xml.json",
+      "source_index": 646
+    },
+    {
+      "file": "0007-0303-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-mai-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 303
+    },
+    {
+      "file": "0008-0502-linienliste-mvv-mvv-linienliste-csv-07-01-2026.json",
+      "source_index": 502
+    },
+    {
+      "file": "0009-0404-kindertagesbetreuungseinrichtungen-in-muenchen-kita-einrichtungen.json",
+      "source_index": 404
+    },
+    {
+      "file": "0010-0132-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2017.json",
+      "source_index": 132
+    },
+    {
+      "file": "0011-0251-daten-der-raddauerzaehlstellen-muenchen-september-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-september-2017.json",
+      "source_index": 251
+    },
+    {
+      "file": "0012-0002-daten-der-raddauerzaehlstellen-muenchen-2026-15-minuten-werte-februar-2026-daten-der-raddauerz-hlstellen.json",
+      "source_index": 2
+    },
+    {
+      "file": "0013-0100-monatszahlen-orchester-monatszahlen-orchester.json",
+      "source_index": 100
+    },
+    {
+      "file": "0014-0635-rad-gruene-welle-metadaten-xml.json",
+      "source_index": 635
+    },
+    {
+      "file": "0015-0310-daten-der-raddauerzaehlstellen-muenchen-februar-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-februar-2020.json",
+      "source_index": 310
+    },
+    {
+      "file": "0016-0302-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-april-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 302
+    },
+    {
+      "file": "0017-0285-rad-rsp-fahrradstrasse-poly-wfs-csv.json",
+      "source_index": 285
+    },
+    {
+      "file": "0018-0212-daten-der-raddauerzaehlstellen-muenchen-2024-15-minuten-werte-april-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 212
+    },
+    {
+      "file": "0019-0086-indikatorenatlas-bevoelkerung-optionskinder-83r65mct-optionskinder.json",
+      "source_index": 86
+    },
+    {
+      "file": "0020-0439-ruhver-carsharing-station-wfs-gml.json",
+      "source_index": 439
+    },
+    {
+      "file": "0021-0608-vollst-pflegeeinrichtung-opendata-metadaten-xml.json",
+      "source_index": 608
+    },
+    {
+      "file": "0022-0005-daten-der-raddauerzaehlstellen-muenchen-2026-tageswerte-und-wetter-m-rz-2026-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 5
+    },
+    {
+      "file": "0023-0475-maerkte-wfs-gml.json",
+      "source_index": 475
+    },
+    {
+      "file": "0024-0092-indikatorenatlas-bevoelkerung-zusammengefasste-geburtenrate-83r65mct-zusammengefasste-geburtenrate.json",
+      "source_index": 92
+    },
+    {
+      "file": "0025-0324-daten-der-raddauerzaehlstellen-muenchen-oktober-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-oktober-2017.json",
+      "source_index": 324
+    },
+    {
+      "file": "0026-0198-daten-der-raddauerzaehlstellen-muenchen-maerz-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-m-rz-2019.json",
+      "source_index": 198
+    },
+    {
+      "file": "0027-0262-daten-der-raddauerzaehlstellen-muenchen-dezember-2020-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-dezember-2020.json",
+      "source_index": 262
+    },
+    {
+      "file": "0028-0039-indikatorenatlas-gesundheit-apotheken-dichte-apotheken-dichte.json",
+      "source_index": 39
+    },
+    {
+      "file": "0029-0481-ruhver-els-saeule-point-wfs-csv.json",
+      "source_index": 481
+    },
+    {
+      "file": "0030-0434-kennzahlen-muenchner-stadtentwaesserung-ausgew-hlte-kennzahlen-m-nchner-stadtentw-sserung.json",
+      "source_index": 434
+    },
+    {
+      "file": "0031-0008-daten-der-raddauerzaehlstellen-muenchen-2026-15-minuten-werte-mai-2026-daten-der-raddauerz-hlstellen.json",
+      "source_index": 8
+    },
+    {
+      "file": "0032-0192-daten-der-raddauerzaehlstellen-muenchen-februar-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-februar-2021.json",
+      "source_index": 192
+    },
+    {
+      "file": "0033-0528-abfall-papier-opendata-wfs-csv.json",
+      "source_index": 528
+    },
+    {
+      "file": "0034-0602-abfall-sonstiges-opendata-metadaten-xml.json",
+      "source_index": 602
+    },
+    {
+      "file": "0035-0592-g-fnp-metadaten-xml.json",
+      "source_index": 592
+    },
+    {
+      "file": "0036-0555-abfall-gewerbemisch-opendata-wfs-gml.json",
+      "source_index": 555
+    },
+    {
+      "file": "0037-0364-daten-der-raddauerzaehlstellen-muenchen-april-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-april-2019.json",
+      "source_index": 364
+    },
+    {
+      "file": "0038-0150-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-januar-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 150
+    },
+    {
+      "file": "0039-0105-monatszahlen-flugverkehr-monatszahlen-flugverkehr.json",
+      "source_index": 105
+    },
+    {
+      "file": "0040-0369-daten-der-raddauerzaehlstellen-muenchen-oktober-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-oktober-2018.json",
+      "source_index": 369
+    },
+    {
+      "file": "0041-0069-indikatorenatlas-bevoelkerung-aussenwanderungsziffer-deutsche-83r65mct-au-enwanderungsziffer-deutsche.json",
+      "source_index": 69
+    },
+    {
+      "file": "0042-0627-opendata-ruhver-fahrradparken-line-metadaten-xml.json",
+      "source_index": 627
+    },
+    {
+      "file": "0043-0629-ruhver-carsharing-metadaten-xml.json",
+      "source_index": 629
+    },
+    {
+      "file": "0044-0368-daten-der-raddauerzaehlstellen-muenchen-juli-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juli-2017.json",
+      "source_index": 368
+    },
+    {
+      "file": "0045-0256-daten-der-raddauerzaehlstellen-muenchen-oktober-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-oktober-2019.json",
+      "source_index": 256
+    },
+    {
+      "file": "0046-0293-opendata-ruhver-mp-standort-point-wfs-gml.json",
+      "source_index": 293
+    },
+    {
+      "file": "0047-0534-tierbestandsliste-tierpark-hellabrunn-tierbestand-fischarten-2023.json",
+      "source_index": 534
+    },
+    {
+      "file": "0048-0545-bundestagswahlen-2017-ergebnisse-munchen-bundestagswahl-2017-zweitstimmen-nach-wahlkreisen.json",
+      "source_index": 545
+    },
+    {
+      "file": "0049-0557-awm-container-barrierefrei-metadaten-xml.json",
+      "source_index": 557
+    },
+    {
+      "file": "0050-0501-datensaetze-des-open-data-portals-muenchen-dcatapde-ckan-lhm-xml-version-44-09-06-2026.json",
+      "source_index": 501
+    },
+    {
+      "file": "0051-0185-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-september-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 185
+    },
+    {
+      "file": "0052-0351-oktoberfest-oktoberfest-speisen-und-getr-nkepreise-in-den-festzelten-2018-2024.json",
+      "source_index": 351
+    },
+    {
+      "file": "0053-0365-daten-der-raddauerzaehlstellen-muenchen-januar-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-januar-2018.json",
+      "source_index": 365
+    },
+    {
+      "file": "0054-0143-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2023.json",
+      "source_index": 143
+    },
+    {
+      "file": "0055-0255-daten-der-raddauerzahlstellen-munchen-dezember-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-dezember-2021.json",
+      "source_index": 255
+    },
+    {
+      "file": "0056-0503-fernzugriffe-fernzugriffe.json",
+      "source_index": 503
+    },
+    {
+      "file": "0057-0340-daten-der-raddauerzaehlstellen-muenchen-juni-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juni-2017.json",
+      "source_index": 340
+    },
+    {
+      "file": "0058-0499-vagrund-baug-umgriff-opendata-wfs-csv.json",
+      "source_index": 499
+    },
+    {
+      "file": "0059-0386-behindertenparkplaetze-wfs-csv.json",
+      "source_index": 386
+    },
+    {
+      "file": "0060-0353-daten-der-raddauerzaehlstellen-muenchen-mai-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-mai-2020.json",
+      "source_index": 353
+    },
+    {
+      "file": "0061-0569-opendata-ruhver-mim-geofence-poly-metadaten-xml.json",
+      "source_index": 569
+    },
+    {
+      "file": "0062-0559-opendata-trinkwasserbrunnen-wfs-csv.json",
+      "source_index": 559
+    },
+    {
+      "file": "0063-0014-ruhver-carsharing-station-wfs-csv.json",
+      "source_index": 14
+    },
+    {
+      "file": "0064-0536-privathaushalte-in-den-stadtbezirken-privathaushalte-2013-in-den-stadtbezirken.json",
+      "source_index": 536
+    },
+    {
+      "file": "0065-0378-daten-der-raddauerzaehlstellen-muenchen-juni-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juni-2020.json",
+      "source_index": 378
+    },
+    {
+      "file": "0066-0507-tierbestandsliste-tierpark-hellabrunn-ver-nderungen-im-tierbestand-2024.json",
+      "source_index": 507
+    },
+    {
+      "file": "0067-0180-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-juli-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 180
+    },
+    {
+      "file": "0068-0042-indikatorenatlas-baufertigstellungen-baufertigstellungen.json",
+      "source_index": 42
+    },
+    {
+      "file": "0069-0375-daten-der-raddauerzaehlstellen-muenchen-mai-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-mai-2018.json",
+      "source_index": 375
+    },
+    {
+      "file": "0070-0074-indikatorenatlas-bevoelkerung-haushalte-alleinerziehend-haushalte-alleinerziehend.json",
+      "source_index": 74
+    },
+    {
+      "file": "0071-0490-opendata-fahrradstrassen-line-wfs-csv.json",
+      "source_index": 490
+    },
+    {
+      "file": "0072-0213-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-april-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 213
+    },
+    {
+      "file": "0073-0535-privathaushalte-in-den-stadtbezirken-privathaushalte-2024-in-den-stadtbezirken.json",
+      "source_index": 535
+    },
+    {
+      "file": "0074-0542-schulen-und-schuelerzahlen-in-muenchen-schulen-und-sch-ler-innenzahlen-schuljahr-2020-21.json",
+      "source_index": 542
+    },
+    {
+      "file": "0075-0417-bestattungen-beisetzungen-staedtische-friedhoefe-muenchen-bestattungen-und-beisetzungen-st-dtische-friedh-fe-m-nchen.json",
+      "source_index": 417
+    },
+    {
+      "file": "0076-0593-erhalt-umgriff-metadaten-xml.json",
+      "source_index": 593
+    },
+    {
+      "file": "0077-0172-daten-der-raddauerzaehlstellen-muenchen-2025-tageswerte-und-wetter-dezember-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 172
+    },
+    {
+      "file": "0078-0538-schulen-und-schuelerzahlen-in-muenchen-schulen-und-sch-ler-innenzahlen-schuljahr-2024-25.json",
+      "source_index": 538
+    },
+    {
+      "file": "0079-0195-daten-der-raddauerzaehlstellen-muenchen-januar-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-januar-2017.json",
+      "source_index": 195
+    },
+    {
+      "file": "0080-0033-indikatorenatlas-grundschueler-innen-staatsangehoerigkeit-83r65mct-staatsangeh-rigkeit.json",
+      "source_index": 33
+    },
+    {
+      "file": "0081-0510-radverkehrsanlagen-im-strassenunterhalt-der-landeshauptstadt-muenchen-radwege-csv-datei.json",
+      "source_index": 510
+    },
+    {
+      "file": "0082-0138-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2020.json",
+      "source_index": 138
+    },
+    {
+      "file": "0083-0444-ruhver-mim-abstellfl-bs-wfs-gml.json",
+      "source_index": 444
+    },
+    {
+      "file": "0084-0384-opendata-ruhver-fahrradparken-line-wfs-csv.json",
+      "source_index": 384
+    },
+    {
+      "file": "0085-0526-abfall-gewerbemisch-opendata-wfs-csv.json",
+      "source_index": 526
+    },
+    {
+      "file": "0086-0540-schulen-und-schuelerzahlen-in-muenchen-schulen-und-sch-ler-innenzahlen-schuljahr-2022-23.json",
+      "source_index": 540
+    },
+    {
+      "file": "0087-0064-indikatorenatlas-bevoelkerung-eingebuergerte-83r65mct-eingeb-rgerte.json",
+      "source_index": 64
+    },
+    {
+      "file": "0088-0243-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-oktober-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 243
+    },
+    {
+      "file": "0089-0400-vornamen-von-neugeborenen-vornamen-2016.json",
+      "source_index": 400
+    },
+    {
+      "file": "0090-0040-indikatorenatlas-flaechen-flaechennutzung-fl-chennutzung.json",
+      "source_index": 40
+    },
+    {
+      "file": "0091-0176-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-m-rz-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 176
+    },
+    {
+      "file": "0092-0610-paketboxen-metadaten-xml.json",
+      "source_index": 610
+    },
+    {
+      "file": "0093-0615-bestand-nachbarschaftstreffs-opendata-metadaten-xml.json",
+      "source_index": 615
+    },
+    {
+      "file": "0094-0158-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-mai-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 158
+    },
+    {
+      "file": "0095-0101-monatszahlen-museen-monatszahlen-museen.json",
+      "source_index": 101
+    },
+    {
+      "file": "0096-0661-awm-wertstoffhoefe-opendata-wfs-gml.json",
+      "source_index": 661
+    },
+    {
+      "file": "0097-0513-bibliothekskennzahlen-der-muenchner-stadtbibliothek-entleihungen-bibliothekskennzahlen-der-m-nchner-stadtbibliothek-entleihungen.json",
+      "source_index": 513
+    },
+    {
+      "file": "0098-0015-opendata-ruhver-mim-geofence-poly-wfs-csv.json",
+      "source_index": 15
+    },
+    {
+      "file": "0099-0532-termine-der-vollversammlung-des-muenchner-stadtrats-sitzungstermine-vollversammlung-rss-feed.json",
+      "source_index": 532
+    },
+    {
+      "file": "0100-0678-belegung-gewerbehoefe-belegung-gewerbeh-fe.json",
+      "source_index": 678
+    },
+    {
+      "file": "0101-0193-daten-der-raddauerzaehlstellen-muenchen-april-2020-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-april-2020.json",
+      "source_index": 193
+    },
+    {
+      "file": "0102-0315-daten-der-raddauerzaehlstellen-muenchen-november-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-november-2018.json",
+      "source_index": 315
+    },
+    {
+      "file": "0103-0630-behindertenparkplaetze-metadaten-xml.json",
+      "source_index": 630
+    },
+    {
+      "file": "0104-0516-kleiner-waffenschein-anzahl-kleiner-waffenschein.json",
+      "source_index": 516
+    },
+    {
+      "file": "0105-0326-daten-der-raddauerzaehlstellen-muenchen-juli-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juli-2020.json",
+      "source_index": 326
+    },
+    {
+      "file": "0106-0297-buergerversammlungen-anfragen-bv-anfragen-rss-feed.json",
+      "source_index": 297
+    },
+    {
+      "file": "0107-0028-indikatorenatlas-verkehr-erstzulassungsanteil-personenkraftwagen-83r65mct-erstzulassungsanteil-personenkraftwagen.json",
+      "source_index": 28
+    },
+    {
+      "file": "0108-0200-daten-der-raddauerzaehlstellen-muenchen-maerz-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-m-rz-2017.json",
+      "source_index": 200
+    },
+    {
+      "file": "0109-0644-rad-rsp-fahrradstrasse-poly-metadaten-xml.json",
+      "source_index": 644
+    },
+    {
+      "file": "0110-0013-ruhver-mim-abstellfl-ls-wfs-csv.json",
+      "source_index": 13
+    },
+    {
+      "file": "0111-0207-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-januar-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 207
+    },
+    {
+      "file": "0112-0666-opendata-radentscheid-line-wfs-csv.json",
+      "source_index": 666
+    },
+    {
+      "file": "0113-0096-monatszahlen-verkehrsunfaelle-monatszahlen-verkehrsunf-lle.json",
+      "source_index": 96
+    },
+    {
+      "file": "0114-0162-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-juli-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 162
+    },
+    {
+      "file": "0115-0247-daten-der-raddauerzaehlstellen-muenchen-november-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-november-2021.json",
+      "source_index": 247
+    },
+    {
+      "file": "0116-0187-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-oktober-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 187
+    },
+    {
+      "file": "0117-0191-daten-der-raddauerzaehlstellen-muenchen-februar-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-februar-2019.json",
+      "source_index": 191
+    },
+    {
+      "file": "0118-0177-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-april-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 177
+    },
+    {
+      "file": "0119-0421-bilanzsumme-eigenkapital-und-eigenkapital-quote-lhm-bilanzsumme-eigenkapital-und-eigenkapital-quote-lhm.json",
+      "source_index": 421
+    },
+    {
+      "file": "0120-0063-indikatorenatlas-bevoelkerung-durchschnittsalter-muetter-erstgebaerend-durchschnittsalter-m-tter-erstgeb-rend.json",
+      "source_index": 63
+    },
+    {
+      "file": "0121-0617-wc-finder-metadaten-xml.json",
+      "source_index": 617
+    },
+    {
+      "file": "0122-0227-daten-der-raddauerzaehlstellen-muenchen-maerz-2020-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-m-rz-2020.json",
+      "source_index": 227
+    },
+    {
+      "file": "0123-0261-daten-der-raddauerzaehlstellen-muenchen-august-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-august-2021.json",
+      "source_index": 261
+    },
+    {
+      "file": "0124-0024-baustellen-4-weeks-opendata-wfs-csv.json",
+      "source_index": 24
+    },
+    {
+      "file": "0125-0204-daten-der-raddauerzaehlstellen-muenchen-juni-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-juni-2021.json",
+      "source_index": 204
+    },
+    {
+      "file": "0126-0179-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-juni-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 179
+    },
+    {
+      "file": "0127-0489-opendata-radentscheid-line-wfs-gml.json",
+      "source_index": 489
+    },
+    {
+      "file": "0128-0106-monatszahlen-feuerwehr-monatszahlen-feuerwehr.json",
+      "source_index": 106
+    },
+    {
+      "file": "0129-0116-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2009.json",
+      "source_index": 116
+    },
+    {
+      "file": "0130-0290-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-november-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 290
+    },
+    {
+      "file": "0131-0589-qz-borkenkaefer-metadaten-xml.json",
+      "source_index": 589
+    },
+    {
+      "file": "0132-0062-indikatorenatlas-bevoelkerung-durchschnittsalter-muetter-83r65mct-durchschnittsalter-m-tter.json",
+      "source_index": 62
+    },
+    {
+      "file": "0133-0443-ruhver-mim-abstellverbot-bs-wfs-gml.json",
+      "source_index": 443
+    },
+    {
+      "file": "0134-0237-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-april-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 237
+    },
+    {
+      "file": "0135-0402-vornamen-von-neugeborenen-vornamen-2014.json",
+      "source_index": 402
+    },
+    {
+      "file": "0136-0268-daten-der-raddauerzaehlstellen-muenchen-april-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-april-2019.json",
+      "source_index": 268
+    },
+    {
+      "file": "0137-0623-opendata-miv-umweltzone-vz-point-metadaten-xml.json",
+      "source_index": 623
+    },
+    {
+      "file": "0138-0174-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-januar-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 174
+    },
+    {
+      "file": "0139-0060-indikatorenatlas-bevoelkerung-durchschnittsalter-83r65mct-altersdurchschnitt.json",
+      "source_index": 60
+    },
+    {
+      "file": "0140-0023-rad-rsp-radwege-forstfeld-line-wfs-csv.json",
+      "source_index": 23
+    },
+    {
+      "file": "0141-0423-nichtdeutsche-gesamtbeschaeftigte-der-landeshauptstadt-muenchen-nach-staatsangeh-nichtdeutsche-gesamtbesch-ftigte-der-landeshauptstadt-m-nchen-nach-staatsangeh-r.json",
+      "source_index": 423
+    },
+    {
+      "file": "0142-0524-abfall-kompost-opendata-wfs-csv.json",
+      "source_index": 524
+    },
+    {
+      "file": "0143-0072-indikatorenatlas-arbeitsmarkt-regel-leistungsberechtigte-regel-leistungsberechtigte.json",
+      "source_index": 72
+    },
+    {
+      "file": "0144-0392-vornamen-von-neugeborenen-vornamen-2024.json",
+      "source_index": 392
+    },
+    {
+      "file": "0145-0043-indikatorenatlas-arbeitsmarkt-sozialversicherungspflichtig-beschaeftigte-anteil--sozialversicherungspflichtig-besch-ftigte-anteil.json",
+      "source_index": 43
+    },
+    {
+      "file": "0146-0266-daten-der-raddauerzaehlstellen-muenchen-oktober-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-oktober-2021.json",
+      "source_index": 266
+    },
+    {
+      "file": "0147-0241-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-august-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 241
+    },
+    {
+      "file": "0148-0533-tierbestandsliste-tierpark-hellabrunn-tierbestand-fischarten-2024.json",
+      "source_index": 533
+    },
+    {
+      "file": "0149-0149-monatszahlen-kfz-neuzulassungen-monatszahlen-kfz-erstzulassungen.json",
+      "source_index": 149
+    },
+    {
+      "file": "0150-0113-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2008.json",
+      "source_index": 113
+    },
+    {
+      "file": "0151-0119-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2011.json",
+      "source_index": 119
+    },
+    {
+      "file": "0152-0480-opendata-ruhver-parkseiten-laden-liefern-leisten-wfs-gml.json",
+      "source_index": 480
+    },
+    {
+      "file": "0153-0222-daten-der-raddauerzaehlstellen-muenchen-2024-15-minuten-werte-september-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 222
+    },
+    {
+      "file": "0154-0190-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-dezember-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 190
+    },
+    {
+      "file": "0155-0341-daten-der-raddauerzaehlstellen-muenchen-november-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-november-2021.json",
+      "source_index": 341
+    },
+    {
+      "file": "0156-0612-bestand-asz-opendata-metadaten-xml.json",
+      "source_index": 612
+    },
+    {
+      "file": "0157-0354-daten-der-raddauerzaehlstellen-muenchen-mai-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-mai-2017.json",
+      "source_index": 354
+    },
+    {
+      "file": "0158-0415-landtagswahl-2023-wahlraeume-in-muenchen-wahlr-ume-landtagswahl-2023.json",
+      "source_index": 415
+    },
+    {
+      "file": "0159-0140-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2022.json",
+      "source_index": 140
+    },
+    {
+      "file": "0160-0240-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-juli-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 240
+    },
+    {
+      "file": "0161-0077-indikatorenatlas-bevoelkerung-hochbetagte-83r65mct-hochbetagte.json",
+      "source_index": 77
+    },
+    {
+      "file": "0162-0328-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-januar-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 328
+    },
+    {
+      "file": "0163-0660-awm-wertstoffhoefe-opendata-wfs-csv.json",
+      "source_index": 660
+    },
+    {
+      "file": "0164-0639-rad-rsp-route-line-metadaten-xml.json",
+      "source_index": 639
+    },
+    {
+      "file": "0165-0254-daten-der-raddauerzaehlstellen-muenchen-august-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-august-2017.json",
+      "source_index": 254
+    },
+    {
+      "file": "0166-0272-daten-der-raddauerzaehlstellen-muenchen-juli-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-juli-2017.json",
+      "source_index": 272
+    },
+    {
+      "file": "0167-0420-bezirksausschuss-sitzungen-ba-sitzungen-rss-feed.json",
+      "source_index": 420
+    },
+    {
+      "file": "0168-0509-bevoelkerung-stadtbezirksteile-muenchen-hauptwohnsitzbev-lkerung-stadtbezirksteile.json",
+      "source_index": 509
+    },
+    {
+      "file": "0169-0361-daten-der-raddauerzaehlstellen-muenchen-juni-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juni-2019.json",
+      "source_index": 361
+    },
+    {
+      "file": "0170-0280-daten-der-raddauerzaehlstellen-muenchen-januar-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-januar-2021.json",
+      "source_index": 280
+    },
+    {
+      "file": "0171-0622-ruhver-els-saeule-point-metadaten-xml.json",
+      "source_index": 622
+    },
+    {
+      "file": "0172-0265-daten-der-raddauerzaehlstellen-muenchen-juni-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-juni-2019.json",
+      "source_index": 265
+    },
+    {
+      "file": "0173-0306-daten-der-raddauerzaehlstellen-muenchen-februar-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-februar-2021.json",
+      "source_index": 306
+    },
+    {
+      "file": "0174-0548-abfall-sonstiges-opendata-wfs-gml.json",
+      "source_index": 548
+    },
+    {
+      "file": "0175-0359-daten-der-raddauerzaehlstellen-muenchen-dezember-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-dezember-2017.json",
+      "source_index": 359
+    },
+    {
+      "file": "0176-0129-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2016.json",
+      "source_index": 129
+    },
+    {
+      "file": "0177-0403-vornamen-von-neugeborenen-vornamen-2013.json",
+      "source_index": 403
+    },
+    {
+      "file": "0178-0391-vornamen-von-neugeborenen-vornamen-2025.json",
+      "source_index": 391
+    },
+    {
+      "file": "0179-0491-rad-rsp-rad-freig-einbahn-wfs-gml.json",
+      "source_index": 491
+    },
+    {
+      "file": "0180-0452-bestand-asz-opendata-wfs-csv.json",
+      "source_index": 452
+    },
+    {
+      "file": "0181-0650-baustellen-4-weeks-opendata-metadaten-xml.json",
+      "source_index": 650
+    },
+    {
+      "file": "0182-0498-vagrund-baug-umgriff-opendata-wfs-gml.json",
+      "source_index": 498
+    },
+    {
+      "file": "0183-0380-lsa-opendata-wfs-csv.json",
+      "source_index": 380
+    },
+    {
+      "file": "0184-0230-daten-der-raddauerzaehlstellen-muenchen-oktober-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-oktober-2017.json",
+      "source_index": 230
+    },
+    {
+      "file": "0185-0110-monatszahlen-arbeitsmarkt-monatszahlen-arbeitsmarkt.json",
+      "source_index": 110
+    },
+    {
+      "file": "0186-0492-rad-rsp-fahrradstrasse-poly-wfs-gml.json",
+      "source_index": 492
+    },
+    {
+      "file": "0187-0568-ruhver-mim-abstellfl-ls-metadaten-xml.json",
+      "source_index": 568
+    },
+    {
+      "file": "0188-0171-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-november-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 171
+    },
+    {
+      "file": "0189-0188-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-november-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 188
+    },
+    {
+      "file": "0190-0520-abfall-auto-metall-opendata-wfs-csv.json",
+      "source_index": 520
+    },
+    {
+      "file": "0191-0184-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-september-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 184
+    },
+    {
+      "file": "0192-0307-daten-der-raddauerzaehlstellen-muenchen-april-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-april-2020.json",
+      "source_index": 307
+    },
+    {
+      "file": "0193-0231-daten-der-raddauerzaehlstellen-muenchen-september-2020-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-september-2020.json",
+      "source_index": 231
+    },
+    {
+      "file": "0194-0357-daten-der-raddauerzaehlstellen-muenchen-august-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-august-2021.json",
+      "source_index": 357
+    },
+    {
+      "file": "0195-0539-schulen-und-schuelerzahlen-in-muenchen-schulen-und-sch-ler-innenzahlen-schuljahr-2023-24.json",
+      "source_index": 539
+    },
+    {
+      "file": "0196-0418-aktuelle-stadtratsantraege-und-stadtratsanfragen-str-antr-ge-str-anfragen-rss-feed.json",
+      "source_index": 418
+    },
+    {
+      "file": "0197-0550-abfall-elektronik-opendata-wfs-gml.json",
+      "source_index": 550
+    },
+    {
+      "file": "0198-0561-baut-strassenabschnitte-wu-wfs-gml.json",
+      "source_index": 561
+    },
+    {
+      "file": "0199-0325-daten-der-raddauerzaehlstellen-muenchen-september-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-september-2020.json",
+      "source_index": 325
+    },
+    {
+      "file": "0200-0588-deckschichten-opendata-wfs-gml.json",
+      "source_index": 588
+    },
+    {
+      "file": "0201-0147-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2025.json",
+      "source_index": 147
+    },
+    {
+      "file": "0202-0446-ruhver-parken-kfz-poly-station-wfs-gml.json",
+      "source_index": 446
+    },
+    {
+      "file": "0203-0360-daten-der-raddauerzaehlstellen-muenchen-april-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-april-2018.json",
+      "source_index": 360
+    },
+    {
+      "file": "0204-0659-weihnachtsmaerkte-muenchen-weihnachtsm-rkte-m-nchen-2025.json",
+      "source_index": 659
+    },
+    {
+      "file": "0205-0155-daten-der-raddauerzaehlstellen-muenchen-2025-tageswerte-und-wetter-m-rz-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 155
+    },
+    {
+      "file": "0206-0607-bestand-sbh-opendata-metadaten-xml.json",
+      "source_index": 607
+    },
+    {
+      "file": "0207-0327-daten-der-raddauerzaehlstellen-muenchen-august-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-august-2020.json",
+      "source_index": 327
+    },
+    {
+      "file": "0208-0201-daten-der-raddauerzaehlstellen-muenchen-november-2018-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-november-2018.json",
+      "source_index": 201
+    },
+    {
+      "file": "0209-0467-staedtische-kultureinrichtungen-liste-st-dtischer-kultureinrichtungen.json",
+      "source_index": 467
+    },
+    {
+      "file": "0210-0088-indikatorenatlas-bevoelkerung-rohe-geburtenrate-83r65mct-rohe-geburtenrate.json",
+      "source_index": 88
+    },
+    {
+      "file": "0211-0396-vornamen-von-neugeborenen-vornamen-2020.json",
+      "source_index": 396
+    },
+    {
+      "file": "0212-0152-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-februar-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 152
+    },
+    {
+      "file": "0213-0658-stadtplan-metadaten-xml.json",
+      "source_index": 658
+    },
+    {
+      "file": "0214-0584-vagrund-hoeh-symbol-opendata-wfs-gml.json",
+      "source_index": 584
+    },
+    {
+      "file": "0215-0430-oktoberfest-oktoberfest-bierkonsum-1985-2024.json",
+      "source_index": 430
+    },
+    {
+      "file": "0216-0148-monatszahlen-gewerbe-monatszahlen-gewerbe.json",
+      "source_index": 148
+    },
+    {
+      "file": "0217-0045-indikatorenatlas-2014-arbeitsmarkt-erwerbsfaehige-83r65mct-erwerbsf-hige.json",
+      "source_index": 45
+    },
+    {
+      "file": "0218-0294-ruhver-mim-flexzone-myradl-wfs-csv.json",
+      "source_index": 294
+    },
+    {
+      "file": "0219-0381-wc-finder-wfs-csv.json",
+      "source_index": 381
+    },
+    {
+      "file": "0220-0427-besucher-und-veranstaltungen-gasteig-hp8-muenchen-besucher-innen-und-veranstaltungszahlen-gasteig-hp8-m-nchen.json",
+      "source_index": 427
+    },
+    {
+      "file": "0221-0626-g-sensor-3l-zonen-metadaten-xml.json",
+      "source_index": 626
+    },
+    {
+      "file": "0222-0137-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2020.json",
+      "source_index": 137
+    },
+    {
+      "file": "0223-0215-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-mai-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 215
+    },
+    {
+      "file": "0224-0564-opendata-ruhver-parkseiten-line-wfs-gml.json",
+      "source_index": 564
+    },
+    {
+      "file": "0225-0355-daten-der-raddauerzaehlstellen-muenchen-maerz-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-m-rz-2021.json",
+      "source_index": 355
+    },
+    {
+      "file": "0226-0130-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2016.json",
+      "source_index": 130
+    },
+    {
+      "file": "0227-0164-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-august-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 164
+    },
+    {
+      "file": "0228-0425-kernbeschaeftigte-nach-altersgruppen-arbeitszeit-und-geschlecht-landeshauptstadt-kernbesch-ftigte-der-landeshauptstadt-m-nchen-nach-altersgruppen-arbeitszeit-und.json",
+      "source_index": 425
+    },
+    {
+      "file": "0229-0450-paketboxen-wfs-csv.json",
+      "source_index": 450
+    },
+    {
+      "file": "0230-0197-daten-der-raddauerzaehlstellen-muenchen-september-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-september-2019.json",
+      "source_index": 197
+    },
+    {
+      "file": "0231-0017-ruhver-mim-abstellfl-bs-wfs-csv.json",
+      "source_index": 17
+    },
+    {
+      "file": "0232-0221-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-august-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 221
+    },
+    {
+      "file": "0233-0461-gefahrenstellen-isar-opendata-wfs-csv.json",
+      "source_index": 461
+    },
+    {
+      "file": "0234-0416-oeffentliche-spielplaetze-muenchen-ffentliche-spielpl-tze-in-m-nchen.json",
+      "source_index": 416
+    },
+    {
+      "file": "0235-0102-monatszahlen-kinos-monatszahlen-kinos.json",
+      "source_index": 102
+    },
+    {
+      "file": "0236-0468-schwimmbaeder-in-muenchen-schwimmb-der-in-m-nchen.json",
+      "source_index": 468
+    },
+    {
+      "file": "0237-0168-daten-der-raddauerzaehlstellen-muenchen-2025-tageswerte-und-wetter-oktober-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 168
+    },
+    {
+      "file": "0238-0655-vablock-stadtbezirke-opendata-metadaten-xml.json",
+      "source_index": 655
+    },
+    {
+      "file": "0239-0286-kernbeschaeftigte-nach-statusgruppen-arbeitszeit-und-geschlecht-landeshauptstadt-kernbesch-ftigte-nach-statusgruppen-arbeitszeit-und-geschlecht.json",
+      "source_index": 286
+    },
+    {
+      "file": "0240-0058-indikatorenatlas-bevoelkerung-bevoelkerungsdichte-83r65mct-bev-lkerungsdichte.json",
+      "source_index": 58
+    },
+    {
+      "file": "0241-0590-vablock-bezirksteil-opendata-wfs-gml.json",
+      "source_index": 590
+    },
+    {
+      "file": "0242-0543-bundestagswahlen-2017-ergebnisse-munchen-bundestagswahl-2017-erststimmen-nach-wahlkreisen.json",
+      "source_index": 543
+    },
+    {
+      "file": "0243-0335-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-august-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 335
+    },
+    {
+      "file": "0244-0078-indikatorenatlas-bevoelkerung-innerraeumliche-umzugsziffer-83r65mct-innerr-umliche-umzugsziffer.json",
+      "source_index": 78
+    },
+    {
+      "file": "0245-0674-opendata-trinkwasserbrunnen-wfs-gml.json",
+      "source_index": 674
+    },
+    {
+      "file": "0246-0496-bootfahren-isar-opendata-wfs-gml.json",
+      "source_index": 496
+    },
+    {
+      "file": "0247-0235-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-februar-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 235
+    },
+    {
+      "file": "0248-0209-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-februar-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 209
+    },
+    {
+      "file": "0249-0339-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-dezember-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 339
+    },
+    {
+      "file": "0250-0056-indikatorenatlas-bevoelkerung-aussenwanderungsziffer-nichtdeutsche-83r65mct-au-enwanderungsziffer-nichtdeutsche.json",
+      "source_index": 56
+    },
+    {
+      "file": "0251-0460-opendata-rad-altstadt-radlring-linie-wfs-csv.json",
+      "source_index": 460
+    },
+    {
+      "file": "0252-0219-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-juli-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 219
+    },
+    {
+      "file": "0253-0009-daten-der-raddauerzaehlstellen-muenchen-2026-tageswerte-und-wetter-mai-2026-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 9
+    },
+    {
+      "file": "0254-0668-rad-rsp-radservicestation-wfs-csv.json",
+      "source_index": 668
+    },
+    {
+      "file": "0255-0398-vornamen-von-neugeborenen-vornamen-2018.json",
+      "source_index": 398
+    },
+    {
+      "file": "0256-0514-schuldenstand-hoheitshaushalt-lhm-schuldenstand-hoheitshaushalt-lhm.json",
+      "source_index": 514
+    },
+    {
+      "file": "0257-0624-opendata-miv-umweltzone-poly-metadaten-xml.json",
+      "source_index": 624
+    },
+    {
+      "file": "0258-0136-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2019.json",
+      "source_index": 136
+    },
+    {
+      "file": "0259-0383-ruhver-els-standort-point-wfs-csv.json",
+      "source_index": 383
+    },
+    {
+      "file": "0260-0494-vagrund-hoeh-symbol-opendata-wfs-csv.json",
+      "source_index": 494
+    },
+    {
+      "file": "0261-0477-bestand-nachbarschaftstreffs-opendata-wfs-gml.json",
+      "source_index": 477
+    },
+    {
+      "file": "0262-0091-indikatorenatlas-bevoelkerung-wohndauer-muenchen-83r65mct-wohndauer-m-nchen.json",
+      "source_index": 91
+    },
+    {
+      "file": "0263-0012-ruhver-mim-abstellfl-ts-wfs-csv.json",
+      "source_index": 12
+    },
+    {
+      "file": "0264-0211-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-m-rz-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 211
+    },
+    {
+      "file": "0265-0090-indikatorenatlas-bevoelkerung-wohndauer-adresse-83r65mct-wohndauer-adresse.json",
+      "source_index": 90
+    },
+    {
+      "file": "0266-0083-indikatorenatlas-bevoelkerung-muetter-ab-35-jahre-83r65mct-m-tter-ab-35-jahre.json",
+      "source_index": 83
+    },
+    {
+      "file": "0267-0424-aktiv-beschaftigte-der-landeshauptstadt-muenchen-aktiv-besch-ftigte-der-landeshauptstadt-m-nchen.json",
+      "source_index": 424
+    },
+    {
+      "file": "0268-0312-daten-der-raddauerzaehlstellen-muenchen-maerz-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-m-rz-2019.json",
+      "source_index": 312
+    },
+    {
+      "file": "0269-0422-kernbeschaeftigte-nach-altersgruppen-statusgruppen-und-geschlecht-landeshauptsta-kernbesch-ftigte-der-landeshauptstadt-m-nchen-nach-altersgruppen-statusgruppen-u.json",
+      "source_index": 422
+    },
+    {
+      "file": "0270-0465-parkhaeuser-munchen-parkh-user-m-nchen-csv.json",
+      "source_index": 465
+    },
+    {
+      "file": "0271-0052-indikatorenatlas-bevoelkerung-aussenwanderungsvolumen-83r65mct-au-enwanderungsvolumen.json",
+      "source_index": 52
+    },
+    {
+      "file": "0272-0437-ruhver-mim-abstellfl-ts-wfs-gml.json",
+      "source_index": 437
+    },
+    {
+      "file": "0273-0308-daten-der-raddauerzaehlstellen-muenchen-april-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-april-2021.json",
+      "source_index": 308
+    },
+    {
+      "file": "0274-0183-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-august-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 183
+    },
+    {
+      "file": "0275-0366-daten-der-raddauerzaehlstellen-muenchen-februar-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-februar-2018.json",
+      "source_index": 366
+    },
+    {
+      "file": "0276-0186-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-oktober-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 186
+    },
+    {
+      "file": "0277-0157-daten-der-raddauerzaehlstellen-muenchen-2025-tageswerte-und-wetter-april-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 157
+    },
+    {
+      "file": "0278-0021-rad-rsp-tempo30zone-poly-wfs-csv.json",
+      "source_index": 21
+    },
+    {
+      "file": "0279-0567-ruhver-mim-abstellfl-ts-metadaten-xml.json",
+      "source_index": 567
+    },
+    {
+      "file": "0280-0466-preise-stipendien-preise-und-stipendien.json",
+      "source_index": 466
+    },
+    {
+      "file": "0281-0075-indikatorenatlas-bevoelkerung-haushalte-staatsangehoerigkeit-83r65mct-haushalte-staatsangeh-rigkeit.json",
+      "source_index": 75
+    },
+    {
+      "file": "0282-0329-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-februar-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 329
+    },
+    {
+      "file": "0283-0018-opendata-ruhver-mp-standort-point-wfs-csv.json",
+      "source_index": 18
+    },
+    {
+      "file": "0284-0279-daten-der-raddauerzaehlstellen-muenchen-mai-2018-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-mai-2018.json",
+      "source_index": 279
+    },
+    {
+      "file": "0285-0076-indikatorenatlas-bevoelkerung-haushalte-mit-kindern-83r65mct-haushalte-mit-kindern.json",
+      "source_index": 76
+    },
+    {
+      "file": "0286-0436-ruhver-carsharing-wfs-gml.json",
+      "source_index": 436
+    },
+    {
+      "file": "0287-0601-solarpotenzial-globalstrahlung-p-02-metadaten-xml.json",
+      "source_index": 601
+    },
+    {
+      "file": "0288-0321-daten-der-raddauerzaehlstellen-muenchen-maerz-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-m-rz-2020.json",
+      "source_index": 321
+    },
+    {
+      "file": "0289-0287-kernbeschaeftigte-nach-referaten-eigenbetriebe-und-stiftungen-landeshauptstadt-m-kernbesch-ftigte-der-landeshauptstadt-m-nchen-nach-referaten-eigenbetrieben-und-.json",
+      "source_index": 287
+    },
+    {
+      "file": "0290-0218-daten-der-raddauerzaehlstellen-muenchen-2024-15-minuten-werte-juli-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 218
+    },
+    {
+      "file": "0291-0282-daten-der-raddauerzaehlstellen-muenchen-juni-2020-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchenjuni-2020.json",
+      "source_index": 282
+    },
+    {
+      "file": "0292-0435-ruhver-mim-fahrverbot-ts-wfs-gml.json",
+      "source_index": 435
+    },
+    {
+      "file": "0293-0082-indikatorenatlas-bevoelkerung-mobilitaetsziffer-83r65mct-mobilit-tsziffer.json",
+      "source_index": 82
+    },
+    {
+      "file": "0294-0134-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2018.json",
+      "source_index": 134
+    },
+    {
+      "file": "0295-0066-indikatorenatlas-bevoelkerung-frauen-83r65mct-frauenanteil.json",
+      "source_index": 66
+    },
+    {
+      "file": "0296-0170-daten-der-raddauerzaehlstellen-muenchen-2025-tageswerte-und-wetter-november-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 170
+    },
+    {
+      "file": "0297-0414-wlan-standorte-lhm-muenchen-wlan-ffentliche-pl-tze-m-nchen.json",
+      "source_index": 414
+    },
+    {
+      "file": "0298-0022-rad-rsp-radwege-line-wfs-csv.json",
+      "source_index": 22
+    },
+    {
+      "file": "0299-0576-ruhver-mim-flexzone-myradl-metadaten-xml.json",
+      "source_index": 576
+    },
+    {
+      "file": "0300-0407-liste-aller-verfuegbaren-onlinedienste-der-landeshauptstadt-muenchen-liste-aller-verf-gbaren-onlinedienste-oktober-2025.json",
+      "source_index": 407
+    },
+    {
+      "file": "0301-0426-personalstand-der-landeshauptstadt-muenchen-personalstand-der-landeshauptstadt-m-nchen-nach-besch-ftigtengruppen.json",
+      "source_index": 426
+    },
+    {
+      "file": "0302-0026-indikatorenatlas-verkehr-motorisierungsgrad-personenkraftwagen-und-kraftraeder-8-motorisierungsgrad-personenkraftwagen-und-kraftr-der.json",
+      "source_index": 26
+    },
+    {
+      "file": "0303-0525-bestand-sbh-opendata-wfs-csv.json",
+      "source_index": 525
+    },
+    {
+      "file": "0304-0609-abfall-gewerbemisch-opendata-metadaten-xml.json",
+      "source_index": 609
+    },
+    {
+      "file": "0305-0258-daten-der-raddauerzaehlstellen-muenchen-mai-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-mai-2017.json",
+      "source_index": 258
+    },
+    {
+      "file": "0306-0316-daten-der-raddauerzaehlstellen-muenchen-mai-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-mai-2019.json",
+      "source_index": 316
+    },
+    {
+      "file": "0307-0406-hallensportprogramm-hallensportprogramm-2025-2026.json",
+      "source_index": 406
+    },
+    {
+      "file": "0308-0611-maerkte-metadaten-xml.json",
+      "source_index": 611
+    },
+    {
+      "file": "0309-0107-monatszahlen-einbuergerungen-monatszahlen-einb-rgerungen.json",
+      "source_index": 107
+    },
+    {
+      "file": "0310-0309-daten-der-raddauerzaehlstellen-muenchen-januar-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-januar-2017.json",
+      "source_index": 309
+    },
+    {
+      "file": "0311-0144-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2024.json",
+      "source_index": 144
+    },
+    {
+      "file": "0312-0139-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2021.json",
+      "source_index": 139
+    },
+    {
+      "file": "0313-0399-vornamen-von-neugeborenen-vornamen-2017.json",
+      "source_index": 399
+    },
+    {
+      "file": "0314-0320-daten-der-raddauerzaehlstellen-muenchen-september-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-september-2021.json",
+      "source_index": 320
+    },
+    {
+      "file": "0315-0054-indikatorenatlas-bevoelkerung-aussenwanderungsziffer-gesamt-83r65mct-au-enwanderungsziffer-gesamt.json",
+      "source_index": 54
+    },
+    {
+      "file": "0316-0531-vablock-stadtbezirke-opendata-wfs-csv.json",
+      "source_index": 531
+    },
+    {
+      "file": "0317-0457-opendata-radschnellverb-line-wfs-csv.json",
+      "source_index": 457
+    },
+    {
+      "file": "0318-0068-indikatorenatlas-bevoelkerung-gesamtwanderungssaldo-kinder-83r65mct-gesamtwanderungssaldo-kinder.json",
+      "source_index": 68
+    },
+    {
+      "file": "0319-0053-indikatorenatlas-bevoelkerung-aussenwanderungsziffer-65-jahre-und-aelter-83r65mc-au-enwanderungsziffer-65-jahre-und-lter.json",
+      "source_index": 53
+    },
+    {
+      "file": "0320-0347-daten-der-raddauerzaehlstellen-muenchen-januar-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-januar-2019.json",
+      "source_index": 347
+    },
+    {
+      "file": "0321-0583-rad-rsp-radwege-line-wfs-gml.json",
+      "source_index": 583
+    },
+    {
+      "file": "0322-0349-daten-der-raddauerzahlstellen-munchen-dezember-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-dezember-2021.json",
+      "source_index": 349
+    },
+    {
+      "file": "0323-0640-rad-rsp-gemradfusswege-line-metadaten-xml.json",
+      "source_index": 640
+    },
+    {
+      "file": "0324-0313-daten-der-raddauerzaehlstellen-muenchen-september-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-september-2018.json",
+      "source_index": 313
+    },
+    {
+      "file": "0325-0154-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-m-rz-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 154
+    },
+    {
+      "file": "0326-0278-daten-der-raddauerzaehlstellen-muenchen-dezember-2018-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-dezember-2018.json",
+      "source_index": 278
+    },
+    {
+      "file": "0327-0577-opendata-fahrradstrassen-line-wfs-gml.json",
+      "source_index": 577
+    },
+    {
+      "file": "0328-0633-opendata-radschnellverb-line-metadaten-xml.json",
+      "source_index": 633
+    },
+    {
+      "file": "0329-0145-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2024.json",
+      "source_index": 145
+    },
+    {
+      "file": "0330-0189-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-november-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 189
+    },
+    {
+      "file": "0331-0125-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2014.json",
+      "source_index": 125
+    },
+    {
+      "file": "0332-0377-daten-der-raddauerzaehlstellen-muenchen-juli-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juli-2019.json",
+      "source_index": 377
+    },
+    {
+      "file": "0333-0178-daten-der-raddauerzaehlstellen-muenchen-2023-15-minuten-werte-mai-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 178
+    },
+    {
+      "file": "0334-0350-oktoberfest-oktoberfest-bierpreise-in-den-festzelten-2000-2024.json",
+      "source_index": 350
+    },
+    {
+      "file": "0335-0642-graustufenstadtplan-2024-geometrie-metadaten-xml.json",
+      "source_index": 642
+    },
+    {
+      "file": "0336-0259-daten-der-raddauerzaehlstellen-muenchen-maerz-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-m-rz-2021.json",
+      "source_index": 259
+    },
+    {
+      "file": "0337-0419-aktuelle-bezirksausschuss-antraege-ba-antr-ge-rss-feed.json",
+      "source_index": 419
+    },
+    {
+      "file": "0338-0275-daten-der-raddauerzaehlstellen-muenchen-dezember-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-dezember-2019.json",
+      "source_index": 275
+    },
+    {
+      "file": "0339-0458-rad-gruene-welle-wfs-csv.json",
+      "source_index": 458
+    },
+    {
+      "file": "0340-0051-indikatorenatlas-bevoelkerung-altersgruppen-83r65mct-altersgruppen.json",
+      "source_index": 51
+    },
+    {
+      "file": "0341-0288-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-september-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 288
+    },
+    {
+      "file": "0342-0318-daten-der-raddauerzaehlstellen-muenchen-juni-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juni-2021.json",
+      "source_index": 318
+    },
+    {
+      "file": "0343-0346-daten-der-raddauerzaehlstellen-muenchen-november-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-november-2020.json",
+      "source_index": 346
+    },
+    {
+      "file": "0344-0004-daten-der-raddauerzaehlstellen-muenchen-2026-15-minuten-werte-m-rz-2026-daten-der-raddauerz-hlstellen.json",
+      "source_index": 4
+    },
+    {
+      "file": "0345-0037-indikatorenatlas-gesundheit-psychologische-psychotherapeuten-psychologische-r-psychotherapeut-in-dichte.json",
+      "source_index": 37
+    },
+    {
+      "file": "0346-0358-daten-der-raddauerzaehlstellen-muenchen-dezember-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-dezember-2020.json",
+      "source_index": 358
+    },
+    {
+      "file": "0347-0600-abfall-auto-metall-opendata-metadaten-xml.json",
+      "source_index": 600
+    },
+    {
+      "file": "0348-0153-daten-der-raddauerzaehlstellen-muenchen-2025-tageswerte-und-wetter-februar-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 153
+    },
+    {
+      "file": "0349-0456-g-sensor-3l-zonen-wfs-csv.json",
+      "source_index": 456
+    },
+    {
+      "file": "0350-0343-daten-der-raddauerzaehlstellen-muenchen-januar-2020-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-januar-2020.json",
+      "source_index": 343
+    },
+    {
+      "file": "0351-0482-opendata-miv-umweltzone-vz-point-wfs-gml.json",
+      "source_index": 482
+    },
+    {
+      "file": "0352-0202-daten-der-raddauerzaehlstellen-muenchen-mai-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-mai-2019.json",
+      "source_index": 202
+    },
+    {
+      "file": "0353-0412-bundestagswahl-2025-wahlraeume-in-muenchen-wahlr-ume-bundestagswahl-2025.json",
+      "source_index": 412
+    },
+    {
+      "file": "0354-0122-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2012.json",
+      "source_index": 122
+    },
+    {
+      "file": "0355-0621-opendata-ruhver-prm-gebiete-poly-metadaten-xml.json",
+      "source_index": 621
+    },
+    {
+      "file": "0356-0523-abfall-elektronik-opendata-wfs-csv.json",
+      "source_index": 523
+    },
+    {
+      "file": "0357-0647-vagrund-hoeh-symbol-opendata-metadaten-xml.json",
+      "source_index": 647
+    },
+    {
+      "file": "0358-0133-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2018.json",
+      "source_index": 133
+    },
+    {
+      "file": "0359-0553-abfall-kompost-opendata-wfs-gml.json",
+      "source_index": 553
+    },
+    {
+      "file": "0360-0267-daten-der-raddauerzaehlstellen-muenchen-april-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-april-2017.json",
+      "source_index": 267
+    },
+    {
+      "file": "0361-0289-daten-der-raddauerzaehlstellen-muenchen-2024-tageswerte-und-wetter-oktober-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 289
+    },
+    {
+      "file": "0362-0298-ordentliche-ertraege-und-aufwendungen-produkte-der-lhm-ordentliche-ertr-ge-und-aufwendungen-lhm-produkte.json",
+      "source_index": 298
+    },
+    {
+      "file": "0363-0336-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-september-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 336
+    },
+    {
+      "file": "0364-0614-lsa-opendata-metadaten-xml.json",
+      "source_index": 614
+    },
+    {
+      "file": "0365-0665-ruhver-radservicestation-point-wfs-csv.json",
+      "source_index": 665
+    },
+    {
+      "file": "0366-0317-daten-der-raddauerzaehlstellen-muenchen-juni-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juni-2018.json",
+      "source_index": 317
+    },
+    {
+      "file": "0367-0020-rad-rsp-gemradfusswege-line-wfs-csv.json",
+      "source_index": 20
+    },
+    {
+      "file": "0368-0393-vornamen-von-neugeborenen-vornamen-2023.json",
+      "source_index": 393
+    },
+    {
+      "file": "0369-0566-ruhver-mim-fahrverbot-ts-metadaten-xml.json",
+      "source_index": 566
+    },
+    {
+      "file": "0370-0126-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2014.json",
+      "source_index": 126
+    },
+    {
+      "file": "0371-0291-wohnungen-muenchner-wohnen-zahl-der-wohnungen-der-m-nchner-wohnen.json",
+      "source_index": 291
+    },
+    {
+      "file": "0372-0061-indikatorenatlas-bevoelkerung-durchschnittsalter-gestorbene-83r65mct-durchschnittsalter-gestorbene.json",
+      "source_index": 61
+    },
+    {
+      "file": "0373-0453-awm-container-barrierefrei-wfs-csv.json",
+      "source_index": 453
+    },
+    {
+      "file": "0374-0120-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2011.json",
+      "source_index": 120
+    },
+    {
+      "file": "0375-0345-daten-der-raddauerzaehlstellen-muenchen-september-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-september-2017.json",
+      "source_index": 345
+    },
+    {
+      "file": "0376-0495-kehrbezirke-opendata-wfs-csv.json",
+      "source_index": 495
+    },
+    {
+      "file": "0377-0304-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-juni-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 304
+    },
+    {
+      "file": "0378-0035-indikatorenatlas-grundschueler-innen-familiensprache-nichtdeutsch-83r65mct-familiensprache-nichtdeutsch.json",
+      "source_index": 35
+    },
+    {
+      "file": "0379-0669-qz-borkenkaefer-wfs-gml.json",
+      "source_index": 669
+    },
+    {
+      "file": "0380-0041-indikatorenatlas-baugenehmigungen-baugenehmigungen.json",
+      "source_index": 41
+    },
+    {
+      "file": "0381-0260-daten-der-raddauerzaehlstellen-muenchen-februar-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-februar-2017.json",
+      "source_index": 260
+    },
+    {
+      "file": "0382-0606-abfall-kompost-opendata-metadaten-xml.json",
+      "source_index": 606
+    },
+    {
+      "file": "0383-0529-opendata-raddauerzaehlstellen-wfs-gml.json",
+      "source_index": 529
+    },
+    {
+      "file": "0384-0575-ruhver-mim-flexzone-myradl-wfs-gml.json",
+      "source_index": 575
+    },
+    {
+      "file": "0385-0562-baut-strassenabschnitte-wu-metadaten-xml.json",
+      "source_index": 562
+    },
+    {
+      "file": "0386-0244-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-november-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 244
+    },
+    {
+      "file": "0387-0299-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-januar-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 299
+    },
+    {
+      "file": "0388-0431-oktoberfest-oktoberfest-besucherinnen-und-besucher-1985-2024.json",
+      "source_index": 431
+    },
+    {
+      "file": "0389-0395-vornamen-von-neugeborenen-vornamen-2021.json",
+      "source_index": 395
+    },
+    {
+      "file": "0390-0160-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-juni-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 160
+    },
+    {
+      "file": "0391-0515-pro-kopf-verschuldung-lhm-hoheitshaushalt-pro-kopf-verschuldung.json",
+      "source_index": 515
+    },
+    {
+      "file": "0392-0454-bestand-nachbarschaftstreffs-opendata-wfs-csv.json",
+      "source_index": 454
+    },
+    {
+      "file": "0393-0277-daten-der-raddauerzaehlstellen-muenchen-august-2018-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-august-2018.json",
+      "source_index": 277
+    },
+    {
+      "file": "0394-0376-daten-der-raddauerzaehlstellen-muenchen-januar-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-januar-2021.json",
+      "source_index": 376
+    },
+    {
+      "file": "0395-0625-ruhver-els-standort-point-metadaten-xml.json",
+      "source_index": 625
+    },
+    {
+      "file": "0396-0029-indikatorenatlas-kinderbetreuung-einrichtungstraeger-83r65mct-tr-ger-der-einrichtung.json",
+      "source_index": 29
+    },
+    {
+      "file": "0397-0111-ruhver-parken-kfz-poly-station-wfs-csv.json",
+      "source_index": 111
+    },
+    {
+      "file": "0398-0151-daten-der-raddauerzaehlstellen-muenchen-2025-tageswerte-und-wetter-januar-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 151
+    },
+    {
+      "file": "0399-0554-vollst-pflegeeinrichtung-opendata-wfs-gml.json",
+      "source_index": 554
+    },
+    {
+      "file": "0400-0079-indikatorenatlas-bevoelkerung-jugendquotient-83r65mct-jugendquotient.json",
+      "source_index": 79
+    },
+    {
+      "file": "0401-0249-daten-der-raddauerzaehlstellen-muenchen-januar-2020-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-januar-2020.json",
+      "source_index": 249
+    },
+    {
+      "file": "0402-0643-gefahrenstellen-isar-opendata-metadaten-xml.json",
+      "source_index": 643
+    },
+    {
+      "file": "0403-0338-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-november-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 338
+    },
+    {
+      "file": "0404-0620-opendata-ruhver-parkseiten-laden-liefern-leisten-metadaten-xml.json",
+      "source_index": 620
+    },
+    {
+      "file": "0405-0597-adressen-opendata-adressen.json",
+      "source_index": 597
+    },
+    {
+      "file": "0406-0374-daten-der-raddauerzaehlstellen-muenchen-dezember-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-dezember-2018.json",
+      "source_index": 374
+    },
+    {
+      "file": "0407-0356-daten-der-raddauerzaehlstellen-muenchen-februar-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-februar-2017.json",
+      "source_index": 356
+    },
+    {
+      "file": "0408-0449-vollst-pflegeeinrichtung-opendata-wfs-csv.json",
+      "source_index": 449
+    },
+    {
+      "file": "0409-0587-rad-rsp-fussg-zone-2024-wfs-gml.json",
+      "source_index": 587
+    },
+    {
+      "file": "0410-0232-daten-der-raddauerzaehlstellen-muenchen-juli-2020-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-juli-2020.json",
+      "source_index": 232
+    },
+    {
+      "file": "0411-0411-daten-der-raddauerzaehlstellen-muenchen-2024-15-minuten-werte-oktober-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 411
+    },
+    {
+      "file": "0412-0474-p-r-anlagen-muenchen-bersicht-p-r-anlagen.json",
+      "source_index": 474
+    },
+    {
+      "file": "0413-0135-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2019.json",
+      "source_index": 135
+    },
+    {
+      "file": "0414-0199-daten-der-raddauerzaehlstellen-muenchen-september-2018-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-september-2018.json",
+      "source_index": 199
+    },
+    {
+      "file": "0415-0001-daten-der-raddauerzaehlstellen-muenchen-2026-tageswerte-und-wetter-januar-2026-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 1
+    },
+    {
+      "file": "0416-0194-daten-der-raddauerzaehlstellen-muenchen-april-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-april-2021.json",
+      "source_index": 194
+    },
+    {
+      "file": "0417-0084-indikatorenatlas-bevoelkerung-natuerlicher-saldo-83r65mct-nat-rlicher-saldo.json",
+      "source_index": 84
+    },
+    {
+      "file": "0418-0527-paketboxen-wfs-gml.json",
+      "source_index": 527
+    },
+    {
+      "file": "0419-0518-oktoberfest-oktoberfest-bierpreise-1985-2024.json",
+      "source_index": 518
+    },
+    {
+      "file": "0420-0484-ruhver-els-standort-point-wfs-gml.json",
+      "source_index": 484
+    },
+    {
+      "file": "0421-0530-gefahrenstellen-isar-opendata-wfs-gml.json",
+      "source_index": 530
+    },
+    {
+      "file": "0422-0485-g-sensor-3l-zonen-wfs-gml.json",
+      "source_index": 485
+    },
+    {
+      "file": "0423-0471-stadtgueter-stadt-muenchen-liste-stadtg-ter-stadt-m-nchen.json",
+      "source_index": 471
+    },
+    {
+      "file": "0424-0085-indikatorenatlas-bevoelkerung-nichtdeutsche-83r65mct-nichtdeutsche.json",
+      "source_index": 85
+    },
+    {
+      "file": "0425-0488-behindertenparkplaetze-wfs-gml.json",
+      "source_index": 488
+    },
+    {
+      "file": "0426-0385-opendata-ruhver-lastenradparken-line-wfs-csv.json",
+      "source_index": 385
+    },
+    {
+      "file": "0427-0047-indikatorenatlas-2014-arbeitsmarkt-arbeitslose-83r65mct-arbeitslose.json",
+      "source_index": 47
+    },
+    {
+      "file": "0428-0007-daten-der-raddauerzaehlstellen-muenchen-2026-tageswerte-und-wetter-april-2026-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 7
+    },
+    {
+      "file": "0429-0428-daten-tierpark-hellabrunn-daten-tierpark-hellabrunn.json",
+      "source_index": 428
+    },
+    {
+      "file": "0430-0483-opendata-miv-umweltzone-vz-point-wfs-csv.json",
+      "source_index": 483
+    },
+    {
+      "file": "0431-0333-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-juni-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 333
+    },
+    {
+      "file": "0432-0681-opendata-rad-altstadt-radlring-linie-wfs-gml.json",
+      "source_index": 681
+    },
+    {
+      "file": "0433-0455-baut-blindenleitsystem-altstadt-wfs-csv.json",
+      "source_index": 455
+    },
+    {
+      "file": "0434-0680-rad-rsp-radservicestation-wfs-gml.json",
+      "source_index": 680
+    },
+    {
+      "file": "0435-0472-b-r-anlagen-b-r-anlagen-bersicht.json",
+      "source_index": 472
+    },
+    {
+      "file": "0436-0226-daten-der-raddauerzaehlstellen-muenchen-september-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-september-2021.json",
+      "source_index": 226
+    },
+    {
+      "file": "0437-0038-indikatorenatlas-gesundheit-aerztedichte-83r65mct-arzt-rztin-dichte.json",
+      "source_index": 38
+    },
+    {
+      "file": "0438-0447-opendata-ruhver-parken-kfz-poly-wfs-gml.json",
+      "source_index": 447
+    },
+    {
+      "file": "0439-0236-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-m-rz-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 236
+    },
+    {
+      "file": "0440-0487-opendata-ruhver-lastenradparken-line-wfs-gml.json",
+      "source_index": 487
+    },
+    {
+      "file": "0441-0573-ruhver-mim-abstellfl-bs-metadaten-xml.json",
+      "source_index": 573
+    },
+    {
+      "file": "0442-0552-awm-container-opendata-metadaten-xml.json",
+      "source_index": 552
+    },
+    {
+      "file": "0443-0628-opendata-ruhver-lastenradparken-line-metadaten-xml.json",
+      "source_index": 628
+    },
+    {
+      "file": "0444-0229-daten-der-raddauerzaehlstellen-muenchen-august-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-august-2019.json",
+      "source_index": 229
+    },
+    {
+      "file": "0445-0596-vablock-viertel-opendata-metadaten-xml.json",
+      "source_index": 596
+    },
+    {
+      "file": "0446-0638-graustufenstadtplan-2024-schriftplatte-metadaten-xml.json",
+      "source_index": 638
+    },
+    {
+      "file": "0447-0098-monatszahlen-theater-monatszahlen-theater.json",
+      "source_index": 98
+    },
+    {
+      "file": "0448-0636-rad-rsp-radservicestation-metadaten-xml.json",
+      "source_index": 636
+    },
+    {
+      "file": "0449-0055-indikatorenatlas-bevoelkerung-aussenwanderungsziffer-kinder-bis-13-jahre-83r65mc-au-enwanderungsziffer-kinder-unter-14-jahre.json",
+      "source_index": 55
+    },
+    {
+      "file": "0450-0441-ruhver-mim-abstellverbot-ts-wfs-gml.json",
+      "source_index": 441
+    },
+    {
+      "file": "0451-0409-liste-aller-verfuegbaren-onlinedienste-der-landeshauptstadt-muenchen-liste-aller-verf-gbaren-onlinedienste-juni-2024.json",
+      "source_index": 409
+    },
+    {
+      "file": "0452-0508-tierbestandsliste-tierpark-hellabrunn-ver-nderungen-im-tierbestand-2023.json",
+      "source_index": 508
+    },
+    {
+      "file": "0453-0372-daten-der-raddauerzaehlstellen-muenchen-oktober-2020-tageswerte-und-wetter-oktober-2020-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 372
+    },
+    {
+      "file": "0454-0206-daten-der-raddauerzaehlstellen-muenchen-2024-15-minuten-werte-januar-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 206
+    },
+    {
+      "file": "0455-0031-indikatorenatlas-kinderbetreuung-familiensprache-nicht-deutsch-83r65mct-altersgruppen-familiensprache-nichtdeutsch.json",
+      "source_index": 31
+    },
+    {
+      "file": "0456-0050-indikatorenatlas-2014-arbeitsmarkt-regel-leistungsberechtigte-erwerbsfaehig-ante-regel-leistungsberechtigte-erwerbsf-hig-anteil.json",
+      "source_index": 50
+    },
+    {
+      "file": "0457-0330-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-m-rz-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 330
+    },
+    {
+      "file": "0458-0334-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-juli-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 334
+    },
+    {
+      "file": "0459-0648-rad-rsp-radwege-forstfeld-line-metadaten-xml.json",
+      "source_index": 648
+    },
+    {
+      "file": "0460-0664-opendata-ruhver-prm-gebiete-poly-wfs-csv.json",
+      "source_index": 664
+    },
+    {
+      "file": "0461-0641-rad-rsp-tempo30zone-poly-metadaten-xml.json",
+      "source_index": 641
+    },
+    {
+      "file": "0462-0442-ruhver-mim-abstellfl-ms-wfs-gml.json",
+      "source_index": 442
+    },
+    {
+      "file": "0463-0239-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-juni-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 239
+    },
+    {
+      "file": "0464-0210-daten-der-raddauerzaehlstellen-muenchen-2024-15-minuten-werte-m-rz-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 210
+    },
+    {
+      "file": "0465-0544-bundestagswahlen-2017-ergebnisse-munchen-bundestagswahl-2017-erststimmen-nach-stadtbezirken.json",
+      "source_index": 544
+    },
+    {
+      "file": "0466-0181-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-juli-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 181
+    },
+    {
+      "file": "0467-0649-kehrbezirke-opendata-metadaten-xml.json",
+      "source_index": 649
+    },
+    {
+      "file": "0468-0337-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-oktober-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 337
+    },
+    {
+      "file": "0469-0049-indikatorenatlas-arbeitsmarkt-regel-leistungsberechtigte-nicht-erwerbsfaehig-ant-regel-leistungsberechtigte-nicht-erwerbsf-hig-anteil.json",
+      "source_index": 49
+    },
+    {
+      "file": "0470-0572-ruhver-mim-abstellverbot-bs-metadaten-xml.json",
+      "source_index": 572
+    },
+    {
+      "file": "0471-0097-monatszahlen-tourismus-monatszahlen-tourismus.json",
+      "source_index": 97
+    },
+    {
+      "file": "0472-0208-daten-der-raddauerzaehlstellen-muenchen-2024-15-minuten-werte-februar-2024-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 208
+    },
+    {
+      "file": "0473-0413-wlan-standorte-lhm-muenchen-wlan-standorte-lhm-geb-ude.json",
+      "source_index": 413
+    },
+    {
+      "file": "0474-0476-lsa-opendata-wfs-gml.json",
+      "source_index": 476
+    },
+    {
+      "file": "0475-0401-vornamen-von-neugeborenen-vornamen-2015.json",
+      "source_index": 401
+    },
+    {
+      "file": "0476-0124-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2013.json",
+      "source_index": 124
+    },
+    {
+      "file": "0477-0242-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-september-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 242
+    },
+    {
+      "file": "0478-0295-baustellen-4-weeks-opendata-wfs-gml.json",
+      "source_index": 295
+    },
+    {
+      "file": "0479-0292-filmfest-muenchen-besucher-innen-und-anzahl-filme-beim-filmfest-und-filmschoolfest-m-nchen.json",
+      "source_index": 292
+    },
+    {
+      "file": "0480-0451-maerkte-wfs-csv.json",
+      "source_index": 451
+    },
+    {
+      "file": "0481-0478-baut-strassenabschnitte-wu-wfs-csv.json",
+      "source_index": 478
+    },
+    {
+      "file": "0482-0578-opendata-fahrradstrassen-line-metadaten-xml.json",
+      "source_index": 578
+    },
+    {
+      "file": "0483-0595-vablock-viertel-opendata-wfs-gml.json",
+      "source_index": 595
+    },
+    {
+      "file": "0484-0605-abfall-elektronik-opendata-metadaten-xml.json",
+      "source_index": 605
+    },
+    {
+      "file": "0485-0109-monatszahlen-bauen-monatszahlen-bauen.json",
+      "source_index": 109
+    },
+    {
+      "file": "0486-0248-daten-der-raddauerzaehlstellen-muenchen-juli-2018-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-juli-2018.json",
+      "source_index": 248
+    },
+    {
+      "file": "0487-0342-daten-der-raddauerzaehlstellen-muenchen-juli-2018-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juli-2018.json",
+      "source_index": 342
+    },
+    {
+      "file": "0488-0585-rad-rsp-radwege-forstfeld-line-wfs-gml.json",
+      "source_index": 585
+    },
+    {
+      "file": "0489-0121-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2012.json",
+      "source_index": 121
+    },
+    {
+      "file": "0490-0263-daten-der-raddauerzaehlstellen-muenchen-dezember-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-dezember-2017.json",
+      "source_index": 263
+    },
+    {
+      "file": "0491-0537-ratschbankerl-in-muenchen-liste-der-ratschbankerl.json",
+      "source_index": 537
+    },
+    {
+      "file": "0492-0522-abfall-betrieb-opendata-wfs-csv.json",
+      "source_index": 522
+    },
+    {
+      "file": "0493-0440-opendata-ruhver-mim-geofence-poly-wfs-gml.json",
+      "source_index": 440
+    },
+    {
+      "file": "0494-0016-ruhver-mim-abstellfl-ms-wfs-csv.json",
+      "source_index": 16
+    },
+    {
+      "file": "0495-0463-projekte-des-muenchner-beschaeftigungs-und-qualifizierungsprogramms-mbq-liste-der-mbq-projekte.json",
+      "source_index": 463
+    },
+    {
+      "file": "0496-0034-indikatorenatlas-grundschueler-innen-grundschueler-innen-grundsch-ler-innen.json",
+      "source_index": 34
+    },
+    {
+      "file": "0497-0504-bibliothekskennzahlen-der-muenchner-stadtbibliothek-besucherzahlen-bibliothekskennzahlen-der-m-nchner-stadtbibliothek-besucherzahlen.json",
+      "source_index": 504
+    },
+    {
+      "file": "0498-0670-sitzplaetze-spielstaetten-muenchner-kammerspiele-schauburg-anzahl-sitzpl-tze-kammerspiele-und-schauburg.json",
+      "source_index": 670
+    },
+    {
+      "file": "0499-0598-touristische-points-of-interests-poi-muenchen-touristische-pois-m-nchen.json",
+      "source_index": 598
+    },
+    {
+      "file": "0500-0362-daten-der-raddauerzaehlstellen-muenchen-oktober-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-oktober-2021.json",
+      "source_index": 362
+    },
+    {
+      "file": "0501-0036-indikatorenatlas-gesundheit-zahnaerztedichte-83r65mct-zahn-rzt-zahn-rztin-dichte.json",
+      "source_index": 36
+    },
+    {
+      "file": "0502-0582-rad-rsp-gemradfusswege-line-wfs-gml.json",
+      "source_index": 582
+    },
+    {
+      "file": "0503-0571-ruhver-mim-abstellfl-ms-metadaten-xml.json",
+      "source_index": 571
+    },
+    {
+      "file": "0504-0506-bundestagswahlen-2013-bundestagswahl-2013-zweitstimmen-nach-wahlbezirken.json",
+      "source_index": 506
+    },
+    {
+      "file": "0505-0560-opendata-trinkwasserbrunnen-metadaten-xml.json",
+      "source_index": 560
+    },
+    {
+      "file": "0506-0283-ruhver-mim-fahrverbot-ts-wfs-csv.json",
+      "source_index": 283
+    },
+    {
+      "file": "0507-0301-daten-der-raddauerzaehlstellen-muenchen-2023-tageswerte-und-wetter-m-rz-2023-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 301
+    },
+    {
+      "file": "0508-0010-erlaeuterung-strassennamen-wfs-csv.json",
+      "source_index": 10
+    },
+    {
+      "file": "0509-0173-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-dezember-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 173
+    },
+    {
+      "file": "0510-0599-katalogdaten-abfrage-aller-titelsaetze-abfrage-aller-titels-tze-im-ausgabeformat-marc21.json",
+      "source_index": 599
+    },
+    {
+      "file": "0511-0115-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2009.json",
+      "source_index": 115
+    },
+    {
+      "file": "0512-0253-daten-der-raddauerzaehlstellen-muenchen-januar-2019-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-januar-2019.json",
+      "source_index": 253
+    },
+    {
+      "file": "0513-0123-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2013.json",
+      "source_index": 123
+    },
+    {
+      "file": "0514-0462-qz-borkenkaefer-wfs-csv.json",
+      "source_index": 462
+    },
+    {
+      "file": "0515-0448-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2021.json",
+      "source_index": 448
+    },
+    {
+      "file": "0516-0563-wc-finder-wfs-gml.json",
+      "source_index": 563
+    },
+    {
+      "file": "0517-0579-opendata-rad-altstadt-radlring-linie-metadaten-xml.json",
+      "source_index": 579
+    },
+    {
+      "file": "0518-0319-daten-der-raddauerzaehlstellen-muenchen-juli-2021-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-juli-2021.json",
+      "source_index": 319
+    },
+    {
+      "file": "0519-0205-daten-der-raddauerzaehlstellen-muenchen-juli-2021-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-juli-2021.json",
+      "source_index": 205
+    },
+    {
+      "file": "0520-0594-vablock-stadtbezirke-opendata-wfs-gml.json",
+      "source_index": 594
+    },
+    {
+      "file": "0521-0433-geburten-in-der-muenchen-klinik-ggmbh-geburten-in-der-m-nchen-klinik-ggmbh.json",
+      "source_index": 433
+    },
+    {
+      "file": "0522-0586-kehrbezirke-opendata-wfs-gml.json",
+      "source_index": 586
+    },
+    {
+      "file": "0523-0169-daten-der-raddauerzaehlstellen-muenchen-2025-15-minuten-werte-oktober-2025-daten-der-raddauerz-hlstellen.json",
+      "source_index": 169
+    },
+    {
+      "file": "0524-0486-opendata-ruhver-fahrradparken-line-wfs-gml.json",
+      "source_index": 486
+    },
+    {
+      "file": "0525-0131-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-15-minuten-werte-2017.json",
+      "source_index": 131
+    },
+    {
+      "file": "0526-0128-daten-der-raddauerzaehlstellen-muenchen-jahreszahlen-tageswerte-wetter-2015.json",
+      "source_index": 128
+    },
+    {
+      "file": "0527-0070-indikatorenatlas-bevoelkerung-altenquotient-83r65mct-altenquotient.json",
+      "source_index": 70
+    },
+    {
+      "file": "0528-0497-vablock-bezirksteil-opendata-wfs-csv.json",
+      "source_index": 497
+    },
+    {
+      "file": "0529-0087-indikatorenatlas-bevoelkerung-religionszugehoerigkeit-religionszugeh-rigkeit.json",
+      "source_index": 87
+    },
+    {
+      "file": "0530-0634-opendata-radentscheid-line-metadaten-xml.json",
+      "source_index": 634
+    },
+    {
+      "file": "0531-0246-daten-der-raddauerzaehlstellen-muenchen-juni-2017-15-minuten-werte-daten-der-raddauerz-hlstellen-m-nchen-juni-2017.json",
+      "source_index": 246
+    },
+    {
+      "file": "0532-0059-indikatorenatlas-bevoelkerung-binnenwanderungsziffer-83r65mct-binnenwanderungsziffer.json",
+      "source_index": 59
+    },
+    {
+      "file": "0533-0245-daten-der-raddauerzaehlstellen-muenchen-2022-15-minuten-werte-dezember-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 245
+    },
+    {
+      "file": "0534-0314-daten-der-raddauerzaehlstellen-muenchen-maerz-2017-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-m-rz-2017.json",
+      "source_index": 314
+    },
+    {
+      "file": "0535-0371-daten-der-raddauerzaehlstellen-muenchen-dezember-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-dezember-2019.json",
+      "source_index": 371
+    },
+    {
+      "file": "0536-0556-bestand-asz-opendata-wfs-gml.json",
+      "source_index": 556
+    },
+    {
+      "file": "0537-0019-rad-rsp-rad-freig-einbahn-wfs-csv.json",
+      "source_index": 19
+    },
+    {
+      "file": "0538-0500-vablock-viertel-opendata-wfs-csv.json",
+      "source_index": 500
+    },
+    {
+      "file": "0539-0331-daten-der-raddauerzaehlstellen-muenchen-2022-tageswerte-und-wetter-april-2022-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 331
+    },
+    {
+      "file": "0540-0000-daten-der-raddauerzaehlstellen-muenchen-2026-15-minuten-werte-januar-2026-daten-der-raddauerz-hlstellen.json",
+      "source_index": 0
+    },
+    {
+      "file": "0541-0165-daten-der-raddauerzaehlstellen-muenchen-2025-tageswerte-und-wetter-august-2025-daten-der-raddauerz-hlstellen-m-nchen.json",
+      "source_index": 165
+    },
+    {
+      "file": "0542-0382-opendata-ruhver-parkseiten-laden-liefern-leisten-wfs-csv.json",
+      "source_index": 382
+    },
+    {
+      "file": "0543-0673-munich-it-dashboard-software-bei-der-lhm.json",
+      "source_index": 673
+    },
+    {
+      "file": "0544-0662-bestand-sbh-opendata-wfs-gml.json",
+      "source_index": 662
+    },
+    {
+      "file": "0545-0547-abfall-auto-metall-opendata-wfs-gml.json",
+      "source_index": 547
+    },
+    {
+      "file": "0546-0305-daten-der-raddauerzaehlstellen-muenchen-februar-2019-tageswerte-und-wetter-daten-der-raddauerz-hlstellen-m-nchen-februar-2019.json",
+      "source_index": 305
+    },
+    {
+      "file": "0547-0108-monatszahlen-bevoelkerung-monatszahlen-bev-lkerung.json",
+      "source_index": 108
+    }
+  ]
+}

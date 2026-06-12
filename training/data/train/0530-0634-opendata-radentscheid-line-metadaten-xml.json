@@ -1,0 +1,181 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Radentscheidmaßnahmen.",
+  "query_result": {
+    "dataset_title": "Radentscheidmaßnahmen",
+    "package_id": "a3b9ad1b-7de8-4aa1-a466-79abefba29b2",
+    "package_name": "opendata_radentscheid_line",
+    "resource_id": "003cb89f-7901-48b7-af88-f3386b7c8eea",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Beschlossene Umbaumaßnahmen in der Landeshauptstadt München zur Stärkung der Fahrradinfrastruktur. Der Radentscheid München (REM) ist ein Bürgerbegehren, das einen wichtigen Schritt zur Verkehrswende darstellt und damit eine Neuverteilung des öffentlichen Raums vorsieht - zugunsten von Zu-Fuß-Gehenden, Radfahrenden und Nutzer*innen der öffentlichen Verkehrsmittel – für mehr Verkehrssicherheit und Umweltschutz. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/ra",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Radentscheid",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 22,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:39:11"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:39:11"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Radentscheidmaßnahmen"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "infoMapAccessService"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.modified",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2024-03-21"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Beschlossene Umbaumaßnahmen in der Landeshauptstadt München zur Stärkung der Fahrradinfrastruktur. Der Radentscheid München (REM) ist ein Bürgerbegehren, das ei"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Beschlossene Umbaumaßnahmen in der Landeshauptstadt München zur Stärkung der Fahrradinfrastruktur. Der Radentscheid München (REM) ist ein Bürgerbegehren, das ei"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "otherRestrictions"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/portal/opendata"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Radentscheidmaßnahmen"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 8,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

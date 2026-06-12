@@ -1,0 +1,106 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of Bezirksteilnummer in Bevölkerung Stadtbezirksteile München.",
+  "query_result": {
+    "dataset_title": "Bevölkerung Stadtbezirksteile München",
+    "package_id": "15aa8720-cd0c-45db-ba37-d90924a9dc5c",
+    "package_name": "bevoelkerung-stadtbezirksteile-muenchen",
+    "resource_id": "ffcdc8ec-1fc4-4186-9fbf-9114448e80a7",
+    "resource_name": "Hauptwohnsitzbevölkerung Stadtbezirksteile",
+    "resource_format": "csv",
+    "description": "Der Datensatz \"Bevölkerung Stadtbezirksteile\" beinhaltet die Bevölkerungszahlen der Hauptwohnsitzbevölkerung in den 108 Münchner Stadtbezirksteilen (je nach Größe und Bevölkerung zwischen 2 und 9 Stadtbezirksteile pro Stadtbezirk).",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung"
+    ],
+    "groups": [],
+    "row_count": 108,
+    "sampled_rows": 108,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "Bezirksteilnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 108,
+        "null_count": 0,
+        "examples": [
+          "01.1",
+          "01.2",
+          "01.3",
+          "01.4",
+          "01.5"
+        ],
+        "numeric": {
+          "count": 108.0,
+          "min": 1.1,
+          "max": 25.2,
+          "mean": 11.9731,
+          "median": 12.45
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Hauptwohnsitzbevolkerung im Dezember 2017",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 108,
+        "null_count": 0,
+        "examples": [
+          "2597",
+          "3524",
+          "2047",
+          "718",
+          "7104"
+        ],
+        "numeric": {
+          "count": 108.0,
+          "min": 189.0,
+          "max": 49412.0,
+          "mean": 14130.1481,
+          "median": 12224.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Stadtbezirk",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 108,
+        "null_count": 0,
+        "examples": [
+          "Altstadt-Lehel",
+          "Ludwigsvorstadt-Isarvorstadt",
+          "Maxvorstadt",
+          "Schwabing-West",
+          "Au-Haidhausen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Bezirksteilnummer",
+      "Hauptwohnsitzbevolkerung im Dezember 2017"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "Bezirksteilnummer"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

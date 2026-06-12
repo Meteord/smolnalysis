@@ -1,0 +1,193 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Kernbeschäftigte nach Referaten, Eigenbetriebe und Stiftungen - Landeshauptstadt München and compare vollzeit_weiblich by referat_typ.",
+  "query_result": {
+    "dataset_title": "Kernbeschäftigte nach Referaten, Eigenbetriebe und Stiftungen - Landeshauptstadt München",
+    "package_id": "8c85bb83-7112-4711-9e25-f0dc25f21568",
+    "package_name": "kernbeschaeftigte-nach-referaten-eigenbetriebe-und-stiftungen-landeshauptstadt-muenchen",
+    "resource_id": "1eb5022e-4cf1-4d08-bf08-cbdbf0dabb14",
+    "resource_name": "Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftungen",
+    "resource_format": "csv",
+    "description": "Kernbeschäftigte der Landeshauptstadt München nach Referaten, Eigenbetrieben und Stiftungen zum 31.12. des jeweiligen Jahres.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Personal",
+      "Personalreferat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 69,
+    "sampled_rows": 69,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "vollzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          474,
+          204,
+          300,
+          39,
+          273
+        ],
+        "numeric": {
+          "count": 69.0,
+          "min": 8.0,
+          "max": 4743.0,
+          "mean": 464.9275,
+          "median": 171.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "vollzeit_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          2056,
+          236,
+          394,
+          75,
+          411
+        ],
+        "numeric": {
+          "count": 69.0,
+          "min": 5.0,
+          "max": 2760.0,
+          "mean": 604.3623,
+          "median": 236.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          475,
+          181,
+          344,
+          28,
+          188
+        ],
+        "numeric": {
+          "count": 69.0,
+          "min": 0.0,
+          "max": 6907.0,
+          "mean": 522.8406,
+          "median": 135.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_maennlich",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 68,
+        "null_count": 1,
+        "examples": [
+          288.0,
+          43.0,
+          45.0,
+          16.0,
+          63.0
+        ],
+        "numeric": {
+          "count": 68.0,
+          "min": 0.0,
+          "max": 1064.0,
+          "mean": 119.4412,
+          "median": 52.0
+        },
+        "null_rate": 0.0145
+      },
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 69.0,
+          "min": 2022.0,
+          "max": 2024.0,
+          "mean": 2023.0,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "referat_typ",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          "Gemeindehaushalt",
+          "Eigenbetriebe",
+          "rechtlich selbständige Stiftungen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "referate",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 69,
+        "null_count": 0,
+        "examples": [
+          "Baureferat",
+          "Direktorium",
+          "Gesundheitsreferat",
+          "IT-Referat",
+          "Kommunalreferat"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vollzeit_weiblich",
+      "vollzeit_maennlich",
+      "teilzeit_weiblich",
+      "teilzeit_maennlich"
+    ],
+    "category_columns": [
+      "referat_typ"
+    ],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "referat_typ",
+      "y": "vollzeit_weiblich"
+    }
+  },
+  "quality_score": 7.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

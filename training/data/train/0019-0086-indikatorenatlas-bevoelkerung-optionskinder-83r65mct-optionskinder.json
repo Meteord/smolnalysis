@@ -1,0 +1,212 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Optionskinder and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Optionskinder",
+    "package_id": "86a29c4a-d15f-4e9d-8b64-99768886ba80",
+    "package_name": "indikatorenatlas-bevoelkerung-optionskinder-83r65mct",
+    "resource_id": "b5d2a7e5-4841-462a-b244-ef5d3976d73e",
+    "resource_name": "Optionskinder",
+    "resource_format": "csv",
+    "description": "Anteil der bis 17-jährigen Optionskinder der entsprechenden Kategorie an der bis 17-jährigen deutschen Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent. Optionskinder sind Kinder, die aufgrund des Geburtsrechts Deutsche geworden sind und zusätzlich die nichtdeutsche Staatsangehörigkeit ihrer Eltern besitzen. Spätestens bis zum 21. Geburtstag müssen sich diese Personen zwischen der deutschen Staatsangehörigkeit und der nichtdeutschen Staatsangehörigkeit ihrer Eltern entscheiden, w",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 1482,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          15.2,
+          5.1,
+          6.8,
+          9.4,
+          8.2
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 3.1,
+          "max": 28.9,
+          "mean": 11.9647,
+          "median": 11.3
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "29669",
+          "107",
+          "330",
+          "415",
+          "604"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 28.0,
+          "max": 29669.0,
+          "mean": 1288.37,
+          "median": 538.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "195719",
+          "2091",
+          "4842",
+          "4402",
+          "7379"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 793.0,
+          "max": 196516.0,
+          "mean": 10409.412,
+          "median": 4914.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2006.0,
+          "max": 2025.0,
+          "mean": 2015.64,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "insgesamt",
+          "männlich",
+          "weiblich"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Optionskinder (bis 17 Jahre) (insgesamt)",
+          "Optionskinder (bis 17 Jahre) (männlich)",
+          "Optionskinder (bis 17 Jahre) (weiblich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (deutsch) (bis 17 Jahre) (insgesamt)",
+          "Hauptwohnsitzbevölkerung (deutsch) (bis 17 Jahre) (männlich)",
+          "Hauptwohnsitzbevölkerung (deutsch) (bis 17 Jahre) (weiblich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Optionskinder"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

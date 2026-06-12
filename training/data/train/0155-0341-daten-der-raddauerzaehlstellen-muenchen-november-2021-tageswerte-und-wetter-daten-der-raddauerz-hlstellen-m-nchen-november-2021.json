@@ -1,0 +1,290 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of richtung_1 in Daten der Raddauerzählstellen München November 2021.",
+  "query_result": {
+    "dataset_title": "Daten der Raddauerzählstellen München November 2021",
+    "package_id": "8015869b-f288-445d-a12f-1fb1e9fd3005",
+    "package_name": "daten-der-raddauerzaehlstellen-muenchen-november-2021",
+    "resource_id": "e2e18f22-25a2-4b0c-a026-0d747ae8a611",
+    "resource_name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München November 2021",
+    "resource_format": "csv",
+    "description": "Folgende [Fahrrad-Zählstellen](/dataset/raddauerzaehlstellen-muenchen) sind derzeit im Betrieb: * Arnulfstr. 9 - 11 Südseite (die Zählungen der Zählstelle Arnulfstraße sind seit Anfang 2021 stark von der dortigen Baustelle beeinflusst) * Bad-Kreuther-Str. (Joseph-Hörwick-Weg) * Erhardtstr. (Deutsches Museum) * Hirsch HLP (Birketweg) * Margaretenstr. (Harras) * Olympia Park (Rudolf-Harbig-Weg) Die Werte gibt es pro Zählstelle monatlich als * 15-Minuten-Werte und als * Tageswerte mit Wetterdaten (",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Fahrrad",
+      "Raddauerzählstellen",
+      "Raddauerzählstellen 2021"
+    ],
+    "groups": [],
+    "row_count": 180,
+    "sampled_rows": 180,
+    "column_count": 13,
+    "columns": [
+      {
+        "name": "richtung_1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "240",
+          "1198",
+          "1228",
+          "1075",
+          "1128"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": 54.0,
+          "max": 2674.0,
+          "mean": 969.35,
+          "median": 851.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "richtung_2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "73",
+          "267",
+          "283",
+          "174"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": 0.0,
+          "max": 2558.0,
+          "mean": 784.65,
+          "median": 659.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gesamt",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "240",
+          "1198",
+          "1228",
+          "1075",
+          "1128"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": 129.0,
+          "max": 5232.0,
+          "mean": 1754.0,
+          "median": 1389.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "min-temp",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "4.7",
+          "2.6",
+          "3.7",
+          "1.9"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": -1.6,
+          "max": 6.0,
+          "mean": 1.2867,
+          "median": 0.4
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "max-temp",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "11.5",
+          "11.9",
+          "8.9",
+          "7.1",
+          "8.6"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": 0.1,
+          "max": 11.9,
+          "mean": 6.47,
+          "median": 7.15
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "niederschlag",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "15.2",
+          "0.1",
+          "8.2",
+          "0.3",
+          "0"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": 0.0,
+          "max": 15.2,
+          "mean": 1.2767,
+          "median": 0.05
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bewoelkung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "79",
+          "63",
+          "80",
+          "74",
+          "76"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": 45.0,
+          "max": 100.0,
+          "mean": 84.7,
+          "median": 89.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sonnenstunden",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "0.8",
+          "4.8",
+          "0",
+          "2.1",
+          "6.1"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": 0.0,
+          "max": 8.8,
+          "mean": 2.04,
+          "median": 0.2
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "2021.11.01",
+          "2021.11.02",
+          "2021.11.03",
+          "2021.11.04",
+          "2021.11.05"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_ende",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "23.59"
+        ],
+        "numeric": {
+          "count": 180.0,
+          "min": 23.59,
+          "max": 23.59,
+          "mean": 23.59,
+          "median": 23.59
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "uhrzeit_start",
+        "dtype": "object",
+        "kind": "time",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "00:00"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zaehlstelle",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 180,
+        "null_count": 0,
+        "examples": [
+          "Arnulf",
+          "Kreuther",
+          "Olympia",
+          "Hirsch",
+          "Margareten"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "richtung_1",
+      "richtung_2",
+      "gesamt",
+      "min-temp"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "datum",
+      "uhrzeit_ende",
+      "uhrzeit_start"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "richtung_1"
+    }
+  },
+  "quality_score": 7.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

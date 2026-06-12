@@ -1,0 +1,282 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Gebiete mit Erhaltungssatzungen in der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Gebiete mit Erhaltungssatzungen in der Landeshauptstadt München",
+    "package_id": "eadee68a-9c63-4610-8e5d-70dd9765c136",
+    "package_name": "erhalt_umgriff",
+    "resource_id": "8f0bc475-4c5d-40b6-871d-34d8d2e3acfd",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Nach § 172 Absatz 1 Satz 1 Nr. 2 Baugesetzbuch soll in Erhaltungssatzungsgebieten die Zusammensetzung der Wohnbevölkerung erhalten bleiben, wenn dies aus städtebaulichen Gründen erforderlich ist (sog. Milieuschutz). Die Erhaltungssatzungen sind unbefristet gültig. Die Eignung der Gebiete wird jedoch alle fünf Jahre überprüft und dokumentiert. Insbesondere ersetzen die Angaben nicht den amtlichen Lageplan, da die Karte nicht geeignet ist, belastbare Daten für lokale Bauvorhaben zu liefern.",
+    "organization": "Referat für Stadtplanung und Bauordnung der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planung",
+      "Planungsunterlagen Kataster",
+      "Stadtplanung"
+    ],
+    "groups": [],
+    "row_count": 210,
+    "sampled_rows": 210,
+    "column_count": 376,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 85,
+        "null_count": 125,
+        "examples": [
+          "96eaa269-f088-4291-be47-1dae3ae7f464",
+          "basemaps",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 4326.0,
+          "max": 80335.0,
+          "mean": 55359.0,
+          "median": 80331.0
+        },
+        "null_rate": 0.5952
+      },
+      {
+        "name": "code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 206,
+        "examples": [
+          "4326",
+          "31468",
+          "https://geoportal.muenchen.de/metadata/srv/api/records/96eaa269-f088-4291-be47-1dae3ae7f464/formatters/xml",
+          "Landeshauptstadt München"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 31468.0,
+          "mean": 17897.0,
+          "median": 17897.0
+        },
+        "null_rate": 0.981
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 206,
+        "examples": [
+          "11.3379",
+          "11.7938",
+          "48.019",
+          "48.2408"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3379,
+          "max": 48.2408,
+          "mean": 29.8479,
+          "median": 29.9064
+        },
+        "null_rate": 0.981
+      },
+      {
+        "name": "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 208,
+        "examples": [
+          "4326",
+          "31468"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 31468.0,
+          "mean": 17897.0,
+          "median": 17897.0
+        },
+        "null_rate": 0.9905
+      },
+      {
+        "name": "referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 208,
+        "examples": [
+          "4326",
+          "31468"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 31468.0,
+          "mean": 17897.0,
+          "median": 17897.0
+        },
+        "null_rate": 0.9905
+      },
+      {
+        "name": "RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 208,
+        "examples": [
+          "4326",
+          "31468"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 31468.0,
+          "mean": 17897.0,
+          "median": 17897.0
+        },
+        "null_rate": 0.9905
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 208,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.5,
+          "median": 0.5
+        },
+        "null_rate": 0.9905
+      },
+      {
+        "name": "referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 209,
+        "examples": [
+          "31468"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 31468.0,
+          "max": 31468.0,
+          "mean": 31468.0,
+          "median": 31468.0
+        },
+        "null_rate": 0.9952
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 209,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9952
+      },
+      {
+        "name": "dataQualityInfo.DQ_DataQuality.report.DQ_DomainConsistency.result.DQ_ConformanceResult.pass.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 209,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9952
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 209,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9952
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 209,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9952
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "code.CharacterString",
+      "Decimal",
+      "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 364,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

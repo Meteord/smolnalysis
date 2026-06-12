@@ -1,0 +1,157 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Informationen zu Straßennamen and compare namenserlaeuterung by namenstyp.",
+  "query_result": {
+    "dataset_title": "Informationen zu Straßennamen",
+    "package_id": "c063d350-14a3-4b65-a63a-23863edc786e",
+    "package_name": "erlaeuterung_strassennamen",
+    "resource_id": "4d562f1a-692e-439a-a137-19c91a90fea3",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Informationen über die Namen von Straßen und Plätzen ab 1996: Amtliche Namenserläuterung, Benennungsdatum, weiblich/männlich/sächlich, Stadtbezirk",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshaupstadt München"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          1100,
+          1200,
+          1250,
+          1293,
+          1299
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1100.0,
+          "max": 1904.0,
+          "mean": 1856.534,
+          "median": 1893.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "benennungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "01.01.1100",
+          "01.01.1200",
+          "01.01.1250",
+          "01.01.1293",
+          "31.12.1299"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "namenstyp",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Sache",
+          "Männlich",
+          "Weiblich",
+          "Personengruppe"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "POINT (691708.0024008395 5334955.101197964)",
+          "POINT (691566.7450008364 5334807.809597974)",
+          "POINT (691322.8175008311 5334877.709397988)",
+          "POINT (692686.192800861 5334212.707197902)",
+          "POINT (691340.6746008317 5334526.970397987)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strassenname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Schrammerstraße",
+          "Weinstraße",
+          "Augustinerstraße",
+          "Am Gasteig",
+          "Oberanger"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sb_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 998,
+        "null_count": 2,
+        "examples": [
+          "Altstadt-Lehel",
+          "Au-Haidhausen",
+          "Sendling",
+          "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln",
+          "Ludwigsvorstadt-Isarvorstadt"
+        ],
+        "null_rate": 0.002
+      },
+      {
+        "name": "namenserlaeuterung",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "namenserlaeuterung"
+    ],
+    "category_columns": [
+      "namenstyp"
+    ],
+    "time_columns": [
+      "jahr",
+      "benennungsdatum"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "namenstyp",
+      "y": "namenserlaeuterung"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

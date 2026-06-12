@@ -1,0 +1,173 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize B + R Anlagen and compare abstellplaetze by bauform.",
+  "query_result": {
+    "dataset_title": "B + R Anlagen",
+    "package_id": "3746194a-164b-46c4-8fc7-367a83833a9d",
+    "package_name": "b-r-anlagen",
+    "resource_id": "aba62755-1a22-4fa8-a371-3629b6b39e39",
+    "resource_name": "B+R Anlagen Übersicht",
+    "resource_format": "csv",
+    "description": "Die P+R Park & Ride GmbH betreut zahlreiche Bike+Ride Anlagen im Stadtgebiet München mit insgesamt rund 5.000 Stellplätzen – darunter alle öffentlichen Fahrradabstellanlagen mit Doppelstocktechnik. Die B+R Anlagen befinden sich entweder im örtlichen Zusammenhang zu einer P+R Anlage oder werden als eigenständige Einrichtung betrieben. Die Nutzung der B+R Anlagen ist kostenlos.",
+    "organization": "P+R Park & Ride GmbH München",
+    "tags": [
+      "Fahrrad"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 34,
+    "sampled_rows": 34,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "abstellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "374",
+          "64",
+          "56",
+          "154",
+          "122"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 10.0,
+          "max": 755.0,
+          "mean": 163.9412,
+          "median": 96.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bauform",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "DF",
+          "EF"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "oepnv-anbindung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "S-Bahn",
+          "Tram",
+          "U-/S-Bahn",
+          "U-Bahn",
+          "S-Bahn/DB"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "48°11'24.4\"N",
+          "48°09'56.7\"N",
+          "48°09'21.8\"N",
+          "48°08'01.4\"N",
+          "48°08'54.0\"N"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "11°28'03.8\"E",
+          "11°29'35.9\"E",
+          "11°24'49.6\"E",
+          "11°38'00.2\"E",
+          "11°38'59.2\"E"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "name_anlage",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "Allach",
+          "Amalienburgstraße",
+          "Aubing",
+          "Berg am Laim",
+          "Daglfing"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "adresse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "Oertelplatz (2), 80999 München",
+          "Menzinger/Schragenhofstr., 80638 Mü",
+          "Colmdorfstr. (32), 81249 Mü",
+          "Truderinger Str. (47), 81673 München",
+          "Ludwig-Brück-Str. 3a, 81929 München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bei_p+r_anlage",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 23,
+        "null_count": 11,
+        "examples": [
+          "x"
+        ],
+        "null_rate": 0.3235
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "abstellplaetze"
+    ],
+    "category_columns": [
+      "bauform",
+      "oepnv-anbindung",
+      "bei_p+r_anlage"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "bauform",
+      "y": "abstellplaetze"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

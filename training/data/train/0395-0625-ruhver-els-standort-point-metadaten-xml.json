@@ -1,0 +1,180 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Standorte der Ladeinfrastruktur.",
+  "query_result": {
+    "dataset_title": "Standorte der Ladeinfrastruktur",
+    "package_id": "7d42e702-9b1c-413c-9445-b3a29d016958",
+    "package_name": "ruhver_els_standort_point",
+    "resource_id": "02bdab62-2da4-4b38-959c-e11a208f9267",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Standort von Ladeinfrastruktur mit Informationen zu Ladeeinrichtung und Ladepunkten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 20,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:46"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:46"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Standorte der Ladeinfrastruktur"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "transportation"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Standort von Ladeinfrastruktur mit Informationen zu Ladeeinrichtung und Ladepunkten."
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Standort von Ladeinfrastruktur mit Informationen zu Ladeeinrichtung und Ladepunkten."
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "otherRestrictions"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs%3Aruhver_els_standort_point"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Standorte der Ladeinfrastruktur"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 6,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

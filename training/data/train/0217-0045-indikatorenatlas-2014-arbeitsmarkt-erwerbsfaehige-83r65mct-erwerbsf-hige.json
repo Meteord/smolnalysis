@@ -1,0 +1,209 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Arbeitsmarkt - Erwerbsfähige and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Arbeitsmarkt - Erwerbsfähige",
+    "package_id": "d9da8e51-bd0a-4207-8486-2b4ce1e5dc69",
+    "package_name": "indikatorenatlas-2014-arbeitsmarkt-erwerbsfaehige-83r65mct",
+    "resource_id": "1f47ff92-01fa-41a2-bd01-26fbf9ce2401",
+    "resource_name": "Erwerbsfähige",
+    "resource_format": "csv",
+    "description": "Der Indikator misst das demographische Erwerbspotential. Die demographische Erwerbsbevölkerung ist aufgrund von Ausbildungszeiten, Arbeitslosigkeit, flexiblem Renten- und Pensionseintrittsalter u. ä. größer als die Zahl der Erwerbspersonen. Anteil der erwerbsfähigen (15- bis 64-jährigen) Hauptwohnsitzbevölkerung der entsprechenden Kategorie an der Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](h",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Arbeitsmarkt",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 3250,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          65.4,
+          70.8,
+          76.4,
+          77.0,
+          69.3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 58.9,
+          "max": 80.5,
+          "mean": 68.1442,
+          "median": 67.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "726595.8",
+          "11016.3",
+          "28069.3",
+          "29433.3",
+          "35921.8"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 10101.0,
+          "max": 1116178.2,
+          "mean": 64311.1036,
+          "median": 31972.2
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1110801.6",
+          "15549.8",
+          "36723.8",
+          "38247.8",
+          "51843.7"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 14008.0,
+          "max": 1595787.8,
+          "mean": 94692.4997,
+          "median": 46116.7
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2014.016,
+          "median": 2015.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (deutsch)",
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (deutsch)",
+          "Hauptwohnsitzbevölkerung (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Erwerbsfähige"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

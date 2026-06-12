@@ -1,0 +1,159 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Liste aller verfügbaren Onlinedienste der Landeshauptstadt München and compare leika-schluessel by eigentuemerbehoerde.",
+  "query_result": {
+    "dataset_title": "Liste aller verfügbaren Onlinedienste der Landeshauptstadt München",
+    "package_id": "d818c8c6-6612-480e-9ca9-68dd56995805",
+    "package_name": "liste-aller-verfuegbaren-onlinedienste-der-landeshauptstadt-muenchen",
+    "resource_id": "ea3ef9b5-d780-4fbd-b710-14ded0d1d7e9",
+    "resource_name": "Liste aller verfügbaren Onlinedienste Januar 2025",
+    "resource_format": "csv",
+    "description": "Die Daten bilden die verfügbaren Onlinedienste für die Bürger*innen und Unternehmen der Landeshauptstadt München ab. Hierin enthalten sind die jeweiligen Links auf den Onlinedienst, dort finden Sie weitere Rahmenbedingungen für die Nutzung des Dienstes und den Umfang der möglichen Onlinebeantragung. Das Angebot wird sukzessive erweitert. Weitere Informationen und Übersichten finden Sie auch im Bayernportal: [Landeshauptstadt München, Kreisfreie Stadt - BayernPortal](https://www.freistaat.bayern/",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [
+      "E-Government"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 259,
+    "sampled_rows": 259,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "leika-schluessel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 255,
+        "null_count": 4,
+        "examples": [
+          "99115005070000",
+          "99012091261000",
+          "09000000053143",
+          "77000000000026",
+          "99123027023001"
+        ],
+        "numeric": {
+          "count": 232.0,
+          "min": 9000000000114.0,
+          "max": 99400236017000.0,
+          "mean": 79482558163091.86,
+          "median": 99032512514500.0
+        },
+        "null_rate": 0.0154
+      },
+      {
+        "name": "kurzbeschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 259,
+        "null_count": 0,
+        "examples": [
+          "Abmeldung ins Ausland",
+          "Abnahme Fliegender Bauten",
+          "Akteneinsicht zum Aufenthalt",
+          "Akteneinsicht zur Einbürgerung oder Staatsangehörigkeit",
+          "Ampel-Störung melden"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 259,
+        "null_count": 0,
+        "examples": [
+          "https://www.buergerservice-portal.de/bayern/muenchen/bsp_abmeldung_ausland/",
+          "https://stadt.muenchen.de/service/info/team-12-statik-u-bautechnische-sonderverfahren/1099270/",
+          "https://service.muenchen.de/intelliform/forms/01/02/02/akteneinsicht_aufenthalt/index",
+          "https://service.muenchen.de/intelliform/forms/01/02/02/akteneinsicht_einbuergerung/index",
+          "https://www.muenchen.de/dienstleistungsfinder/muenchen/1072683/"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "eigentuemerbehoerde",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 259,
+        "null_count": 0,
+        "examples": [
+          "Landeshauptstadt München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "leistung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 255,
+        "null_count": 4,
+        "examples": [
+          "Wohnsitz; Abmeldung (ID: 12466)",
+          "Fliegende Bauten; Anzeige der Aufstellung und der Gebrauchsabnahme (ID: 80641)",
+          "Kommunikation mit Kommunen; Übermittlung von Nachrichten und Dokumenten (ID: 53143)",
+          "Öffentlicher Raum; Meldung eines Schadens bei der Gemeinde (ID: 50574)",
+          "Liegenschaftskataster; Beantragung eines Auszugs zur Bauvorlage (ID: 104)"
+        ],
+        "null_rate": 0.0154
+      },
+      {
+        "name": "regionale ergaenzung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 255,
+        "null_count": 4,
+        "examples": [
+          "Wohnsitz; Abmeldung (ID: 148633)",
+          "Fliegende Bauten; Anzeige der Aufstellung und der Gebrauchsabnahme (ID: 80744)",
+          "Elektronische Kommunikation mit Kommunen; Übermittlung von Nachrichten und Dokumenten (ID: 80746)",
+          "Meldung Schaden o.ä. (ID: 78334)",
+          "Liegenschaftskataster; Beantragung eines Auszugs zur Bauvorlage (ID: 80747)"
+        ],
+        "null_rate": 0.0154
+      },
+      {
+        "name": "uebersichtsseite",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 243,
+        "null_count": 16,
+        "examples": [
+          "Umzug ins Ausland online melden (ID: 241)",
+          "Fliegende Bauten - Aufstellung oder Gebrauchsabnahme online beantragen (ID: 1366)",
+          "Schaden, Mangel, Unregelmäßigkeit, Störung oder Verstoß im öffentlichen Raum online melden (ID: 584)",
+          "Lageplan oder Katasterauszug online bestellen (ID: 341)",
+          "Hundesteuer - Hund online anmelden, abmelden und mehr (ID: 261)"
+        ],
+        "null_rate": 0.0618
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "leika-schluessel"
+    ],
+    "category_columns": [
+      "eigentuemerbehoerde"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "eigentuemerbehoerde",
+      "y": "leika-schluessel"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

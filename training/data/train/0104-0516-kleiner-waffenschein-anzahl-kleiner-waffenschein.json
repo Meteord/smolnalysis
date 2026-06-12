@@ -1,0 +1,92 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of anzahl in Kleiner Waffenschein.",
+  "query_result": {
+    "dataset_title": "Kleiner Waffenschein",
+    "package_id": "abb5ca10-f176-4039-b8e7-c42b9e330ff0",
+    "package_name": "kleiner-waffenschein",
+    "resource_id": "46ab4aad-fde5-41a8-9b74-e2c7066d6689",
+    "resource_name": "Anzahl Kleiner Waffenschein",
+    "resource_format": "csv",
+    "description": "Der so genannte Kleine Waffenschein ist gesetzliches Erfordernis zum Führen von ansonsten erlaubnisfreien Gas,- Schreckschuss- und Signalwaffen, welche ab dem vollendeten 18. Lebensjahr erworben und besessen werden können. Wenn man eine solche Waffe also außerhalb der eigenen Wohnung, des eigenen befriedeten Besitztums oder auch der eigenen Geschäftsräume zugriffsbereit an der Person führen möchte, muss vorher der Kleine Waffenschein beantragt und ausgestellt werden. Voraussetzung hierfür ist da",
+    "organization": "Kreisverwaltungsreferat der Landeshauptstadt München",
+    "tags": [],
+    "groups": [
+      "just"
+    ],
+    "row_count": 12,
+    "sampled_rows": 12,
+    "column_count": 3,
+    "columns": [
+      {
+        "name": "anzahl",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "9351",
+          "9218",
+          "9007",
+          "8757",
+          "8341"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 3330.0,
+          "max": 9351.0,
+          "mean": 7222.9167,
+          "median": 7803.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "2025",
+          "2024",
+          "2023",
+          "2022",
+          "2021"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2014.0,
+          "max": 2025.0,
+          "mean": 2019.5,
+          "median": 2019.5
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "anzahl"
+    }
+  },
+  "quality_score": 5.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

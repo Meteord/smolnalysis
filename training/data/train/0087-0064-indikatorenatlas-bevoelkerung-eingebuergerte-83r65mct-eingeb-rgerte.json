@@ -1,0 +1,212 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Eingebürgerte and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Eingebürgerte",
+    "package_id": "f0026cb1-7ece-4d9c-b901-0fa60f643c71",
+    "package_name": "indikatorenatlas-bevoelkerung-eingebuergerte-83r65mct",
+    "resource_id": "7bc53178-d5b3-43bc-969e-249f206a6b25",
+    "resource_name": "Eingebürgerte",
+    "resource_format": "csv",
+    "description": "Anteil der eingebürgerten Hauptwohnsitzbevölkerung der entsprechenden Kategorie an der deutschen Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 1482,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          9.4,
+          6.0,
+          6.1,
+          6.7,
+          7.0
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2.5,
+          "max": 15.4,
+          "mean": 6.0394,
+          "median": 5.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "105601",
+          "934",
+          "2271",
+          "2589",
+          "3701"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 188.0,
+          "max": 105601.0,
+          "mean": 3854.482,
+          "median": 1668.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1119494",
+          "15583",
+          "37098",
+          "38498",
+          "52751"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 7092.0,
+          "max": 1119494.0,
+          "mean": 62140.573,
+          "median": 30559.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2006.0,
+          "max": 2025.0,
+          "mean": 2015.64,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "insgesamt",
+          "männlich",
+          "weiblich"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Eingebürgerte (insgesamt)",
+          "Eingebürgerte (männlich)",
+          "Eingebürgerte (weiblich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (deutsch) (insgesamt)",
+          "Hauptwohnsitzbevölkerung (deutsch) (männlich)",
+          "Hauptwohnsitzbevölkerung (deutsch) (weiblich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Eingebürgerte"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

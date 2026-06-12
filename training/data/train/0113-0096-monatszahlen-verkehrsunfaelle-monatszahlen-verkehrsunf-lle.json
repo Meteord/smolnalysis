@@ -1,0 +1,235 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Verkehrsunfälle and compare MONAT by MONATSZAHL.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Verkehrsunfälle",
+    "package_id": "5e73a82b-7cfb-40cc-9b30-45fe5a3fa24e",
+    "package_name": "monatszahlen-verkehrsunfaelle",
+    "resource_id": "40094bd6-f82d-4979-949b-26c8dc00b9a7",
+    "resource_name": "Monatszahlen Verkehrsunfälle",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Verkehrsunfälle__ beinhaltet die Themen * Verkehrsunfälle * Fluchtunfälle * Alkoholunfälle Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 2450,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 925.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201365.0886,
+          "median": 201402.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "446",
+          "34",
+          "24",
+          "28"
+        ],
+        "numeric": {
+          "count": 964.0,
+          "min": 0.0,
+          "max": 11773.0,
+          "mean": 534.8278,
+          "median": 44.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "34",
+          "24",
+          "28",
+          "26",
+          "43"
+        ],
+        "numeric": {
+          "count": 974.0,
+          "min": 0.0,
+          "max": 11773.0,
+          "mean": 537.5657,
+          "median": 44.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "17.24",
+          "-29.41",
+          "16.67",
+          "-7.14"
+        ],
+        "numeric": {
+          "count": 886.0,
+          "min": -100.0,
+          "max": 600.0,
+          "mean": 7.4146,
+          "median": -0.395
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "0.68",
+          "41.67",
+          "-14.29",
+          "12"
+        ],
+        "numeric": {
+          "count": 937.0,
+          "min": -100.0,
+          "max": 425.0,
+          "mean": 4.205,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "38",
+          "37",
+          "36",
+          "42"
+        ],
+        "numeric": {
+          "count": 889.0,
+          "min": 12.0,
+          "max": 990.0,
+          "mean": 284.5388,
+          "median": 36.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2013.539,
+          "median": 2014.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Alkoholunfälle",
+          "Fluchtunfälle"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "insgesamt",
+          "Verletzte und Getötete"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "MONATSZAHL",
+      "AUSPRAEGUNG"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "MONATSZAHL",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

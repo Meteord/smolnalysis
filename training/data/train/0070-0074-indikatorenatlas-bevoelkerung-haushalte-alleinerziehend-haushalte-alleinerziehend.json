@@ -1,0 +1,209 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Haushalte Alleinerziehend and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Haushalte Alleinerziehend",
+    "package_id": "4d26aef1-4091-4778-849d-b05f51caf842",
+    "package_name": "indikatorenatlas-bevoelkerung-haushalte-alleinerziehend",
+    "resource_id": "901f0213-c090-469e-bed9-aacdecf1f57d",
+    "resource_name": "Haushalte Alleinerziehend",
+    "resource_format": "csv",
+    "description": "Anteil der Alleinerziehenden-Privathaushalte mit mindestens einem Kind bis 17 Jahre (mit mindestens einer Hauptwohnsitzperson) an allen Privathaushalten (mit mindestens einer Hauptwohnsitzperson) in Prozent. bzw. Anteil der Alleinerziehenden-Privathaushalte mit mindestens einem Kind bis 17 Jahre (mit mindestens einer Hauptwohnsitzperson) der entsprechenden Kategorie an allen Alleinerziehenden-Privathaushalten mit mindestens einem Kind bis 17 Jahre (mit mindestens einer Hauptwohnsitzperson) in Pr",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [],
+    "row_count": 1456,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          3.3,
+          2.4,
+          2.1,
+          2.5,
+          3.2
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.9,
+          "max": 24.3,
+          "mean": 9.2785,
+          "median": 8.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "28820",
+          "303",
+          "742",
+          "679",
+          "1025"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 27.0,
+          "max": 30491.0,
+          "mean": 959.116,
+          "median": 197.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "868183",
+          "12544",
+          "30762",
+          "32820",
+          "41281"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 302.0,
+          "max": 868183.0,
+          "mean": 24605.46,
+          "median": 1481.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2012.0,
+          "max": 2025.0,
+          "mean": 2018.978,
+          "median": 2019.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "insgesamt",
+          "männlich",
+          "mit weiteren Personen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Privathaushalte (alleinerziehend) (insgesamt)",
+          "Privathaushalte (alleinerziehend) (männlich)",
+          "Privathaushalte (alleinerziehend) (mit weiterer*n Person*en)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Privathaushalte (insgesamt)",
+          "Privathaushalte (alleinerziehend) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Haushalte Alleinerziehend"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

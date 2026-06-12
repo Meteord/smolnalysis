@@ -1,0 +1,274 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Digitaler Flächennutzungsplan mit integrierter Landschaftsplanung der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Digitaler Flächennutzungsplan mit integrierter Landschaftsplanung der Landeshauptstadt München",
+    "package_id": "d44d1d10-2c8b-4609-8b76-69296fb0eec5",
+    "package_name": "g_fnp",
+    "resource_id": "4885f96a-4d7b-4e54-9a15-c7fef7f080c7",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Der Flächennutzungsplan der Landeshauptstadt München (FNP) enthält die Grundzüge der städtebaulichen Entwicklung und dient der Stadt als Leitlinie für die räumliche Verteilung von verschiedenen Nutzungen innerhalb des Stadtgebietes. Die Ziele der Landschaftsplanung sind in den FNP integriert und stellen die Erfordernisse zur Umsetzung der Freiraumentwicklung und des Naturschutzes dar. Der FNP regelt die Aufteilung von Bauflächen und Grünflächen sowie die Verteilung der wichtigsten Standorte für",
+    "organization": "Referat für Stadtplanung und Bauordnung der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Flächennutzungsplan mit integrierter Landschaftsplanung",
+      "Planungsunterlagen"
+    ],
+    "groups": [],
+    "row_count": 213,
+    "sampled_rows": 213,
+    "column_count": 394,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 85,
+        "null_count": 128,
+        "examples": [
+          "a7f98620-34b2-429f-b98a-10faa73c9e8c",
+          "WMS",
+          "KR-GSM",
+          "LHM - Kommunalreferat",
+          "+49-89-233-722269"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 1.0,
+          "max": 80335.0,
+          "mean": 48200.6,
+          "median": 80331.0
+        },
+        "null_rate": 0.6009
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 209,
+        "examples": [
+          "11.3379",
+          "11.7938",
+          "48.019",
+          "48.2408"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3379,
+          "max": 48.2408,
+          "mean": 29.8479,
+          "median": 29.9064
+        },
+        "null_rate": 0.9812
+      },
+      {
+        "name": "MD_Format.version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 211,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9906
+      },
+      {
+        "name": "version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 211,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9906
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 212,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9953
+      },
+      {
+        "name": "distributionInfo.MD_Distribution.distributionFormat.MD_Format.version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 212,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9953
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 212,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9953
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 212,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9953
+      },
+      {
+        "name": "EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 212,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9953
+      },
+      {
+        "name": "geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 212,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9953
+      },
+      {
+        "name": "EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 212,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9953
+      },
+      {
+        "name": "extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 212,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9953
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "Decimal",
+      "MD_Format.version.CharacterString",
+      "version.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 382,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

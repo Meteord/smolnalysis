@@ -1,0 +1,181 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone) and compare status by typ.",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Verkehrsberuhigter Bereich / Tempo-30-Zone)",
+    "package_id": "11fee3cf-7b56-413b-98b5-539a7ac1c244",
+    "package_name": "rad_rsp_tempo30zone_poly",
+    "resource_id": "0395a81a-1a3c-4c66-b08e-cdcf85da7f1f",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Die Ausweisung von Tempo-30-Zonen ist ein Beitrag zur Verkehrssicherheit, zum Lärmschutz, zur Reduktion von Luftschadstoffen und der Erhöhung der Aufenthaltsqualität. Darüber hinaus bieten sie auch direkte Vorteile für den Radverkehr. In München sind über 80 Prozent aller Straßen als Tempo-30-Zonen ausgewiesen. Hier gilt grundsätzlich rechts vor links und der Radverkehr kann sicherer im Mischverkehr auf der Straße fahren als dies bei höheren Geschwindigkeitsbegrenzungen der Fall wäre. Alte Radwe",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Tempo-30-Zone",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          0
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "typ",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 986,
+        "null_count": 14,
+        "examples": [
+          "",
+          "Einzelanordnung",
+          "Zone"
+        ],
+        "null_rate": 0.014
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOLYGON (((679152.5220005981 5338511.811298608, 679044.5796005965 5338558.791898613, 679039.8148005963 5338561.986798612, 679036.3507005962 5338566.5660986",
+          "MULTIPOLYGON (((695466.5392009241 5338942.721097693, 695466.3687009232 5338942.827997694, 695439.2977009225 5338926.054697696, 695440.9768009224 5338925.1007976",
+          "MULTIPOLYGON (((691983.7726008446 5338739.979597938, 691987.9680008447 5338708.136597937, 692000.267700845 5338697.871397937, 692014.1975008452 5338689.96559793",
+          "MULTIPOLYGON (((695334.724000921 5334925.610497713, 695340.3155009213 5334921.909097712, 695347.1807009213 5334918.629697711, 695365.8074009218 5334913.23219771",
+          "MULTIPOLYGON (((682666.5095006598 5336334.655198458, 682664.4951006596 5336313.242498458, 682664.1141006595 5336304.216098459, 682663.0825006595 5336288.7802984"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "in Bestand / in Betrieb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsstatus_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "--"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 3,
+        "null_count": 997,
+        "examples": [
+          "2025-12-09T00:00:00",
+          "2025-07-28T00:00:00"
+        ],
+        "null_rate": 0.997
+      },
+      {
+        "name": "zone",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      },
+      {
+        "name": "planungsdatum",
+        "dtype": "float64",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      },
+      {
+        "name": "abbaudatum",
+        "dtype": "float64",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "status",
+      "planungsstatus",
+      "zone"
+    ],
+    "category_columns": [
+      "typ",
+      "status_bedeutung",
+      "planungsstatus_bedeutung"
+    ],
+    "time_columns": [
+      "realisierungsdatum",
+      "planungsdatum",
+      "abbaudatum"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "typ",
+      "y": "status"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

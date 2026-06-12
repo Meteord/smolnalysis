@@ -1,0 +1,253 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize P+R Anlagen München and compare stellplaetze_gesamt by bauform.",
+  "query_result": {
+    "dataset_title": "P+R Anlagen München",
+    "package_id": "a8896f06-15e0-4f29-a509-55384799fff3",
+    "package_name": "p-r-anlagen-muenchen",
+    "resource_id": "aff2ba04-5eb6-4dfe-bc98-4ec3ec3dfdff",
+    "resource_name": "Übersicht P+R Anlagen",
+    "resource_format": "csv",
+    "description": "Im Stadtgebiet München ist die Gesellschaft für alle Park+Ride Anlagen mit mehr als 7.000 Pkw-Stellplätzen zuständig. Die Anlagen gibt es in Form von Parkplätzen, Parkhäusern sowie Tiefgaragen. Sie werden öffentlich bezuschusst und stehen grundsätzlich nur den ÖPNV-Fahrgästen zur Verfügung. Die Benutzung der Parkeinrichtungen ist in der Regel kostenpflichtig. Die Höhe des Parkentgelts hängt von der Lage und teilweise von der Nutzungsdauer ab. Weitere Informationen: https://www.parkundride.de/par",
+    "organization": "P+R Park & Ride GmbH München",
+    "tags": [
+      "Parken"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 34,
+    "sampled_rows": 34,
+    "column_count": 21,
+    "columns": [
+      {
+        "name": "stellplaetze_gesamt",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "188",
+          "128",
+          "53",
+          "101",
+          "156"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 32.0,
+          "max": 1259.0,
+          "mean": 233.5588,
+          "median": 143.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "preisstufe",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "2",
+          "1"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.2941,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stellplaetze_beh.",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 29,
+        "null_count": 5,
+        "examples": [
+          "5",
+          "2",
+          "1",
+          "10",
+          "3"
+        ],
+        "numeric": {
+          "count": 29.0,
+          "min": 1.0,
+          "max": 14.0,
+          "mean": 3.1379,
+          "median": 2.0
+        },
+        "null_rate": 0.1471
+      },
+      {
+        "name": "stellplaetze_frauen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 18,
+        "null_count": 16,
+        "examples": [
+          "7",
+          "8",
+          "5",
+          "6",
+          "35"
+        ],
+        "numeric": {
+          "count": 18.0,
+          "min": 3.0,
+          "max": 47.0,
+          "mean": 16.8889,
+          "median": 13.0
+        },
+        "null_rate": 0.4706
+      },
+      {
+        "name": "bauform",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "Parkhaus",
+          "Tiefgarage",
+          "Parkplatz"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "einfahrtshoehe",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "2,10 m",
+          "-",
+          "1,90 m",
+          "2,00 m"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "schrankenbetrieb",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja, mit Kfz-Kennzeichenerkennung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "hoechstparkdauer",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "24 Stunden",
+          "Mehrtagesparken mit Sondertarif möglich",
+          "keine Parkzeitbeschränkung (Mehrtagesparken mit Sondertarif möglich)",
+          "keine Parkzeitbeschränkung (längeres Parken mit Sondertarif möglich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "parkpreis_zehner_eur",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "18,00 EUR",
+          "12,00 EUR"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "parkpreis_monat_eur",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "22,00 EUR",
+          "13,00 EUR"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "parkpreis_jahr_eur",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "220,00 EUR",
+          "130,00 EUR"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "stellplaetze_fam",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 10,
+        "null_count": 24,
+        "examples": [
+          "1",
+          "8",
+          "5",
+          "4",
+          "2"
+        ],
+        "numeric": {
+          "count": 10.0,
+          "min": 1.0,
+          "max": 8.0,
+          "mean": 3.2,
+          "median": 3.0
+        },
+        "null_rate": 0.7059
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "stellplaetze_gesamt",
+      "preisstufe",
+      "stellplaetze_beh.",
+      "stellplaetze_frauen"
+    ],
+    "category_columns": [
+      "bauform",
+      "einfahrtshoehe",
+      "schrankenbetrieb",
+      "hoechstparkdauer"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "bauform",
+      "y": "stellplaetze_gesamt"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 8,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

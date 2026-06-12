@@ -1,0 +1,237 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen KFZ-Erstzulassungen and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen KFZ-Erstzulassungen",
+    "package_id": "077ced32-8d10-44ba-81b5-719925980f90",
+    "package_name": "monatszahlen-kfz-neuzulassungen",
+    "resource_id": "838406bb-dc0d-4a28-b276-ee80123a3dfa",
+    "resource_name": "Monatszahlen KFZ-Erstzulassungen",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen KFZ-Erstzulassungen__ (früherer Name: KFZ-Neuzulassungen) beinhaltet die Themen * Fahrzeugtypen * PKW-Segmente Derzeit keine aktuellen Zahlen verfügbar. Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Auto",
+      "Monatszahlen"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 11072,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Summe",
+          "202501",
+          "202502",
+          "202503",
+          "202504"
+        ],
+        "numeric": {
+          "count": 923.0,
+          "min": 200601.0,
+          "max": 202512.0,
+          "mean": 201590.351,
+          "median": 201605.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 984,
+        "null_count": 16,
+        "examples": [
+          "140326",
+          "13456",
+          "14117",
+          "21185",
+          "19996"
+        ],
+        "numeric": {
+          "count": 984.0,
+          "min": 678.0,
+          "max": 236051.0,
+          "mean": 18687.6585,
+          "median": 11576.5
+        },
+        "null_rate": 0.016
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 977,
+        "null_count": 23,
+        "examples": [
+          "189121",
+          "10983",
+          "13559",
+          "20422",
+          "21450"
+        ],
+        "numeric": {
+          "count": 977.0,
+          "min": 678.0,
+          "max": 236051.0,
+          "mean": 18247.6356,
+          "median": 11180.0
+        },
+        "null_rate": 0.023
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 961,
+        "null_count": 39,
+        "examples": [
+          "-25.8",
+          "22.52",
+          "4.12",
+          "3.74",
+          "-6.78"
+        ],
+        "numeric": {
+          "count": 961.0,
+          "min": -79.71,
+          "max": 384.81,
+          "mean": 7.066,
+          "median": 1.66
+        },
+        "null_rate": 0.039
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 907,
+        "null_count": 93,
+        "examples": [
+          "8.22",
+          "4.91",
+          "50.07",
+          "-5.61",
+          "1.69"
+        ],
+        "numeric": {
+          "count": 907.0,
+          "min": -60.36,
+          "max": 196.98,
+          "mean": 3.1284,
+          "median": 1.18
+        },
+        "null_rate": 0.093
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 907,
+        "null_count": 93,
+        "examples": [
+          "15966",
+          "16013",
+          "16076",
+          "15955",
+          "16067"
+        ],
+        "numeric": {
+          "count": 907.0,
+          "min": 1175.0,
+          "max": 19671.0,
+          "mean": 9989.473,
+          "median": 11652.0
+        },
+        "null_rate": 0.093
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2025",
+          "2024",
+          "2023",
+          "2022",
+          "2021"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2006.0,
+          "max": 2025.0,
+          "mean": 2015.838,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "insgesamt",
+          "Personenkraftwagen",
+          "Personenkraftwagen gewerblich",
+          "Personenkraftwagen privat"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Erstzulassungen Fahrzeugtypen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORJAHRESMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

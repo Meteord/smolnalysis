@@ -1,0 +1,254 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Vollstationäre Pflegeeinrichtungen and compare objectid by za4.",
+  "query_result": {
+    "dataset_title": "Vollstationäre Pflegeeinrichtungen",
+    "package_id": "d94c0885-dd40-41e4-9102-66e2546802e1",
+    "package_name": "vollst_pflegeeinrichtung_opendata",
+    "resource_id": "0837ad28-27be-4788-89ed-a920e6792f28",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Standorte und Adressen der vollstationären Pflegeeinrichtungen",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 54,
+    "sampled_rows": 54,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          327,
+          1,
+          2,
+          3,
+          4
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 1.0,
+          "max": 327.0,
+          "mean": 33.5556,
+          "median": 28.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sb_nummer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          13,
+          2,
+          10,
+          19,
+          1
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.3333,
+          "median": 15.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "x",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          695626.254,
+          691214.8944,
+          686801.3239,
+          685079.3149,
+          692900.3166
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 681518.1627,
+          "max": 699085.1129,
+          "mean": 690803.3235,
+          "median": 691239.3519
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "y",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          5337712.6939,
+          5333624.4519,
+          5338754.3795,
+          5328743.5758,
+          5335519.6999
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 5326740.7247,
+          "max": 5344122.4259,
+          "mean": 5334199.317,
+          "median": 5333578.5079
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "za3",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          4,
+          70,
+          10,
+          34,
+          16
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 1.0,
+          "max": 367.0,
+          "mean": 47.6481,
+          "median": 22.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "za4",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 53,
+        "null_count": 1,
+        "examples": [
+          "",
+          "A",
+          "-"
+        ],
+        "null_rate": 0.0185
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          "POINT (695626.2540009272 5337712.693897684)",
+          "POINT (691214.894400829 5333624.451897999)",
+          "POINT (686801.3239007371 5338754.379498247)",
+          "POINT (685079.3149007055 5328743.575798353)",
+          "POINT (692900.3166008656 5335519.699897883)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          "Zaidman Seniorenresidenz",
+          "Tertianum Residenz München",
+          "Seniorenzentrum Bethel München",
+          "Altenheim St. Elisabeth",
+          "Senioren-Pflegeheim Vincentinum"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "st2",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          "Eugen-Jochum-Str. 4",
+          "Klenzestr.",
+          "Hugo-Troendle-Str.",
+          "Allgäuer Str.",
+          "Oettingenstr."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "traeger",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 54,
+        "null_count": 0,
+        "examples": [
+          "Arbeiterwohlfahrt gemeinnützige Betriebs-GmbH",
+          "Privater Anbieter",
+          "Diakoniewerk Bethel e.V.",
+          "St. Anna Hilfe - Stiftung Liebenau",
+          "St. Vinzentius-Zentralverein München KdöR"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "area_",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 54,
+        "null_rate": 1.0
+      },
+      {
+        "name": "lfdnr",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 54,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "sb_nummer",
+      "x",
+      "y"
+    ],
+    "category_columns": [
+      "za4"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "za4",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

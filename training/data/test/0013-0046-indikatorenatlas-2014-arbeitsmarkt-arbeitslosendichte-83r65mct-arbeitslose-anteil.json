@@ -1,0 +1,210 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Arbeitsmarkt - Arbeitslosen - Anteil and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Arbeitsmarkt - Arbeitslosen - Anteil",
+    "package_id": "0771b22f-b1e7-4480-8fe5-d641c2586f3e",
+    "package_name": "indikatorenatlas-2014-arbeitsmarkt-arbeitslosendichte-83r65mct",
+    "resource_id": "55a1adb0-6c06-403b-ab7f-7e6c41d18e32",
+    "resource_name": "Arbeitslose - Anteil",
+    "resource_format": "csv",
+    "description": "Anteil der Arbeitslosen der entsprechenden Kategorie an der erwerbsfähigen (15- bis 64-jährigen) Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Arbeitslosigkeit",
+      "Arbeitsmarkt",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 3250,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          3.1,
+          2.6,
+          3.0,
+          2.7,
+          3.4
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.6,
+          "max": 7.6,
+          "mean": 3.4396,
+          "median": 3.3
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "22284.8",
+          "284.3",
+          "849",
+          "781",
+          "932.8"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 197.0,
+          "max": 43723.3,
+          "mean": 2215.5006,
+          "median": 1044.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "726741",
+          "11023.5",
+          "28076.8",
+          "29447",
+          "35939"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 10097.5,
+          "max": 1117076.3,
+          "mean": 64334.2971,
+          "median": 31975.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2024.0,
+          "mean": 2014.016,
+          "median": 2015.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Arbeitslose (deutsch)",
+          "Arbeitslose (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (deutsch)",
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Arbeitslose - Anteil"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

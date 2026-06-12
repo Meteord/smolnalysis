@@ -1,0 +1,267 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ruhver_mim_fahrverbot_ts.objectid in Fahrverbotszonen für E-Tretroller.",
+  "query_result": {
+    "dataset_title": "Fahrverbotszonen für E-Tretroller",
+    "package_id": "ebaeedf2-0dee-47f4-8c6b-1b85d5218739",
+    "package_name": "ruhver_mim_fahrverbot_ts",
+    "resource_id": "0a128e89-a84a-4c7a-a2a3-02662a9da7e6",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet Fahrverbotszonen für Fahrzeuge des E-Tretrollersharings. Innerhalb dieser Zonen ist das Fahren mit E-Tretrollern verboten. Temporäre Fahrverbotszonen (bspw. aufgrund von Baustellen oder Veranstaltungen) werden Ocker angezeigt. Das Hinweisfeld gibt Informationen zur Dauer und Art.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 498,
+    "sampled_rows": 498,
+    "column_count": 60,
+    "columns": [
+      {
+        "name": "ruhver_mim_fahrverbot_ts.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 57,
+        "null_count": 441,
+        "examples": [
+          "34",
+          "44",
+          "41",
+          "45",
+          "30"
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 1.0,
+          "max": 5457.0,
+          "mean": 133.1579,
+          "median": 29.0
+        },
+        "null_rate": 0.8855
+      },
+      {
+        "name": "ruhver_mim_fahrverbot_ts.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 57,
+        "null_count": 441,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8855
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 57,
+        "null_count": 441,
+        "examples": [
+          "34",
+          "44",
+          "41",
+          "45",
+          "30"
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 1.0,
+          "max": 5457.0,
+          "mean": 133.1579,
+          "median": 29.0
+        },
+        "null_rate": 0.8855
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 57,
+        "null_count": 441,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8855
+      },
+      {
+        "name": "featureMember.ruhver_mim_fahrverbot_ts.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 497,
+        "examples": [
+          "325"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 325.0,
+          "max": 325.0,
+          "mean": 325.0,
+          "median": 325.0
+        },
+        "null_rate": 0.998
+      },
+      {
+        "name": "featureMember.ruhver_mim_fahrverbot_ts.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 497,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.998
+      },
+      {
+        "name": "ruhver_mim_fahrverbot_ts.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 57,
+        "null_count": 441,
+        "examples": [
+          "20260127",
+          "20260512",
+          "20260325",
+          "20260610"
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 20260127.0,
+          "max": 20260610.0,
+          "mean": 20260145.7018,
+          "median": 20260127.0
+        },
+        "null_rate": 0.8855
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 57,
+        "null_count": 441,
+        "examples": [
+          "20260127",
+          "20260512",
+          "20260325",
+          "20260610"
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 20260127.0,
+          "max": 20260610.0,
+          "mean": 20260145.7018,
+          "median": 20260127.0
+        },
+        "null_rate": 0.8855
+      },
+      {
+        "name": "featureMember.ruhver_mim_fahrverbot_ts.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 497,
+        "examples": [
+          "20260610"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 20260610.0,
+          "max": 20260610.0,
+          "mean": 20260610.0,
+          "median": 20260610.0
+        },
+        "null_rate": 0.998
+      },
+      {
+        "name": "ruhver_mim_fahrverbot_ts.gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 2,
+        "null_count": 496,
+        "examples": [
+          "16.05.2026",
+          "13.06.2026"
+        ],
+        "null_rate": 0.996
+      },
+      {
+        "name": "ruhver_mim_fahrverbot_ts.gueltigkeit_datum_ende",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 2,
+        "null_count": 496,
+        "examples": [
+          "18.05.2026",
+          "14.06.2026"
+        ],
+        "null_rate": 0.996
+      },
+      {
+        "name": "gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 2,
+        "null_count": 496,
+        "examples": [
+          "16.05.2026",
+          "13.06.2026"
+        ],
+        "null_rate": 0.996
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_mim_fahrverbot_ts.objectid",
+      "ruhver_mim_fahrverbot_ts.status",
+      "objectid",
+      "status"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "ruhver_mim_fahrverbot_ts.bearbeitung_datum",
+      "bearbeitung_datum",
+      "featureMember.ruhver_mim_fahrverbot_ts.bearbeitung_datum"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ruhver_mim_fahrverbot_ts.objectid"
+    }
+  },
+  "quality_score": 6.5,
+  "cleaning_notes": {
+    "dropped_columns": 44,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  }
+}

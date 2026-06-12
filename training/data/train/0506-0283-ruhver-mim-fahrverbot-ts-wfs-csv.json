@@ -1,0 +1,223 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Fahrverbotszonen für E-Tretroller and compare objectid by tretrollersharing.",
+  "query_result": {
+    "dataset_title": "Fahrverbotszonen für E-Tretroller",
+    "package_id": "ebaeedf2-0dee-47f4-8c6b-1b85d5218739",
+    "package_name": "ruhver_mim_fahrverbot_ts",
+    "resource_id": "fd60b0d5-5cbe-465c-a3f0-002fa824fd0d",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Dieser Layer beinhaltet Fahrverbotszonen für Fahrzeuge des E-Tretrollersharings. Innerhalb dieser Zonen ist das Fahren mit E-Tretrollern verboten. Temporäre Fahrverbotszonen (bspw. aufgrund von Baustellen oder Veranstaltungen) werden Ocker angezeigt. Das Hinweisfeld gibt Informationen zur Dauer und Art.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 57,
+    "sampled_rows": 57,
+    "column_count": 14,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 57,
+        "null_count": 0,
+        "examples": [
+          34,
+          44,
+          41,
+          45,
+          30
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 1.0,
+          "max": 5457.0,
+          "mean": 133.1579,
+          "median": 29.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 57,
+        "null_count": 0,
+        "examples": [
+          2
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "int64",
+        "kind": "date",
+        "non_null_count": 57,
+        "null_count": 0,
+        "examples": [
+          20260127,
+          20260512,
+          20260325,
+          20260610
+        ],
+        "numeric": {
+          "count": 57.0,
+          "min": 20260127.0,
+          "max": 20260610.0,
+          "mean": 20260145.7018,
+          "median": 20260127.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 57,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOLYGON (((682852.8719006623 5339074.681498447, 682852.8648006622 5339074.481998447, 682852.8537006626 5339074.279398447, 682852.8415006626 5339074.0796984",
+          "MULTIPOLYGON (((691300.2211008305 5334369.8769979905, 691290.9025008304 5334375.864997991, 691307.430200831 5334415.599697989, 691308.1093008308 5334417.2336979",
+          "MULTIPOLYGON (((691295.0756008305 5335264.443797991, 691288.7707008305 5335261.470597989, 691279.8221008305 5335257.19179799, 691279.5234008303 5335257.15509799",
+          "MULTIPOLYGON (((693620.0856008811 5337110.67789783, 693616.5828008811 5337104.035397831, 693600.5870008811 5337116.672297831, 693600.8679008808 5337117.43429783",
+          "MULTIPOLYGON (((679161.3044005984 5336133.222298612, 679149.8936005984 5336129.127798611, 679143.1271005986 5336129.719298611, 679135.4527005986 5336132.2839986"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "tretrollersharing",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 57,
+        "null_count": 0,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 2,
+        "null_count": 55,
+        "examples": [
+          "16.05.2026",
+          "13.06.2026"
+        ],
+        "null_rate": 0.9649
+      },
+      {
+        "name": "gueltigkeit_datum_ende",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 2,
+        "null_count": 55,
+        "examples": [
+          "18.05.2026",
+          "14.06.2026"
+        ],
+        "null_rate": 0.9649
+      },
+      {
+        "name": "veranstaltung_name",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 2,
+        "null_count": 55,
+        "examples": [
+          "Meisterfeier FCB 2026",
+          "Veranstaltung: Stadtgeburtstag 2026"
+        ],
+        "null_rate": 0.9649
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "float64",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 57,
+        "null_rate": 1.0
+      },
+      {
+        "name": "bikesharing",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 54,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.9474
+      },
+      {
+        "name": "lastenradsharing",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 54,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.9474
+      },
+      {
+        "name": "motorrollersharing",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 2,
+        "null_count": 55,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.9649
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "status"
+    ],
+    "category_columns": [
+      "tretrollersharing",
+      "veranstaltung_name",
+      "bikesharing",
+      "lastenradsharing"
+    ],
+    "time_columns": [
+      "bearbeitung_datum",
+      "gueltigkeit_datum_start",
+      "gueltigkeit_datum_ende"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "tretrollersharing",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 7.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

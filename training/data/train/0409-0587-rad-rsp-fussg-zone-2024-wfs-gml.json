@@ -1,0 +1,302 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of rad_rsp_fussg_zone.objectid in Radlstadtplan (Fußgängerzone).",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Fußgängerzone)",
+    "package_id": "8c9fe3dc-e5c9-4cdf-a889-4d89531f9254",
+    "package_name": "rad_rsp_fussg_zone_2024",
+    "resource_id": "ac4c85e3-c71d-421a-97b3-844605904bf3",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Eine Fußgängerzone ist ein Bereich in der Stadt, der hauptsächlich für Zufußgehende gedacht ist. Autos und andere Fahrzeuge dürfen hier normalerweise nicht fahren. In München ist Fahrradfahren in der Altstadt-Fußgängerzone sowie in der Sendlinger Straße zwischen 21 und 9 Uhr erlaubt. Hierdurch wird die morgendliche Fahrt mit dem Rad zur Arbeit erleichtert und das ungehinderte Queren der Innenstadt in Nord-Süd-Richtung ermöglicht. Allerdings bleibt sie ein Bereich, in dem alle ungestört spazieren",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Fussgängerzone",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 808,
+    "sampled_rows": 808,
+    "column_count": 53,
+    "columns": [
+      {
+        "name": "rad_rsp_fussg_zone.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "31322",
+          "76625",
+          "275734",
+          "4998",
+          "86924"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 4998.0,
+          "max": 292531.0,
+          "mean": 88948.0388,
+          "median": 68661.0
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "rad_rsp_fussg_zone.ebene",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "99"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 99.0,
+          "max": 99.0,
+          "mean": 99.0,
+          "median": 99.0
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "rad_rsp_fussg_zone.x",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "710946.34795865",
+          "691652.75868872",
+          "691793.05855603",
+          "688019.82904604",
+          "697273.15406431"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 665425.5642,
+          "max": 713277.8268,
+          "mean": 692206.6139,
+          "median": 691596.9595
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "rad_rsp_fussg_zone.y",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "5329791.75033963",
+          "5334743.75015825",
+          "5334512.11755056",
+          "5323937.74104015",
+          "5354952.26783544"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 5316754.7271,
+          "max": 5355317.9978,
+          "mean": 5335048.5592,
+          "median": 5334782.3804
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "rad_rsp_fussg_zone.flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "2073.13252208",
+          "18935.47708875",
+          "2579.74258635",
+          "2539.6826278",
+          "3746.61768537"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 246.3243,
+          "max": 33682.0383,
+          "mean": 3883.947,
+          "median": 2349.066
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "rad_rsp_fussg_zone.nr_oid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "rad_rsp_fussg_zone.ebene_tmp",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "99",
+          "0",
+          "85",
+          "81"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 0.0,
+          "max": 99.0,
+          "mean": 85.7054,
+          "median": 99.0
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "31322",
+          "76625",
+          "275734",
+          "4998",
+          "86924"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 4998.0,
+          "max": 292531.0,
+          "mean": 88948.0388,
+          "median": 68661.0
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "ebene",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "99"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 99.0,
+          "max": 99.0,
+          "mean": 99.0,
+          "median": 99.0
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "x",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "710946.34795865",
+          "691652.75868872",
+          "691793.05855603",
+          "688019.82904604",
+          "697273.15406431"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 665425.5642,
+          "max": 713277.8268,
+          "mean": 692206.6139,
+          "median": 691596.9595
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "y",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "5329791.75033963",
+          "5334743.75015825",
+          "5334512.11755056",
+          "5323937.74104015",
+          "5354952.26783544"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 5316754.7271,
+          "max": 5355317.9978,
+          "mean": 5335048.5592,
+          "median": 5334782.3804
+        },
+        "null_rate": 0.8403
+      },
+      {
+        "name": "flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 129,
+        "null_count": 679,
+        "examples": [
+          "2073.13252208",
+          "18935.47708875",
+          "2579.74258635",
+          "2539.6826278",
+          "3746.61768537"
+        ],
+        "numeric": {
+          "count": 129.0,
+          "min": 246.3243,
+          "max": 33682.0383,
+          "mean": 3883.947,
+          "median": 2349.066
+        },
+        "null_rate": 0.8403
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_rsp_fussg_zone.objectid",
+      "rad_rsp_fussg_zone.ebene",
+      "rad_rsp_fussg_zone.x",
+      "rad_rsp_fussg_zone.y"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "rad_rsp_fussg_zone.objectid"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 40,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of nr in Straßennetzgraf Baureferat Tiefbau.",
+  "query_result": {
+    "dataset_title": "Straßennetzgraf Baureferat Tiefbau",
+    "package_id": "4c75a77d-f72f-4229-8edc-4a85ff921b6f",
+    "package_name": "baut_strassenabschnitte_wu",
+    "resource_id": "a7bd1469-062d-4d43-8e25-c52d5f10a0da",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Der Straßennetzgraf der Hauptabteilung Tiefbau ist ein Linienthema, das Straßenzüge der Landeshauptstadt München durch ein Netzwerk abbildet. Berücksichtigt werden in dieser Kartendarstellung nur Straßen bzw. Straßenabschnitte, die nach Bayerischem Straßen- und Wegegesetz (BayStrWG) sowie dem Bundesfernstraßengesetz (FStrG) gewidmet und in der Baulast der Landeshauptstadt München und somit in der Zuständigkeit der Hauptabteilung Tiefbau sind. Die Beschriftung setzt sich aus den folgenden Kompone",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "nr",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          500,
+          300,
+          100,
+          600,
+          200
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 25.0,
+          "max": 7500.0,
+          "mean": 420.917,
+          "median": 200.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "laenge",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          334.31926808,
+          113.14597083,
+          119.17800454,
+          123.85695526,
+          131.81988873
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 10.6254,
+          "max": 1948.765,
+          "mean": 135.4146,
+          "median": 106.2757
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "str_nr",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 995,
+        "null_count": 5,
+        "examples": [
+          1884.0,
+          3222.0,
+          1285.0,
+          5777.0,
+          5379.0
+        ],
+        "numeric": {
+          "count": 995.0,
+          "min": 0.0,
+          "max": 40008.0,
+          "mean": 3432.7095,
+          "median": 3311.0
+        },
+        "null_rate": 0.005
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((694378.0486008981 5337992.504997776, 694469.8787009004 5338159.840097768, 694488.7343009008 5338191.714097767, 694509.3713009012 5338228.07389",
+          "MULTILINESTRING ((695058.8595009138 5338666.5484977225, 695069.342600914 5338666.767897724, 695081.4791009142 5338666.866797722, 695095.3957009146 5338662.40819",
+          "MULTILINESTRING ((695599.4233009263 5338659.753397685, 695599.3281009264 5338667.631797684, 695598.0159009262 5338675.8378976835, 695597.0678009262 5338686.9357",
+          "MULTILINESTRING ((695599.4233009263 5338659.753397685, 695591.3909009262 5338649.242097685, 695585.338000926 5338636.305797684, 695577.5823009257 5338622.865697",
+          "MULTILINESTRING ((695889.4001009329 5338838.743197662, 695897.9140009332 5338837.823297661, 695906.8760009336 5338834.897297662, 695922.0612009338 5338827.50319"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "nr",
+      "laenge",
+      "str_nr"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "nr"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

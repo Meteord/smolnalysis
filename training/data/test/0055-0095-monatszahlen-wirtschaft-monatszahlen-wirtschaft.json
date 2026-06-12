@@ -1,0 +1,237 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Wirtschaft and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Wirtschaft",
+    "package_id": "daeaf20a-9e7c-4e68-8a97-175242d43c7f",
+    "package_name": "monatszahlen-wirtschaft",
+    "resource_id": "cdf75551-993c-4410-8621-2709400629eb",
+    "resource_name": "Monatszahlen Wirtschaft",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Wirtschaft__ beinhaltet die Themen * Handwerksbetriebe * Bauhauptgewerbe * Verarbeitendes Gewerbe * Gewerbean- und -abmeldungen * Steuern Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 5996,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Summe",
+          "202601",
+          "202602",
+          "202603",
+          "202604"
+        ],
+        "numeric": {
+          "count": 939.0,
+          "min": 200901.0,
+          "max": 202612.0,
+          "mean": 201803.2907,
+          "median": 201810.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "55124",
+          "NA",
+          "1478347",
+          "103251",
+          "83499"
+        ],
+        "numeric": {
+          "count": 945.0,
+          "min": 48.0,
+          "max": 1478347.0,
+          "mean": 40807.3418,
+          "median": 640.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1478347",
+          "103251",
+          "83499",
+          "499396",
+          "62621"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 48.0,
+          "max": 1478347.0,
+          "mean": 39733.331,
+          "median": 617.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-44.3",
+          "86.7",
+          "-19.13",
+          "498.09"
+        ],
+        "numeric": {
+          "count": 884.0,
+          "min": -89.75,
+          "max": 1177.64,
+          "mean": 8.6234,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "-96.27",
+          "-46.61",
+          "NA",
+          "29.4",
+          "18.36"
+        ],
+        "numeric": {
+          "count": 945.0,
+          "min": -96.27,
+          "max": 676.06,
+          "mean": 9.3164,
+          "median": 3.53
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "119185",
+          "96539",
+          "97549",
+          "124587"
+        ],
+        "numeric": {
+          "count": 884.0,
+          "min": 50.0,
+          "max": 138732.0,
+          "mean": 21347.3213,
+          "median": 540.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2009.0,
+          "max": 2026.0,
+          "mean": 2017.978,
+          "median": 2018.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Auftragseingänge",
+          "Betriebe",
+          "Entgelte",
+          "Geleistete Arbeitsstunden - insgesamt",
+          "Geleistete Arbeitsstunden - Wohnungsbau"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Bauhauptgewerbe"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

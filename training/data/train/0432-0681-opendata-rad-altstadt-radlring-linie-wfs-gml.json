@@ -1,0 +1,205 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (GML) from Altstadt-Radlring.",
+  "query_result": {
+    "dataset_title": "Altstadt-Radlring",
+    "package_id": "35a432a2-14b7-4184-852b-d1a6eae4cd1b",
+    "package_name": "opendata_rad_altstadt_radlring_linie",
+    "resource_id": "d06e5bf7-e95a-4c31-900a-e265fdbeefde",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Radlring um die Münchner Altstadt als Ergebnis des erfolgreichen Bürgerbegehrens und Stadtratsbeschlusses zur Stärkung der Radinfrastruktur. Die Ausbaustandards sehen baulich getrennte und durchgehend grün eingefärbte Radwege mit 2,80 Meter Regelbreite vor. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/radentscheid/altstadt-radlring\">muenchenunterwegs.de/radentscheid/altstadt-radlring</a>",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 66,
+    "sampled_rows": 66,
+    "column_count": 34,
+    "columns": [
+      {
+        "name": "rad_altstadt_radlring_line.sachstand",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 16,
+        "null_count": 50,
+        "examples": [
+          "Umsetzung erfolgt (BAU)",
+          "Planung beschlossen (MOR)"
+        ],
+        "null_rate": 0.7576
+      },
+      {
+        "name": "sachstand",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 16,
+        "null_count": 50,
+        "examples": [
+          "Umsetzung erfolgt (BAU)",
+          "Planung beschlossen (MOR)"
+        ],
+        "null_rate": 0.7576
+      },
+      {
+        "name": "rad_altstadt_radlring_line.link_stadtratsbeschluss",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 61,
+        "examples": [
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/5555983",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/6995674",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/5825441",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7095778",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/6467090"
+        ],
+        "null_rate": 0.9242
+      },
+      {
+        "name": "link_stadtratsbeschluss",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 61,
+        "examples": [
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/5555983",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/6995674",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/5825441",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7095778",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/6467090"
+        ],
+        "null_rate": 0.9242
+      },
+      {
+        "name": "rad_altstadt_radlring_line.link_folien",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 61,
+        "examples": [
+          "https://muenchenunterwegs.de/content/855/download/veranstaltung-arri-lenbachplatz-von-dertann-20210616-1.pdf",
+          "https://muenchenunterwegs.de/content/855/download/20240306-rsv-altstadtradlring-brienner-odeonsplatz-ludwigstr-2.pdf"
+        ],
+        "null_rate": 0.9242
+      },
+      {
+        "name": "link_folien",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 61,
+        "examples": [
+          "https://muenchenunterwegs.de/content/855/download/veranstaltung-arri-lenbachplatz-von-dertann-20210616-1.pdf",
+          "https://muenchenunterwegs.de/content/855/download/20240306-rsv-altstadtradlring-brienner-odeonsplatz-ludwigstr-2.pdf"
+        ],
+        "null_rate": 0.9242
+      },
+      {
+        "name": "rad_altstadt_radlring_line.shape.LineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 16,
+        "null_count": 50,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7576
+      },
+      {
+        "name": "rad_altstadt_radlring_line.shape.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 16,
+        "null_count": 50,
+        "examples": [
+          "691284.81000083,5334159.37409799 691256.61840083,5334148.74269799 691232.39990083,5334145.149398 691205.00710083,5334155.195098 691127.20010083,5334195.061698 6",
+          "692225.39370085,5335553.31589793 692234.73590085,5335525.81719793 692216.36150085,5335461.46379793 692148.91240085,5335225.20679793",
+          "692148.91240085,5335225.20679793 692153.10550085,5335194.42389793 692179.06050085,5335155.51899793 692265.87940085,5335041.35179793 692287.10150085,5335008.3743",
+          "691807.49970084,5335621.90569796 691820.11840084,5335668.43499795 691832.73420084,5335665.22419795 692122.52610085,5335586.60109794 692202.46950085,5335570.5858",
+          "692263.18070085,5334830.14769793 692253.63090085,5334764.14479793 692235.30550085,5334677.37109793 692219.64790085,5334641.34169793 692188.46390085,5334589.8447"
+        ],
+        "null_rate": 0.7576
+      },
+      {
+        "name": "shape.LineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 16,
+        "null_count": 50,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7576
+      },
+      {
+        "name": "shape.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 16,
+        "null_count": 50,
+        "examples": [
+          "691284.81000083,5334159.37409799 691256.61840083,5334148.74269799 691232.39990083,5334145.149398 691205.00710083,5334155.195098 691127.20010083,5334195.061698 6",
+          "692225.39370085,5335553.31589793 692234.73590085,5335525.81719793 692216.36150085,5335461.46379793 692148.91240085,5335225.20679793",
+          "692148.91240085,5335225.20679793 692153.10550085,5335194.42389793 692179.06050085,5335155.51899793 692265.87940085,5335041.35179793 692287.10150085,5335008.3743",
+          "691807.49970084,5335621.90569796 691820.11840084,5335668.43499795 691832.73420084,5335665.22419795 692122.52610085,5335586.60109794 692202.46950085,5335570.5858",
+          "692263.18070085,5334830.14769793 692253.63090085,5334764.14479793 692235.30550085,5334677.37109793 692219.64790085,5334641.34169793 692188.46390085,5334589.8447"
+        ],
+        "null_rate": 0.7576
+      },
+      {
+        "name": "rad_altstadt_radlring_line.fid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 16,
+        "null_count": 50,
+        "examples": [
+          "rad_altstadt_radlring_line.1",
+          "rad_altstadt_radlring_line.2",
+          "rad_altstadt_radlring_line.3",
+          "rad_altstadt_radlring_line.4",
+          "rad_altstadt_radlring_line.5"
+        ],
+        "null_rate": 0.7576
+      },
+      {
+        "name": "rad_altstadt_radlring_line.abschnitt_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 16,
+        "null_count": 50,
+        "examples": [
+          "Blumenstraße",
+          "Franz-Josef-Strauß-Ring",
+          "Karl-Scharnagl-Ring",
+          "Von-der-Tann-Straße",
+          "Thomas-Wimmer-Ring"
+        ],
+        "null_rate": 0.7576
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "rad_altstadt_radlring_line.sachstand",
+      "sachstand",
+      "rad_altstadt_radlring_line.link_stadtratsbeschluss",
+      "link_stadtratsbeschluss"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 3.25,
+  "cleaning_notes": {
+    "dropped_columns": 21,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

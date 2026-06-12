@@ -1,0 +1,143 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (CSV) from Parkraummanagementgebiete.",
+  "query_result": {
+    "dataset_title": "Parkraummanagementgebiete",
+    "package_id": "78dd2e3c-47df-4124-8961-72083af714e1",
+    "package_name": "opendata_ruhver_prm_gebiete_poly",
+    "resource_id": "96f4952d-0cc3-48fd-af3f-0b929ffa39a1",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Gebiete, in denen der öffentliche Parkraum bewirtschaftet wird. Darunter fallen Parkraumlizenzgebiete und Parkraumbewirtschaftungsgebiete.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Parkraummanagementgebiete",
+      "Verkehr"
+    ],
+    "groups": [],
+    "row_count": 82,
+    "sampled_rows": 82,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 82,
+        "null_count": 0,
+        "examples": [
+          "in Betrieb",
+          "in Umsetzung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "massnahme",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 82,
+        "null_count": 0,
+        "examples": [
+          "Lizenzgebiet in Betrieb",
+          "Parkraumbewirtschaftung",
+          "in Betrieb mit Altstadttarif",
+          "Lizenzgebiet in Umsetzung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ueberwachung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 82,
+        "null_count": 0,
+        "examples": [
+          "KVÜ",
+          "Polizei",
+          ""
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 82,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((687331.3053007489 5332306.06419823, 687339.9200007492 5332297.709998229, 687343.3700007491 5332228.169998229, 687421.8400007507 5331998.139998224, 687",
+          "POLYGON ((688291.6718007681 5332730.216698175, 688293.9455007683 5332714.641198176, 688270.7944007677 5332681.766598176, 688258.2532007673 5332664.581898176, 68",
+          "POLYGON ((687353.8800007481 5339135.439998218, 687343.9310007478 5339009.7603982175, 687368.3966007483 5338992.611598218, 687439.4337007498 5338946.009798212, 6",
+          "POLYGON ((688168.3800007657 5331973.739998184, 688205.9800007665 5331976.85999818, 688204.8100007665 5332038.309998181, 688204.2100007666 5332072.409998181, 688",
+          "POLYGON ((691397.9268008334 5331808.16529799, 691394.8561008344 5331808.50649799, 691389.3938008331 5331809.11339799, 691385.198200833 5331809.93429799, 691378."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 82,
+        "null_count": 0,
+        "examples": [
+          "Partnachplatz",
+          "Südliche Hansastraße",
+          "Seydlitzplatz",
+          "Eichendorffplatz",
+          "Schönstraße Nord"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "eroeffnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 81,
+        "null_count": 1,
+        "examples": [
+          "15.12.2025",
+          "28.07.2023",
+          "24.11.2023",
+          "31.07.2020",
+          "22.11.2019"
+        ],
+        "null_rate": 0.0122
+      },
+      {
+        "name": "einzeluebersicht_link",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 78,
+        "null_count": 4,
+        "examples": [
+          "https://muenchenunterwegs.de/downloads/Parklizenzgebiete/Stadtteile/Sendling-Westpark/Einzel%C3%BCbersicht/Partnachplatz.pdf",
+          "https://muenchenunterwegs.de/downloads/Parklizenzgebiete/Stadtteile/Sendling-Westpark/Einzel%C3%BCbersicht/S%C3%BCdliche%20Hansastra%C3%9Fe.pdf",
+          "https://muenchenunterwegs.de/downloads/Parklizenzgebiete/Stadtteile/Moosach/Einzel%C3%BCbersicht/Seydlitzplatz.pdf",
+          "https://muenchenunterwegs.de/downloads/Parklizenzgebiete/Stadtteile/Sendling-Westpark/Einzel%C3%BCbersicht/Eichendorffplatz.pdf",
+          "https://muenchenunterwegs.de/downloads/Parklizenzgebiete/Stadtteile/Untergiesing-Harlaching/Einzel%C3%BCbersicht/Sch%C3%B6nstra%C3%9Fe%20Nord.pdf"
+        ],
+        "null_rate": 0.0488
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "status",
+      "massnahme",
+      "ueberwachung"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

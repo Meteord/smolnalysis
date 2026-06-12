@@ -1,0 +1,252 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Lichtsignalanlagen and compare featureMember.lsa_opendata.abbau by lsa_opendata.zeb.",
+  "query_result": {
+    "dataset_title": "Lichtsignalanlagen",
+    "package_id": "ae13375a-f838-4fb3-9035-b13163c6f68a",
+    "package_name": "lsa_opendata",
+    "resource_id": "c94d2d03-78bc-49d2-8dc7-d9cc341ee884",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "In diesem Dienst werden Lichtsignalanlagen (Ampeln) dargestellt.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Verkehr"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 37,
+    "columns": [
+      {
+        "name": "featureMember.lsa_opendata.abbau",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "20210913"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 20210913.0,
+          "max": 20210913.0,
+          "mean": 20210913.0,
+          "median": 20210913.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.lsa_opendata.abbaud",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "20210913000000.000000"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 20210913000000.0,
+          "max": 20210913000000.0,
+          "mean": 20210913000000.0,
+          "median": 20210913000000.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "lsa_opendata.zeb",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 208,
+        "null_count": 792,
+        "examples": [
+          "TA",
+          "T"
+        ],
+        "null_rate": 0.792
+      },
+      {
+        "name": "lsa_opendata.zeb_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 208,
+        "null_count": 792,
+        "examples": [
+          "Anlage ist mit einer Einrichtung mit taktilem und akustischem Signal ausgestattet",
+          "Anlage ist mit einer Einrichtung mit taktilem Signal ausgestattet"
+        ],
+        "null_rate": 0.792
+      },
+      {
+        "name": "zeb",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 208,
+        "null_count": 792,
+        "examples": [
+          "TA",
+          "T"
+        ],
+        "null_rate": 0.792
+      },
+      {
+        "name": "zeb_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 208,
+        "null_count": 792,
+        "examples": [
+          "Anlage ist mit einer Einrichtung mit taktilem und akustischem Signal ausgestattet",
+          "Anlage ist mit einer Einrichtung mit taktilem Signal ausgestattet"
+        ],
+        "null_rate": 0.792
+      },
+      {
+        "name": "lsa_opendata.lon",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "11.511451",
+          "11.58903289",
+          "11.53804207",
+          "11.52022861",
+          "11.511419"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 11.3988,
+          "max": 11.6834,
+          "mean": 11.5582,
+          "median": 11.5637
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "lsa_opendata.lat",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "48.15852",
+          "48.12483835",
+          "48.10036344",
+          "48.15011081",
+          "48.15442"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 48.0761,
+          "max": 48.2157,
+          "mean": 48.1389,
+          "median": 48.1393
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "lon",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "11.511451",
+          "11.58903289",
+          "11.53804207",
+          "11.52022861",
+          "11.511419"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 11.3988,
+          "max": 11.6834,
+          "mean": 11.5582,
+          "median": 11.5637
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "lat",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "48.15852",
+          "48.12483835",
+          "48.10036344",
+          "48.15011081",
+          "48.15442"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 48.0761,
+          "max": 48.2157,
+          "mean": 48.1389,
+          "median": 48.1393
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "lsa_opendata.shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "lsa_opendata.shape.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "686761.78852072,5336969.6225507",
+          "692656.7388688,5333417.7913707",
+          "688952.40858895,5330571.25507262",
+          "687445.12479623,5336056.41407517",
+          "686774.29777099,5336513.88213305"
+        ],
+        "null_rate": 0.75
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "featureMember.lsa_opendata.abbau",
+      "featureMember.lsa_opendata.abbaud"
+    ],
+    "category_columns": [
+      "lsa_opendata.zeb",
+      "lsa_opendata.zeb_bedeutung",
+      "zeb",
+      "zeb_bedeutung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "lsa_opendata.zeb",
+      "y": "featureMember.lsa_opendata.abbau"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 24,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

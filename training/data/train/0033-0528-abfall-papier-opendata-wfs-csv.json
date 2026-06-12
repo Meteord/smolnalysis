@@ -1,0 +1,314 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of strnr in Anlagen zur Lagerung und Behandlung von Altpapier (Opendata).",
+  "query_result": {
+    "dataset_title": "Anlagen zur Lagerung und Behandlung von Altpapier (Opendata)",
+    "package_id": "0245916e-3ebd-4f63-a366-f0edf885e2ac",
+    "package_name": "abfall_papier_opendata",
+    "resource_id": "865158fe-f2d8-4774-8a5b-d80ec13ba6b9",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Anlagen zur Lagerung und Behandlung von Altpapier",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Umweltschutz",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 38,
+    "sampled_rows": 38,
+    "column_count": 21,
+    "columns": [
+      {
+        "name": "strnr",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          5390,
+          797,
+          1574,
+          2853,
+          3167
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 6563.0,
+          "mean": 4413.2632,
+          "median": 5390.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezirk",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          24,
+          10,
+          23,
+          21,
+          11
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 24.0,
+          "mean": 16.4211,
+          "median": 15.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "plz",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          80639,
+          80997,
+          80993,
+          80999,
+          81249
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 82008.0,
+          "mean": 79113.1053,
+          "median": 81122.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbez_",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          24,
+          10,
+          23,
+          22,
+          11
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 24.0,
+          "mean": 15.5,
+          "median": 15.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "spalte",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          2,
+          1,
+          0
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 0.9737,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "leg_code",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          22,
+          42,
+          41,
+          32,
+          12
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 0.0,
+          "max": 82.0,
+          "mean": 24.4737,
+          "median": 22.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "leg_neu",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          2,
+          1,
+          3,
+          7,
+          4
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 1.0,
+          "max": 7.0,
+          "mean": 3.8158,
+          "median": 3.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "nr_4__bims",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 20,
+        "null_count": 18,
+        "examples": [
+          "08.04",
+          "08.09.",
+          "08.09",
+          "08.05",
+          "08.11"
+        ],
+        "numeric": {
+          "count": 19.0,
+          "min": 8.04,
+          "max": 8.12,
+          "mean": 8.0811,
+          "median": 8.09
+        },
+        "null_rate": 0.4737
+      },
+      {
+        "name": "bims_nr_4",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 20,
+        "null_count": 18,
+        "examples": [
+          "08.04 und 08.12",
+          "08.09.",
+          "08.09",
+          "08.05",
+          "08.04"
+        ],
+        "numeric": {
+          "count": 13.0,
+          "min": 8.04,
+          "max": 8.12,
+          "mean": 8.0785,
+          "median": 8.09
+        },
+        "null_rate": 0.4737
+      },
+      {
+        "name": "betr_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "96 (Pelkovenstr. 145)",
+          "16238 (Rupert-Bodner-Str. 25)",
+          "933 (Riesenfeldstraße 87)",
+          "13646 u. 13134",
+          "696"
+        ],
+        "numeric": {
+          "count": 8.0,
+          "min": 669.0,
+          "max": 30046.0,
+          "mean": 9244.0,
+          "median": 4735.5
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "x_koord",
+        "dtype": "int64",
+        "kind": "geospatial",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          690020,
+          685649,
+          685775,
+          680868,
+          681376
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 680010.0,
+          "max": 701858.0,
+          "mean": 689938.7632,
+          "median": 690127.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "y_koord",
+        "dtype": "int64",
+        "kind": "geospatial",
+        "non_null_count": 38,
+        "null_count": 0,
+        "examples": [
+          5340721,
+          5340677,
+          5340565,
+          5339943,
+          5338589
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 5330047.0,
+          "max": 5344722.0,
+          "mean": 5337896.3421,
+          "median": 5338851.5
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "strnr",
+      "bezirk",
+      "plz",
+      "stadtbez_"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "strnr"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 8,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

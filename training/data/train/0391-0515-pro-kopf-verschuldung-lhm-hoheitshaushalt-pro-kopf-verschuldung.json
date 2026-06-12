@@ -1,0 +1,95 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of schulden_in_euro_je_einwohner-in in Pro-Kopf-Verschuldung LHM, Hoheitshaushalt.",
+  "query_result": {
+    "dataset_title": "Pro-Kopf-Verschuldung LHM, Hoheitshaushalt",
+    "package_id": "2c15a2b2-e9d6-422c-8418-6f0e33fc854b",
+    "package_name": "pro-kopf-verschuldung-lhm-hoheitshaushalt",
+    "resource_id": "7fb99cdc-8c43-401c-8a8a-c0839838550e",
+    "resource_name": "Pro Kopf Verschuldung",
+    "resource_format": "csv",
+    "description": "Darstellung der Entwicklung der Pro-Kopf-Verschuldung des Hoheitshaushalt der Landeshauptstadt München (LHM) seit 1974 in € (Stand jeweils 31.12.)",
+    "organization": "Stadtkämmerei der Landeshauptstadt München",
+    "tags": [
+      "Finanzen",
+      "Haushalt"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 51,
+    "sampled_rows": 51,
+    "column_count": 3,
+    "columns": [
+      {
+        "name": "schulden_in_euro_je_einwohner-in",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 51,
+        "null_count": 0,
+        "examples": [
+          "547",
+          "571",
+          "580",
+          "546",
+          "482"
+        ],
+        "numeric": {
+          "count": 51.0,
+          "min": 407.0,
+          "max": 3358.0,
+          "mean": 1213.9608,
+          "median": 1022.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 51,
+        "null_count": 0,
+        "examples": [
+          "1974",
+          "1975",
+          "1976",
+          "1977",
+          "1978"
+        ],
+        "numeric": {
+          "count": 51.0,
+          "min": 1974.0,
+          "max": 2024.0,
+          "mean": 1999.0,
+          "median": 1999.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "schulden_in_euro_je_einwohner-in"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "schulden_in_euro_je_einwohner-in"
+    }
+  },
+  "quality_score": 5.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of flaeche in Kehrbezirke.",
+  "query_result": {
+    "dataset_title": "Kehrbezirke",
+    "package_id": "2883acd9-6fd9-4475-a79a-a7a7a3ce0a23",
+    "package_name": "kehrbezirke_opendata",
+    "resource_id": "30d739d1-b46a-4ba6-9149-91e7f0229845",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Bei den Kehrbezirken handelt es sich um Flächen innerhalb Münchens denen jeweils ein*e Bezirksschornsteinfeger*in durch die Regierung von Oberbayern für die hoheitlichen Aufgaben zugewiesen wurde. Dieser/Diese führt alle hoheitlichen Aufgaben in einem Bezirk aus (z.B. Feuerstättenschau, baurechtliche Abnahmen). <a href=\"stadt.muenchen.de/service/info/kaminkehrer/1049919/n0/\" target=\"_blank\">Online Kaminkehrersuche auf Muenchen.de</a>",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Umwelt",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 877,
+    "sampled_rows": 877,
+    "column_count": 32,
+    "columns": [
+      {
+        "name": "flaeche",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 175,
+        "null_count": 702,
+        "examples": [
+          "257493",
+          "88217",
+          "145375",
+          "9941",
+          "24861"
+        ],
+        "numeric": {
+          "count": 175.0,
+          "min": 3353.0,
+          "max": 17943014.0,
+          "mean": 1864648.2343,
+          "median": 505856.0
+        },
+        "null_rate": 0.8005
+      },
+      {
+        "name": "kehrbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 175,
+        "null_count": 702,
+        "examples": [
+          "87",
+          "06",
+          "29",
+          "09",
+          "36"
+        ],
+        "numeric": {
+          "count": 175.0,
+          "min": 1.0,
+          "max": 99.0,
+          "mean": 44.8571,
+          "median": 39.0
+        },
+        "null_rate": 0.8005
+      },
+      {
+        "name": "Polygon.srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 175,
+        "null_count": 702,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 175.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8005
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 175,
+        "null_count": 702,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 175.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8005
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 876,
+        "examples": [
+          "175"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 175.0,
+          "max": 175.0,
+          "mean": 175.0,
+          "median": 175.0
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "featureMembers.kehrbezirke.flaeche",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 876,
+        "examples": [
+          "3432285"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 3432285.0,
+          "max": 3432285.0,
+          "mean": 3432285.0,
+          "median": 3432285.0
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "featureMembers.kehrbezirke.kehrbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 876,
+        "examples": [
+          "36"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 36.0,
+          "max": 36.0,
+          "mean": 36.0,
+          "median": 36.0
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "kehrbezirke.flaeche",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 876,
+        "examples": [
+          "3432285"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 3432285.0,
+          "max": 3432285.0,
+          "mean": 3432285.0,
+          "median": 3432285.0
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "kehrbezirke.kehrbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 876,
+        "examples": [
+          "36"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 36.0,
+          "max": 36.0,
+          "mean": 36.0,
+          "median": 36.0
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "shape.Polygon.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 175,
+        "null_count": 702,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 175.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8005
+      },
+      {
+        "name": "shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 175,
+        "null_count": 702,
+        "examples": [
+          "urn:x-ogc:def:crs:EPSG:25832"
+        ],
+        "null_rate": 0.8005
+      },
+      {
+        "name": "shape.Polygon.exterior.LinearRing.posList",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 175,
+        "null_count": 702,
+        "examples": [
+          "682040.04260065 5339365.35249848 682044.39920065 5339369.00509848 682057.54470065 5339376.87329848 682083.21880065 5339392.24159848 682095.75530065 5339398.7289",
+          "680966.10690063 5337403.87569853 680967.57960063 5337399.72549853 680972.70760063 5337385.27069853 680976.32410063 5337386.03909853 681000.53340063 5337391.1887",
+          "683678.17650068 5335097.08719841 683675.60430068 5335088.49599841 683725.20720068 5335087.91349841 683717.52470068 5335063.89999841 683730.77180068 5335065.3310",
+          "691381.57380083 5336597.46249798 691378.53740083 5336589.99669798 691486.75610083 5336546.09129798 691517.25710084 5336623.62029797 691518.50180083 5336626.7787",
+          "690804.62810082 5336514.51559802 690764.37900082 5336401.55709802 690955.63790082 5336327.70139801 690995.19900082 5336429.24089801 690999.84200082 5336439.8654"
+        ],
+        "null_rate": 0.8005
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "flaeche",
+      "kehrbezirk",
+      "Polygon.srsDimension",
+      "srsDimension"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "flaeche"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 20,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

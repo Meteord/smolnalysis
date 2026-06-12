@@ -1,0 +1,267 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of glas_braun in Barrierefreie Container für Altglas.",
+  "query_result": {
+    "dataset_title": "Barrierefreie Container für Altglas",
+    "package_id": "297f0915-eb0e-44b8-b2ed-77f6d4590d7c",
+    "package_name": "awm_container_barrierefrei",
+    "resource_id": "2d65471e-a850-4128-9421-dbbe47a0fa02",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Der Dienst liefert einen Überblick über die Standorte der barrierefreien Container für Altglas. Die Übersicht erhebt keinen Anspruch auf Aktualität, Richtigkeit und Vollständigkeit. Für die Leerung der Wertstoffcontainer für Glas, die Sauberkeit der Wertstoffinseln und die Standortauswahl sind die Firmen REMONDIS und Wittmann zuständig. Bitte wenden Sie sich bei Fragen an die für die jeweilige Wertstoffinsel zuständige Firma.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Ver- und Entsorgung",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 14,
+    "sampled_rows": 14,
+    "column_count": 39,
+    "columns": [
+      {
+        "name": "glas_braun",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 10,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.7143
+      },
+      {
+        "name": "glas_gruen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 10,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.7143
+      },
+      {
+        "name": "glas_weiss",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 10,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.7143
+      },
+      {
+        "name": "barrierefrei",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 10,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.7143
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 10,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.7143
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 13,
+        "examples": [
+          "4"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4.0,
+          "max": 4.0,
+          "mean": 4.0,
+          "median": 4.0
+        },
+        "null_rate": 0.9286
+      },
+      {
+        "name": "featureMembers.awm_container_barrierefrei.glas_braun",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 13,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9286
+      },
+      {
+        "name": "featureMembers.awm_container_barrierefrei.glas_gruen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 13,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9286
+      },
+      {
+        "name": "featureMembers.awm_container_barrierefrei.glas_weiss",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 13,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9286
+      },
+      {
+        "name": "featureMembers.awm_container_barrierefrei.barrierefrei",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 13,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9286
+      },
+      {
+        "name": "awm_container_barrierefrei.glas_braun",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 13,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9286
+      },
+      {
+        "name": "awm_container_barrierefrei.glas_gruen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 13,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9286
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "glas_braun",
+      "glas_gruen",
+      "glas_weiss",
+      "barrierefrei"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "glas_braun"
+    }
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 27,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

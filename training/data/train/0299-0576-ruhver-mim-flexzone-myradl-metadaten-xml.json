@@ -1,0 +1,282 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Flexzonen für MyRadl.",
+  "query_result": {
+    "dataset_title": "Flexzonen für MyRadl",
+    "package_id": "af63a45e-84fb-4dae-8529-b03947fd780c",
+    "package_name": "ruhver_mim_flexzone_myradl",
+    "resource_id": "8c0ad74a-bff4-4168-bafe-c1f60f6f8490",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet Flexzonen für das regionale Bikesharing-System MyRadl. Diese Flexzonen sind virtuell und umfassen einen Bereich von 100 m Durchmesser. Sie befinden sich im Umfeld zukünftiger Standorte. Sobald der Standort physisch errichtet wurde, werden die Flexzonen zu regulären Standorten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 226,
+    "sampled_rows": 226,
+    "column_count": 378,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 89,
+        "null_count": 137,
+        "examples": [
+          "c0d01399-6d76-48f9-bae5-6b8128e366eb",
+          "basemaps",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 4326.0,
+          "max": 80335.0,
+          "mean": 54232.6,
+          "median": 80335.0
+        },
+        "null_rate": 0.6062
+      },
+      {
+        "name": "code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 222,
+        "examples": [
+          "4326",
+          "25832",
+          "c0d01399-6d76-48f9-bae5-6b8128e366eb",
+          "Landeshauptstadt München"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9823
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 222,
+        "examples": [
+          "11.3379",
+          "11.7938",
+          "48.019",
+          "48.2408"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3379,
+          "max": 48.2408,
+          "mean": 29.8479,
+          "median": 29.9064
+        },
+        "null_rate": 0.9823
+      },
+      {
+        "name": "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 224,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9912
+      },
+      {
+        "name": "referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 224,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9912
+      },
+      {
+        "name": "RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 224,
+        "examples": [
+          "4326",
+          "25832"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4326.0,
+          "max": 25832.0,
+          "mean": 15079.0,
+          "median": 15079.0
+        },
+        "null_rate": 0.9912
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 224,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.5,
+          "median": 0.5
+        },
+        "null_rate": 0.9912
+      },
+      {
+        "name": "referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 225,
+        "examples": [
+          "25832"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 25832.0,
+          "max": 25832.0,
+          "mean": 25832.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 225,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "dataQualityInfo.DQ_DataQuality.report.DQ_DomainConsistency.result.DQ_ConformanceResult.pass.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 225,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 225,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 225,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9956
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "code.CharacterString",
+      "Decimal",
+      "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 366,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

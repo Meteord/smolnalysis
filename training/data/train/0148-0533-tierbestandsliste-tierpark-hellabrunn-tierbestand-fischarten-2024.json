@@ -1,0 +1,101 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of arten in Tierbestandsliste Tierpark Hellabrunn.",
+  "query_result": {
+    "dataset_title": "Tierbestandsliste Tierpark Hellabrunn",
+    "package_id": "9818ae8c-b902-428b-91a2-9cba54aa6e22",
+    "package_name": "tierbestandsliste-tierpark-hellabrunn",
+    "resource_id": "9f7b407b-8823-4e24-aa95-86fddccc3c95",
+    "resource_name": "Tierbestand Fischarten 2024",
+    "resource_format": "csv",
+    "description": "Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z",
+    "organization": "Münchener Tierpark Hellabrunn AG",
+    "tags": [
+      "Tierpark",
+      "Zoo"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 29,
+    "sampled_rows": 29,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "arten",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          2,
+          1,
+          20,
+          41,
+          30
+        ],
+        "numeric": {
+          "count": 29.0,
+          "min": 1.0,
+          "max": 41.0,
+          "mean": 6.9655,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "fischart",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Aalartige",
+          "Ährenfische",
+          "Ammenhaiartige",
+          "Armflosser",
+          "Barschartige"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wiss_namen",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Anguilliformes",
+          "Atheriniformes",
+          "Orectolobiformes",
+          "Lophiiformes",
+          "Perciformes"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "arten"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "arten"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

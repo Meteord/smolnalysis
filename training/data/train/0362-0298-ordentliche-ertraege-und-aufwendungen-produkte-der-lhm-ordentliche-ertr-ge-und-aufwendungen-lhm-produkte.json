@@ -1,0 +1,148 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ordentliche ertraege rechnungsergebnis in Ordentliche Erträge und Aufwendungen der Produkte der LHM.",
+  "query_result": {
+    "dataset_title": "Ordentliche Erträge und Aufwendungen der Produkte der LHM",
+    "package_id": "a3c1e1f2-9fa5-4efb-ad64-b269c746e742",
+    "package_name": "ordentliche-ertraege-und-aufwendungen-produkte-der-lhm",
+    "resource_id": "fc16d07d-89c7-4b74-989d-41427ab089be",
+    "resource_name": "Ordentliche Erträge und Aufwendungen LHM-Produkte",
+    "resource_format": "csv",
+    "description": "Darstellung der Jahre ab 2018. Jahresbezogene Darstellung der ordentlichen Erträge und Aufwendungen der Produkte der Landeshauptstadt München (LHM) auf Basis des Bayerischen Produktrahmens in € für den Zeitraum ab 2018 Stand jeweils 31.12.",
+    "organization": "Stadtkämmerei der Landeshauptstadt München",
+    "tags": [
+      "Finanzen",
+      "Haushaltsdaten"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 1371,
+    "sampled_rows": 1000,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "ordentliche ertraege rechnungsergebnis",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "13586887",
+          "587558",
+          "165245",
+          "863604",
+          "9875371"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": -27608258.0,
+          "max": 6106847538.0,
+          "mean": 42020457.512,
+          "median": 1286232.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ordentliche aufwendungen rechnungsergebnis",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "69948665",
+          "2932513",
+          "5692152",
+          "12616871",
+          "90211163"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 1106194703.0,
+          "mean": 42992400.464,
+          "median": 10730019.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2024",
+          "2023",
+          "2022",
+          "2021",
+          "2020"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2019.0,
+          "max": 2024.0,
+          "mean": 2021.937,
+          "median": 2022.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "produkt",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Ingenieurbauwerke auf städtischen Verkehrsflächen",
+          "Overhead Referats- und Geschäftsleitung Baureferat",
+          "Städtische Brunnen und Denkmäler",
+          "Städtische Gewässer und wasserbauliche Anlagen",
+          "Städtische Grün- und Spielflächenflächen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "referat",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Baureferat",
+          "Direktorium",
+          "Gesundheitsreferat",
+          "IT-Referat",
+          "Kommunalreferat"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ordentliche ertraege rechnungsergebnis",
+      "ordentliche aufwendungen rechnungsergebnis"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ordentliche ertraege rechnungsergebnis"
+    }
+  },
+  "quality_score": 7.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Müllsammelbehälter an der Isar and compare code by unterhalt.",
+  "query_result": {
+    "dataset_title": "Müllsammelbehälter an der Isar",
+    "package_id": "0eb348c1-72ad-4384-b573-03b7c6a826c3",
+    "package_name": "muellsammelbehaelter-an-der-isar",
+    "resource_id": "5ad81dfc-e30d-41c0-9189-342a43893fc5",
+    "resource_name": "Müllsammelbehälter an der Isar",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz beinhaltet Informationen zu Müllsammelbehältern bzw. Abfallbehältern in den Isarauen. Der Datensatz stammt aus dem Einrichtungs- und Dienstleistungsfinder auf muenchen.de.",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Abfall",
+      "Isar",
+      "Müll"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 171,
+    "sampled_rows": 171,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "code",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 171,
+        "null_count": 0,
+        "examples": [
+          "HK",
+          "340",
+          "309",
+          "311",
+          "312"
+        ],
+        "numeric": {
+          "count": 127.0,
+          "min": 309.0,
+          "max": 421.0,
+          "mean": 331.8898,
+          "median": 312.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "unterhalt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 171,
+        "null_count": 0,
+        "examples": [
+          "Landeshauptstadt München - Baureferat - Gartenbau",
+          "Landeshauptstadt München - Baureferat - Ingenieurbau"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "pos",
+        "dtype": "int64",
+        "kind": "geospatial",
+        "non_null_count": 171,
+        "null_count": 0,
+        "examples": [
+          0,
+          3006,
+          3007,
+          3011,
+          3012
+        ],
+        "numeric": {
+          "count": 171.0,
+          "min": 0.0,
+          "max": 4184.0,
+          "mean": 2431.0877,
+          "median": 3071.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 171,
+        "null_count": 0,
+        "examples": [
+          11.615704601,
+          11.542752121,
+          11.543977817,
+          11.54118838,
+          11.540738727
+        ],
+        "numeric": {
+          "count": 171.0,
+          "min": 11.5398,
+          "max": 11.6157,
+          "mean": 11.5602,
+          "median": 11.5592
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 171,
+        "null_count": 0,
+        "examples": [
+          48.166977229,
+          48.075416321,
+          48.080059011,
+          48.081834012,
+          48.084512397
+        ],
+        "numeric": {
+          "count": 171.0,
+          "min": 48.0731,
+          "max": 48.167,
+          "mean": 48.1079,
+          "median": 48.1077
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 171,
+        "null_count": 0,
+        "examples": [
+          "Hundekottütenspender",
+          "Grillaschebehälter",
+          "Container 10m³",
+          "Gitterbox - 1 Box",
+          "Gitterbox - 2 Boxen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "photo_url",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 44,
+        "null_count": 127,
+        "examples": [
+          "https://isar-map.de/assets/img/abfall/hundekottuetenspender.jpg"
+        ],
+        "null_rate": 0.7427
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "code"
+    ],
+    "category_columns": [
+      "unterhalt",
+      "photo_url"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "unterhalt",
+      "y": "code"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

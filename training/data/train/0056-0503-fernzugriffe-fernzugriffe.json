@@ -1,0 +1,113 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of fernzugriffe in Fernzugriffsberechtigungen.",
+  "query_result": {
+    "dataset_title": "Fernzugriffsberechtigungen",
+    "package_id": "45e46e90-ff50-47bf-8f13-b334b5262c06",
+    "package_name": "fernzugriffe",
+    "resource_id": "6c9f6138-2a33-4801-9010-ea84b56721b7",
+    "resource_name": "Fernzugriffe",
+    "resource_format": "csv",
+    "description": "Unter Fernzugriffsberechtigungen werden die Berechtigungen für Personen gezählt, die grundsätzlich von außerhalb des städtischen Netzwerks auf die IT-Infrastruktur der Landeshauptstadt München zugreifen können.",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [
+      "Stadtratsauftrag"
+    ],
+    "groups": [],
+    "row_count": 1054,
+    "sampled_rows": 1000,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "fernzugriffe",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "589",
+          "2347",
+          "714",
+          "40",
+          "855"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 11411.0,
+          "mean": 1120.038,
+          "median": 753.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "tag",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "30.06.2025",
+          "31.03.2025",
+          "31.12.2024",
+          "30.09.2024",
+          "30.06.2024"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "kunde_langname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Abfallwirtschaftsbetrieb München",
+          "Baureferat",
+          "Direktorium",
+          "Friedhöfe und Bestattung München",
+          "Gesundheitsreferat"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "kunde_abkuerzung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "AWM",
+          "BAU",
+          "DIR",
+          "FBM",
+          "GSR"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "fernzugriffe"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "fernzugriffe"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of rad_rsp_gemradfusswege_line.richtung in Radlstadtplan (Gemeinsame Rad- und Fußwege).",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Gemeinsame Rad- und Fußwege)",
+    "package_id": "f26b8320-e6bd-498e-a062-80f066964f9b",
+    "package_name": "rad_rsp_gemradfusswege_line",
+    "resource_id": "0c1b5e60-6a19-4e8c-8a92-6b2d9ef1f482",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Auf gemeinsamen Geh- und Radwegen mischen sich verschiedene Verkehrsarten und damit Geschwindigkeiten, weswegen besondere Rücksichtnahme erforderlich ist. Sie sind mit dem blauen Schild gekennzeichnet, das oben Zufußgehende und unten ein Fahrrad abbildet, getrennt durch einen waagrechten Strich. Damit unterscheiden sie sich von getrennten Fuß- und Radwegen, wo der Trennstrich auf dem Verkehrsschild senkrecht verläuft. Diese Art der Radverkehrsführung findet sich in München insbesondere in Grünan",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Radwege",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 51,
+    "columns": [
+      {
+        "name": "rad_rsp_gemradfusswege_line.richtung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.4671,
+          "median": 1.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_gemradfusswege_line.fuss",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.4551,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_gemradfusswege_line.umgebung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.3234,
+          "median": 1.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_gemradfusswege_line.unterfuehrung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0419,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_gemradfusswege_line.legende",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1010",
+          "2010",
+          "2120",
+          "1110",
+          "21201"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1010.0,
+          "max": 21201.0,
+          "mean": 2896.9401,
+          "median": 1110.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_gemradfusswege_line.forst",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0719,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_gemradfusswege_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "rad_rsp_gemradfusswege_line.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "richtung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.4671,
+          "median": 1.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "fuss",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.4551,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "umgebung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.3234,
+          "median": 1.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "unterfuehrung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0419,
+          "median": 0.0
+        },
+        "null_rate": 0.833
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_rsp_gemradfusswege_line.richtung",
+      "rad_rsp_gemradfusswege_line.fuss",
+      "rad_rsp_gemradfusswege_line.umgebung",
+      "rad_rsp_gemradfusswege_line.unterfuehrung"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "rad_rsp_gemradfusswege_line.richtung"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 35,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt) and compare rad_rsp_rad_freig_einbahn_poly.status by Polygon.innerBoundaryIs.LinearRing.coordinates.",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt)",
+    "package_id": "b089ca29-8f22-4fd5-959b-95ce2e36e9c8",
+    "package_name": "rad_rsp_rad_freig_einbahn",
+    "resource_id": "1277dd4b-6db9-4db8-beff-937b786ee261",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Öffnung von Einbahnstraßen für den gegenläufigen Radverkehr bedeutet eine bessere Erschließung des jeweiligen Viertels und erspart Radelnden häufig Umwege. Mittlerweile sind in München deutlich mehr als die Hälfte aller etwa 700 Einbahnstraßen für den Radverkehr auch in die Gegenrichtung freigegeben, ohne dass hier die Unfallzahlen höher sind als in „normalen“ Straßen mit Zweirichtungsverkehr. Für alle Verkehrsteilnehmenden gilt es dabei zu beachten, dass für jedwede Fahrtrichtung rechts vor",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Einbahnstraßen",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 38,
+    "columns": [
+      {
+        "name": "rad_rsp_rad_freig_einbahn_poly.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 165,
+        "null_count": 835,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 165.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.835
+      },
+      {
+        "name": "rad_rsp_rad_freig_einbahn_poly.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 165,
+        "null_count": 835,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 165.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.835
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 165,
+        "null_count": 835,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 165.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.835
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 165,
+        "null_count": 835,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 165.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.835
+      },
+      {
+        "name": "featureMember.rad_rsp_rad_freig_einbahn_poly.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.rad_rsp_rad_freig_einbahn_poly.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "Polygon.innerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 995,
+        "examples": [
+          "692901.60920087,5337551.51709788 692963.58760087,5337659.64039788 692991.45080087,5337640.33899787 692932.45410087,5337553.24649788 692929.81430087,5337548.1090",
+          "690970.59100082,5334646.45139801 690998.02410082,5334639.65409801 691059.81230083,5334624.33569801 691052.78770083,5334603.42379801 691047.72600083,5334588.3635",
+          "692267.04470085,5332018.53009793 692284.60490085,5332062.74199793 692349.35420085,5332032.36939793 692364.84750085,5332025.24799792 692395.29510086,5332010.7615",
+          "689143.04260079,5334782.40249812 689378.70380079,5334811.18449811 689370.69160079,5334774.89289811 689146.61400079,5334749.95899812 689143.04260079,5334782.4024",
+          "685003.9872007,5328071.16589836 684986.0544007,5328077.32859836 684921.6315007,5328099.98819836 684913.9105007,5328103.83729836 684907.4240007,5328109.53379836"
+        ],
+        "null_rate": 0.995
+      },
+      {
+        "name": "innerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 995,
+        "examples": [
+          "692901.60920087,5337551.51709788 692963.58760087,5337659.64039788 692991.45080087,5337640.33899787 692932.45410087,5337553.24649788 692929.81430087,5337548.1090",
+          "690970.59100082,5334646.45139801 690998.02410082,5334639.65409801 691059.81230083,5334624.33569801 691052.78770083,5334603.42379801 691047.72600083,5334588.3635",
+          "692267.04470085,5332018.53009793 692284.60490085,5332062.74199793 692349.35420085,5332032.36939793 692364.84750085,5332025.24799792 692395.29510086,5332010.7615",
+          "689143.04260079,5334782.40249812 689378.70380079,5334811.18449811 689370.69160079,5334774.89289811 689146.61400079,5334749.95899812 689143.04260079,5334782.4024",
+          "685003.9872007,5328071.16589836 684986.0544007,5328077.32859836 684921.6315007,5328099.98819836 684913.9105007,5328103.83729836 684907.4240007,5328109.53379836"
+        ],
+        "null_rate": 0.995
+      },
+      {
+        "name": "rad_rsp_rad_freig_einbahn_poly.shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 165,
+        "null_count": 835,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.835
+      },
+      {
+        "name": "rad_rsp_rad_freig_einbahn_poly.shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 165,
+        "null_count": 835,
+        "examples": [
+          "693301.98600087,5334008.24679786 693257.81600087,5333959.99399786 693280.80540087,5333938.99669786 693322.98170088,5333987.95439786 693301.98600087,5334008.2467",
+          "693034.20720087,5334076.04579788 693088.33230087,5334041.54959787 693107.30660087,5334063.64599787 693050.31540087,5334101.08059788 693034.20720087,5334076.0457",
+          "693050.46770087,5334100.84209788 693130.46190087,5334126.34319787 693134.70540087,5334127.22979787 693138.99720087,5334127.84009787 693143.31920087,5334128.1713",
+          "693050.29180087,5334131.21809788 693055.47950087,5334243.90059788 693025.66730087,5334241.56269788 693019.77950087,5334132.83499788 693050.29180087,5334131.2180",
+          "693134.80940087,5334366.74599787 693048.47240087,5334361.07889788 693050.92350087,5334330.87919788 693140.61190087,5334335.39589787 693134.80940087,5334366.7459"
+        ],
+        "null_rate": 0.835
+      },
+      {
+        "name": "shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 165,
+        "null_count": 835,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.835
+      },
+      {
+        "name": "shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 165,
+        "null_count": 835,
+        "examples": [
+          "693301.98600087,5334008.24679786 693257.81600087,5333959.99399786 693280.80540087,5333938.99669786 693322.98170088,5333987.95439786 693301.98600087,5334008.2467",
+          "693034.20720087,5334076.04579788 693088.33230087,5334041.54959787 693107.30660087,5334063.64599787 693050.31540087,5334101.08059788 693034.20720087,5334076.0457",
+          "693050.46770087,5334100.84209788 693130.46190087,5334126.34319787 693134.70540087,5334127.22979787 693138.99720087,5334127.84009787 693143.31920087,5334128.1713",
+          "693050.29180087,5334131.21809788 693055.47950087,5334243.90059788 693025.66730087,5334241.56269788 693019.77950087,5334132.83499788 693050.29180087,5334131.2180",
+          "693134.80940087,5334366.74599787 693048.47240087,5334361.07889788 693050.92350087,5334330.87919788 693140.61190087,5334335.39589787 693134.80940087,5334366.7459"
+        ],
+        "null_rate": 0.835
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_rsp_rad_freig_einbahn_poly.status",
+      "rad_rsp_rad_freig_einbahn_poly.planungsstatus",
+      "status",
+      "planungsstatus"
+    ],
+    "category_columns": [
+      "Polygon.innerBoundaryIs.LinearRing.coordinates",
+      "innerBoundaryIs.LinearRing.coordinates"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Polygon.innerBoundaryIs.LinearRing.coordinates",
+      "y": "rad_rsp_rad_freig_einbahn_poly.status"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 25,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

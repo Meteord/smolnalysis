@@ -1,0 +1,209 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Verkehr - Motorisierungsgrad Personenkraftwagen und Krafträder and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Verkehr - Motorisierungsgrad Personenkraftwagen und Krafträder",
+    "package_id": "1b758800-dc58-4da3-94ef-ae6c819759f7",
+    "package_name": "indikatorenatlas-verkehr-motorisierungsgrad-personenkraftwagen-und-kraftraeder-83r65mct",
+    "resource_id": "27e387c8-63e9-4b62-bdc8-704cb71ca64d",
+    "resource_name": "Motorisierungsgrad Personenkraftwagen und Krafträder",
+    "resource_format": "csv",
+    "description": "Der Indikator gibt den Grad der Mobilität im Individualverkehr mit den Verkehrsmitteln Pkw und Kraftrad an. Zugelassene Personenkraftwagen und Krafträder der entsprechenden Kategorie pro 1 000 Hauptwohnsitzpersonen. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Indikatorenatlas",
+      "PKW",
+      "Verkehr"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 1352,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          51.6,
+          324.8,
+          38.4,
+          45.7,
+          35.5
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 27.3,
+          "max": 357.1,
+          "mean": 48.1662,
+          "median": 42.65
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "831318",
+          "66920",
+          "19239",
+          "24006",
+          "24661"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 7903.0,
+          "max": 831318.0,
+          "mean": 51998.139,
+          "median": 23121.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1612429",
+          "20606",
+          "50048",
+          "52501",
+          "69484"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 18159.0,
+          "max": 1612429.0,
+          "mean": 114282.114,
+          "median": 54931.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "insgesamt",
+          "privat"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Personenkraftwagen und Krafträder (insgesamt)",
+          "Personenkraftwagen und Krafträder (privat)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Motorisierungsgrad Personenkraftwagen und Krafträder"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Indikator",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

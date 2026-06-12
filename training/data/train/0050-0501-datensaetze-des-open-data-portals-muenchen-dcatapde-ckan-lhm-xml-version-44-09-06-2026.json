@@ -1,0 +1,220 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Datensätze des Open Data Portals München (DCATAP.de) and compare Distribution.byteSize by publisher.Organization.{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about.",
+  "query_result": {
+    "dataset_title": "Datensätze des Open Data Portals München (DCATAP.de)",
+    "package_id": "1ce0d941-3d7e-426a-9c9e-af79eccc3bf3",
+    "package_name": "datensaetze-des-open-data-portals-muenchen-dcatapde",
+    "resource_id": "cfc0bff2-d90e-433f-8be2-d1ef3167f932",
+    "resource_name": "CKAN_LHM.xml - Version 44 - 09.06.2026",
+    "resource_format": "xml",
+    "description": "Liste aller Metadaten von opendata.muenchen.de im DCAT-AP.de -Format für das [Open Data Portal Bayern](https://open.bydata.de/datasets?locale=de&catalog=muenchen&page=1). **Dataset wird wieder gelöscht, wenn automatische DCAT-AP.de-Anbindung realisiert ist.**",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 43,
+    "columns": [
+      {
+        "name": "Distribution.byteSize",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "587"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 587.0,
+          "max": 587.0,
+          "mean": 587.0,
+          "median": 587.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 599,
+        "null_count": 401,
+        "examples": [
+          "https://opendata.muenchen.de",
+          "https://www.muenchen.de",
+          "https://opendata.muenchen.de/contact/catalog",
+          "https://opendata.muenchen.de/dataset/abfall_auto_metall_opendata",
+          "https://opendata.muenchen.de/contact/0e229df9-cecd-4184-8df2-8da4f54cfb51"
+        ],
+        "null_rate": 0.401
+      },
+      {
+        "name": "Organization.{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 400,
+        "null_count": 600,
+        "examples": [
+          "https://www.muenchen.de",
+          "https://opendata.muenchen.de/contact/catalog",
+          "https://opendata.muenchen.de/contact/0e229df9-cecd-4184-8df2-8da4f54cfb51",
+          "https://opendata.muenchen.de/contact/4572937c-44df-49bd-af87-26f740286327",
+          "https://opendata.muenchen.de/contact/d22f37a1-db6a-459f-a836-5714edcc2fe9"
+        ],
+        "null_rate": 0.6
+      },
+      {
+        "name": "contactPoint.Organization.{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "https://opendata.muenchen.de/contact/catalog",
+          "https://opendata.muenchen.de/contact/0e229df9-cecd-4184-8df2-8da4f54cfb51",
+          "https://opendata.muenchen.de/contact/4572937c-44df-49bd-af87-26f740286327",
+          "https://opendata.muenchen.de/contact/d22f37a1-db6a-459f-a836-5714edcc2fe9",
+          "https://opendata.muenchen.de/contact/dc83372b-850f-4d8c-baa7-be97132f112c"
+        ],
+        "null_rate": 0.8
+      },
+      {
+        "name": "contactPoint.Organization.fn",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "Open Data München",
+          "RKU-GB-II",
+          "GeodatenService München",
+          "Statistisches Amt",
+          "ba.it@muenchen.de"
+        ],
+        "null_rate": 0.8
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "Open Data München",
+          "Anlagen zur Lagerung und Behandlung von Autowracks, Schrotten und Metallen (Opendata)",
+          "Abfallentsorgungsanlagen der Landeshauptstadt München",
+          "Anlagen zur Lagerung und Behandlung von Elektronikschrott (Opendata)",
+          "Anlagen zur Sortierung von Baustellen- und Gewerbemischabfällen (Opendata)"
+        ],
+        "null_rate": 0.8
+      },
+      {
+        "name": "description",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "Das Open Data Portal der Landeshauptstadt München stellt offene Verwaltungsdaten für Bürgerinnen, Bürger und Unternehmen bereit.",
+          "Anlagen zur Lagerung und Behandlung von Autowracks, Schrotten und Metallen",
+          "Anlagen zur Behandlung, Lagerung und Ablagerung von Abfällen",
+          "Anlagen zur Lagerung und Behandlung von Elektronikschrott",
+          "Anlagen zur Sortierung von Baustellen- und Gewerbemischabfällen"
+        ],
+        "null_rate": 0.8
+      },
+      {
+        "name": "publisher.Organization.{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "https://www.muenchen.de"
+        ],
+        "null_rate": 0.8
+      },
+      {
+        "name": "publisher.Organization.name",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "Landeshauptstadt München"
+        ],
+        "null_rate": 0.8
+      },
+      {
+        "name": "issued",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "2012-01-01T00:00:00Z",
+          "2024-05-29T09:54:08Z",
+          "2023-02-27T15:22:34Z",
+          "2024-07-22T05:42:14Z",
+          "2025-04-08T15:16:27Z"
+        ],
+        "null_rate": 0.8
+      },
+      {
+        "name": "modified",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "2026-06-09T08:41:12Z",
+          "2026-06-08T06:47:09Z",
+          "2026-06-08T06:47:10Z",
+          "2026-06-08T06:47:03Z",
+          "2025-10-31T09:06:54Z"
+        ],
+        "null_rate": 0.8
+      },
+      {
+        "name": "Organization.name",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "Landeshauptstadt München"
+        ],
+        "null_rate": 0.8
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Distribution.byteSize"
+    ],
+    "category_columns": [
+      "publisher.Organization.{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about",
+      "publisher.Organization.name",
+      "Organization.name"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "publisher.Organization.{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about",
+      "y": "Distribution.byteSize"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 29,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

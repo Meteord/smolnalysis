@@ -1,0 +1,241 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Lastenradsharing Abstellflächen and compare objectid by tretrollersharing.",
+  "query_result": {
+    "dataset_title": "Lastenradsharing Abstellflächen",
+    "package_id": "cfa9c6ae-f5c6-4d89-91c4-2e38dafc0545",
+    "package_name": "ruhver_mim_abstellfl_ls",
+    "resource_id": "10ecd946-39cf-4f4b-9331-6b075845ad20",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Dieser Layer beinhaltet geteilte Abstellflächen für Mikromobilität, auf denen Fahrzeuge des Lastenradsharings geparkt werden dürfen. Ein durchgestrichenes Symbol zeigt an, dass diese geteilte Abstellfläche derzeit außer Betrieb ist (beispielsweise wegen Veranstaltungen oder Baustellen). Das Hinweisfeld gibt Informationen zu Dauer der Einschränkung und verweist, sofern vorhanden, auf Ersatzflächen. Ersatzflächen oder temporäre Ergänzungsflächen werden in Ocker dargestellt.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 313,
+    "sampled_rows": 313,
+    "column_count": 17,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          4,
+          6,
+          13,
+          108,
+          12552
+        ],
+        "numeric": {
+          "count": 313.0,
+          "min": 4.0,
+          "max": 17380.0,
+          "mean": 2293.4058,
+          "median": 277.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          2,
+          3
+        ],
+        "numeric": {
+          "count": 313.0,
+          "min": 2.0,
+          "max": 3.0,
+          "mean": 2.0192,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "int64",
+        "kind": "date",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          20260427,
+          20260202,
+          20260207,
+          20260224,
+          20260327
+        ],
+        "numeric": {
+          "count": 313.0,
+          "min": 20260202.0,
+          "max": 20260610.0,
+          "mean": 20260366.476,
+          "median": 20260427.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          "31.05.2021",
+          "31.07.2022",
+          "20.10.2024",
+          "15.04.2025",
+          "09.03.2025"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOLYGON (((691604.0978008364 5336237.322797967, 691602.1745008365 5336238.039597968, 691610.4636008375 5336258.394397968, 691612.5231008369 5336257.6325979",
+          "MULTIPOLYGON (((691708.5166008393 5334186.707997965, 691702.3132008394 5334180.572297966, 691699.7380008394 5334180.513697964, 691707.0849008397 5334188.1044979",
+          "MULTIPOLYGON (((691503.5104008347 5336765.972197973, 691502.8332008349 5336764.160597973, 691493.9446008345 5336767.614597973, 691494.6316008345 5336769.4007979",
+          "MULTIPOLYGON (((690167.8056008064 5333258.076098062, 690167.5411008068 5333260.643598065, 690175.5201008073 5333271.299098062, 690178.1591008069 5333271.8455980",
+          "MULTIPOLYGON (((685149.3446007073 5328535.439298349, 685149.4545007069 5328533.304398351, 685139.4153007071 5328532.72909835, 685139.2942007071 5328534.99509835"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          "Türkenstraße",
+          "Gärtnerplatz/Klenzestraße",
+          "Georgenstraße",
+          "Zenettiplatz",
+          "Königswieser Straße"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort_beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          "Türkenstraße 68",
+          "Klenzestraße 31",
+          "Georgenstraße",
+          "Zenettiplatz 2",
+          "Königswieser Straße 49 (ggü)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "tretrollersharing",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bikesharing",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "lastenradsharing",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 313,
+        "null_count": 0,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "motorrollersharing",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 309,
+        "null_count": 4,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.0128
+      },
+      {
+        "name": "gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 9,
+        "null_count": 304,
+        "examples": [
+          "01.01.2024",
+          "01.10.2023",
+          "31.12.2023",
+          "27.04.2026",
+          "11.05.2026"
+        ],
+        "null_rate": 0.9712
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "status"
+    ],
+    "category_columns": [
+      "tretrollersharing",
+      "bikesharing",
+      "lastenradsharing",
+      "motorrollersharing"
+    ],
+    "time_columns": [
+      "bearbeitung_datum",
+      "realisierungsdatum",
+      "gueltigkeit_datum_start"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "tretrollersharing",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 3,
+    "source_profile_error": null
+  }
+}

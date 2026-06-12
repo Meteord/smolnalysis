@@ -1,0 +1,227 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (GML) from Informationen zu Straßennamen.",
+  "query_result": {
+    "dataset_title": "Informationen zu Straßennamen",
+    "package_id": "c063d350-14a3-4b65-a63a-23863edc786e",
+    "package_name": "erlaeuterung_strassennamen",
+    "resource_id": "5ad767ac-99f4-4bdb-871f-1d21d6809d2f",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Informationen über die Namen von Straßen und Plätzen ab 1996: Amtliche Namenserläuterung, Benennungsdatum, weiblich/männlich/sächlich, Stadtbezirk",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshaupstadt München"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 34,
+    "columns": [
+      {
+        "name": "erlaeuterung_strassennamen.jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "1100",
+          "1200",
+          "1250",
+          "1293",
+          "1299"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1100.0,
+          "max": 1867.0,
+          "mean": 1745.568,
+          "median": 1813.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "1100",
+          "1200",
+          "1250",
+          "1293",
+          "1299"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1100.0,
+          "max": 1867.0,
+          "mean": 1745.568,
+          "median": 1813.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "erlaeuterung_strassennamen.benennungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "01.01.1100",
+          "01.01.1200",
+          "01.01.1250",
+          "01.01.1293",
+          "31.12.1299"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "benennungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "01.01.1100",
+          "01.01.1200",
+          "01.01.1250",
+          "01.01.1293",
+          "31.12.1299"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "featureMember.erlaeuterung_strassennamen.jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2026"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2026.0,
+          "max": 2026.0,
+          "mean": 2026.0,
+          "median": 2026.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "erlaeuterung_strassennamen.namenstyp",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Sache",
+          "Männlich",
+          "Weiblich"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "namenstyp",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Sache",
+          "Männlich",
+          "Weiblich"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "featureMember.erlaeuterung_strassennamen.benennungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "15.01.2026"
+        ],
+        "null_rate": 0.999
+      },
+      {
+        "name": "erlaeuterung_strassennamen.shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "erlaeuterung_strassennamen.shape.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "691708.00240084,5334955.10119796",
+          "691566.74500084,5334807.80959797",
+          "691322.81750083,5334877.70939799",
+          "692686.19280086,5334212.7071979",
+          "691340.67460083,5334526.97039799"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "shape.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "691708.00240084,5334955.10119796",
+          "691566.74500084,5334807.80959797",
+          "691322.81750083,5334877.70939799",
+          "692686.19280086,5334212.7071979",
+          "691340.67460083,5334526.97039799"
+        ],
+        "null_rate": 0.75
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "erlaeuterung_strassennamen.namenstyp",
+      "namenstyp"
+    ],
+    "time_columns": [
+      "erlaeuterung_strassennamen.jahr",
+      "jahr",
+      "erlaeuterung_strassennamen.benennungsdatum"
+    ]
+  },
+  "quality_score": 5.5,
+  "cleaning_notes": {
+    "dropped_columns": 21,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

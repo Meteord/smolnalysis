@@ -1,0 +1,180 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Umweltzone.",
+  "query_result": {
+    "dataset_title": "Umweltzone",
+    "package_id": "9b65dcc3-eef0-48c1-93e3-133ef2605b6b",
+    "package_name": "opendata_miv_umweltzone_poly",
+    "resource_id": "69cae920-4922-4ac6-ba18-dddf5faa41f0",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiterten Umweltzone eingeführt. Bei den Transferflächen handelt es sich um Fahrbeziehungen, die aufgrund fehlender Alternativstrecken trotz ihrer Lage in der Umweltzone für Fahrzeuge ohne die erforderlichen Voraussetzungen freigegeben sind. Die weiteren Bestimmungen der Allgemeinverfügung sind zu beachten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 20,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:42"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:42"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Umweltzone"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Verkehrswesen"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiter"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiter"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "otherRestrictions"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/geoserver/mor_wfs/miv_umweltzone_poly/ows?service=WMS&version=1.3.0&request=GetCapabilities"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Umweltzone"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 6,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

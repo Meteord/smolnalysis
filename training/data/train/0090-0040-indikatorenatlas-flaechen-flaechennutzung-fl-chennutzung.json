@@ -1,0 +1,211 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Flächen - Flächennutzung and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Flächen - Flächennutzung",
+    "package_id": "2cb8b66f-cc3c-41fa-b15a-5ace4bd997a2",
+    "package_name": "indikatorenatlas-flaechen-flaechennutzung",
+    "resource_id": "fe73098e-7d65-4b25-9b76-b9c8e99e332d",
+    "resource_name": "Flächennutzung",
+    "resource_format": "csv",
+    "description": "Anteil der Fläche der entsprechenden Kategorie an der Fläche insgesamt. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Indikatorenatlas"
+    ],
+    "groups": [],
+    "row_count": 1170,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          44.7,
+          47.4,
+          54.5,
+          69.0,
+          62.9
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 100.0,
+          "mean": 40.6377,
+          "median": 35.75
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "138984287",
+          "1491460",
+          "2399850.3",
+          "2964107.2",
+          "2742449"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 246121646.5,
+          "mean": 9418641.7415,
+          "median": 3728078.35
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "310728185.2",
+          "3145888.1",
+          "4401650.7",
+          "4298192.3",
+          "4363287.5"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2070209.9,
+          "max": 310728448.8,
+          "mean": 23997423.9336,
+          "median": 9223739.6
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2017.0,
+          "max": 2025.0,
+          "mean": 2021.206,
+          "median": 2021.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Gebäude- und zugehörige Freifläche",
+          "Landwirtschaftsfläche",
+          "Siedlungs- und Verkehrsfläche",
+          "Wald-, Wasser- und Erholungsfläche",
+          "Wohnfläche"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Gebäude- und zugehörige Freifläche",
+          "Landwirtschaftsfläche",
+          "Siedlungs- und Verkehrsfläche",
+          "Wald-, Wasser- und Erholungsfläche",
+          "Wohnfläche"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Flächennutzung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Fläche (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Indikator",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

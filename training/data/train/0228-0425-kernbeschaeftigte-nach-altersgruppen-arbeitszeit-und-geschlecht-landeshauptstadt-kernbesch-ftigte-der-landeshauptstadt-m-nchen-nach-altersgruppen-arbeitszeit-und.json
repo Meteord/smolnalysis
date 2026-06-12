@@ -1,0 +1,177 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of vollzeit_weiblich in Kernbeschäftigte nach Altersgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Kernbeschäftigte nach Altersgruppen, Arbeitszeit und Geschlecht - Landeshauptstadt München",
+    "package_id": "dc43e11a-e0f0-40c1-81e8-3fe899b06b81",
+    "package_name": "kernbeschaeftigte-nach-altersgruppen-arbeitszeit-und-geschlecht-landeshauptstadt-muenchen",
+    "resource_id": "a5e02fb5-953a-47ca-965e-6971285ae4ff",
+    "resource_name": "Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Arbeitszeit und Geschlecht",
+    "resource_format": "csv",
+    "description": "Kernbeschäftigte der Landeshauptstadt München nach Altersgruppen, Arbeitszeit und Geschlecht zum 31.12. des jeweiligen Jahres.",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Personal",
+      "Personalreferat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 33,
+    "sampled_rows": 33,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "vollzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          33,
+          710,
+          1422,
+          887,
+          1082
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 33.0,
+          "max": 1427.0,
+          "mean": 957.1212,
+          "median": 1082.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_weiblich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          6,
+          248,
+          473,
+          1533,
+          1687
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 6.0,
+          "max": 2160.0,
+          "mean": 1110.9394,
+          "median": 1089.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "vollzeit_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          21,
+          409,
+          1119,
+          202,
+          1740
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 19.0,
+          "max": 2358.0,
+          "mean": 1222.8788,
+          "median": 1560.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "teilzeit_maennlich",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          5,
+          102,
+          170,
+          202,
+          315
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 5.0,
+          "max": 486.0,
+          "mean": 245.7879,
+          "median": 274.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022
+        ],
+        "numeric": {
+          "count": 33.0,
+          "min": 2022.0,
+          "max": 2024.0,
+          "mean": 2023.0,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "alter",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 33,
+        "null_count": 0,
+        "examples": [
+          "unter 20",
+          "20–24",
+          "25–29",
+          "30–34",
+          "35–39"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vollzeit_weiblich",
+      "teilzeit_weiblich",
+      "vollzeit_maennlich",
+      "teilzeit_maennlich"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "vollzeit_weiblich"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

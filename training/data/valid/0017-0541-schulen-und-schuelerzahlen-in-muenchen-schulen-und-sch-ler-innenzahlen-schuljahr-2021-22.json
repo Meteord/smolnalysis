@@ -1,0 +1,155 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of Anzahl_Staedtischer_Schulen in Schulen und Schüler*innenzahlen in München.",
+  "query_result": {
+    "dataset_title": "Schulen und Schüler*innenzahlen in München",
+    "package_id": "4e7880e0-c91a-4f17-8e0f-9cd8e7d7215f",
+    "package_name": "schulen-und-schuelerzahlen-in-muenchen",
+    "resource_id": "3eff771f-5dca-41d6-b4ec-7d323905ee91",
+    "resource_name": "Schulen und Schüler*innenzahlen Schuljahr 2021/22",
+    "resource_format": "csv",
+    "description": "Schüler*innenzahlen an öffentlichen Schulen je nach Schuljahr im Überblick.",
+    "organization": "Referat für Bildung und Sport der Landeshauptstadt München",
+    "tags": [
+      "Schule"
+    ],
+    "groups": [
+      "educ",
+      "tech"
+    ],
+    "row_count": 15,
+    "sampled_rows": 15,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "Anzahl_Staedtischer_Schulen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "20",
+          "14",
+          "2",
+          "3"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 0.0,
+          "max": 37.0,
+          "mean": 8.4,
+          "median": 4.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl_Staatlicher_Schulen",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "138",
+          "44",
+          "14",
+          "4",
+          "27"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 0.0,
+          "max": 138.0,
+          "mean": 15.5333,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl_Staedtischer_Schueler",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "10721",
+          "12608",
+          "1475",
+          "491"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 0.0,
+          "max": 36402.0,
+          "mean": 4714.1333,
+          "median": 1475.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl_Staatlicher_Schueler",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "44291",
+          "12247",
+          "3165",
+          "2267",
+          "24129"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 0.0,
+          "max": 44291.0,
+          "mean": 5948.7333,
+          "median": 285.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Schularten",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "Grundschulen",
+          "Mittelschulen",
+          "Förderschulen",
+          "Realschulen",
+          "Gymnasien inklusive Max-Josef-Stift"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Anzahl_Staedtischer_Schulen",
+      "Anzahl_Staatlicher_Schulen",
+      "Anzahl_Staedtischer_Schueler",
+      "Anzahl_Staatlicher_Schueler"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "Anzahl_Staedtischer_Schulen"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

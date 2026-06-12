@@ -1,0 +1,181 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata).",
+  "query_result": {
+    "dataset_title": "Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)",
+    "package_id": "f58c0902-654c-4f51-9605-c8bc93f05e1e",
+    "package_name": "baustellen_4_weeks_opendata",
+    "resource_id": "75cc529f-6e43-4b97-9d23-ae019b3eb9b3",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Die Servicekarte Baustellen bietet einen Überblick über aktuelle und geplante Baustellen und Haltverbote in München, die innerhalb der kommenden vier Wochen Einschränkungen beim Fahren, Gehen und Parken verursachen. Vorübergehende Haltverbote werden in der Regel im gesamten Stadtgebiet angezeigt, bei Baustellen liegt der Fokus derzeit im Bereich der dicht bebauten und stark frequentierten Stadtviertel der Innenstadt sowie der Hauptverkehrsstraßen im gesamten Stadtgebiet. Außerhalb dieser Bereich",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 20,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:27"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:27"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "infoMapAccessService"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Die Servicekarte Baustellen bietet einen Überblick über aktuelle und geplante Baustellen und Haltverbote in München, die innerhalb der kommenden vier Wochen Ein"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Die Servicekarte Baustellen bietet einen Überblick über aktuelle und geplante Baustellen und Haltverbote in München, die innerhalb der kommenden vier Wochen Ein"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "otherRestrictions"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/portal/baustellen/"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 6,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

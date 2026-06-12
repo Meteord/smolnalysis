@@ -1,0 +1,130 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Tierbestandsliste Tierpark Hellabrunn and compare anzahl by ordnung.",
+  "query_result": {
+    "dataset_title": "Tierbestandsliste Tierpark Hellabrunn",
+    "package_id": "9818ae8c-b902-428b-91a2-9cba54aa6e22",
+    "package_name": "tierbestandsliste-tierpark-hellabrunn",
+    "resource_id": "eb556157-5dea-49dc-83ee-9d214826f496",
+    "resource_name": "Tierbestand Wirbellose 2023",
+    "resource_format": "csv",
+    "description": "Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z",
+    "organization": "Münchener Tierpark Hellabrunn AG",
+    "tags": [
+      "Tierpark",
+      "Zoo"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 11,
+    "sampled_rows": 11,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "anzahl",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          63,
+          0,
+          3,
+          1,
+          20
+        ],
+        "numeric": {
+          "count": 11.0,
+          "min": 0.0,
+          "max": 63.0,
+          "mean": 10.2727,
+          "median": 3.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ordnung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          "Nesseltiere",
+          "Weichtiere",
+          "Gliederfüßer",
+          "Stachelhäuter"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "klasse",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          "WIRBELLOSE"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          "Blumentiere",
+          "Quallen",
+          "Muscheln",
+          "Schnecken",
+          "Insekten"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wiss-namen",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 11,
+        "null_count": 0,
+        "examples": [
+          "Anthozoa",
+          "Scyphozoa",
+          "Bivalvia",
+          "Gastropoda",
+          "Insecta"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl"
+    ],
+    "category_columns": [
+      "ordnung",
+      "klasse"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "ordnung",
+      "y": "anzahl"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

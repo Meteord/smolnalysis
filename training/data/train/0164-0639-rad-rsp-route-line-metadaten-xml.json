@@ -1,0 +1,180 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Radlstadtplan (Ausgeschildertes Radlnetz).",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Ausgeschildertes Radlnetz)",
+    "package_id": "66a47d1b-e108-48f4-be29-ef6347a4d386",
+    "package_name": "rad_rsp_route_line",
+    "resource_id": "afc2ec2f-1c8d-46f2-8e0c-4ceed164cabe",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Das beschilderte Hauptroutennetz für Radler*innen in München besteht aus vierzehn sternförmig vom Marienplatz ausgehenden Strecken sowie dem Inneren und dem Äußeren Radlring. Darüber hinaus sind der Isarradweg, der Würmradweg und der Nymphenburgradweg als Routen beschildert. Für alle Teile des Münchner Radlnetzes gilt: An größeren Kreuzungen und dort, wo sich die Richtung ändert, sind weiß-grüne Schilder zur Orientierung angebracht, die mit Kilometerangaben sowohl wichtige Orte in der Nähe (Sehe",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Radwege",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 20,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:53"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:53"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Radlstadtplan (Ausgeschildertes Radlnetz)"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Verkehrswesen"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Das beschilderte Hauptroutennetz für Radler*innen in München besteht aus vierzehn sternförmig vom Marienplatz ausgehenden Strecken sowie dem Inneren und dem Äuß"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Das beschilderte Hauptroutennetz für Radler*innen in München besteht aus vierzehn sternförmig vom Marienplatz ausgehenden Strecken sowie dem Inneren und dem Äuß"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "otherRestrictions"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/geoserver/mor_wfs/rad_rsp_route_line/ows?service=WMS&version=1.3.0&request=GetCapabilities"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Radlstadtplan (Ausgeschildertes Radlnetz)"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 6,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

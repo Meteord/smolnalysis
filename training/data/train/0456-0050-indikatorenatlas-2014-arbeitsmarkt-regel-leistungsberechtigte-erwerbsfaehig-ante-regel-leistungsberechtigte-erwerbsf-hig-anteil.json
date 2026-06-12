@@ -1,0 +1,212 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Arbeitsmarkt - (Regel-)Leistungsberechtigte - erwerbsfähig - Anteil and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Arbeitsmarkt - (Regel-)Leistungsberechtigte - erwerbsfähig - Anteil",
+    "package_id": "3f96b979-7e2a-419d-98bd-b048f40c9606",
+    "package_name": "indikatorenatlas-2014-arbeitsmarkt-regel-leistungsberechtigte-erwerbsfaehig-anteil-83r65mct",
+    "resource_id": "99ebf331-46af-4a72-83aa-e9bab6de02bc",
+    "resource_name": "(Regel-)Leistungsberechtigte - erwerbsfähig - Anteil ",
+    "resource_format": "csv",
+    "description": "Anteil der Arbeitslosengeld II-Empfänger*innen (ALG II) bzw. erwerbsfähigen (Regel-)Leistungsberechtigten nach SGB II der entsprechenden Kategorie an der erwerbsfähigen (15- bis 64-jährigen) Hauptwohnsitzbevölkerung der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Arbeitsmarkt",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 2470,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2.9,
+          1.4,
+          2.0,
+          1.7,
+          2.3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.1,
+          "max": 9.6,
+          "mean": 4.2514,
+          "median": 4.1
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "21267.5",
+          "153.3",
+          "551.5",
+          "509",
+          "599.8"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 125.3,
+          "max": 55111.0,
+          "mean": 2960.4072,
+          "median": 1339.6
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "726741",
+          "11023.5",
+          "28076.8",
+          "29447",
+          "35939"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 7872.8,
+          "max": 1117076.3,
+          "mean": 67179.906,
+          "median": 34724.65
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2006.0,
+          "max": 2024.0,
+          "mean": 2015.108,
+          "median": 2015.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt",
+          "männlich"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "(Regel-)Leistungsberechtigte (erwerbsfähig) (deutsch)",
+          "(Regel-)Leistungsberechtigte (erwerbsfähig) (insgesamt)",
+          "(Regel-)Leistungsberechtigte (erwerbsfähig) (männlich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (deutsch)",
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (insgesamt)",
+          "Hauptwohnsitzbevölkerung (15 bis 64 Jahre) (männlich)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "(Regel-)Leistungsberechtigte - erwerbsfähig - Anteil"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Soziale Leistungen and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Soziale Leistungen",
+    "package_id": "145a8fcf-5fdf-4fb2-98c3-436b6adbd847",
+    "package_name": "monatszahlen-soziale-leistungen",
+    "resource_id": "bee7fdb6-7333-4c21-a3a7-d2fb96f61dfe",
+    "resource_name": "Monatszahlen Soziale Leistungen",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Soziale Leistungen__ besteht aus folgenden Themen: * Empfänger nach SGB XII * Hilfe zum Lebensunterhalt * Grundsicherung im Alter und bei Erwerbsminderung Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 3420,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 200801.0,
+          "max": 202612.0,
+          "mean": 201757.684,
+          "median": 201805.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "12223",
+          "12254",
+          "12567",
+          "12192"
+        ],
+        "numeric": {
+          "count": 940.0,
+          "min": 7244.0,
+          "max": 24101.0,
+          "mean": 13461.7011,
+          "median": 11890.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "12223",
+          "12254",
+          "12567",
+          "12192",
+          "12159"
+        ],
+        "numeric": {
+          "count": 964.0,
+          "min": 7244.0,
+          "max": 24101.0,
+          "mean": 13443.8952,
+          "median": 11890.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-0.54",
+          "0.25",
+          "2.55",
+          "-2.98"
+        ],
+        "numeric": {
+          "count": 937.0,
+          "min": -4.45,
+          "max": 7.57,
+          "mean": 0.1358,
+          "median": 0.21
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-5.39",
+          "-5.29",
+          "1.65",
+          "-1.4"
+        ],
+        "numeric": {
+          "count": 904.0,
+          "min": -10.93,
+          "max": 20.84,
+          "mean": 1.9676,
+          "median": 2.555
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "12379",
+          "12322",
+          "12339",
+          "12324"
+        ],
+        "numeric": {
+          "count": 940.0,
+          "min": 7394.0,
+          "max": 23931.0,
+          "mean": 13361.867,
+          "median": 11763.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2008.0,
+          "max": 2026.0,
+          "mean": 2017.512,
+          "median": 2018.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Deutsche",
+          "Frauen",
+          "insgesamt",
+          "Männer",
+          "Nichtdeutsche"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Empfänger*innen nach SGB XII"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

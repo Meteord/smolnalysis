@@ -1,0 +1,95 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ist_in_mio_euro in Schuldenstand Hoheitshaushalt LHM.",
+  "query_result": {
+    "dataset_title": "Schuldenstand Hoheitshaushalt LHM",
+    "package_id": "f650123e-d1a4-46d5-9d0a-43b5bbfd4502",
+    "package_name": "schuldenstand-hoheitshaushalt-lhm",
+    "resource_id": "e34bcccf-6fe0-45a5-be4d-e08feb4acc6e",
+    "resource_name": "Schuldenstand Hoheitshaushalt LHM",
+    "resource_format": "csv",
+    "description": "Darstellung der Entwicklung des Schuldenstands des Hoheitshaushalts der Landeshauptstadt München (LHM) ab 1974 in Millionen € (Stand jeweils 31.12.)",
+    "organization": "Stadtkämmerei der Landeshauptstadt München",
+    "tags": [
+      "Finanzen",
+      "Haushalt"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 51,
+    "sampled_rows": 51,
+    "column_count": 3,
+    "columns": [
+      {
+        "name": "ist_in_mio_euro",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 51,
+        "null_count": 0,
+        "examples": [
+          "723",
+          "751",
+          "762",
+          "717",
+          "625"
+        ],
+        "numeric": {
+          "count": 51.0,
+          "min": 564.0,
+          "max": 5386.0,
+          "mean": 1656.6078,
+          "median": 1373.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 51,
+        "null_count": 0,
+        "examples": [
+          "1974",
+          "1975",
+          "1976",
+          "1977",
+          "1978"
+        ],
+        "numeric": {
+          "count": 51.0,
+          "min": 1974.0,
+          "max": 2024.0,
+          "mean": 1999.0,
+          "median": 1999.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ist_in_mio_euro"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ist_in_mio_euro"
+    }
+  },
+  "quality_score": 5.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

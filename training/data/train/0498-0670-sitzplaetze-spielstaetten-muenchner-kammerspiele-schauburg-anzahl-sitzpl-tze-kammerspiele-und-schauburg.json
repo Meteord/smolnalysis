@@ -1,0 +1,108 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Anzahl Sitzplätze Kammerspiele und Schauburg from Sitzplätze Münchner Kammerspiele.",
+  "query_result": {
+    "dataset_title": "Sitzplätze Münchner Kammerspiele",
+    "package_id": "2776a92e-9caa-4ea7-98a5-b9f10cb5ac22",
+    "package_name": "sitzplaetze-spielstaetten-muenchner-kammerspiele-schauburg",
+    "resource_id": "4a03ac2d-8849-46fd-b78a-857b8dddb429",
+    "resource_name": "Anzahl Sitzplätze Kammerspiele und Schauburg",
+    "resource_format": "csv",
+    "description": "Der Datensatz beinhaltet eine Übersicht der baukonzeptionell vorhandenen Sitzplätze aller Spielstätten der Münchner Kammerspiele und der Schauburg seit 2017. Siehe auch: https://www.muenchner-kammerspiele.de/de/service/1171-herzlich-willkommen",
+    "organization": "Kulturreferat",
+    "tags": [
+      "Sitzplätze",
+      "Theater"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 37,
+    "sampled_rows": 37,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "theater",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 37,
+        "null_count": 0,
+        "examples": [
+          "Schauspielhaus der Münchner Kammerspiele",
+          "Schauburg"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "spielzeit",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 37,
+        "null_count": 0,
+        "examples": [
+          "2021/22",
+          "2020/21",
+          "2019/20",
+          "2018/19",
+          "2017/18"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "platzanzahl",
+        "dtype": "int64",
+        "kind": "geospatial",
+        "non_null_count": 37,
+        "null_count": 0,
+        "examples": [
+          690,
+          268,
+          134,
+          40,
+          220
+        ],
+        "numeric": {
+          "count": 37.0,
+          "min": 20.0,
+          "max": 690.0,
+          "mean": 205.5946,
+          "median": 170.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "name_spielstaette",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 37,
+        "null_count": 0,
+        "examples": [
+          "SH",
+          "THG",
+          "WR",
+          "Sonstige Spielstätten",
+          "K1"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "theater",
+      "spielzeit"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

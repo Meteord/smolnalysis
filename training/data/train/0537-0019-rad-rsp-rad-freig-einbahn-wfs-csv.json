@@ -1,0 +1,169 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt) and compare status by status_bedeutung.",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Radfahren entgegen Einbahnstraße erlaubt)",
+    "package_id": "b089ca29-8f22-4fd5-959b-95ce2e36e9c8",
+    "package_name": "rad_rsp_rad_freig_einbahn",
+    "resource_id": "1772b2e9-4027-43fc-a87a-d2d14e448136",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Die Öffnung von Einbahnstraßen für den gegenläufigen Radverkehr bedeutet eine bessere Erschließung des jeweiligen Viertels und erspart Radelnden häufig Umwege. Mittlerweile sind in München deutlich mehr als die Hälfte aller etwa 700 Einbahnstraßen für den Radverkehr auch in die Gegenrichtung freigegeben, ohne dass hier die Unfallzahlen höher sind als in „normalen“ Straßen mit Zweirichtungsverkehr. Für alle Verkehrsteilnehmenden gilt es dabei zu beachten, dass für jedwede Fahrtrichtung rechts vor",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Einbahnstraßen",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 284,
+    "sampled_rows": 284,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 284,
+        "null_count": 0,
+        "examples": [
+          2
+        ],
+        "numeric": {
+          "count": 284.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 284,
+        "null_count": 0,
+        "examples": [
+          0
+        ],
+        "numeric": {
+          "count": 284.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 284,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((693301.9860008749 5334008.24679786, 693257.8160008739 5333959.9939978635, 693280.8054008743 5333938.99669786, 693322.9817008753 5333987.954397859, 693",
+          "POLYGON ((693034.2072008688 5334076.045797879, 693088.3323008701 5334041.549597873, 693107.3066008704 5334063.645997873, 693050.3154008691 5334101.080597876, 69",
+          "POLYGON ((693050.4677008693 5334100.842097876, 693130.461900872 5334126.34319787, 693134.7054008711 5334127.229797871, 693138.9972008711 5334127.840097871, 6931",
+          "POLYGON ((693050.2918008692 5334131.218097876, 693055.4795008692 5334243.900597876, 693025.6673008685 5334241.562697878, 693019.7795008684 5334132.834997878, 69",
+          "POLYGON ((693134.8094008713 5334366.74599787, 693048.472400869 5334361.078897876, 693050.9235008692 5334330.879197876, 693140.6119008713 5334335.39589787, 69313"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 284,
+        "null_count": 0,
+        "examples": [
+          "Metzstraße",
+          "Kellerstraße",
+          "Milchstraße",
+          "Pütrichstraße",
+          "Eggernstraße"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 284,
+        "null_count": 0,
+        "examples": [
+          "in Bestand / in Betrieb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsstatus_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 284,
+        "null_count": 0,
+        "examples": [
+          "--"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsdatum",
+        "dtype": "float64",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 284,
+        "null_rate": 1.0
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "float64",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 284,
+        "null_rate": 1.0
+      },
+      {
+        "name": "abbaudatum",
+        "dtype": "float64",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 284,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "status",
+      "planungsstatus"
+    ],
+    "category_columns": [
+      "status_bedeutung",
+      "planungsstatus_bedeutung"
+    ],
+    "time_columns": [
+      "planungsdatum",
+      "realisierungsdatum",
+      "abbaudatum"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "status_bedeutung",
+      "y": "status"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Einpersonenhaushalte and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Einpersonenhaushalte",
+    "package_id": "86612b72-4312-4905-a0c5-581baac650c5",
+    "package_name": "indikatorenatlas-bevoelkerung-einpersonenhaushalte-83r65mct",
+    "resource_id": "bfedaa2b-e096-40b4-a48a-51faff42adf3",
+    "resource_name": "Einpersonenhaushalte",
+    "resource_format": "csv",
+    "description": "Anteil der Einpersonen-Privathaushalte (mit einer Hauptwohnsitzperson) an allen Privathaus-halten (mit mindestens einer Hauptwohnsitzperson) in Prozent. bzw. Anteil der Einpersonen-Privathaushalte (mit einer Hauptwohnsitzperson) der entsprechenden Kategorie an allen Einpersonen-Privathaushalten (mit einer Hauptwohnsitzperson) in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 3276,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          21.2,
+          23.4,
+          24.8,
+          30.7,
+          25.4
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 16.7,
+          "max": 82.3,
+          "mean": 49.4875,
+          "median": 55.1
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "100204",
+          "1870",
+          "4955",
+          "6831",
+          "6466"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 862.0,
+          "max": 472378.0,
+          "mean": 21711.917,
+          "median": 10374.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "472378",
+          "7986",
+          "19941",
+          "22235",
+          "25426"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 4988.0,
+          "max": 868183.0,
+          "mean": 43010.896,
+          "median": 20419.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2012.0,
+          "max": 2025.0,
+          "mean": 2018.978,
+          "median": 2019.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "bis 29 Jahre",
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Privathaushalte (Einpersonen) (bis 29 Jahre)",
+          "Privathaushalte (Einpersonen) (deutsch)",
+          "Privathaushalte (Einpersonen)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Privathaushalte (Einpersonen)",
+          "Privathaushalte (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Einpersonenhaushalte"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

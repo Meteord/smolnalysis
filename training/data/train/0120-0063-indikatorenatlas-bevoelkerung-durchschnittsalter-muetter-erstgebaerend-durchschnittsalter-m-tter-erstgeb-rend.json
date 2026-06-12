@@ -1,0 +1,214 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Durchschnittsalter Mütter erstgebärend and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Durchschnittsalter Mütter erstgebärend",
+    "package_id": "86ddee28-69b2-4e8a-85d2-1651bd50833a",
+    "package_name": "indikatorenatlas-bevoelkerung-durchschnittsalter-muetter-erstgebaerend",
+    "resource_id": "2203038a-7a12-4f6d-b8c7-7df37397d4f2",
+    "resource_name": "Durchschnittsalter Mütter erstgebärend",
+    "resource_format": "csv",
+    "description": "Durchschnittliches Alter der Mütter mit Hauptwohnsitz bei Geburt ihres erstes Kindes / ihrer ersten Kinder (Mehrlingsgeburt) der entsprechenden Kategorie in Jahren. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Frauen",
+      "Geburt",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 858,
+    "sampled_rows": 858,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          33.1,
+          34.3,
+          33.7,
+          33.8,
+          33.2
+        ],
+        "numeric": {
+          "count": 858.0,
+          "min": 27.4,
+          "max": 34.9,
+          "mean": 31.6559,
+          "median": 31.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          "173360",
+          "3255",
+          "7896",
+          "9093",
+          "11220"
+        ],
+        "numeric": {
+          "count": 858.0,
+          "min": 665.0,
+          "max": 321695.0,
+          "mean": 14525.9627,
+          "median": 6809.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          "5230",
+          "95",
+          "234",
+          "270",
+          "332"
+        ],
+        "numeric": {
+          "count": 858.0,
+          "min": 22.0,
+          "max": 10025.0,
+          "mean": 455.7762,
+          "median": 215.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 858.0,
+          "min": 2015.0,
+          "max": 2025.0,
+          "mean": 2020.0,
+          "median": 2020.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt",
+          "nichtdeutsch"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          "Summe (Alter Mütter (erstgebärend) bei Geburt) (deutsch)",
+          "Summe (Alter Mütter (erstgebärend) bei Geburt) (insgesamt)",
+          "Summe (Alter Mütter (erstgebärend) bei Geburt) (nichtdeutsch)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          "Mütter (erstgebärend) (deutsch)",
+          "Mütter (erstgebärend) (insgesamt)",
+          "Mütter (erstgebärend) (nichtdeutsch)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          "Durchschnittsalter Mütter erstgebärend"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 858,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

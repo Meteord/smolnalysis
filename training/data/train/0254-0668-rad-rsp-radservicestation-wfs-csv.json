@@ -1,0 +1,127 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (CSV) from Radlstadtplan (Radservicestationen).",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Radservicestationen)",
+    "package_id": "563af28c-6c49-4e21-8ae5-9adf40b29481",
+    "package_name": "rad_rsp_radservicestation",
+    "resource_id": "aeb975e7-10fe-49d5-85da-b0befc6d9ba5",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Entlang stark frequentierter Fahrradrouten und an größeren Fahrradabstellanlagen stellen verschiedene Institutionen im Münchner Stadtgebiet öffentliche Pumpstationen bereit: So lässt sich ein zu geringer Luftdruck im Fahrradreifen schnell beheben. Einige Stationen sind darüber hinaus mit Werkzeug für kleinere Reparaturen und Wartungen ausgestattet. In dieser Karte sind alle Pump- und Reparaturstationen eingezeichnet, die öffentlich zugänglich sind und gleichzeitig von einer öffentlichen Institut",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 19,
+    "sampled_rows": 19,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "servicestation",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bemerkung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "im Rahmen des EU-Projekts „Creating NEBourhoods Together“",
+          "Betrieb durch Gasteig München GmbH",
+          "Betreiber: P+R Park & Ride GmbH",
+          "Betrieb durch Landratsamt München",
+          "Betreiber: LMU (Ludwig-Maximilians-Universität München)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "POINT (696343.5206009457 5331768.248897645)",
+          "POINT (690088.9950008055 5331910.088498071)",
+          "POINT (695919.0000009348 5334522.999997671)",
+          "POINT (692558.0000008581 5334580.999997909)",
+          "POINT (694125.0000008915 5342201.999997783)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "Nachbarschaftsstation RESI",
+          "Gasteig HP8",
+          "Berg am Laim",
+          "Mariannenbrücke",
+          "Kieferngarten"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ortsangabe",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "an der Quiddestraße unter der Jakobusbrücke",
+          "Fahrradständer vor dem Eingang zur Halle E",
+          "Überdachte Radabstellanlagen am S-Bahnhof (Südseite)",
+          "auf der Aufpflasterung",
+          "Überdachte Radabstellanlagen am U-Bahnhof"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "luftpumpe",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 19,
+        "null_count": 0,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "servicestation",
+      "bemerkung",
+      "luftpumpe"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

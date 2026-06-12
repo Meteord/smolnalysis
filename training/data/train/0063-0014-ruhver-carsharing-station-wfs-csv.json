@@ -1,0 +1,249 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Stationsbasierte Carsharing-Parkplätze and compare objectid by anbietername.",
+  "query_result": {
+    "dataset_title": "Stationsbasierte Carsharing-Parkplätze",
+    "package_id": "e4bc89e2-280f-4394-b157-d709c940f1a2",
+    "package_name": "ruhver_carsharing_station",
+    "resource_id": "bf6f07f7-ca17-454c-a110-108f06d15701",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Jeder dieser Parkplätze ist vertraglich genau einem Carsharing-Fahrzeug eines stationsbasierten Anbieters zugewiesen. Der Name des Anbieters ist unter dem Carsharing-Schild angegeben. Daher ist es wichtig, dass diese Parkplätze nicht durch private Fahrzeuge oder Fahrzeuge anderer Carsharing-Anbieter fremdbeparkt werden. Ein durchgestrichenes Symbol zeigt an, dass diese stationsbasierten Carsharing-Parkplätze derzeit außer Betrieb sind (beispielsweise wegen Veranstaltungen oder Baustellen). Das H",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 200,
+    "sampled_rows": 200,
+    "column_count": 16,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          588,
+          22,
+          41,
+          7370,
+          496
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 4.0,
+          "max": 19634.0,
+          "mean": 3672.065,
+          "median": 1950.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          12,
+          13,
+          6,
+          19,
+          25
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.28,
+          "median": 11.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          2,
+          3
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 2.0,
+          "max": 3.0,
+          "mean": 2.02,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "int64",
+        "kind": "date",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          20260323,
+          20251204,
+          20260522,
+          20260224,
+          20260527
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 20251204.0,
+          "max": 20260609.0,
+          "mean": 20258163.96,
+          "median": 20260331.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 194,
+        "null_count": 6,
+        "examples": [
+          "01.07.2023",
+          "01.08.2023",
+          "28.11.2024",
+          "01.09.2023",
+          "09.10.2024"
+        ],
+        "null_rate": 0.03
+      },
+      {
+        "name": "anbietername",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          "STATTAUTO",
+          "CarVia"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((692799.0533008621 5339618.115797882, 692796.3903008624 5339613.6494978815, 692794.6721008623 5339614.673997884, 692797.3351008621 5339619.140397882, 6",
+          "POLYGON ((692329.9953008521 5337647.213597916, 692330.063300852 5337642.163297919, 692328.1210008527 5337642.1370979175, 692328.1086008523 5337647.206997918, 69",
+          "POLYGON ((696534.3368009483 5337299.659797617, 696533.989400949 5337297.864297616, 696528.0101009482 5337298.945097617, 696528.3717009486 5337300.741297617, 696",
+          "POLYGON ((696540.3054009487 5337298.577597615, 696539.9580009485 5337296.782097614, 696533.989400949 5337297.864297616, 696534.3368009483 5337299.659797617, 696",
+          "POLYGON ((689160.5930007864 5332414.713198124, 689165.5739007862 5332415.241098125, 689165.9180007856 5332412.663898124, 689160.9039007863 5332412.131898126, 68"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sonderparken_typ",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          "statCS_1A"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sonderparken_typ_text",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          "stationsbasiert"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sonderparken_standortname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 200,
+        "null_count": 0,
+        "examples": [
+          "Marianne-Brandt-Straße",
+          "Münchner Freiheit",
+          "Robert-Heger-Straße",
+          "Kidlerplatz",
+          "Aidenbachstraße"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 10,
+        "null_count": 190,
+        "examples": [
+          "01.04.2026",
+          "26.05.2026",
+          "10.05.2026"
+        ],
+        "null_rate": 0.95
+      },
+      {
+        "name": "gueltigkeit_datum_ende",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 10,
+        "null_count": 190,
+        "examples": [
+          "07.09.2026",
+          "29.10.2026",
+          "16.07.2026"
+        ],
+        "null_rate": 0.95
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "stadtbezirk",
+      "status"
+    ],
+    "category_columns": [
+      "anbietername",
+      "sonderparken_typ",
+      "sonderparken_typ_text"
+    ],
+    "time_columns": [
+      "bearbeitung_datum",
+      "realisierungsdatum",
+      "gueltigkeit_datum_start"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "anbietername",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 1,
+    "dropped_identifier_columns": 3,
+    "source_profile_error": null
+  }
+}

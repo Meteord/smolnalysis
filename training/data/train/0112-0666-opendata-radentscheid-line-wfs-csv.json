@@ -1,0 +1,162 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (CSV) from Radentscheidmaßnahmen.",
+  "query_result": {
+    "dataset_title": "Radentscheidmaßnahmen",
+    "package_id": "a3b9ad1b-7de8-4aa1-a466-79abefba29b2",
+    "package_name": "opendata_radentscheid_line",
+    "resource_id": "d4d79d1b-73e5-4fdc-9805-d0075f896776",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Beschlossene Umbaumaßnahmen in der Landeshauptstadt München zur Stärkung der Fahrradinfrastruktur. Der Radentscheid München (REM) ist ein Bürgerbegehren, das einen wichtigen Schritt zur Verkehrswende darstellt und damit eine Neuverteilung des öffentlichen Raums vorsieht - zugunsten von Zu-Fuß-Gehenden, Radfahrenden und Nutzer*innen der öffentlichen Verkehrsmittel – für mehr Verkehrssicherheit und Umweltschutz. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/ra",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Radentscheid",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 58,
+    "sampled_rows": 58,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "sachstand",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 58,
+        "null_count": 0,
+        "examples": [
+          "in Bau / in Umsetzung (BAU)",
+          "Planung beschlossen (MOR)",
+          "Umsetzung beschlossen (BAU)",
+          "Umsetzung erfolgt (BAU)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 58,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((692107.842600847 5340018.718297927, 692144.7277008479 5340023.530397924, 692183.9882008488 5340027.127897923, 692242.37540085 5340031.21779791",
+          "MULTILINESTRING ((688683.7020007756 5336280.896498146, 688858.327300779 5336237.240198136, 689125.8216007844 5336165.802498121, 689381.4096007899 5336098.333598",
+          "MULTILINESTRING ((690799.1182008199 5334752.056398022, 690769.6806008192 5334749.660998024, 690527.1561008141 5334743.062498039, 690452.0516008126 5334741.64919",
+          "MULTILINESTRING ((687402.937900749 5338847.909898216, 687484.9341007507 5338915.87069821), (687550.6640007519 5338868.198898207, 687484.9341007507 5338915.87069",
+          "MULTILINESTRING ((691778.3876008416 5332716.711197962, 691787.0397008416 5332704.560397964, 691791.7853008417 5332695.555597962, 691797.6006008419 5332679.91449"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 58,
+        "null_count": 0,
+        "examples": [
+          "Domagkstraße",
+          "Abschnitt westlich der Landshuter Allee bis Stiglmaierplatz",
+          "Schwanthalerstraße zw. Paul-Heyse-Str. und Sonnenstraße",
+          "Knotenpunkt Dachauer Straße / Wintrichring / Georg-Brauchle-Ring einschl. Anschluss Feldmochinger Straße",
+          "Martin-Luther-Straße in Verbindung mit dem Giesinger Berg bis zur Plattnerstraße"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung_kurz",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 58,
+        "null_count": 0,
+        "examples": [
+          "Domagkstraße",
+          "Nymphenburger Straße",
+          "Schwanthalerstraße",
+          "Dachauer Str. / Wintrich- / Georg-Brauchle-Ring",
+          "Martin-Luther-Straße / Giesinger Berg"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "link_pdf",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 56,
+        "null_count": 2,
+        "examples": [
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/domagkstrasse/pdf",
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/nymphenburger-strasse/pdf",
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/schwanthalerstrasse/pdf",
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/knotenpunkt-dachauer-strasse-wintrichring-georg-brauchle-ring/pdf",
+          "https://muenchenunterwegs.de/radentscheid/massnahmen/giesinger-berg-martin-luther-strasse/pdf"
+        ],
+        "null_rate": 0.0345
+      },
+      {
+        "name": "link_folien",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 21,
+        "null_count": 37,
+        "examples": [
+          "https://muenchenunterwegs.de/content/854/download/220728-domagkstrasse-prasentation-ov-final-1.pdf",
+          "https://muenchenunterwegs.de/content/854/download/20240227-vorstellung-p-heyse-str-schwanth-1.pdf",
+          "https://muenchenunterwegs.de/content/854/download/230720-knoten-dah-prasentation.pdf",
+          "https://muenchenunterwegs.de/content/854/download/2022-06-29-martin-luther-strasse-offentlichkeitsveranstaltung-fin2-1-1.pdf",
+          "https://muenchenunterwegs.de/content/854/download/210623-vorstellung-querung-stadelheimer-strasse-2-1.pdf"
+        ],
+        "null_rate": 0.6379
+      },
+      {
+        "name": "link_stadtratsbeschluss",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 13,
+        "null_count": 45,
+        "examples": [
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7577040",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/8396565",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7738901",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7298792",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/6628153"
+        ],
+        "null_rate": 0.7759
+      },
+      {
+        "name": "link_video",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 6,
+        "null_count": 52,
+        "examples": [
+          "https://youtu.be/SA5vXT7z_es",
+          "https://youtu.be/XlGhGyE6u68",
+          "https://youtu.be/sg1eyb71ugQ",
+          "https://www.youtube.com/watch?v=T4OhPRR3EAM",
+          "https://youtu.be/jWWWsmqBSD0"
+        ],
+        "null_rate": 0.8966
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "sachstand"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

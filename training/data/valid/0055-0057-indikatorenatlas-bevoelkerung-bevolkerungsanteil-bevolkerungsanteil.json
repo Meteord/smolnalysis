@@ -1,0 +1,204 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Bevölkerungsanteil and compare Indikatorwert by Indikator.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Bevölkerungsanteil",
+    "package_id": "3cc5ae0f-f4ff-480e-8428-9aeaec4ed23d",
+    "package_name": "indikatorenatlas-bevoelkerung-bevolkerungsanteil",
+    "resource_id": "d0b78781-dbf9-473b-a2ba-6a3b76ae35d4",
+    "resource_name": "Bevolkerungsanteil",
+    "resource_format": "csv",
+    "description": "Hauptwohnsitzbevölkerung der ausgewählten räumlichen Einheit (z. B. Stadtbezirk) an der Hauptwohnsitzbevölkerung. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Indikatorenatlas"
+    ],
+    "groups": [],
+    "row_count": 676,
+    "sampled_rows": 676,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          100.0,
+          1.3,
+          3.1,
+          3.3,
+          4.3
+        ],
+        "numeric": {
+          "count": 676.0,
+          "min": 1.3,
+          "max": 100.0,
+          "mean": 7.692,
+          "median": 3.8
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          "1612429",
+          "20606",
+          "50048",
+          "52501",
+          "69484"
+        ],
+        "numeric": {
+          "count": 676.0,
+          "min": 18159.0,
+          "max": 1612429.0,
+          "mean": 110680.6509,
+          "median": 54145.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          "1612429",
+          "1603776",
+          "1589026",
+          "1588330",
+          "1562128"
+        ],
+        "numeric": {
+          "count": 676.0,
+          "min": 1247934.0,
+          "max": 1612429.0,
+          "mean": 1438848.7692,
+          "median": 1452218.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 676.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2012.5,
+          "median": 2012.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          "Bevölkerungsanteil"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (ausgewählte räumliche Einheit)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 676,
+        "null_count": 0,
+        "examples": [
+          "Hauptwohnsitzbevölkerung (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Indikator",
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Indikator",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

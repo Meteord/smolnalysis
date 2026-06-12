@@ -1,0 +1,201 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Aktuelle Bezirksausschuss-Anträge and compare version by title.",
+  "query_result": {
+    "dataset_title": "Aktuelle Bezirksausschuss-Anträge",
+    "package_id": "dc7f256a-6da1-45d5-8e22-9a0881f34e1e",
+    "package_name": "aktuelle-bezirksausschuss-antraege",
+    "resource_id": "efac0076-c41c-4584-90fe-f54fe79868c1",
+    "resource_name": "BA-Anträge - RSS-Feed",
+    "resource_format": "xml",
+    "description": "Der Datensatz listet aktuelle Anträge der Münchner Bezirksausschüsse als RSS-Feed auf.",
+    "organization": "Direktorium der Landeshauptstadt München",
+    "tags": [
+      "Bezirksausschüsse",
+      "RIS"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 3,
+    "sampled_rows": 3,
+    "column_count": 19,
+    "columns": [
+      {
+        "name": "version",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "2.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6667
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 2,
+        "null_count": 1,
+        "examples": [
+          "BA-Anträge",
+          "BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026"
+        ],
+        "null_rate": 0.3333
+      },
+      {
+        "name": "link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 2,
+        "null_count": 1,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=BA-Antraege",
+          "https://risi.muenchen.de/risi/antrag/detail/9720040"
+        ],
+        "null_rate": 0.3333
+      },
+      {
+        "name": "description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 2,
+        "null_count": 1,
+        "examples": [
+          "RSS Feed der neusten BA-Anträge der Landeshauptstadt München.",
+          "<strong>BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</str"
+        ],
+        "null_rate": 0.3333
+      },
+      {
+        "name": "channel.item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "Thu, 21 May 2026 00:00:00 +0200"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "Thu, 21 May 2026 00:00:00 +0200"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "Thu, 21 May 2026 00:00:00 +0200"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "BA-Anträge"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=BA-Antraege"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "RSS Feed der neusten BA-Anträge der Landeshauptstadt München."
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.item.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "BA-Antrag Nr. 26-32 / B 00003 vom 21.05.2026"
+        ],
+        "null_rate": 0.6667
+      },
+      {
+        "name": "channel.item.link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 2,
+        "examples": [
+          "https://risi.muenchen.de/risi/antrag/detail/9720040"
+        ],
+        "null_rate": 0.6667
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "version"
+    ],
+    "category_columns": [
+      "title",
+      "link",
+      "description",
+      "channel.title"
+    ],
+    "time_columns": [
+      "channel.item.pubDate",
+      "item.pubDate",
+      "pubDate"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "title",
+      "y": "version"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 7,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

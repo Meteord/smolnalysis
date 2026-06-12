@@ -1,0 +1,207 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of bestattungen in Bestattungen und Beisetzungen städtische Friedhöfe München.",
+  "query_result": {
+    "dataset_title": "Bestattungen und Beisetzungen städtische Friedhöfe München",
+    "package_id": "efc2838b-cff2-458a-8da5-9eef7aa09130",
+    "package_name": "bestattungen-beisetzungen-staedtische-friedhoefe-muenchen",
+    "resource_id": "6afc540a-28a1-436f-b2ef-795cb6a4970e",
+    "resource_name": "Bestattungen und Beisetzungen städtische Friedhöfe München",
+    "resource_format": "csv",
+    "description": "Jährlich finden rund 11.000 Bestattungen auf den Münchner Friedhöfen statt. Dabei ist die Zahl der Sargbestattungen stetig sinkend. Im Gegenzug steigt die Zahl der Urnenbeisetzungen an. Insgesamt gibt es über 262.000 Gräber unterschiedlichster Grabarten.",
+    "organization": "Gesundheitsreferat",
+    "tags": [
+      "Beisetzung",
+      "Bestattung",
+      "Friedhof"
+    ],
+    "groups": [],
+    "row_count": 6,
+    "sampled_rows": 6,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "bestattungen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          11968,
+          11410,
+          11294,
+          11143,
+          10718
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 10642.0,
+          "max": 11968.0,
+          "mean": 11195.8333,
+          "median": 11218.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sargbestattungen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          3104,
+          3397,
+          3549,
+          3613,
+          3442
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 3104.0,
+          "max": 3659.0,
+          "mean": 3460.6667,
+          "median": 3495.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "urnenbeisetzungen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          8864,
+          8013,
+          7745,
+          7530,
+          7276
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 6983.0,
+          "max": 8864.0,
+          "mean": 7735.1667,
+          "median": 7637.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "davon_urnenbeisetzungen_anonoym",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          871,
+          844,
+          896,
+          581,
+          787
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 581.0,
+          "max": 896.0,
+          "mean": 763.8333,
+          "median": 815.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ueberfuehrung_verstorberener_nach_auswaerts",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          5715,
+          5818,
+          4794,
+          4676,
+          4633
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 4633.0,
+          "max": 5818.0,
+          "mean": 5071.6667,
+          "median": 4794.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bestattungen_von_amts_wegen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          819,
+          740,
+          640,
+          653,
+          621
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 578.0,
+          "max": 819.0,
+          "mean": 675.1667,
+          "median": 646.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "2023",
+          "2022",
+          "2021",
+          "2020",
+          "2019"
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 2018.0,
+          "max": 2023.0,
+          "mean": 2020.5,
+          "median": 2020.5
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "bestattungen",
+      "sargbestattungen",
+      "urnenbeisetzungen",
+      "davon_urnenbeisetzungen_anonoym"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "bestattungen"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

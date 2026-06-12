@@ -1,0 +1,284 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of plz in WC-Standorte der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "WC-Standorte der Landeshauptstadt München",
+    "package_id": "80832bca-499b-4b24-bb41-9e77f0ef31ee",
+    "package_name": "wc_finder",
+    "resource_id": "3d8c7328-e65d-4b4a-98f6-1b54adae9fb0",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Daten beinhalten die Standorte der öffentlichen Toiletten, die sich im Besitz der Landeshauptstadt München befinden. Es werden sowohl barrierefreie als auch nicht barrierefreie Toiletten dargestellt. Der Nutzer kann auf ausführliche Informationen hinsichtlich Zugänglichkeit, Ausstattung und Zustand der Toiletten zugreifen. Wir bemühen uns, die Informationen zu den Maßnahmen aktuell und inhaltlich richtig anzubieten, die Karte bietet dennoch keine Gewähr auf Richtigkeit, Vollständigkeit und A",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "WC-Finder",
+      "planningCadastre"
+    ],
+    "groups": [],
+    "row_count": 932,
+    "sampled_rows": 932,
+    "column_count": 288,
+    "columns": [
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 310,
+        "null_count": 622,
+        "examples": [
+          "80804",
+          "80339",
+          "80992",
+          "81667",
+          "80637"
+        ],
+        "numeric": {
+          "count": 310.0,
+          "min": 80331.0,
+          "max": 85764.0,
+          "mean": 81191.071,
+          "median": 81373.0
+        },
+        "null_rate": 0.6674
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 310,
+        "null_count": 622,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 310.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6674
+      },
+      {
+        "name": "wickeln",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 302,
+        "null_count": 630,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 302.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2219,
+          "median": 0.0
+        },
+        "null_rate": 0.676
+      },
+      {
+        "name": "telefon",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 239,
+        "null_count": 693,
+        "examples": [
+          "089/23326198",
+          "089/23326199",
+          "089/23326200",
+          "891465590",
+          "858367910"
+        ],
+        "numeric": {
+          "count": 26.0,
+          "min": 93921770.0,
+          "max": 4028794380.0,
+          "mean": 1603177706.0769,
+          "median": 858367910.0
+        },
+        "null_rate": 0.7436
+      },
+      {
+        "name": "preis",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 225,
+        "null_count": 707,
+        "examples": [
+          "0.5",
+          "0.0",
+          "0.6",
+          "1.0"
+        ],
+        "numeric": {
+          "count": 225.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2711,
+          "median": 0.0
+        },
+        "null_rate": 0.7586
+      },
+      {
+        "name": "wc_buegel_rechts",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 822,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.6545,
+          "median": 1.0
+        },
+        "null_rate": 0.882
+      },
+      {
+        "name": "wc_buegel_links",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 822,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.6636,
+          "median": 1.0
+        },
+        "null_rate": 0.882
+      },
+      {
+        "name": "toilette_fuer_alle",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.2547,
+          "median": 0.0
+        },
+        "null_rate": 0.8863
+      },
+      {
+        "name": "wc_badewanne",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.8863
+      },
+      {
+        "name": "wc_dusche",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.8863
+      },
+      {
+        "name": "wc_spiegel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.566,
+          "median": 1.0
+        },
+        "null_rate": 0.8863
+      },
+      {
+        "name": "wc_gelaender",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 106,
+        "null_count": 826,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "numeric": {
+          "count": 106.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0377,
+          "median": 0.0
+        },
+        "null_rate": 0.8863
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "plz",
+      "srsDimension",
+      "wickeln",
+      "telefon"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "plz"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 276,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ruhver_carsharing_station.objectid in Stationsbasierte Carsharing-Parkplätze.",
+  "query_result": {
+    "dataset_title": "Stationsbasierte Carsharing-Parkplätze",
+    "package_id": "e4bc89e2-280f-4394-b157-d709c940f1a2",
+    "package_name": "ruhver_carsharing_station",
+    "resource_id": "68c3ac62-6f9b-47af-8fdc-f7daee2a1dcd",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Jeder dieser Parkplätze ist vertraglich genau einem Carsharing-Fahrzeug eines stationsbasierten Anbieters zugewiesen. Der Name des Anbieters ist unter dem Carsharing-Schild angegeben. Daher ist es wichtig, dass diese Parkplätze nicht durch private Fahrzeuge oder Fahrzeuge anderer Carsharing-Anbieter fremdbeparkt werden. Ein durchgestrichenes Symbol zeigt an, dass diese stationsbasierten Carsharing-Parkplätze derzeit außer Betrieb sind (beispielsweise wegen Veranstaltungen oder Baustellen). Das H",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 60,
+    "columns": [
+      {
+        "name": "ruhver_carsharing_station.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "588",
+          "22",
+          "41",
+          "7370",
+          "496"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 4.0,
+          "max": 8333.0,
+          "mean": 2537.8443,
+          "median": 704.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "ruhver_carsharing_station.stadtbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "12",
+          "13",
+          "6",
+          "19",
+          "25"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.9162,
+          "median": 12.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "ruhver_carsharing_station.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "588",
+          "22",
+          "41",
+          "7370",
+          "496"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 4.0,
+          "max": 8333.0,
+          "mean": 2537.8443,
+          "median": 704.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "12",
+          "13",
+          "6",
+          "19",
+          "25"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.9162,
+          "median": 12.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "featureMember.ruhver_carsharing_station.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "18993"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 18993.0,
+          "max": 18993.0,
+          "mean": 18993.0,
+          "median": 18993.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_carsharing_station.stadtbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "3"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_carsharing_station.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_carsharing_station.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "20260323",
+          "20251204",
+          "20260522",
+          "20260224",
+          "20260527"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 20251204.0,
+          "max": 20260609.0,
+          "mean": 20258033.8982,
+          "median": 20260323.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "20260323",
+          "20251204",
+          "20260522",
+          "20260224",
+          "20260527"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 20251204.0,
+          "max": 20260609.0,
+          "mean": 20258033.8982,
+          "median": 20260323.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "featureMember.ruhver_carsharing_station.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "20260512"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 20260512.0,
+          "max": 20260512.0,
+          "mean": 20260512.0,
+          "median": 20260512.0
+        },
+        "null_rate": 0.999
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_carsharing_station.objectid",
+      "ruhver_carsharing_station.stadtbezirk",
+      "ruhver_carsharing_station.status",
+      "objectid"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "ruhver_carsharing_station.bearbeitung_datum",
+      "bearbeitung_datum",
+      "featureMember.ruhver_carsharing_station.bearbeitung_datum"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ruhver_carsharing_station.objectid"
+    }
+  },
+  "quality_score": 6.5,
+  "cleaning_notes": {
+    "dropped_columns": 41,
+    "dropped_identifier_columns": 7,
+    "source_profile_error": null
+  }
+}

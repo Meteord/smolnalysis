@@ -1,0 +1,154 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Haltestellen mit Tarifzuordnung MVV and compare Nummer by Ort.",
+  "query_result": {
+    "dataset_title": "Haltestellen mit Tarifzuordnung MVV",
+    "package_id": "51c388cf-814c-435d-a7e8-4d512d66d26a",
+    "package_name": "haltestellen-mit-tarifzuordnung-mvv",
+    "resource_id": "16a3838e-c4ef-4c0a-97b1-05672414e163",
+    "resource_name": "MVV Tarifzonenzuordnung (CSV, 07.01.2026)",
+    "resource_format": "csv",
+    "description": "Eine Liste mit der Eintarifierung aller Haltestellen im Verbundgebiet. Die Haltestellenliste enthält die Tarifzonen-Zuordnung für jede Haltestelle und wird in der Regel im Turnus von einem Jahr aktualisiert. Das von uns angebotene Haltestellenverzeichnis steht unter der Creative Commons Attribution License (cc-by). Als Quellenangabe notieren Sie bitte \"Münchner Verkehrs- und Tarifverbund GmbH (MVV)\" sowie Abrufdatum und Datenstand.",
+    "organization": "Münchner Verkehrs- und Tarifverbund GmbH (MVV)",
+    "tags": [
+      "MVV",
+      "Mobilität",
+      "ÖPNV"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 9627,
+    "sampled_rows": 1000,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "Nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 1751.0,
+          "mean": 805.884,
+          "median": 816.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Tarifzone TSR",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "M",
+          "M/1",
+          "2",
+          "1/2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "München",
+          "Garching (b München)",
+          "Dornach (b München)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Gemeindegebiet",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "München",
+          "Garching bei München",
+          "Aschheim"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name mit Ort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Karlsplatz (Stachus)",
+          "Marienplatz",
+          "Isartor",
+          "Rosenheimer Platz",
+          "Ostbahnhof"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Globale ID",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "de:09162:1",
+          "de:09162:2",
+          "de:09162:3",
+          "de:09162:4",
+          "de:09162:5"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Nummer",
+      "Tarifzone TSR"
+    ],
+    "category_columns": [
+      "Ort",
+      "Gemeindegebiet"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Ort",
+      "y": "Nummer"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

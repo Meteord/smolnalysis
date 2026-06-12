@@ -1,0 +1,176 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for POIs an der Isar from Points of Interest an der südlichen Isar.",
+  "query_result": {
+    "dataset_title": "Points of Interest an der südlichen Isar",
+    "package_id": "fc28edb7-0e69-47b2-814e-3fa18c68f94f",
+    "package_name": "points-of-interest-an-der-sudlichen-isar",
+    "resource_id": "6fb56066-11b2-498d-ba22-cbcc85b660b4",
+    "resource_name": "POIs an der Isar",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz beinhaltet Informationen zu interessanten Punkten (Points of Interest- POI) an der südlichen Isar: Isarbrücken, Wasserwacht, Schwimmbädern, Camping und Kioske nahe der Isar.",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Brücken",
+      "Isar"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 44,
+    "sampled_rows": 44,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 44,
+        "null_count": 0,
+        "examples": [
+          "bruecke",
+          "schwimmbad",
+          "camping",
+          "kiosk",
+          "biergarten"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "photo_credit",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 39,
+        "null_count": 5,
+        "examples": [
+          "Baureferat",
+          "SWM",
+          "Rico Güttich"
+        ],
+        "null_rate": 0.1136
+      },
+      {
+        "name": "latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 44,
+        "null_count": 0,
+        "examples": [
+          48.118377,
+          48.1126073258,
+          48.1285568968,
+          48.104606,
+          48.1837467441
+        ],
+        "numeric": {
+          "count": 44.0,
+          "min": 48.0739,
+          "max": 48.1838,
+          "mean": 48.1266,
+          "median": 48.1274
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 44,
+        "null_count": 0,
+        "examples": [
+          11.561661,
+          11.5600130605,
+          11.5801246257,
+          11.553159,
+          11.6310169802
+        ],
+        "numeric": {
+          "count": 44.0,
+          "min": 11.5394,
+          "max": 11.631,
+          "mean": 11.5767,
+          "median": 11.5766
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 44,
+        "null_count": 0,
+        "examples": [
+          "Braunauer Eisenbahnbrücke",
+          "Brudermühlbrücke",
+          "Corneliusbrücke",
+          "Flauchersteg",
+          "Föhringer Eisenbahnbrücke"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "description",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 43,
+        "null_count": 1,
+        "examples": [
+          "Wurde für die Eisenbahnlinie zwischen München und Braunau von der Königlichen Eisenbahngesellschaft in Auftrag gegeben. Die Gitterträger sind aus Eisen.<br /> <",
+          "Entstand durch Versetzung der alten Wittelsbacher Brücke als erste Verbindung zwischen Thalkirchen und Untergiesing.<br /> <br /> Baujahr: 1953<br /> Entwurf: <",
+          "Wurde entweder nach dem Maler und Direktor der Akademie der Bildenden Künste Peter von Cornelius oder aber nach dessen Neffen, einem Dichter und Komponisten gle",
+          "Wurde 1914 zu einem soliden, von Betonpfeilern gestützten Holzsteg ausgebaut. 2000 folgt der Neubau in Form einer Stahl-Holz-Konstruktion. Die Hochwasser des Ja",
+          "War schon beim Bau 1907 mit einem Gleis auf den zweigleisigen Bahnbetrieb ausgelegt. Die Verbreiterung erfolgte in den 1940er Jahren. 1945 wurde die Brücke jedo"
+        ],
+        "null_rate": 0.0227
+      },
+      {
+        "name": "photo_url",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 39,
+        "null_count": 5,
+        "examples": [
+          "https://res.cloudinary.com/muenchen/isar-map/img/bruecke/braunauer-eisenbahnbr.jpg",
+          "https://res.cloudinary.com/muenchen/isar-map/img/bruecke/brudermuehlbruecke.jpg",
+          "https://res.cloudinary.com/muenchen/isar-map/img/bruecke/corneliusbruecke.jpg",
+          "https://res.cloudinary.com/muenchen/isar-map/img/bruecke/flauchersteg.jpg",
+          "https://res.cloudinary.com/muenchen/isar-map/img/bruecke/eisenbahnbruecke-oberfoehring.jpg"
+        ],
+        "null_rate": 0.1136
+      },
+      {
+        "name": "url_website",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 13,
+        "null_count": 31,
+        "examples": [
+          "http://orte.muenchen.de/1255494.html",
+          "http://orte.muenchen.de/1255509.html",
+          "https://www.muenchen.de/sehenswuerdigkeiten/orte/1218968.html",
+          "http://orte.muenchen.de/1255470.html",
+          "https://www.muenchen.de/sehenswuerdigkeiten/orte/120318.html"
+        ],
+        "null_rate": 0.7045
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "type",
+      "photo_credit"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Paketboxen and compare paketboxen.objectid by paketboxen.betreiber.",
+  "query_result": {
+    "dataset_title": "Paketboxen",
+    "package_id": "b3166b0c-316b-4660-a0e8-9a3031f2a99c",
+    "package_name": "paketboxen",
+    "resource_id": "0063fbaa-b748-4f33-86be-c4d9bb4bd6b4",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Darstellung von anbieteroffenen Paketboxen auf Privatgrund und im öffentlichen Raum.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 92,
+    "sampled_rows": 92,
+    "column_count": 66,
+    "columns": [
+      {
+        "name": "paketboxen.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 15,
+        "null_count": 77,
+        "examples": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 1.0,
+          "max": 15.0,
+          "mean": 8.0,
+          "median": 8.0
+        },
+        "null_rate": 0.837
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 15,
+        "null_count": 77,
+        "examples": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 1.0,
+          "max": 15.0,
+          "mean": 8.0,
+          "median": 8.0
+        },
+        "null_rate": 0.837
+      },
+      {
+        "name": "paketboxen.betreiberid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 83,
+        "examples": [
+          "1018",
+          "1016",
+          "1019",
+          "1020",
+          "1017"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 602.0,
+          "max": 1020.0,
+          "mean": 833.7778,
+          "median": 1016.0
+        },
+        "null_rate": 0.9022
+      },
+      {
+        "name": "betreiberid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 9,
+        "null_count": 83,
+        "examples": [
+          "1018",
+          "1016",
+          "1019",
+          "1020",
+          "1017"
+        ],
+        "numeric": {
+          "count": 9.0,
+          "min": 602.0,
+          "max": 1020.0,
+          "mean": 833.7778,
+          "median": 1016.0
+        },
+        "null_rate": 0.9022
+      },
+      {
+        "name": "featureMember.paketboxen.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 91,
+        "examples": [
+          "15"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 15.0,
+          "max": 15.0,
+          "mean": 15.0,
+          "median": 15.0
+        },
+        "null_rate": 0.9891
+      },
+      {
+        "name": "featureMember.paketboxen.betreiberid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 91,
+        "examples": [
+          "605"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 605.0,
+          "max": 605.0,
+          "mean": 605.0,
+          "median": 605.0
+        },
+        "null_rate": 0.9891
+      },
+      {
+        "name": "paketboxen.betreiber",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 77,
+        "examples": [
+          "myflexbox",
+          "DeinFach",
+          "DF"
+        ],
+        "null_rate": 0.837
+      },
+      {
+        "name": "paketboxen.status",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 77,
+        "examples": [
+          "in Bestand / in Betrieb",
+          "in Planung / in Entwuf"
+        ],
+        "null_rate": 0.837
+      },
+      {
+        "name": "betreiber",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 77,
+        "examples": [
+          "myflexbox",
+          "DeinFach",
+          "DF"
+        ],
+        "null_rate": 0.837
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 77,
+        "examples": [
+          "in Bestand / in Betrieb",
+          "in Planung / in Entwuf"
+        ],
+        "null_rate": 0.837
+      },
+      {
+        "name": "paketboxen.dhl",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 83,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.9022
+      },
+      {
+        "name": "paketboxen.gls",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 9,
+        "null_count": 83,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.9022
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "paketboxen.objectid",
+      "objectid",
+      "paketboxen.betreiberid",
+      "betreiberid"
+    ],
+    "category_columns": [
+      "paketboxen.betreiber",
+      "paketboxen.status",
+      "betreiber",
+      "status"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "paketboxen.betreiber",
+      "y": "paketboxen.objectid"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 53,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

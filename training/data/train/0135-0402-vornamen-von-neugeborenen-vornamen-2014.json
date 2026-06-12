@@ -1,0 +1,102 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Vornamen von Nulljährigen München and compare anzahl by geschlecht.",
+  "query_result": {
+    "dataset_title": "Vornamen von Nulljährigen München",
+    "package_id": "99ad40ec-9d7b-4a2e-87eb-9bac783fb57a",
+    "package_name": "vornamen-von-neugeborenen",
+    "resource_id": "5d581ba3-4c7e-4057-8be1-04d56bb0d8d6",
+    "resource_name": "Vornamen 2014",
+    "resource_format": "csv",
+    "description": "Vornamen des jeweiligen Jahrgangs der Münchner Hauptwohnsitzbevölkerung (Nulljährige) am 31.12. des jeweiligen Jahres (unabhängig vom Geburtsort).",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "München",
+      "Neugeborene",
+      "Vornamen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 4032,
+    "sampled_rows": 1000,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "anzahl",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "178",
+          "134",
+          "119",
+          "113",
+          "109"
+        ],
+        "numeric": {
+          "count": 529.0,
+          "min": 5.0,
+          "max": 178.0,
+          "mean": 19.0359,
+          "median": 10.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "geschlecht",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "m",
+          "w"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "vorname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Maximilian",
+          "Felix",
+          "Anna",
+          "Emma",
+          "Lukas"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl"
+    ],
+    "category_columns": [
+      "geschlecht"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "geschlecht",
+      "y": "anzahl"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

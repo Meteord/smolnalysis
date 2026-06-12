@@ -1,0 +1,121 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Digitale 3L-Zonen and compare angebot by parkregel_beschreibung.",
+  "query_result": {
+    "dataset_title": "Digitale 3L-Zonen",
+    "package_id": "c4a7a96b-4eed-4bb6-99d9-bd88c6ff5492",
+    "package_name": "g_sensor_3l_zonen",
+    "resource_id": "288559c0-e0b9-41f7-809d-5d906098346c",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Mit Sensoren ausgestattete Haltebereiche für Fahrzeuge von Lieferdiensten bzw. Handwerksbetrieben in der Landeshauptstadt München. Die Sensoren erfassen, ob der Parkplatz belegt ist oder nicht. Diese Information ist jedoch nicht Bestandteil der Daten. Sog. 3L-Zonen sind \"Bereiche zum Laden und Liefern\", die zum Be- und Entladen genutzt werden dürfen und \"Bereiche zum Laden, Liefern und Leisten\", in denen auch Fahrzeuge von Handwerksbetrieben abgestellt werden dürfen. Die Haltebereiche sind häufi",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Verkehrswesen",
+      "Wirschaftsverkehr"
+    ],
+    "groups": [],
+    "row_count": 71,
+    "sampled_rows": 71,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "angebot",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 71,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 71.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "parkregel_beschreibung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 71,
+        "null_count": 0,
+        "examples": [
+          "Eingeschränktes Halteverbot 0-24 Uhr",
+          "Absolutes Halteverbot 7-20 Uhr, Altstadttarif 20-23 Uhr"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wirtschaftsverkehr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 71,
+        "null_count": 0,
+        "examples": [
+          "Bereich zum Laden, Leisten und Liefern (auch temporär)",
+          "Lade- und Lieferbereich (auch temporär)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 71,
+        "null_count": 0,
+        "examples": [
+          "LINESTRING (691852.4972008426 5334767.831197955, 691848.7132008427 5334770.058597955)",
+          "LINESTRING (691848.7132008427 5334770.058597955, 691844.9821008424 5334772.254897955)",
+          "LINESTRING (691837.6284008424 5334776.554497954, 691833.8790008421 5334778.723797956)",
+          "LINESTRING (691844.9821008424 5334772.254897955, 691841.3131008425 5334774.414597955)",
+          "LINESTRING (691841.3131008425 5334774.414597955, 691837.6284008424 5334776.554497954)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 71,
+        "null_count": 0,
+        "examples": [
+          "in Bestand / in Betrieb"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "angebot"
+    ],
+    "category_columns": [
+      "parkregel_beschreibung",
+      "wirtschaftsverkehr",
+      "status_bedeutung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "parkregel_beschreibung",
+      "y": "angebot"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

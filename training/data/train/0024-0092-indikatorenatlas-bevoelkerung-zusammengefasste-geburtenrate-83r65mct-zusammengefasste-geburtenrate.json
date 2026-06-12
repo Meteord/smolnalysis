@@ -1,0 +1,138 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Zusammengefasste Geburtenrate and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Zusammengefasste Geburtenrate",
+    "package_id": "8742de0e-4854-4a6d-8e8f-97b00450e08a",
+    "package_name": "indikatorenatlas-bevoelkerung-zusammengefasste-geburtenrate-83r65mct",
+    "resource_id": "94a2515e-65cb-47be-b337-bdb0d01e853a",
+    "resource_name": "Zusammengefasste Geburtenrate",
+    "resource_format": "csv",
+    "description": "(auch als Zusammengefasste Geburtenziffer oder Totale Fertilitätsrate (TFR) bezeichnet) Der Indikator gibt an, wie viele Kinder eine Frau im gebärfähigen Alter (15 bis 44 Jahre) durchschnittlich im Laufe ihres Lebens hypothetisch zur Welt bringen würde, wenn ihr Geburtenverhalten für den gesamten Zeitraum ihrer fruchtbaren Lebensphase mit dem aller Frauen im Alter von 15 bis 44 Jahren übereinstimmen würde. Summe der allgemeinen Geburtenraten der einzelnen Altersjahrgänge (15 bis 44 Jahre) der we",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Geburten",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 2028,
+    "sampled_rows": 1000,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          1.05,
+          1.06,
+          0.91,
+          1.02,
+          1.18
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.76,
+          "max": 2.01,
+          "mean": 1.2079,
+          "median": 1.19
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Zusammengefasste Geburtenrate"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

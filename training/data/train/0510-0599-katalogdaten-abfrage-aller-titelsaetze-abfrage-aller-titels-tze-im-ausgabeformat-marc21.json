@@ -1,0 +1,306 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of tag in Katalogdaten - Abfrage aller Titelsätze.",
+  "query_result": {
+    "dataset_title": "Katalogdaten - Abfrage aller Titelsätze",
+    "package_id": "8a081bbb-fcb8-4409-b546-ee87a3e3f2ad",
+    "package_name": "katalogdaten-abfrage-aller-titelsaetze",
+    "resource_id": "ad9ced00-3b49-4d6e-9a1b-926de5a4b1ec",
+    "resource_name": "Abfrage aller Titelsätze im Ausgabeformat MARC21",
+    "resource_format": "xml",
+    "description": "Die bibliographischen Metadaten aus dem Bibliotheksmanagementsystem aDIS/BMS werden über eine offene OAI-PMH API Schnittstelle zur Verfügung gestellt. Die Schnittstelle wurde in Kooperation mit it@M realisiert und ermöglicht zielgerichtete Suchanfragen nach einzelnen Datensätzen, Abfragen inhaltlicher Sets des Onlinekatalogs oder über bestimmte Zeiträume sowie des gesamten Katalogbestands im MARC21 und im Dublin Core-Datenformat. Davon ausgenommen sind die digitalen Angebote. Für alle notwendige",
+    "organization": " Münchner Stadtbibliothek",
+    "tags": [
+      "Author",
+      "Bibliothek",
+      "Bücher",
+      "Katalog",
+      "Metadaten",
+      "Online-Katalog",
+      "Titel"
+    ],
+    "groups": [
+      "educ",
+      "tech"
+    ],
+    "row_count": 917,
+    "sampled_rows": 917,
+    "column_count": 55,
+    "columns": [
+      {
+        "name": "tag",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 715,
+        "null_count": 202,
+        "examples": [
+          "020",
+          "035",
+          "041",
+          "044",
+          "100"
+        ],
+        "numeric": {
+          "count": 715.0,
+          "min": 20.0,
+          "max": 876.0,
+          "mean": 340.3399,
+          "median": 300.0
+        },
+        "null_rate": 0.2203
+      },
+      {
+        "name": "ind1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 715,
+        "null_count": 202,
+        "examples": [
+          "",
+          "1",
+          "0",
+          "4",
+          "2"
+        ],
+        "numeric": {
+          "count": 165.0,
+          "min": 0.0,
+          "max": 5.0,
+          "mean": 0.8424,
+          "median": 0.0
+        },
+        "null_rate": 0.2203
+      },
+      {
+        "name": "ind2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 715,
+        "null_count": 202,
+        "examples": [
+          "",
+          "0",
+          "4",
+          "7",
+          "1"
+        ],
+        "numeric": {
+          "count": 156.0,
+          "min": 0.0,
+          "max": 7.0,
+          "mean": 2.5962,
+          "median": 1.0
+        },
+        "null_rate": 0.2203
+      },
+      {
+        "name": "subfield",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 715,
+        "null_count": 202,
+        "examples": [
+          "978-3-423-26274-3",
+          "3-423-26274-5",
+          "(DE-M36)AK4323338",
+          "ISO-639-1",
+          "ISO-3166-1"
+        ],
+        "numeric": {
+          "count": 107.0,
+          "min": 1.0,
+          "max": 9783939080350.0,
+          "mean": 398448073464.9532,
+          "median": 7.0
+        },
+        "null_rate": 0.2203
+      },
+      {
+        "name": "metadata.record.datafield.tag",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "876",
+          "689"
+        ],
+        "numeric": {
+          "count": 50.0,
+          "min": 689.0,
+          "max": 876.0,
+          "mean": 868.52,
+          "median": 876.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "metadata.record.datafield.ind1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "metadata.record.datafield.ind2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "",
+          "4",
+          "2"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 2.0,
+          "max": 4.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "metadata.record.datafield.subfield",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "5",
+          "1",
+          "DE-M36",
+          "6",
+          "3"
+        ],
+        "numeric": {
+          "count": 48.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 1.4792,
+          "median": 1.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "record.datafield.tag",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "876",
+          "689"
+        ],
+        "numeric": {
+          "count": 50.0,
+          "min": 689.0,
+          "max": 876.0,
+          "mean": 868.52,
+          "median": 876.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "record.datafield.ind1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "record.datafield.ind2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "",
+          "4",
+          "2"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 2.0,
+          "max": 4.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.9455
+      },
+      {
+        "name": "record.datafield.subfield",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 867,
+        "examples": [
+          "5",
+          "1",
+          "DE-M36",
+          "6",
+          "3"
+        ],
+        "numeric": {
+          "count": 48.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 1.4792,
+          "median": 1.0
+        },
+        "null_rate": 0.9455
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "tag",
+      "ind1",
+      "ind2",
+      "subfield"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "tag"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 39,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Bisherige Veranstaltungen der Messe München and compare veranstaltungsjahr by messetyp.",
+  "query_result": {
+    "dataset_title": "Bisherige Veranstaltungen der Messe München",
+    "package_id": "ef068a1c-315c-4262-8cf1-903767831225",
+    "package_name": "veranstaltungen-der-messe-muenchen",
+    "resource_id": "b698829c-b051-4092-a276-9ba1afdc12f3",
+    "resource_name": "Veranstaltungsdaten ab 2018",
+    "resource_format": "csv",
+    "description": "Liste der Veranstaltungen der Messe München im In- und Ausland seit 2018 mit zusätzlichen Informationen zu den Veranstaltungen sowie zu Besucher- und Ausstellerzahlen und vemieteten Flächen.",
+    "organization": "Messe München GmbH",
+    "tags": [
+      "Messe"
+    ],
+    "groups": [],
+    "row_count": 305,
+    "sampled_rows": 305,
+    "column_count": 21,
+    "columns": [
+      {
+        "name": "veranstaltungsjahr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 305,
+        "null_count": 0,
+        "examples": [
+          "2024",
+          "2023",
+          "2018",
+          "2025",
+          "2022"
+        ],
+        "numeric": {
+          "count": 305.0,
+          "min": 2018.0,
+          "max": 2026.0,
+          "mean": 2022.1115,
+          "median": 2023.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "veranstaltungsmonat",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 305,
+        "null_count": 0,
+        "examples": [
+          "12",
+          "1",
+          "11",
+          "6",
+          "4"
+        ],
+        "numeric": {
+          "count": 305.0,
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 6.7213,
+          "median": 7.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "enddatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 305,
+        "null_count": 0,
+        "examples": [
+          "14.12.2024",
+          "03.02.2023",
+          "14.12.2018",
+          "21.11.2025",
+          "22.11.2024"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 6.0,
+          "max": 6.0,
+          "mean": 6.0,
+          "median": 6.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "startdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 305,
+        "null_count": 0,
+        "examples": [
+          "11.12.2024",
+          "31.01.2023",
+          "11.12.2018",
+          "19.11.2025",
+          "20.11.2024"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "aussteller_gesamt",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 165,
+        "null_count": 140,
+        "examples": [
+          "984",
+          "601",
+          "235",
+          "203",
+          "201"
+        ],
+        "numeric": {
+          "count": 165.0,
+          "min": 16.0,
+          "max": 3548.0,
+          "mean": 720.4242,
+          "median": 350.0
+        },
+        "null_rate": 0.459
+      },
+      {
+        "name": "besucher_gesamt",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 162,
+        "null_count": 143,
+        "examples": [
+          "51118",
+          "41108",
+          "16510",
+          "14332",
+          "12000"
+        ],
+        "numeric": {
+          "count": 162.0,
+          "min": 480.0,
+          "max": 605974.0,
+          "mean": 39091.6111,
+          "median": 18689.0
+        },
+        "null_rate": 0.4689
+      },
+      {
+        "name": "aussteller_inland",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 157,
+        "null_count": 148,
+        "examples": [
+          "883",
+          "548",
+          "138",
+          "117",
+          "84"
+        ],
+        "numeric": {
+          "count": 157.0,
+          "min": 7.0,
+          "max": 2839.0,
+          "mean": 434.6242,
+          "median": 263.0
+        },
+        "null_rate": 0.4852
+      },
+      {
+        "name": "aussteller_ausland",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 157,
+        "null_count": 148,
+        "examples": [
+          "101",
+          "53",
+          "97",
+          "86",
+          "87"
+        ],
+        "numeric": {
+          "count": 157.0,
+          "min": 0.0,
+          "max": 2568.0,
+          "mean": 294.1975,
+          "median": 94.0
+        },
+        "null_rate": 0.4852
+      },
+      {
+        "name": "besucher_inland",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 152,
+        "null_count": 153,
+        "examples": [
+          "50496",
+          "40069",
+          "15214",
+          "12911",
+          "14660"
+        ],
+        "numeric": {
+          "count": 152.0,
+          "min": 480.0,
+          "max": 337831.0,
+          "mean": 30007.8553,
+          "median": 14998.5
+        },
+        "null_rate": 0.5016
+      },
+      {
+        "name": "besucher_ausland",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 149,
+        "null_count": 156,
+        "examples": [
+          "622",
+          "1039",
+          "1296",
+          "1421",
+          "2064"
+        ],
+        "numeric": {
+          "count": 149.0,
+          "min": 8.0,
+          "max": 268143.0,
+          "mean": 10369.2148,
+          "median": 1161.0
+        },
+        "null_rate": 0.5115
+      },
+      {
+        "name": "nettoflaeche",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 146,
+        "null_count": 159,
+        "examples": [
+          "42335",
+          "7280",
+          "7324",
+          "7077",
+          "6577"
+        ],
+        "numeric": {
+          "count": 146.0,
+          "min": 568.0,
+          "max": 421179.0,
+          "mean": 29803.5822,
+          "median": 12619.5
+        },
+        "null_rate": 0.5213
+      },
+      {
+        "name": "messetyp",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 298,
+        "null_count": 7,
+        "examples": [
+          "Fachbesucher",
+          "Fach- und Privatbesucher",
+          "Privatbesucher",
+          "Fachbesucher * an speziellen Tagen/Zeiten sind Privatbesucher zugelassen"
+        ],
+        "null_rate": 0.023
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "veranstaltungsjahr",
+      "veranstaltungsmonat",
+      "aussteller_gesamt",
+      "besucher_gesamt"
+    ],
+    "category_columns": [
+      "messetyp"
+    ],
+    "time_columns": [
+      "enddatum",
+      "startdatum"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "messetyp",
+      "y": "veranstaltungsjahr"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 8,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of Tierarten in Daten Tierpark Hellabrunn.",
+  "query_result": {
+    "dataset_title": "Daten Tierpark Hellabrunn",
+    "package_id": "4fe2935a-88e8-4752-b5b4-2d282cb911f7",
+    "package_name": "daten-tierpark-hellabrunn",
+    "resource_id": "82c679fe-97f3-4e97-8fd2-d5839f0b8856",
+    "resource_name": "Daten Tierpark Hellabrunn",
+    "resource_format": "csv",
+    "description": "Daten zu Tierarten, Besucherzahl, CO2-Verbrauch und Artenschutzprojekten im Tierpark Hellabrunn.",
+    "organization": "Münchener Tierpark Hellabrunn AG",
+    "tags": [
+      "Tierpark",
+      "Zoo"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 17,
+    "sampled_rows": 17,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "Tierarten",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 17,
+        "null_count": 0,
+        "examples": [
+          717,
+          728,
+          742,
+          757,
+          752
+        ],
+        "numeric": {
+          "count": 17.0,
+          "min": 499.0,
+          "max": 771.0,
+          "mean": 679.9412,
+          "median": 728.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anzahl_der_Besucher",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 17,
+        "null_count": 0,
+        "examples": [
+          1413396,
+          1436355,
+          1570938,
+          1820796,
+          1621648
+        ],
+        "numeric": {
+          "count": 17.0,
+          "min": 750024.0,
+          "max": 2719011.0,
+          "mean": 1870891.7647,
+          "median": 1820796.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "CO2_Verbrauch_in_Tonnen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 17,
+        "null_count": 0,
+        "examples": [
+          1536,
+          1497,
+          1608,
+          1227,
+          1211
+        ],
+        "numeric": {
+          "count": 17.0,
+          "min": 948.0,
+          "max": 1967.0,
+          "mean": 1403.3529,
+          "median": 1385.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Artenschutzprojekte",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 17,
+        "null_count": 0,
+        "examples": [
+          15,
+          10,
+          6,
+          9,
+          12
+        ],
+        "numeric": {
+          "count": 17.0,
+          "min": 6.0,
+          "max": 17.0,
+          "mean": 10.8824,
+          "median": 12.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 17,
+        "null_count": 0,
+        "examples": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012"
+        ],
+        "numeric": {
+          "count": 17.0,
+          "min": 2008.0,
+          "max": 2024.0,
+          "mean": 2016.0,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Tierarten",
+      "Anzahl_der_Besucher",
+      "CO2_Verbrauch_in_Tonnen",
+      "Artenschutzprojekte"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "Tierarten"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

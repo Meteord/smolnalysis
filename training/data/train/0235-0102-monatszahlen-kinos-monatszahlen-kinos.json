@@ -1,0 +1,233 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Kinos and compare MONAT by MONATSZAHL.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Kinos",
+    "package_id": "4b251c31-fd98-4475-88bc-e0504cbc725b",
+    "package_name": "monatszahlen-kinos",
+    "resource_id": "ca564678-4049-4a99-9e0d-b16806557476",
+    "resource_name": "Monatszahlen Kinos",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Kinos__ beinhaltet das Thema * Besucher/innen Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 349,
+    "sampled_rows": 349,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 324.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201306.5,
+          "median": 201306.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "2816910",
+          "256389",
+          "231923",
+          "329886"
+        ],
+        "numeric": {
+          "count": 317.0,
+          "min": 7631.0,
+          "max": 5512515.0,
+          "mean": 647075.5142,
+          "median": 371383.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "256389",
+          "231923",
+          "329886",
+          "204907"
+        ],
+        "numeric": {
+          "count": 316.0,
+          "min": 7631.0,
+          "max": 5512515.0,
+          "mean": 640208.9494,
+          "median": 370723.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "9.7",
+          "-9.54",
+          "42.24",
+          "-37.89"
+        ],
+        "numeric": {
+          "count": 289.0,
+          "min": -92.41,
+          "max": 794.15,
+          "mean": 5.6469,
+          "median": -0.71
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-6.24",
+          "-15.48",
+          "8.47",
+          "35.39"
+        ],
+        "numeric": {
+          "count": 298.0,
+          "min": -97.97,
+          "max": 2257.71,
+          "mean": 12.4943,
+          "median": -1.87
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "246445",
+          "247955",
+          "255140",
+          "250685"
+        ],
+        "numeric": {
+          "count": 292.0,
+          "min": 63488.0,
+          "max": 554594.0,
+          "mean": 355578.2534,
+          "median": 374189.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 349.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2012.9284,
+          "median": 2013.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "Besucher*innen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 349,
+        "null_count": 0,
+        "examples": [
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "MONATSZAHL",
+      "AUSPRAEGUNG"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "MONATSZAHL",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

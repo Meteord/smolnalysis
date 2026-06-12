@@ -1,0 +1,235 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Lastenradparken and compare anzahl_stellplaetze by bike_and_ride.",
+  "query_result": {
+    "dataset_title": "Lastenradparken",
+    "package_id": "49851835-a7db-4133-8713-083d179d2bff",
+    "package_name": "opendata_ruhver_lastenradparken_line",
+    "resource_id": "1cb6bf29-a77f-4e9f-b701-9e3b471fc714",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Hier sind städtische Standorte zum Lastenradparken und die Anzahl der pro Einheit abstellbaren Lastenräder eingezeichnet. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/information/fahrradparken\">muenchenunterwegs.de/information/fahrradparken</a> Sie können auch selbst bei dem jeweils zuständigem Bezirksausschuss neue Fahrradabstellplätze beantragen: <a target=\"_blank\" href=\"muenchenunterwegs.de/angebote/hilfestellung-neue-fahrradabstellplaetze-beantragen\">mu",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 140,
+    "sampled_rows": 140,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "anzahl_stellplaetze",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 140,
+        "null_count": 0,
+        "examples": [
+          3,
+          4,
+          2,
+          1,
+          5
+        ],
+        "numeric": {
+          "count": 140.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 2.6857,
+          "median": 3.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 140,
+        "null_count": 0,
+        "examples": [
+          2,
+          4,
+          3,
+          1
+        ],
+        "numeric": {
+          "count": 140.0,
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 1.8143,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "standortnummer",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 137,
+        "null_count": 3,
+        "examples": [
+          2570.0,
+          2572.0,
+          2322.0,
+          2511.0,
+          2514.0
+        ],
+        "numeric": {
+          "count": 137.0,
+          "min": 2322.0,
+          "max": 4090.0,
+          "mean": 3364.4818,
+          "median": 3365.0
+        },
+        "null_rate": 0.0214
+      },
+      {
+        "name": "bike_and_ride",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 140,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "typ_generalisiert",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 140,
+        "null_count": 0,
+        "examples": [
+          "Anlehnbügel",
+          "markierte Fahrradabstellfläche"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 140,
+        "null_count": 0,
+        "examples": [
+          "in Bestand / in Betrieb",
+          "abgebaut",
+          "außer Betrieb",
+          "in Planung / in Entwuf"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zusatzbeleuchtung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 139,
+        "null_count": 1,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0071
+      },
+      {
+        "name": "ueberdacht",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 139,
+        "null_count": 1,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0071
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 140,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((693586.7120008813 5333838.11799784, 693585.9620008813 5333838.141997842, 693581.4650008811 5333838.292997839, 693580.9650008811 5333838.310997",
+          "MULTILINESTRING ((691712.5330008401 5332966.558997967, 691712.2760008399 5332967.7819979675, 691711.81200084 5332969.983997969, 691711.55500084 5332971.20699796",
+          "MULTILINESTRING ((691633.8270008375 5336380.191997965, 691643.1310008377 5336378.272997965))",
+          "MULTILINESTRING ((691650.8990008384 5333852.863997971, 691650.7760008385 5333850.667997969, 691650.6930008385 5333849.16999797, 691650.6090008385 5333847.671997",
+          "MULTILINESTRING ((693156.8980008716 5333491.603997872, 693155.5700008716 5333494.29399787))"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "lastenrad",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 140,
+        "null_count": 0,
+        "examples": [
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 140,
+        "null_count": 0,
+        "examples": [
+          "Weißenburger Str. 41",
+          "Kolumbusstr. 20 a",
+          "Türkenstr. 71",
+          "Reichenbachstr. 51",
+          "Balanstr. 28"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "doppelstock",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 139,
+        "null_count": 1,
+        "examples": [
+          "Nein"
+        ],
+        "null_rate": 0.0071
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl_stellplaetze",
+      "status",
+      "standortnummer"
+    ],
+    "category_columns": [
+      "bike_and_ride",
+      "typ_generalisiert",
+      "status_bedeutung",
+      "zusatzbeleuchtung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "bike_and_ride",
+      "y": "anzahl_stellplaetze"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

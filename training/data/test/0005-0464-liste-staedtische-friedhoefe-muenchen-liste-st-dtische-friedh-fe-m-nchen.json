@@ -1,0 +1,246 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Liste städtische Friedhöfe München and compare plz by bestattungsbetrieb.",
+  "query_result": {
+    "dataset_title": "Liste städtische Friedhöfe München",
+    "package_id": "6f364c67-08ef-4cd6-9dd2-cf78f7d67ed7",
+    "package_name": "liste-staedtische-friedhoefe-muenchen",
+    "resource_id": "b29275cb-23a4-42e3-9bf0-abdfbf95674b",
+    "resource_name": "Liste städtische Friedhöfe München",
+    "resource_format": "csv",
+    "description": "In München gibt es 26 Friedhöfe mit Bestattungsbetrieb, zwei Friedhöfe ohne Bestattungsbetrieb sowie eine Kriegsgräberstätte; in Summe 29 als solche gewidmete Friedhöfe. Die Münchner Friedhöfe erstrecken sich über eine Fläche von rund 420 ha. München hat eine dezentrale und damit wohnortnahe Versorgung der Bürger*innen im Trauerfall und mit Grabstätten. Vom Grundsatz her besteht eine freie Friedhofswahl, freie Grab- und Grabartenwahl. Es werden ausschließlich Wahlgräber mit unbegrenzter Verlänge",
+    "organization": "Gesundheitsreferat",
+    "tags": [
+      "Bestattungen",
+      "Friedhof",
+      "Gräber"
+    ],
+    "groups": [],
+    "row_count": 29,
+    "sampled_rows": 29,
+    "column_count": 12,
+    "columns": [
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "80999",
+          "81248",
+          "81675",
+          "81929",
+          "80995"
+        ],
+        "numeric": {
+          "count": 29.0,
+          "min": 80469.0,
+          "max": 81929.0,
+          "mean": 81271.8276,
+          "median": 81369.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "flaeche_(hektar)",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 28,
+        "null_count": 1,
+        "examples": [
+          0.52,
+          4.64,
+          0.22,
+          0.48,
+          3.61
+        ],
+        "numeric": {
+          "count": 28.0,
+          "min": 0.22,
+          "max": 91.54,
+          "mean": 14.8504,
+          "median": 4.465
+        },
+        "null_rate": 0.0345
+      },
+      {
+        "name": "graeberzahl",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 4,
+        "examples": [
+          612.0,
+          3534.0,
+          252.0,
+          481.0,
+          2734.0
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 160.0,
+          "max": 43358.0,
+          "mean": 10494.16,
+          "median": 3901.0
+        },
+        "null_rate": 0.1379
+      },
+      {
+        "name": "bestattungsbetrieb",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "aussegnungshalle",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja",
+          "entfällt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          48.20041,
+          48.15458,
+          48.14784,
+          48.15225,
+          48.21607
+        ],
+        "numeric": {
+          "count": 29.0,
+          "min": 48.068,
+          "max": 48.2161,
+          "mean": 48.1389,
+          "median": 48.1372
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          11.45712,
+          11.40945,
+          11.60157,
+          11.65732,
+          11.5261
+        ],
+        "numeric": {
+          "count": 29.0,
+          "min": 11.4062,
+          "max": 11.6794,
+          "mean": 11.536,
+          "median": 11.5273
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Friedhof Allach",
+          "Friedhof Aubing",
+          "Friedhof Bogenhausen",
+          "Friedhof Daglfing",
+          "Friedhof Fledmoching"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "Eversbuschstraße 197",
+          "Freihamer Weg 73",
+          "Bogenhauser Kirchplatz 1",
+          "Kohlbrennerstraße 19",
+          "Am Gottesackerweg 53"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 29,
+        "null_count": 0,
+        "examples": [
+          "München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "weblink",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 28,
+        "null_count": 1,
+        "examples": [
+          "https://stadt.muenchen.de/service/info/friedhof-allach/10321278/",
+          "https://stadt.muenchen.de/service/info/friedhof-aubing/10321800/",
+          "https://stadt.muenchen.de/service/info/friedhof-bogenhausen/10321343/",
+          "https://stadt.muenchen.de/service/info/friedhof-daglfing/10321888/",
+          "https://stadt.muenchen.de/service/info/friedhof-feldmoching/10321344/"
+        ],
+        "null_rate": 0.0345
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "plz",
+      "flaeche_(hektar)",
+      "graeberzahl"
+    ],
+    "category_columns": [
+      "bestattungsbetrieb",
+      "aussegnungshalle",
+      "ort"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "bestattungsbetrieb",
+      "y": "plz"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

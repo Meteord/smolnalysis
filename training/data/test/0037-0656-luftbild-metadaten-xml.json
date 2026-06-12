@@ -1,0 +1,180 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Aktuelle Luftbilder der Landeshauptstadt München Bodenauflösung 20cm.",
+  "query_result": {
+    "dataset_title": "Aktuelle Luftbilder der Landeshauptstadt München Bodenauflösung 20cm",
+    "package_id": "6b3560ab-b6f6-4e09-b210-ef6f43143ec4",
+    "package_name": "luftbild",
+    "resource_id": "71d02aa5-1b0b-4d45-a9a3-2e7e0cc3c33b",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Die Zentrale Luftbildstelle der bayerischen Landeshauptstadt ist beim GeodatenService München angesiedelt. Hier werden alle zwei Jahre Befliegungen des gesamten Stadtgebiets durchgeführt. Damit ist gewährleistet, dass die Landeshauptstadt München für ihre Zwecke über die aktuellsten Luftbildaufnahmen verfügt. Mit diesem Webdienst werden diese Aufnahmen in 20cm Bodenauflösung zur Verfügung gestellt.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Orthoimagery"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 22,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:27"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:38:27"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Aktuelle Luftbilder der Landeshauptstadt München Bodenauflösung 20cm"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Orthoimagery"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "OGC: WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Die Zentrale Luftbildstelle der bayerischen Landeshauptstadt ist beim GeodatenService München angesiedelt. Hier werden alle zwei Jahre Befliegungen des gesamten"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Die Zentrale Luftbildstelle der bayerischen Landeshauptstadt ist beim GeodatenService München angesiedelt. Hier werden alle zwei Jahre Befliegungen des gesamten"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "otherRestrictions"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.source",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Die Digitalen Orthophotos werden aus orientierten Luftbildern und dem Digitalen Geländemodell (DGM) abgeleitet"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/metadata/srv/ger/csw?service=CSW&request=GetRecordById&version=2.0.2&outputschema=http:%2F%2Fwww.isotc211.org%2F2005%2Fgmd&element"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Aktuelle Luftbilder der Landeshauptstadt München Bodenauflösung 20cm"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 8,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

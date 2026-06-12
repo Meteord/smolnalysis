@@ -1,0 +1,202 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Borkenkäfer Quarantänezonen and compare objectid by gebiet_name.",
+  "query_result": {
+    "dataset_title": "Borkenkäfer Quarantänezonen",
+    "package_id": "732099c3-762f-4ef4-8753-b49add7a3e65",
+    "package_name": "qz_borkenkaefer",
+    "resource_id": "4e5e9336-5138-45ad-a775-e783b6f4130c",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Dieser Dienst enthält die Borkenkäfer Quarantänezonen.",
+    "organization": "Kreisverwaltungsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Landeshauptstadt München",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 3,
+    "sampled_rows": 3,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          1,
+          2,
+          3
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 1.0,
+          "max": 3.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "typ",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "art",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          2
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "lage",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          1
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gebiet_name",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          "Quarantänezone Borkenkäfer - Trudering-Riem",
+          "Quarantänezone Borkenkäfer - Ramersdorf-Perlach",
+          "Quarantänezone Borkenkäfer - Allach-Untermenzing"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((700104.2107010381 5332621.3820973355, 700002.1036010355 5332484.955097344, 699911.5806010333 5332372.972797352, 699829.7306010313 5332279.047197361, 6",
+          "POLYGON ((698286.2001009928 5331596.415697491, 698298.853500993 5331626.89969749, 698279.8921009927 5331637.541097492, 698251.0226009919 5331581.195797494, 6982",
+          "POLYGON ((684412.3789006909 5342555.234598366, 684379.2968006901 5342544.139398368, 684334.0094006893 5342529.950698371, 683927.5467006816 5342513.276498391, 68"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "herkunft",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          "KVR"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "typ_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          "Quarantänezone"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "art_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          "BK"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "lage_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 0,
+        "examples": [
+          "innerhalb der Stadtgrenze"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "typ",
+      "art",
+      "lage"
+    ],
+    "category_columns": [
+      "gebiet_name",
+      "herkunft",
+      "typ_bedeutung",
+      "art_bedeutung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "gebiet_name",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

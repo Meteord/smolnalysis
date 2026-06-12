@@ -1,0 +1,243 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Radlstadtplan (Fahrradstraßen) and compare rad_rsp_fahrradstrasse_poly.status by rad_rsp_fahrradstrasse_poly.anmerkung.",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Fahrradstraßen)",
+    "package_id": "b433f1f8-8f6e-4e7c-bcdc-7ac916a2a036",
+    "package_name": "rad_rsp_fahrradstrasse_poly",
+    "resource_id": "8ce60fea-b859-48cb-ba8c-a1f14966edc7",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "In Fahrradstraßen haben Radfahrende Vorrang, dürfen nebeneinander fahren und die Geschwindigkeit bestimmen. Nur, wenn das Zusatzschild „Kraftfahrzeuge frei“ hängt, dürfen auch andere motorisierte Verkehrsteilnehmende hier fahren. Für alle gilt eine Höchstgeschwindigkeit von 30 Stundenkilometern, an Kreuzungen und Einmündungen gilt rechts vor links. Ein großes Fahrrad-Piktogramm im blauen Kreis mit der zusätzlichen Beschriftung „Fahrradstraße“ als Verkehrsschild und als Bodenmarkierung kennzeichn",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Fahrradstraßen",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 554,
+    "sampled_rows": 554,
+    "column_count": 36,
+    "columns": [
+      {
+        "name": "rad_rsp_fahrradstrasse_poly.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 92,
+        "null_count": 462,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 92.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8339
+      },
+      {
+        "name": "rad_rsp_fahrradstrasse_poly.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 92,
+        "null_count": 462,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 92.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.8339
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 92,
+        "null_count": 462,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 92.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8339
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 92,
+        "null_count": 462,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 92.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.8339
+      },
+      {
+        "name": "featureMember.rad_rsp_fahrradstrasse_poly.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 553,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9982
+      },
+      {
+        "name": "featureMember.rad_rsp_fahrradstrasse_poly.planungsstatus",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 553,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9982
+      },
+      {
+        "name": "rad_rsp_fahrradstrasse_poly.anmerkung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 42,
+        "null_count": 512,
+        "examples": [
+          "<Null>",
+          "fehlt in OSM",
+          "in OSM nur als \"note\"",
+          "fehlt tw. in OSM"
+        ],
+        "null_rate": 0.9242
+      },
+      {
+        "name": "anmerkung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 42,
+        "null_count": 512,
+        "examples": [
+          "<Null>",
+          "fehlt in OSM",
+          "in OSM nur als \"note\"",
+          "fehlt tw. in OSM"
+        ],
+        "null_rate": 0.9242
+      },
+      {
+        "name": "rad_rsp_fahrradstrasse_poly.shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 92,
+        "null_count": 462,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.8339
+      },
+      {
+        "name": "rad_rsp_fahrradstrasse_poly.shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 92,
+        "null_count": 462,
+        "examples": [
+          "682466.46330066,5341185.48439846 682466.36840066,5341185.62049846 682465.98260066,5341186.22879846 682464.99230066,5341187.79029846 682464.81600066,5341188.0681",
+          "689841.1846008,5333645.17419808 689821.8256008,5333623.85889808 689918.8908008,5333546.20159808 689943.4175008,5333565.07339808 689841.1846008,5333645.17419808",
+          "686855.93730074,5338848.51889824 686855.82330074,5338814.54989825 686857.42440074,5338785.66499825 686865.74720074,5338708.46749825 686870.47590074,5338667.4503",
+          "696035.63080094,5336341.14189766 696001.58350094,5336341.03689766 696004.16500094,5336327.81079766 696005.23090094,5336309.49779766 696039.02050094,5336307.4993",
+          "685030.2580007,5340173.58989834 685029.1485007,5340156.77959834 685029.0609007,5340155.45189834 685028.8547007,5340152.32819834 685028.9299007,5340150.29789834"
+        ],
+        "null_rate": 0.8339
+      },
+      {
+        "name": "shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 92,
+        "null_count": 462,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.8339
+      },
+      {
+        "name": "shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 92,
+        "null_count": 462,
+        "examples": [
+          "682466.46330066,5341185.48439846 682466.36840066,5341185.62049846 682465.98260066,5341186.22879846 682464.99230066,5341187.79029846 682464.81600066,5341188.0681",
+          "689841.1846008,5333645.17419808 689821.8256008,5333623.85889808 689918.8908008,5333546.20159808 689943.4175008,5333565.07339808 689841.1846008,5333645.17419808",
+          "686855.93730074,5338848.51889824 686855.82330074,5338814.54989825 686857.42440074,5338785.66499825 686865.74720074,5338708.46749825 686870.47590074,5338667.4503",
+          "696035.63080094,5336341.14189766 696001.58350094,5336341.03689766 696004.16500094,5336327.81079766 696005.23090094,5336309.49779766 696039.02050094,5336307.4993",
+          "685030.2580007,5340173.58989834 685029.1485007,5340156.77959834 685029.0609007,5340155.45189834 685028.8547007,5340152.32819834 685028.9299007,5340150.29789834"
+        ],
+        "null_rate": 0.8339
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_rsp_fahrradstrasse_poly.status",
+      "rad_rsp_fahrradstrasse_poly.planungsstatus",
+      "status",
+      "planungsstatus"
+    ],
+    "category_columns": [
+      "rad_rsp_fahrradstrasse_poly.anmerkung",
+      "anmerkung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "rad_rsp_fahrradstrasse_poly.anmerkung",
+      "y": "rad_rsp_fahrradstrasse_poly.status"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 23,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ruhver_mim_flexzone_myradl.objectid in Flexzonen für MyRadl.",
+  "query_result": {
+    "dataset_title": "Flexzonen für MyRadl",
+    "package_id": "af63a45e-84fb-4dae-8529-b03947fd780c",
+    "package_name": "ruhver_mim_flexzone_myradl",
+    "resource_id": "741cd4e8-5173-42d1-8490-6a93e0c3d446",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet Flexzonen für das regionale Bikesharing-System MyRadl. Diese Flexzonen sind virtuell und umfassen einen Bereich von 100 m Durchmesser. Sie befinden sich im Umfeld zukünftiger Standorte. Sobald der Standort physisch errichtet wurde, werden die Flexzonen zu regulären Standorten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 44,
+    "columns": [
+      {
+        "name": "ruhver_mim_flexzone_myradl.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "40",
+          "13",
+          "29",
+          "26",
+          "14"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 7.0,
+          "max": 449.0,
+          "mean": 174.248,
+          "median": 79.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "ruhver_mim_flexzone_myradl.stadtbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "6",
+          "5",
+          "7",
+          "2",
+          "3"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 1.0,
+          "max": 24.0,
+          "mean": 11.32,
+          "median": 12.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "ruhver_mim_flexzone_myradl.anz_bs_oeff",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "ruhver_mim_flexzone_myradl.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "40",
+          "13",
+          "29",
+          "26",
+          "14"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 7.0,
+          "max": 449.0,
+          "mean": 174.248,
+          "median": 79.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "6",
+          "5",
+          "7",
+          "2",
+          "3"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 1.0,
+          "max": 24.0,
+          "mean": 11.32,
+          "median": 12.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "anz_bs_oeff",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "featureMember.ruhver_mim_flexzone_myradl.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "61"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 61.0,
+          "max": 61.0,
+          "mean": 61.0,
+          "median": 61.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_mim_flexzone_myradl.stadtbezirk",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "12"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 12.0,
+          "max": 12.0,
+          "mean": 12.0,
+          "median": 12.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_mim_flexzone_myradl.anz_bs_oeff",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_mim_flexzone_myradl.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_mim_flexzone_myradl.objectid",
+      "ruhver_mim_flexzone_myradl.stadtbezirk",
+      "ruhver_mim_flexzone_myradl.anz_bs_oeff",
+      "ruhver_mim_flexzone_myradl.status"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ruhver_mim_flexzone_myradl.objectid"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 25,
+    "dropped_identifier_columns": 7,
+    "source_profile_error": null
+  }
+}

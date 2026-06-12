@@ -1,0 +1,278 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Lastenradparken and compare ruhver_lastenradparken_line.anzahl_stellplaetze by ruhver_lastenradparken_line.bike_and_ride.",
+  "query_result": {
+    "dataset_title": "Lastenradparken",
+    "package_id": "49851835-a7db-4133-8713-083d179d2bff",
+    "package_name": "opendata_ruhver_lastenradparken_line",
+    "resource_id": "11d1b004-c9bc-41ca-bcb1-51cf56c844b4",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Hier sind städtische Standorte zum Lastenradparken und die Anzahl der pro Einheit abstellbaren Lastenräder eingezeichnet. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/information/fahrradparken\">muenchenunterwegs.de/information/fahrradparken</a> Sie können auch selbst bei dem jeweils zuständigem Bezirksausschuss neue Fahrradabstellplätze beantragen: <a target=\"_blank\" href=\"muenchenunterwegs.de/angebote/hilfestellung-neue-fahrradabstellplaetze-beantragen\">mu",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 844,
+    "sampled_rows": 844,
+    "column_count": 51,
+    "columns": [
+      {
+        "name": "ruhver_lastenradparken_line.anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 140,
+        "null_count": 704,
+        "examples": [
+          "3",
+          "4",
+          "2",
+          "1",
+          "5"
+        ],
+        "numeric": {
+          "count": 140.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 2.6857,
+          "median": 3.0
+        },
+        "null_rate": 0.8341
+      },
+      {
+        "name": "ruhver_lastenradparken_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 140,
+        "null_count": 704,
+        "examples": [
+          "2",
+          "4",
+          "3",
+          "1"
+        ],
+        "numeric": {
+          "count": 140.0,
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 1.8143,
+          "median": 2.0
+        },
+        "null_rate": 0.8341
+      },
+      {
+        "name": "anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 140,
+        "null_count": 704,
+        "examples": [
+          "3",
+          "4",
+          "2",
+          "1",
+          "5"
+        ],
+        "numeric": {
+          "count": 140.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 2.6857,
+          "median": 3.0
+        },
+        "null_rate": 0.8341
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 140,
+        "null_count": 704,
+        "examples": [
+          "2",
+          "4",
+          "3",
+          "1"
+        ],
+        "numeric": {
+          "count": 140.0,
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 1.8143,
+          "median": 2.0
+        },
+        "null_rate": 0.8341
+      },
+      {
+        "name": "ruhver_lastenradparken_line.standortnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 137,
+        "null_count": 707,
+        "examples": [
+          "2570",
+          "2572",
+          "2322",
+          "2511",
+          "2514"
+        ],
+        "numeric": {
+          "count": 137.0,
+          "min": 2322.0,
+          "max": 4090.0,
+          "mean": 3364.4818,
+          "median": 3365.0
+        },
+        "null_rate": 0.8377
+      },
+      {
+        "name": "standortnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 137,
+        "null_count": 707,
+        "examples": [
+          "2570",
+          "2572",
+          "2322",
+          "2511",
+          "2514"
+        ],
+        "numeric": {
+          "count": 137.0,
+          "min": 2322.0,
+          "max": 4090.0,
+          "mean": 3364.4818,
+          "median": 3365.0
+        },
+        "null_rate": 0.8377
+      },
+      {
+        "name": "featureMember.ruhver_lastenradparken_line.anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 843,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9988
+      },
+      {
+        "name": "featureMember.ruhver_lastenradparken_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 843,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9988
+      },
+      {
+        "name": "featureMember.ruhver_lastenradparken_line.standortnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 843,
+        "examples": [
+          "4084"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4084.0,
+          "max": 4084.0,
+          "mean": 4084.0,
+          "median": 4084.0
+        },
+        "null_rate": 0.9988
+      },
+      {
+        "name": "ruhver_lastenradparken_line.bike_and_ride",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 140,
+        "null_count": 704,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.8341
+      },
+      {
+        "name": "ruhver_lastenradparken_line.typ_generalisiert",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 140,
+        "null_count": 704,
+        "examples": [
+          "Anlehnbügel",
+          "markierte Fahrradabstellfläche"
+        ],
+        "null_rate": 0.8341
+      },
+      {
+        "name": "ruhver_lastenradparken_line.status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 140,
+        "null_count": 704,
+        "examples": [
+          "in Bestand / in Betrieb",
+          "abgebaut",
+          "außer Betrieb",
+          "in Planung / in Entwuf"
+        ],
+        "null_rate": 0.8341
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_lastenradparken_line.anzahl_stellplaetze",
+      "ruhver_lastenradparken_line.status",
+      "anzahl_stellplaetze",
+      "status"
+    ],
+    "category_columns": [
+      "ruhver_lastenradparken_line.bike_and_ride",
+      "ruhver_lastenradparken_line.typ_generalisiert",
+      "ruhver_lastenradparken_line.status_bedeutung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "ruhver_lastenradparken_line.bike_and_ride",
+      "y": "ruhver_lastenradparken_line.anzahl_stellplaetze"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 38,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

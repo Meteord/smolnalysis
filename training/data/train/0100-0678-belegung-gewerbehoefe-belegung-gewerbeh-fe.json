@@ -1,0 +1,77 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Belegung Gewerbehöfe from Belegung Gewerbehöfe.",
+  "query_result": {
+    "dataset_title": "Belegung Gewerbehöfe",
+    "package_id": "6c8f0118-441d-47fc-a0c3-9dd2789b1cfd",
+    "package_name": "belegung-gewerbehoefe",
+    "resource_id": "eb8f8471-9993-485c-81d9-1d3a8e6e8094",
+    "resource_name": "Belegung Gewerbehöfe",
+    "resource_format": "csv",
+    "description": "Prozentuale Belegung der Gewerbehöfe nach Jahr.",
+    "organization": "Münchner Gewerbehof- und Technologiezentrumsgesellschaft mbH",
+    "tags": [
+      "Stadtratsauftrag"
+    ],
+    "groups": [],
+    "row_count": 14,
+    "sampled_rows": 14,
+    "column_count": 3,
+    "columns": [
+      {
+        "name": "Jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 14,
+        "null_count": 0,
+        "examples": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014"
+        ],
+        "numeric": {
+          "count": 14.0,
+          "min": 2010.0,
+          "max": 2023.0,
+          "mean": 2016.5,
+          "median": 2016.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Belegungsquote",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 14,
+        "null_count": 0,
+        "examples": [
+          "92.90%",
+          "93.00%",
+          "95.49%",
+          "96.57%",
+          "97.13%"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [],
+    "time_columns": [
+      "Jahr"
+    ]
+  },
+  "quality_score": 3.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

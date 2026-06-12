@@ -1,0 +1,281 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten and compare vagrund_baug_umgriff_opendata.objectid by Polygon.innerBoundaryIs.LinearRing.coordinates.",
+  "query_result": {
+    "dataset_title": "Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten",
+    "package_id": "4066da8a-9798-4fd6-8083-def8ed6005b8",
+    "package_name": "vagrund_baug_umgriff_opendata",
+    "resource_id": "df01d771-7e32-4c52-9fde-f1744f8bb73a",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Der Datensatz umfasst die Flächen von Bebauungsplänen, Bebauungsplänen in Aufstellung, Außenbereichssatzungen und Umlegungsgebieten. Diese Informationen sind essenziell für die Planung und Entwicklung von Bauvorhaben und bieten eine Übersicht über die aktuellen Planungsgebiete sowie deren rechtliche Rahmenbedingungen. Rechtliche Hinweise, Nutzungshinweise, Auskünfte und Einsichtnahmemöglichkeiten finden sich unter: <a target=\"_blank\" href=\"stadt.muenchen.de/infos/rechtsverbindliche-bebauungsplae",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 32,
+    "columns": [
+      {
+        "name": "vagrund_baug_umgriff_opendata.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 164,
+        "null_count": 836,
+        "examples": [
+          "83.0",
+          "84.0",
+          "85.0",
+          "123.0",
+          "124.0"
+        ],
+        "numeric": {
+          "count": 164.0,
+          "min": 83.0,
+          "max": 8722.0,
+          "mean": 811.4817,
+          "median": 757.5
+        },
+        "null_rate": 0.836
+      },
+      {
+        "name": "vagrund_baug_umgriff_opendata.nr_plan",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 164,
+        "null_count": 836,
+        "examples": [
+          "667",
+          "775",
+          "501",
+          "1700a",
+          "1243"
+        ],
+        "numeric": {
+          "count": 113.0,
+          "min": 7.0,
+          "max": 2132.0,
+          "mean": 1074.7434,
+          "median": 1105.0
+        },
+        "null_rate": 0.836
+      },
+      {
+        "name": "vagrund_baug_umgriff_opendata.nr_va",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 164,
+        "null_count": 836,
+        "examples": [
+          "7439",
+          "7454",
+          "7217",
+          "8638",
+          "8069"
+        ],
+        "numeric": {
+          "count": 147.0,
+          "min": 6763.0,
+          "max": 8930.0,
+          "mean": 7863.2245,
+          "median": 7848.0
+        },
+        "null_rate": 0.836
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 164,
+        "null_count": 836,
+        "examples": [
+          "83.0",
+          "84.0",
+          "85.0",
+          "123.0",
+          "124.0"
+        ],
+        "numeric": {
+          "count": 164.0,
+          "min": 83.0,
+          "max": 8722.0,
+          "mean": 811.4817,
+          "median": 757.5
+        },
+        "null_rate": 0.836
+      },
+      {
+        "name": "nr_plan",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 164,
+        "null_count": 836,
+        "examples": [
+          "667",
+          "775",
+          "501",
+          "1700a",
+          "1243"
+        ],
+        "numeric": {
+          "count": 113.0,
+          "min": 7.0,
+          "max": 2132.0,
+          "mean": 1074.7434,
+          "median": 1105.0
+        },
+        "null_rate": 0.836
+      },
+      {
+        "name": "nr_va",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 164,
+        "null_count": 836,
+        "examples": [
+          "7439",
+          "7454",
+          "7217",
+          "8638",
+          "8069"
+        ],
+        "numeric": {
+          "count": 147.0,
+          "min": 6763.0,
+          "max": 8930.0,
+          "mean": 7863.2245,
+          "median": 7848.0
+        },
+        "null_rate": 0.836
+      },
+      {
+        "name": "featureMember.vagrund_baug_umgriff_opendata.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "1874.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1874.0,
+          "max": 1874.0,
+          "mean": 1874.0,
+          "median": 1874.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.vagrund_baug_umgriff_opendata.nr_plan",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "426"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 426.0,
+          "max": 426.0,
+          "mean": 426.0,
+          "median": 426.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.vagrund_baug_umgriff_opendata.nr_va",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "7188"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 7188.0,
+          "max": 7188.0,
+          "mean": 7188.0,
+          "median": 7188.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "Polygon.innerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 995,
+        "examples": [
+          "697616.06440098,5334502.63109754 697598.10720098,5334465.81119754 697583.63810097,5334436.11269754 697571.61410097,5334411.44249754 697565.41720097,5334398.7214",
+          "685026.4627007,5328394.19529836 685026.5587007,5328392.14189836 685020.0125007,5328390.02239836 685003.7202007,5328384.71349836 684976.9048007,5328374.32799836",
+          "689967.1824008,5343787.57909806 689980.0785008,5343688.42929806 689988.1294008,5343626.41139806 689917.2169008,5343617.23179806 689918.8820008,5343604.34779806",
+          "687701.28640076,5334376.00859821 687691.27800076,5334375.27689821 687652.71440076,5334375.69889821 687651.92110076,5334375.76839821 687651.15280075,5334375.9688",
+          "693598.30490088,5338584.12569783 693557.25750088,5338506.73229783 693539.29940088,5338515.74249783 693542.64790088,5338520.13799783 693543.15890088,5338519.9062"
+        ],
+        "null_rate": 0.995
+      },
+      {
+        "name": "innerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 995,
+        "examples": [
+          "697616.06440098,5334502.63109754 697598.10720098,5334465.81119754 697583.63810097,5334436.11269754 697571.61410097,5334411.44249754 697565.41720097,5334398.7214",
+          "685026.4627007,5328394.19529836 685026.5587007,5328392.14189836 685020.0125007,5328390.02239836 685003.7202007,5328384.71349836 684976.9048007,5328374.32799836",
+          "689967.1824008,5343787.57909806 689980.0785008,5343688.42929806 689988.1294008,5343626.41139806 689917.2169008,5343617.23179806 689918.8820008,5343604.34779806",
+          "687701.28640076,5334376.00859821 687691.27800076,5334375.27689821 687652.71440076,5334375.69889821 687651.92110076,5334375.76839821 687651.15280075,5334375.9688",
+          "693598.30490088,5338584.12569783 693557.25750088,5338506.73229783 693539.29940088,5338515.74249783 693542.64790088,5338520.13799783 693543.15890088,5338519.9062"
+        ],
+        "null_rate": 0.995
+      },
+      {
+        "name": "vagrund_baug_umgriff_opendata.shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 164,
+        "null_count": 836,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.836
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vagrund_baug_umgriff_opendata.objectid",
+      "vagrund_baug_umgriff_opendata.nr_plan",
+      "vagrund_baug_umgriff_opendata.nr_va",
+      "objectid"
+    ],
+    "category_columns": [
+      "Polygon.innerBoundaryIs.LinearRing.coordinates",
+      "innerBoundaryIs.LinearRing.coordinates"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Polygon.innerBoundaryIs.LinearRing.coordinates",
+      "y": "vagrund_baug_umgriff_opendata.objectid"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 19,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Grundschüler*innen - Familiensprache - nichtdeutsch and compare Indikatorwert by Indikator.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Grundschüler*innen - Familiensprache - nichtdeutsch",
+    "package_id": "48cb5c83-02c6-4892-aa7f-cf689f0a5ce3",
+    "package_name": "indikatorenatlas-grundschueler-innen-familiensprache-nichtdeutsch-83r65mct",
+    "resource_id": "e44d25b5-028b-4b75-9300-f290a0272258",
+    "resource_name": "Familiensprache - nichtdeutsch",
+    "resource_format": "csv",
+    "description": "Anteil der Grundschüler\\*innen mit nichtdeutscher Familiensprache (vorrangig in der Familie gesprochene Sprache) an allen Grundschüler\\*innen in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Indikatorenatlas",
+      "Schule"
+    ],
+    "groups": [
+      "educ",
+      "tech"
+    ],
+    "row_count": 468,
+    "sampled_rows": 468,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          57.0,
+          54.3,
+          40.1,
+          47.2,
+          45.4
+        ],
+        "numeric": {
+          "count": 468.0,
+          "min": 8.7,
+          "max": 78.8,
+          "mean": 42.8329,
+          "median": 44.75
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "26866",
+          "209",
+          "450",
+          "527",
+          "362"
+        ],
+        "numeric": {
+          "count": 468.0,
+          "min": 40.0,
+          "max": 26866.0,
+          "mean": 1394.8974,
+          "median": 642.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "47113",
+          "385",
+          "1122",
+          "1117",
+          "798"
+        ],
+        "numeric": {
+          "count": 468.0,
+          "min": 315.0,
+          "max": 47113.0,
+          "mean": 3136.906,
+          "median": 1459.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 468.0,
+          "min": 2007.0,
+          "max": 2024.0,
+          "mean": 2015.5,
+          "median": 2015.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "Familiensprache nichtdeutsch"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "Grundschüler*innen (nichtdeutsche Familiensprache)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 468,
+        "null_count": 0,
+        "examples": [
+          "Grundschüler*innen (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Indikator",
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Indikator",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

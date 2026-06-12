@@ -1,0 +1,239 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of srsDimension in Wertstoffhöfe der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Wertstoffhöfe der Landeshauptstadt München",
+    "package_id": "5d8faadb-eae4-48ad-819e-b2b708905250",
+    "package_name": "awm_wertstoffhoefe_opendata",
+    "resource_id": "3e12eddb-c7db-4e6a-9cf0-1dd953608f2c",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "An den Wertstoffhöfen können Sie sperrige Abfälle, Problemstoffe und Grünschnitt in haushaltsüblicher Art und Menge gebührenfrei abgeben. Größere Mengen nehmen gegen eine Gebühr die Wertstoffhöfe Plus in Freimann und Langwied an. Bitte sortieren Sie vor. Damit erleichtern Sie sich die Abgabe vor Ort und verringern die Abladezeit. <br> Weitere Informationen unter <a target=\"_blank\" href=\"www.awm-muenchen.de/entsorgen/wertstoffhoefe\">Wertstoffhöfe München</a>",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Ver- und Entsorgung",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 38,
+    "sampled_rows": 38,
+    "column_count": 30,
+    "columns": [
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 37,
+        "examples": [
+          "12"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 12.0,
+          "max": 12.0,
+          "mean": 12.0,
+          "median": 12.0
+        },
+        "null_rate": 0.9737
+      },
+      {
+        "name": "shape.Point.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "Point.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 12.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6842
+      },
+      {
+        "name": "shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "urn:x-ogc:def:crs:EPSG:25832"
+        ],
+        "null_rate": 0.6842
+      },
+      {
+        "name": "shape.Point.pos",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "693173.12850087 5340829.94639785",
+          "687067.74920074 5336439.78269824",
+          "696966.53670096 5337799.51729758",
+          "688934.81860078 5342011.44949812",
+          "700319.04410104 5333021.47619731"
+        ],
+        "null_rate": 0.6842
+      },
+      {
+        "name": "Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "urn:x-ogc:def:crs:EPSG:25832"
+        ],
+        "null_rate": 0.6842
+      },
+      {
+        "name": "Point.pos",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "693173.12850087 5340829.94639785",
+          "687067.74920074 5336439.78269824",
+          "696966.53670096 5337799.51729758",
+          "688934.81860078 5342011.44949812",
+          "700319.04410104 5333021.47619731"
+        ],
+        "null_rate": 0.6842
+      },
+      {
+        "name": "pos",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "693173.12850087 5340829.94639785",
+          "687067.74920074 5336439.78269824",
+          "696966.53670096 5337799.51729758",
+          "688934.81860078 5342011.44949812",
+          "700319.04410104 5333021.47619731"
+        ],
+        "null_rate": 0.6842
+      },
+      {
+        "name": "featureMembers.awm_wertstoffhoefe.shape.Point.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 37,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9737
+      },
+      {
+        "name": "awm_wertstoffhoefe.shape.Point.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 37,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9737
+      },
+      {
+        "name": "{http://www.opengis.net/gml}id",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 12,
+        "null_count": 26,
+        "examples": [
+          "awm_wertstoffhoefe.1",
+          "awm_wertstoffhoefe.2",
+          "awm_wertstoffhoefe.3",
+          "awm_wertstoffhoefe.4",
+          "awm_wertstoffhoefe.5"
+        ],
+        "null_rate": 0.6842
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "srsDimension",
+      "numberOfFeatures"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "srsDimension"
+    }
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 18,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of stadtbezirk-nr in Ratschbankerl in München.",
+  "query_result": {
+    "dataset_title": "Ratschbankerl in München",
+    "package_id": "5623e119-9a3c-420b-8925-af53bc57c5cd",
+    "package_name": "ratschbankerl-in-muenchen",
+    "resource_id": "b000b282-c52f-44eb-a97e-851a4b999aa0",
+    "resource_name": "Liste der Ratschbankerl",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst die Liste der „Ratschbankerl“ im Münchner Stadtgebiet. Ein Ort zum Sitzen und Reden: Das „Ratschbankerl“ soll ein Zeichen gegen Einsamkeit setzen und Orte der Begegnung in München in allen Sozialregionen schaffen. In jedem Bezirk wurde eine geeignete Sitzbank gewählt, die durch eine Tafel mit der Aufschrift „Ratschbankerl“ gekennzeichnet wurde. Wer sich darauf hinsetzt, lädt andere auf ein Gespräch ein und stellt sich auch selbst als Gesprächspartner*in zur Verfügung. Insge",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Einsamkeit",
+      "Sitzbank",
+      "Soziales"
+    ],
+    "groups": [],
+    "row_count": 25,
+    "sampled_rows": 25,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "stadtbezirk-nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.0,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          48.14006,
+          48.13225,
+          48.15072,
+          48.17386,
+          48.12016
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 48.0984,
+          "max": 48.2188,
+          "mean": 48.1439,
+          "median": 48.1399
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          11.58733,
+          11.5635,
+          11.5808,
+          11.57021,
+          11.57733
+        ],
+        "numeric": {
+          "count": 25.0,
+          "min": 11.4053,
+          "max": 11.6905,
+          "mean": 11.5506,
+          "median": 11.5635
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sozialregion",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          "Altstadt – Lehel",
+          "Ludwigsvorstadt – Isarvorstadt",
+          "Maxvorstadt",
+          "Schwabing-West",
+          "Au – Haidhausen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          "St.-Anna-Platz",
+          "Nußbaumpark",
+          "Geschwister-Scholl-Platz",
+          "Luitpoldpark",
+          "Dollmannstasse"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sadb-poi",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 25,
+        "null_count": 0,
+        "examples": [
+          "https://stadt.muenchen.de/service/info/ratschbankerl-01-altstadt-lehel/10381488/",
+          "https://stadt.muenchen.de/service/info/ratschbankerl-2-ludwigsvorstadt-isarvorstadt/10375181/",
+          "https://stadt.muenchen.de/service/info/ratschbankerl-03-maxvorstadt/10381490/",
+          "https://stadt.muenchen.de/service/info/ratschbankerl-4-schwabing-west/10375184/",
+          "https://stadt.muenchen.de/service/info/ratschbankerl-05-au-haidhausen/10381492/"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "lagehinweis",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 20,
+        "null_count": 5,
+        "examples": [
+          "Seite: Hausnummern 1a und 2",
+          "Ecke Lindwurmstraße und Ziemssenstraße",
+          "Seite: Kleingartenanlage, bei der Notrufsäule",
+          "zwischen ASZ und Hausnummer 6, in der Nische",
+          "Ecke Kraelerstraße und Paumannstraße"
+        ],
+        "null_rate": 0.2
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "stadtbezirk-nr"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "stadtbezirk-nr"
+    }
+  },
+  "quality_score": 5.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

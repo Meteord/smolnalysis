@@ -1,0 +1,266 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Nachbarschaftstreffs and compare objectid by za4.",
+  "query_result": {
+    "dataset_title": "Nachbarschaftstreffs",
+    "package_id": "4cf5b3e5-07f0-42d5-82f1-d851fba5eb7f",
+    "package_name": "bestand_nachbarschaftstreffs_opendata",
+    "resource_id": "68a7c7a5-412f-4f2c-b90e-6154e436afc6",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Ein Nachbarschaftstreff ist ein Treffpunkt und offener Raum für alle Menschen, die im Viertel leben. Hier werden Ideen ausgetauscht und soziale oder kulturelle Projekte zusammen umgesetzt.",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 185,
+    "sampled_rows": 185,
+    "column_count": 33,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 61,
+        "null_count": 124,
+        "examples": [
+          "1.0",
+          "2.0",
+          "3.0",
+          "4.0",
+          "5.0"
+        ],
+        "numeric": {
+          "count": 61.0,
+          "min": 1.0,
+          "max": 80.0,
+          "mean": 32.8852,
+          "median": 31.0
+        },
+        "null_rate": 0.6703
+      },
+      {
+        "name": "za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 61,
+        "null_count": 124,
+        "examples": [
+          "15",
+          "123",
+          "2",
+          "3",
+          "190"
+        ],
+        "numeric": {
+          "count": 61.0,
+          "min": 1.0,
+          "max": 520.0,
+          "mean": 43.8852,
+          "median": 16.0
+        },
+        "null_rate": 0.6703
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 61,
+        "null_count": 124,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 61.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6703
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 184,
+        "examples": [
+          "61"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 61.0,
+          "max": 61.0,
+          "mean": 61.0,
+          "median": 61.0
+        },
+        "null_rate": 0.9946
+      },
+      {
+        "name": "featureMembers.bestand_nachbarschaftstreffs.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 184,
+        "examples": [
+          "76.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 76.0,
+          "max": 76.0,
+          "mean": 76.0,
+          "median": 76.0
+        },
+        "null_rate": 0.9946
+      },
+      {
+        "name": "featureMembers.bestand_nachbarschaftstreffs.za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 184,
+        "examples": [
+          "16"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 16.0,
+          "max": 16.0,
+          "mean": 16.0,
+          "median": 16.0
+        },
+        "null_rate": 0.9946
+      },
+      {
+        "name": "bestand_nachbarschaftstreffs.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 184,
+        "examples": [
+          "76.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 76.0,
+          "max": 76.0,
+          "mean": 76.0,
+          "median": 76.0
+        },
+        "null_rate": 0.9946
+      },
+      {
+        "name": "bestand_nachbarschaftstreffs.za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 184,
+        "examples": [
+          "16"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 16.0,
+          "max": 16.0,
+          "mean": 16.0,
+          "median": 16.0
+        },
+        "null_rate": 0.9946
+      },
+      {
+        "name": "za4",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 180,
+        "examples": [
+          "A",
+          "B"
+        ],
+        "null_rate": 0.973
+      },
+      {
+        "name": "shape.Point.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 61,
+        "null_count": 124,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 61.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6703
+      },
+      {
+        "name": "Point.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 61,
+        "null_count": 124,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 61.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6703
+      },
+      {
+        "name": "shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 61,
+        "null_count": 124,
+        "examples": [
+          "urn:x-ogc:def:crs:EPSG:25832"
+        ],
+        "null_rate": 0.6703
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "za3",
+      "srsDimension",
+      "numberOfFeatures"
+    ],
+    "category_columns": [
+      "za4"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "za4",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 21,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

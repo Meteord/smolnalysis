@@ -1,0 +1,98 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (CSV) from Stadtplan der städtischen Trinkbrunnen.",
+  "query_result": {
+    "dataset_title": "Stadtplan der städtischen Trinkbrunnen",
+    "package_id": "7e8484f0-12c2-40be-bd0c-cfe04f63a624",
+    "package_name": "opendata_trinkwasserbrunnen",
+    "resource_id": "20ba2c6a-f3ba-457f-81eb-959936afd5e9",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 106,
+    "sampled_rows": 106,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 106,
+        "null_count": 0,
+        "examples": [
+          "POINT (693160.8497008716 5334127.190397869)",
+          "POINT (688259.9238007668 5336793.02129817)",
+          "POINT (687988.6302007613 5336372.788798186)",
+          "POINT (690953.6683008221 5339563.139498003)",
+          "POINT (689739.0887007987 5329669.487098097)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "objekt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 106,
+        "null_count": 0,
+        "examples": [
+          "Trinkbrunnen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 105,
+        "null_count": 1,
+        "examples": [
+          "Bertschbrunnen",
+          "Gänsebrunnen",
+          "Vasenbrunnen",
+          "Holztrogbrunnen",
+          "Bezoldbrunnen"
+        ],
+        "null_rate": 0.0094
+      },
+      {
+        "name": "bemerkung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 50,
+        "null_count": 56,
+        "examples": [
+          "Winterabdeckung",
+          "Forstenrieder Park, Karolinen geräumt",
+          "liegt im Perlacher Forst",
+          "Kronprinzenpark",
+          "Dauerläufer 24/7"
+        ],
+        "null_rate": 0.5283
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "objekt"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of rad_gruene_welle_line.laenge_m in Grüne Welle Radverkehr.",
+  "query_result": {
+    "dataset_title": "Grüne Welle Radverkehr",
+    "package_id": "228b638f-b11f-4656-9a38-e66240196ef4",
+    "package_name": "rad_gruene_welle",
+    "resource_id": "73a69bb7-0b54-4640-a26f-b61464c3d7d9",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Synchronisierte Ampelschaltungen ermöglichen es Radfahrenden, durch die Erhaltung der Richtgeschwindigkeit (ca. 20 km/h) mehrere Kreuzungen ohne Halt zu passieren. In der Regel ist die Koordinierungsrichtung tageszeitabhängig. Eine gleichzeitige Koordinierung in beiden Richtungen ist jedoch nur unter bestimmten Bedingungen möglich (geeigneter Knotenpunktabstand für gegebene Signalprogrammumlauf- und Freigabezeiten). Die Eingriffsmöglichkeiten von ÖPNV-Fahrzeugen auf die dortigen Ampeln können je",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 22,
+    "sampled_rows": 22,
+    "column_count": 40,
+    "columns": [
+      {
+        "name": "rad_gruene_welle_line.laenge_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "795",
+          "1860",
+          "675",
+          "1203",
+          "595"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 595.0,
+          "max": 1860.0,
+          "mean": 1025.6,
+          "median": 795.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "rad_gruene_welle_line.planungsst",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "rad_gruene_welle_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "rad_gruene_welle_line.vpr_kmh",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "20",
+          "22",
+          "21",
+          "18"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 18.0,
+          "max": 22.0,
+          "mean": 20.2,
+          "median": 20.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "laenge_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "795",
+          "1860",
+          "675",
+          "1203",
+          "595"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 595.0,
+          "max": 1860.0,
+          "mean": 1025.6,
+          "median": 795.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "planungsst",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "vpr_kmh",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 17,
+        "examples": [
+          "20",
+          "22",
+          "21",
+          "18"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 18.0,
+          "max": 22.0,
+          "mean": 20.2,
+          "median": 20.0
+        },
+        "null_rate": 0.7727
+      },
+      {
+        "name": "featureMember.rad_gruene_welle_line.laenge_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 21,
+        "examples": [
+          "595"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 595.0,
+          "max": 595.0,
+          "mean": 595.0,
+          "median": 595.0
+        },
+        "null_rate": 0.9545
+      },
+      {
+        "name": "featureMember.rad_gruene_welle_line.planungsst",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 21,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9545
+      },
+      {
+        "name": "featureMember.rad_gruene_welle_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 21,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9545
+      },
+      {
+        "name": "featureMember.rad_gruene_welle_line.vpr_kmh",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 21,
+        "examples": [
+          "18"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 18.0,
+          "max": 18.0,
+          "mean": 18.0,
+          "median": 18.0
+        },
+        "null_rate": 0.9545
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "rad_gruene_welle_line.laenge_m",
+      "rad_gruene_welle_line.planungsst",
+      "rad_gruene_welle_line.status",
+      "rad_gruene_welle_line.vpr_kmh"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "rad_gruene_welle_line.laenge_m"
+    }
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 27,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

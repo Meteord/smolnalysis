@@ -1,0 +1,111 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of BRANCH_NR in Linienliste MVV.",
+  "query_result": {
+    "dataset_title": "Linienliste MVV",
+    "package_id": "ae4a1036-1fd9-4ba7-82ae-0106af1d79f8",
+    "package_name": "linienliste-mvv",
+    "resource_id": "55f1ae90-7fc5-41b3-957b-286fc3313dc4",
+    "resource_name": "MVV Linienliste (CSV, 07.01.2026)",
+    "resource_format": "csv",
+    "description": "Eine Aufzählung der im MVV integrierten Linien und Verkehrsmittel als CSV-Datei. Die Liste wird in der Regel im Turnus von einem Jahr aktualisiert. Die angebotenen Liniendaten stehen unter der Creative Commons Attribution License (cc-by). Als Quellenangabe notieren Sie bitte \"Münchner Verkehrs- und Tarifverbund GmbH (MVV)\" sowie das Datum des Abrufs.",
+    "organization": "Münchner Verkehrs- und Tarifverbund GmbH (MVV)",
+    "tags": [
+      "MVV",
+      "Mobilität",
+      "Stadtratsauftrag",
+      "ÖPNV"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 958,
+    "sampled_rows": 958,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "BRANCH_NR",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 958,
+        "null_count": 0,
+        "examples": [
+          "23",
+          "10",
+          "19",
+          "20",
+          "15"
+        ],
+        "numeric": {
+          "count": 958.0,
+          "min": 1.0,
+          "max": 99.0,
+          "mean": 22.4468,
+          "median": 19.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "LINIENNR_EFA",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 957,
+        "null_count": 1,
+        "examples": [
+          "96",
+          "Ammersee",
+          "Starnberger See",
+          "396",
+          "996"
+        ],
+        "numeric": {
+          "count": 670.0,
+          "min": 12.0,
+          "max": 9520.0,
+          "mean": 909.1776,
+          "median": 545.5
+        },
+        "null_rate": 0.001
+      },
+      {
+        "name": "VERKEHRSMITTEL",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 958,
+        "null_count": 0,
+        "examples": [
+          "BadeBus",
+          "Bay. Seenschifffahrt",
+          "BergBus",
+          "ExpressBus",
+          "FLEXlinie"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "BRANCH_NR",
+      "LINIENNR_EFA"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "BRANCH_NR"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

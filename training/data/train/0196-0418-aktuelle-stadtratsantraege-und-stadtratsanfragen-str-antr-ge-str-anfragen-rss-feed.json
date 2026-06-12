@@ -1,0 +1,218 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Aktuelle Stadtratsanträge und Stadtratsanfragen and compare version by channel.title.",
+  "query_result": {
+    "dataset_title": "Aktuelle Stadtratsanträge und Stadtratsanfragen",
+    "package_id": "1d3ddacc-49b9-4615-81bf-eae6221b48dd",
+    "package_name": "aktuelle-stadtratsantraege-und-stadtratsanfragen",
+    "resource_id": "0bd5a7b6-2ced-458d-ac32-1bff4970953c",
+    "resource_name": " StR-Anträge / StR-Anfragen - RSS-Feed",
+    "resource_format": "xml",
+    "description": "Der Datensatz listet aktuelle Stadtratsanträge und Stadtratsanfragen als RSS-Feed auf.",
+    "organization": "Direktorium der Landeshauptstadt München",
+    "tags": [
+      "RIS",
+      "Stadtrat"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 28,
+    "sampled_rows": 28,
+    "column_count": 19,
+    "columns": [
+      {
+        "name": "pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 26,
+        "null_count": 2,
+        "examples": [
+          "Thu, 11 Jun 2026 12:31:33 +0200",
+          "Thu, 11 Jun 2026 10:21:06 +0200",
+          "Thu, 11 Jun 2026 10:21:02 +0200",
+          "Thu, 11 Jun 2026 10:20:48 +0200",
+          "Thu, 11 Jun 2026 10:20:44 +0200"
+        ],
+        "null_rate": 0.0714
+      },
+      {
+        "name": "version",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 27,
+        "examples": [
+          "2.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9643
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 27,
+        "null_count": 1,
+        "examples": [
+          "StR-Anträge / Anfragen",
+          "StR-Antrag Nr. 26-32 / A 00034 vom 11.06.2026",
+          "StR-Antrag Nr. 26-32 / A 00033 vom 11.06.2026",
+          "StR-Antrag Nr. 26-32 / A 00032 vom 11.06.2026",
+          "StR-Antrag Nr. 26-32 / A 00031 vom 11.06.2026"
+        ],
+        "null_rate": 0.0357
+      },
+      {
+        "name": "link",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 27,
+        "null_count": 1,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=StR-Antraege",
+          "https://risi.muenchen.de/risi/antrag/detail/9753230",
+          "https://risi.muenchen.de/risi/antrag/detail/9752220",
+          "https://risi.muenchen.de/risi/antrag/detail/9752244",
+          "https://risi.muenchen.de/risi/antrag/detail/9752273"
+        ],
+        "null_rate": 0.0357
+      },
+      {
+        "name": "description",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 27,
+        "null_count": 1,
+        "examples": [
+          "RSS Feed der neusten StR-Anträge und StR-Anfragen der Landeshauptstadt München.",
+          "<strong>StR-Antrag Nr. 26-32 / A 00034 vom 11.06.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</st",
+          "<strong>StR-Antrag Nr. 26-32 / A 00033 vom 11.06.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</st",
+          "<strong>StR-Antrag Nr. 26-32 / A 00032 vom 11.06.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</st",
+          "<strong>StR-Antrag Nr. 26-32 / A 00031 vom 11.06.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</st"
+        ],
+        "null_rate": 0.0357
+      },
+      {
+        "name": "guid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 26,
+        "null_count": 2,
+        "examples": [
+          "StrAntraegeRSS;9753230",
+          "StrAntraegeRSS;9752220",
+          "StrAntraegeRSS;9752244",
+          "StrAntraegeRSS;9752273",
+          "StrAntraegeRSS;9752287"
+        ],
+        "null_rate": 0.0714
+      },
+      {
+        "name": "channel.item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 27,
+        "examples": [
+          "Mon, 1 Jun 2026 10:46:09 +0200"
+        ],
+        "null_rate": 0.9643
+      },
+      {
+        "name": "item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 27,
+        "examples": [
+          "Mon, 1 Jun 2026 10:46:09 +0200"
+        ],
+        "null_rate": 0.9643
+      },
+      {
+        "name": "channel.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 27,
+        "examples": [
+          "StR-Anträge / Anfragen"
+        ],
+        "null_rate": 0.9643
+      },
+      {
+        "name": "channel.link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 27,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=StR-Antraege"
+        ],
+        "null_rate": 0.9643
+      },
+      {
+        "name": "channel.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 27,
+        "examples": [
+          "RSS Feed der neusten StR-Anträge und StR-Anfragen der Landeshauptstadt München."
+        ],
+        "null_rate": 0.9643
+      },
+      {
+        "name": "channel.item.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 27,
+        "examples": [
+          "StR-Antrag Nr. 26-32 / F 00011 vom 01.06.2026"
+        ],
+        "null_rate": 0.9643
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "version"
+    ],
+    "category_columns": [
+      "channel.title",
+      "channel.link",
+      "channel.description",
+      "channel.item.title"
+    ],
+    "time_columns": [
+      "pubDate",
+      "channel.item.pubDate",
+      "item.pubDate"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "channel.title",
+      "y": "version"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 7,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

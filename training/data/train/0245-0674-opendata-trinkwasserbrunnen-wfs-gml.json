@@ -1,0 +1,200 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (GML) from Stadtplan der städtischen Trinkbrunnen.",
+  "query_result": {
+    "dataset_title": "Stadtplan der städtischen Trinkbrunnen",
+    "package_id": "7e8484f0-12c2-40be-bd0c-cfe04f63a624",
+    "package_name": "opendata_trinkwasserbrunnen",
+    "resource_id": "2f106dd5-bf97-45b2-8c0b-b721b783c94c",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 426,
+    "sampled_rows": 426,
+    "column_count": 25,
+    "columns": [
+      {
+        "name": "trinkwasserbrunnen.shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "trinkwasserbrunnen.shape.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "693160.84970087,5334127.19039787",
+          "688259.92380077,5336793.02129817",
+          "687988.63020076,5336372.78879819",
+          "690953.66830082,5339563.139498",
+          "689739.0887008,5329669.4870981"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "shape.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "693160.84970087,5334127.19039787",
+          "688259.92380077,5336793.02129817",
+          "687988.63020076,5336372.78879819",
+          "690953.66830082,5339563.139498",
+          "689739.0887008,5329669.4870981"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "693160.84970087,5334127.19039787",
+          "688259.92380077,5336793.02129817",
+          "687988.63020076,5336372.78879819",
+          "690953.66830082,5339563.139498",
+          "689739.0887008,5329669.4870981"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "trinkwasserbrunnen.fid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "trinkwasserbrunnen.1",
+          "trinkwasserbrunnen.2",
+          "trinkwasserbrunnen.3",
+          "trinkwasserbrunnen.4",
+          "trinkwasserbrunnen.5"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "trinkwasserbrunnen.objekt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "Trinkbrunnen"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "objekt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "Trinkbrunnen"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "srsName",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 106,
+        "null_count": 320,
+        "examples": [
+          "693160.84970087,5334127.19039787",
+          "688259.92380077,5336793.02129817",
+          "687988.63020076,5336372.78879819",
+          "690953.66830082,5339563.139498",
+          "689739.0887008,5329669.4870981"
+        ],
+        "null_rate": 0.7512
+      },
+      {
+        "name": "trinkwasserbrunnen.bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 105,
+        "null_count": 321,
+        "examples": [
+          "Bertschbrunnen",
+          "Gänsebrunnen",
+          "Vasenbrunnen",
+          "Holztrogbrunnen",
+          "Bezoldbrunnen"
+        ],
+        "null_rate": 0.7535
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "trinkwasserbrunnen.objekt",
+      "objekt",
+      "srsName"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.0,
+  "cleaning_notes": {
+    "dropped_columns": 12,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

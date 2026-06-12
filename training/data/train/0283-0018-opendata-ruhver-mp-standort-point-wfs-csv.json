@@ -1,0 +1,254 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Mobilitätspunkte and compare objectid by gaf_ts_vorhanden.",
+  "query_result": {
+    "dataset_title": "Mobilitätspunkte",
+    "package_id": "b1f40df9-8643-4eb6-a61a-820a171b6e50",
+    "package_name": "opendata_ruhver_mp_standort_point",
+    "resource_id": "8fd9daaf-2396-487f-9838-361c351ee238",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Dieser Layer beinhaltet die Standorte der Mobilitätspunkte in München. Der Standort entspricht den Koordinaten der Informationsstele. Folgende Angebote stehen an den Mobilitätspunkten zur Verfügung: • Abstellflächen für geteilte Mikromobilitätsfahrzeuge, d.h. Fahrzeuge für Bikesharing, E-Tretrollersharing, E-Motorrollersharing und Lastenradsharing (Abstellflächen im jew. Layer des Fahrzeugtyps) • Abstellflächen für stationsbasiertes und allgemeines Carsharing (Abstellflächen im Layer „stationsba",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Mobilitätspunkte",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 120,
+    "sampled_rows": 120,
+    "column_count": 22,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          52,
+          93,
+          98,
+          12,
+          7
+        ],
+        "numeric": {
+          "count": 120.0,
+          "min": 1.0,
+          "max": 201.0,
+          "mean": 75.075,
+          "median": 66.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anz_stellpl_cs",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          6,
+          5,
+          4,
+          7,
+          3
+        ],
+        "numeric": {
+          "count": 120.0,
+          "min": 0.0,
+          "max": 13.0,
+          "mean": 5.325,
+          "median": 5.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anz_stellpl_taxi",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "4",
+          "9"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 4.0,
+          "max": 9.0,
+          "mean": 6.5,
+          "median": 6.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_ladepunkte_ac",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          0
+        ],
+        "numeric": {
+          "count": 120.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_ladepunkte_dc",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          0
+        ],
+        "numeric": {
+          "count": 120.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "int64",
+        "kind": "date",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          20260521,
+          20260319,
+          20260416,
+          20260224,
+          20260317
+        ],
+        "numeric": {
+          "count": 120.0,
+          "min": 20260219.0,
+          "max": 20260610.0,
+          "mean": 20260355.425,
+          "median": 20260305.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gaf_ts_vorhanden",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "gaf_bs_vorhanden",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "gaf_ls_vorhanden",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "gaf_ms_vorhanden",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ods_vorhanden",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bus_vorhanden",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 120,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "anz_stellpl_cs",
+      "anz_stellpl_taxi",
+      "anzahl_ladepunkte_ac"
+    ],
+    "category_columns": [
+      "gaf_ts_vorhanden",
+      "gaf_bs_vorhanden",
+      "gaf_ls_vorhanden",
+      "gaf_ms_vorhanden"
+    ],
+    "time_columns": [
+      "bearbeitung_datum"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "gaf_ts_vorhanden",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 8,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

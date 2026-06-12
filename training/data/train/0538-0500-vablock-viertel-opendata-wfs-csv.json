@@ -1,0 +1,169 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Stadtviertel München.",
+  "query_result": {
+    "dataset_title": "Stadtviertel München",
+    "package_id": "6d6cba91-53d1-427e-8b49-3e6750b5e953",
+    "package_name": "vablock_viertel_opendata",
+    "resource_id": "b24dd56b-3ab2-44a6-9bfc-dcc09c4346aa",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtvierteln der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 477,
+    "sampled_rows": 477,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          369,
+          458,
+          66,
+          328,
+          298
+        ],
+        "numeric": {
+          "count": 477.0,
+          "min": 1.0,
+          "max": 475.0,
+          "mean": 237.696,
+          "median": 237.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "x",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          690986.5884,
+          692574.6957,
+          684887.5808,
+          696480.1084,
+          683925.1374
+        ],
+        "numeric": {
+          "count": 477.0,
+          "min": 677364.7601,
+          "max": 701081.536,
+          "mean": 690067.976,
+          "median": 690295.4197
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "y",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          5338347.8,
+          5333034.4822,
+          5343031.2363,
+          5330191.5225,
+          5332234.9287
+        ],
+        "numeric": {
+          "count": 477.0,
+          "min": 5326841.8578,
+          "max": 5345553.1762,
+          "mean": 5335292.1316,
+          "median": 5335071.2991
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "flaeche_qm",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          583744.3232644,
+          239345.8658026,
+          1190290.43550623,
+          497477.08539691,
+          439938.17950796
+        ],
+        "numeric": {
+          "count": 477.0,
+          "min": 28943.2871,
+          "max": 5858498.4656,
+          "mean": 654602.9333,
+          "median": 469240.2532
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((691263.765200829 5339003.582997983, 691252.2285008288 5339116.486697987, 691248.0984008284 5339156.031497986, 691247.2769008286 5339180.844397985, 691",
+          "POLYGON ((692580.1231008589 5332950.618997911, 692788.1930008635 5333014.202997896, 692866.7730008655 5333037.651197892, 692871.7758008654 5333039.17839789, 692",
+          "POLYGON ((684323.0328006891 5343799.61439837, 684322.417400689 5343802.552698369, 684291.8176006883 5343791.37399837, 684224.2189006871 5343766.684098375, 68410",
+          "POLYGON ((696557.3946009511 5329927.221497633, 696577.1725009517 5329917.535797632, 696591.6626009521 5329909.9134976305, 696609.2993009526 5329900.1926976275,",
+          "POLYGON ((683958.346700684 5332042.800698404, 684031.4562006854 5332054.713598399, 684119.1697006868 5332067.541198394, 684268.3219006897 5332089.553298387, 684"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "vi_nummer",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 477,
+        "null_count": 0,
+        "examples": [
+          "04.2.3",
+          "05.5.3",
+          "24.3.1",
+          "16.4.6",
+          "20.2.2"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "x",
+      "y",
+      "flaeche_qm"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

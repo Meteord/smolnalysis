@@ -1,0 +1,225 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Digitale 3L-Zonen and compare digitale_3l_zonen.angebot by digitale_3l_zonen.parkregel_beschreibung.",
+  "query_result": {
+    "dataset_title": "Digitale 3L-Zonen",
+    "package_id": "c4a7a96b-4eed-4bb6-99d9-bd88c6ff5492",
+    "package_name": "g_sensor_3l_zonen",
+    "resource_id": "8426004e-5f75-48a8-9c9a-f4d06b60610d",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Mit Sensoren ausgestattete Haltebereiche für Fahrzeuge von Lieferdiensten bzw. Handwerksbetrieben in der Landeshauptstadt München. Die Sensoren erfassen, ob der Parkplatz belegt ist oder nicht. Diese Information ist jedoch nicht Bestandteil der Daten. Sog. 3L-Zonen sind \"Bereiche zum Laden und Liefern\", die zum Be- und Entladen genutzt werden dürfen und \"Bereiche zum Laden, Liefern und Leisten\", in denen auch Fahrzeuge von Handwerksbetrieben abgestellt werden dürfen. Die Haltebereiche sind häufi",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Verkehrswesen",
+      "Wirschaftsverkehr"
+    ],
+    "groups": [],
+    "row_count": 286,
+    "sampled_rows": 286,
+    "column_count": 28,
+    "columns": [
+      {
+        "name": "digitale_3l_zonen.angebot",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 71.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.7517
+      },
+      {
+        "name": "angebot",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 71.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.7517
+      },
+      {
+        "name": "featureMember.digitale_3l_zonen.angebot",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 285,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9965
+      },
+      {
+        "name": "digitale_3l_zonen.parkregel_beschreibung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "Eingeschränktes Halteverbot 0-24 Uhr",
+          "Absolutes Halteverbot 7-20 Uhr, Altstadttarif 20-23 Uhr"
+        ],
+        "null_rate": 0.7517
+      },
+      {
+        "name": "digitale_3l_zonen.wirtschaftsverkehr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "Bereich zum Laden, Leisten und Liefern (auch temporär)",
+          "Lade- und Lieferbereich (auch temporär)"
+        ],
+        "null_rate": 0.7517
+      },
+      {
+        "name": "parkregel_beschreibung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "Eingeschränktes Halteverbot 0-24 Uhr",
+          "Absolutes Halteverbot 7-20 Uhr, Altstadttarif 20-23 Uhr"
+        ],
+        "null_rate": 0.7517
+      },
+      {
+        "name": "wirtschaftsverkehr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "Bereich zum Laden, Leisten und Liefern (auch temporär)",
+          "Lade- und Lieferbereich (auch temporär)"
+        ],
+        "null_rate": 0.7517
+      },
+      {
+        "name": "digitale_3l_zonen.shape.LineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7517
+      },
+      {
+        "name": "digitale_3l_zonen.shape.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "691852.49720084,5334767.83119796,0 691848.71320084,5334770.05859796,0",
+          "691848.71320084,5334770.05859796,0 691844.98210084,5334772.25489796,0",
+          "691837.62840084,5334776.55449795,0 691833.87900084,5334778.72379796,0",
+          "691844.98210084,5334772.25489796,0 691841.31310084,5334774.41459795,0",
+          "691841.31310084,5334774.41459795,0 691837.62840084,5334776.55449795,0"
+        ],
+        "null_rate": 0.7517
+      },
+      {
+        "name": "shape.LineString.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7517
+      },
+      {
+        "name": "shape.LineString.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "691852.49720084,5334767.83119796,0 691848.71320084,5334770.05859796,0",
+          "691848.71320084,5334770.05859796,0 691844.98210084,5334772.25489796,0",
+          "691837.62840084,5334776.55449795,0 691833.87900084,5334778.72379796,0",
+          "691844.98210084,5334772.25489796,0 691841.31310084,5334774.41459795,0",
+          "691841.31310084,5334774.41459795,0 691837.62840084,5334776.55449795,0"
+        ],
+        "null_rate": 0.7517
+      },
+      {
+        "name": "digitale_3l_zonen.fid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 71,
+        "null_count": 215,
+        "examples": [
+          "digitale_3l_zonen.1",
+          "digitale_3l_zonen.2",
+          "digitale_3l_zonen.3",
+          "digitale_3l_zonen.4",
+          "digitale_3l_zonen.5"
+        ],
+        "null_rate": 0.7517
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "digitale_3l_zonen.angebot",
+      "angebot",
+      "featureMember.digitale_3l_zonen.angebot"
+    ],
+    "category_columns": [
+      "digitale_3l_zonen.parkregel_beschreibung",
+      "digitale_3l_zonen.wirtschaftsverkehr",
+      "parkregel_beschreibung",
+      "wirtschaftsverkehr"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "digitale_3l_zonen.parkregel_beschreibung",
+      "y": "digitale_3l_zonen.angebot"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 15,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

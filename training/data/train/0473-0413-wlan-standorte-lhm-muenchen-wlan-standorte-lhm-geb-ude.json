@@ -1,0 +1,153 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize WLAN-Standorte LH München and compare anzahl by anbieter.",
+  "query_result": {
+    "dataset_title": "WLAN-Standorte LH München",
+    "package_id": "bec8b9e3-0e55-438b-91bd-5f6a781f3efc",
+    "package_name": "wlan-standorte-lhm-muenchen",
+    "resource_id": "58691a67-9ba6-40f0-b25e-9d969af66895",
+    "resource_name": "WLAN Standorte LHM Gebäude",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz umfasst die Standorte der städtischen Gebäude mit der Anzahl der Accesspoints für M-WLAN und Eduroam. Der Dienst **M-WLAN** bietet über zwei Funknetze einen freien, öffentlichen Internetzugang für Bürger*innen, Besucher*innen und städtische Mitarbeiter*innen an. Beim unverschlüsselten Funknetz „M-WLAN Free Wi-Fi“ müssen regelmäßig auf einer Startseite die Nutzungsbedingungen akzeptiert werden. Anschließend ist die Internetnutzung möglich. Nach 120 Minuten erfolgt eine Zwangstren",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [
+      "WLAN"
+    ],
+    "groups": [],
+    "row_count": 421,
+    "sampled_rows": 421,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "anzahl",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 421,
+        "null_count": 0,
+        "examples": [
+          3,
+          5,
+          4,
+          90,
+          52
+        ],
+        "numeric": {
+          "count": 421.0,
+          "min": 1.0,
+          "max": 175.0,
+          "mean": 16.0475,
+          "median": 6.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 421,
+        "null_count": 0,
+        "examples": [
+          48.115053,
+          48.1737442,
+          48.1170972,
+          48.10809,
+          48.1514327
+        ],
+        "numeric": {
+          "count": 421.0,
+          "min": 48.0761,
+          "max": 48.2916,
+          "mean": 48.1416,
+          "median": 48.1366
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 421,
+        "null_count": 0,
+        "examples": [
+          11.5656711,
+          11.5362706,
+          11.5378129,
+          11.6477317,
+          11.5442024
+        ],
+        "numeric": {
+          "count": 421.0,
+          "min": 11.4024,
+          "max": 11.7067,
+          "mean": 11.5622,
+          "median": 11.5649
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anbieter",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 421,
+        "null_count": 0,
+        "examples": [
+          "Landeshauptstadt München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 421,
+        "null_count": 0,
+        "examples": [
+          "Agilolfingerplatz 1",
+          "Agnes-Pockels-Bogen 20",
+          "Albert-Roßhaupter-Straße 8",
+          "Albert-Schweitzer-Straße 59",
+          "Albrechtstraße 7"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 421,
+        "null_count": 0,
+        "examples": [
+          "München"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl"
+    ],
+    "category_columns": [
+      "anbieter",
+      "ort"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "anbieter",
+      "y": "anzahl"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Radlstadtplan (Gemeinsame Rad- und Fußwege) and compare richtung by status_bedeutung.",
+  "query_result": {
+    "dataset_title": "Radlstadtplan (Gemeinsame Rad- und Fußwege)",
+    "package_id": "f26b8320-e6bd-498e-a062-80f066964f9b",
+    "package_name": "rad_rsp_gemradfusswege_line",
+    "resource_id": "83b39138-9eb7-40f5-821b-b0ac749d6c6c",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Auf gemeinsamen Geh- und Radwegen mischen sich verschiedene Verkehrsarten und damit Geschwindigkeiten, weswegen besondere Rücksichtnahme erforderlich ist. Sie sind mit dem blauen Schild gekennzeichnet, das oben Zufußgehende und unten ein Fahrrad abbildet, getrennt durch einen waagrechten Strich. Damit unterscheiden sie sich von getrennten Fuß- und Radwegen, wo der Trennstrich auf dem Verkehrsschild senkrecht verläuft. Diese Art der Radverkehrsführung findet sich in München insbesondere in Grünan",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Radwege",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 16,
+    "columns": [
+      {
+        "name": "richtung",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          1,
+          2
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.415,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "fuss",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          0,
+          1
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.361,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "umgebung",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          1,
+          2,
+          3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 3.0,
+          "mean": 1.272,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "unterfuehrung",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          0,
+          1
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.049,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "legende",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          1010,
+          2010,
+          2120,
+          1110,
+          21201
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1010.0,
+          "max": 21211.0,
+          "mean": 3218.32,
+          "median": 1010.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "forst",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          0,
+          1
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.092,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsstatus",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          0
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((686167.5386007255 5335083.835098288, 686162.9151007255 5335099.668998288, 686155.8328007254 5335114.405498289, 686146.291000725 5335128.041498",
+          "MULTILINESTRING ((686371.5123007293 5335164.859798277, 686347.4357007289 5335166.421798278, 686322.9332007284 5335165.970098279, 686305.5041007281 5335163.78399",
+          "MULTILINESTRING ((686503.6754007321 5335253.087398269, 686362.7667007293 5335273.606198278, 686309.9394007281 5335281.047698281, 686268.6980007273 5335286.44069",
+          "MULTILINESTRING ((684584.8906006953 5335004.088998368, 684590.3216006954 5335044.333798368))",
+          "MULTILINESTRING ((684584.8906006953 5335004.088998368, 684562.2700006949 5335006.712998371, 684536.1324006943 5335009.699098371, 684519.550000694 5335011.556398"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "in Bestand / in Betrieb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsstatus_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "--"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "planungsdatum",
+        "dtype": "float64",
+        "kind": "date",
+        "non_null_count": 0,
+        "null_count": 1000,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "richtung",
+      "fuss",
+      "umgebung",
+      "unterfuehrung"
+    ],
+    "category_columns": [
+      "status_bedeutung",
+      "planungsstatus_bedeutung"
+    ],
+    "time_columns": [
+      "planungsdatum"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "status_bedeutung",
+      "y": "richtung"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

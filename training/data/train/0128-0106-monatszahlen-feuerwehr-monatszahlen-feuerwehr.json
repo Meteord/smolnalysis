@@ -1,0 +1,234 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Feuerwehr München and compare MONAT by MONATSZAHL.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Feuerwehr München",
+    "package_id": "c3d0b3f8-6871-49c4-a545-624742eaded9",
+    "package_name": "monatszahlen-feuerwehr",
+    "resource_id": "24a8beff-a835-4390-9111-19f189b1d501",
+    "resource_name": "Monatszahlen Feuerwehr",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Feuerwehr München__ beinhaltet die Themen * Alarme (Hinweis: Aufgrund einer technischen Verfahrensumstellung sind seit Juli 2017 keine Daten verfügbar.) * Technische Hilfeleistungen (Hinweis: Aufgrund einer technischen Verfahrensumstellung sind seit Juli 2017 keine Daten verfügbar.) * Rettungsdienst Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [],
+    "row_count": 2996,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 940.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201347.7596,
+          "median": 201312.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "646",
+          "121",
+          "150",
+          "111"
+        ],
+        "numeric": {
+          "count": 760.0,
+          "min": 35.0,
+          "max": 2546.0,
+          "mean": 284.0092,
+          "median": 169.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "121",
+          "150",
+          "111",
+          "86"
+        ],
+        "numeric": {
+          "count": 770.0,
+          "min": 35.0,
+          "max": 2546.0,
+          "mean": 280.7208,
+          "median": 168.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "27.37",
+          "23.97",
+          "-26",
+          "-22.52"
+        ],
+        "numeric": {
+          "count": 698.0,
+          "min": -79.53,
+          "max": 580.0,
+          "mean": 2.7213,
+          "median": 1.905
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-28.54",
+          "-8.33",
+          "163.16",
+          "33.73"
+        ],
+        "numeric": {
+          "count": 734.0,
+          "min": -85.11,
+          "max": 394.29,
+          "mean": 1.491,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "74",
+          "82",
+          "85",
+          "88"
+        ],
+        "numeric": {
+          "count": 700.0,
+          "min": 46.0,
+          "max": 212.0,
+          "mean": 154.4229,
+          "median": 166.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2013.238,
+          "median": 2013.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Alarme",
+          "Rettungsdienst"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Brandalarme",
+          "Fehlalarme",
+          "Kindernotarzteinsätze"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "MONATSZAHL",
+      "AUSPRAEGUNG"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "MONATSZAHL",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

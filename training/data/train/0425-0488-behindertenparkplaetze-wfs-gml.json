@@ -1,0 +1,253 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Behindertenparkplätze and compare behindertenparkplaetze.anzahl_stellplaetze by behindertenparkplaetze.dauerhaft_verfuegbar.",
+  "query_result": {
+    "dataset_title": "Behindertenparkplätze",
+    "package_id": "80a2d76a-ebc9-40b5-b54c-b5c8af9df65f",
+    "package_name": "behindertenparkplaetze",
+    "resource_id": "842b9780-94f8-4ece-9eb3-adb743a1c72f",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Stadtweit zeigt die Themenkarte alle allgemeinen Behindertenparkplätze an. Es werden die Behindertenparkplätze auf öffentlichem Grund dargestellt, die personenbezogenen Behindertenparkplätze sind ausgenommen.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 67,
+    "columns": [
+      {
+        "name": "behindertenparkplaetze.anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "2",
+          "1",
+          "3",
+          "4",
+          "6"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 1.664,
+          "median": 1.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "behindertenparkplaetze.plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "80331",
+          "81541",
+          "80937",
+          "80805",
+          "81669"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 80331.0,
+          "max": 81927.0,
+          "mean": 80916.156,
+          "median": 80802.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "2",
+          "1",
+          "3",
+          "4",
+          "6"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 1.0,
+          "max": 6.0,
+          "mean": 1.664,
+          "median": 1.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "80331",
+          "81541",
+          "80937",
+          "80805",
+          "81669"
+        ],
+        "numeric": {
+          "count": 250.0,
+          "min": 80331.0,
+          "max": 81927.0,
+          "mean": 80916.156,
+          "median": 80802.0
+        },
+        "null_rate": 0.75
+      },
+      {
+        "name": "featureMember.behindertenparkplaetze.anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.behindertenparkplaetze.plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "80331"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 80331.0,
+          "max": 80331.0,
+          "mean": 80331.0,
+          "median": 80331.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "behindertenparkplaetze.dauerhaft_verfuegbar",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "behindertenparkplaetze.status",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Baustelle",
+          "in Bestand"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "dauerhaft_verfuegbar",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 250,
+        "null_count": 750,
+        "examples": [
+          "Baustelle",
+          "in Bestand"
+        ],
+        "null_rate": 0.75
+      },
+      {
+        "name": "behindertenparkplaetze.kontakt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 247,
+        "null_count": 753,
+        "examples": [
+          "<a href=\"mailto:mobilitaetsreferat@muenchen.de\">mobilitaetsreferat@muenchen.de</a>",
+          "mobilitaetsreferat@muenchen.de"
+        ],
+        "null_rate": 0.753
+      },
+      {
+        "name": "kontakt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 247,
+        "null_count": 753,
+        "examples": [
+          "<a href=\"mailto:mobilitaetsreferat@muenchen.de\">mobilitaetsreferat@muenchen.de</a>",
+          "mobilitaetsreferat@muenchen.de"
+        ],
+        "null_rate": 0.753
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "behindertenparkplaetze.anzahl_stellplaetze",
+      "behindertenparkplaetze.plz",
+      "anzahl_stellplaetze",
+      "plz"
+    ],
+    "category_columns": [
+      "behindertenparkplaetze.dauerhaft_verfuegbar",
+      "behindertenparkplaetze.status",
+      "dauerhaft_verfuegbar",
+      "status"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "behindertenparkplaetze.dauerhaft_verfuegbar",
+      "y": "behindertenparkplaetze.anzahl_stellplaetze"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 51,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  }
+}

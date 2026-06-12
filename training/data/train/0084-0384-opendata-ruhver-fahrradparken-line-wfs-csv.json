@@ -1,0 +1,237 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Fahrradparken mit Standardmaßen and compare anzahl_stellplaetze by zusatzbeleuchtung.",
+  "query_result": {
+    "dataset_title": "Fahrradparken mit Standardmaßen",
+    "package_id": "657dc824-3723-43ec-af1f-3e85b54db335",
+    "package_name": "opendata_ruhver_fahrradparken_line",
+    "resource_id": "7eb6773d-71e0-4ee8-98d0-5de07ca25c39",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Die Landeshauptstadt München stellt zahlreiche sichere Möglichkeiten zum Abstellen und Anschließen des Fahrrades sowohl an dezentralen Abstellanlagen als auch an Haltestellen des öffentlichen Nahverkehrs (Bike+Ride-Standorte) zur Verfügung. Hier sind städtische Standorte zum Fahrradparken und die Anzahl der pro Einheit abstellbaren Fahrräder eingezeichnet. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/information/fahrradparken\">muenchenunterwegs.de/informati",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "anzahl_stellplaetze",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          12,
+          16,
+          24,
+          4,
+          36
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 3.0,
+          "max": 298.0,
+          "mean": 15.882,
+          "median": 12.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2,
+          4,
+          3
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2.0,
+          "max": 4.0,
+          "mean": 2.247,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "standortnummer",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          87,
+          88,
+          91,
+          94,
+          98
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 2814.0,
+          "mean": 697.069,
+          "median": 603.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zusatzbeleuchtung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bike_and_ride",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "doppelstock",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ueberdacht",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "status_bedeutung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "in Bestand / in Betrieb",
+          "abgebaut",
+          "außer Betrieb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((690815.8750008213 5329674.70399803, 690819.7970008214 5329679.359998031))",
+          "MULTILINESTRING ((682401.762000655 5334994.535998474, 682390.7060006548 5334996.183998473))",
+          "MULTILINESTRING ((682765.8610006616 5334830.581998455, 682770.564000662 5334825.412998455))",
+          "MULTILINESTRING ((691294.0410008306 5334193.015997993, 691303.9120008309 5334202.292997991))",
+          "MULTILINESTRING ((689256.0440007872 5335989.523998115, 689253.7720007872 5335990.084998114))"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "lastenrad",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Autharipl. 13",
+          "Am Stadtpark 20",
+          "Planegger Str. 47 e",
+          "Blumenstr. 28 b",
+          "Blutenburgstr. 17"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "typ_generalisiert",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Vorderradhalter",
+          "Rahmenhalter",
+          "Anlehnbügel",
+          "Doppelstockabstellanlage",
+          "Fahrradständer"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl_stellplaetze",
+      "status",
+      "standortnummer"
+    ],
+    "category_columns": [
+      "zusatzbeleuchtung",
+      "bike_and_ride",
+      "doppelstock",
+      "ueberdacht"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "zusatzbeleuchtung",
+      "y": "anzahl_stellplaetze"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

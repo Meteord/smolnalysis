@@ -1,0 +1,274 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Kindertagesbetreuungseinrichtungen in München and compare Haus-nr. by Tragerschaft.",
+  "query_result": {
+    "dataset_title": "Kindertagesbetreuungseinrichtungen in München",
+    "package_id": "21d97a9e-1e94-4a0c-86d1-3c1539bcb18b",
+    "package_name": "kindertagesbetreuungseinrichtungen-in-muenchen",
+    "resource_id": "b6e9a48f-4892-47c4-ae97-37d1bc7ec993",
+    "resource_name": "Kita-Einrichtungen",
+    "resource_format": "csv",
+    "description": "Hier finden Sie eine Übersicht aller Kindertageseinrichtungen im Stadtgebiet München. Der Datensatz enthält die Spalten Einrichtungen mit Name, Einrichtungsart, Adresse, Stadtbezirk, Trägerschaft, Geodaten. Falls Sie einen Platz suchen, können Sie sich im kita finder+ informieren und anmelden: https://kitafinder.muenchen.de/elternportal/de/. Weitere Informationen rund um das Thema Kinderbetreuung finden Sie auf https://stadt.muenchen.de/buergerservice/familie-kind/kinderbetreuung.",
+    "organization": "Referat für Bildung und Sport der Landeshauptstadt München",
+    "tags": [
+      "Kinder",
+      "Kindertageseinrichtungen",
+      "Kindertagesstätten",
+      "Kitas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 1571,
+    "sampled_rows": 1000,
+    "column_count": 14,
+    "columns": [
+      {
+        "name": "Haus-nr.",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          57,
+          40,
+          14,
+          18,
+          5
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.0,
+          "max": 900215.0,
+          "mean": 1440.453,
+          "median": 22.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "PLZ",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          80999,
+          80997,
+          80976,
+          80995,
+          80538
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 80331.0,
+          "max": 81929.0,
+          "mean": 81117.165,
+          "median": 80999.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Stadt-bezirknr.",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          23,
+          1,
+          22,
+          5,
+          14
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.338,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ID Einrichtung",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          18993,
+          19065,
+          19625,
+          19795,
+          19835
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 778.0,
+          "max": 134588.0,
+          "mean": 17983.44,
+          "median": 5430.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Tragerschaft",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "LHM",
+          "Freier Träger"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Einrichtungsart",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "HAUS_FUER_KINDER",
+          "HORT",
+          "KINDERGARTEN",
+          "KINDERKRIPPE",
+          "TAGESHEIM"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Geokoordinaten Breite",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          48.189691,
+          48.19554671,
+          48.21074379,
+          48.19453,
+          48.17949
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 48.0809,
+          "max": 48.2239,
+          "mean": 48.1498,
+          "median": 48.1472
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Geokoordinaten Lange",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          11.4548284,
+          11.46281336,
+          11.46453814,
+          11.45351,
+          11.4644
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 11.3902,
+          "max": 11.679,
+          "mean": 11.5457,
+          "median": 11.5568
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Einrichtung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Haus für Kinder Franz-Nißl-Str. 57",
+          "Haus für Kinder Georg-Reismüller-Str. 40",
+          "Haus für Kinder Martha-Näbauer-Platz 14",
+          "Haus für Kinder Paul-Ehrlich-Weg 18",
+          "Haus für Kinder Pfarrer-Grimm-Str. 5"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Franz-Nißl-Str.",
+          "Georg-Reismüller-Str.",
+          "Martha-Näbauer-Pl.",
+          "Paul-Ehrlich-Weg",
+          "Pfarrer-Grimm-Str."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Hausnummern-zusatz",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "",
+          "c",
+          "B",
+          "A",
+          "a"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "München"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Haus-nr.",
+      "PLZ",
+      "Stadt-bezirknr.",
+      "ID Einrichtung"
+    ],
+    "category_columns": [
+      "Tragerschaft",
+      "Einrichtungsart",
+      "Ort"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Tragerschaft",
+      "y": "Haus-nr."
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 1,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

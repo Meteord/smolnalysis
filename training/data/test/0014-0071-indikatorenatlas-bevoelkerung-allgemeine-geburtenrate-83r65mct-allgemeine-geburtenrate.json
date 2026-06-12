@@ -1,0 +1,210 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Bevölkerung - Allgemeine Geburtenrate and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Bevölkerung - Allgemeine Geburtenrate",
+    "package_id": "19069abf-d64c-4d66-bd09-16c00d692796",
+    "package_name": "indikatorenatlas-bevoelkerung-allgemeine-geburtenrate-83r65mct",
+    "resource_id": "7d3e34f6-1cd1-4c72-b1e7-42da80d50d63",
+    "resource_name": "Allgemeine Geburtenrate",
+    "resource_format": "csv",
+    "description": "(auch als Allgemeine Geburtenziffer / Fruchtbarkeitsrate / Fertilitätsrate bezeichnet) Geborene von Müttern mit Hauptwohnsitz bei Geburt der entsprechenden Kategorie pro 1 000 15- bis 44-jährige weibliche Hauptwohnsitzpersonen (mittlere 15- bis 44-jährige weibliche Hauptwohnsitzbevölkerung im Kalenderjahr) der entsprechenden Kategorie. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/pages/indikatorenatlas).**",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Geburten",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 2028,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          40.1,
+          40.3,
+          37.2,
+          37.6,
+          39.9
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 29.8,
+          "max": 69.3,
+          "mean": 45.5964,
+          "median": 45.4
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "9002",
+          "143",
+          "353",
+          "409",
+          "495"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 114.0,
+          "max": 18330.0,
+          "mean": 921.502,
+          "median": 457.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "224495.3",
+          "3548.5",
+          "9500.1",
+          "10876.8",
+          "12402.7"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 3094.2,
+          "max": 353399.0,
+          "mean": 19922.6726,
+          "median": 9938.55
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2025.0,
+          "mean": 2014.69,
+          "median": 2016.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "insgesamt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Geborene von Müttern (deutsch)",
+          "Geborene von Müttern (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "mittlere Hauptwohnsitzbevölkerung (weiblich) (15 bis 44 Jahre) (deutsch)",
+          "mittlere Hauptwohnsitzbevölkerung (weiblich) (15 bis 44 Jahre) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Allgemeine Geburtenrate"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Name Basiswert 2",
+      "Indikator"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

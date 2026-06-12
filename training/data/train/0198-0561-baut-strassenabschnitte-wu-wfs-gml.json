@@ -1,0 +1,279 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of nr in Straßennetzgraf Baureferat Tiefbau.",
+  "query_result": {
+    "dataset_title": "Straßennetzgraf Baureferat Tiefbau",
+    "package_id": "4c75a77d-f72f-4229-8edc-4a85ff921b6f",
+    "package_name": "baut_strassenabschnitte_wu",
+    "resource_id": "89b62a28-1cd7-449e-bdba-b900a00e065e",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Der Straßennetzgraf der Hauptabteilung Tiefbau ist ein Linienthema, das Straßenzüge der Landeshauptstadt München durch ein Netzwerk abbildet. Berücksichtigt werden in dieser Kartendarstellung nur Straßen bzw. Straßenabschnitte, die nach Bayerischem Straßen- und Wegegesetz (BayStrWG) sowie dem Bundesfernstraßengesetz (FStrG) gewidmet und in der Baulast der Landeshauptstadt München und somit in der Zuständigkeit der Hauptabteilung Tiefbau sind. Die Beschriftung setzt sich aus den folgenden Kompone",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 32,
+    "columns": [
+      {
+        "name": "nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "500",
+          "300",
+          "100",
+          "600",
+          "200"
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 33.0,
+          "max": 1800.0,
+          "mean": 391.48,
+          "median": 300.0
+        },
+        "null_rate": 0.8
+      },
+      {
+        "name": "str_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "1884",
+          "3222",
+          "1285",
+          "5777",
+          "5379"
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 0.0,
+          "max": 6654.0,
+          "mean": 3106.145,
+          "median": 3155.0
+        },
+        "null_rate": 0.8
+      },
+      {
+        "name": "laenge",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "334.31926808",
+          "113.14597083",
+          "119.17800454",
+          "123.85695526",
+          "131.81988873"
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 10.6254,
+          "max": 485.8449,
+          "mean": 129.227,
+          "median": 113.7688
+        },
+        "null_rate": 0.8
+      },
+      {
+        "name": "MultiLineString.srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 200,
+        "null_count": 800,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 200.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "22433"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 22433.0,
+          "max": 22433.0,
+          "mean": 22433.0,
+          "median": 22433.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.strassenabschnitte_wu.nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "200"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 200.0,
+          "max": 200.0,
+          "mean": 200.0,
+          "median": 200.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.strassenabschnitte_wu.str_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "4845"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4845.0,
+          "max": 4845.0,
+          "mean": 4845.0,
+          "median": 4845.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMembers.strassenabschnitte_wu.laenge",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "132.83568055"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 132.8357,
+          "max": 132.8357,
+          "mean": 132.8357,
+          "median": 132.8357
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "strassenabschnitte_wu.nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "200"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 200.0,
+          "max": 200.0,
+          "mean": 200.0,
+          "median": 200.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "strassenabschnitte_wu.str_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "4845"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4845.0,
+          "max": 4845.0,
+          "mean": 4845.0,
+          "median": 4845.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "strassenabschnitte_wu.laenge",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "132.83568055"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 132.8357,
+          "max": 132.8357,
+          "mean": 132.8357,
+          "median": 132.8357
+        },
+        "null_rate": 0.999
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "nr",
+      "str_nr",
+      "laenge",
+      "MultiLineString.srsDimension"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "nr"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 20,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

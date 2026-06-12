@@ -1,0 +1,195 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of START_X in Radverkehrsanlagen im Straßenunterhalt der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Radverkehrsanlagen im Straßenunterhalt der Landeshauptstadt München",
+    "package_id": "7ad3bc6c-4c1a-4a63-9cb2-0d613f5b69fa",
+    "package_name": "radverkehrsanlagen-im-strassenunterhalt-der-landeshauptstadt-muenchen",
+    "resource_id": "14977232-94f3-4cdb-94fc-1e709698ba3f",
+    "resource_name": "Radwege CSV-Datei",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz umfasst die Radverkehrsanlagen, die vom Straßenunterhalt- und Betrieb der Landeshauptstadt München betreut werden mit Information zur Radwegeart. **Hinweis**: keine Gewährleistung der Daten hinsichtlich Vollständigkeit, Qualität und Richtigkeit.",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Fahrrad",
+      "Fahrradweg",
+      "Rad",
+      "Radverkehr",
+      "Radweg"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 21172,
+    "sampled_rows": 1000,
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "START_X",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          682779.2316,
+          682823.9375,
+          686740.5708,
+          693648.8775,
+          693653.6114
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 678786.0896,
+          "max": 699773.814,
+          "mean": 691061.0599,
+          "median": 691387.34
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "START_Y",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          5334790.039,
+          5334738.483,
+          5338656.127,
+          5340915.69,
+          5340915.665
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 5328161.793,
+          "max": 5343280.452,
+          "mean": 5339088.8936,
+          "median": 5339999.3935
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "END_X",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          682823.9375,
+          682830.2181,
+          682822.3478,
+          686742.3456,
+          693653.6114
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 678811.6084,
+          "max": 699930.6418,
+          "mean": 691063.1062,
+          "median": 691438.0088
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "END_Y",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          5334738.483,
+          5334734.616,
+          5334715.073,
+          5338665.367,
+          5340915.665
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 5328075.992,
+          "max": 5343286.155,
+          "mean": 5339100.7305,
+          "median": 5340009.0645
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Shape_Leng",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          68.37723801,
+          7.453105966,
+          23.49634591,
+          9.409102565,
+          4.733965487
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 0.805,
+          "max": 927.2096,
+          "mean": 47.1267,
+          "median": 10.0823
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "STRASSENNA",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Blumenauer Straße",
+          "Haidelweg",
+          "Hugo-Troendle-Straße",
+          "Lilienthalallee",
+          "Georg-Brauchle-Ring"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "d_RADWEGAR",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Getrennter Rad- und Gehweg",
+          "Übergang",
+          "Getrennter Rad- und Gehweg (Zweirichtungsradweg)",
+          "Radweg",
+          "Radweg (Zweirichtungsradweg)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "START_X",
+      "START_Y",
+      "END_X",
+      "END_Y"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "START_X"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

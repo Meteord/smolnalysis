@@ -1,0 +1,233 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Datensätze des Open Data Portals München and compare num_resources by license_title.",
+  "query_result": {
+    "dataset_title": "Datensätze des Open Data Portals München",
+    "package_id": "bc5eb733-39ca-47c9-8718-8d115209b12e",
+    "package_name": "datensaetze-des-open-data-portals-muenchen",
+    "resource_id": "0196ee1a-d344-4c43-8ff9-36f5afde6b4a",
+    "resource_name": "Liste aller Datensätze im Open Data Portal München",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz umfasst eine Liste aller Datensätze des Open Data Portals der Landeshauptstadt München (ohne Ressourcen).",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [
+      "Datensätze",
+      "Open Data Portal"
+    ],
+    "groups": [],
+    "row_count": 334,
+    "sampled_rows": 334,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "num_resources",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "4",
+          "7",
+          "5",
+          "6"
+        ],
+        "numeric": {
+          "count": 334.0,
+          "min": 1.0,
+          "max": 36.0,
+          "mean": 3.2216,
+          "median": 1.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "license_title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "Datenlizenz Deutschland Namensnennung 2.0 (dl-by-de)",
+          "Other (Open)",
+          "Attribution 4.0 International (CC BY 4.0)",
+          "Creative Commons Zero (CC0 1.0)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "id_package",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "d7e42935-8884-40d3-9284-096d9cafecdd",
+          "daeaf20a-9e7c-4e68-8a97-175242d43c7f",
+          "5e73a82b-7cfb-40cc-9b30-45fe5a3fa24e",
+          "3621ad08-aa97-4c2b-b0b0-82780375743c",
+          "dacf1009-8933-4cdf-8c9d-40afd54e4ef7"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "title_package",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "Monatszahlen Witterung",
+          "Monatszahlen Wirtschaft",
+          "Monatszahlen Verkehrsunfälle",
+          "Monatszahlen Tourismus",
+          "Monatszahlen Theater"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url_package",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "https://opendata.muenchen.de/dataset/monatszahlen-witterung",
+          "https://opendata.muenchen.de/dataset/monatszahlen-wirtschaft",
+          "https://opendata.muenchen.de/dataset/monatszahlen-verkehrsunfaelle",
+          "https://opendata.muenchen.de/dataset/monatszahlen-tourismus",
+          "https://opendata.muenchen.de/dataset/monatszahlen-theater"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "notes_package",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "Der Datensatz __Monatszahlen Witterung__ beinhaltet die Themen * Lufttemperatur * Luftfeuchtigkeit * Niederschlag * Sonnenschein Bitte beachten Sie die [Informa",
+          "Der Datensatz __Monatszahlen Wirtschaft__ beinhaltet die Themen * Handwerksbetriebe * Bauhauptgewerbe * Verarbeitendes Gewerbe * Gewerbean- und -abmeldungen * S",
+          "Der Datensatz __Monatszahlen Verkehrsunfälle__ beinhaltet die Themen * Verkehrsunfälle * Fluchtunfälle * Alkoholunfälle Bitte beachten Sie die [Informationsseit",
+          "Der Datensatz __Monatszahlen Tourismus__ beinhaltet die Themen * Gäste * Übernachtungen Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata",
+          "Der Datensatz __Monatszahlen Theater__ beinhaltet die Themen * Aufführungen * Besucher/innen * Durchschnittliche Platzausnutzung Bitte beachten Sie die [Informa"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "organisation_title_package",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "Statistisches Amt München",
+          "Referat für Stadtplanung und Bauordnung der Landeshauptstadt München",
+          "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+          "GeodatenService München",
+          "Sozialreferat der Landeshauptstadt München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "metadata_created_package",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "2017-02-21T14:59:41.165151",
+          "2017-02-20T10:44:19.128693",
+          "2017-02-20T15:03:38.242376",
+          "2017-02-20T13:14:48.282892",
+          "2017-02-21T14:49:57.578950"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "metadata_modified_package",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "2026-05-15T15:38:43.483501",
+          "2026-05-15T15:37:28.388017",
+          "2026-05-15T15:36:35.225745",
+          "2026-05-15T15:35:47.888777",
+          "2026-05-15T15:34:56.461647"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "state",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "active"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "tag_display_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 334,
+        "null_count": 0,
+        "examples": [
+          "Monatszahlen, Wetter",
+          "Monatszahlen",
+          "Monatszahlen, Tourismus",
+          "Monatszahlen, Theater",
+          "Auto, Monatszahlen"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "maintainer_mail",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 323,
+        "null_count": 11,
+        "examples": [
+          "stat.amt@muenchen.de",
+          "plan.ha1-22-ek@muenchen.de",
+          "geodaten.rku@muenchen.de",
+          "geoportal@muenchen.de",
+          "sozialplanung.soz@muenchen.de"
+        ],
+        "null_rate": 0.0329
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "num_resources"
+    ],
+    "category_columns": [
+      "license_title",
+      "state"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "license_title",
+      "y": "num_resources"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

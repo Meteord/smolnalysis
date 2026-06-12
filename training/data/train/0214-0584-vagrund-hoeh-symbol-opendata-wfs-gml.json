@@ -1,0 +1,253 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of vagrund_hoeh_symbol.objectid in Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München",
+    "package_id": "abb46a62-d39e-40f9-ae87-411209f55fde",
+    "package_name": "vagrund_hoeh_symbol_opendata",
+    "resource_id": "c95e49f5-1346-4d0c-a92c-0a8015910c72",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Der Dienst stellt die Lage der Höhenfestpunkte im Hoheitsgebiet der Landeshauptstadt München dar.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "opendata",
+      "planningCadastre"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 24,
+    "columns": [
+      {
+        "name": "vagrund_hoeh_symbol.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "5288.0",
+          "5289.0",
+          "5290.0",
+          "5291.0",
+          "5293.0"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 4689.0,
+          "max": 6499.0,
+          "mean": 5596.8802,
+          "median": 5869.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "vagrund_hoeh_symbol.hfp_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "3253",
+          "9826",
+          "5965",
+          "9787",
+          "6931"
+        ],
+        "numeric": {
+          "count": 164.0,
+          "min": 12.0,
+          "max": 12965.0,
+          "mean": 7091.0061,
+          "median": 7421.5
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "5288.0",
+          "5289.0",
+          "5290.0",
+          "5291.0",
+          "5293.0"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 4689.0,
+          "max": 6499.0,
+          "mean": 5596.8802,
+          "median": 5869.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "hfp_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "3253",
+          "9826",
+          "5965",
+          "9787",
+          "6931"
+        ],
+        "numeric": {
+          "count": 164.0,
+          "min": 12.0,
+          "max": 12965.0,
+          "mean": 7091.0061,
+          "median": 7421.5
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "featureMember.vagrund_hoeh_symbol.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "4085.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4085.0,
+          "max": 4085.0,
+          "mean": 4085.0,
+          "median": 4085.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.vagrund_hoeh_symbol.hfp_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "11810"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 11810.0,
+          "max": 11810.0,
+          "mean": 11810.0,
+          "median": 11810.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "vagrund_hoeh_symbol.shape.MultiPoint.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.833
+      },
+      {
+        "name": "vagrund_hoeh_symbol.shape.MultiPoint.pointMember.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "686558.87600073,5334165.12749827",
+          "686499.01490073,5334221.18619827",
+          "686691.00560074,5334188.80439826",
+          "687170.93290075,5334175.74279824",
+          "688038.99190076,5334258.41839819"
+        ],
+        "null_rate": 0.833
+      },
+      {
+        "name": "shape.MultiPoint.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.833
+      },
+      {
+        "name": "shape.MultiPoint.pointMember.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "686558.87600073,5334165.12749827",
+          "686499.01490073,5334221.18619827",
+          "686691.00560074,5334188.80439826",
+          "687170.93290075,5334175.74279824",
+          "688038.99190076,5334258.41839819"
+        ],
+        "null_rate": 0.833
+      },
+      {
+        "name": "MultiPoint.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 166,
+        "null_count": 834,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.834
+      },
+      {
+        "name": "MultiPoint.pointMember.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 166,
+        "null_count": 834,
+        "examples": [
+          "686558.87600073,5334165.12749827",
+          "686499.01490073,5334221.18619827",
+          "686691.00560074,5334188.80439826",
+          "687170.93290075,5334175.74279824",
+          "688038.99190076,5334258.41839819"
+        ],
+        "null_rate": 0.834
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vagrund_hoeh_symbol.objectid",
+      "vagrund_hoeh_symbol.hfp_nr",
+      "objectid",
+      "hfp_nr"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "vagrund_hoeh_symbol.objectid"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 11,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

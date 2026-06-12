@@ -1,0 +1,180 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Metadaten (XML) from Amtlicher Stadtplan der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Amtlicher Stadtplan der Landeshauptstadt München",
+    "package_id": "548bbed2-5e90-46e3-a02e-04367adabef3",
+    "package_name": "stadtplan",
+    "resource_id": "db912100-b1c7-44ba-912a-53bc598f7a47",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Der Amtliche Stadtplan der Landeshauptstadt München erscheint seit 1989 im jährlichen Turnus als Wandplan im Maßstab 1:20.000. Das Gebiet umfasst dabei den Großraum München von Andechs im Südwesten bis zum Flughafen München im Nordosten.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Landeshauptstadt München"
+    ],
+    "groups": [],
+    "row_count": 2,
+    "sampled_rows": 2,
+    "column_count": 22,
+    "columns": [
+      {
+        "name": "Record.date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:39:00"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "date",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "2026-05-27T14:39:00"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Amtlicher Stadtplan der Landeshauptstadt München"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.type",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "service"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.subject",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Karte"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.format",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "OGC: WMS"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.abstract",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Der Amtliche Stadtplan der Landeshauptstadt München erscheint seit 1989 im jährlichen Turnus als Wandplan im Maßstab 1:20.000. Das Gebiet umfasst dabei den Groß"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Der Amtliche Stadtplan der Landeshauptstadt München erscheint seit 1989 im jährlichen Turnus als Wandplan im Maßstab 1:20.000. Das Gebiet umfasst dabei den Groß"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.rights",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "otherRestrictions"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.source",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Die Digitalen Orthophotos werden aus orientierten Luftbildern und dem Digitalen Geländemodell (DGM) abgeleitet"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "Record.URI",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "https://geoportal.muenchen.de/metadata/srv/ger/csw?service=CSW&request=GetRecordById&version=2.0.2&outputschema=http:%2F%2Fwww.isotc211.org%2F2005%2Fgmd&element"
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 1,
+        "examples": [
+          "Amtlicher Stadtplan der Landeshauptstadt München"
+        ],
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Record.title",
+      "Record.type",
+      "Record.subject",
+      "Record.format"
+    ],
+    "time_columns": [
+      "Record.date",
+      "date"
+    ]
+  },
+  "quality_score": 4.75,
+  "cleaning_notes": {
+    "dropped_columns": 8,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

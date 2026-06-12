@@ -1,0 +1,237 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Bevölkerung and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Bevölkerung",
+    "package_id": "ac572882-24c6-4c98-873a-b61c638e058d",
+    "package_name": "monatszahlen-bevoelkerung",
+    "resource_id": "2252dc7c-265b-4f21-aa0e-b602c30cb85f",
+    "resource_name": "Monatszahlen Bevölkerung",
+    "resource_format": "csv",
+    "description": "Der Datensatz Monatszahlen Bevölkerung besteht aus den Themen: * Geschlecht und Staatsangehörigkeit * Altersgruppen * EU-Nationalitäten * Nicht-EU-Nationalitäten * Kontinente * Geborene * Gestorbene * Zuzüge * Wegzüge * Umzüge * Eheschließungen * Haushalte nach Nationengruppe * Haushalte nach Personenzahl * Haushalte nach Kinderzahl Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Bevölkerung",
+      "Monatszahlen"
+    ],
+    "groups": [
+      "soci"
+    ],
+    "row_count": 27439,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201340.884,
+          "median": 201311.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "38249",
+          "38159",
+          "38184",
+          "NA",
+          "38315"
+        ],
+        "numeric": {
+          "count": 961.0,
+          "min": 26724.0,
+          "max": 1131626.0,
+          "mean": 409963.6587,
+          "median": 203465.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "38315",
+          "38335",
+          "38395",
+          "38391",
+          "38337"
+        ],
+        "numeric": {
+          "count": 976.0,
+          "min": 26724.0,
+          "max": 1131626.0,
+          "mean": 405763.9672,
+          "median": 200970.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "-0.32",
+          "-0.24",
+          "0.07",
+          "NA",
+          "-0.16"
+        ],
+        "numeric": {
+          "count": 958.0,
+          "min": -1.22,
+          "max": 1.72,
+          "mean": 0.0901,
+          "median": 0.09
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "-0.17",
+          "-0.46",
+          "-0.55",
+          "NA",
+          "1.34"
+        ],
+        "numeric": {
+          "count": 937.0,
+          "min": -3.73,
+          "max": 5.84,
+          "mean": 1.1285,
+          "median": 1.24
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "38362",
+          "38347",
+          "38330",
+          "NA",
+          "38080"
+        ],
+        "numeric": {
+          "count": 961.0,
+          "min": 26813.0,
+          "max": 1126122.0,
+          "mean": 408172.1769,
+          "median": 201840.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2013.344,
+          "median": 2013.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Berufsschulpflichtige (15 bis 17 Jahre)",
+          "Erwerbsfähige (15 bis 64 Jahre)",
+          "Minderjährige (0 bis 17 Jahre)",
+          "noch nicht Schulpflichtige (0 bis 5 Jahre)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Altersgruppen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

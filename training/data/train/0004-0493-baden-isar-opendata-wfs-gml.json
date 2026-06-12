@@ -1,0 +1,245 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Baden in der Isar and compare MultiSurface.srsDimension by badeverbot.",
+  "query_result": {
+    "dataset_title": "Baden in der Isar",
+    "package_id": "a6bd7682-7473-4d7b-927e-5a35f32d4831",
+    "package_name": "baden_isar_opendata",
+    "resource_id": "ee71a7a1-0bec-4f38-8809-de79379ed4c3",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Isar durchfließt auf rund 14 Kilometern das Stadtgebiet von Südwest nach Nordost und bietet viel Raum für Aktivitäten und Erholung. Auch Baden ist an ausgewiesenen Stellen erlaubt. Hierbei ist zu beachten, dass Baden in der Isar immer auf eigene Gefahr erfolgt. Bei Hochwasser raten wir wegen der starken Strömung und möglichem Treibgut dringend davon ab, ins Wasser zu gehen. Das Baden ist generell in unmittelbarer Nähe von Stau- und Triebwerksanlagen, Überfällen, Schleusen, Strudelbildungen,",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 290,
+    "sampled_rows": 290,
+    "column_count": 41,
+    "columns": [
+      {
+        "name": "MultiSurface.srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 252,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.869
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 38,
+        "null_count": 252,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.869
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 289,
+        "examples": [
+          "38"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 38.0,
+          "max": 38.0,
+          "mean": 38.0,
+          "median": 38.0
+        },
+        "null_rate": 0.9966
+      },
+      {
+        "name": "badeverbot",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 38,
+        "null_count": 252,
+        "examples": [
+          "verboten",
+          "erlaubt",
+          "Nein"
+        ],
+        "null_rate": 0.869
+      },
+      {
+        "name": "shape.MultiSurface.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 38,
+        "null_count": 252,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 38.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.869
+      },
+      {
+        "name": "featureMembers.isar_baden.shape.MultiSurface.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 289,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9966
+      },
+      {
+        "name": "isar_baden.shape.MultiSurface.srsDimension",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 289,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9966
+      },
+      {
+        "name": "LinearRing.posList",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 49,
+        "null_count": 241,
+        "examples": [
+          "690601.55750082 5332664.82829804 690585.23970082 5332641.22379804 690582.30230082 5332635.75709804 690578.93810082 5332635.98519804 690575.78090082 5332636.2494",
+          "690457.75050081 5332383.46239805 690455.37930081 5332319.50639805 690455.71260081 5332318.82919805 690455.96430081 5332315.99409805 690458.30280081 5332300.2422",
+          "690461.19050081 5332217.43869805 690462.50950081 5332167.56739805 690463.79250081 5332160.60529805 690499.85010081 5332162.64079805 690496.51690081 5332219.1208",
+          "690467.24260081 5332092.02059805 690467.86050081 5332079.73669805 690466.90300081 5332077.37809805 690467.49410081 5332070.90419805 690468.81610081 5332069.7536",
+          "689984.6670008 5330898.21079808 689989.9256008 5330908.29699808 689991.9142008 5330912.57879808 690002.4400008 5330925.71209808 690014.8521008 5330929.37479808"
+        ],
+        "null_rate": 0.831
+      },
+      {
+        "name": "posList",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 49,
+        "null_count": 241,
+        "examples": [
+          "690601.55750082 5332664.82829804 690585.23970082 5332641.22379804 690582.30230082 5332635.75709804 690578.93810082 5332635.98519804 690575.78090082 5332636.2494",
+          "690457.75050081 5332383.46239805 690455.37930081 5332319.50639805 690455.71260081 5332318.82919805 690455.96430081 5332315.99409805 690458.30280081 5332300.2422",
+          "690461.19050081 5332217.43869805 690462.50950081 5332167.56739805 690463.79250081 5332160.60529805 690499.85010081 5332162.64079805 690496.51690081 5332219.1208",
+          "690467.24260081 5332092.02059805 690467.86050081 5332079.73669805 690466.90300081 5332077.37809805 690467.49410081 5332070.90419805 690468.81610081 5332069.7536",
+          "689984.6670008 5330898.21079808 689989.9256008 5330908.29699808 689991.9142008 5330912.57879808 690002.4400008 5330925.71209808 690014.8521008 5330929.37479808"
+        ],
+        "null_rate": 0.831
+      },
+      {
+        "name": "shape.MultiSurface.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 38,
+        "null_count": 252,
+        "examples": [
+          "urn:x-ogc:def:crs:EPSG:25832"
+        ],
+        "null_rate": 0.869
+      },
+      {
+        "name": "shape.MultiSurface.surfaceMember.Polygon.exterior.LinearRing.posList",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 38,
+        "null_count": 252,
+        "examples": [
+          "690601.55750082 5332664.82829804 690585.23970082 5332641.22379804 690582.30230082 5332635.75709804 690578.93810082 5332635.98519804 690575.78090082 5332636.2494",
+          "690457.75050081 5332383.46239805 690455.37930081 5332319.50639805 690455.71260081 5332318.82919805 690455.96430081 5332315.99409805 690458.30280081 5332300.2422",
+          "690461.19050081 5332217.43869805 690462.50950081 5332167.56739805 690463.79250081 5332160.60529805 690499.85010081 5332162.64079805 690496.51690081 5332219.1208",
+          "690467.24260081 5332092.02059805 690467.86050081 5332079.73669805 690466.90300081 5332077.37809805 690467.49410081 5332070.90419805 690468.81610081 5332069.7536",
+          "689984.6670008 5330898.21079808 689989.9256008 5330908.29699808 689991.9142008 5330912.57879808 690002.4400008 5330925.71209808 690014.8521008 5330929.37479808"
+        ],
+        "null_rate": 0.869
+      },
+      {
+        "name": "MultiSurface.surfaceMember.Polygon.exterior.LinearRing.posList",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 38,
+        "null_count": 252,
+        "examples": [
+          "690601.55750082 5332664.82829804 690585.23970082 5332641.22379804 690582.30230082 5332635.75709804 690578.93810082 5332635.98519804 690575.78090082 5332636.2494",
+          "690457.75050081 5332383.46239805 690455.37930081 5332319.50639805 690455.71260081 5332318.82919805 690455.96430081 5332315.99409805 690458.30280081 5332300.2422",
+          "690461.19050081 5332217.43869805 690462.50950081 5332167.56739805 690463.79250081 5332160.60529805 690499.85010081 5332162.64079805 690496.51690081 5332219.1208",
+          "690467.24260081 5332092.02059805 690467.86050081 5332079.73669805 690466.90300081 5332077.37809805 690467.49410081 5332070.90419805 690468.81610081 5332069.7536",
+          "689984.6670008 5330898.21079808 689989.9256008 5330908.29699808 689991.9142008 5330912.57879808 690002.4400008 5330925.71209808 690014.8521008 5330929.37479808"
+        ],
+        "null_rate": 0.869
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MultiSurface.srsDimension",
+      "srsDimension",
+      "numberOfFeatures"
+    ],
+    "category_columns": [
+      "badeverbot"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "badeverbot",
+      "y": "MultiSurface.srsDimension"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 29,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

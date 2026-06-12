@@ -1,0 +1,274 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ruhver_mim_abstellfl_bs.objectid in Abstellflächen für Bikesharing.",
+  "query_result": {
+    "dataset_title": "Abstellflächen für Bikesharing",
+    "package_id": "6ae7c363-13eb-40db-8f77-f94c674c9b06",
+    "package_name": "ruhver_mim_abstellfl_bs",
+    "resource_id": "1cc34505-97c9-42aa-afb6-694887750b23",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet geteilte Abstellflächen für Mikromobilität, auf denen Bikesharing-Fahrzeuge geparkt werden dürfen. Ein durchgestrichenes Symbol zeigt an, dass diese geteilte Abstellfläche derzeit außer Betrieb ist (beispielsweise wegen Veranstaltungen oder Baustellen). Das Hinweisfeld gibt Informationen zu Dauer der Einschränkung und verweist, sofern vorhanden, auf Ersatzflächen. Ersatzflächen oder temporäre Ergänzungsflächen werden in Ocker dargestellt.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 65,
+    "columns": [
+      {
+        "name": "ruhver_mim_abstellfl_bs.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "4",
+          "5",
+          "6",
+          "10",
+          "11"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 4.0,
+          "max": 12556.0,
+          "mean": 2378.96,
+          "median": 414.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "ruhver_mim_abstellfl_bs.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "4",
+          "5",
+          "6",
+          "10",
+          "11"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 4.0,
+          "max": 12556.0,
+          "mean": 2378.96,
+          "median": 414.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellfl_bs.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "4165"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4165.0,
+          "max": 4165.0,
+          "mean": 4165.0,
+          "median": 4165.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellfl_bs.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "3"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_mim_abstellfl_bs.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "20260427",
+          "20260202",
+          "20260207",
+          "20260601",
+          "20260224"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 20260202.0,
+          "max": 20260601.0,
+          "mean": 20260379.904,
+          "median": 20260427.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "20260427",
+          "20260202",
+          "20260207",
+          "20260601",
+          "20260224"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 20260202.0,
+          "max": 20260601.0,
+          "mean": 20260379.904,
+          "median": 20260427.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellfl_bs.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "20260610"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 20260610.0,
+          "max": 20260610.0,
+          "mean": 20260610.0,
+          "median": 20260610.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_mim_abstellfl_bs.realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "31.05.2021",
+          "31.07.2022",
+          "20.10.2024",
+          "15.04.2025",
+          "09.03.2025"
+        ],
+        "null_rate": 0.875
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "31.05.2021",
+          "31.07.2022",
+          "20.10.2024",
+          "15.04.2025",
+          "09.03.2025"
+        ],
+        "null_rate": 0.875
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellfl_bs.realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "14.12.2025"
+        ],
+        "null_rate": 0.999
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_mim_abstellfl_bs.objectid",
+      "ruhver_mim_abstellfl_bs.status",
+      "objectid",
+      "status"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "ruhver_mim_abstellfl_bs.bearbeitung_datum",
+      "bearbeitung_datum",
+      "featureMember.ruhver_mim_abstellfl_bs.bearbeitung_datum"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ruhver_mim_abstellfl_bs.objectid"
+    }
+  },
+  "quality_score": 6.5,
+  "cleaning_notes": {
+    "dropped_columns": 46,
+    "dropped_identifier_columns": 7,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ruhver_mim_geofences_poly.objectid in Geofences für E-Tretroller.",
+  "query_result": {
+    "dataset_title": "Geofences für E-Tretroller",
+    "package_id": "7cb1e1bd-a941-4dde-9264-814786062b2c",
+    "package_name": "opendata_ruhver_mim_geofence_poly",
+    "resource_id": "ed7ecc93-42a1-4375-8613-f88426137213",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet digitale Abstellverbotszonen im Radius von derzeit 100 Metern um eine geteilte Abstellfläche für Mikromobilität, auf denen Fahrzeuge des E-Tretrollersharings geparkt werden dürfen. Innerhalb dieser Bereiche ist eine Mietbeendigung nicht möglich. Geofences gelten auch für temporäre Abstellflächen (Darstellung Ocker).",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 56,
+    "columns": [
+      {
+        "name": "ruhver_mim_geofences_poly.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "265",
+          "172",
+          "38",
+          "29",
+          "173"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 7.0,
+          "max": 7752.0,
+          "mean": 1349.512,
+          "median": 172.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "ruhver_mim_geofences_poly.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "265",
+          "172",
+          "38",
+          "29",
+          "173"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 7.0,
+          "max": 7752.0,
+          "mean": 1349.512,
+          "median": 172.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "featureMember.ruhver_mim_geofences_poly.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "4001"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4001.0,
+          "max": 4001.0,
+          "mean": 4001.0,
+          "median": 4001.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_mim_geofences_poly.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_mim_geofences_poly.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "20260207",
+          "20260427",
+          "20260302",
+          "20260319",
+          "20260327"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 20260202.0,
+          "max": 20260427.0,
+          "mean": 20260330.888,
+          "median": 20260427.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "20260207",
+          "20260427",
+          "20260302",
+          "20260319",
+          "20260327"
+        ],
+        "numeric": {
+          "count": 125.0,
+          "min": 20260202.0,
+          "max": 20260427.0,
+          "mean": 20260330.888,
+          "median": 20260427.0
+        },
+        "null_rate": 0.875
+      },
+      {
+        "name": "featureMember.ruhver_mim_geofences_poly.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "20260427"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 20260427.0,
+          "max": 20260427.0,
+          "mean": 20260427.0,
+          "median": 20260427.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_mim_geofences_poly.realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "14.11.2024",
+          "09.02.2025",
+          "18.12.2023",
+          "09.03.2025",
+          "15.01.2025"
+        ],
+        "null_rate": 0.875
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 125,
+        "null_count": 875,
+        "examples": [
+          "14.11.2024",
+          "09.02.2025",
+          "18.12.2023",
+          "09.03.2025",
+          "15.01.2025"
+        ],
+        "null_rate": 0.875
+      },
+      {
+        "name": "featureMember.ruhver_mim_geofences_poly.realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "20.03.2025"
+        ],
+        "null_rate": 0.999
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_mim_geofences_poly.objectid",
+      "ruhver_mim_geofences_poly.status",
+      "objectid",
+      "status"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "ruhver_mim_geofences_poly.bearbeitung_datum",
+      "bearbeitung_datum",
+      "featureMember.ruhver_mim_geofences_poly.bearbeitung_datum"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ruhver_mim_geofences_poly.objectid"
+    }
+  },
+  "quality_score": 6.5,
+  "cleaning_notes": {
+    "dropped_columns": 40,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  }
+}

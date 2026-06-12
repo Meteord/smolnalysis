@@ -1,0 +1,274 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Fahrradparken mit Standardmaßen and compare ruhver_fahrradparken_line.anzahl_stellplaetze by ruhver_fahrradparken_line.zusatzbeleuchtung.",
+  "query_result": {
+    "dataset_title": "Fahrradparken mit Standardmaßen",
+    "package_id": "657dc824-3723-43ec-af1f-3e85b54db335",
+    "package_name": "opendata_ruhver_fahrradparken_line",
+    "resource_id": "a119bf17-8e3a-492e-93f3-588eca599e20",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Landeshauptstadt München stellt zahlreiche sichere Möglichkeiten zum Abstellen und Anschließen des Fahrrades sowohl an dezentralen Abstellanlagen als auch an Haltestellen des öffentlichen Nahverkehrs (Bike+Ride-Standorte) zur Verfügung. Hier sind städtische Standorte zum Fahrradparken und die Anzahl der pro Einheit abstellbaren Fahrräder eingezeichnet. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/information/fahrradparken\">muenchenunterwegs.de/informati",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 54,
+    "columns": [
+      {
+        "name": "ruhver_fahrradparken_line.anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "12",
+          "16",
+          "24",
+          "4",
+          "36"
+        ],
+        "numeric": {
+          "count": 156.0,
+          "min": 3.0,
+          "max": 298.0,
+          "mean": 19.9551,
+          "median": 11.0
+        },
+        "null_rate": 0.844
+      },
+      {
+        "name": "ruhver_fahrradparken_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "2",
+          "4",
+          "3"
+        ],
+        "numeric": {
+          "count": 156.0,
+          "min": 2.0,
+          "max": 4.0,
+          "mean": 2.1154,
+          "median": 2.0
+        },
+        "null_rate": 0.844
+      },
+      {
+        "name": "ruhver_fahrradparken_line.standortnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "87",
+          "88",
+          "91",
+          "94",
+          "98"
+        ],
+        "numeric": {
+          "count": 156.0,
+          "min": 1.0,
+          "max": 2002.0,
+          "mean": 159.5641,
+          "median": 108.5
+        },
+        "null_rate": 0.844
+      },
+      {
+        "name": "anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "12",
+          "16",
+          "24",
+          "4",
+          "36"
+        ],
+        "numeric": {
+          "count": 156.0,
+          "min": 3.0,
+          "max": 298.0,
+          "mean": 19.9551,
+          "median": 11.0
+        },
+        "null_rate": 0.844
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "2",
+          "4",
+          "3"
+        ],
+        "numeric": {
+          "count": 156.0,
+          "min": 2.0,
+          "max": 4.0,
+          "mean": 2.1154,
+          "median": 2.0
+        },
+        "null_rate": 0.844
+      },
+      {
+        "name": "standortnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "87",
+          "88",
+          "91",
+          "94",
+          "98"
+        ],
+        "numeric": {
+          "count": 156.0,
+          "min": 1.0,
+          "max": 2002.0,
+          "mean": 159.5641,
+          "median": 108.5
+        },
+        "null_rate": 0.844
+      },
+      {
+        "name": "featureMember.ruhver_fahrradparken_line.anzahl_stellplaetze",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "4"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 4.0,
+          "max": 4.0,
+          "mean": 4.0,
+          "median": 4.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_fahrradparken_line.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.ruhver_fahrradparken_line.standortnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "3374"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 3374.0,
+          "max": 3374.0,
+          "mean": 3374.0,
+          "median": 3374.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "ruhver_fahrradparken_line.zusatzbeleuchtung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.844
+      },
+      {
+        "name": "ruhver_fahrradparken_line.bike_and_ride",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "Ja",
+          "Nein"
+        ],
+        "null_rate": 0.844
+      },
+      {
+        "name": "ruhver_fahrradparken_line.doppelstock",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 156,
+        "null_count": 844,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.844
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_fahrradparken_line.anzahl_stellplaetze",
+      "ruhver_fahrradparken_line.status",
+      "ruhver_fahrradparken_line.standortnummer",
+      "anzahl_stellplaetze"
+    ],
+    "category_columns": [
+      "ruhver_fahrradparken_line.zusatzbeleuchtung",
+      "ruhver_fahrradparken_line.bike_and_ride",
+      "ruhver_fahrradparken_line.doppelstock"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "ruhver_fahrradparken_line.zusatzbeleuchtung",
+      "y": "ruhver_fahrradparken_line.anzahl_stellplaetze"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 41,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

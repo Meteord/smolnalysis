@@ -1,0 +1,178 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of anzahl_lp_ac in Ladeeinrichtungen.",
+  "query_result": {
+    "dataset_title": "Ladeeinrichtungen",
+    "package_id": "33ffd8b4-c127-4754-931e-b4deeb972148",
+    "package_name": "ruhver_els_saeule_point",
+    "resource_id": "1e152ebd-b96b-48ee-8897-824d3496564e",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Verortung der Ladeeinrichtungen auf öffentlichem Grund.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 592,
+    "sampled_rows": 592,
+    "column_count": 8,
+    "columns": [
+      {
+        "name": "anzahl_lp_ac",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          2,
+          1,
+          8,
+          0
+        ],
+        "numeric": {
+          "count": 592.0,
+          "min": 0.0,
+          "max": 8.0,
+          "mean": 1.9189,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "anzahl_lp_dc",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          0,
+          2
+        ],
+        "numeric": {
+          "count": 592.0,
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 0.0608,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ladeleistung_kw",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          22,
+          50,
+          11
+        ],
+        "numeric": {
+          "count": 592.0,
+          "min": 11.0,
+          "max": 50.0,
+          "mean": 22.8142,
+          "median": 22.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          17,
+          5,
+          12,
+          9,
+          20
+        ],
+        "numeric": {
+          "count": 592.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 11.6166,
+          "median": 12.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          "POINT (692254.4227008519 5332381.142597934)",
+          "POINT (692955.519700867 5334237.321097882)",
+          "POINT (692525.6356008565 5338879.256497903)",
+          "POINT (692858.2836008639 5338425.969697881)",
+          "POINT (693033.7813008676 5339514.015997866)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "standort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 592,
+        "null_count": 0,
+        "examples": [
+          "Herzogstand 6",
+          "Holzhofstraße 4",
+          "Berliner Straße 68 / Ecke Schinkelstraße",
+          "Stengelstraße 2",
+          "Grünecker Straße 14 / Ecke Kohlrauschstraße 19"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "evesid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 591,
+        "null_count": 1,
+        "examples": [
+          "DESWME0137",
+          "DESWME0418",
+          "DESWME0472",
+          "DESWME0473",
+          "DESWME0470"
+        ],
+        "null_rate": 0.0017
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "anzahl_lp_ac",
+      "anzahl_lp_dc",
+      "ladeleistung_kw",
+      "stadtbezirk"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "anzahl_lp_ac"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

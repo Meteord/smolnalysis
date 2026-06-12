@@ -1,0 +1,95 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for WFS (CSV) from Wertstoffhöfe der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Wertstoffhöfe der Landeshauptstadt München",
+    "package_id": "5d8faadb-eae4-48ad-819e-b2b708905250",
+    "package_name": "awm_wertstoffhoefe_opendata",
+    "resource_id": "ce57f0dc-7d5b-4fe5-ac13-8d714b80a079",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "An den Wertstoffhöfen können Sie sperrige Abfälle, Problemstoffe und Grünschnitt in haushaltsüblicher Art und Menge gebührenfrei abgeben. Größere Mengen nehmen gegen eine Gebühr die Wertstoffhöfe Plus in Freimann und Langwied an. Bitte sortieren Sie vor. Damit erleichtern Sie sich die Abgabe vor Ort und verringern die Abladezeit. <br> Weitere Informationen unter <a target=\"_blank\" href=\"www.awm-muenchen.de/entsorgen/wertstoffhoefe\">Wertstoffhöfe München</a>",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Ver- und Entsorgung",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 12,
+    "sampled_rows": 12,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "POINT (693173.1285008703 5340829.946397853)",
+          "POINT (687067.7492007427 5336439.782698238)",
+          "POINT (696966.536700959 5337799.517297583)",
+          "POINT (688934.8186007795 5342011.449498123)",
+          "POINT (700319.0441010434 5333021.4761973135)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "https://www.awm-muenchen.de/wertstoffhof"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "WSH"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "adresse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "Lindberghstraße 8a",
+          "Arnulfstraße 290",
+          "Savitsstraße 79",
+          "Lerchenstraße 13",
+          "Mauerseglerstraße 9"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "link",
+      "name"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

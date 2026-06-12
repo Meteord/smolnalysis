@@ -1,0 +1,249 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of vablock_bezirksteil.bt_nummer in Bezirksteil.",
+  "query_result": {
+    "dataset_title": "Bezirksteil",
+    "package_id": "cef955ef-7242-4e5d-bb5f-697df6bbe224",
+    "package_name": "vablock_bezirksteil_opendata",
+    "resource_id": "ac585973-d7fd-41fa-ac56-04dc385962be",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtbezirksteilen der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 662,
+    "sampled_rows": 662,
+    "column_count": 24,
+    "columns": [
+      {
+        "name": "vablock_bezirksteil.bt_nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 552,
+        "examples": [
+          "25.2",
+          "12.8",
+          "05.3",
+          "04.2",
+          "02.8"
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 1.1,
+          "max": 25.2,
+          "mean": 12.0991,
+          "median": 12.55
+        },
+        "null_rate": 0.8338
+      },
+      {
+        "name": "vablock_bezirksteil.flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 552,
+        "examples": [
+          "3417644.26132839",
+          "522800.17408729",
+          "1027501.41873557",
+          "2280929.38432131",
+          "1192871.78919677"
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 193377.6628,
+          "max": 16404853.4421,
+          "mean": 2880508.299,
+          "median": 2060580.0274
+        },
+        "null_rate": 0.8338
+      },
+      {
+        "name": "bt_nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 552,
+        "examples": [
+          "25.2",
+          "12.8",
+          "05.3",
+          "04.2",
+          "02.8"
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 1.1,
+          "max": 25.2,
+          "mean": 12.0991,
+          "median": 12.55
+        },
+        "null_rate": 0.8338
+      },
+      {
+        "name": "flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 110,
+        "null_count": 552,
+        "examples": [
+          "3417644.26132839",
+          "522800.17408729",
+          "1027501.41873557",
+          "2280929.38432131",
+          "1192871.78919677"
+        ],
+        "numeric": {
+          "count": 110.0,
+          "min": 193377.6628,
+          "max": 16404853.4421,
+          "mean": 2880508.299,
+          "median": 2060580.0274
+        },
+        "null_rate": 0.8338
+      },
+      {
+        "name": "featureMember.vablock_bezirksteil.bt_nummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 661,
+        "examples": [
+          "01.1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.1,
+          "max": 1.1,
+          "mean": 1.1,
+          "median": 1.1
+        },
+        "null_rate": 0.9985
+      },
+      {
+        "name": "featureMember.vablock_bezirksteil.flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 661,
+        "examples": [
+          "531725.47840819"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 531725.4784,
+          "max": 531725.4784,
+          "mean": 531725.4784,
+          "median": 531725.4784
+        },
+        "null_rate": 0.9985
+      },
+      {
+        "name": "vablock_bezirksteil.shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 110,
+        "null_count": 552,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.8338
+      },
+      {
+        "name": "vablock_bezirksteil.shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 110,
+        "null_count": 552,
+        "examples": [
+          "685647.26780072,5335476.67929831 685606.42480071,5335490.82889832 685522.65440071,5335519.84769832 685458.39310071,5335535.58209832 685396.61370071,5335544.4377",
+          "692373.45410085,5340428.06299791 692246.80980085,5340423.64789792 692171.82460085,5340420.71899792 692075.04110085,5340412.89789793 692084.24780085,5340288.8523",
+          "694870.82600091,5334883.71389775 694747.04260091,5334859.36299776 694685.47770091,5334847.32179776 694630.9749009,5334836.82239776 694568.4529009,5334824.847997",
+          "691821.83680084,5339259.12469795 691767.29080084,5339263.31749795 691722.86450084,5339268.31979795 691549.29580084,5339287.89879796 691466.06530083,5339294.3453",
+          "689722.8406008,5335359.37019809 689570.38540079,5335405.3523981 689566.45650079,5335391.8217981 689575.22200079,5335382.4373981 689578.10020079,5335378.4668981"
+        ],
+        "null_rate": 0.8338
+      },
+      {
+        "name": "shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 110,
+        "null_count": 552,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.8338
+      },
+      {
+        "name": "shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 110,
+        "null_count": 552,
+        "examples": [
+          "685647.26780072,5335476.67929831 685606.42480071,5335490.82889832 685522.65440071,5335519.84769832 685458.39310071,5335535.58209832 685396.61370071,5335544.4377",
+          "692373.45410085,5340428.06299791 692246.80980085,5340423.64789792 692171.82460085,5340420.71899792 692075.04110085,5340412.89789793 692084.24780085,5340288.8523",
+          "694870.82600091,5334883.71389775 694747.04260091,5334859.36299776 694685.47770091,5334847.32179776 694630.9749009,5334836.82239776 694568.4529009,5334824.847997",
+          "691821.83680084,5339259.12469795 691767.29080084,5339263.31749795 691722.86450084,5339268.31979795 691549.29580084,5339287.89879796 691466.06530083,5339294.3453",
+          "689722.8406008,5335359.37019809 689570.38540079,5335405.3523981 689566.45650079,5335391.8217981 689575.22200079,5335382.4373981 689578.10020079,5335378.4668981"
+        ],
+        "null_rate": 0.8338
+      },
+      {
+        "name": "featureMember.vablock_bezirksteil.shape.Polygon.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 661,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.9985
+      },
+      {
+        "name": "featureMember.vablock_bezirksteil.shape.Polygon.outerBoundaryIs.LinearRing.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 661,
+        "examples": [
+          "691935.93910084,5334482.15589795 691949.09480084,5334484.29359795 691989.84190085,5334487.11089795 692014.13050085,5334488.17189794 692027.58510085,5334489.7637"
+        ],
+        "null_rate": 0.9985
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vablock_bezirksteil.bt_nummer",
+      "vablock_bezirksteil.flaeche_qm",
+      "bt_nummer",
+      "flaeche_qm"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "vablock_bezirksteil.bt_nummer"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 11,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

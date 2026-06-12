@@ -1,0 +1,150 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Haltestellenliste MVV and compare HstNummer by Ort.",
+  "query_result": {
+    "dataset_title": "Haltestellenliste MVV",
+    "package_id": "27ac7c01-b947-4c94-a7dd-c74fd966c138",
+    "package_name": "haltestellenliste-mvv",
+    "resource_id": "54c11bc1-8909-4a07-b0e1-aa96cd86b058",
+    "resource_name": "MVV Haltestellenliste (CSV, 07.01.2026)",
+    "resource_format": "csv",
+    "description": "Die Liste der Haltestellen wird in der Regel im Turnus von einem Jahr aktualisiert. Die angebotenen Haltestellenlisten stehen unter der Creative Commons Attribution License (cc-by). Als Quellenangabe notieren Sie bitte \"Münchner Verkehrs- und Tarifverbund GmbH (MVV)\" sowie das Datum des Abrufs.",
+    "organization": "Münchner Verkehrs- und Tarifverbund GmbH (MVV)",
+    "tags": [
+      "MVV",
+      "Mobilität",
+      "Stadtratsauftrag",
+      "ÖPNV"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 11061,
+    "sampled_rows": 1000,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "HstNummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 1.0,
+          "max": 1714.0,
+          "mean": 771.646,
+          "median": 789.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "München",
+          "Garching (b München)",
+          "Dornach (b München)",
+          "Haar (b München)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name ohne Ort",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Karlsplatz (Stachus)",
+          "Marienplatz",
+          "Isartor",
+          "Rosenheimer Platz",
+          "Ostbahnhof"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Globale ID",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "de:09162:1",
+          "de:09162:2",
+          "de:09162:3",
+          "de:09162:4",
+          "de:09162:5"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "WGS84 X",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 998,
+        "null_count": 2,
+        "examples": [
+          "48,1393673",
+          "48,1364359",
+          "48,1338939",
+          "48,1285878",
+          "48,1281381"
+        ],
+        "null_rate": 0.002
+      },
+      {
+        "name": "WGS84 Y",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 998,
+        "null_count": 2,
+        "examples": [
+          "11,565396",
+          "11,577658",
+          "11,5828233",
+          "11,5938996",
+          "11,6040685"
+        ],
+        "null_rate": 0.002
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "HstNummer"
+    ],
+    "category_columns": [
+      "Ort"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Ort",
+      "y": "HstNummer"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

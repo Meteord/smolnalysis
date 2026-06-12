@@ -1,0 +1,100 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of drehung in Umweltzone - Verkehrszeichen.",
+  "query_result": {
+    "dataset_title": "Umweltzone - Verkehrszeichen",
+    "package_id": "01e601b2-932d-4450-a389-78e87412cfe5",
+    "package_name": "opendata_miv_umweltzone_vz_point",
+    "resource_id": "43803673-cae8-4b90-830e-0bcbe4f0cae9",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiterten Umweltzone eingeführt. Bei den Transferflächen handelt es sich um Fahrbeziehungen, die aufgrund fehlender Alternativstrecken trotz ihrer Lage in der Umweltzone für Fahrzeuge ohne die erforderlichen Voraussetzungen freigegeben sind. Die weiteren Bestimmungen der Allgemeinverfügung sind zu beachten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 188,
+    "sampled_rows": 188,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "drehung",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 187,
+        "null_count": 1,
+        "examples": [
+          210.65094991,
+          217.50410155,
+          296.39860024,
+          291.33382357,
+          353.81476051
+        ],
+        "numeric": {
+          "count": 187.0,
+          "min": 1.1494,
+          "max": 357.7168,
+          "mean": 183.6564,
+          "median": 167.7657
+        },
+        "null_rate": 0.0053
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 0,
+        "examples": [
+          "POINT (693996.84150089 5336888.647197805)",
+          "POINT (694260.576700896 5336767.950897787)",
+          "POINT (690101.2349008057 5331961.520898071)",
+          "POINT (690098.8172008058 5331957.55639807)",
+          "POINT (693942.34370089 5331653.46869782)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 18,
+        "null_count": 170,
+        "examples": [
+          "Siegenburger Str.",
+          "Dachauer Str.",
+          "Traunsteiner Straße",
+          "Balanstraße",
+          "Hechtseestraße"
+        ],
+        "null_rate": 0.9043
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "drehung"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "drehung"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

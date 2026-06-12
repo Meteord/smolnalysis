@@ -1,0 +1,108 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München.",
+  "query_result": {
+    "dataset_title": "Lage der Höhenfestpunkte innerhalb der Landeshauptstadt München",
+    "package_id": "abb46a62-d39e-40f9-ae87-411209f55fde",
+    "package_name": "vagrund_hoeh_symbol_opendata",
+    "resource_id": "e023a63f-72fb-4ab0-8812-adf05c3e2dbf",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Der Dienst stellt die Lage der Höhenfestpunkte im Hoheitsgebiet der Landeshauptstadt München dar.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "opendata",
+      "planningCadastre"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 4,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          5288,
+          5289,
+          5290,
+          5291,
+          5293
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2278.0,
+          "max": 8687.0,
+          "mean": 4523.975,
+          "median": 2851.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "hfp_nr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "3253",
+          "9826",
+          "5965",
+          "9787",
+          "6931"
+        ],
+        "numeric": {
+          "count": 935.0,
+          "min": 12.0,
+          "max": 13065.0,
+          "mean": 7170.6856,
+          "median": 7424.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOINT ((686558.8760007332 5334165.127498268))",
+          "MULTIPOINT ((686499.014900732 5334221.186198273))",
+          "MULTIPOINT ((686691.0056007358 5334188.804398261))",
+          "MULTIPOINT ((687170.9329007454 5334175.742798236))",
+          "MULTIPOINT ((688038.9919007628 5334258.418398186))"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "hfp_nr"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

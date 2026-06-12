@@ -1,0 +1,285 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Stadtplan der städtischen Trinkbrunnen.",
+  "query_result": {
+    "dataset_title": "Stadtplan der städtischen Trinkbrunnen",
+    "package_id": "7e8484f0-12c2-40be-bd0c-cfe04f63a624",
+    "package_name": "opendata_trinkwasserbrunnen",
+    "resource_id": "7f9d44dd-b3c3-41be-805d-b1d55aaa14d9",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service"
+    ],
+    "groups": [],
+    "row_count": 224,
+    "sampled_rows": 224,
+    "column_count": 381,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 88,
+        "null_count": 136,
+        "examples": [
+          "437c3135-4760-42ef-9bf0-1e06e09a86c0",
+          "basemaps",
+          "WMS",
+          "KR-GSM",
+          "LHM - Kommunalreferat"
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 4326.0,
+          "max": 80335.0,
+          "mean": 50437.8333,
+          "median": 55899.5
+        },
+        "null_rate": 0.6071
+      },
+      {
+        "name": "code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 219,
+        "examples": [
+          "4326",
+          "31468",
+          "25832",
+          "437c3135-4760-42ef-9bf0-1e06e09a86c0",
+          "Landeshauptstadt München"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 4326.0,
+          "max": 31468.0,
+          "mean": 20542.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9777
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 220,
+        "examples": [
+          "11.3379",
+          "11.7938",
+          "48.019",
+          "48.2408"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3379,
+          "max": 48.2408,
+          "mean": 29.8479,
+          "median": 29.9064
+        },
+        "null_rate": 0.9821
+      },
+      {
+        "name": "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 221,
+        "examples": [
+          "4326",
+          "31468",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 4326.0,
+          "max": 31468.0,
+          "mean": 20542.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9866
+      },
+      {
+        "name": "referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 221,
+        "examples": [
+          "4326",
+          "31468",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 4326.0,
+          "max": 31468.0,
+          "mean": 20542.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9866
+      },
+      {
+        "name": "RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 221,
+        "examples": [
+          "4326",
+          "31468",
+          "25832"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 4326.0,
+          "max": 31468.0,
+          "mean": 20542.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9866
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 222,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.5,
+          "median": 0.5
+        },
+        "null_rate": 0.9911
+      },
+      {
+        "name": "referenceSystemInfo.MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "25832"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 25832.0,
+          "max": 25832.0,
+          "mean": 25832.0,
+          "median": 25832.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "dataQualityInfo.DQ_DataQuality.report.DQ_DomainConsistency.result.DQ_ConformanceResult.pass.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 223,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9955
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "code.CharacterString",
+      "Decimal",
+      "MD_ReferenceSystem.referenceSystemIdentifier.RS_Identifier.code.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 369,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

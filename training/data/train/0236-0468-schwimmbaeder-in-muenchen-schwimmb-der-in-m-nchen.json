@@ -1,0 +1,242 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Schwimmbäder in München and compare plz by sauna_vorhanden.",
+  "query_result": {
+    "dataset_title": "Schwimmbäder in München",
+    "package_id": "b9965c5b-3468-4bf8-ab24-79d7aa2e5bc7",
+    "package_name": "schwimmbaeder-in-muenchen",
+    "resource_id": "dd6dd857-3c1c-46cb-a837-ca77b23ae314",
+    "resource_name": "Schwimmbäder in München",
+    "resource_format": "csv",
+    "description": "Der Datensatz enthält die Liste der Münchner Freibäder und Hallenbäder.",
+    "organization": "Stadtwerke München (SWM)",
+    "tags": [
+      "Freibad",
+      "Hallenbad"
+    ],
+    "groups": [],
+    "row_count": 15,
+    "sampled_rows": 15,
+    "column_count": 14,
+    "columns": [
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "80804",
+          "81543",
+          "81925",
+          "80809",
+          "81735"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 80637.0,
+          "max": 81925.0,
+          "mean": 81294.0667,
+          "median": 81379.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "sauna_vorhanden",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "Nein",
+          "Ja"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "48.17686978075710",
+          "48.120126477210100",
+          "48.155012719348500",
+          "48.17421492998310",
+          "48.11680077690360"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 48.0862,
+          "max": 48.1769,
+          "mean": 48.1372,
+          "median": 48.1391
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "11.57086006865340",
+          "11.569647270665900",
+          "11.628601726486500",
+          "11.55163286881500",
+          "11.6363656399762"
+        ],
+        "numeric": {
+          "count": 15.0,
+          "min": 11.4741,
+          "max": 11.6364,
+          "mean": 11.565,
+          "median": 11.5696
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "Georgenschwaige",
+          "Schyrenbad",
+          "Cosimawellenbad",
+          "Olympia-Schwimmhalle",
+          "Michaelibad"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "Belgradstraße 195",
+          "Claude-Lorrain-Straße 24",
+          "Cosimastraße 5",
+          "Coubertinplatz 1",
+          "Heinrich-Wieland-Straße 24"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "Freibad",
+          "Hallenbad, Sauna",
+          "Hallenbad, Sauna, Fitness",
+          "Hallenbad, Freibad und Sauna",
+          "Hallenbad"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "beschreibung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "NA"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "oeffnungszeiten_bad",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "Mo bis Fr: ab 7 Uhr (bis 31. August); Sa, So, Feiertage: ab 9 Uhr; Mo bis Do: ab 10 Uhr (1. bis 30. September); Fr bis So: ab 9 Uhr",
+          "Mo bis So: 7.30 bis 23.00 Uhr",
+          "Mo bis So: 7.00 bis 23.00 Uhr",
+          "Mo bis So: 7.30 bis 23 Uhr"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "oeffnungszeiten_sauna",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "/",
+          "Mo bis So: 9.00 bis 23.00 Uhr",
+          "Mo: 10.00 bis 23.00 Uhr; Di bis So: 8.00 bis 23.00 Uhr",
+          "Mo bis So: 7.30 bis 23 Uhr",
+          "NA"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "informationen",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 15,
+        "null_count": 0,
+        "examples": [
+          "https://www.swm.de/baeder/freibaeder-muenchen/bad-georgenschwaige",
+          "https://www.swm.de/baeder/freibaeder-muenchen/schyrenbad",
+          "https://www.swm.de/baeder/cosimawellenbad",
+          "https://www.swm.de/baeder/olympia-schwimmhalle",
+          "https://www.swm.de/baeder/michaelibad-hallenbad"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "plz"
+    ],
+    "category_columns": [
+      "sauna_vorhanden",
+      "ort",
+      "beschreibung"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "sauna_vorhanden",
+      "y": "plz"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 1,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

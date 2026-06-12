@@ -1,0 +1,207 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata) and compare beeintraechtigung by art.",
+  "query_result": {
+    "dataset_title": "Baustellen - Temporäre Einschränkungen beim Gehen, Fahren und Parken (Opendata)",
+    "package_id": "f58c0902-654c-4f51-9605-c8bc93f05e1e",
+    "package_name": "baustellen_4_weeks_opendata",
+    "resource_id": "51cd3357-e08c-44c4-963a-34779957638b",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Die Servicekarte Baustellen bietet einen Überblick über aktuelle und geplante Baustellen und Haltverbote in München, die innerhalb der kommenden vier Wochen Einschränkungen beim Fahren, Gehen und Parken verursachen. Vorübergehende Haltverbote werden in der Regel im gesamten Stadtgebiet angezeigt, bei Baustellen liegt der Fokus derzeit im Bereich der dicht bebauten und stark frequentierten Stadtviertel der Innenstadt sowie der Hauptverkehrsstraßen im gesamten Stadtgebiet. Außerhalb dieser Bereich",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Service",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 12,
+    "columns": [
+      {
+        "name": "beginn_datum_kombiniert",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "15.06.2026",
+          "18.05.2026",
+          "01.05.2026",
+          "06.07.2026",
+          "07.04.2026"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ende_datum_kombiniert",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "17.07.2026",
+          "19.06.2026",
+          "31.12.2026",
+          "09.11.2026",
+          "01.12.2027"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "beeintraechtigung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 613,
+        "null_count": 387,
+        "examples": [
+          "Vollsperre",
+          "Wegfall einer Fahrspur,Halbseitige SperreGehweg gesperrt,Fahrbahn verengt,In diesem Bereich wird die Fahrbahn vorübergehend auf eine Spur reduziert, um die Gehb",
+          "Radweg verengt,Fahrbahn verengt",
+          "Halbseitige Sperre,Vollsperre,Radweg verengt,Fahrbahn verengt",
+          "Radweg gesperrt"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.387
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Baumaßnahme",
+          "Vorübergehendes Haltverbot"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "MULTIPOLYGON (((688431.7318007688 5343349.87209815, 688551.2136007715 5343326.324098142, 688554.6532007714 5343325.001198142, 688563.6491007718 5343322.09079814",
+          "POLYGON ((692001.1638008463 5333449.812497948, 691999.0471008461 5333446.372897948, 691996.6659008461 5333447.1665979475, 691996.4013008461 5333447.9603979485,",
+          "POLYGON ((684466.5600006917 5343549.1399983615, 684463.3900006916 5343549.409998363, 684435.340000691 5343551.7599983625, 684373.8300006898 5343556.799998366, 6",
+          "MULTIPOLYGON (((692972.2648008666 5337771.179097875, 692991.2796008671 5337743.1849978715, 692990.2874008672 5337742.721997873, 692993.5286008671 5337738.819397",
+          "MULTIPOLYGON (((693076.5529008689 5337737.083497867, 693090.0393008692 5337707.201997865, 693089.7747008691 5337706.1435978655, 693091.0977008694 5337702.174897"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "kontakt_oeffentlich",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 333,
+        "null_count": 667,
+        "examples": [
+          "baustellen@swm.de oder +49 89 2361-2604",
+          "kundendialog@mvg.de"
+        ],
+        "null_rate": 0.667
+      },
+      {
+        "name": "strasse_hausnr",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 986,
+        "null_count": 14,
+        "examples": [
+          "Dülferstraße 75 - 112",
+          "Ohlmüllerstraße 1 - 19",
+          "Karlsfelder Straße 197 - westlich Schwabenbächl",
+          "Dietlindenstraße 12 - 35",
+          "Domagkstr. 1 - 191"
+        ],
+        "null_rate": 0.014
+      },
+      {
+        "name": "beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 753,
+        "null_count": 247,
+        "examples": [
+          "Acht Bäume / Baumgruben",
+          "In der Karlsfelder Straße, im Bereich Hausnummer 197, bis zum Schwabenbächl im Westen, ist heute keine Gehbahn vorhanden. Hir wird eine Gehbahn gebaut und die B",
+          "Sanierung der Fahrbahn zwischen der Lerchenauer Straße und Franz-Sperr-Weg",
+          "STraßenbaumaßnahme",
+          "Herstellen der Anlieferungszufahrt der Helen-Keller-Realschule"
+        ],
+        "null_rate": 0.247
+      },
+      {
+        "name": "betroffene_bereiche",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 653,
+        "null_count": 347,
+        "examples": [
+          "Fahrbahn",
+          "Parkbucht",
+          "GehwegFahrbahn",
+          "Gehweg,Radweg,Fahrbahn",
+          "Gehweg,Radweg,Baumgraben,Parkbucht,Fahrbahn"
+        ],
+        "null_rate": 0.347
+      },
+      {
+        "name": "weitere_info",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 358,
+        "null_count": 642,
+        "examples": [
+          "<a href=\"https://stadt.muenchen.de/news/baustelleninfo-duelferstrasse.html\" target=\"_blank\">https://stadt.muenchen.de/news/baustelleninfo-duelferstrasse.html</a",
+          "<a href=\"https://stadt.muenchen.de/news/baustelleninfo-ohlmuellerstrasse.html\" target=\"_blank\">https://stadt.muenchen.de/news/baustelleninfo-ohlmuellerstrasse.h",
+          "<a href=\"https://stadt.muenchen.de/news/baustelleninfo-osterwaldstrasse.html\" target=\"_blank\">https://stadt.muenchen.de/news/baustelleninfo-osterwaldstrasse.htm",
+          "<a href=\"https://stadt.muenchen.de/news/baustelleninfo-adelgundenstrasse.html\" target=\"_blank\">https://stadt.muenchen.de/news/baustelleninfo-adelgundenstrasse.h",
+          "<a href=\"https://stadt.muenchen.de/news/baustelleninfo-fuerkhofstrasse.html\" target=\"_blank\">https://stadt.muenchen.de/news/baustelleninfo-fuerkhofstrasse.html<"
+        ],
+        "null_rate": 0.642
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "beeintraechtigung"
+    ],
+    "category_columns": [
+      "art",
+      "kontakt_oeffentlich"
+    ],
+    "time_columns": [
+      "beginn_datum_kombiniert",
+      "ende_datum_kombiniert"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "art",
+      "y": "beeintraechtigung"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 2,
+    "source_profile_error": null
+  }
+}

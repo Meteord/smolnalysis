@@ -1,0 +1,124 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of flaeche in Kehrbezirke.",
+  "query_result": {
+    "dataset_title": "Kehrbezirke",
+    "package_id": "2883acd9-6fd9-4475-a79a-a7a7a3ce0a23",
+    "package_name": "kehrbezirke_opendata",
+    "resource_id": "18fc7cb4-ed32-4202-bae8-48f0a115baef",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Bei den Kehrbezirken handelt es sich um Flächen innerhalb Münchens denen jeweils ein*e Bezirksschornsteinfeger*in durch die Regierung von Oberbayern für die hoheitlichen Aufgaben zugewiesen wurde. Dieser/Diese führt alle hoheitlichen Aufgaben in einem Bezirk aus (z.B. Feuerstättenschau, baurechtliche Abnahmen). <a href=\"stadt.muenchen.de/service/info/kaminkehrer/1049919/n0/\" target=\"_blank\">Online Kaminkehrersuche auf Muenchen.de</a>",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Umwelt",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 175,
+    "sampled_rows": 175,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "flaeche",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          257493,
+          88217,
+          145375,
+          9941,
+          24861
+        ],
+        "numeric": {
+          "count": 175.0,
+          "min": 3353.0,
+          "max": 17943014.0,
+          "mean": 1864648.2343,
+          "median": 505856.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "kehrbezirk",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          87,
+          6,
+          29,
+          9,
+          36
+        ],
+        "numeric": {
+          "count": 175.0,
+          "min": 1.0,
+          "max": 99.0,
+          "mean": 44.8571,
+          "median": 39.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((682040.042600648 5339365.352498484, 682044.399200648 5339369.0050984835, 682057.5447006483 5339376.873298483, 682083.2188006487 5339392.241598482, 682",
+          "POLYGON ((680966.1069006292 5337403.875698533, 680967.5796006294 5337399.725498534, 680972.7076006294 5337385.270698532, 680976.3241006295 5337386.039098531, 68",
+          "POLYGON ((683678.1765006782 5335097.087198412, 683675.6043006782 5335088.495998413, 683725.207200679 5335087.913498411, 683717.5247006791 5335063.899998411, 683",
+          "POLYGON ((691381.573800832 5336597.462497981, 691378.5374008319 5336589.996697982, 691486.7561008342 5336546.091297976, 691517.257100835 5336623.620297973, 6915",
+          "POLYGON ((690804.6281008197 5336514.515598018, 690764.3790008188 5336401.557098021, 690955.6379008229 5336327.701398009, 690995.1990008238 5336429.240898006, 69"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "kehr_nr",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 175,
+        "null_count": 0,
+        "examples": [
+          "87/02",
+          "06/03",
+          "29/10",
+          "09/01",
+          "09/02"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "flaeche",
+      "kehrbezirk"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "flaeche"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

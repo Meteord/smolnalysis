@@ -1,0 +1,299 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of vablock_viertel.objectid in Stadtviertel München.",
+  "query_result": {
+    "dataset_title": "Stadtviertel München",
+    "package_id": "6d6cba91-53d1-427e-8b49-3e6750b5e953",
+    "package_name": "vablock_viertel_opendata",
+    "resource_id": "a2f9affd-ba23-4b4e-b886-38fb359eae79",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtvierteln der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": null,
+    "sampled_rows": 1000,
+    "column_count": 33,
+    "columns": [
+      {
+        "name": "vablock_viertel.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "369.0",
+          "458.0",
+          "66.0",
+          "328.0",
+          "298.0"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 3.0,
+          "max": 472.0,
+          "mean": 237.3952,
+          "median": 247.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "vablock_viertel.x",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "690986.5884",
+          "692574.6957",
+          "684887.5808",
+          "696480.1084",
+          "683925.1374"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 677364.7601,
+          "max": 701004.4012,
+          "mean": 690053.918,
+          "median": 690471.8478
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "vablock_viertel.y",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "5338347.8",
+          "5333034.4822",
+          "5343031.2363",
+          "5330191.5225",
+          "5332234.9287"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 5328117.8626,
+          "max": 5344278.6312,
+          "mean": 5335715.4618,
+          "median": 5335534.2278
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "vablock_viertel.flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "583744.3232644",
+          "239345.8658026",
+          "1190290.43550623",
+          "497477.08539691",
+          "439938.17950796"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 28943.2871,
+          "max": 3707477.629,
+          "mean": 659859.3538,
+          "median": 490724.5034
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "369.0",
+          "458.0",
+          "66.0",
+          "328.0",
+          "298.0"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 3.0,
+          "max": 472.0,
+          "mean": 237.3952,
+          "median": 247.0
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "x",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "690986.5884",
+          "692574.6957",
+          "684887.5808",
+          "696480.1084",
+          "683925.1374"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 677364.7601,
+          "max": 701004.4012,
+          "mean": 690053.918,
+          "median": 690471.8478
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "y",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "5338347.8",
+          "5333034.4822",
+          "5343031.2363",
+          "5330191.5225",
+          "5332234.9287"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 5328117.8626,
+          "max": 5344278.6312,
+          "mean": 5335715.4618,
+          "median": 5335534.2278
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 167,
+        "null_count": 833,
+        "examples": [
+          "583744.3232644",
+          "239345.8658026",
+          "1190290.43550623",
+          "497477.08539691",
+          "439938.17950796"
+        ],
+        "numeric": {
+          "count": 167.0,
+          "min": 28943.2871,
+          "max": 3707477.629,
+          "mean": 659859.3538,
+          "median": 490724.5034
+        },
+        "null_rate": 0.833
+      },
+      {
+        "name": "featureMember.vablock_viertel.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "32.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 32.0,
+          "max": 32.0,
+          "mean": 32.0,
+          "median": 32.0
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.vablock_viertel.x",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "686445.6453"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 686445.6453,
+          "max": 686445.6453,
+          "mean": 686445.6453,
+          "median": 686445.6453
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.vablock_viertel.y",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "5334504.4395"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 5334504.4395,
+          "max": 5334504.4395,
+          "mean": 5334504.4395,
+          "median": 5334504.4395
+        },
+        "null_rate": 0.999
+      },
+      {
+        "name": "featureMember.vablock_viertel.flaeche_qm",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 999,
+        "examples": [
+          "513238.52764328"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 513238.5276,
+          "max": 513238.5276,
+          "mean": 513238.5276,
+          "median": 513238.5276
+        },
+        "null_rate": 0.999
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "vablock_viertel.objectid",
+      "vablock_viertel.x",
+      "vablock_viertel.y",
+      "vablock_viertel.flaeche_qm"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "vablock_viertel.objectid"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 20,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

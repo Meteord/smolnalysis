@@ -1,0 +1,235 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Orchester and compare MONAT by MONATSZAHL.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Orchester",
+    "package_id": "7db0a94e-e236-44af-b923-76450dc1b8b3",
+    "package_name": "monatszahlen-orchester",
+    "resource_id": "ce513fbe-6bbc-479c-8d2a-f9ffc2ae0a20",
+    "resource_name": "Monatszahlen Orchester",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Orchester__ beinhaltet die Themen * Konzerte * Besucher/innen * Durchschnittliche Platzausnutzung Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 2048,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 925.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201365.0886,
+          "median": 201402.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "38290",
+          "4295",
+          "4322",
+          "1358"
+        ],
+        "numeric": {
+          "count": 880.0,
+          "min": 0.0,
+          "max": 250768.0,
+          "mean": 12859.4182,
+          "median": 4290.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "4295",
+          "4322",
+          "1358",
+          "1425",
+          "567"
+        ],
+        "numeric": {
+          "count": 888.0,
+          "min": 0.0,
+          "max": 250768.0,
+          "mean": 12536.1419,
+          "median": 4194.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "27.49",
+          "0.63",
+          "-68.58",
+          "4.93"
+        ],
+        "numeric": {
+          "count": 673.0,
+          "min": -100.0,
+          "max": 7501.49,
+          "mean": 112.4623,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-12.77",
+          "-14.32",
+          "291.13",
+          "-74.74"
+        ],
+        "numeric": {
+          "count": 769.0,
+          "min": -100.0,
+          "max": 11076.12,
+          "mean": 83.7707,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "3598",
+          "3866",
+          "3531",
+          "3259"
+        ],
+        "numeric": {
+          "count": 805.0,
+          "min": 0.0,
+          "max": 23094.0,
+          "mean": 7080.636,
+          "median": 3856.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2013.539,
+          "median": 2014.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Besucher*innen",
+          "Konzerte"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Bayerisches Staatsorchester",
+          "Münchner Philharmoniker"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "MONATSZAHL",
+      "AUSPRAEGUNG"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "MONATSZAHL",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

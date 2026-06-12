@@ -1,0 +1,304 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of za3 in Alten- und Servicezentrum.",
+  "query_result": {
+    "dataset_title": "Alten- und Servicezentrum",
+    "package_id": "b4f2a44d-a941-4f8f-b912-7537856d9b5c",
+    "package_name": "bestand_asz_opendata",
+    "resource_id": "f9c48f43-1d13-4acb-8c2f-10dfaaf16cf0",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Standorte und Adressen der Alten-und Service-Zentren.<br> für weitere Informationen siehe <a target=\"_blank\" href=\"stadt.muenchen.de/infos/asz-alten-service-zentrum.html\">Sozialreferat München</a>",
+    "organization": "Sozialreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Opendata",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 104,
+    "sampled_rows": 104,
+    "column_count": 60,
+    "columns": [
+      {
+        "name": "za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "5.0",
+          "22.0",
+          "37.0",
+          "71.0",
+          "61.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 378.0,
+          "mean": 56.0588,
+          "median": 32.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "za2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "1675.0",
+          "2429.0",
+          "806.0",
+          "5092.0",
+          "3994.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 96.0,
+          "max": 6601.0,
+          "mean": 3286.2647,
+          "median": 3386.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zk1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "686822.3199",
+          "687059.5946",
+          "689328.3189",
+          "693119.7422",
+          "694877.8061"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 679717.9227,
+          "max": 700189.7134,
+          "mean": 690356.3096,
+          "median": 690871.26
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zk2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "5339190.5177",
+          "5334291.9966",
+          "5332600.1131",
+          "5332361.6507",
+          "5332906.656"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 5327868.1748,
+          "max": 5343574.2343,
+          "mean": 5335033.8403,
+          "median": 5334410.3389
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zv03",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "1025.0",
+          "2514.0",
+          "623.0",
+          "1712.0",
+          "1612.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 123.0,
+          "max": 2514.0,
+          "mean": 1310.1176,
+          "median": 1337.0
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zt03",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "102.0",
+          "251.0",
+          "62.0",
+          "171.0",
+          "161.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 12.0,
+          "max": 251.0,
+          "mean": 130.7353,
+          "median": 133.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "1.0",
+          "2.0",
+          "3.0",
+          "4.0",
+          "5.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 377.0,
+          "mean": 27.5882,
+          "median": 17.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "lfdnr",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "18.0",
+          "14.0",
+          "28.0",
+          "20.0",
+          "24.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 33.0,
+          "mean": 17.0588,
+          "median": 17.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "zs03",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "10.0",
+          "25.0",
+          "6.0",
+          "17.0",
+          "16.0"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.2059,
+          "median": 13.5
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 34,
+        "null_count": 70,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 34.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.6731
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 103,
+        "examples": [
+          "34"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 34.0,
+          "max": 34.0,
+          "mean": 34.0,
+          "median": 34.0
+        },
+        "null_rate": 0.9904
+      },
+      {
+        "name": "featureMembers.bestand_asz.za3",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 103,
+        "examples": [
+          "34.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 34.0,
+          "max": 34.0,
+          "mean": 34.0,
+          "median": 34.0
+        },
+        "null_rate": 0.9904
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "za3",
+      "za2",
+      "zk1",
+      "zk2"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "za3"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 48,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

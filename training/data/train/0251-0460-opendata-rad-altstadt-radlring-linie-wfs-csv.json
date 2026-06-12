@@ -1,0 +1,166 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Altstadt-Radlring and compare link_pdf by sachstand.",
+  "query_result": {
+    "dataset_title": "Altstadt-Radlring",
+    "package_id": "35a432a2-14b7-4184-852b-d1a6eae4cd1b",
+    "package_name": "opendata_rad_altstadt_radlring_linie",
+    "resource_id": "ad083a63-78fb-46c5-b890-c81647c1c510",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Radlring um die Münchner Altstadt als Ergebnis des erfolgreichen Bürgerbegehrens und Stadtratsbeschlusses zur Stärkung der Radinfrastruktur. Die Ausbaustandards sehen baulich getrennte und durchgehend grün eingefärbte Radwege mit 2,80 Meter Regelbreite vor. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/radentscheid/altstadt-radlring\">muenchenunterwegs.de/radentscheid/altstadt-radlring</a>",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 16,
+    "sampled_rows": 16,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "sachstand",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "Umsetzung erfolgt (BAU)",
+          "Planung beschlossen (MOR)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "LINESTRING (691284.8100008304 5334159.374097993, 691256.61840083 5334148.742697994, 691232.3999008293 5334145.149397996, 691205.0071008287 5334155.195097998, 69",
+          "LINESTRING (692225.3937008507 5335553.315897929, 692234.7359008507 5335525.817197928, 692216.3615008504 5335461.463797928, 692148.912400849 5335225.206797934)",
+          "LINESTRING (692148.912400849 5335225.206797934, 692153.105500849 5335194.423897934, 692179.0605008497 5335155.518997933, 692265.8794008517 5335041.351797927, 69",
+          "LINESTRING (691807.4997008415 5335621.905697955, 691820.1184008418 5335668.4349979535, 691832.7342008419 5335665.224197954, 692122.5261008483 5335586.601097936,",
+          "LINESTRING (692263.1807008516 5334830.1476979265, 692253.6309008515 5334764.144797928, 692235.305500851 5334677.371097929, 692219.6479008506 5334641.341697931,"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "abschnitt_name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "Blumenstraße",
+          "Franz-Josef-Strauß-Ring",
+          "Karl-Scharnagl-Ring",
+          "Von-der-Tann-Straße",
+          "Thomas-Wimmer-Ring"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "link_infoseite",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 16,
+        "null_count": 0,
+        "examples": [
+          "https://muenchenunterwegs.de/radentscheid/altstadt-radlring"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "link_folien",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 11,
+        "examples": [
+          "https://muenchenunterwegs.de/content/855/download/veranstaltung-arri-lenbachplatz-von-dertann-20210616-1.pdf",
+          "https://muenchenunterwegs.de/content/855/download/20240306-rsv-altstadtradlring-brienner-odeonsplatz-ludwigstr-2.pdf"
+        ],
+        "null_rate": 0.6875
+      },
+      {
+        "name": "link_stadtratsbeschluss",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 5,
+        "null_count": 11,
+        "examples": [
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/5555983",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/6995674",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/5825441",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/7095778",
+          "https://risi.muenchen.de/risi/sitzungsvorlage/detail/6467090"
+        ],
+        "null_rate": 0.6875
+      },
+      {
+        "name": "link_pdf",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 16,
+        "null_rate": 1.0
+      },
+      {
+        "name": "link_video",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 16,
+        "null_rate": 1.0
+      },
+      {
+        "name": "abschnitt_beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 10,
+        "null_count": 6,
+        "examples": [
+          "zw. Papa-Schmid-Straße und Sendlinger Tor",
+          "zw. Ludwigstraße und Franz-Josef-Strauß-Ring",
+          "Baustelle Tiefgarage",
+          "zw. Oskar-von-Miller-Ring und Amiraplatz",
+          "zw. Amiraplatz und Odeonsplatz"
+        ],
+        "null_rate": 0.375
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "link_pdf",
+      "link_video"
+    ],
+    "category_columns": [
+      "sachstand",
+      "link_infoseite",
+      "link_folien",
+      "link_stadtratsbeschluss"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "sachstand",
+      "y": "link_pdf"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

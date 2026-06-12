@@ -1,0 +1,272 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of ruhver_mim_abstellverbot_bs.objectid in Abstellverbotszonen für Bikesharing.",
+  "query_result": {
+    "dataset_title": "Abstellverbotszonen für Bikesharing",
+    "package_id": "2e4b1a28-e5c7-4199-b20f-05778ac6e823",
+    "package_name": "ruhver_mim_abstellverbot_bs",
+    "resource_id": "c2b3d59f-6d7d-4d10-9384-0f164ca649cd",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Layer beinhaltet Abstellverbotszonen für das stationsbasierte Bikesharing-System. Innerhalb dieser Bereiche ist eine Mietbeendigung nicht möglich. Temporäre Abstellverbotszonen (bspw. aufgrund von Baustellen oder Veranstaltungen) werden Ocker angezeigt. Das Hinweisfeld gibt Informationen zur Dauer und Art.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 694,
+    "sampled_rows": 694,
+    "column_count": 60,
+    "columns": [
+      {
+        "name": "ruhver_mim_abstellverbot_bs.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 689,
+        "examples": [
+          "7113",
+          "4497",
+          "6097",
+          "3202",
+          "6098"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 3202.0,
+          "max": 7113.0,
+          "mean": 5401.4,
+          "median": 6097.0
+        },
+        "null_rate": 0.9928
+      },
+      {
+        "name": "ruhver_mim_abstellverbot_bs.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 689,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9928
+      },
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 689,
+        "examples": [
+          "7113",
+          "4497",
+          "6097",
+          "3202",
+          "6098"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 3202.0,
+          "max": 7113.0,
+          "mean": 5401.4,
+          "median": 6097.0
+        },
+        "null_rate": 0.9928
+      },
+      {
+        "name": "status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 689,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9928
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellverbot_bs.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 693,
+        "examples": [
+          "6098"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 6098.0,
+          "max": 6098.0,
+          "mean": 6098.0,
+          "median": 6098.0
+        },
+        "null_rate": 0.9986
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellverbot_bs.status",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 693,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9986
+      },
+      {
+        "name": "ruhver_mim_abstellverbot_bs.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 5,
+        "null_count": 689,
+        "examples": [
+          "20260207",
+          "20260504",
+          "20260216",
+          "20260303",
+          "20260610"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 20260207.0,
+          "max": 20260610.0,
+          "mean": 20260368.0,
+          "median": 20260303.0
+        },
+        "null_rate": 0.9928
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 5,
+        "null_count": 689,
+        "examples": [
+          "20260207",
+          "20260504",
+          "20260216",
+          "20260303",
+          "20260610"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 20260207.0,
+          "max": 20260610.0,
+          "mean": 20260368.0,
+          "median": 20260303.0
+        },
+        "null_rate": 0.9928
+      },
+      {
+        "name": "featureMember.ruhver_mim_abstellverbot_bs.bearbeitung_datum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 693,
+        "examples": [
+          "20260610"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 20260610.0,
+          "max": 20260610.0,
+          "mean": 20260610.0,
+          "median": 20260610.0
+        },
+        "null_rate": 0.9986
+      },
+      {
+        "name": "ruhver_mim_abstellverbot_bs.gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 4,
+        "null_count": 690,
+        "examples": [
+          "18.06.2025",
+          "28.11.2025",
+          "06.04.2025"
+        ],
+        "null_rate": 0.9942
+      },
+      {
+        "name": "ruhver_mim_abstellverbot_bs.gueltigkeit_datum_ende",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 4,
+        "null_count": 690,
+        "examples": [
+          "30.12.2026",
+          "31.12.2027",
+          "29.06.2026"
+        ],
+        "null_rate": 0.9942
+      },
+      {
+        "name": "gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 4,
+        "null_count": 690,
+        "examples": [
+          "18.06.2025",
+          "28.11.2025",
+          "06.04.2025"
+        ],
+        "null_rate": 0.9942
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ruhver_mim_abstellverbot_bs.objectid",
+      "ruhver_mim_abstellverbot_bs.status",
+      "objectid",
+      "status"
+    ],
+    "category_columns": [],
+    "time_columns": [
+      "ruhver_mim_abstellverbot_bs.bearbeitung_datum",
+      "bearbeitung_datum",
+      "featureMember.ruhver_mim_abstellverbot_bs.bearbeitung_datum"
+    ],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "ruhver_mim_abstellverbot_bs.objectid"
+    }
+  },
+  "quality_score": 6.5,
+  "cleaning_notes": {
+    "dropped_columns": 44,
+    "dropped_identifier_columns": 4,
+    "source_profile_error": null
+  }
+}

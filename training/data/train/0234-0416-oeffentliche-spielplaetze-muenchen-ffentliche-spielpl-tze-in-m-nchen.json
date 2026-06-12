@@ -1,0 +1,246 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Öffentliche Spielplätze München and compare ADDRESS.ID by Weitere Informationen.",
+  "query_result": {
+    "dataset_title": "Öffentliche Spielplätze München",
+    "package_id": "0760ce3a-fef8-43e4-888f-8cc92fdf56de",
+    "package_name": "oeffentliche-spielplaetze-muenchen",
+    "resource_id": "845ce3bd-ea80-4623-b51d-a30680175c22",
+    "resource_name": "Öffentliche Spielplätze in München",
+    "resource_format": "csv",
+    "description": "Dieser Datensatz beinhaltet Informationen zu öffentlichen Spielplätzen im Stadtgebiet München. Der Datensatz stammt aus dem Einrichtungs- und Dienstleistungsfinder auf muenchen.de.",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Isar",
+      "Spielen",
+      "Stadtratsauftrag"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 824,
+    "sampled_rows": 824,
+    "column_count": 18,
+    "columns": [
+      {
+        "name": "ADDRESS.ID",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          "10100152",
+          "10101944",
+          "10101950",
+          "10101952",
+          "10101956"
+        ],
+        "numeric": {
+          "count": 824.0,
+          "min": 1057921.0,
+          "max": 10413745.0,
+          "mean": 2719476.7464,
+          "median": 1058786.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "SERVICE.ID",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          "10100153",
+          "10227817",
+          "10101951",
+          "10387776",
+          "10387770"
+        ],
+        "numeric": {
+          "count": 824.0,
+          "min": 1057922.0,
+          "max": 10413746.0,
+          "mean": 2990265.2039,
+          "median": 1058809.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Weitere Informationen",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 808,
+        "null_count": 16,
+        "examples": [
+          "https://stadt.muenchen.de/service/info/10139261/n0/ Defekte Spielgeräte oder Verunreinigungen auf öffentlichen Spielplätzen",
+          "https://stadt.muenchen.de/service/info/gartenbau/10139263/ Defekte Spielgeräte oder Verunreinigungen auf öffentlichen Spielplätzen"
+        ],
+        "null_rate": 0.0194
+      },
+      {
+        "name": "ADDRESS.Lat",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          48.1634805031483,
+          48.10476463890477,
+          48.18780274519349,
+          48.13695922485689,
+          48.09565988998664
+        ],
+        "numeric": {
+          "count": 824.0,
+          "min": 48.075,
+          "max": 48.223,
+          "mean": 48.1445,
+          "median": 48.1424
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ADDRESS.Lon",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          11.552318303568878,
+          11.507670995604352,
+          11.516681652475238,
+          11.507236017551785,
+          11.664220967035789
+        ],
+        "numeric": {
+          "count": 824.0,
+          "min": 11.3995,
+          "max": 11.7117,
+          "mean": 11.5598,
+          "median": 11.5629
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ADDRESS.Kfz-Parkplatze fur Behinderte",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ADDRESS.Bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          "Spielplatz \"Schwere-Reiter-Str. Ecke Ackermannstr.\"",
+          "Spielplatz \"Sendlinger Wald (Südpark), Fitnessparcours\"",
+          "Fitness Parcours \" Merseburger Straße \"",
+          "Spielplatz \"Hogenbergplatz, Fitnessparcours\"",
+          "Fitness Parcours \" Oskar-Maria-Graf-Ring \""
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ADDRESS.Hilfen fur Gehbehinderte",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ADDRESS.Hilfen fur Sehbehinderte",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ADDRESS.Hilfen fur gehorlose und schwerhorige Menschen",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          "Nein"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "SERVICE.Bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 824,
+        "null_count": 0,
+        "examples": [
+          "Spielplatz \"Schwere-Reiter-Str. Ecke Ackermannstr.\"",
+          "Spielplatz",
+          "Service Spielplatz",
+          "Spielplatz \"Goteboldstraße, Dirtbike\"",
+          "Spielplatz \"Thelottstraße\""
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Altersgruppe",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 718,
+        "null_count": 106,
+        "examples": [
+          "Jugendliche",
+          "Jugendliche Erwachsene",
+          "SchulkinderErwachsene",
+          "Schulkinder",
+          "Kleinkinder Schulkinder"
+        ],
+        "null_rate": 0.1286
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "ADDRESS.ID",
+      "SERVICE.ID"
+    ],
+    "category_columns": [
+      "Weitere Informationen",
+      "ADDRESS.Hilfen fur Gehbehinderte",
+      "ADDRESS.Hilfen fur Sehbehinderte",
+      "ADDRESS.Hilfen fur gehorlose und schwerhorige Menschen"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Weitere Informationen",
+      "y": "ADDRESS.ID"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 5,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

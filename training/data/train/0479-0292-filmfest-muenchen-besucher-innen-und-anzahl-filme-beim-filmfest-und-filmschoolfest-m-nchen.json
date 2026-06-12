@@ -1,0 +1,158 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Filmfest München and compare Besucher*innen by Veranstaltung.",
+  "query_result": {
+    "dataset_title": "Filmfest München",
+    "package_id": "75466f28-eebd-4a7c-908b-5dd6e2bd6a40",
+    "package_name": "filmfest-muenchen",
+    "resource_id": "c9ab1a15-ce3c-44f9-8492-a5a2dcc4cbcd",
+    "resource_name": "Besucher*innen und Anzahl Filme beim Filmfest und Filmschoolfest München",
+    "resource_format": "csv",
+    "description": "Das Filmfest München ist eines der größten Filmfestivals in Deutschland. Es findet jährlich Ende Juni in München statt und ist Deutschlands bedeutendstes Sommer-Filmfestival. Das Filmschoolfest Munich findet jährlich im November in München statt und bietet eine Plattform für junge Filmschaffende. Gezeigt wird eine Auswahl der aktuell besten Nachwuchsfilme (Kurzfilme) aus aller Welt. Der Datensatz Filmfest beinhaltet die Anzahl der Besucher*innen und der Filme der verschiedenen Veranstaltungen de",
+    "organization": "Internationale Münchner Filmwochen GmbH",
+    "tags": [
+      "Film",
+      "Kino",
+      "Kultur",
+      "Stadtratsauftrag",
+      "Veranstaltungen"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 10,
+    "sampled_rows": 10,
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "Besucher*innen",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          55565,
+          3767,
+          49461,
+          3411,
+          29864
+        ],
+        "numeric": {
+          "count": 10.0,
+          "min": 2466.0,
+          "max": 72214.0,
+          "mean": 23408.2,
+          "median": 7483.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Filme",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          147,
+          59,
+          118,
+          56,
+          68
+        ],
+        "numeric": {
+          "count": 10.0,
+          "min": 8.0,
+          "max": 227.0,
+          "mean": 88.2,
+          "median": 68.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          "2023",
+          "2022",
+          "2021",
+          "2020",
+          "2019"
+        ],
+        "numeric": {
+          "count": 10.0,
+          "min": 2019.0,
+          "max": 2023.0,
+          "mean": 2021.0,
+          "median": 2021.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Veranstaltung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 10,
+        "null_count": 0,
+        "examples": [
+          "Filmfest München (FFM)",
+          "Filmschoolfest Munich (FSF)",
+          "Filmfest München Pop-Up"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Feste Mitarbeiter*innen FFM und FSF",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 5,
+        "examples": [
+          13.0,
+          14.0,
+          12.0
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 12.0,
+          "max": 14.0,
+          "mean": 13.0,
+          "median": 13.0
+        },
+        "null_rate": 0.5
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Besucher*innen",
+      "Filme",
+      "Feste Mitarbeiter*innen FFM und FSF"
+    ],
+    "category_columns": [
+      "Veranstaltung"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Veranstaltung",
+      "y": "Besucher*innen"
+    }
+  },
+  "quality_score": 7.75,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

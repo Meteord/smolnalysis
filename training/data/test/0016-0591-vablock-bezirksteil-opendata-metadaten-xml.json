@@ -1,0 +1,275 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of CharacterString in Bezirksteil.",
+  "query_result": {
+    "dataset_title": "Bezirksteil",
+    "package_id": "cef955ef-7242-4e5d-bb5f-697df6bbe224",
+    "package_name": "vablock_bezirksteil_opendata",
+    "resource_id": "52e6a919-6ca2-43d3-af09-1b7faa355ee9",
+    "resource_name": "Metadaten (XML)",
+    "resource_format": "xml",
+    "description": "Flächenhafte Darstellung der Verwaltungsgrenzen von den Stadtbezirksteilen der Landeshauptstadt München. Die Verwaltungsflächen können bei allen Darstellungen, Übersichten, Auswertungen und Planungen verwendet werden, die sich auf den Bereich einer administrativen Gebietseinheit (Gebietskörperschaften) beziehen.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Planungsunterlagen",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 205,
+    "sampled_rows": 205,
+    "column_count": 376,
+    "columns": [
+      {
+        "name": "CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 83,
+        "null_count": 122,
+        "examples": [
+          "a62c0dd8-90a2-4c7f-a8b6-1c923e8b2084",
+          "WMS",
+          "GeodatenService München",
+          "Landeshauptstadt München - Kommunalreferat",
+          "+49 89 233-722269"
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 1.0,
+          "max": 80335.0,
+          "mean": 48201.4,
+          "median": 80335.0
+        },
+        "null_rate": 0.5951
+      },
+      {
+        "name": "Decimal",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 4,
+        "null_count": 201,
+        "examples": [
+          "11.3267",
+          "11.7319",
+          "48.0171",
+          "48.2436"
+        ],
+        "numeric": {
+          "count": 4.0,
+          "min": 11.3267,
+          "max": 48.2436,
+          "mean": 29.8298,
+          "median": 29.8745
+        },
+        "null_rate": 0.9805
+      },
+      {
+        "name": "Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 203,
+        "examples": [
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.5,
+          "median": 0.5
+        },
+        "null_rate": 0.9902
+      },
+      {
+        "name": "MD_Format.version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 203,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9902
+      },
+      {
+        "name": "version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 2,
+        "null_count": 203,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 2.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9902
+      },
+      {
+        "name": "identificationInfo.SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "distributionInfo.MD_Distribution.distributionFormat.MD_Format.version.CharacterString",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "01"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "dataQualityInfo.DQ_DataQuality.report.DQ_DomainConsistency.result.DQ_ConformanceResult.pass.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "SV_ServiceIdentification.extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "extent.EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "EX_Extent.geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      },
+      {
+        "name": "geographicElement.EX_GeographicBoundingBox.extentTypeCode.Boolean",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 204,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9951
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "CharacterString",
+      "Decimal",
+      "Boolean",
+      "MD_Format.version.CharacterString"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "CharacterString"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 363,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

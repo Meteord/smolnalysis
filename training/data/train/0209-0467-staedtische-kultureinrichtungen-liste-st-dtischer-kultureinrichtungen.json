@@ -1,0 +1,210 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Städtische Kultureinrichtungen and compare hausnummer by ort.",
+  "query_result": {
+    "dataset_title": "Städtische Kultureinrichtungen",
+    "package_id": "a174cc7f-0068-4f11-99eb-46e0f795d680",
+    "package_name": "staedtische-kultureinrichtungen",
+    "resource_id": "dcbc1a26-d0fe-4dd6-8fac-3d920e7b61e3",
+    "resource_name": "Liste städtischer Kultureinrichtungen",
+    "resource_format": "csv",
+    "description": "Informationen zu Kultureinrichtungen des Kulturreferates der Landeshauptstadt München, insbesondere Adressdaten und Geokoordinaten.",
+    "organization": "Kulturreferat",
+    "tags": [
+      "Kultur",
+      "Kultureinrichtungen"
+    ],
+    "groups": [],
+    "row_count": 53,
+    "sampled_rows": 53,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "hausnummer",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          "4",
+          "156",
+          "35",
+          "123",
+          "13"
+        ],
+        "numeric": {
+          "count": 48.0,
+          "min": 1.0,
+          "max": 161.0,
+          "mean": 32.5208,
+          "median": 14.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "plz",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          "80331",
+          "81925",
+          "81476",
+          "81667",
+          "80336"
+        ],
+        "numeric": {
+          "count": 53.0,
+          "min": 80331.0,
+          "max": 81927.0,
+          "mean": 81014.8679,
+          "median": 80939.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          48.13720681785231,
+          48.16582847896017,
+          48.093962206138485,
+          48.12603474173453,
+          48.13719570252001
+        ],
+        "numeric": {
+          "count": 53.0,
+          "min": 48.094,
+          "max": 48.2136,
+          "mean": 48.1426,
+          "median": 48.1377
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          11.577536728694184,
+          11.623468431626865,
+          11.499358754390988,
+          11.598637240013225,
+          11.562623599822011
+        ],
+        "numeric": {
+          "count": 53.0,
+          "min": 11.4134,
+          "max": 11.6913,
+          "mean": 11.5631,
+          "median": 11.5754
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          "Artothek & Bildersaal",
+          "Bürgerpark Oberföhring",
+          "Bürgersaal Fürstenried",
+          "Bürgersaal Haidhausen Theater Drehleier",
+          "Deutsches Theater München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          "Kunstraum",
+          "Stadtteilkulturzentrum",
+          "Theater",
+          "Museum",
+          "Orchester"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "strasse",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          "Burgstraße",
+          "Oberföhringer Straße",
+          "Züricher Straße",
+          "Rosenheimer Straße",
+          "Schwanthaler Straße"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ort",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          "München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 53,
+        "null_count": 0,
+        "examples": [
+          "https://artothek-muenchen.de",
+          "https://www.vereinsgemeinschaft29.de",
+          "https://buergersaal-fuerstenried.de",
+          "https://www.theater-drehleier.de",
+          "https://www.deutsches-theater.de"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "hausnummer",
+      "plz"
+    ],
+    "category_columns": [
+      "ort"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "ort",
+      "y": "hausnummer"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

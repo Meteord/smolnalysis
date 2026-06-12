@@ -1,0 +1,210 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Indikatorenatlas: Arbeitsmarkt - (Regel-)Leistungsberechtigte erwerbsfähig and compare Indikatorwert by Auspragung.",
+  "query_result": {
+    "dataset_title": "Indikatorenatlas: Arbeitsmarkt - (Regel-)Leistungsberechtigte erwerbsfähig",
+    "package_id": "12df319c-5081-4a89-87d4-8f335f02e081",
+    "package_name": "indikatorenatlas-arbeitsmarkt-regel-leistungsberechtigte-erwerbsfaehig",
+    "resource_id": "9b69e333-dd34-4151-b2a5-b1799a8589f9",
+    "resource_name": "(Regel-)Leistungsberechtigte - erwerbsfähig",
+    "resource_format": "csv",
+    "description": "Anteil der Arbeitslosengeld II-Empfänger\\*innen (ALG II) bzw. erwerbsfähigen (Regel-)Leistungsberechtigten nach SGB II der entsprechenden Kategorie an allen Leistungsempfänger\\*innen bzw. (Regel-)Leistungsberechtigten nach SGB II (ALG II- und Sozialgeld-Empfänger\\*innen bzw. erwerbsfähige und nichterwerbsfähige (Regel-)Leistungsberechtigte) der entsprechenden Kategorie in Prozent. **Bitte beachten Sie die Datenbeschreibungen: [Informationen zum Indikatorenatlas](https://opendata.muenchen.de/page",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Arbeitsmarkt",
+      "Indikatorenatlas"
+    ],
+    "groups": [
+      "econ"
+    ],
+    "row_count": 1976,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "Indikatorwert",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          40.7,
+          45.8,
+          44.5,
+          42.1,
+          52.1
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 22.2,
+          "max": 69.9,
+          "mean": 46.3202,
+          "median": 47.05
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 1",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "21267.5",
+          "153.3",
+          "551.5",
+          "509",
+          "599.8"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 116.3,
+          "max": 30980.0,
+          "mean": 1822.4894,
+          "median": 907.4
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Basiswert 2",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "52247.5",
+          "334.8",
+          "1240",
+          "1209",
+          "1152.3"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 245.3,
+          "max": 55111.0,
+          "mean": 4014.0027,
+          "median": 1976.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Jahr",
+        "dtype": "int64",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          2024,
+          2023,
+          2022,
+          2021,
+          2020
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2006.0,
+          "max": 2024.0,
+          "mean": 2015.108,
+          "median": 2015.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "Auspragung",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "deutsch",
+          "männlich",
+          "nichtdeutsch"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "(Regel-)Leistungsberechtigte (erwerbsfähig) (deutsch)",
+          "(Regel-)Leistungsberechtigte (erwerbsfähig) (männlich)",
+          "(Regel-)Leistungsberechtigte (erwerbsfähig) (nichtdeutsch)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Indikator",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "(Regel-)Leistungsberechtigte - erwerbsfähig"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Raumbezug",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Stadt München",
+          "01 Altstadt - Lehel",
+          "02 Ludwigsvorstadt - Isarvorstadt",
+          "03 Maxvorstadt",
+          "04 Schwabing - West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Name Basiswert 2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "(Regel-)Leistungsberechtigte (erwerbsfähig) (insgesamt)"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "Indikatorwert",
+      "Basiswert 1",
+      "Basiswert 2"
+    ],
+    "category_columns": [
+      "Auspragung",
+      "Name Basiswert 1",
+      "Indikator",
+      "Name Basiswert 2"
+    ],
+    "time_columns": [
+      "Jahr"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "Auspragung",
+      "y": "Indikatorwert"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

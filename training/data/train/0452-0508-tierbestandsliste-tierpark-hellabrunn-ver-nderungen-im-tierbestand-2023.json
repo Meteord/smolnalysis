@@ -1,0 +1,313 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of bestand2022_m in Tierbestandsliste Tierpark Hellabrunn.",
+  "query_result": {
+    "dataset_title": "Tierbestandsliste Tierpark Hellabrunn",
+    "package_id": "9818ae8c-b902-428b-91a2-9cba54aa6e22",
+    "package_name": "tierbestandsliste-tierpark-hellabrunn",
+    "resource_id": "28465686-d73a-4bec-8bf0-9b415be7f96d",
+    "resource_name": "Veränderungen im Tierbestand 2023",
+    "resource_format": "csv",
+    "description": "Der Münchner Tierpark Hellabrunn pflegt knapp 500 Tierarten, welche in dem Datensatz aufgeführt sind. Wirbellose Tiere und Fische sind dabei in gesonderten Dateien aufgelistet. Mehr Informationen: https://www.hellabrunn.de/tiere/tierwelt-von-a-bis-z",
+    "organization": "Münchener Tierpark Hellabrunn AG",
+    "tags": [
+      "Tierpark",
+      "Zoo"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 190,
+    "sampled_rows": 190,
+    "column_count": 23,
+    "columns": [
+      {
+        "name": "bestand2022_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "2",
+          "1",
+          "7",
+          "3",
+          "4"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 48.0,
+          "mean": 2.4586,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bestand2022_w",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "5",
+          "2",
+          "1",
+          "0"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 48.0,
+          "mean": 3.0166,
+          "median": 1.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bestand2022_u",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "2",
+          "1",
+          "4",
+          "X"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 20.0,
+          "mean": 0.5525,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zugang_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "0",
+          "3",
+          "2",
+          "X"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 0.1547,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zugang_w",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "1",
+          "4",
+          "10",
+          "2"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 10.0,
+          "mean": 0.1878,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "zugang_u",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "X"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "geboren_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "2",
+          "1",
+          "6",
+          "7"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 45.0,
+          "mean": 0.6243,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "geboren_w",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "2",
+          "3",
+          "0",
+          "1",
+          "30"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 38.0,
+          "mean": 0.7459,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "geboren_u",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "1",
+          "9",
+          "5",
+          "150"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 150.0,
+          "mean": 2.0829,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gestorben_m",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "0",
+          "4",
+          "5",
+          "45"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 45.0,
+          "mean": 0.779,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gestorben_w",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "2",
+          "1",
+          "0",
+          "20",
+          "30"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 30.0,
+          "mean": 0.5856,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "gestorben_u",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 190,
+        "null_count": 0,
+        "examples": [
+          "0",
+          "9",
+          "5",
+          "1",
+          "150"
+        ],
+        "numeric": {
+          "count": 181.0,
+          "min": 0.0,
+          "max": 150.0,
+          "mean": 1.8122,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "bestand2022_m",
+      "bestand2022_w",
+      "bestand2022_u",
+      "zugang_m"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "bestand2022_m"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 10,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

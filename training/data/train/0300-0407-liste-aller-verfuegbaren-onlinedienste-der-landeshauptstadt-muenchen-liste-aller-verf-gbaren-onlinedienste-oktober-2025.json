@@ -1,0 +1,217 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Liste aller verfügbaren Onlinedienste der Landeshauptstadt München and compare leika-key by ars-name.",
+  "query_result": {
+    "dataset_title": "Liste aller verfügbaren Onlinedienste der Landeshauptstadt München",
+    "package_id": "d818c8c6-6612-480e-9ca9-68dd56995805",
+    "package_name": "liste-aller-verfuegbaren-onlinedienste-der-landeshauptstadt-muenchen",
+    "resource_id": "844c4ba4-a36f-4e86-8804-72186bcffdaa",
+    "resource_name": "Liste aller verfügbaren Onlinedienste Oktober 2025",
+    "resource_format": "csv",
+    "description": "Die Daten bilden die verfügbaren Onlinedienste für die Bürger*innen und Unternehmen der Landeshauptstadt München ab. Hierin enthalten sind die jeweiligen Links auf den Onlinedienst, dort finden Sie weitere Rahmenbedingungen für die Nutzung des Dienstes und den Umfang der möglichen Onlinebeantragung. Das Angebot wird sukzessive erweitert. Weitere Informationen und Übersichten finden Sie auch im Bayernportal: [Landeshauptstadt München, Kreisfreie Stadt - BayernPortal](https://www.freistaat.bayern/",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [
+      "E-Government"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 465,
+    "sampled_rows": 465,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "leika-key",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 465,
+        "null_count": 0,
+        "examples": [
+          "77000000000316",
+          "77000000007620",
+          "77000000008896",
+          "99000000000114",
+          "99000000000372"
+        ],
+        "numeric": {
+          "count": 465.0,
+          "min": 77000000000316.0,
+          "max": 99400236017000.0,
+          "mean": 98908658608423.98,
+          "median": 99027003026000.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ars",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 465,
+        "null_count": 0,
+        "examples": [
+          "91620000000"
+        ],
+        "numeric": {
+          "count": 465.0,
+          "min": 91620000000.0,
+          "max": 91620000000.0,
+          "mean": 91620000000.0,
+          "median": 91620000000.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bundesland_kennung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 465,
+        "null_count": 0,
+        "examples": [
+          "9"
+        ],
+        "numeric": {
+          "count": 465.0,
+          "min": 9.0,
+          "max": 9.0,
+          "mean": 9.0,
+          "median": 9.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ozgid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 425,
+        "null_count": 40,
+        "examples": [
+          "10110",
+          "10274",
+          "10608",
+          "10183",
+          "10628"
+        ],
+        "numeric": {
+          "count": 425.0,
+          "min": 10001.0,
+          "max": 10776.0,
+          "mean": 10295.0871,
+          "median": 10255.0
+        },
+        "null_rate": 0.086
+      },
+      {
+        "name": "leika-name",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 465,
+        "null_count": 0,
+        "examples": [
+          "Abfall; Entsorgung",
+          "Vergabe im kommunalen Bereich; Informationen zur Vergabe von Aufträgen",
+          "Aufenthaltserlaubnis; Beantragung bei Erwerbstätigkeit im Bundesgebiet",
+          "Sozialmietwohnungen; Anzeigen durch Vermieter",
+          "Maulkorbzwang und Anleinpflicht; Anordnung"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ars-name",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 465,
+        "null_count": 0,
+        "examples": [
+          "München, Landeshauptstadt"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bundesland",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 465,
+        "null_count": 0,
+        "examples": [
+          "Bayern"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "url",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 465,
+        "null_count": 0,
+        "examples": [
+          "https://www.awm-muenchen.de/entsorgen/formulare/fuer-privathaushalte-und-hausverwaltungen/tonnen-an-und-ummelden-privat-und-hausverwaltung",
+          "https://service.muenchen.de/intelliform/forms/01/08/08/stramue/index",
+          "https://service.muenchen.de/intelliform/forms/01/02/02/abhkontakt/index",
+          "https://www.muenchen.de/dienstleistungsfinder/muenchen/10139260/",
+          "https://stadt.muenchen.de/service/info/hauptabteilung-i-sicherheit-und-ordnung-praevention/1083020/"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "leika-bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 430,
+        "null_count": 35,
+        "examples": [
+          "Anmeldung Abfallbehälter",
+          "Nationales Visum Erteilung Chancenkarte",
+          "Papierabfälle Entsorgung",
+          "Bioabfälle Entsorgung",
+          "Restabfälle Entsorgung"
+        ],
+        "null_rate": 0.0753
+      },
+      {
+        "name": "ozg-bezeichnung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 425,
+        "null_count": 40,
+        "examples": [
+          "Abfallentsorgung",
+          "Visaerteilung (Schengen-Visum/D-Visum)",
+          "Leistungen zum Infektionsschutz",
+          "Impfung",
+          "Aktivierung und berufliche Eingliederung"
+        ],
+        "null_rate": 0.086
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "leika-key",
+      "ars",
+      "bundesland_kennung",
+      "ozgid"
+    ],
+    "category_columns": [
+      "ars-name",
+      "bundesland"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "ars-name",
+      "y": "leika-key"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

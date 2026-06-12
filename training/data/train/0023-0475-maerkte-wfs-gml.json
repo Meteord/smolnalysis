@@ -1,0 +1,267 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Märkte der Landeshauptstadt München and compare maerkte.ebene by maerkte.name.",
+  "query_result": {
+    "dataset_title": "Märkte der Landeshauptstadt München",
+    "package_id": "04eda73a-173f-43c4-abb4-3b3166c3f356",
+    "package_name": "maerkte",
+    "resource_id": "56bb7496-a269-4626-97d3-448468b56538",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die großen Münchner Märkte und Wochenmärkte. Neben dem Viktualienmarkt gibt es in nahezu jedem Münchner Stadtteil Wochenmärkte, zudem bieten verschiedene Bauernmärkte in München eine ganze Palette an Produkten aus der Region an. Der Dienst wird als WMS und WFS angeboten.",
+    "organization": " GeodatenService München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Ver- und Entsorgung",
+      "opendata"
+    ],
+    "groups": [],
+    "row_count": 218,
+    "sampled_rows": 218,
+    "column_count": 46,
+    "columns": [
+      {
+        "name": "maerkte.ebene",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 164,
+        "examples": [
+          "309",
+          "302",
+          "307",
+          "304"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 302.0,
+          "max": 309.0,
+          "mean": 307.0556,
+          "median": 309.0
+        },
+        "null_rate": 0.7523
+      },
+      {
+        "name": "maerkte.faktor",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 164,
+        "examples": [
+          "1.0"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.7523
+      },
+      {
+        "name": "ebene",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 164,
+        "examples": [
+          "309",
+          "302",
+          "307",
+          "304"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 302.0,
+          "max": 309.0,
+          "mean": 307.0556,
+          "median": 309.0
+        },
+        "null_rate": 0.7523
+      },
+      {
+        "name": "faktor",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 54,
+        "null_count": 164,
+        "examples": [
+          "1.0"
+        ],
+        "numeric": {
+          "count": 54.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.7523
+      },
+      {
+        "name": "maerkte.winkel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 168,
+        "examples": [
+          "90.0"
+        ],
+        "numeric": {
+          "count": 50.0,
+          "min": 90.0,
+          "max": 90.0,
+          "mean": 90.0,
+          "median": 90.0
+        },
+        "null_rate": 0.7706
+      },
+      {
+        "name": "winkel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 50,
+        "null_count": 168,
+        "examples": [
+          "90.0"
+        ],
+        "numeric": {
+          "count": 50.0,
+          "min": 90.0,
+          "max": 90.0,
+          "mean": 90.0,
+          "median": 90.0
+        },
+        "null_rate": 0.7706
+      },
+      {
+        "name": "featureMember.maerkte.ebene",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 217,
+        "examples": [
+          "309"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 309.0,
+          "max": 309.0,
+          "mean": 309.0,
+          "median": 309.0
+        },
+        "null_rate": 0.9954
+      },
+      {
+        "name": "featureMember.maerkte.faktor",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 217,
+        "examples": [
+          "1.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9954
+      },
+      {
+        "name": "featureMember.maerkte.winkel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 217,
+        "examples": [
+          "90.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 90.0,
+          "max": 90.0,
+          "mean": 90.0,
+          "median": 90.0
+        },
+        "null_rate": 0.9954
+      },
+      {
+        "name": "maerkte.name",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 54,
+        "null_count": 164,
+        "examples": [
+          "WMARKT",
+          "BMARKT",
+          "MARKT",
+          "GMARKT"
+        ],
+        "null_rate": 0.7523
+      },
+      {
+        "name": "maerkte.link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 54,
+        "null_count": 164,
+        "examples": [
+          "https://maerkte.muenchen.swm.de/unsere-maerkte/wochenmaerkte.html",
+          "https://www.viktualienmarkt-muenchen.de/schrannenhalle/",
+          "https://maerkte-muenchen.de/",
+          "https://de.wikipedia.org/wiki/Schlacht-_und_Viehhof_M%C3%BCnchen",
+          "https://maerkte-muenchen.de/unsere-maerkte/wochenmaerkte.html"
+        ],
+        "null_rate": 0.7523
+      },
+      {
+        "name": "maerkte.rubrik",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 54,
+        "null_count": 164,
+        "examples": [
+          "Wochenmarkt",
+          "Bauernmarkt",
+          "Ständiger Markt",
+          "Großmarkt"
+        ],
+        "null_rate": 0.7523
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "maerkte.ebene",
+      "maerkte.faktor",
+      "ebene",
+      "faktor"
+    ],
+    "category_columns": [
+      "maerkte.name",
+      "maerkte.link",
+      "maerkte.rubrik"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "maerkte.name",
+      "y": "maerkte.ebene"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 33,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

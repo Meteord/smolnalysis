@@ -1,0 +1,98 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Software bei der LHM from Munich IT Dashboard.",
+  "query_result": {
+    "dataset_title": "Munich IT Dashboard",
+    "package_id": "faedfa85-a3f9-45dc-ac62-d90f2b5923c5",
+    "package_name": "munich-it-dashboard",
+    "resource_id": "5bf4ea36-f65c-4808-bc3a-4a7a8d48dc92",
+    "resource_name": "Software bei der LHM",
+    "resource_format": "csv",
+    "description": "Die hier zum Download bereit gestellten offenen Daten zur Software bei der LHM gehen auf den [Stadtratsantrag Nr. 20-26 / A 00568 „Munich IT-Dashboard“](https://risi.muenchen.de/risi/sitzungsvorlage/detail/6554320?dokument=v6576030) zurück. Die Umsetzung des Antrags richtet sich nach den beiden Beschlüssen * [20-26 / V 03151 „Munich IT Dashboard – Einsatz von Software bei der LHM öffentlich darstellen“](https://risi.muenchen.de/risi/sitzungsvorlage/detail/6554320) und * [20-26 / V 04809 „Munich",
+    "organization": "IT-Referat der Landeshauptstadt München",
+    "tags": [],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 85,
+    "sampled_rows": 85,
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "Lizenzmodell",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 85,
+        "null_count": 0,
+        "examples": [
+          "open source",
+          "open core",
+          "CE/EE-Modell"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Anwendung(skomponent)en",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 85,
+        "null_count": 0,
+        "examples": [
+          "7-Zip",
+          "Mark-a-spot",
+          "Apache ant",
+          "Apache Directory Studio",
+          "Apache JMeter"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Beschreibung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 85,
+        "null_count": 0,
+        "examples": [
+          "7-Zip ist ein Datenkompressionsprogramm mit einer hohen Kompressionsrate.",
+          "Anliegenmanagement ist eine transparente, online verfügbare Kommunikationsschnittstelle zwischen Bürger*innen und Stadtverwaltung dar. Hier können Anliegen zu V",
+          "Apache Ant ist eine Java-Bibliothek und ein Befehlszeilentool, dessen Aufgabe es ist, in Build-Dateien beschriebene Prozesse als voneinander abhängige Ziele und",
+          "Entwicklungsumgebung für Verzeichnisdienste (LDAP).",
+          "Die Apache JMeter™-Anwendung ist Open-Source-Software, die entwickelt wurde, um Funktionsverhalten zu testen und die Leistung zu messen (Webanwendungen, weitere"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "Produkt-Link",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 85,
+        "null_count": 0,
+        "examples": [
+          "https://www.7-zip.de/",
+          "https://markaspot.de/de/",
+          "https://ant.apache.org/",
+          "https://directory.apache.org/studio/",
+          "https://jmeter.apache.org/"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "Lizenzmodell"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

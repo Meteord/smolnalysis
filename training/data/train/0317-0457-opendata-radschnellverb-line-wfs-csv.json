@@ -1,0 +1,168 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Radschnellverbindungen and compare link_folien by link_infoseite.",
+  "query_result": {
+    "dataset_title": "Radschnellverbindungen",
+    "package_id": "eb5c734c-f680-4b88-8e55-0c765ab801e7",
+    "package_name": "opendata_radschnellverb_line",
+    "resource_id": "2e4d46d6-b2eb-451c-bf2c-10112a4b033a",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Gezeigt sind die beschlossenen Radschnellverbindungen innerhalb des Münchner Stadtgebiets. Radschnellverbindungen sind ausreichend breite Verbindungen einer Kommune oder einer Stadt-Umland-Region, die möglichst direkt Ziele über größere Entfernungen verbinden und durchgängig ein sicheres und attraktives Befahren mit hohen Reisegeschwindigkeiten ermöglichen. Mehr Informationen erhalten Sie hier: <a target=\"_blank\" href=\"muenchenunterwegs.de/information/radschnellverbindungen\">muenchenunterwegs.de",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Planungsunterlagen Kataster",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 12,
+    "sampled_rows": 12,
+    "column_count": 11,
+    "columns": [
+      {
+        "name": "link_infoseite",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "https://muenchenunterwegs.de/angebote/radschnellverbindung-nach-garching-und-unterschleissheim",
+          "https://muenchenunterwegs.de/angebote/fuenf-radschnellverbindungen-von-muenchen-in-das-umland"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "projektstatus",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "in Planung (BAU)",
+          "Planung beschlossen (MOR)",
+          "Umsetzung erfolgt (BAU)",
+          "in Planung (MOR)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((691842.4764008423 5335750.876497953, 691865.3308008427 5335837.088597952, 691914.4894008436 5335999.564897948, 691935.7576008443 5336080.22009",
+          "MULTILINESTRING ((690927.3515008227 5335090.826198014, 690912.0326008223 5335128.261598015, 690910.9742008223 5335139.770998013, 690905.5308008221 5335153.15919",
+          "MULTILINESTRING ((690868.6568008214 5335012.809898018, 690906.4409008222 5335063.546498015, 690927.3515008227 5335090.826198014, 690942.195100823 5335097.702198",
+          "MULTILINESTRING ((690927.3515008227 5335090.826198014, 690901.0497008219 5335108.300598014, 690712.5372008181 5335188.036298026, 690664.478400817 5335208.363898",
+          "MULTILINESTRING ((692027.0643008461 5336404.49429794, 692019.7716008459 5336429.078397939, 692018.7412008462 5336433.9217979405, 692018.0589008459 5336437.77019"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "abschnitt",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "Altstadtring - Stadtgrenze"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "kommune",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "Landeshauptstadt München"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "radschnellverbindung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 12,
+        "null_count": 0,
+        "examples": [
+          "München - Garching / Unterschleißheim",
+          "München - Dachau",
+          "München - Fürstenfeldbruck",
+          "München - Starnberg",
+          "München - Oberhaching"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "link_folien",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 12,
+        "null_rate": 1.0
+      },
+      {
+        "name": "link_pdf",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 12,
+        "null_rate": 1.0
+      },
+      {
+        "name": "link_stadtratsbeschluss",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 12,
+        "null_rate": 1.0
+      },
+      {
+        "name": "link_video",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 12,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "link_folien",
+      "link_pdf",
+      "link_stadtratsbeschluss",
+      "link_video"
+    ],
+    "category_columns": [
+      "link_infoseite",
+      "projektstatus",
+      "abschnitt",
+      "kommune"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "link_infoseite",
+      "y": "link_folien"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

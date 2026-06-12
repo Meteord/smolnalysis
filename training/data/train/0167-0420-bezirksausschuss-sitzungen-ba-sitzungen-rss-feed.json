@@ -1,0 +1,218 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Bezirksausschuss Sitzungen and compare version by channel.title.",
+  "query_result": {
+    "dataset_title": "Bezirksausschuss Sitzungen",
+    "package_id": "bddac4a6-f1fb-4adc-8bfe-7537526c5908",
+    "package_name": "bezirksausschuss-sitzungen",
+    "resource_id": "8a668be8-6c5f-43c3-9222-a167e162d706",
+    "resource_name": "BA-Sitzungen - RSS-Feed",
+    "resource_format": "xml",
+    "description": "Liste der Termine der Sitzungen der Münchner Bezirksausschüsse als RSS-Feed.",
+    "organization": "Direktorium der Landeshauptstadt München",
+    "tags": [
+      "Bezirksausschüsse",
+      "RIS"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 21,
+    "sampled_rows": 21,
+    "column_count": 19,
+    "columns": [
+      {
+        "name": "pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 19,
+        "null_count": 2,
+        "examples": [
+          "Wed, 24 Jun 2026 19:30:00 +0200",
+          "Tue, 23 Jun 2026 19:00:00 +0200",
+          "Mon, 22 Jun 2026 19:30:00 +0200",
+          "Thu, 18 Jun 2026 19:45:00 +0200",
+          "Thu, 18 Jun 2026 19:00:00 +0200"
+        ],
+        "null_rate": 0.0952
+      },
+      {
+        "name": "version",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 20,
+        "examples": [
+          "2.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9524
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 20,
+        "null_count": 1,
+        "examples": [
+          "BA-Sitzungen",
+          "BA-Sitzung BA 11 - Vollgremium am Mittwoch, 24. Juni 2026, 19:30 Uhr",
+          "BA-Sitzung BA 04 - Vollgremium am Mittwoch, 24. Juni 2026, 19:30 Uhr",
+          "BA-Sitzung BA 09 - Vollgremium am Dienstag, 23. Juni 2026, 19:00 Uhr",
+          "BA-Sitzung BA 10 - Vollgremium am Montag, 22. Juni 2026, 19:30 Uhr"
+        ],
+        "null_rate": 0.0476
+      },
+      {
+        "name": "link",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 20,
+        "null_count": 1,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=BA-Sitzungen",
+          "https://risi.muenchen.de/risi/sitzung/detail/9321703",
+          "https://risi.muenchen.de/risi/sitzung/detail/9254281",
+          "https://risi.muenchen.de/risi/sitzung/detail/9317233",
+          "https://risi.muenchen.de/risi/sitzung/detail/9321042"
+        ],
+        "null_rate": 0.0476
+      },
+      {
+        "name": "description",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 20,
+        "null_count": 1,
+        "examples": [
+          "RSS Feed der neusten BA-Sitzungen der Landeshauptstadt München.",
+          "<strong>BA-Sitzung BA 11 - Vollgremium am Mittwoch, 24. Juni 2026, 19:30 Uhr</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00",
+          "<strong>BA-Sitzung BA 04 - Vollgremium am Mittwoch, 24. Juni 2026, 19:30 Uhr</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00",
+          "<strong>BA-Sitzung BA 09 - Vollgremium am Dienstag, 23. Juni 2026, 19:00 Uhr</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00",
+          "<strong>BA-Sitzung BA 10 - Vollgremium am Montag, 22. Juni 2026, 19:30 Uhr</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\""
+        ],
+        "null_rate": 0.0476
+      },
+      {
+        "name": "guid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 19,
+        "null_count": 2,
+        "examples": [
+          "BASitzungenRSS;9321703",
+          "BASitzungenRSS;9254281",
+          "BASitzungenRSS;9317233",
+          "BASitzungenRSS;9321042",
+          "BASitzungenRSS;9380250"
+        ],
+        "null_rate": 0.0952
+      },
+      {
+        "name": "channel.item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 20,
+        "examples": [
+          "Thu, 11 Jun 2026 19:15:00 +0200"
+        ],
+        "null_rate": 0.9524
+      },
+      {
+        "name": "item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 20,
+        "examples": [
+          "Thu, 11 Jun 2026 19:15:00 +0200"
+        ],
+        "null_rate": 0.9524
+      },
+      {
+        "name": "channel.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 20,
+        "examples": [
+          "BA-Sitzungen"
+        ],
+        "null_rate": 0.9524
+      },
+      {
+        "name": "channel.link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 20,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=BA-Sitzungen"
+        ],
+        "null_rate": 0.9524
+      },
+      {
+        "name": "channel.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 20,
+        "examples": [
+          "RSS Feed der neusten BA-Sitzungen der Landeshauptstadt München."
+        ],
+        "null_rate": 0.9524
+      },
+      {
+        "name": "channel.item.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 20,
+        "examples": [
+          "BA-Sitzung BA 16 - Vollgremium am Donnerstag, 11. Juni 2026, 19:15 Uhr"
+        ],
+        "null_rate": 0.9524
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "version"
+    ],
+    "category_columns": [
+      "channel.title",
+      "channel.link",
+      "channel.description",
+      "channel.item.title"
+    ],
+    "time_columns": [
+      "pubDate",
+      "channel.item.pubDate",
+      "item.pubDate"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "channel.title",
+      "y": "version"
+    }
+  },
+  "quality_score": 6.75,
+  "cleaning_notes": {
+    "dropped_columns": 7,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

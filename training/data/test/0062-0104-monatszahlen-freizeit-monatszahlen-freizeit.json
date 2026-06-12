@@ -1,0 +1,235 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Monatszahlen Freizeit and compare MONAT by AUSPRAEGUNG.",
+  "query_result": {
+    "dataset_title": "Monatszahlen Freizeit",
+    "package_id": "b03799b7-55ff-43d6-9931-79d4f445038d",
+    "package_name": "monatszahlen-freizeit",
+    "resource_id": "a5e6f0f9-8428-44a2-8f03-57d88c9ce6bc",
+    "resource_name": "Monatszahlen Freizeit",
+    "resource_format": "csv",
+    "description": "Der Datensatz __Monatszahlen Freizeit__ beinhaltet die Themen * Besucher/innen Freizeiteinrichtungen Bitte beachten Sie die [Informationsseite Monatszahlen](https://opendata.muenchen.de/pages/monatszahlen-monitoring)",
+    "organization": "Statistisches Amt München",
+    "tags": [
+      "Monatszahlen"
+    ],
+    "groups": [
+      "educ"
+    ],
+    "row_count": 2477,
+    "sampled_rows": 1000,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "MONAT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "202601",
+          "202602",
+          "202603",
+          "202604",
+          "202605"
+        ],
+        "numeric": {
+          "count": 927.0,
+          "min": 200001.0,
+          "max": 202612.0,
+          "mean": 201362.7961,
+          "median": 201402.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "WERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "1143292",
+          "7330",
+          "14400",
+          "21350"
+        ],
+        "numeric": {
+          "count": 855.0,
+          "min": 0.0,
+          "max": 1593655.0,
+          "mean": 72492.5064,
+          "median": 14644.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VORJAHRESWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "7330",
+          "14400",
+          "21350",
+          "132920",
+          "34500"
+        ],
+        "numeric": {
+          "count": 864.0,
+          "min": 0.0,
+          "max": 1593655.0,
+          "mean": 70631.8947,
+          "median": 14636.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-32.13",
+          "96.45",
+          "48.26",
+          "522.58"
+        ],
+        "numeric": {
+          "count": 691.0,
+          "min": -100.0,
+          "max": 124976.92,
+          "mean": 687.4421,
+          "median": 0.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "VERAEND_VORJAHRESMONAT_PROZENT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "-28.26",
+          "18.9",
+          "-13.77",
+          "-57.55"
+        ],
+        "numeric": {
+          "count": 750.0,
+          "min": -100.0,
+          "max": 79669.23,
+          "mean": 444.7751,
+          "median": 1.77
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "ZWOELF_MONATE_MITTELWERT",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "NA",
+          "132902",
+          "132710",
+          "130298",
+          "132262"
+        ],
+        "numeric": {
+          "count": 782.0,
+          "min": 142.0,
+          "max": 145877.0,
+          "mean": 38975.7954,
+          "median": 29388.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "JAHR",
+        "dtype": "object",
+        "kind": "year",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "2026",
+          "2025",
+          "2024",
+          "2023",
+          "2022"
+        ],
+        "numeric": {
+          "count": 1000.0,
+          "min": 2000.0,
+          "max": 2026.0,
+          "mean": 2013.524,
+          "median": 2014.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "AUSPRAEGUNG",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Außenanlagen Olympiapark (Veranstaltungen)",
+          "Kleine Olympiahalle",
+          "Olympia-Eissportzentrum"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "MONATSZAHL",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1000,
+        "null_count": 0,
+        "examples": [
+          "Besucher*innen"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "MONAT",
+      "WERT",
+      "VORJAHRESWERT",
+      "VERAEND_VORMONAT_PROZENT"
+    ],
+    "category_columns": [
+      "AUSPRAEGUNG",
+      "MONATSZAHL"
+    ],
+    "time_columns": [
+      "JAHR"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "AUSPRAEGUNG",
+      "y": "MONAT"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

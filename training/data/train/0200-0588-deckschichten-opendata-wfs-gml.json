@@ -1,0 +1,280 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of area in Deckschichten (Opendata).",
+  "query_result": {
+    "dataset_title": "Deckschichten (Opendata)",
+    "package_id": "c9c72aef-038d-44a9-a7c4-5ebfcb374592",
+    "package_name": "deckschichten_opendata",
+    "resource_id": "b0a8d33e-b3bd-460b-8075-125aabb3e7b8",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Die Deckschichten bilden einen Teil der Grundwasserüberdeckung. Sie bestehen im Stadtgebiet von München aus tonigen, schluffigen und sandigen Bestandteilen. Die Deckschichten sind nicht im gesamten Stadtgebiet verbreitet, stehen oberflächlich oder oberflächennah an und können in stark wechselnden Mächtigkeiten vorkommen.",
+    "organization": "Referat für Klima- und Umweltschutz der Landeshauptstadt München",
+    "tags": [
+      "Deckschichten",
+      "Digitaler Zwilling München",
+      "Umweltschutz",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 901,
+    "sampled_rows": 901,
+    "column_count": 44,
+    "columns": [
+      {
+        "name": "area",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 778,
+        "examples": [
+          "78290.609",
+          "40519.242",
+          "22972.596",
+          "73990.789",
+          "13771.346"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 0.414,
+          "max": 3553982.5,
+          "mean": 123421.6017,
+          "median": 15834.228
+        },
+        "null_rate": 0.8635
+      },
+      {
+        "name": "perimeter",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 778,
+        "examples": [
+          "1681.865",
+          "1347.87",
+          "571.846",
+          "1104.746",
+          "532.884"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 4.082,
+          "max": 17123.506,
+          "mean": 1291.6958,
+          "median": 574.622
+        },
+        "null_rate": 0.8635
+      },
+      {
+        "name": "mergel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 778,
+        "examples": [
+          "2",
+          "1",
+          "0",
+          "3",
+          "4"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 0.0,
+          "max": 4.0,
+          "mean": 1.6016,
+          "median": 1.0
+        },
+        "null_rate": 0.8635
+      },
+      {
+        "name": "MultiSurface.srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 778,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8635
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 123,
+        "null_count": 778,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 123.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8635
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 900,
+        "examples": [
+          "123"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 123.0,
+          "max": 123.0,
+          "mean": 123.0,
+          "median": 123.0
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "featureMembers.deckschichten.area",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 900,
+        "examples": [
+          "53144.758"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 53144.758,
+          "max": 53144.758,
+          "mean": 53144.758,
+          "median": 53144.758
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "featureMembers.deckschichten.perimeter",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 900,
+        "examples": [
+          "1243.578"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1243.578,
+          "max": 1243.578,
+          "mean": 1243.578,
+          "median": 1243.578
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "featureMembers.deckschichten.mergel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 900,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "deckschichten.area",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 900,
+        "examples": [
+          "53144.758"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 53144.758,
+          "max": 53144.758,
+          "mean": 53144.758,
+          "median": 53144.758
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "deckschichten.perimeter",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 900,
+        "examples": [
+          "1243.578"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1243.578,
+          "max": 1243.578,
+          "mean": 1243.578,
+          "median": 1243.578
+        },
+        "null_rate": 0.9989
+      },
+      {
+        "name": "deckschichten.mergel",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 900,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9989
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "area",
+      "perimeter",
+      "mergel",
+      "MultiSurface.srsDimension"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "area"
+    }
+  },
+  "quality_score": 5.0,
+  "cleaning_notes": {
+    "dropped_columns": 32,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

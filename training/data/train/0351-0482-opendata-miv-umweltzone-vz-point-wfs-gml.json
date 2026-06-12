@@ -1,0 +1,232 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Umweltzone - Verkehrszeichen and compare drehung by srsName.",
+  "query_result": {
+    "dataset_title": "Umweltzone - Verkehrszeichen",
+    "package_id": "01e601b2-932d-4450-a389-78e87412cfe5",
+    "package_name": "opendata_miv_umweltzone_vz_point",
+    "resource_id": "064654da-e81a-44be-b630-29e0545eda0b",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Zur Verbesserung der Luftqualität und damit zum Schutz der Gesundheit wird ab 01.02.2023 ein stufenweises Dieselfahrverbot in der um den Mittleren Ring erweiterten Umweltzone eingeführt. Bei den Transferflächen handelt es sich um Fahrbeziehungen, die aufgrund fehlender Alternativstrecken trotz ihrer Lage in der Umweltzone für Fahrzeuge ohne die erforderlichen Voraussetzungen freigegeben sind. Die weiteren Bestimmungen der Allgemeinverfügung sind zu beachten.",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 754,
+    "sampled_rows": 754,
+    "column_count": 22,
+    "columns": [
+      {
+        "name": "drehung",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 187,
+        "null_count": 567,
+        "examples": [
+          "210.65094991",
+          "217.50410155",
+          "296.39860024",
+          "291.33382357",
+          "353.81476051"
+        ],
+        "numeric": {
+          "count": 187.0,
+          "min": 1.1494,
+          "max": 357.7168,
+          "mean": 183.6564,
+          "median": 167.7657
+        },
+        "null_rate": 0.752
+      },
+      {
+        "name": "miv_umweltzone_vz_point.drehung",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 187,
+        "null_count": 567,
+        "examples": [
+          "210.65094991",
+          "217.50410155",
+          "296.39860024",
+          "291.33382357",
+          "353.81476051"
+        ],
+        "numeric": {
+          "count": 187.0,
+          "min": 1.1494,
+          "max": 357.7168,
+          "mean": 183.6564,
+          "median": 167.7657
+        },
+        "null_rate": 0.752
+      },
+      {
+        "name": "miv_umweltzone_vz_point.fid",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "miv_umweltzone_vz_point.1",
+          "miv_umweltzone_vz_point.2",
+          "miv_umweltzone_vz_point.3",
+          "miv_umweltzone_vz_point.4",
+          "miv_umweltzone_vz_point.5"
+        ],
+        "null_rate": 0.7507
+      },
+      {
+        "name": "miv_umweltzone_vz_point.shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7507
+      },
+      {
+        "name": "miv_umweltzone_vz_point.shape.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "693996.84150089,5336888.64719781",
+          "694260.5767009,5336767.95089779",
+          "690101.23490081,5331961.52089807",
+          "690098.81720081,5331957.55639807",
+          "693942.34370089,5331653.46869782"
+        ],
+        "null_rate": 0.7507
+      },
+      {
+        "name": "shape.Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7507
+      },
+      {
+        "name": "shape.Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "693996.84150089,5336888.64719781",
+          "694260.5767009,5336767.95089779",
+          "690101.23490081,5331961.52089807",
+          "690098.81720081,5331957.55639807",
+          "693942.34370089,5331653.46869782"
+        ],
+        "null_rate": 0.7507
+      },
+      {
+        "name": "Point.srsName",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7507
+      },
+      {
+        "name": "Point.coordinates",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "693996.84150089,5336888.64719781",
+          "694260.5767009,5336767.95089779",
+          "690101.23490081,5331961.52089807",
+          "690098.81720081,5331957.55639807",
+          "693942.34370089,5331653.46869782"
+        ],
+        "null_rate": 0.7507
+      },
+      {
+        "name": "featureMember.miv_umweltzone_vz_point.drehung",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 1,
+        "null_count": 753,
+        "examples": [
+          "198.96405117"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 198.9641,
+          "max": 198.9641,
+          "mean": 198.9641,
+          "median": 198.9641
+        },
+        "null_rate": 0.9987
+      },
+      {
+        "name": "srsName",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "http://www.opengis.net/gml/srs/epsg.xml#25832"
+        ],
+        "null_rate": 0.7507
+      },
+      {
+        "name": "coordinates",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 188,
+        "null_count": 566,
+        "examples": [
+          "693996.84150089,5336888.64719781",
+          "694260.5767009,5336767.95089779",
+          "690101.23490081,5331961.52089807",
+          "690098.81720081,5331957.55639807",
+          "693942.34370089,5331653.46869782"
+        ],
+        "null_rate": 0.7507
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "drehung"
+    ],
+    "category_columns": [
+      "srsName"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "srsName",
+      "y": "drehung"
+    }
+  },
+  "quality_score": 6.0,
+  "cleaning_notes": {
+    "dropped_columns": 9,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

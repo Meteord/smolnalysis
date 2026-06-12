@@ -1,0 +1,251 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Raddauerzählstellen and compare gesamt_sum_2025 by richtung_1.",
+  "query_result": {
+    "dataset_title": "Raddauerzählstellen",
+    "package_id": "2ce14406-7ff8-4435-a612-dfd4dc051316",
+    "package_name": "opendata_raddauerzaehlstellen",
+    "resource_id": "64ed4edf-8bfd-4a34-b233-04ab5ca40630",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Derzeit gibt es im Stadtgebiet verteilt sechs Raddauerzählstellen. Ein unter der Straßenoberfläche verlegter Sensor erfasst die Anzahl der Radlerinnen und Radler. Die Zählergebnisse werden mit den jeweils aktuellen Wetterdaten vor Ort gespeichert und können als Tages-, Stunden- oder Viertelstundenwerte abgerufen werden. Zu den Rohdaten (Open Data Portal): <a target=\"_blank\" href=\"opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen\">opendata.muenchen.de/dataset/daten",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Raddauerzählstelle",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 6,
+    "sampled_rows": 6,
+    "column_count": 14,
+    "columns": [
+      {
+        "name": "gesamt_sum_2025",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 1,
+        "examples": [
+          432000.0,
+          42000.0,
+          831000.0,
+          558000.0,
+          1415000.0
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 42000.0,
+          "max": 1415000.0,
+          "mean": 655600.0,
+          "median": 558000.0
+        },
+        "null_rate": 0.1667
+      },
+      {
+        "name": "gesamt_sum_monat_2026",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 5,
+        "null_count": 1,
+        "examples": [
+          33000.0,
+          19000.0,
+          67000.0,
+          47000.0,
+          115000.0
+        ],
+        "numeric": {
+          "count": 5.0,
+          "min": 19000.0,
+          "max": 115000.0,
+          "mean": 56200.0,
+          "median": 47000.0
+        },
+        "null_rate": 0.1667
+      },
+      {
+        "name": "richtung_1",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "Ost",
+          "West",
+          "Nord",
+          "Süd"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "richtung_2",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "West",
+          "Ost",
+          "Süd",
+          "Nord"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "latitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          48.14205,
+          48.12194,
+          48.16887,
+          48.14438,
+          48.12032
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 48.1203,
+          "max": 48.1689,
+          "mean": 48.1382,
+          "median": 48.137
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "longitude",
+        "dtype": "float64",
+        "kind": "geospatial",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          11.55534,
+          11.62417,
+          11.55005,
+          11.51794,
+          11.53599
+        ],
+        "numeric": {
+          "count": 6.0,
+          "min": 11.5179,
+          "max": 11.6242,
+          "mean": 11.5614,
+          "median": 11.5527
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "besonderheiten",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 3,
+        "null_count": 3,
+        "examples": [
+          "nur Stadteinwärts. Die Zählungen der Zählstelle Arnulfstraße sind seit Anfang 2021 stark von der dortigen Baustelle beeinflusst.",
+          "Im April 2020 wurde die Zählschleife am Joseph-Hörwick-Weg auf den gesamten Querschnitt des Fuß- und Radweges ausgeweitet. Die Breite der Zählschleife hat sich",
+          "Es wird auf dem Fahrradweg als auch auf dem Fußweg gezählt."
+        ],
+        "null_rate": 0.5
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "POINT (690086.1702094984 5335246.773706677)",
+          "POINT (695282.1798223516 5333184.30593006)",
+          "POINT (689593.7946149625 5338214.398530274)",
+          "POINT (687295.7806069605 5335413.930895408)",
+          "POINT (688726.5199143181 5332784.114740557)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zaehlstelle",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "Arnulf",
+          "Kreuther",
+          "Olympia",
+          "Hirsch",
+          "Margareten"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zaehlstelle_lang",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "Arnulfstr. 9 - 11 Südseite",
+          "Bad-Kreuther-Str.",
+          "Rudolf-Harbig-Weg (Olympiapark)",
+          "Birketweg HLP (Hirschgarten)",
+          "Margaretenstr. (Harras)"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "info",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 6,
+        "null_count": 0,
+        "examples": [
+          "<p><a href=\"https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen\" target=\"_blank\">Zu den Rohdaten (Open Data Portal)</a></p"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "zaehler_kaputt_sum_monat",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 5,
+        "examples": [
+          "Derzeit keine Daten"
+        ],
+        "null_rate": 0.8333
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "gesamt_sum_2025",
+      "gesamt_sum_monat_2026"
+    ],
+    "category_columns": [
+      "richtung_1",
+      "richtung_2",
+      "besonderheiten",
+      "info"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "richtung_1",
+      "y": "gesamt_sum_2025"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 1,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

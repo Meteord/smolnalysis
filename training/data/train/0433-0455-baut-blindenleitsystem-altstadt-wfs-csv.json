@@ -1,0 +1,155 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Blindenleitsystem Altstadt – Fußgängerzone and compare breite_cm by art.",
+  "query_result": {
+    "dataset_title": "Blindenleitsystem Altstadt – Fußgängerzone",
+    "package_id": "07151bcf-af95-4a1e-a03a-f5a464968d54",
+    "package_name": "baut_blindenleitsystem_altstadt",
+    "resource_id": "1b25c65d-6d08-4044-8b87-936b1f9b6e3b",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Das durchgängige und vernetzte Leitsystem in der Fußgängerzone der Münchner Altstadt besteht aus Leitelementen. Leitelemente können Oberflächen-, Pflasterstrukturen oder Bodenindikatoren sein. Ein Bodenindikator ist ein Bodenelement mit einem hohen taktilen, visuellen (Hell-Dunkel) und akustischen Kontrast zum angrenzenden Bodenbelag.",
+    "organization": "Baureferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 32,
+    "sampled_rows": 32,
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "breite_cm",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 32,
+        "null_count": 0,
+        "examples": [
+          50,
+          70,
+          40
+        ],
+        "numeric": {
+          "count": 32.0,
+          "min": 40.0,
+          "max": 70.0,
+          "mean": 50.3125,
+          "median": 50.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "herstjahr",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 32,
+        "null_count": 0,
+        "examples": [
+          2012,
+          2022,
+          2024,
+          1985,
+          1975
+        ],
+        "numeric": {
+          "count": 32.0,
+          "min": 1975.0,
+          "max": 2024.0,
+          "mean": 2002.9688,
+          "median": 2013.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 32,
+        "null_count": 0,
+        "examples": [
+          "5Z Kl",
+          "Andere",
+          "RiPla",
+          "NaRi gefräst",
+          "3Z Gr"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "foto",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 32,
+        "null_count": 0,
+        "examples": [
+          "<a><img src=\"https://karten.muenchen.de/resources/baut/__docs/5Z Kl.jpg\" style=\"max-width:100%\"></a>",
+          "<a><img src=\"https://karten.muenchen.de/resources/baut/__docs/Andere.jpg\" style=\"max-width:100%\"></a>",
+          "<a><img src=\"https://karten.muenchen.de/resources/baut/__docs/RiPla.jpg\" style=\"max-width:100%\"></a>",
+          "<a><img src=\"https://karten.muenchen.de/resources/baut/__docs/NaRi gefraest.jpg\" style=\"max-width:100%\"></a>",
+          "<a><img src=\"https://karten.muenchen.de/resources/baut/__docs/3Z Gr.jpg\" style=\"max-width:100%\"></a>"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 32,
+        "null_count": 0,
+        "examples": [
+          "MULTILINESTRING ((691671.8150008386 5335193.644297966, 691625.8773008375 5335209.062897968))",
+          "MULTILINESTRING ((691472.6454008343 5334965.485397978, 691494.7003008348 5334970.055297979))",
+          "MULTILINESTRING ((691472.4864008345 5334965.286697978, 691473.9567008343 5334957.020997979))",
+          "MULTILINESTRING ((691576.8531008365 5334885.574397973, 691528.7165008355 5334897.254197975))",
+          "MULTILINESTRING ((691544.6814008359 5334959.305997973, 691593.3214008369 5334954.8552979715))"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "bemerkung",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 32,
+        "null_count": 0,
+        "examples": [
+          "Salvatorstraße",
+          "Löwengrube",
+          "Filserbräugasse",
+          "Schäfflerstraße",
+          "Frauenplatz"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "breite_cm",
+      "herstjahr"
+    ],
+    "category_columns": [
+      "art",
+      "foto"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "art",
+      "y": "breite_cm"
+    }
+  },
+  "quality_score": 6.25,
+  "cleaning_notes": {
+    "dropped_columns": 0,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

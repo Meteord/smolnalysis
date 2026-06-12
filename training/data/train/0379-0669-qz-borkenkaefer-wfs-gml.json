@@ -1,0 +1,270 @@
+{
+  "task": "render_openui",
+  "user_question": "Show the distribution of objectid in Borkenkäfer Quarantänezonen.",
+  "query_result": {
+    "dataset_title": "Borkenkäfer Quarantänezonen",
+    "package_id": "732099c3-762f-4ef4-8753-b49add7a3e65",
+    "package_name": "qz_borkenkaefer",
+    "resource_id": "f85d55b0-599b-4ee0-82c1-3a7ad1d57f37",
+    "resource_name": "WFS (GML)",
+    "resource_format": "xml",
+    "description": "Dieser Dienst enthält die Borkenkäfer Quarantänezonen.",
+    "organization": "Kreisverwaltungsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Karte",
+      "Landeshauptstadt München",
+      "infoMapAccessService"
+    ],
+    "groups": [],
+    "row_count": 17,
+    "sampled_rows": 17,
+    "column_count": 50,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 14,
+        "examples": [
+          "1",
+          "2",
+          "3"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 1.0,
+          "max": 3.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8235
+      },
+      {
+        "name": "typ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 14,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.8235
+      },
+      {
+        "name": "art",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 14,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8235
+      },
+      {
+        "name": "lage",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 14,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.8235
+      },
+      {
+        "name": "Polygon.srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 14,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8235
+      },
+      {
+        "name": "srsDimension",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 3,
+        "null_count": 14,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 3.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.8235
+      },
+      {
+        "name": "numberOfFeatures",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 16,
+        "examples": [
+          "3"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.9412
+      },
+      {
+        "name": "featureMembers.qz_borkenkaefer.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 16,
+        "examples": [
+          "3"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.9412
+      },
+      {
+        "name": "featureMembers.qz_borkenkaefer.typ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 16,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9412
+      },
+      {
+        "name": "featureMembers.qz_borkenkaefer.art",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 16,
+        "examples": [
+          "2"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9412
+      },
+      {
+        "name": "featureMembers.qz_borkenkaefer.lage",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 16,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.9412
+      },
+      {
+        "name": "qz_borkenkaefer.objectid",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 16,
+        "examples": [
+          "3"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "median": 3.0
+        },
+        "null_rate": 0.9412
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "Histogram",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "typ",
+      "art",
+      "lage"
+    ],
+    "category_columns": [],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "Histogram",
+      "x": "objectid"
+    }
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 38,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}

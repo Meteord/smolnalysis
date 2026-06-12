@@ -1,0 +1,270 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Bundestagswahl 2025 - Wahlräume in München and compare WBZ by BARRIEREFREIHEIT.",
+  "query_result": {
+    "dataset_title": "Bundestagswahl 2025 - Wahlräume in München",
+    "package_id": "2d671619-88a0-4629-9b73-f0661fbf5f93",
+    "package_name": "bundestagswahl-2025-wahlraeume-in-muenchen",
+    "resource_id": "8a6495c1-e90f-456c-8626-00d305d791ca",
+    "resource_name": "Wahlräume Bundestagswahl 2025",
+    "resource_format": "csv",
+    "description": "Der Datensatz umfasst die Wahlräume zur Bundestagswahl 2025 in München. [Mehr Informationen zur Bundestagswahl 2025 auf muenchen.de](https://stadt.muenchen.de/infos/bundestagswahlen.html)",
+    "organization": "Kreisverwaltungsreferat der Landeshauptstadt München",
+    "tags": [
+      "Bundestagswahl 2025",
+      "Wahl",
+      "Wahlen"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 470,
+    "sampled_rows": 470,
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "WBZ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "101",
+          "102",
+          "103",
+          "104",
+          "105"
+        ],
+        "numeric": {
+          "count": 470.0,
+          "min": 101.0,
+          "max": 2517.0,
+          "mean": 1340.2404,
+          "median": 1324.5
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "STBZ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "numeric": {
+          "count": 470.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 13.2915,
+          "median": 13.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "NR",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "6",
+          "19",
+          "33",
+          "13",
+          "22"
+        ],
+        "numeric": {
+          "count": 460.0,
+          "min": 1.0,
+          "max": 510.0,
+          "mean": 40.9913,
+          "median": 21.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "PLZ",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "80331",
+          "80469",
+          "80538",
+          "80336",
+          "80337"
+        ],
+        "numeric": {
+          "count": 470.0,
+          "min": 80331.0,
+          "max": 81929.0,
+          "mean": 81183.6468,
+          "median": 81245.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "BARRIEREFREIHEIT",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "barrierefrei",
+          "teilweise barrierefrei"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ROLLSTUHLFAHRENDE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 80,
+        "null_count": 390,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 80.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.8298
+      },
+      {
+        "name": "GEHBEHINDERTE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 78,
+        "null_count": 392,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 78.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.834
+      },
+      {
+        "name": "BLINDE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 63,
+        "null_count": 407,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 63.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.866
+      },
+      {
+        "name": "SEHBEEINTRACHTIGTE",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 61,
+        "null_count": 409,
+        "examples": [
+          "1"
+        ],
+        "numeric": {
+          "count": 61.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0
+        },
+        "null_rate": 0.8702
+      },
+      {
+        "name": "WAHLLOKAL_NAME",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "Jugendinformationszentrum JIZ",
+          "Riemerschmid-Wirtschaftsschule",
+          "Rechtsanwaltskammer",
+          "Kerschensteiner Gewerbeschule",
+          "St.-Anna-Grundschule"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "STRANAM",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "Oberanger",
+          "Frauenstr.",
+          "Tal",
+          "Liebherrstr.",
+          "St.-Anna-Str."
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "ORT",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 470,
+        "null_count": 0,
+        "examples": [
+          "München"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "WBZ",
+      "STBZ",
+      "NR",
+      "PLZ"
+    ],
+    "category_columns": [
+      "BARRIEREFREIHEIT",
+      "ORT"
+    ],
+    "time_columns": [],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "BARRIEREFREIHEIT",
+      "y": "WBZ"
+    }
+  },
+  "quality_score": 7.0,
+  "cleaning_notes": {
+    "dropped_columns": 2,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Allgemeine Carsharing-Parkplätze and compare objectid by sonderparken_typ.",
+  "query_result": {
+    "dataset_title": "Allgemeine Carsharing-Parkplätze",
+    "package_id": "a609d4c6-24ae-45df-9592-e9401cb1dab7",
+    "package_name": "ruhver_carsharing",
+    "resource_id": "30e314cd-702e-4440-95d3-8f23e2d432e4",
+    "resource_name": "WFS (CSV)",
+    "resource_format": "csv",
+    "description": "Auf diesen Parkplätzen dürfen alle entsprechend gekennzeichneten Carsharing-Fahrzeuge abgestellt werden. Sie sind an der Münchner Vignette oder der Bundes-Carsharing-Vignette in der Windschutzscheibe zu erkennen. Auch Carsharing-Fahrzeuge aus anderen Städten dürfen auf diesen Parkplätzen parken, sofern sie die Bundes-Carsharing-Vignette haben. Ein durchgestrichenes Symbol zeigt an, dass diese allgemeinen Carsharing-Parkplätze derzeit außer Betrieb sind (beispielsweise wegen Veranstaltungen oder",
+    "organization": "Mobilitätsreferat der Landeshauptstadt München",
+    "tags": [
+      "Digitaler Zwilling München",
+      "Landeshauptstadt München",
+      "Verkehrswesen"
+    ],
+    "groups": [],
+    "row_count": 689,
+    "sampled_rows": 689,
+    "column_count": 16,
+    "columns": [
+      {
+        "name": "objectid",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 689,
+        "null_count": 0,
+        "examples": [
+          5454,
+          516,
+          748,
+          6090,
+          7391
+        ],
+        "numeric": {
+          "count": 689.0,
+          "min": 1.0,
+          "max": 18979.0,
+          "mean": 3618.4862,
+          "median": 1967.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "stadtbezirk",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 689,
+        "null_count": 0,
+        "examples": [
+          25,
+          8,
+          4,
+          19,
+          12
+        ],
+        "numeric": {
+          "count": 689.0,
+          "min": 1.0,
+          "max": 25.0,
+          "mean": 9.5457,
+          "median": 8.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "status",
+        "dtype": "int64",
+        "kind": "numeric",
+        "non_null_count": 689,
+        "null_count": 0,
+        "examples": [
+          2,
+          3
+        ],
+        "numeric": {
+          "count": 689.0,
+          "min": 2.0,
+          "max": 3.0,
+          "mean": 2.0276,
+          "median": 2.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "bearbeitung_datum",
+        "dtype": "int64",
+        "kind": "date",
+        "non_null_count": 689,
+        "null_count": 0,
+        "examples": [
+          20260323,
+          20251204,
+          20251103,
+          20250220,
+          20260224
+        ],
+        "numeric": {
+          "count": 689.0,
+          "min": 20250220.0,
+          "max": 20260609.0,
+          "mean": 20254480.1466,
+          "median": 20251204.0
+        },
+        "null_rate": 0.0
+      },
+      {
+        "name": "realisierungsdatum",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 678,
+        "null_count": 11,
+        "examples": [
+          "05.02.2025",
+          "01.06.2023",
+          "01.07.2023",
+          "22.10.2024",
+          "20.05.2025"
+        ],
+        "null_rate": 0.016
+      },
+      {
+        "name": "sonderparken_typ",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 689,
+        "null_count": 0,
+        "examples": [
+          "CS_ff",
+          "ZOpt",
+          "statCS_2A",
+          "statCS_1A"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "shape",
+        "dtype": "object",
+        "kind": "geospatial",
+        "non_null_count": 689,
+        "null_count": 0,
+        "examples": [
+          "POLYGON ((687844.9628007584 5335006.204998197, 687844.8379007583 5335004.187698197, 687838.8564007585 5335004.658598198, 687838.9826007583 5335006.681298197, 68",
+          "POLYGON ((688872.5083007796 5334218.021898139, 688872.22630078 5334215.758798141, 688866.7822007798 5334216.32629814, 688867.0378007796 5334218.590598141, 68887",
+          "POLYGON ((688566.7151007729 5334535.582398156, 688568.3498007733 5334535.422798157, 688567.8954007732 5334530.478998156, 688565.4479007734 5334530.721798156, 68",
+          "POLYGON ((690896.3195008216 5337372.588798011, 690897.1195008216 5337366.80189801, 690895.2928008214 5337366.545198011, 690894.4681008216 5337372.328198011, 690",
+          "POLYGON ((684666.5747006974 5329219.129198373, 684664.5192006975 5329213.494298373, 684662.6403006978 5329214.179698374, 684664.6965006973 5329219.816398375, 68"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sonderparken_typ_text",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 689,
+        "null_count": 0,
+        "examples": [
+          "allgemein/freefloating"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sonderparken_standortname",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 689,
+        "null_count": 0,
+        "examples": [
+          "Am Lokschuppen",
+          "Georg-Freundorfer-Platz",
+          "Gollierplatz",
+          "Hohenzollernplatz",
+          "Fürstenried West"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "gueltigkeit_datum_start",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 18,
+        "null_count": 671,
+        "examples": [
+          "24.03.2026",
+          "01.02.2026",
+          "11.01.2026",
+          "10.05.2026"
+        ],
+        "null_rate": 0.9739
+      },
+      {
+        "name": "gueltigkeit_datum_ende",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 16,
+        "null_count": 673,
+        "examples": [
+          "07.09.2026",
+          "30.12.2026",
+          "12.01.2026",
+          "16.07.2026"
+        ],
+        "null_rate": 0.9768
+      },
+      {
+        "name": "anbietername",
+        "dtype": "float64",
+        "kind": "numeric",
+        "non_null_count": 0,
+        "null_count": 689,
+        "null_rate": 1.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "objectid",
+      "stadtbezirk",
+      "status",
+      "anbietername"
+    ],
+    "category_columns": [
+      "sonderparken_typ",
+      "sonderparken_typ_text"
+    ],
+    "time_columns": [
+      "bearbeitung_datum",
+      "realisierungsdatum",
+      "gueltigkeit_datum_start"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "sonderparken_typ",
+      "y": "objectid"
+    }
+  },
+  "quality_score": 8.5,
+  "cleaning_notes": {
+    "dropped_columns": 1,
+    "dropped_identifier_columns": 3,
+    "source_profile_error": null
+  }
+}

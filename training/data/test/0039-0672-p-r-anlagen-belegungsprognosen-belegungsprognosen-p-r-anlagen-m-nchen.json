@@ -1,0 +1,191 @@
+{
+  "task": "render_openui",
+  "user_question": "Create a compact OpenUI summary for Belegungsprognosen P+R Anlagen München from P+R-Anlagen - Belegungsprognosen.",
+  "query_result": {
+    "dataset_title": "P+R-Anlagen - Belegungsprognosen",
+    "package_id": "b1775816-5c15-49df-bc96-e077ca5558fd",
+    "package_name": "p-r-anlagen-belegungsprognosen",
+    "resource_id": "90e7fa46-3400-4fe3-b15d-aa6c74662ec5",
+    "resource_name": "Belegungsprognosen P+R Anlagen München",
+    "resource_format": "csv",
+    "description": "Die Belegungsprognose zeigt, wie die Auslastung der einzelnen Park+Ride Anlagen im Stadtgebiet München anhand historischer Erfahrungswerte prognostiziert wird. Dargestellt ist der Tagesverlauf sowie die Unterteilung auf Werktag und Wochenende. Grün bedeutet mehr als 75 % der Parkplätze sind frei verfügbar, gelb mehr als 10 % sind verfügbar und rot weniger als 10 % sind verfügbar.",
+    "organization": "P+R Park & Ride GmbH München",
+    "tags": [
+      "Parken"
+    ],
+    "groups": [
+      "tran"
+    ],
+    "row_count": 34,
+    "sampled_rows": 34,
+    "column_count": 32,
+    "columns": [
+      {
+        "name": "wt_06-07_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sa_06-07_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "so_06-07_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wt_07-08_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sa_07-08_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "so_07-08_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wt_08-09_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb",
+          "rot"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sa_08-09_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "so_08-09_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "wt_09-10_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "gelb",
+          "grün",
+          "rot"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "sa_09-10_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      },
+      {
+        "name": "so_09-10_uhr",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 34,
+        "null_count": 0,
+        "examples": [
+          "grün",
+          "gelb"
+        ],
+        "null_rate": 0.0
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "DataTable"
+    ],
+    "numeric_columns": [],
+    "category_columns": [
+      "wt_06-07_uhr",
+      "sa_06-07_uhr",
+      "so_06-07_uhr",
+      "wt_07-08_uhr"
+    ],
+    "time_columns": []
+  },
+  "quality_score": 4.25,
+  "cleaning_notes": {
+    "dropped_columns": 19,
+    "dropped_identifier_columns": 1,
+    "source_profile_error": null
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "task": "render_openui",
+  "user_question": "Summarize Bürgerversammlungen - Anfragen and compare version by channel.title.",
+  "query_result": {
+    "dataset_title": "Bürgerversammlungen - Anfragen",
+    "package_id": "c5dd488c-590e-4f4c-a40f-6d9375976957",
+    "package_name": "buergerversammlungen-anfragen",
+    "resource_id": "f17556aa-6b4d-4755-bc0b-6ae80aa3d5b1",
+    "resource_name": "BV-Anfragen - RSS-Feed",
+    "resource_format": "xml",
+    "description": "Der Datensatz listet aktuelle Bürgerversammlungsanfragen als RSS-Feed auf.",
+    "organization": "Direktorium der Landeshauptstadt München",
+    "tags": [
+      "Bürgerversammlungen",
+      "RIS"
+    ],
+    "groups": [
+      "gove"
+    ],
+    "row_count": 186,
+    "sampled_rows": 186,
+    "column_count": 19,
+    "columns": [
+      {
+        "name": "pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 184,
+        "null_count": 2,
+        "examples": [
+          "Thu, 23 Apr 2026 00:00:00 +0200",
+          "Wed, 22 Apr 2026 00:00:00 +0200",
+          "Mon, 20 Apr 2026 00:00:00 +0200",
+          "Mon, 13 Apr 2026 00:00:00 +0200",
+          "Thu, 26 Mar 2026 00:00:00 +0100"
+        ],
+        "null_rate": 0.0108
+      },
+      {
+        "name": "version",
+        "dtype": "object",
+        "kind": "numeric",
+        "non_null_count": 1,
+        "null_count": 185,
+        "examples": [
+          "2.0"
+        ],
+        "numeric": {
+          "count": 1.0,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0
+        },
+        "null_rate": 0.9946
+      },
+      {
+        "name": "title",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 185,
+        "null_count": 1,
+        "examples": [
+          "BV-Anfragen",
+          "BV-Anfragen Nr. 20-26 / Q 00846 vom 23.04.2026",
+          "BV-Anfragen Nr. 20-26 / Q 00847 vom 23.04.2026",
+          "BV-Anfragen Nr. 20-26 / Q 00848 vom 23.04.2026",
+          "BV-Anfragen Nr. 20-26 / Q 00849 vom 23.04.2026"
+        ],
+        "null_rate": 0.0054
+      },
+      {
+        "name": "link",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 185,
+        "null_count": 1,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=BV-Anfragen",
+          "https://risi.muenchen.de/risi/antrag/detail/9677598",
+          "https://risi.muenchen.de/risi/antrag/detail/9677607",
+          "https://risi.muenchen.de/risi/antrag/detail/9677627",
+          "https://risi.muenchen.de/risi/antrag/detail/9677640"
+        ],
+        "null_rate": 0.0054
+      },
+      {
+        "name": "description",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 185,
+        "null_count": 1,
+        "examples": [
+          "RSS Feed der neusten BV-Anfragen der Landeshauptstadt München.",
+          "<strong>BV-Anfragen Nr. 20-26 / Q 00846 vom 23.04.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</s",
+          "<strong>BV-Anfragen Nr. 20-26 / Q 00847 vom 23.04.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</s",
+          "<strong>BV-Anfragen Nr. 20-26 / Q 00848 vom 23.04.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</s",
+          "<strong>BV-Anfragen Nr. 20-26 / Q 00849 vom 23.04.2026</strong><hr style=\"height:3px; border:none; color:#FFCC00; background-color:#FFCC00;\"><strong>Betreff:</s"
+        ],
+        "null_rate": 0.0054
+      },
+      {
+        "name": "guid",
+        "dtype": "object",
+        "kind": "string",
+        "non_null_count": 184,
+        "null_count": 2,
+        "examples": [
+          "BVAnfragenRSS;9677598",
+          "BVAnfragenRSS;9677607",
+          "BVAnfragenRSS;9677627",
+          "BVAnfragenRSS;9677640",
+          "BVAnfragenRSS;9677653"
+        ],
+        "null_rate": 0.0108
+      },
+      {
+        "name": "channel.item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 185,
+        "examples": [
+          "Wed, 25 Jun 2025 00:00:00 +0200"
+        ],
+        "null_rate": 0.9946
+      },
+      {
+        "name": "item.pubDate",
+        "dtype": "object",
+        "kind": "date",
+        "non_null_count": 1,
+        "null_count": 185,
+        "examples": [
+          "Wed, 25 Jun 2025 00:00:00 +0200"
+        ],
+        "null_rate": 0.9946
+      },
+      {
+        "name": "channel.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 185,
+        "examples": [
+          "BV-Anfragen"
+        ],
+        "null_rate": 0.9946
+      },
+      {
+        "name": "channel.link",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 185,
+        "examples": [
+          "https://risi.muenchen.de/risi/rss?feed=BV-Anfragen"
+        ],
+        "null_rate": 0.9946
+      },
+      {
+        "name": "channel.description",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 185,
+        "examples": [
+          "RSS Feed der neusten BV-Anfragen der Landeshauptstadt München."
+        ],
+        "null_rate": 0.9946
+      },
+      {
+        "name": "channel.item.title",
+        "dtype": "object",
+        "kind": "category",
+        "non_null_count": 1,
+        "null_count": 185,
+        "examples": [
+          "BV-Anfragen Nr. 20-26 / Q 00676 vom 25.06.2025"
+        ],
+        "null_rate": 0.9946
+      }
+    ]
+  },
+  "component_hints": {
+    "recommended_components": [
+      "InsightCard",
+      "MetricGrid",
+      "BarChart",
+      "DataTable"
+    ],
+    "numeric_columns": [
+      "version"
+    ],
+    "category_columns": [
+      "channel.title",
+      "channel.link",
+      "channel.description",
+      "channel.item.title"
+    ],
+    "time_columns": [
+      "pubDate",
+      "channel.item.pubDate",
+      "item.pubDate"
+    ],
+    "primary_chart": {
+      "type": "BarChart",
+      "x": "channel.title",
+      "y": "version"
+    }
+  },
+  "quality_score": 7.5,
+  "cleaning_notes": {
+    "dropped_columns": 7,
+    "dropped_identifier_columns": 0,
+    "source_profile_error": null
+  }
+}
