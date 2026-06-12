@@ -5,6 +5,7 @@ from functools import lru_cache
 import logging
 import os
 import threading
+import time
 from pathlib import Path
 from typing import Any
 
@@ -212,6 +213,37 @@ def _load_llama(role: str):
         options["verbose"],
     )
 
+
+def role_runtime_status(role: str) -> dict[str, Any]:
+    config = role_config(role)
+    options = _role_runtime_options(role)
+    model_path = ""
+    lora_path = ""
+    model_error = ""
+    lora_error = ""
+    try:
+        model_path = _resolve_model_path(config)
+    except Exception as exc:
+        model_error = str(exc)
+    try:
+        lora_path = _resolve_lora_path(config)
+    except Exception as exc:
+        lora_error = str(exc)
+    return {
+        "role": role,
+        "model_path": model_path or config.model_path,
+        "model_repo_id": config.model_repo_id,
+        "model_filename": config.model_filename,
+        "model_error": model_error,
+        "lora_path": lora_path or config.lora_path,
+        "lora_repo_id": config.lora_repo_id,
+        "lora_filename": config.lora_filename,
+        "lora_error": lora_error,
+        "options": options,
+        "configured": bool(config.model_path or (config.model_repo_id and config.model_filename)),
+        "loaded_models": _load_llama_cached.cache_info().currsize,
+    }
+
 ROLE_SYSTEM_PROMPTS = {
     "general_agent": "You are smolnalysis, a concise assistant for exploring open data and planning analysis steps.",
     "ckan_retrieval": "You are the smolnalysis CKAN retrieval specialist. Help identify datasets, resources, filters, and catalog search steps.",
@@ -242,10 +274,35 @@ def generate_chat_response(
     top_p: float = DEFAULT_TOP_P,
     top_k: int | None = None,
 ) -> str:
+    response, _trace = generate_chat_response_with_trace(
+        messages,
+        adapter=adapter,
+        max_new_tokens=max_new_tokens,
+        temperature=temperature,
+        top_p=top_p,
+        top_k=top_k,
+    )
+    return response
+
+
+@spaces.GPU(duration=ZERO_GPU_DURATION_SECONDS)
+def generate_chat_response_with_trace(
+    messages: list[dict[str, str]],
+    *,
+    adapter: str | None = "auto",
+    max_new_tokens: int = DEFAULT_MAX_NEW_TOKENS,
+    temperature: float = DEFAULT_TEMPERATURE,
+    top_p: float = DEFAULT_TOP_P,
+    top_k: int | None = None,
+) -> tuple[str, dict[str, Any]]:
+    started = time.perf_counter()
     role = route_role(messages, adapter)
+    runtime = role_runtime_status(role)
     routed_messages = _with_role_system_prompt(messages, role)
+    cache_before = _load_llama_cached.cache_info()
     with MODEL_LOCK:
         llm = _load_llama(role)
+        cache_after_load = _load_llama_cached.cache_info()
         payload: dict[str, Any] = {
             "messages": routed_messages,
             "temperature": temperature,
@@ -258,14 +315,46 @@ def generate_chat_response(
         response = llm.create_chat_completion(**payload)
 
     content = response["choices"][0]["message"]["content"]
+    elapsed_ms = round((time.perf_counter() - started) * 1000, 1)
+    cache_hit = cache_after_load.hits > cache_before.hits
+    trace = {
+        "backend": "llama.cpp",
+        "model_family": "MiniCPM",
+        "requested_adapter": adapter or "auto",
+        "role": role,
+        "message_count": len(messages),
+        "routed_message_count": len(routed_messages),
+        "sampling": {
+            "max_new_tokens": max_new_tokens,
+            "temperature": temperature,
+            "top_p": top_p,
+            "top_k": top_k,
+        },
+        "runtime": runtime,
+        "cache": {
+            "hit": cache_hit,
+            "loaded_models": cache_after_load.currsize,
+            "hits": cache_after_load.hits,
+            "misses": cache_after_load.misses,
+        },
+        "events": [
+            {"name": "route_role", "detail": f"{adapter or 'auto'} -> {role}"},
+            {"name": "resolve_runtime", "detail": runtime.get("model_path") or runtime.get("model_repo_id") or "unconfigured"},
+            {"name": "load_model", "detail": "cache hit" if cache_hit else "cache miss"},
+            {"name": "generate", "detail": f"{len(str(content).strip())} chars in {elapsed_ms} ms"},
+        ],
+        "duration_ms": elapsed_ms,
+        "output_chars": len(str(content).strip()),
+    }
     logger.info("MiniCPM llama.cpp response generated: role=%s chars=%d", role, len(content))
-    return str(content).strip()
+    return str(content).strip(), trace
 
 
 def runtime_status() -> dict[str, Any]:
     roles = {}
     for role in ROLE_ENV_KEYS:
         config = role_config(role)
+        status = role_runtime_status(role)
         roles[role] = {
             "model_path": config.model_path,
             "model_repo_id": config.model_repo_id,
@@ -275,6 +364,10 @@ def runtime_status() -> dict[str, Any]:
             "lora_filename": config.lora_filename,
             "configured": bool(config.model_path or (config.model_repo_id and config.model_filename)),
             "loaded": _load_llama_cached.cache_info().currsize > 0,
+            "resolved_model_path": status.get("model_path", ""),
+            "resolved_lora_path": status.get("lora_path", ""),
+            "model_error": status.get("model_error", ""),
+            "lora_error": status.get("lora_error", ""),
         }
     return {
         "backend": "llama.cpp",

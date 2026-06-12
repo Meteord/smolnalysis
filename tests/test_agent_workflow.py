@@ -63,7 +63,8 @@ class AgentWorkflowTests(TestCase):
 
     def test_chat_route_keeps_openai_compatible_sse_shape(self) -> None:
         client = TestClient(app)
-        with patch.object(app_module, "generate_chat_response", return_value="MiniCPM backend response") as generate:
+        trace = {"backend": "llama.cpp", "role": "general_agent", "events": [{"name": "generate", "detail": "ok"}]}
+        with patch.object(app_module, "generate_chat_response_with_trace", return_value=("MiniCPM backend response", trace)) as generate:
             response = client.post(
                 "/api/chat",
                 json={
@@ -74,6 +75,7 @@ class AgentWorkflowTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         generate.assert_called_once_with([{"role": "user", "content": "Find population data"}], adapter="auto")
+        self.assertTrue(response.headers.get("x-smolnalysis-trace-id"))
         chunks = [line.removeprefix("data: ") for line in response.text.splitlines() if line.startswith("data: ") and line != "data: [DONE]"]
         payloads = [json.loads(chunk) for chunk in chunks]
         self.assertEqual(payloads[0]["choices"][0]["delta"]["role"], "assistant")
@@ -85,13 +87,28 @@ class AgentWorkflowTests(TestCase):
     def test_chat_route_preserves_model_openui_lang(self) -> None:
         client = TestClient(app)
         model_openui = 'root = Card([TextContent("Already OpenUI", "default")])'
-        with patch.object(app_module, "generate_chat_response", return_value=model_openui):
+        with patch.object(app_module, "generate_chat_response_with_trace", return_value=(model_openui, {"backend": "llama.cpp", "events": []})):
             response = client.post("/api/chat", json={"messages": [{"role": "user", "content": "Render UI"}]})
 
         chunks = [line.removeprefix("data: ") for line in response.text.splitlines() if line.startswith("data: ") and line != "data: [DONE]"]
         payloads = [json.loads(chunk) for chunk in chunks]
         content = "".join(payload["choices"][0]["delta"].get("content", "") for payload in payloads)
         self.assertEqual(content, model_openui)
+
+    def test_chat_trace_can_be_read_back(self) -> None:
+        client = TestClient(app)
+        trace = {"backend": "llama.cpp", "role": "data_analysis", "events": [{"name": "route_role", "detail": "auto -> data_analysis"}]}
+        with patch.object(app_module, "generate_chat_response_with_trace", return_value=("Traceable response", trace)):
+            response = client.post("/api/chat", json={"messages": [{"role": "user", "content": "Analyze trends"}]})
+
+        trace_id = response.headers["x-smolnalysis-trace-id"]
+        trace_response = client.get(f"/api/traces/{trace_id}")
+
+        self.assertEqual(trace_response.status_code, 200)
+        payload = trace_response.json()
+        self.assertEqual(payload["request_id"], trace_id)
+        self.assertEqual(payload["role"], "data_analysis")
+        self.assertEqual(payload["events"][0]["name"], "route_role")
 
 
 if __name__ == "__main__":

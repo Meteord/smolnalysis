@@ -162,19 +162,88 @@ function LlmRolesPanel() {
   );
 }
 
-function BackendConfigHeader({ onCkanConnectionChange }) {
+function TracePanel({ traceId }) {
+  const [trace, setTrace] = useState(null);
+  const [message, setMessage] = useState("No trace yet.");
+
+  const loadTrace = async (id = traceId) => {
+    const url = id ? `/api/traces/${encodeURIComponent(id)}` : "/api/traces/latest?limit=1";
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const nextTrace = id ? data : data.traces?.[0] || null;
+      if (nextTrace?.error) {
+        setMessage("Trace not found.");
+        return;
+      }
+      setTrace(nextTrace);
+      setMessage(nextTrace ? "Latest model trace." : "No trace yet.");
+    } catch {
+      setMessage("Could not load trace.");
+    }
+  };
+
+  useEffect(() => {
+    loadTrace(traceId);
+  }, [traceId]);
+
+  const events = trace?.events || [];
+  const runtime = trace?.runtime || {};
+  const cache = trace?.cache || {};
+  const modelLabel = runtime.model_filename || runtime.model_path || runtime.model_repo_id || trace?.model_family || "unconfigured";
+
+  return (
+    <section className="trace-panel" aria-label="Model trace">
+      <div className="trace-panel__header">
+        <div>
+          <span className="trace-panel__label">Trace</span>
+          <span className="trace-panel__message">{message}</span>
+        </div>
+        <button className="ckan-panel__button" type="button" onClick={() => loadTrace()}>
+          Refresh
+        </button>
+      </div>
+      {trace ? (
+        <>
+          <div className="trace-panel__summary">
+            <span>{trace.backend}</span>
+            <span>{trace.role}</span>
+            <span>{cache.hit === true ? "cache hit" : cache.hit === false ? "cache miss" : "fallback"}</span>
+            <span>{trace.duration_ms ?? 0} ms</span>
+          </div>
+          <div className="trace-panel__meta">
+            <span>{modelLabel}</span>
+            {runtime.lora_filename || runtime.lora_path ? <span>{runtime.lora_filename || runtime.lora_path}</span> : null}
+          </div>
+          <ol className="trace-panel__events">
+            {events.map((event, index) => (
+              <li className="trace-event" key={`${event.name}-${index}`}>
+                <span className="trace-event__name">{event.name}</span>
+                <span className="trace-event__detail">{event.detail}</span>
+              </li>
+            ))}
+          </ol>
+        </>
+      ) : null}
+    </section>
+  );
+}
+
+function BackendConfigHeader({ onCkanConnectionChange, traceId }) {
   return (
     <div className="backend-config">
       <CkanEndpointPanel onConnectionChange={onCkanConnectionChange} />
       <LlmRolesPanel />
+      <TracePanel traceId={traceId} />
     </div>
   );
 }
 
 function App() {
   const [ckanConnection, setCkanConnection] = useState({ connected: false, base_url: "https://opendata.muenchen.de/" });
+  const [traceId, setTraceId] = useState(null);
 
-  const processMessage = ({ threadId, messages, abortController }) => {
+  const processMessage = async ({ threadId, messages, abortController }) => {
     console.info("[smolnalysis] sending chat request", {
       threadId,
       adapter: CHAT_ADAPTER,
@@ -182,7 +251,7 @@ function App() {
       ckan: ckanConnection,
     });
 
-    return fetch("/api/chat", {
+    const response = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -193,6 +262,11 @@ function App() {
       }),
       signal: abortController.signal,
     });
+    const nextTraceId = response.headers.get("x-smolnalysis-trace-id");
+    if (nextTraceId) {
+      setTraceId(nextTraceId);
+    }
+    return response;
   };
 
   return (
@@ -203,7 +277,7 @@ function App() {
       agentName="smolnalysis"
       logoUrl="/static/smolnalysis-mark.svg"
       showAssistantLogo={false}
-      threadHeader={<BackendConfigHeader onCkanConnectionChange={setCkanConnection} />}
+      threadHeader={<BackendConfigHeader onCkanConnectionChange={setCkanConnection} traceId={traceId} />}
       welcomeMessage={{
         title: "smolnalysis",
         description: "Ask about the demo dataset and receive mocked OpenUI-Lang responses.",

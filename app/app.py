@@ -4,6 +4,10 @@ import asyncio
 import json
 import logging
 import os
+import time
+import uuid
+from collections import deque
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -47,6 +51,9 @@ APP_DIR = Path(__file__).parent
 STATIC_DIR = APP_DIR / "static"
 DEMO_CSV = APP_DIR / "examples" / "demo_cities.csv"
 logger = logging.getLogger(__name__)
+TRACE_LIMIT = int(os.getenv("SMOLNALYSIS_TRACE_LIMIT", "50"))
+TRACE_STORE: deque[dict[str, Any]] = deque(maxlen=TRACE_LIMIT)
+TRACE_LOCK = asyncio.Lock()
 
 
 def _static_asset_version(filename: str) -> str:
@@ -129,28 +136,101 @@ def build_chat_openui_response(assistant_text: str) -> str:
     return build_model_openui_response(assistant_text)
 
 
+def _now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+async def _remember_trace(trace: dict[str, Any]) -> dict[str, Any]:
+    async with TRACE_LOCK:
+        TRACE_STORE.appendleft(trace)
+    return trace
+
+
+async def _latest_traces(limit: int = 10) -> list[dict[str, Any]]:
+    async with TRACE_LOCK:
+        return list(TRACE_STORE)[: max(1, min(limit, TRACE_LIMIT))]
+
+
+async def _trace_by_id(trace_id: str) -> dict[str, Any] | None:
+    async with TRACE_LOCK:
+        return next((trace for trace in TRACE_STORE if trace.get("request_id") == trace_id), None)
+
+
 @spaces.GPU(duration=5)
 def zerogpu_probe() -> dict[str, Any]:
     return {"ok": True, "runtime": "zerogpu-ready"}
 
 
 def generate_chat_response(messages: list[dict[str, str]], *, adapter: str = "auto") -> str:
+    response, _trace = generate_chat_response_with_trace(messages, adapter=adapter)
+    return response
+
+
+def generate_chat_response_with_trace(messages: list[dict[str, str]], *, adapter: str = "auto") -> tuple[str, dict[str, Any]]:
+    started = time.perf_counter()
     try:
         try:
-            from .backend.minicpm_llama_cpp import generate_chat_response as backend_generate_chat_response
+            from .backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
         except ImportError:
-            from backend.minicpm_llama_cpp import generate_chat_response as backend_generate_chat_response
+            from backend.minicpm_llama_cpp import generate_chat_response_with_trace as backend_generate_chat_response_with_trace
     except Exception as exc:
         logger.warning("MiniCPM llama.cpp backend unavailable, using workflow fallback: %s", exc)
         prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
-        return run_agent_workflow(prompt or "Summarize this dataset").get("openui_lang", "")
+        workflow = run_agent_workflow(prompt or "Summarize this dataset")
+        return workflow.get("openui_lang", ""), _fallback_trace(
+            messages,
+            adapter,
+            "backend_unavailable",
+            str(exc),
+            workflow,
+            started,
+        )
 
     try:
-        return backend_generate_chat_response(messages, adapter=adapter)
+        return backend_generate_chat_response_with_trace(messages, adapter=adapter)
     except Exception as exc:
         logger.warning("MiniCPM llama.cpp generation failed, using workflow fallback: %s", exc)
         prompt = next((message["content"] for message in reversed(messages) if message["role"] == "user"), "")
-        return run_agent_workflow(prompt or "Summarize this dataset").get("openui_lang", "")
+        workflow = run_agent_workflow(prompt or "Summarize this dataset")
+        return workflow.get("openui_lang", ""), _fallback_trace(
+            messages,
+            adapter,
+            "generation_failed",
+            str(exc),
+            workflow,
+            started,
+        )
+
+
+def _fallback_trace(
+    messages: list[dict[str, str]],
+    adapter: str,
+    reason: str,
+    detail: str,
+    workflow: dict[str, Any],
+    started: float,
+) -> dict[str, Any]:
+    steps = workflow.get("steps", [])
+    events = [
+        {"name": "fallback", "detail": f"{reason}: {detail}"},
+        *[
+            {"name": str(step.get("node", "workflow_step")), "detail": f"{step.get('title', '')}: {step.get('detail', '')}".strip()}
+            for step in steps
+            if isinstance(step, dict)
+        ],
+    ]
+    return {
+        "backend": "langgraph_fallback",
+        "model_family": "stub",
+        "requested_adapter": adapter,
+        "role": "fallback",
+        "message_count": len(messages),
+        "events": events,
+        "fallback_reason": reason,
+        "fallback_detail": detail,
+        "duration_ms": round((time.perf_counter() - started) * 1000, 1),
+        "output_chars": len(str(workflow.get("openui_lang", ""))),
+    }
 
 
 def _openai_sse_chunk(delta: dict[str, Any], finish_reason: str | None = None) -> str:
@@ -183,6 +263,8 @@ def api_zerogpu_probe() -> dict[str, Any]:
 
 @app.post("/api/chat")
 async def chat(request: Request) -> StreamingResponse:
+    request_id = str(uuid.uuid4())
+    request_started = _now_iso()
     body = await request.json()
     messages = body.get("messages") or []
     adapter = str(body.get("adapter") or "auto").strip() or "auto"
@@ -198,10 +280,23 @@ async def chat(request: Request) -> StreamingResponse:
     )
     if chat_messages:
         logger.debug("chat last message: role=%s chars=%d", chat_messages[-1]["role"], len(chat_messages[-1]["content"]))
-    assistant_text = await asyncio.to_thread(generate_chat_response, chat_messages, adapter=adapter)
+    assistant_text, trace = await asyncio.to_thread(generate_chat_response_with_trace, chat_messages, adapter=adapter)
+    trace = {
+        "request_id": request_id,
+        "thread_id": body.get("threadId"),
+        "created_at": request_started,
+        "completed_at": _now_iso(),
+        "ckan": ckan if isinstance(ckan, dict) else {},
+        **trace,
+    }
+    await _remember_trace(trace)
     logger.info("chat response generated: adapter=%s response_chars=%d", adapter, len(assistant_text))
     openui_lang = build_chat_openui_response(assistant_text)
-    return StreamingResponse(_stream_openui_response(openui_lang), media_type="text/event-stream")
+    return StreamingResponse(
+        _stream_openui_response(openui_lang),
+        media_type="text/event-stream",
+        headers={"x-smolnalysis-trace-id": request_id},
+    )
 
 
 @app.get("/api/ckan/default")
@@ -237,6 +332,20 @@ async def minicpm_status() -> dict[str, Any]:
         return runtime_status()
     except Exception as exc:
         return {"backend": "llama.cpp", "model_family": "MiniCPM", "error": str(exc)}
+
+
+@app.get("/api/traces/latest")
+async def traces_latest(limit: int = 10) -> dict[str, Any]:
+    traces = await _latest_traces(limit)
+    return {"traces": traces}
+
+
+@app.get("/api/traces/{trace_id}")
+async def traces_get(trace_id: str) -> dict[str, Any]:
+    trace = await _trace_by_id(trace_id)
+    if trace is None:
+        return {"error": "trace_not_found", "request_id": trace_id}
+    return trace
 
 
 @app.get("/", response_class=HTMLResponse)
