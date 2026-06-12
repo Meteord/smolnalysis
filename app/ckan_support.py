@@ -132,14 +132,29 @@ def read_ckan_action(base_url: str, action: str, params: dict[str, Any] | None =
     return result if isinstance(result, dict) else {"value": result}
 
 
-def package_search(base_url: str, query: str, rows: int = 5, start: int = 0) -> dict[str, Any]:
+def package_search(base_url: str, query: str, rows: int = 5, start: int = 0, fq: str = "") -> dict[str, Any]:
     clean_rows = max(1, min(int(rows), 10))
     clean_start = max(0, int(start))
-    return read_ckan_action(base_url, "package_search", {"q": query.strip() or "open data", "rows": clean_rows, "start": clean_start})
+    params: dict[str, Any] = {"q": query.strip() or "open data", "rows": clean_rows, "start": clean_start}
+    if fq.strip():
+        params["fq"] = fq.strip()
+    return read_ckan_action(base_url, "package_search", params)
 
 
 def package_show(base_url: str, package_id: str) -> dict[str, Any]:
     return read_ckan_action(base_url, "package_show", {"id": package_id})
+
+
+def tag_search(base_url: str, query: str, rows: int = 10) -> dict[str, Any]:
+    return read_ckan_action(base_url, "tag_search", {"query": query.strip(), "limit": max(1, min(int(rows), 25))})
+
+
+def group_list(base_url: str, rows: int = 10) -> dict[str, Any]:
+    return read_ckan_action(base_url, "group_list", {"all_fields": True, "limit": max(1, min(int(rows), 25))})
+
+
+def organization_list(base_url: str, rows: int = 10) -> dict[str, Any]:
+    return read_ckan_action(base_url, "organization_list", {"all_fields": True, "limit": max(1, min(int(rows), 25))})
 
 
 def validate_ckan_endpoint(raw_url: str) -> CkanConnectionStatus:

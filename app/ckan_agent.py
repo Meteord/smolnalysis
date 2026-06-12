@@ -7,11 +7,11 @@ from dataclasses import asdict, dataclass, field
 from typing import Any, Literal
 
 try:
-    from .ckan_support import DEFAULT_CKAN_ENDPOINT, normalize_ckan_base_url, package_search, package_show
+    from .ckan_support import DEFAULT_CKAN_ENDPOINT, group_list, normalize_ckan_base_url, organization_list, package_search, package_show, tag_search
     from .model_roles import ModelResponse, call_role_model
     from .openui_support import OpenUIValidationError, _json_arg, parse_openui_lang
 except ImportError:
-    from ckan_support import DEFAULT_CKAN_ENDPOINT, normalize_ckan_base_url, package_search, package_show
+    from ckan_support import DEFAULT_CKAN_ENDPOINT, group_list, normalize_ckan_base_url, organization_list, package_search, package_show, tag_search
     from model_roles import ModelResponse, call_role_model
     from openui_support import OpenUIValidationError, _json_arg, parse_openui_lang
 
@@ -19,13 +19,16 @@ except ImportError:
 AgentStatus = Literal["selected", "finished", "needs_clarification", "max_tool_calls", "error"]
 AgentEventType = Literal["model_action", "tool_call", "tool_result", "selection", "retry", "error", "done"]
 
-ALLOWED_ACTIONS = {"package_search", "package_show", "select_resource", "finish", "ask_clarification"}
+ALLOWED_ACTIONS = {"tag_search", "group_list", "organization_list", "package_search", "package_show", "select_resource", "finish", "ask_clarification"}
 MAX_TOOL_CALLS = 8
 CKAN_ACTION_CONTRACT = (
     "You are the smolnalysis CKAN retrieval specialist. Choose the next action to find the correct dataset/resource. "
-    "Return strict JSON only. Shape: "
-    '{"action":"package_search|package_show|select_resource|finish|ask_clarification","args":{},"reason":"short reason","confidence":0.0}. '
-    "Use only observed package_id/resource_id values for package_show and select_resource. Do not invent URLs."
+    "Return exactly one JSON object and nothing else. No markdown, no explanation outside JSON. Shape: "
+    '{"action":"tag_search|group_list|organization_list|package_search|package_show|select_resource|finish|ask_clarification","args":{},"reason":"short reason","confidence":0.0}. '
+    "Use tag_search first when the user's terms may not match the catalog language. "
+    "Use group_list or organization_list to discover catalog vocabulary when package_search returns weak or empty results. "
+    "Use package_show only with observed package_id values. Use select_resource only with observed resource_id values. "
+    "For bicycle topics, prefer CKAN vocabulary like fahrrad, radverkehr, zaehlstelle, verkehr. Do not invent URLs."
 )
 OPENUI_CONTRACT = "You translate structured smolnalysis results into OpenUI-Lang. Output OpenUI-Lang only. No markdown, no prose."
 
@@ -77,6 +80,10 @@ class AgentSession:
     searched_queries: list[str] = field(default_factory=list)
     failed_searches: dict[str, int] = field(default_factory=dict)
     consecutive_service_errors: int = 0
+    discovered_tags: list[str] = field(default_factory=list)
+    discovered_groups: list[dict[str, Any]] = field(default_factory=list)
+    discovered_organizations: list[dict[str, Any]] = field(default_factory=list)
+    catalog_tools_run: set[str] = field(default_factory=set)
 
 
 @dataclass
@@ -158,12 +165,15 @@ def parse_agent_action(raw: str) -> AgentAction:
     try:
         payload = json.loads(text)
     except json.JSONDecodeError as exc:
-        match = re.search(r"\{.*\}", text, re.DOTALL)
-        if not match:
+        payload = _first_json_object(text)
+        if payload is None:
             raise ValueError("Model did not return JSON.") from exc
-        payload = json.loads(match.group(0))
     if not isinstance(payload, dict):
         raise ValueError("Model action must be a JSON object.")
+    return _agent_action_from_payload(payload)
+
+
+def _agent_action_from_payload(payload: dict[str, Any]) -> AgentAction:
     action = str(payload.get("action", "")).strip()
     args = payload.get("args") if isinstance(payload.get("args"), dict) else {}
     reason = str(payload.get("reason", "")).strip()
@@ -172,6 +182,18 @@ def parse_agent_action(raw: str) -> AgentAction:
     except (TypeError, ValueError):
         confidence = 0.0
     return AgentAction(action, args, reason, max(0.0, min(confidence, 1.0)))
+
+
+def _first_json_object(text: str) -> dict[str, Any] | None:
+    decoder = json.JSONDecoder()
+    for match in re.finditer(r"\{", text):
+        try:
+            payload, _index = decoder.raw_decode(text[match.start() :])
+        except json.JSONDecodeError:
+            continue
+        if isinstance(payload, dict):
+            return payload
+    return None
 
 
 def validate_action(action: AgentAction, session: AgentSession) -> tuple[AgentAction, str]:
@@ -185,6 +207,15 @@ def validate_action(action: AgentAction, session: AgentSession) -> tuple[AgentAc
             return action, f"package_search query already failed in this run: {query}"
         rows = int(action.args.get("rows", 5) or 5)
         action.args["rows"] = max(1, min(rows, 10))
+    if action.action == "tag_search":
+        query = str(action.args.get("query", "")).strip()
+        if not query or "://" in query:
+            return action, "tag_search requires a plain query string."
+        rows = int(action.args.get("rows", 10) or 10)
+        action.args["rows"] = max(1, min(rows, 25))
+    if action.action in {"group_list", "organization_list"}:
+        rows = int(action.args.get("rows", 10) or 10)
+        action.args["rows"] = max(1, min(rows, 25))
     if action.action == "package_show":
         package_id = str(action.args.get("package_id", "")).strip()
         if package_id not in session.packages:
@@ -202,11 +233,55 @@ def fallback_action(session: AgentSession) -> AgentAction:
     for package_id, package in session.packages.items():
         if package_id and not package.get("_shown"):
             return AgentAction("package_show", {"package_id": package_id}, "Inspect the next observed package.", 0.45, "fallback")
-    query = _fallback_query(session.prompt, session.searched_queries)
+    if "tag_search" not in session.catalog_tools_run:
+        query = _catalog_query(session.prompt)
+        return AgentAction("tag_search", {"query": query, "rows": 10}, "Discover matching CKAN tags before package search.", 0.45, "fallback")
+    if "group_list" not in session.catalog_tools_run:
+        return AgentAction("group_list", {"rows": 15}, "Inspect catalog groups for topic vocabulary.", 0.35, "fallback")
+    query = _fallback_query(session.prompt, session.searched_queries, session.discovered_tags, session.discovered_groups)
     return AgentAction("package_search", {"query": query, "rows": 5}, "Fallback search query.", 0.35, "fallback")
 
 
 def execute_action(action: AgentAction, session: AgentSession, on_event: Callable[[AgentEvent], None] | None = None) -> ToolResult:
+    if action.action == "tag_search":
+        query = str(action.args.get("query", "")).strip()
+        rows = int(action.args.get("rows", 10) or 10)
+        session.catalog_tools_run.add("tag_search")
+        _record_event(session, AgentEvent("tool_call", f"tag_search: {query}", {"query": query, "rows": rows}), on_event)
+        try:
+            result = tag_search(session.endpoint, query, rows=rows)
+        except Exception as exc:
+            return ToolResult("tag_search", False, f"tag_search failed for '{query}': {_short_error(exc)}", error=_short_error(exc))
+        tags = _names_from_ckan_list_result(result)
+        for tag in tags:
+            if tag not in session.discovered_tags:
+                session.discovered_tags.append(tag)
+        return ToolResult("tag_search", True, f"Found {len(tags)} tags matching '{query}'.", {"query": query, "tags": tags[:12]})
+
+    if action.action == "group_list":
+        rows = int(action.args.get("rows", 10) or 10)
+        session.catalog_tools_run.add("group_list")
+        _record_event(session, AgentEvent("tool_call", f"group_list: {rows}", {"rows": rows}), on_event)
+        try:
+            result = group_list(session.endpoint, rows=rows)
+        except Exception as exc:
+            return ToolResult("group_list", False, f"group_list failed: {_short_error(exc)}", error=_short_error(exc))
+        groups = _dicts_from_ckan_list_result(result)
+        session.discovered_groups = groups
+        return ToolResult("group_list", True, f"Found {len(groups)} catalog groups.", {"groups": [_compact_named_item(group) for group in groups[:12]]})
+
+    if action.action == "organization_list":
+        rows = int(action.args.get("rows", 10) or 10)
+        session.catalog_tools_run.add("organization_list")
+        _record_event(session, AgentEvent("tool_call", f"organization_list: {rows}", {"rows": rows}), on_event)
+        try:
+            result = organization_list(session.endpoint, rows=rows)
+        except Exception as exc:
+            return ToolResult("organization_list", False, f"organization_list failed: {_short_error(exc)}", error=_short_error(exc))
+        organizations = _dicts_from_ckan_list_result(result)
+        session.discovered_organizations = organizations
+        return ToolResult("organization_list", True, f"Found {len(organizations)} organizations.", {"organizations": [_compact_named_item(org) for org in organizations[:12]]})
+
     if action.action == "package_search":
         query = str(action.args.get("query", "")).strip()
         rows = int(action.args.get("rows", 5) or 5)
@@ -446,7 +521,12 @@ def _package_id(package: dict[str, Any]) -> str:
     return str(package.get("id") or package.get("name") or "")
 
 
-def _fallback_query(prompt: str, searched_queries: list[str] | int | None = None) -> str:
+def _fallback_query(
+    prompt: str,
+    searched_queries: list[str] | int | None = None,
+    discovered_tags: list[str] | None = None,
+    discovered_groups: list[dict[str, Any]] | None = None,
+) -> str:
     if isinstance(searched_queries, int):
         searched = []
         index = searched_queries
@@ -454,13 +534,33 @@ def _fallback_query(prompt: str, searched_queries: list[str] | int | None = None
         searched = list(searched_queries or [])
         index = len(searched)
     terms = _search_terms(prompt)
-    base = " ".join(terms[:4]) or "open data"
+    expanded_terms = _expand_domain_terms(terms)
+    base = " ".join(expanded_terms[:4]) or "open data"
     short = " ".join(terms[:2]) or base
-    variants = _unique_queries([base, short, f"{base} csv", f"{short} csv", " ".join(terms[:3]) or base])
+    discovered = _matching_discovered_queries(expanded_terms, discovered_tags or [], discovered_groups or [])
+    variants = _unique_queries([*discovered, base, short, *expanded_terms[:4], f"{base} csv", f"{short} csv", " ".join(expanded_terms[:3]) or base])
     for query in variants:
         if query not in searched:
             return query
     return variants[min(index, len(variants) - 1)]
+
+
+def _matching_discovered_queries(expanded_terms: list[str], tags: list[str], groups: list[dict[str, Any]]) -> list[str]:
+    candidates: list[str] = []
+    for tag in tags:
+        clean = str(tag).strip()
+        if clean and any(term in clean.casefold() or clean.casefold() in term for term in expanded_terms):
+            candidates.append(clean)
+    for group in groups:
+        label = str(group.get("title") or group.get("display_name") or group.get("name") or "").strip()
+        if label and any(term in label.casefold() or label.casefold() in term for term in expanded_terms):
+            candidates.append(label)
+    return _unique_queries(candidates)
+
+
+def _catalog_query(prompt: str) -> str:
+    terms = _expand_domain_terms(_search_terms(prompt))
+    return terms[0] if terms else "open data"
 
 
 def _search_terms(prompt: str) -> list[str]:
@@ -478,6 +578,8 @@ def _search_terms(prompt: str) -> list[str]:
         "endpoint",
         "find",
         "https",
+        "know",
+        "knwo",
         "muenchen",
         "open",
         "opendata",
@@ -485,7 +587,11 @@ def _search_terms(prompt: str) -> list[str]:
         "resource",
         "resources",
         "search",
+        "tell",
+        "what",
         "user",
+        "yo",
+        "you",
     }
     terms = []
     for term in re.findall(r"[\w-]+", prompt.casefold()):
@@ -495,6 +601,28 @@ def _search_terms(prompt: str) -> list[str]:
         if clean not in terms:
             terms.append(clean)
     return terms
+
+
+def _expand_domain_terms(terms: list[str]) -> list[str]:
+    expanded: list[str] = []
+    for term in terms:
+        for candidate in _domain_synonyms(term):
+            if candidate not in expanded:
+                expanded.append(candidate)
+    return expanded
+
+
+def _domain_synonyms(term: str) -> list[str]:
+    bicycle_terms = {"bike", "bikes", "bicycle", "bicycles", "bycycle", "bycycles", "cycle", "cycles", "cycling", "fahrrad", "rad", "radverkehr"}
+    if term in bicycle_terms:
+        return ["fahrrad", "radverkehr", "bike", "bicycle"]
+    counter_terms = {"counter", "counters", "count", "counts", "zaehler", "zaehlstelle", "zählstelle", "zählstellen"}
+    if term in counter_terms:
+        return ["zaehlstelle", "zaehlung", "counter"]
+    traffic_terms = {"traffic", "verkehr", "mobility", "mobilitaet", "mobilität"}
+    if term in traffic_terms:
+        return ["verkehr", "mobilitaet", "traffic"]
+    return [term]
 
 
 def _unique_queries(queries: list[str]) -> list[str]:
@@ -515,6 +643,35 @@ def _clean_prompt(prompt: str) -> str:
     value = re.sub(r"<[^>]+>", " ", value)
     value = re.sub(r"\s+", " ", value).strip()
     return value
+
+
+def _names_from_ckan_list_result(result: dict[str, Any]) -> list[str]:
+    values = result.get("results") or result.get("value") or []
+    if not isinstance(values, list):
+        return []
+    names: list[str] = []
+    for item in values:
+        if isinstance(item, dict):
+            name = str(item.get("name") or item.get("display_name") or "").strip()
+        else:
+            name = str(item).strip()
+        if name and name not in names:
+            names.append(name)
+    return names
+
+
+def _dicts_from_ckan_list_result(result: dict[str, Any]) -> list[dict[str, Any]]:
+    values = result.get("results") or result.get("value") or []
+    if not isinstance(values, list):
+        return []
+    return [item for item in values if isinstance(item, dict)]
+
+
+def _compact_named_item(item: dict[str, Any]) -> dict[str, str]:
+    return {
+        "name": str(item.get("name") or ""),
+        "title": str(item.get("title") or item.get("display_name") or item.get("name") or ""),
+    }
 
 
 def _normalize_endpoint_or_default(endpoint: str | None) -> str:

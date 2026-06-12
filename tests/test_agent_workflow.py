@@ -37,12 +37,18 @@ class CkanAgentWorkflowTests(TestCase):
         self.assertEqual(action.args["query"], "population")
         self.assertEqual(action.confidence, 0.7)
 
+    def test_json_action_with_extra_text_parses_first_object(self) -> None:
+        action = parse_agent_action('{"action":"tag_search","args":{"query":"fahrrad"},"reason":"discover","confidence":0.6}\nNext I would search packages.')
+
+        self.assertEqual(action.action, "tag_search")
+        self.assertEqual(action.args["query"], "fahrrad")
+
     def test_invalid_json_falls_back_to_search(self) -> None:
         session = AgentSession("Find population datasets", "https://opendata.muenchen.de/")
 
         fallback = fallback_action(session)
 
-        self.assertEqual(fallback.action, "package_search")
+        self.assertEqual(fallback.action, "tag_search")
         self.assertIn("population", fallback.args["query"])
 
     def test_fallback_search_ignores_chat_wrapper_words(self) -> None:
@@ -50,6 +56,7 @@ class CkanAgentWorkflowTests(TestCase):
 
         fallback = fallback_action(session)
 
+        self.assertEqual(fallback.action, "tag_search")
         self.assertEqual(fallback.args["query"], "population")
 
     def test_fallback_search_extracts_openui_clicked_content(self) -> None:
@@ -60,7 +67,18 @@ class CkanAgentWorkflowTests(TestCase):
 
         fallback = fallback_action(session)
 
-        self.assertEqual(fallback.args["query"], "bike counter")
+        self.assertEqual(fallback.action, "tag_search")
+        self.assertEqual(fallback.args["query"], "fahrrad")
+
+    def test_fallback_package_search_uses_discovered_bike_tags(self) -> None:
+        session = AgentSession("what do yo knwo about bycycles", "https://opendata.muenchen.de/")
+        session.catalog_tools_run.update({"tag_search", "group_list"})
+        session.discovered_tags = ["radverkehr", "fahrradzaehlstellen"]
+
+        fallback = fallback_action(session)
+
+        self.assertEqual(fallback.action, "package_search")
+        self.assertEqual(fallback.args["query"], "radverkehr")
 
     def test_unknown_action_is_rejected(self) -> None:
         session = AgentSession("Find data", "https://opendata.muenchen.de/")
@@ -132,14 +150,28 @@ class CkanAgentWorkflowTests(TestCase):
         self.assertEqual(package_search_mock.call_count, 2)
         self.assertEqual(result.selected_resource.resource_id, "res-1")
 
-    @patch("app.ckan_agent.package_search")
-    def test_model_failure_falls_back_to_deterministic_query(self, package_search_mock) -> None:
-        package_search_mock.return_value = {"count": 0, "results": []}
+    @patch("app.ckan_agent.tag_search")
+    def test_model_failure_falls_back_to_catalog_discovery(self, tag_search_mock) -> None:
+        tag_search_mock.return_value = {"results": [{"name": "schools"}]}
 
         result = run_ckan_agent("Find schools", "https://opendata.muenchen.de/", model_caller=_FailingModel(), max_tool_calls=1)
 
         self.assertEqual(result.status, "max_tool_calls")
-        self.assertEqual(package_search_mock.call_args.args[1], "schools")
+        self.assertEqual(tag_search_mock.call_args.args[1], "schools")
+        self.assertTrue(any(event.type == "retry" for event in result.events))
+
+    @patch("app.ckan_agent.group_list")
+    @patch("app.ckan_agent.tag_search")
+    @patch("app.ckan_agent.package_search")
+    def test_model_failure_searches_with_catalog_vocabulary(self, package_search_mock, tag_search_mock, group_list_mock) -> None:
+        package_search_mock.return_value = {"count": 0, "results": []}
+        tag_search_mock.return_value = {"results": [{"name": "fahrrad"}]}
+        group_list_mock.return_value = {"value": []}
+
+        result = run_ckan_agent("what do yo knwo about bycycles", "https://opendata.muenchen.de/", model_caller=_FailingModel(), max_tool_calls=3)
+
+        self.assertEqual(result.status, "max_tool_calls")
+        self.assertEqual(package_search_mock.call_args.args[1], "fahrrad")
         self.assertTrue(any(event.type == "retry" for event in result.events))
 
     @patch("app.ckan_agent.package_search")
@@ -232,8 +264,12 @@ class CkanAgentWorkflowTests(TestCase):
         parse_openui_lang(content)
 
     @patch("app.ckan_agent.package_search")
-    def test_chat_route_cleans_clicked_followup_payload(self, package_search_mock) -> None:
+    @patch("app.ckan_agent.group_list")
+    @patch("app.ckan_agent.tag_search")
+    def test_chat_route_cleans_clicked_followup_payload(self, tag_search_mock, group_list_mock, package_search_mock) -> None:
         package_search_mock.return_value = {"count": 0, "results": []}
+        tag_search_mock.return_value = {"results": [{"name": "radverkehr"}]}
+        group_list_mock.return_value = {"value": []}
         client = TestClient(app)
 
         with patch.object(app_module, "call_role_model", side_effect=_FailingModel()):
@@ -250,14 +286,18 @@ class CkanAgentWorkflowTests(TestCase):
             )
 
         queries = [call.args[1] for call in package_search_mock.call_args_list]
-        self.assertEqual(queries[0], "bike counter")
+        self.assertEqual(queries[0], "radverkehr")
         self.assertTrue(all("content" not in query and "context" not in query for query in queries))
         self.assertIn("Request: Find CKAN bike counter datasets", response.text)
         self.assertNotIn("content bike counter content", response.text)
 
     @patch("app.ckan_agent.package_search")
-    def test_chat_route_treats_bycycles_as_retrieval(self, package_search_mock) -> None:
+    @patch("app.ckan_agent.group_list")
+    @patch("app.ckan_agent.tag_search")
+    def test_chat_route_treats_bycycles_as_retrieval(self, tag_search_mock, group_list_mock, package_search_mock) -> None:
         package_search_mock.return_value = {"count": 0, "results": []}
+        tag_search_mock.return_value = {"results": [{"name": "fahrrad"}]}
+        group_list_mock.return_value = {"value": []}
         client = TestClient(app)
 
         with patch.object(app_module, "call_role_model", side_effect=_FailingModel()):
