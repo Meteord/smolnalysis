@@ -14,6 +14,19 @@ from fastapi import Request
 from fastapi.responses import HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
+try:
+    import spaces
+except ImportError:
+    class _SpacesFallback:
+        @staticmethod
+        def GPU(*args: Any, **kwargs: Any):
+            def decorator(fn):
+                return fn
+
+            return decorator
+
+    spaces = _SpacesFallback()
+
 load_dotenv()
 logging.basicConfig(
     level=os.getenv("SMOLNALYSIS_LOG_LEVEL", "INFO").upper(),
@@ -103,6 +116,11 @@ def build_gemma_openui_response(assistant_text: str) -> str:
     )
 
 
+@spaces.GPU(duration=5)
+def zerogpu_probe() -> dict[str, Any]:
+    return {"ok": True, "runtime": "zerogpu-ready"}
+
+
 def generate_chat_response(messages: list[dict[str, str]], *, adapter: str = "auto") -> str:
     try:
         try:
@@ -143,6 +161,11 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 @app.api(name="respond")
 def respond(prompt: str) -> str:
     return build_openui_response(prompt)
+
+
+@app.api(name="zerogpu_probe")
+def api_zerogpu_probe() -> dict[str, Any]:
+    return zerogpu_probe()
 
 
 @app.post("/api/chat")
