@@ -20,6 +20,9 @@ DEFAULT_ADAPTER = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
 DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_examples_multitool_eval_160.jsonl"
 DEFAULT_OUTPUT_DIR = "train/ckan/outputs/eval"
 INFERENCE_SYSTEM_PROMPT = """You are the CKAN retrieval policy for smolnalysis. Emit strict JSON only.
+Output exactly one JSON object with keys: thought, action, args, confidence.
+Do not output <think> tags. Do not output markdown. Do not output prose before or after JSON.
+The thought field is a short decision summary, not chain-of-thought.
 Allowed actions: tag_search, group_list, organization_list, package_search, package_show, select_resource, finish, ask_clarification.
 Use exact args schemas:
 - tag_search: {"query":"string","rows":10}
@@ -30,7 +33,7 @@ Use exact args schemas:
 - select_resource: {"package_id":"observed-package-id","resource_id":"observed-resource-id","match_evidence":"why it fits"}
 - finish: {"selected_candidates":[{"package_id":"observed-package-id","resource_id":"observed-resource-id"}],"rationale":"why retrieval is complete"}
 - ask_clarification: {"question":"short question for the user","reason":"why the request is ambiguous"}
-Use tag/group/organization discovery when catalog vocabulary is unclear. After empty or weak results, choose a different real tool or a refined package_search query. Do not invent action names. Do not output markdown."""
+Use tag/group/organization discovery when catalog vocabulary is unclear. After empty or weak results, choose a different real tool or a refined package_search query. Do not invent action names."""
 
 
 def prompt_messages(example: dict[str, Any]) -> list[dict[str, str]]:

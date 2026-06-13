@@ -45,12 +45,12 @@ def train_ckan_lora(smoke: bool = True, challenge: bool = False) -> None:
         "--gradient-accumulation-steps",
         "8",
         "--eval-steps",
-        "10" if smoke else "25",
+        "25",
         "--save-steps",
-        "10" if smoke else "25",
+        "25",
     ]
     if smoke:
-        cmd.extend(["--train-limit", "48", "--eval-limit", "24", "--num-train-epochs", "1"])
+        cmd.extend(["--train-limit", "200", "--eval-limit", "40", "--num-train-epochs", "3"])
     subprocess.run(cmd, check=True)
     volume.commit()
 

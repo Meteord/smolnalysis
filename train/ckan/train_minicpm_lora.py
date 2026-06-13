@@ -12,6 +12,30 @@ DEFAULT_TRAIN_DATA = "train/ckan/data/generated/valid_examples_multitool_train_1
 DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_examples_multitool_eval_160.jsonl"
 DEFAULT_OUTPUT_DIR = "train/ckan/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
 DEFAULT_TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+PROTOCOL_SYSTEM_PROMPT = """You are the CKAN retrieval policy for smolnalysis. Emit strict JSON only.
+Output exactly one JSON object with keys: thought, action, args, confidence.
+Do not output <think> tags. Do not output markdown. Do not output prose before or after JSON.
+The thought field is a short decision summary, not chain-of-thought.
+Allowed actions: tag_search, group_list, organization_list, package_search, package_show, select_resource, finish, ask_clarification."""
+TRAIN_CHAT_TEMPLATE = (
+    "{{- bos_token }}"
+    "{%- for message in messages %}"
+    "{%- if message['role'] == 'system' %}"
+    "{{- '<|im_start|>system\\n' + message['content'] + '<|im_end|>\\n' }}"
+    "{%- elif message['role'] == 'user' %}"
+    "{{- '<|im_start|>user\\n' + message['content'] + '<|im_end|>\\n' }}"
+    "{%- elif message['role'] == 'assistant' %}"
+    "{{- '<|im_start|>assistant\\n' }}"
+    "{%- generation %}"
+    "{{- message['content'] + '<|im_end|>' }}"
+    "{%- endgeneration %}"
+    "{{- '\\n' }}"
+    "{%- endif %}"
+    "{%- endfor %}"
+    "{%- if add_generation_prompt %}"
+    "{{- '<|im_start|>assistant\\n' }}"
+    "{%- endif %}"
+)
 
 
 def load_jsonl(path: str | Path, limit: int | None = None) -> list[dict[str, Any]]:
@@ -27,16 +51,20 @@ def load_jsonl(path: str | Path, limit: int | None = None) -> list[dict[str, Any
     return rows
 
 
-def messages_to_text(tokenizer: Any, messages: list[dict[str, str]]) -> str:
-    return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=False)
+def normalize_messages(messages: list[dict[str, str]]) -> list[dict[str, str]]:
+    normalized = [dict(message) for message in messages]
+    if normalized and normalized[0].get("role") == "system":
+        normalized[0]["content"] = PROTOCOL_SYSTEM_PROMPT
+    else:
+        normalized.insert(0, {"role": "system", "content": PROTOCOL_SYSTEM_PROMPT})
+    return normalized
 
 
-def prepare_dataset(tokenizer: Any, path: str | Path, limit: int | None = None):
+def prepare_dataset(path: str | Path, limit: int | None = None):
     from datasets import Dataset
 
     rows = load_jsonl(path, limit)
-    texts = [messages_to_text(tokenizer, row["messages"]) for row in rows]
-    return Dataset.from_dict({"text": texts})
+    return Dataset.from_list([{"messages": normalize_messages(row["messages"])} for row in rows])
 
 
 def build_lora_config(args: argparse.Namespace):
@@ -55,9 +83,11 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
     from transformers import AutoModelForCausalLM, AutoTokenizer
     from trl import SFTConfig, SFTTrainer
 
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name, trust_remote_code=True, use_fast=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
+    original_chat_template = tokenizer.chat_template
+    tokenizer.chat_template = TRAIN_CHAT_TEMPLATE
 
     model = AutoModelForCausalLM.from_pretrained(
         args.model_name,
@@ -65,9 +95,10 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
         torch_dtype="auto",
         device_map="auto",
     )
+    model.config.use_cache = False
 
-    train_dataset = prepare_dataset(tokenizer, args.train_data, args.train_limit)
-    eval_dataset = prepare_dataset(tokenizer, args.eval_data, args.eval_limit)
+    train_dataset = prepare_dataset(args.train_data, args.train_limit)
+    eval_dataset = prepare_dataset(args.eval_data, args.eval_limit)
     steps_per_epoch = max(1, math.ceil(len(train_dataset) / max(1, args.per_device_train_batch_size * args.gradient_accumulation_steps)))
 
     config = SFTConfig(
@@ -89,9 +120,11 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
         bf16=args.bf16,
         fp16=args.fp16,
         gradient_checkpointing=args.gradient_checkpointing,
-        dataset_text_field="text",
+        gradient_checkpointing_kwargs={"use_reentrant": False},
+        assistant_only_loss=args.assistant_only_loss,
         report_to=args.report_to,
         seed=args.seed,
+        remove_unused_columns=False,
     )
 
     trainer = SFTTrainer(
@@ -100,9 +133,11 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
         peft_config=build_lora_config(args),
+        processing_class=tokenizer,
     )
     trainer.train()
     trainer.save_model(args.output_dir)
+    tokenizer.chat_template = original_chat_template
     tokenizer.save_pretrained(args.output_dir)
 
     metrics = trainer.evaluate()
@@ -139,6 +174,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--fp16", action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument("--gradient-checkpointing", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--packing", action=argparse.BooleanOptionalAction, default=False)
+    parser.add_argument("--assistant-only-loss", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--report-to", default="none")
     parser.add_argument("--seed", type=int, default=42)
     return parser
