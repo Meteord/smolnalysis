@@ -5,6 +5,7 @@ import logging
 import os
 import threading
 import time
+from dataclasses import dataclass
 from typing import Any
 
 try:
@@ -71,6 +72,30 @@ ROLE_ENV_KEYS = {
 }
 
 
+@dataclass(frozen=True)
+class TransformersRoleConfig:
+    role: str
+    adapter_path: str
+    adapter_repo_id: str
+    max_new_tokens: int
+    temperature: float
+    top_p: float
+
+
+def _clean_env_value(name: str, default: str = "") -> str:
+    raw = os.getenv(name, default)
+    lines = []
+    for line in str(raw).splitlines():
+        value = line.strip().strip('"').strip("'")
+        if value and not value.startswith("#"):
+            lines.append(value)
+    return lines[-1] if lines else default
+
+
+def _role_env(role: str, suffix: str) -> str:
+    return f"SMOLNALYSIS_MINICPM_{ROLE_ENV_KEYS[role]}_{suffix}"
+
+
 def _hub_url(repo_id: str) -> str:
     value = repo_id.strip().strip("/")
     if not value or "/" not in value:
@@ -101,6 +126,20 @@ def route_role(messages: list[dict[str, str]], adapter: str | None = "auto") -> 
     return "general_agent"
 
 
+def role_config(role: str) -> TransformersRoleConfig:
+    if role not in ROLE_ENV_KEYS:
+        available = ", ".join(ROLE_ENV_KEYS)
+        raise KeyError(f"Unknown MiniCPM transformers role '{role}'. Available roles: {available}")
+
+    default_temperature = "0" if role == "ckan_retrieval" else str(DEFAULT_TEMPERATURE)
+    adapter_path = _clean_env_value(_role_env(role, "ADAPTER_PATH"), _clean_env_value(_role_env(role, "LORA_PATH"), ""))
+    adapter_repo_id = _clean_env_value(_role_env(role, "ADAPTER_REPO_ID"), _clean_env_value(_role_env(role, "LORA_REPO_ID"), ""))
+    max_new_tokens = int(_clean_env_value(_role_env(role, "MAX_NEW_TOKENS"), str(DEFAULT_MAX_NEW_TOKENS)))
+    temperature = float(_clean_env_value(_role_env(role, "TEMPERATURE"), default_temperature))
+    top_p = float(_clean_env_value(_role_env(role, "TOP_P"), str(DEFAULT_TOP_P)))
+    return TransformersRoleConfig(role, adapter_path, adapter_repo_id, max_new_tokens, temperature, top_p)
+
+
 def _with_role_system_prompt(messages: list[dict[str, str]], role: str) -> list[dict[str, str]]:
     if any(message.get("role") == "system" for message in messages):
         return messages
@@ -128,6 +167,32 @@ def _load_runtime():
     return tokenizer, model
 
 
+@lru_cache(maxsize=4)
+def _load_model_for_role(role: str):
+    config = role_config(role)
+    adapter_source = config.adapter_path or config.adapter_repo_id
+    if not adapter_source:
+        tokenizer, base_model = _load_runtime()
+        return tokenizer, base_model, ""
+
+    import torch
+    from peft import PeftModel
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    started = time.perf_counter()
+    logger.info("loading MiniCPM PEFT adapter for role=%s source=%s", role, adapter_source)
+    tokenizer = AutoTokenizer.from_pretrained(DEFAULT_MODEL_ID)
+    base_model = AutoModelForCausalLM.from_pretrained(
+        DEFAULT_MODEL_ID,
+        torch_dtype="auto",
+        device_map="auto",
+    )
+    model = PeftModel.from_pretrained(base_model, adapter_source)
+    model.eval()
+    logger.info("MiniCPM PEFT adapter loaded in %.1f ms", (time.perf_counter() - started) * 1000)
+    return tokenizer, model, adapter_source
+
+
 def _runtime_device(model: Any):
     return next(model.parameters()).device
 
@@ -135,15 +200,18 @@ def _runtime_device(model: Any):
 def _generate(
     messages: list[dict[str, str]],
     *,
+    role: str,
     max_new_tokens: int,
     temperature: float,
     top_p: float,
 ) -> tuple[str, dict[str, Any]]:
     import torch
 
-    cache_before = _load_runtime.cache_info()
-    tokenizer, model = _load_runtime()
-    cache_after = _load_runtime.cache_info()
+    base_cache_before = _load_runtime.cache_info()
+    role_cache_before = _load_model_for_role.cache_info()
+    tokenizer, model, adapter_source = _load_model_for_role(role)
+    base_cache_after = _load_runtime.cache_info()
+    role_cache_after = _load_model_for_role.cache_info()
     device = _runtime_device(model)
     inputs = tokenizer.apply_chat_template(
         messages,
@@ -169,11 +237,14 @@ def _generate(
     text = tokenizer.decode(outputs[0][input_tokens:], skip_special_tokens=True).strip()
     return text, {
         "cache": {
-            "hit": cache_after.hits > cache_before.hits,
-            "loaded_models": cache_after.currsize,
-            "hits": cache_after.hits,
-            "misses": cache_after.misses,
+            "hit": role_cache_after.hits > role_cache_before.hits,
+            "loaded_models": role_cache_after.currsize,
+            "hits": role_cache_after.hits,
+            "misses": role_cache_after.misses,
+            "base_hit": base_cache_after.hits > base_cache_before.hits,
+            "base_loaded_models": base_cache_after.currsize,
         },
+        "adapter_source": adapter_source,
         "device": str(device),
         "input_tokens": input_tokens,
         "output_tokens": output_tokens,
@@ -192,13 +263,18 @@ def generate_chat_response_with_trace(
 ) -> tuple[str, dict[str, Any]]:
     started = time.perf_counter()
     role = route_role(messages, adapter)
+    config = role_config(role)
     routed_messages = _with_role_system_prompt(messages, role)
+    effective_max_new_tokens = max_new_tokens if max_new_tokens != DEFAULT_MAX_NEW_TOKENS else config.max_new_tokens
+    effective_temperature = temperature if temperature != DEFAULT_TEMPERATURE else config.temperature
+    effective_top_p = top_p if top_p != DEFAULT_TOP_P else config.top_p
     with MODEL_LOCK:
         content, runtime = _generate(
             routed_messages,
-            max_new_tokens=max_new_tokens,
-            temperature=temperature,
-            top_p=top_p,
+            role=role,
+            max_new_tokens=effective_max_new_tokens,
+            temperature=effective_temperature,
+            top_p=effective_top_p,
         )
     elapsed_ms = round((time.perf_counter() - started) * 1000, 1)
     trace = {
@@ -210,16 +286,16 @@ def generate_chat_response_with_trace(
         "message_count": len(messages),
         "routed_message_count": len(routed_messages),
         "sampling": {
-            "max_new_tokens": max_new_tokens,
-            "temperature": temperature,
-            "top_p": top_p,
+            "max_new_tokens": effective_max_new_tokens,
+            "temperature": effective_temperature,
+            "top_p": effective_top_p,
             "top_k": top_k,
         },
         "runtime": runtime,
         "cache": runtime["cache"],
         "events": [
             {"name": "route_role", "detail": f"{adapter or 'auto'} -> {role}"},
-            {"name": "load_model", "detail": "cache hit" if runtime["cache"]["hit"] else "cache miss"},
+            {"name": "load_model", "detail": runtime.get("adapter_source") or DEFAULT_MODEL_ID},
             {"name": "generate", "detail": f"{runtime['output_tokens']} tokens in {elapsed_ms} ms on {runtime['device']}"},
         ],
         "duration_ms": elapsed_ms,
@@ -229,14 +305,27 @@ def generate_chat_response_with_trace(
 
 
 def runtime_status() -> dict[str, Any]:
-    cache = _load_runtime.cache_info()
+    cache = _load_model_for_role.cache_info()
+    roles = {}
+    for role in ROLE_ENV_KEYS:
+        config = role_config(role)
+        roles[role] = {
+            "adapter_path": config.adapter_path,
+            "adapter_repo_id": config.adapter_repo_id,
+            "adapter_hub_url": _hub_url(config.adapter_repo_id),
+            "configured": bool(DEFAULT_MODEL_ID),
+            "adapter_configured": bool(config.adapter_path or config.adapter_repo_id),
+            "max_new_tokens": config.max_new_tokens,
+            "temperature": config.temperature,
+            "top_p": config.top_p,
+        }
     return {
         "backend": "transformers",
         "model_family": "MiniCPM",
         "model": DEFAULT_MODEL_ID,
         "model_hub_url": _hub_url(DEFAULT_MODEL_ID),
         "configured": bool(DEFAULT_MODEL_ID),
-        "roles": list(ROLE_ENV_KEYS),
+        "roles": roles,
         "cache": {
             "loaded_models": cache.currsize,
             "hits": cache.hits,
@@ -252,7 +341,7 @@ def _eager_load_runtime() -> None:
         return
     started = time.perf_counter()
     try:
-        _load_runtime()
+        _load_model_for_role("general_agent")
         EAGER_LOAD_STATUS["loaded"] = True
     except Exception as exc:
         logger.exception("MiniCPM transformers eager load failed.")

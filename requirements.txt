@@ -7,3 +7,4 @@ spaces
 transformers>=5.6
 torch>=2.8
 accelerate
+peft>=0.13

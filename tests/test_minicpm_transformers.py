@@ -31,12 +31,25 @@ class MiniCpmTransformersTests(TestCase):
         self.assertEqual(status["model_hub_url"], "https://huggingface.co/openbmb/MiniCPM5-1B")
         self.assertFalse(status["eager_load"]["enabled"])
         self.assertEqual(status["cache"]["loaded_models"], 0)
+        self.assertIn("ckan_retrieval", status["roles"])
+        self.assertEqual(status["roles"]["ckan_retrieval"]["temperature"], 0.0)
+
+    def test_role_config_reads_peft_adapter_repo(self) -> None:
+        os.environ["SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_ADAPTER_REPO_ID"] = "org/adapter"
+        module = importlib.reload(importlib.import_module("backend.minicpm_transformers"))
+
+        config = module.role_config("ckan_retrieval")
+        status = module.runtime_status()
+
+        self.assertEqual(config.adapter_repo_id, "org/adapter")
+        self.assertEqual(status["roles"]["ckan_retrieval"]["adapter_hub_url"], "https://huggingface.co/org/adapter")
 
     def test_generate_trace_uses_cached_runtime_metadata(self) -> None:
         module = importlib.reload(importlib.import_module("backend.minicpm_transformers"))
 
         with patch.object(module, "_generate", return_value=("ok", {
             "cache": {"hit": True, "loaded_models": 1, "hits": 1, "misses": 1},
+            "adapter_source": "",
             "device": "cuda:0",
             "input_tokens": 8,
             "output_tokens": 2,

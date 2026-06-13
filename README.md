@@ -51,6 +51,27 @@ HF_TOKEN=<a Hugging Face token with write access to build-small-hackathon/smolna
 
 The sync action mirrors files over the Hub API rather than pushing Git history. This avoids the previous large-file history problem as long as generated training data and model artifacts are not copied into `_space/`.
 
+### PEFT Adapter Deployment
+
+The first CKAN specialist is a PEFT LoRA adapter, so the fastest Space integration path is the transformers backend:
+
+```text
+SMOLNALYSIS_MINICPM_BACKEND=transformers
+SMOLNALYSIS_MINICPM_TRANSFORMERS_MODEL_ID=openbmb/MiniCPM5-1B
+SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_ADAPTER_REPO_ID=build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora
+SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_TEMPERATURE=0
+SMOLNALYSIS_MINICPM_MAX_NEW_TOKENS=384
+```
+
+Upload the trained adapter from a machine with `HF_TOKEN` set:
+
+```bash
+uv run python train/ckan/upload_adapter_to_hf.py \
+  --repo-id build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora
+```
+
+The upload script only pushes the deployable top-level adapter files and skips checkpoints and optimizer state. Keep the CKAN agent validator enabled in production; the LoRA proposes tool actions, while Python validates observed package/resource ids and executes tools.
+
 ### llama.cpp Deployment Target
 
 The intended production path should use the `build-small-hackathon/CodeFlow` llama.cpp pattern: the Gradio Space runs `llama-cpp-python` directly, downloads a GGUF with `huggingface_hub`, and serves a custom frontend through `gr.Server`.
