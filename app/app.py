@@ -356,7 +356,7 @@ def _retrieval_stream_prefix(prompt: str, endpoint: str) -> str:
     progress_refs = ", ".join(f"progress{index}" for index in range(1, 13))
     return "\n".join(
         [
-            "root = Card([header, suggestion, progress, candidates, callout, followups])",
+            "root = Card([header, suggestion, progress, tool_details, candidates, callout, followups])",
             'header = CardHeader("Finding dataset", "Searching CKAN and inspecting candidates")',
             f'context = TextContent({_json_arg_safe(f"Request: {prompt} | Endpoint: {endpoint}")}, "small")',
             f'progress = ListBlock([{progress_refs}], "number")',
@@ -378,6 +378,10 @@ def _agent_stream_suffix(result: AgentResult, progress_count: int) -> str:
     lines = []
     for step in range(progress_count + 1, 13):
         lines.append(f'progress{step} = ListItem("waiting", "")')
+    tool_rows = _agent_tool_detail_rows(result.events)
+    for index, column in enumerate(["step", "event", "tool", "detail", "payload"]):
+        lines.append(f'tool_col{index + 1} = Col({_json_arg_safe(column)}, {_json_arg_safe([row[column] for row in tool_rows])}, "string")')
+    lines.append('tool_details = Table([tool_col1, tool_col2, tool_col3, tool_col4, tool_col5])')
     columns = list(rows[0].keys())
     for index, column in enumerate(columns):
         lines.append(f'candidate_col{index + 1} = Col({_json_arg_safe(column)}, {_json_arg_safe([row.get(column) for row in rows])}, "string")')
@@ -398,6 +402,93 @@ def _agent_stream_suffix(result: AgentResult, progress_count: int) -> str:
         ]
     )
     return "\n".join(lines)
+
+
+def _agent_tool_detail_rows(events: list[AgentEvent]) -> list[dict[str, str]]:
+    rows = []
+    for index, event in enumerate(events, start=1):
+        if event.type not in {"model_action", "tool_call", "tool_result", "selection", "retry", "error"}:
+            continue
+        rows.append(
+            {
+                "step": str(index),
+                "event": event.type,
+                "tool": _agent_event_tool_name(event),
+                "detail": _shorten(event.detail, 140),
+                "payload": _shorten(_agent_event_payload(event), 220),
+            }
+        )
+    if not rows:
+        rows.append({"step": "-", "event": "waiting", "tool": "-", "detail": "No tool calls yet.", "payload": ""})
+    return rows[:16]
+
+
+def _agent_event_tool_name(event: AgentEvent) -> str:
+    data = event.data or {}
+    action = data.get("action")
+    if isinstance(action, dict):
+        return str(action.get("action") or action.get("tool") or event.type)
+    tool_result = data.get("tool_result")
+    if isinstance(tool_result, dict):
+        return str(tool_result.get("tool") or event.type)
+    resource = data.get("resource")
+    if isinstance(resource, dict):
+        return str(resource.get("format") or event.type)
+    return event.type
+
+
+def _agent_event_payload(event: AgentEvent) -> str:
+    data = event.data or {}
+    action = data.get("action")
+    if isinstance(action, dict):
+        args = action.get("args")
+        confidence = action.get("confidence")
+        source = action.get("source")
+        return json.dumps({"args": args, "confidence": confidence, "source": source}, ensure_ascii=False, default=str)
+    tool_result = data.get("tool_result")
+    if isinstance(tool_result, dict):
+        summary = {
+            "ok": tool_result.get("ok"),
+            "summary": tool_result.get("summary"),
+            "data": _compact_tool_result_data(tool_result.get("data")),
+            "error": tool_result.get("error") or "",
+        }
+        return json.dumps(summary, ensure_ascii=False, default=str)
+    resource = data.get("resource")
+    if isinstance(resource, dict):
+        return json.dumps(
+            {
+                "package": resource.get("package_title"),
+                "resource": resource.get("name"),
+                "format": resource.get("format"),
+                "url": resource.get("url"),
+            },
+            ensure_ascii=False,
+            default=str,
+        )
+    if data:
+        return json.dumps(data, ensure_ascii=False, default=str)
+    return ""
+
+
+def _compact_tool_result_data(data: Any) -> Any:
+    if not isinstance(data, dict):
+        return data
+    compact: dict[str, Any] = {}
+    for key, value in data.items():
+        if isinstance(value, list):
+            compact[key] = value[:5]
+            compact[f"{key}_count"] = len(value)
+        else:
+            compact[key] = value
+    return compact
+
+
+def _shorten(value: Any, max_chars: int) -> str:
+    text = str(value)
+    if len(text) <= max_chars:
+        return text
+    return text[: max_chars - 1].rstrip() + "…"
 
 
 def _json_arg_safe(value: Any) -> str:
@@ -456,7 +547,10 @@ async def _stream_retrieval_workflow_response(
         if item["type"] == "event":
             event: AgentEvent = item["event"]
             progress_count += 1
-            trace_events.append({"name": event.type, "detail": event.detail})
+            trace_event = {"name": event.type, "detail": event.detail}
+            if event.data:
+                trace_event["data"] = event.data
+            trace_events.append(trace_event)
             if progress_count <= 12:
                 line = f"progress{progress_count} = ListItem({_json_arg_safe(event.type)}, {_json_arg_safe(event.detail)})"
                 chunks.append(line)

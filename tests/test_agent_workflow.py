@@ -90,6 +90,15 @@ class CkanAgentWorkflowTests(TestCase):
 
         self.assertIn("already ran", error)
 
+    def test_repeated_group_list_is_rejected(self) -> None:
+        session = AgentSession("Zeig mir offene Daten zu Fahrrädern in München.", "https://opendata.muenchen.de/")
+        session.catalog_tools_run.add("group_list")
+        action = AgentAction("group_list", {"rows": 10}, "repeat", 0.7)
+
+        _validated, error = validate_action(action, session)
+
+        self.assertIn("already ran", error)
+
     def test_unknown_action_is_rejected(self) -> None:
         session = AgentSession("Find data", "https://opendata.muenchen.de/")
         action = AgentAction("delete_everything", {}, "bad", 1)
@@ -183,6 +192,28 @@ class CkanAgentWorkflowTests(TestCase):
         self.assertEqual(result.status, "max_tool_calls")
         self.assertEqual(package_search_mock.call_args.args[1], "fahrrad")
         self.assertTrue(any(event.type == "retry" for event in result.events))
+
+    @patch("app.ckan_agent.group_list")
+    @patch("app.ckan_agent.tag_search")
+    @patch("app.ckan_agent.package_search")
+    def test_repeated_group_list_falls_back_to_search(self, package_search_mock, tag_search_mock, group_list_mock) -> None:
+        package_search_mock.return_value = {"count": 0, "results": []}
+        tag_search_mock.return_value = {"results": [{"name": "Fahrrad"}]}
+        group_list_mock.return_value = {"value": [{"name": "tran", "title": "Transport"}]}
+        model = _ModelScript(
+            [
+                {"action": "group_list", "args": {"rows": 10}, "reason": "discover groups", "confidence": 0.6},
+                {"action": "group_list", "args": {"rows": 10}, "reason": "repeat groups", "confidence": 0.6},
+                {"action": "group_list", "args": {"rows": 10}, "reason": "repeat groups", "confidence": 0.6},
+            ]
+        )
+
+        result = run_ckan_agent("Zeig mir offene Daten zu Fahrrädern in München.", "https://opendata.muenchen.de/", model_caller=model, max_tool_calls=3)
+
+        self.assertEqual(group_list_mock.call_count, 1)
+        self.assertGreaterEqual(package_search_mock.call_count, 1)
+        self.assertEqual(result.status, "max_tool_calls")
+        self.assertTrue(any("group_list already ran" in event.detail for event in result.events if event.type == "retry"))
 
     @patch("app.ckan_agent.package_search")
     def test_loop_stops_at_max_tool_calls(self, package_search_mock) -> None:
@@ -285,6 +316,7 @@ class CkanAgentWorkflowTests(TestCase):
         self.assertGreaterEqual(len([chunk for chunk in content_chunks if chunk]), 4)
         self.assertIn("Finding dataset", content)
         self.assertIn("progress1 = ListItem", content)
+        self.assertIn("tool_details = Table", content)
         self.assertIn("Selected Population CSV", content)
         parse_openui_lang(content)
 

@@ -125,6 +125,7 @@ def run_ckan_agent(
         valid_action, error = validate_action(action, session)
         if error:
             _record_event(session, AgentEvent("retry", error, {"action": asdict(action)}), on_event)
+            _append_validation_error(session, action, error)
             valid_action = fallback_action(session)
         _record_event(session, AgentEvent("model_action", f"{valid_action.action}: {valid_action.reason}", {"action": asdict(valid_action)}), on_event)
 
@@ -220,6 +221,8 @@ def validate_action(action: AgentAction, session: AgentSession) -> tuple[AgentAc
         rows = int(action.args.get("rows", 10) or 10)
         action.args["rows"] = max(1, min(rows, 25))
     if action.action in {"group_list", "organization_list"}:
+        if action.action in session.catalog_tools_run:
+            return action, f"{action.action} already ran in this run; choose tag_search, package_search, package_show, or ask_clarification instead."
         rows = int(action.args.get("rows", 10) or 10)
         action.args["rows"] = max(1, min(rows, 25))
     if action.action == "package_show":
@@ -431,7 +434,34 @@ def _append_tool_result(session: AgentSession, action: AgentAction, result: Tool
     session.messages.append(
         {
             "role": "user",
-            "content": "Tool observation:\n" + json.dumps({"action": asdict(action), "result": asdict(result)}, ensure_ascii=False, default=str),
+            "content": "Tool observation:\n" + json.dumps(
+                {
+                    "action": asdict(action),
+                    "result": asdict(result),
+                    "catalog_tools_already_run": sorted(session.catalog_tools_run),
+                    "instruction": "Do not repeat catalog discovery tools that already ran. Choose the next useful tool.",
+                },
+                ensure_ascii=False,
+                default=str,
+            ),
+        }
+    )
+
+
+def _append_validation_error(session: AgentSession, action: AgentAction, error: str) -> None:
+    session.messages.append(
+        {
+            "role": "user",
+            "content": "Rejected model action:\n" + json.dumps(
+                {
+                    "action": asdict(action),
+                    "error": error,
+                    "catalog_tools_already_run": sorted(session.catalog_tools_run),
+                    "instruction": "Choose a different valid action. Do not repeat rejected actions.",
+                },
+                ensure_ascii=False,
+                default=str,
+            ),
         }
     )
 
