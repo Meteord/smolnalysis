@@ -9,7 +9,7 @@ from unittest import TestCase, main
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "train" / "ckan"))
 
-from evaluate_lora import INFERENCE_SYSTEM_PROMPT, expected_action, normalize_prediction, prompt_messages, strict_prompt_messages
+from evaluate_lora import INFERENCE_SYSTEM_PROMPT, expected_action, extract_first_json_object, normalize_prediction, prompt_messages, strict_prompt_messages
 from ckan_dataset_tools import read_jsonl, validate_training_example
 
 
@@ -54,6 +54,16 @@ class EvaluateLoraTests(TestCase):
 ```"""
 
         self.assertEqual(normalize_prediction(prediction), '{"action":"finish","args":{}}')
+
+    def test_extract_first_json_object_ignores_trailing_json(self) -> None:
+        prediction = '{"action":"tag_search","args":{"query":"Fahrrad"}} {"action":"package_search","args":{}}'
+
+        self.assertEqual(extract_first_json_object(prediction), '{"action":"tag_search","args":{"query":"Fahrrad"}}')
+
+    def test_extract_first_json_object_handles_braces_in_strings(self) -> None:
+        prediction = '{"thought":"Use {literal} text.","action":"finish","args":{}}\nDone.'
+
+        self.assertEqual(extract_first_json_object(prediction), '{"thought":"Use {literal} text.","action":"finish","args":{}}')
 
     def test_multitool_eval_file_is_valid_and_balanced(self) -> None:
         rows = read_jsonl(Path("train/ckan/data/multitool_eval_golden.jsonl"))

@@ -13,7 +13,8 @@ DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_examples_multitool_eval_160
 DEFAULT_OUTPUT_DIR = "train/ckan/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
 DEFAULT_TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 PROTOCOL_SYSTEM_PROMPT = """You are the CKAN retrieval policy for smolnalysis. Emit strict JSON only.
-Output exactly one JSON object with keys: thought, action, args, confidence.
+Output exactly one compact JSON object with keys: thought, action, args, confidence.
+The confidence key is required for every action and must be a number from 0.0 to 1.0.
 Do not output <think> tags. Do not output markdown. Do not output prose before or after JSON.
 The thought field is a short decision summary, not chain-of-thought.
 Allowed actions: tag_search, group_list, organization_list, package_search, package_show, select_resource, finish, ask_clarification."""
@@ -52,7 +53,15 @@ def load_jsonl(path: str | Path, limit: int | None = None) -> list[dict[str, Any
 
 
 def normalize_messages(messages: list[dict[str, str]]) -> list[dict[str, str]]:
-    normalized = [dict(message) for message in messages]
+    normalized = []
+    for message in messages:
+        copied = dict(message)
+        if copied.get("role") == "assistant" and isinstance(copied.get("content"), str):
+            try:
+                copied["content"] = json.dumps(json.loads(copied["content"]), ensure_ascii=False, separators=(",", ":"))
+            except json.JSONDecodeError:
+                pass
+        normalized.append(copied)
     if normalized and normalized[0].get("role") == "system":
         normalized[0]["content"] = PROTOCOL_SYSTEM_PROMPT
     else:

@@ -226,6 +226,51 @@ class CkanDatasetToolsTests(TestCase):
         self.assertFalse(result.ok)
         self.assertIn("missing_match_evidence", {issue.code for issue in result.issues})
 
+    def test_select_resource_accepts_bare_uuid_when_observed_id_is_prefixed(self) -> None:
+        result = validate_ckan_action(
+            json.dumps(
+                {
+                    "thought": "Select observed resource.",
+                    "action": "select_resource",
+                    "args": {
+                        "package_id": "pkg",
+                        "resource_id": "2252dc7c-265b-4f21-aa0e-b602c30cb85f",
+                        "match_evidence": "The observed resource belongs to the matching package.",
+                    },
+                    "confidence": 0.9,
+                }
+            ),
+            {
+                "observed_packages": ["pkg"],
+                "observed_resources": ["pkg:2252dc7c-265b-4f21-aa0e-b602c30cb85f"],
+                "has_enough_evidence": True,
+            },
+        )
+
+        self.assertTrue(result.ok, result.issues)
+
+    def test_finish_validates_observed_candidates(self) -> None:
+        result = validate_ckan_action(
+            json.dumps(
+                {
+                    "thought": "Finish with observed resource.",
+                    "action": "finish",
+                    "args": {
+                        "selected_candidates": [{"package_id": "pkg", "resource_id": "res"}],
+                        "rationale": "The selected candidate directly matches the request.",
+                    },
+                    "confidence": 0.9,
+                }
+            ),
+            {
+                "observed_packages": ["pkg"],
+                "observed_resources": ["pkg:res"],
+                "has_enough_evidence": True,
+            },
+        )
+
+        self.assertTrue(result.ok, result.issues)
+
 
 if __name__ == "__main__":
     main()

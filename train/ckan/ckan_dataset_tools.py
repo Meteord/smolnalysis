@@ -397,7 +397,6 @@ def _validate_select_resource(args: dict[str, Any], context: dict[str, Any], iss
     match_evidence = args.get("match_evidence", args.get("reason"))
     observed_packages = set(context.get("observed_packages") or [])
     observed_resources = set(context.get("observed_resources") or [])
-    combined_resource_id = f"{package_id}:{resource_id}"
 
     if not isinstance(package_id, str) or not package_id.strip():
         issues.append(ValidationIssue("invalid_package_id", "`select_resource.args.package_id` must be a non-empty string."))
@@ -405,7 +404,7 @@ def _validate_select_resource(args: dict[str, Any], context: dict[str, Any], iss
         issues.append(ValidationIssue("unobserved_package", "`package_id` must refer to an observed package."))
     if not isinstance(resource_id, str) or not resource_id.strip():
         issues.append(ValidationIssue("invalid_resource_id", "`select_resource.args.resource_id` must be a non-empty string."))
-    elif observed_resources and combined_resource_id not in observed_resources and resource_id not in observed_resources:
+    elif observed_resources and not _is_observed_resource(package_id, resource_id, observed_resources):
         issues.append(ValidationIssue("unobserved_resource", "`resource_id` must refer to an observed resource."))
     if not isinstance(match_evidence, str) or len(match_evidence.strip()) < 12:
         issues.append(ValidationIssue("missing_match_evidence", "`select_resource.args.match_evidence` must explain the concrete match."))
@@ -420,6 +419,34 @@ def _validate_finish(args: dict[str, Any], context: dict[str, Any], issues: list
         issues.append(ValidationIssue("missing_rationale", "`finish.args.rationale` must explain why retrieval is done."))
     if context and context.get("has_enough_evidence") is not True:
         issues.append(ValidationIssue("finish_too_early", "`finish` requires enough evidence in the current context."))
+    if isinstance(selected_candidates, list):
+        observed_packages = set(context.get("observed_packages") or [])
+        observed_resources = set(context.get("observed_resources") or [])
+        for candidate in selected_candidates:
+            if not isinstance(candidate, dict):
+                issues.append(ValidationIssue("invalid_candidate", "`finish.args.selected_candidates` entries must be objects."))
+                continue
+            package_id = candidate.get("package_id")
+            resource_id = candidate.get("resource_id")
+            if not isinstance(package_id, str) or not package_id.strip():
+                issues.append(ValidationIssue("invalid_package_id", "`finish` candidates need a non-empty package_id."))
+            elif observed_packages and package_id not in observed_packages:
+                issues.append(ValidationIssue("unobserved_package", "`finish` candidates must use observed package ids."))
+            if not isinstance(resource_id, str) or not resource_id.strip():
+                issues.append(ValidationIssue("invalid_resource_id", "`finish` candidates need a non-empty resource_id."))
+            elif observed_resources and not _is_observed_resource(package_id, resource_id, observed_resources):
+                issues.append(ValidationIssue("unobserved_resource", "`finish` candidates must use observed resource ids."))
+
+
+def _is_observed_resource(package_id: Any, resource_id: Any, observed_resources: set[str]) -> bool:
+    if not isinstance(resource_id, str):
+        return False
+    if resource_id in observed_resources:
+        return True
+    if isinstance(package_id, str) and f"{package_id}:{resource_id}" in observed_resources:
+        return True
+    suffix = f":{resource_id}"
+    return any(observed.endswith(suffix) for observed in observed_resources)
 
 
 def _validate_ask_clarification(args: dict[str, Any], issues: list[ValidationIssue]) -> None:

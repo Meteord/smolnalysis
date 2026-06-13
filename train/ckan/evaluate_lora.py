@@ -20,7 +20,8 @@ DEFAULT_ADAPTER = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
 DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_examples_multitool_eval_160.jsonl"
 DEFAULT_OUTPUT_DIR = "train/ckan/outputs/eval"
 INFERENCE_SYSTEM_PROMPT = """You are the CKAN retrieval policy for smolnalysis. Emit strict JSON only.
-Output exactly one JSON object with keys: thought, action, args, confidence.
+Output exactly one compact JSON object with keys: thought, action, args, confidence.
+The confidence key is required for every action and must be a number from 0.0 to 1.0.
 Do not output <think> tags. Do not output markdown. Do not output prose before or after JSON.
 The thought field is a short decision summary, not chain-of-thought.
 Allowed actions: tag_search, group_list, organization_list, package_search, package_show, select_resource, finish, ask_clarification.
@@ -66,11 +67,39 @@ def normalize_prediction(text: str) -> str:
         stripped = stripped.strip("`")
         if stripped.startswith("json"):
             stripped = stripped[4:].strip()
-    start = stripped.find("{")
-    end = stripped.rfind("}")
-    if start >= 0 and end >= start:
-        return stripped[start : end + 1]
+    extracted = extract_first_json_object(stripped)
+    if extracted is not None:
+        return extracted
     return stripped
+
+
+def extract_first_json_object(text: str) -> str | None:
+    start = text.find("{")
+    if start < 0:
+        return None
+
+    depth = 0
+    in_string = False
+    escaped = False
+    for index in range(start, len(text)):
+        char = text[index]
+        if in_string:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+            continue
+        if char == '"':
+            in_string = True
+        elif char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return text[start : index + 1]
+    return text[start:]
 
 
 def generate_prediction(model: Any, tokenizer: Any, messages: list[dict[str, str]], max_new_tokens: int) -> str:
@@ -175,7 +204,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--eval-data", default=DEFAULT_EVAL_DATA)
     parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--limit", type=int)
-    parser.add_argument("--max-new-tokens", type=int, default=256)
+    parser.add_argument("--max-new-tokens", type=int, default=384)
     parser.add_argument("--strict-prompt", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--quiet", action="store_true")
     return parser
