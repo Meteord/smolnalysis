@@ -33,6 +33,11 @@ class MiniCpmTransformersTests(TestCase):
         self.assertEqual(status["cache"]["loaded_models"], 0)
         self.assertIn("ckan_retrieval", status["roles"])
         self.assertEqual(status["roles"]["ckan_retrieval"]["temperature"], 0.0)
+        self.assertEqual(
+            status["roles"]["ckan_retrieval"]["adapter_repo_id"],
+            "build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora",
+        )
+        self.assertTrue(status["roles"]["ckan_retrieval"]["adapter_configured"])
 
     def test_role_config_reads_peft_adapter_repo(self) -> None:
         os.environ["SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_ADAPTER_REPO_ID"] = "org/adapter"

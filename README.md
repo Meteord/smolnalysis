@@ -63,6 +63,8 @@ SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_TEMPERATURE=0
 SMOLNALYSIS_MINICPM_MAX_NEW_TOKENS=384
 ```
 
+`SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_ADAPTER_REPO_ID` defaults to the repo above, so the Space uses the uploaded CKAN adapter automatically unless this value is overridden.
+
 Upload the trained adapter from a machine with `HF_TOKEN` set:
 
 ```bash
