@@ -56,7 +56,7 @@ class HarvestCkanScenariosTests(TestCase):
         select = next(scenario for scenario in scenarios if scenario["target_action"] == "select_resource")
         self.assertEqual(select["observed_resources"], ["population-indicators:csv-1"])
 
-    def test_builds_reject_scenario_for_document_only_package(self) -> None:
+    def test_builds_retry_scenario_for_document_only_package(self) -> None:
         scenarios = build_scenarios_for_package(
             "https://opendata.muenchen.de/",
             "budget",
@@ -68,7 +68,10 @@ class HarvestCkanScenariosTests(TestCase):
             0,
         )
 
-        self.assertIn("reject_result", {scenario["target_action"] for scenario in scenarios})
+        retry = next(scenario for scenario in scenarios if scenario["id"].endswith("_retry"))
+        self.assertEqual(retry["target_action"], "package_search")
+        self.assertFalse(retry["has_enough_evidence"])
+        self.assertTrue(retry["tool_errors"])
 
     def test_harvest_scenarios_uses_ckan_search_results(self) -> None:
         captured_urls = []
@@ -156,12 +159,15 @@ class HarvestCkanScenariosTests(TestCase):
         self.assertIn("package_show", target_actions)
         self.assertIn("select_resource", target_actions)
         self.assertIn("finish", target_actions)
-        self.assertIn("reject_result", target_actions)
+        self.assertIn("package_search", target_actions)
+        self.assertIn("tag_search", target_actions)
+        self.assertIn("group_list", target_actions)
+        self.assertIn("organization_list", target_actions)
         self.assertTrue(any(scenario.get("filters", {}).get("group") == "tran" for scenario in scenarios))
         self.assertFalse(any("group=" in scenario["request"] or "organization=" in scenario["request"] for scenario in scenarios))
         self.assertTrue(any("group=tran" in scenario["state"] for scenario in scenarios if scenario.get("filters")))
 
-    def test_inventory_scenarios_reject_topic_mismatches(self) -> None:
+    def test_inventory_scenarios_retry_topic_mismatches(self) -> None:
         scenarios = build_inventory_scenarios(
             "https://opendata.muenchen.de/",
             [
@@ -178,7 +184,8 @@ class HarvestCkanScenariosTests(TestCase):
         )
         actions = {scenario["target_action"] for scenario in scenarios}
 
-        self.assertIn("reject_result", actions)
+        self.assertIn("package_search", actions)
+        self.assertTrue(any(scenario["id"].endswith("_retry") for scenario in scenarios))
         self.assertNotIn("finish", actions)
 
     def test_inventory_request_language_stays_consistent(self) -> None:

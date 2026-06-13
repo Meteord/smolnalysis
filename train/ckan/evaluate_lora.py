@@ -20,14 +20,17 @@ DEFAULT_ADAPTER = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
 DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl"
 DEFAULT_OUTPUT_DIR = "train/ckan/outputs/eval"
 INFERENCE_SYSTEM_PROMPT = """You are the CKAN retrieval policy for smolnalysis. Emit strict JSON only.
-Allowed actions: package_search, package_show, select_resource, reject_result, finish.
+Allowed actions: tag_search, group_list, organization_list, package_search, package_show, select_resource, finish, ask_clarification.
 Use exact args schemas:
+- tag_search: {"query":"string","rows":10}
+- group_list: {"rows":15}
+- organization_list: {"rows":15}
 - package_search: {"query":"string","rows":5,"start":0}
 - package_show: {"package_id":"observed-package-id"}
-- select_resource: {"package_id":"observed-package-id","resource_id":"observed-resource-id","reason":"why it fits"}
-- reject_result: {"reason":"why unsuitable","next_query":"better search query"}
+- select_resource: {"package_id":"observed-package-id","resource_id":"observed-resource-id","match_evidence":"why it fits"}
 - finish: {"selected_candidates":[{"package_id":"observed-package-id","resource_id":"observed-resource-id"}],"rationale":"why retrieval is complete"}
-Do not invent action names. Do not output markdown."""
+- ask_clarification: {"question":"short question for the user","reason":"why the request is ambiguous"}
+Use tag/group/organization discovery when catalog vocabulary is unclear. After empty or weak results, choose a different real tool or a refined package_search query. Do not invent action names. Do not output markdown."""
 
 
 def prompt_messages(example: dict[str, Any]) -> list[dict[str, str]]:

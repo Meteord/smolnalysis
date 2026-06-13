@@ -58,11 +58,12 @@ assistant_only_loss: true
 
 The adapter should learn when to:
 
-- Search CKAN packages.
-- Refine a weak query.
+- Discover CKAN tags when user wording may not match package titles.
+- Inspect catalog groups and organizations after empty, broad, or confusing results.
+- Search CKAN packages with refined terms.
 - Inspect package details.
-- Reject unsuitable resources.
-- Rerun retrieval when the request is ambiguous or comparative.
+- Select an observed resource with concrete match evidence.
+- Ask for clarification when the user request is genuinely ambiguous.
 - Stop with selected dataset/resource candidates when there is enough evidence.
 
 The model is not responsible for calling CKAN itself. The backend will later parse the model output and execute the selected action through real tools.
@@ -74,7 +75,7 @@ Assistant messages must be strict JSON only. Do not emit markdown fences or pros
 ```json
 {
   "thought": "short private-style reasoning summary, no chain-of-thought dump",
-  "action": "package_search | package_show | select_resource | reject_result | finish",
+  "action": "tag_search | group_list | organization_list | package_search | package_show | select_resource | finish | ask_clarification",
   "args": {},
   "confidence": 0.0
 }
@@ -82,11 +83,14 @@ Assistant messages must be strict JSON only. Do not emit markdown fences or pros
 
 Action arguments:
 
-- `package_search`: `query`, `rows`, `start`, optional `filters`.
+- `tag_search`: `query`, `rows`.
+- `group_list`: `rows`.
+- `organization_list`: `rows`.
+- `package_search`: `query`, `rows`, `start`.
 - `package_show`: `package_id`.
-- `select_resource`: `package_id`, `resource_id`, `reason`.
-- `reject_result`: `reason`, `next_query`.
+- `select_resource`: `package_id`, `resource_id`, `match_evidence`.
 - `finish`: `selected_candidates`, `rationale`.
+- `ask_clarification`: `question`, `reason`.
 
 Keep `thought` short. It should summarize the decision, not expose long chain-of-thought.
 
@@ -227,7 +231,7 @@ Day 3, if available:
 
 - Adapter emits parseable JSON on at least 95% of held-out prompts.
 - Valid action rate is at least 90%.
-- It can choose `package_search`, `package_show`, `select_resource`, `reject_result`, and `finish` in appropriate benchmark cases.
+- It can choose all current catalog actions in appropriate benchmark cases: `tag_search`, `group_list`, `organization_list`, `package_search`, `package_show`, `select_resource`, `finish`, and `ask_clarification`.
 - It reruns or refines retrieval for ambiguous/comparative prompts.
 - It does not invent credentials, private endpoints, or resources outside the supplied observation context.
 

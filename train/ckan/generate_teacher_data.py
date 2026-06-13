@@ -24,22 +24,30 @@ TEACHER_SYSTEM_PROMPT = """You generate one supervised fine-tuning example for a
 The assistant must emit strict JSON only:
 {
   "thought": "short decision summary, no long chain-of-thought",
-  "action": "package_search | package_show | select_resource | reject_result | finish",
+  "action": "tag_search | group_list | organization_list | package_search | package_show | select_resource | finish | ask_clarification",
   "args": {},
   "confidence": 0.0
 }
 
 Rules:
+- Prefer tag_search when the user request may not match CKAN package titles directly.
+- Use group_list or organization_list to discover catalog vocabulary after weak/empty searches or broad results.
+- package_search should use the user request, discovered tags/groups/organizations, and prior tool errors/results.
 - package_show must use an observed package.
-- select_resource must use an observed resource.
+- select_resource must use an observed resource and include concrete match_evidence.
 - finish only if enough evidence is true.
-- package_search queries must not contain URLs, credentials, or API keys.
+- ask_clarification when the request is ambiguous or candidates are too broad.
+- Retry after failed/empty results with a different tool or different query; do not repeat the exact failed call.
+- Search/tag queries must not contain URLs, credentials, or API keys.
 - Use these exact args schemas:
+  - tag_search args: {"query": "string", "rows": 10}
+  - group_list args: {"rows": 15}
+  - organization_list args: {"rows": 15}
   - package_search args: {"query": "string", "rows": 5, "start": 0}
   - package_show args: {"package_id": "observed-package-id"}
-  - select_resource args: {"package_id": "observed-package-id", "resource_id": "observed-resource-id-without-package-prefix-if-possible", "reason": "why this resource fits"}
-  - reject_result args: {"reason": "why current result is unsuitable", "next_query": "better search query"}
+  - select_resource args: {"package_id": "observed-package-id", "resource_id": "observed-resource-id-without-package-prefix-if-possible", "match_evidence": "why this resource directly fits"}
   - finish args: {"selected_candidates": [{"package_id": "observed-package-id", "resource_id": "observed-resource-id"}], "rationale": "why retrieval is complete"}
+  - ask_clarification args: {"question": "short user-facing question", "reason": "why clarification is needed"}
 - Do not use CKAN API-native names like q, fq, f, id, or package_name in args. Use the exact schemas above.
 - output strict JSON only."""
 
@@ -106,12 +114,20 @@ def teacher_config_from_env(temperature: float, env_file: str | None = ".env") -
 def build_user_content(scenario: dict[str, Any]) -> str:
     observed_packages = scenario.get("observed_packages", [])
     observed_resources = scenario.get("observed_resources", [])
+    observed_tags = scenario.get("observed_tags", [])
+    observed_groups = scenario.get("observed_groups", [])
+    observed_organizations = scenario.get("observed_organizations", [])
+    tool_errors = scenario.get("tool_errors", [])
     lines = [
         f"Request: {scenario.get('request', '')}",
         f"Endpoint: {scenario.get('endpoint', 'https://opendata.muenchen.de/')}",
         f"Current state: {scenario.get('state', 'No prior retrieval state.')}",
         f"Observed packages: {json.dumps(observed_packages, ensure_ascii=False)}",
         f"Observed resources: {json.dumps(observed_resources, ensure_ascii=False)}",
+        f"Observed tags: {json.dumps(observed_tags, ensure_ascii=False)}",
+        f"Observed groups: {json.dumps(observed_groups, ensure_ascii=False)}",
+        f"Observed organizations: {json.dumps(observed_organizations, ensure_ascii=False)}",
+        f"Tool errors or empty results: {json.dumps(tool_errors, ensure_ascii=False)}",
         f"Enough evidence: {bool(scenario.get('has_enough_evidence', False))}",
     ]
     if scenario.get("target_action"):
@@ -124,11 +140,14 @@ def build_user_content(scenario: dict[str, Any]) -> str:
 
 def required_args_schema(action: str) -> str:
     schemas = {
+        "tag_search": '{"query":"search terms","rows":10}',
+        "group_list": '{"rows":15}',
+        "organization_list": '{"rows":15}',
         "package_search": '{"query":"search terms","rows":5,"start":0}',
         "package_show": '{"package_id":"one observed package id"}',
-        "select_resource": '{"package_id":"one observed package id","resource_id":"one observed resource id","reason":"selection reason"}',
-        "reject_result": '{"reason":"rejection reason","next_query":"better search terms"}',
+        "select_resource": '{"package_id":"one observed package id","resource_id":"one observed resource id","match_evidence":"concrete match evidence"}',
         "finish": '{"selected_candidates":[{"package_id":"observed package id","resource_id":"observed resource id"}],"rationale":"completion rationale"}',
+        "ask_clarification": '{"question":"clarifying question","reason":"why clarification is needed"}',
     }
     return schemas.get(action, "{}")
 
@@ -153,6 +172,9 @@ def build_training_example_from_teacher(scenario: dict[str, Any], assistant_cont
             "ckan_context": {
                 "observed_packages": scenario.get("observed_packages", []),
                 "observed_resources": scenario.get("observed_resources", []),
+                "observed_tags": scenario.get("observed_tags", []),
+                "observed_groups": scenario.get("observed_groups", []),
+                "observed_organizations": scenario.get("observed_organizations", []),
                 "has_enough_evidence": bool(scenario.get("has_enough_evidence", False)),
             },
         },

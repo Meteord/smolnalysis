@@ -55,17 +55,40 @@ class EvaluateLoraTests(TestCase):
 
         self.assertEqual(normalize_prediction(prediction), '{"action":"finish","args":{}}')
 
-    def test_challenge_eval_file_is_valid_and_balanced(self) -> None:
-        rows = read_jsonl(Path("train/ckan/data/generated/challenge_eval_30.jsonl"))
+    def test_multitool_eval_file_is_valid_and_balanced(self) -> None:
+        rows = read_jsonl(Path("train/ckan/data/multitool_eval_golden.jsonl"))
         actions = Counter(expected_action(row)["action"] for row in rows)
 
-        self.assertEqual(len(rows), 30)
+        self.assertEqual(len(rows), 8)
         self.assertTrue(all(validate_training_example(row).ok for row in rows))
-        self.assertEqual(actions["package_search"], 6)
-        self.assertEqual(actions["package_show"], 6)
-        self.assertEqual(actions["select_resource"], 6)
-        self.assertEqual(actions["reject_result"], 6)
-        self.assertEqual(actions["finish"], 6)
+        for action in [
+            "tag_search",
+            "group_list",
+            "organization_list",
+            "package_search",
+            "package_show",
+            "select_resource",
+            "finish",
+            "ask_clarification",
+        ]:
+            self.assertEqual(actions[action], 1)
+
+    def test_current_contract_accepts_new_catalog_actions(self) -> None:
+        for action, args in [
+            ("tag_search", {"query": "Fahrrad", "rows": 10}),
+            ("group_list", {"rows": 15}),
+            ("organization_list", {"rows": 15}),
+        ]:
+            example = {
+                "messages": [
+                    {
+                        "role": "assistant",
+                        "content": json.dumps({"action": action, "args": args, "thought": "Discover catalog context.", "confidence": 0.8}),
+                    }
+                ]
+            }
+
+            self.assertTrue(validate_training_example(example).ok)
 
 
 if __name__ == "__main__":

@@ -52,7 +52,7 @@ Assistant content must be strict JSON only:
 ```json
 {
   "thought": "short decision summary, not long chain-of-thought",
-  "action": "package_search | package_show | select_resource | reject_result | finish",
+  "action": "tag_search | group_list | organization_list | package_search | package_show | select_resource | finish | ask_clarification",
   "args": {},
   "confidence": 0.0
 }
@@ -229,6 +229,7 @@ The validator checks:
 - Searches do not contain credentials or URLs.
 - `package_show` only references observed packages when context is present.
 - `select_resource` only references observed resources when context is present.
+- `tag_search`, `group_list`, and `organization_list` are used to discover catalog vocabulary before or between package searches.
 - `finish` only happens when `has_enough_evidence` is true.
 
 ## Distilabel Pipeline Shape
@@ -254,7 +255,7 @@ You generate one supervised fine-tuning example for a CKAN retrieval policy.
 The assistant must emit strict JSON only:
 {
   "thought": "short decision summary, no long chain-of-thought",
-  "action": "package_search | package_show | select_resource | reject_result | finish",
+  "action": "tag_search | group_list | organization_list | package_search | package_show | select_resource | finish | ask_clarification",
   "args": {},
   "confidence": 0.0
 }
@@ -278,11 +279,14 @@ Rules:
 
 Start with 200 raw teacher examples and filter them aggressively:
 
-- 60 initial `package_search`.
-- 40 query refinement / `reject_result`.
-- 40 `package_show`.
-- 40 `select_resource`.
-- 20 `finish`.
+- 35 `tag_search`.
+- 25 `group_list`.
+- 25 `organization_list`.
+- 45 initial or refined `package_search`.
+- 35 `package_show`.
+- 25 `select_resource`.
+- 5 `finish`.
+- 5 `ask_clarification`.
 
 If fewer than 70% pass validation, improve the teacher prompt before generating more.
 
@@ -298,4 +302,4 @@ Avoiding overfit:
 - Mix groups, organizations, and unfiltered searches.
 - Hold out a golden eval split by dataset id so train and eval do not share the same package.
 - Prefer action diversity and format diversity over repeating the same popular dataset many times.
-- Include document-only or no-tabular-resource packages for `reject_result`.
+- Include document-only, no-tabular-resource, empty-result, and broad-result cases that force another concrete tool call instead of a legacy abstract rejection action.

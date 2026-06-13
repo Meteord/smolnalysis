@@ -8,8 +8,20 @@ from pathlib import Path
 from typing import Any
 
 
-ALLOWED_ACTIONS = {"package_search", "package_show", "select_resource", "reject_result", "finish"}
-DEFAULT_SYSTEM_PROMPT = "You are the CKAN retrieval policy for smolnalysis. Emit strict JSON actions only."
+ALLOWED_ACTIONS = {
+    "tag_search",
+    "group_list",
+    "organization_list",
+    "package_search",
+    "package_show",
+    "select_resource",
+    "finish",
+    "ask_clarification",
+}
+DEFAULT_SYSTEM_PROMPT = (
+    "You are the CKAN retrieval policy for smolnalysis. Emit strict JSON actions only. "
+    "Choose exactly one next tool/action from the available CKAN retrieval tools."
+)
 
 
 @dataclass(frozen=True)
@@ -69,16 +81,20 @@ def validate_ckan_action(content: str, context: dict[str, Any] | None = None) ->
     if not isinstance(confidence, int | float) or isinstance(confidence, bool) or not 0 <= confidence <= 1:
         issues.append(ValidationIssue("invalid_confidence", "`confidence` must be a number between 0.0 and 1.0."))
 
-    if action == "package_search":
+    if action == "tag_search":
+        _validate_tag_search(args, issues)
+    elif action in {"group_list", "organization_list"}:
+        _validate_catalog_list(args, action, issues)
+    elif action == "package_search":
         _validate_package_search(args, issues)
     elif action == "package_show":
         _validate_package_show(args, context, issues)
     elif action == "select_resource":
         _validate_select_resource(args, context, issues)
-    elif action == "reject_result":
-        _validate_reject_result(args, issues)
     elif action == "finish":
         _validate_finish(args, context, issues)
+    elif action == "ask_clarification":
+        _validate_ask_clarification(args, issues)
 
     return ValidationResult(not issues, issues, payload)
 
@@ -146,30 +162,39 @@ def seed_examples() -> list[dict[str, Any]]:
             "observed_packages": [],
             "observed_resources": [],
             "has_enough_evidence": False,
+            "observed_tags": [],
+            "observed_groups": [],
+            "observed_organizations": [],
         },
         {
             "observed_packages": ["population-indicators"],
             "observed_resources": [],
             "has_enough_evidence": False,
+            "observed_tags": ["Bevölkerung", "Stadtbezirk"],
+            "observed_groups": ["soci"],
+            "observed_organizations": ["statistisches-amt"],
         },
         {
             "observed_packages": ["mobility-counts"],
             "observed_resources": ["mobility-counts:traffic_csv"],
             "has_enough_evidence": True,
+            "observed_tags": ["Verkehr"],
+            "observed_groups": ["tran"],
+            "observed_organizations": ["mobilitaetsreferat"],
         },
     ]
     examples = [
         build_training_example(
-            "Request: Find population data for Munich districts.\nEndpoint: https://opendata.muenchen.de/\nState: no searches yet.",
+            "Request: Gibt es offene Daten zu Bevölkerungszahlen?\nEndpoint: https://opendata.muenchen.de/\nState: no searches yet.",
             {
-                "thought": "Need an initial package search for the main topic.",
-                "action": "package_search",
-                "args": {"query": "population districts Munich", "rows": 5, "start": 0},
+                "thought": "Discover CKAN vocabulary for the German topic first.",
+                "action": "tag_search",
+                "args": {"query": "Bevölkerung", "rows": 10},
                 "confidence": 0.82,
             },
         ),
         build_training_example(
-            "Request: Show details for the strongest population candidate.\nEndpoint: https://opendata.muenchen.de/\nObserved packages: population-indicators.",
+            "Request: Show details for the strongest population candidate.\nEndpoint: https://opendata.muenchen.de/\nObserved packages: population-indicators.\nObserved tags: Bevölkerung, Stadtbezirk.",
             {
                 "thought": "A promising package is known, so inspect its resources.",
                 "action": "package_show",
@@ -185,7 +210,7 @@ def seed_examples() -> list[dict[str, Any]]:
                 "args": {
                     "package_id": "mobility-counts",
                     "resource_id": "traffic_csv",
-                    "reason": "CSV resource is suitable for yearly mobility comparison.",
+                    "match_evidence": "Observed CSV resource is suitable for yearly mobility comparison.",
                 },
                 "confidence": 0.86,
             },
@@ -326,6 +351,23 @@ def _validate_package_search(args: dict[str, Any], issues: list[ValidationIssue]
         issues.append(ValidationIssue("unsafe_query", "`package_search.args.query` must not contain credentials or URLs."))
 
 
+def _validate_tag_search(args: dict[str, Any], issues: list[ValidationIssue]) -> None:
+    query = args.get("query")
+    rows = args.get("rows", 10)
+    if not isinstance(query, str) or len(query.strip()) < 2:
+        issues.append(ValidationIssue("invalid_query", "`tag_search.args.query` must be a useful string."))
+    if not isinstance(rows, int) or not 1 <= rows <= 25:
+        issues.append(ValidationIssue("invalid_rows", "`tag_search.args.rows` must be an integer from 1 to 25."))
+    if any(token in str(query).casefold() for token in ["@", "://", "api_key", "password"]):
+        issues.append(ValidationIssue("unsafe_query", "`tag_search.args.query` must not contain credentials or URLs."))
+
+
+def _validate_catalog_list(args: dict[str, Any], action: str, issues: list[ValidationIssue]) -> None:
+    rows = args.get("rows", 10)
+    if not isinstance(rows, int) or not 1 <= rows <= 25:
+        issues.append(ValidationIssue("invalid_rows", f"`{action}.args.rows` must be an integer from 1 to 25."))
+
+
 def _validate_package_show(args: dict[str, Any], context: dict[str, Any], issues: list[ValidationIssue]) -> None:
     package_id = args.get("package_id")
     observed = set(context.get("observed_packages") or [])
@@ -338,7 +380,7 @@ def _validate_package_show(args: dict[str, Any], context: dict[str, Any], issues
 def _validate_select_resource(args: dict[str, Any], context: dict[str, Any], issues: list[ValidationIssue]) -> None:
     package_id = args.get("package_id")
     resource_id = args.get("resource_id")
-    reason = args.get("reason")
+    match_evidence = args.get("match_evidence", args.get("reason"))
     observed_packages = set(context.get("observed_packages") or [])
     observed_resources = set(context.get("observed_resources") or [])
     combined_resource_id = f"{package_id}:{resource_id}"
@@ -351,17 +393,8 @@ def _validate_select_resource(args: dict[str, Any], context: dict[str, Any], iss
         issues.append(ValidationIssue("invalid_resource_id", "`select_resource.args.resource_id` must be a non-empty string."))
     elif observed_resources and combined_resource_id not in observed_resources and resource_id not in observed_resources:
         issues.append(ValidationIssue("unobserved_resource", "`resource_id` must refer to an observed resource."))
-    if not isinstance(reason, str) or not reason.strip():
-        issues.append(ValidationIssue("missing_reason", "`select_resource.args.reason` must explain the selection."))
-
-
-def _validate_reject_result(args: dict[str, Any], issues: list[ValidationIssue]) -> None:
-    reason = args.get("reason")
-    next_query = args.get("next_query")
-    if not isinstance(reason, str) or not reason.strip():
-        issues.append(ValidationIssue("missing_reason", "`reject_result.args.reason` must be a non-empty string."))
-    if not isinstance(next_query, str) or len(next_query.strip()) < 3:
-        issues.append(ValidationIssue("invalid_next_query", "`reject_result.args.next_query` must be a useful string."))
+    if not isinstance(match_evidence, str) or len(match_evidence.strip()) < 12:
+        issues.append(ValidationIssue("missing_match_evidence", "`select_resource.args.match_evidence` must explain the concrete match."))
 
 
 def _validate_finish(args: dict[str, Any], context: dict[str, Any], issues: list[ValidationIssue]) -> None:
@@ -373,6 +406,15 @@ def _validate_finish(args: dict[str, Any], context: dict[str, Any], issues: list
         issues.append(ValidationIssue("missing_rationale", "`finish.args.rationale` must explain why retrieval is done."))
     if context and context.get("has_enough_evidence") is not True:
         issues.append(ValidationIssue("finish_too_early", "`finish` requires enough evidence in the current context."))
+
+
+def _validate_ask_clarification(args: dict[str, Any], issues: list[ValidationIssue]) -> None:
+    question = args.get("question")
+    reason = args.get("reason")
+    if not isinstance(question, str) or len(question.strip()) < 6:
+        issues.append(ValidationIssue("missing_question", "`ask_clarification.args.question` must ask the user a concrete question."))
+    if reason is not None and (not isinstance(reason, str) or not reason.strip()):
+        issues.append(ValidationIssue("invalid_reason", "`ask_clarification.args.reason` must be a non-empty string when present."))
 
 
 def _command_seed(args: argparse.Namespace) -> int:

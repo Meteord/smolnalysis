@@ -36,6 +36,35 @@ class CkanDatasetToolsTests(TestCase):
 
         self.assertTrue(result.ok, result.issues)
 
+    def test_valid_tag_search_action(self) -> None:
+        result = validate_ckan_action(
+            json.dumps(
+                {
+                    "thought": "Discover catalog tags first.",
+                    "action": "tag_search",
+                    "args": {"query": "Fahrrad", "rows": 10},
+                    "confidence": 0.8,
+                }
+            )
+        )
+
+        self.assertTrue(result.ok, result.issues)
+
+    def test_valid_group_and_organization_list_actions(self) -> None:
+        for action in ["group_list", "organization_list"]:
+            result = validate_ckan_action(
+                json.dumps(
+                    {
+                        "thought": "Discover catalog structure.",
+                        "action": action,
+                        "args": {"rows": 15},
+                        "confidence": 0.7,
+                    }
+                )
+            )
+
+            self.assertTrue(result.ok, result.issues)
+
     def test_rejects_invalid_json(self) -> None:
         result = validate_ckan_action("{not json")
 
@@ -73,6 +102,21 @@ class CkanDatasetToolsTests(TestCase):
 
         self.assertFalse(result.ok)
         self.assertIn("finish_too_early", {issue.code for issue in result.issues})
+
+    def test_rejects_legacy_reject_result_action(self) -> None:
+        result = validate_ckan_action(
+            json.dumps(
+                {
+                    "thought": "Old contract.",
+                    "action": "reject_result",
+                    "args": {"reason": "bad", "next_query": "better"},
+                    "confidence": 0.5,
+                }
+            )
+        )
+
+        self.assertFalse(result.ok)
+        self.assertIn("invalid_action", {issue.code for issue in result.issues})
 
     def test_seed_examples_are_valid(self) -> None:
         for example in seed_examples():
@@ -144,6 +188,22 @@ class CkanDatasetToolsTests(TestCase):
         self.assertTrue(validate_training_example(repaired).ok)
         payload = json.loads(repaired["messages"][-1]["content"])
         self.assertLessEqual(len(payload["thought"].split()), 12)
+
+    def test_select_resource_requires_match_evidence(self) -> None:
+        result = validate_ckan_action(
+            json.dumps(
+                {
+                    "thought": "Select resource.",
+                    "action": "select_resource",
+                    "args": {"package_id": "known", "resource_id": "res"},
+                    "confidence": 0.9,
+                }
+            ),
+            {"observed_packages": ["known"], "observed_resources": ["known:res"], "has_enough_evidence": True},
+        )
+
+        self.assertFalse(result.ok)
+        self.assertIn("missing_match_evidence", {issue.code for issue in result.issues})
 
 
 if __name__ == "__main__":
