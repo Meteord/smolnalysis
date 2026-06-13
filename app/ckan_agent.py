@@ -229,6 +229,8 @@ def validate_action(action: AgentAction, session: AgentSession) -> tuple[AgentAc
         package_id = str(action.args.get("package_id", "")).strip()
         if package_id not in session.packages:
             return action, f"package_show package_id was not observed: {package_id}"
+        if session.packages[package_id].get("_shown"):
+            return action, f"package_show package_id was already inspected: {package_id}"
     if action.action == "select_resource":
         resource_id = str(action.args.get("resource_id", "")).strip()
         if resource_id not in session.resources:
@@ -247,6 +249,18 @@ def fallback_action(session: AgentSession) -> AgentAction:
     for package_id, package in session.packages.items():
         if package_id and not package.get("_shown"):
             return AgentAction("package_show", {"package_id": package_id}, "Inspect the next observed package.", 0.45, "fallback")
+    best_resource = _best_observed_resource(session)
+    if best_resource:
+        return AgentAction(
+            "select_resource",
+            {
+                "resource_id": best_resource.resource_id,
+                "match_evidence": f"Observed resource '{best_resource.name}' belongs to matching package '{best_resource.package_title}'.",
+            },
+            "Select the best observed resource instead of repeating inspection.",
+            max(MIN_SELECTION_CONFIDENCE, _score_resource(best_resource, session.prompt)),
+            "fallback",
+        )
     if "tag_search" not in session.catalog_tools_run:
         query = _catalog_query(session.prompt)
         return AgentAction("tag_search", {"query": query, "rows": 10}, "Discover matching CKAN tags before package search.", 0.45, "fallback")
@@ -538,6 +552,8 @@ def _score_resource(resource: RetrievalResource, prompt: str) -> float:
     if "csv" in resource.format or resource.url.casefold().endswith(".csv"):
         score += 0.45
     if any(term in haystack for term in terms):
+        score += 0.25
+    if any(term in haystack for term in ("fahrrad", "rad", "raddauer", "radverkehr")) and any(term in prompt.casefold() for term in ("fahrrad", "fahrräder", "rad", "bike", "bicycle")):
         score += 0.25
     if "metadata" in haystack or "metadaten" in haystack:
         score -= 0.2

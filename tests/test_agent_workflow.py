@@ -115,6 +115,15 @@ class CkanAgentWorkflowTests(TestCase):
 
         self.assertIn("not observed", error)
 
+    def test_repeated_package_show_is_rejected(self) -> None:
+        session = AgentSession("Zeig mir offene Daten zu Fahrrädern in München.", "https://opendata.muenchen.de/")
+        session.packages["pkg-1"] = {**_ckan_package(), "_shown": True}
+        action = AgentAction("package_show", {"package_id": "pkg-1"}, "inspect again", 0.8)
+
+        _validated, error = validate_action(action, session)
+
+        self.assertIn("already inspected", error)
+
     def test_unobserved_resource_selection_is_rejected(self) -> None:
         session = AgentSession("Find data", "https://opendata.muenchen.de/")
         action = AgentAction("select_resource", {"resource_id": "missing"}, "select", 0.5)
@@ -239,6 +248,37 @@ class CkanAgentWorkflowTests(TestCase):
         _validated, error = validate_action(missing_evidence, session)
 
         self.assertIn("match_evidence", error)
+
+    def test_fallback_selects_best_resource_after_package_inspection(self) -> None:
+        session = AgentSession("Zeig mir offene Daten zu Fahrrädern in München.", "https://opendata.muenchen.de/")
+        session.packages["pkg-1"] = {**_ckan_package("pkg-1", "Daten der Raddauerzählstellen München Februar 2019"), "_shown": True}
+        session.resources["res-1"] = _resource("res-1", "Daten der Raddauerzählstellen München Februar 2019")
+
+        fallback = fallback_action(session)
+
+        self.assertEqual(fallback.action, "select_resource")
+        self.assertEqual(fallback.args["resource_id"], "res-1")
+        self.assertGreaterEqual(fallback.confidence, 0.85)
+
+    @patch("app.ckan_agent.package_show")
+    @patch("app.ckan_agent.package_search")
+    def test_repeated_package_show_falls_back_to_selection(self, package_search_mock, package_show_mock) -> None:
+        package = _ckan_package("pkg-1", "Daten der Raddauerzählstellen München Februar 2019")
+        package_search_mock.return_value = {"count": 1, "results": [package]}
+        package_show_mock.return_value = package
+        model = _ModelScript(
+            [
+                {"action": "package_search", "args": {"query": "Fahrrad", "rows": 5}, "reason": "search", "confidence": 0.8},
+                {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect", "confidence": 0.9},
+                {"action": "package_show", "args": {"package_id": "pkg-1"}, "reason": "inspect again", "confidence": 0.9},
+            ]
+        )
+
+        result = run_ckan_agent("Zeig mir offene Daten zu Fahrrädern in München.", "https://opendata.muenchen.de/", model_caller=model)
+
+        self.assertEqual(package_show_mock.call_count, 1)
+        self.assertEqual(result.status, "selected")
+        self.assertEqual(result.selected_resource.resource_id, "res-1")
 
     @patch("app.ckan_agent.package_search")
     def test_repeated_503_stops_without_hammering_endpoint(self, package_search_mock) -> None:
@@ -432,15 +472,15 @@ def _selected_result():
     )
 
 
-def _ckan_package() -> dict[str, Any]:
+def _ckan_package(package_id: str = "pkg-1", title: str = "Population by district") -> dict[str, Any]:
     return {
-        "id": "pkg-1",
+        "id": package_id,
         "name": "population",
-        "title": "Population by district",
+        "title": title,
         "resources": [
             {
                 "id": "res-1",
-                "name": "Population CSV",
+                "name": "Population CSV" if title == "Population by district" else f"{title} CSV",
                 "format": "CSV",
                 "url": "https://example.org/population.csv",
             }
