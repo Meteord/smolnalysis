@@ -16,6 +16,7 @@ from ckan_dataset_tools import (
     scenario_package_ids,
     seed_examples,
     split_by_package,
+    strip_json_fence,
     validate_ckan_action,
     validate_training_example,
 )
@@ -188,6 +189,26 @@ class CkanDatasetToolsTests(TestCase):
         self.assertTrue(validate_training_example(repaired).ok)
         payload = json.loads(repaired["messages"][-1]["content"])
         self.assertLessEqual(len(payload["thought"].split()), 12)
+
+    def test_repair_training_example_strips_json_fence(self) -> None:
+        example = {
+            "messages": [
+                {
+                    "role": "assistant",
+                    "content": "```json\n{\"thought\":\"Search now.\",\"action\":\"package_search\",\"args\":{\"query\":\"Fahrrad\",\"rows\":5,\"start\":0},\"confidence\":0.8}\n```",
+                }
+            ]
+        }
+
+        repaired = repair_training_example(example)
+
+        self.assertTrue(validate_training_example(repaired).ok)
+        self.assertEqual(json.loads(repaired["messages"][-1]["content"])["action"], "package_search")
+
+    def test_strip_json_fence_leaves_plain_content_alone(self) -> None:
+        content = '{"action":"finish","args":{}}'
+
+        self.assertEqual(strip_json_fence(content), content)
 
     def test_select_resource_requires_match_evidence(self) -> None:
         result = validate_ckan_action(

@@ -8,8 +8,8 @@ from typing import Any
 
 
 DEFAULT_MODEL = "openbmb/MiniCPM5-1B"
-DEFAULT_TRAIN_DATA = "train/ckan/data/generated/valid_train_1000_repaired.jsonl"
-DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl"
+DEFAULT_TRAIN_DATA = "train/ckan/data/generated/valid_examples_multitool_train_1600_repaired.jsonl"
+DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_examples_multitool_eval_160.jsonl"
 DEFAULT_OUTPUT_DIR = "train/ckan/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
 DEFAULT_TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 

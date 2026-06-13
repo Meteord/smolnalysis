@@ -17,7 +17,7 @@ from ckan_dataset_tools import extract_context_from_example, parse_action, read_
 
 DEFAULT_MODEL = "openbmb/MiniCPM5-1B"
 DEFAULT_ADAPTER = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
-DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl"
+DEFAULT_EVAL_DATA = "train/ckan/data/generated/valid_examples_multitool_eval_160.jsonl"
 DEFAULT_OUTPUT_DIR = "train/ckan/outputs/eval"
 INFERENCE_SYSTEM_PROMPT = """You are the CKAN retrieval policy for smolnalysis. Emit strict JSON only.
 Allowed actions: tag_search, group_list, organization_list, package_search, package_show, select_resource, finish, ask_clarification.

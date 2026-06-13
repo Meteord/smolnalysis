@@ -15,10 +15,10 @@ image = (
     .add_local_file("train/ckan/train_minicpm_lora.py", remote_path="/root/train_minicpm_lora.py")
     .add_local_file("train/ckan/evaluate_lora.py", remote_path="/root/evaluate_lora.py")
     .add_local_file("train/ckan/ckan_dataset_tools.py", remote_path="/root/ckan_dataset_tools.py")
-    .add_local_file("train/ckan/data/generated/valid_train_1000_repaired.jsonl", remote_path="/root/data/train.jsonl")
-    .add_local_file("train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl", remote_path="/root/data/eval.jsonl")
-    .add_local_file("train/ckan/data/generated/challenge_eval_30.jsonl", remote_path="/root/data/challenge_eval.jsonl")
-    .add_local_file("train/ckan/data/generated/train_with_challenge.jsonl", remote_path="/root/data/train_with_challenge.jsonl")
+    .add_local_file("train/ckan/data/generated/valid_examples_multitool_200_repaired.jsonl", remote_path="/root/data/smoke_train.jsonl")
+    .add_local_file("train/ckan/data/generated/valid_examples_multitool_train_1600_repaired.jsonl", remote_path="/root/data/train.jsonl")
+    .add_local_file("train/ckan/data/generated/valid_examples_multitool_eval_160.jsonl", remote_path="/root/data/eval.jsonl")
+    .add_local_file("train/ckan/data/multitool_eval_golden.jsonl", remote_path="/root/data/hand_eval.jsonl")
 )
 
 
@@ -35,7 +35,7 @@ def train_ckan_lora(smoke: bool = True, challenge: bool = False) -> None:
         "python",
         "/root/train_minicpm_lora.py",
         "--train-data",
-        "/root/data/train_with_challenge.jsonl" if challenge else "/root/data/train.jsonl",
+        "/root/data/smoke_train.jsonl" if smoke else "/root/data/train.jsonl",
         "--eval-data",
         "/root/data/eval.jsonl",
         "--output-dir",
@@ -50,7 +50,7 @@ def train_ckan_lora(smoke: bool = True, challenge: bool = False) -> None:
         "10" if smoke else "25",
     ]
     if smoke:
-        cmd.extend(["--train-limit", "24", "--eval-limit", "12", "--num-train-epochs", "1"])
+        cmd.extend(["--train-limit", "48", "--eval-limit", "24", "--num-train-epochs", "1"])
     subprocess.run(cmd, check=True)
     volume.commit()
 
@@ -70,7 +70,7 @@ def evaluate_ckan_lora(smoke: bool = False, challenge: bool = False, adapter_var
         adapter_path = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-challenge"
     else:
         adapter_path = "/outputs/smolnalysis-ckan-retrieval-minicpm5-lora"
-    eval_data = "/root/data/challenge_eval.jsonl" if challenge else "/root/data/eval.jsonl"
+    eval_data = "/root/data/hand_eval.jsonl" if challenge else "/root/data/eval.jsonl"
     output_dir = (
         "/outputs/eval-challenge-adapter-challenge"
         if challenge and adapter_variant == "challenge" and not smoke

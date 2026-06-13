@@ -2,8 +2,10 @@
 
 This runbook trains the CKAN retrieval adapter from the curated dataset:
 
-- Train: `train/ckan/data/generated/valid_train_1000_repaired.jsonl`
-- Eval: `train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl`
+- Smoke train: `train/ckan/data/generated/valid_examples_multitool_200_repaired.jsonl`
+- Train: `train/ckan/data/generated/valid_examples_multitool_train_1600_repaired.jsonl`
+- Eval: `train/ckan/data/generated/valid_examples_multitool_eval_160.jsonl`
+- Hand eval: `train/ckan/data/multitool_eval_golden.jsonl`
 - Stats: `train/ckan/data/DATASET_STATS.md`
 - Results: `train/ckan/EVALUATION_RESULTS.md`
 
@@ -43,11 +45,11 @@ Always run the smoke job first:
 uv run modal run train/ckan/modal_train_ckan.py --smoke
 ```
 
-The smoke job uses 24 train examples and 12 eval examples for one epoch.
+The smoke job uses 48 train examples from the 200-example smoke set and 24 eval examples for one epoch.
 
 ## Full Run
 
-Run the full 1,000-example training job only after the smoke job completes:
+Run the full 1,600-example training job only after the smoke job completes:
 
 ```powershell
 uv run modal run train/ckan/modal_train_ckan.py --no-smoke
@@ -104,7 +106,7 @@ Evaluation writes to the Modal volume:
 - `/outputs/eval/eval_predictions.jsonl`
 - `/outputs/eval/eval_summary.json`
 
-Run the human-authored challenge eval:
+Run the human-authored multi-tool golden eval:
 
 ```powershell
 uv run modal run train/ckan/modal_train_ckan.py --mode evaluate --no-smoke --challenge
@@ -115,25 +117,11 @@ Challenge evaluation writes:
 - `/outputs/eval-challenge/eval_predictions.jsonl`
 - `/outputs/eval-challenge/eval_summary.json`
 
-If challenge eval shows schema drift, run the challenge-mix training variant:
+If the hand eval shows schema drift, inspect failures before adding more hard examples:
 
 ```powershell
-uv run modal run train/ckan/modal_train_ckan.py --mode train --no-smoke --challenge
+uv run modal run train/ckan/modal_train_ckan.py --mode evaluate --no-smoke --challenge
 ```
-
-This trains on `valid_train_1000_repaired.jsonl` plus four repeats of the 30-example human-authored challenge set, writing the adapter to:
-
-```text
-/outputs/smolnalysis-ckan-retrieval-minicpm5-lora-challenge
-```
-
-Then evaluate that adapter with:
-
-```powershell
-uv run modal run train/ckan/modal_train_ckan.py --mode evaluate --no-smoke --challenge --adapter-variant challenge
-```
-
-Challenge-adapter evaluation writes to `/outputs/eval-challenge-adapter-challenge`.
 
 Metrics include:
 

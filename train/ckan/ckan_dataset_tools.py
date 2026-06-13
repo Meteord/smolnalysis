@@ -55,6 +55,16 @@ def parse_action(content: str) -> tuple[dict[str, Any] | None, list[ValidationIs
     return payload, []
 
 
+def strip_json_fence(content: str) -> str:
+    stripped = content.strip()
+    if not stripped.startswith("```"):
+        return content
+    lines = stripped.splitlines()
+    if len(lines) >= 3 and lines[0].strip().casefold() in {"```", "```json"} and lines[-1].strip() == "```":
+        return "\n".join(lines[1:-1]).strip()
+    return content
+
+
 def validate_ckan_action(content: str, context: dict[str, Any] | None = None) -> ValidationResult:
     payload, issues = parse_action(content)
     if payload is None:
@@ -145,13 +155,17 @@ def repair_training_example(example: dict[str, Any], max_thought_words: int = 32
     content = assistant_messages[-1].get("content")
     if not isinstance(content, str):
         return repaired
-    payload, issues = parse_action(content)
+    normalized_content = strip_json_fence(content)
+    payload, issues = parse_action(normalized_content)
     if payload is None:
         return repaired
-    issue_codes = {issue.code for issue in validate_ckan_action(content, extract_context_from_example(example)).issues}
+    changed = normalized_content != content
+    issue_codes = {issue.code for issue in validate_ckan_action(normalized_content, extract_context_from_example(example)).issues}
     if issue_codes and issue_codes <= {"long_thought"} and isinstance(payload.get("thought"), str):
         words = payload["thought"].split()
         payload["thought"] = " ".join(words[:max_thought_words]).rstrip(".,;:") + "."
+        changed = True
+    if changed:
         assistant_messages[-1]["content"] = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
     return repaired
 

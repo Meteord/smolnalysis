@@ -218,8 +218,12 @@ train/ckan/data/generated/*
 !train/ckan/data/generated/valid_eval_golden_60_repaired.jsonl
 !train/ckan/data/generated/report_train_1000_repaired.jsonl
 !train/ckan/data/generated/report_eval_golden_60_repaired.jsonl
-!train/ckan/data/generated/challenge_eval_30.jsonl
-!train/ckan/data/generated/train_with_challenge.jsonl
+!train/ckan/data/generated/valid_examples_multitool_200_repaired.jsonl
+!train/ckan/data/generated/valid_examples_multitool_train_1600_repaired.jsonl
+!train/ckan/data/generated/valid_examples_multitool_eval_160.jsonl
+!train/ckan/data/generated/validation_report_multitool_200_repaired.jsonl
+!train/ckan/data/generated/validation_report_multitool_train_1600_repaired.jsonl
+!train/ckan/data/generated/validation_report_multitool_eval_160.jsonl
 train/**/outputs/
 train/**/adapters/
 
