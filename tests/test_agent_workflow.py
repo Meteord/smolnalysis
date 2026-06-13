@@ -355,7 +355,11 @@ class CkanAgentWorkflowTests(TestCase):
 
         self.assertGreaterEqual(len([chunk for chunk in content_chunks if chunk]), 4)
         self.assertIn("Finding dataset", content)
+        self.assertIn("Dataset search planner", content)
+        self.assertIn("model_context = Table", content)
+        self.assertIn("response contract", content)
         self.assertIn("progress1 = ListItem", content)
+        self.assertIn("catalog_context = Table", content)
         self.assertIn("tool_details = Table", content)
         self.assertIn("Selected Population CSV", content)
         parse_openui_lang(content)

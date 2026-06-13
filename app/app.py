@@ -41,7 +41,7 @@ logging.basicConfig(
 
 try:
     from .agent_workflow import run_agent_workflow
-    from .ckan_agent import AgentEvent, AgentResult, run_ckan_agent
+    from .ckan_agent import CKAN_ACTION_CONTRACT, AgentEvent, AgentResult, run_ckan_agent
     from .ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from .backend import minicpm_transformers as _minicpm_startup
     from .llm_support import llm_status, validate_llms
@@ -49,7 +49,7 @@ try:
 except ImportError:
     from agent_workflow import run_agent_workflow
     from backend import minicpm_transformers as _minicpm_startup
-    from ckan_agent import AgentEvent, AgentResult, run_ckan_agent
+    from ckan_agent import CKAN_ACTION_CONTRACT, AgentEvent, AgentResult, run_ckan_agent
     from ckan_support import DEFAULT_CKAN_ENDPOINT, default_ckan_status, validate_ckan_endpoint
     from llm_support import llm_status, validate_llms
     from model_roles import call_role_model
@@ -356,7 +356,7 @@ def _retrieval_stream_prefix(prompt: str, endpoint: str) -> str:
     progress_refs = ", ".join(f"progress{index}" for index in range(1, 13))
     return "\n".join(
         [
-            "root = Card([header, suggestion, progress, tool_details, candidates, callout, followups])",
+            "root = Card([header, suggestion, model_context, progress, catalog_context, tool_details, candidates, callout, followups])",
             'header = CardHeader("Finding dataset", "Searching CKAN and inspecting candidates")',
             f'context = TextContent({_json_arg_safe(f"Request: {prompt} | Endpoint: {endpoint}")}, "small")',
             f'progress = ListBlock([{progress_refs}], "number")',
@@ -378,6 +378,14 @@ def _agent_stream_suffix(result: AgentResult, progress_count: int) -> str:
     lines = []
     for step in range(progress_count + 1, 13):
         lines.append(f'progress{step} = ListItem("waiting", "")')
+    context_rows = _agent_model_context_rows(result)
+    for index, column in enumerate(["turn", "role", "information", "preview"]):
+        lines.append(f'model_context_col{index + 1} = Col({_json_arg_safe(column)}, {_json_arg_safe([row[column] for row in context_rows])}, "string")')
+    lines.append('model_context = Table([model_context_col1, model_context_col2, model_context_col3, model_context_col4])')
+    catalog_rows = _agent_catalog_context_rows(result.events)
+    for index, column in enumerate(["kind", "name", "title", "detail"]):
+        lines.append(f'catalog_col{index + 1} = Col({_json_arg_safe(column)}, {_json_arg_safe([row[column] for row in catalog_rows])}, "string")')
+    lines.append('catalog_context = Table([catalog_col1, catalog_col2, catalog_col3, catalog_col4])')
     tool_rows = _agent_tool_detail_rows(result.events)
     for index, column in enumerate(["step", "event", "tool", "detail", "payload"]):
         lines.append(f'tool_col{index + 1} = Col({_json_arg_safe(column)}, {_json_arg_safe([row[column] for row in tool_rows])}, "string")')
@@ -423,6 +431,138 @@ def _agent_tool_detail_rows(events: list[AgentEvent]) -> list[dict[str, str]]:
     return rows[:16]
 
 
+def _agent_model_context_rows(result: AgentResult) -> list[dict[str, str]]:
+    rows = [
+        {
+            "turn": "contract",
+            "role": "ckan_retrieval",
+            "information": "response contract",
+            "preview": _shorten(CKAN_ACTION_CONTRACT, 260),
+        }
+    ]
+    for index, message in enumerate(result.messages, start=1):
+        role = str(message.get("role") or "")
+        content = str(message.get("content") or "")
+        rows.append(
+            {
+                "turn": str(index),
+                "role": role,
+                "information": _model_context_kind(role, content),
+                "preview": _model_context_preview(role, content),
+            }
+        )
+    return rows[:18]
+
+
+def _model_context_kind(role: str, content: str) -> str:
+    if content.startswith("User request:"):
+        return "request and endpoint"
+    if content.startswith("Tool observation:"):
+        return "tool result observation"
+    if content.startswith("Rejected model action:"):
+        return "validation feedback"
+    if role == "assistant":
+        return "previous JSON action"
+    return "message"
+
+
+def _model_context_preview(role: str, content: str) -> str:
+    payload_text = content.split("\n", 1)[1] if "\n" in content else ""
+    if content.startswith("Tool observation:") and payload_text:
+        payload = _try_json_dict(payload_text)
+        action = payload.get("action") if isinstance(payload.get("action"), dict) else {}
+        result = payload.get("result") if isinstance(payload.get("result"), dict) else {}
+        parts = [
+            f"action={action.get('action') or ''}",
+            f"summary={result.get('summary') or ''}",
+            f"already_run={payload.get('catalog_tools_already_run') or []}",
+        ]
+        return _shorten("; ".join(parts), 260)
+    if content.startswith("Rejected model action:") and payload_text:
+        payload = _try_json_dict(payload_text)
+        action = payload.get("action") if isinstance(payload.get("action"), dict) else {}
+        parts = [
+            f"rejected={action.get('action') or ''}",
+            f"error={payload.get('error') or ''}",
+            f"already_run={payload.get('catalog_tools_already_run') or []}",
+        ]
+        return _shorten("; ".join(parts), 260)
+    if role == "assistant":
+        payload = _try_json_dict(content)
+        if payload:
+            parts = [
+                f"action={payload.get('action') or ''}",
+                f"args={payload.get('args') or {}}",
+                f"reason={payload.get('reason') or ''}",
+                f"confidence={payload.get('confidence') or 0}",
+            ]
+            return _shorten("; ".join(parts), 260)
+    return _shorten(content.replace("\n", " | "), 260)
+
+
+def _try_json_dict(text: str) -> dict[str, Any]:
+    try:
+        payload = json.loads(text)
+    except (TypeError, ValueError):
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def _agent_catalog_context_rows(events: list[AgentEvent]) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for event in events:
+        tool_result = (event.data or {}).get("tool_result")
+        if not isinstance(tool_result, dict) or not tool_result.get("ok"):
+            continue
+        tool = str(tool_result.get("tool") or "")
+        data = tool_result.get("data")
+        if not isinstance(data, dict):
+            continue
+        if tool == "group_list":
+            for group in data.get("groups") or []:
+                if isinstance(group, dict):
+                    _append_catalog_row(rows, "group", group.get("name"), group.get("title"), group.get("package_count"))
+        elif tool == "organization_list":
+            for org in data.get("organizations") or []:
+                if isinstance(org, dict):
+                    _append_catalog_row(rows, "organization", org.get("name"), org.get("title"), org.get("package_count"))
+        elif tool == "tag_search":
+            query = data.get("query") or ""
+            for tag in data.get("tags") or []:
+                if isinstance(tag, dict):
+                    _append_catalog_row(rows, "tag", tag.get("name"), tag.get("display_name") or tag.get("name"), f"query: {query}")
+                else:
+                    _append_catalog_row(rows, "tag", tag, tag, f"query: {query}")
+        elif tool == "package_search":
+            query = data.get("query") or ""
+            for package in data.get("packages") or []:
+                if isinstance(package, dict):
+                    resources = package.get("resources")
+                    detail = f"resources: {resources} | query: {query}"
+                    _append_catalog_row(rows, "package", package.get("name") or package.get("package_id"), package.get("title"), detail)
+        elif tool == "package_show":
+            package = data.get("package")
+            package_title = package.get("title") if isinstance(package, dict) else ""
+            for resource in data.get("resources") or []:
+                if isinstance(resource, dict):
+                    detail = " | ".join(str(part) for part in [resource.get("format"), resource.get("mimetype"), resource.get("url")] if part)
+                    _append_catalog_row(rows, "resource", resource.get("name") or resource.get("resource_id"), package_title, detail)
+    if not rows:
+        rows.append({"kind": "catalog", "name": "waiting", "title": "No catalog observations yet.", "detail": ""})
+    return rows[:24]
+
+
+def _append_catalog_row(rows: list[dict[str, str]], kind: str, name: Any, title: Any, detail: Any) -> None:
+    rows.append(
+        {
+            "kind": kind,
+            "name": _shorten(name or "", 42),
+            "title": _shorten(title or "", 80),
+            "detail": _shorten(detail or "", 120),
+        }
+    )
+
+
 def _agent_event_tool_name(event: AgentEvent) -> str:
     data = event.data or {}
     action = data.get("action")
@@ -434,6 +574,8 @@ def _agent_event_tool_name(event: AgentEvent) -> str:
     resource = data.get("resource")
     if isinstance(resource, dict):
         return str(resource.get("format") or event.type)
+    if event.type == "tool_call" and ":" in event.detail:
+        return event.detail.split(":", 1)[0]
     return event.type
 
 
@@ -527,7 +669,7 @@ async def _stream_retrieval_workflow_response(
     prefix = _retrieval_stream_prefix(prompt, endpoint)
     chunks.append(prefix)
     yield _openai_sse_chunk({"content": f"{prefix}\n"})
-    suggestion_line = 'suggestion = Callout("info", "CKAN specialist", "The CKAN retrieval model chooses each search or inspection action; Python validates and runs the tools.")'
+    suggestion_line = 'suggestion = Callout("info", "Dataset search planner", "The CKAN retrieval model proposes search, inspection, and selection steps. Python validates every action, runs the CKAN tools, and shows the evidence below.")'
     chunks.append(suggestion_line)
     yield _openai_sse_chunk({"content": f"{suggestion_line}\n"})
 
