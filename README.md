@@ -92,8 +92,8 @@ The system uses a role-based routing pattern:
 | Component | Model | Parameters | Purpose |
 |-----------|-------|------------|---------|
 | Base LLM | [openbmb/MiniCPM5-1B](https://huggingface.co/openbmb/MiniCPM5-1B) | 1B | Core language understanding and generation |
-| CKAN adapter | LoRA adapter | ~8M | CKAN retrieval actions |
-| OpenUI adapter | LoRA adapter | ~8M | OpenUI-Lang generation |
+| CKAN adapter | LoRA adapter | ~11M | CKAN retrieval actions |
+| OpenUI adapter | LoRA adapter | ~11M | OpenUI-Lang generation |
 | Router | Frozen MiniCPM encoder + MLP head | <1M trainable head | Role selection |
 
 ## Local Setup
