@@ -378,7 +378,7 @@ body {
         '<header class="topbar">'
         '<div class="smol-shell">'
         '<h1 class="smol-title">smolnalysis</h1>'
-        '<p class="smol-subtitle">Ask for open data, get a rendered interface back.</p>'
+        '<p class="smol-subtitle">Ask for open data, get a rendered interface back. (Check the logs if the response takes too long, maybe there is a model download.)</p>'
         "</div>"
         '<div class="status-card"><span class="status-dot"></span><span>Router + adapters online</span></div>'
         "</header>"
