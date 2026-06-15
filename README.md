@@ -31,8 +31,11 @@ The app is a Gradio Server Mode app with a custom fullscreen OpenUI chat fronten
 
 - Live Space: [https://huggingface.co/spaces/build-small-hackathon/smolnalysis](https://huggingface.co/spaces/build-small-hackathon/smolnalysis)
 - GitHub repo: [https://github.com/Meteord/smolnalysis](https://github.com/Meteord/smolnalysis)
-- Field notes (Very long in detail blog post in german): [Build Small Hackathon Blog Post](https://ki.muenchen.de/blog/2026-06-15-build-small-hackathon.html)
+- Field notes (Very long in detail blog post in german): [Build Small Hackathon Blog Post](https://ki.muenchen.de/blog/2026-06-15-build-small-hackathon)
 - Fine-tuned model: [MiniCPM5-Finetune für CKAN Retrieval](https://huggingface.co/build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora)
+- TODO Demo Video
+- TODO Sozial Media post
+- TODO Links zu den uploads von den Modellen
 
 ## How It Works
 
