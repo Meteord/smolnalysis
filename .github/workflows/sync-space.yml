@@ -40,7 +40,11 @@ jobs:
           cp requirements.txt _space/requirements.txt
           cp README.md _space/README.md
           cp LICENSE _space/LICENSE
+          cp openui_adapter_demo.py _space/openui_adapter_demo.py
           cp -R app _space/app
+
+          mkdir -p _space/train/router
+          cp train/router/router_mlp.py _space/train/router/router_mlp.py
 
           find _space -type d -name "__pycache__" -prune -exec rm -rf {} +
           find _space -type f \( -name "*.pyc" -o -name "*.pyo" -o -name "*.log" \) -delete
