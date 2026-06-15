@@ -42674,6 +42674,99 @@ ${verifyLines.join("\n")}`;
     }),
     component: ({ props, renderNode }) => /* @__PURE__ */ import_react2.default.createElement("section", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 10 } }, renderNode(props.metrics))
   });
+  var CardHeader = defineComponent2({
+    name: "CardHeader",
+    description: "Displays the title and subtitle for a response card.",
+    props: external_exports.object({
+      title: external_exports.string(),
+      subtitle: external_exports.string().optional()
+    }),
+    component: ({ props }) => /* @__PURE__ */ import_react2.default.createElement("header", { style: { display: "grid", gap: 4 } }, /* @__PURE__ */ import_react2.default.createElement("h2", { style: { margin: 0, fontSize: 18, lineHeight: 1.25, color: "#0f172a" } }, props.title), props.subtitle ? /* @__PURE__ */ import_react2.default.createElement("p", { style: { margin: 0, color: "#64748b", fontSize: 13 } }, props.subtitle) : null)
+  });
+  var TextContent = defineComponent2({
+    name: "TextContent",
+    description: "Displays short text content.",
+    props: external_exports.object({
+      text: external_exports.string(),
+      variant: external_exports.string().optional()
+    }),
+    component: ({ props }) => /* @__PURE__ */ import_react2.default.createElement(
+      "p",
+      {
+        style: {
+          margin: 0,
+          color: props.variant === "small" ? "#64748b" : "#334155",
+          fontSize: props.variant === "small" ? 12 : 14,
+          lineHeight: 1.5
+        }
+      },
+      props.text
+    )
+  });
+  var ListItem = defineComponent2({
+    name: "ListItem",
+    description: "Displays a label and supporting text inside a list.",
+    props: external_exports.object({
+      title: external_exports.string(),
+      body: external_exports.string().optional()
+    }),
+    component: ({ props }) => /* @__PURE__ */ import_react2.default.createElement("li", { style: { display: "grid", gap: 2 } }, /* @__PURE__ */ import_react2.default.createElement("strong", { style: { color: "#0f172a", fontSize: 13 } }, props.title), props.body ? /* @__PURE__ */ import_react2.default.createElement("span", { style: { color: "#64748b", fontSize: 12, lineHeight: 1.45 } }, props.body) : null)
+  });
+  var ListBlock = defineComponent2({
+    name: "ListBlock",
+    description: "Displays a compact list of response steps or metrics.",
+    props: external_exports.object({
+      items: external_exports.array(ListItem.ref),
+      style: external_exports.string().optional()
+    }),
+    component: ({ props, renderNode }) => {
+      const ordered = props.style === "number";
+      const Tag = ordered ? "ol" : "ul";
+      return /* @__PURE__ */ import_react2.default.createElement(
+        Tag,
+        {
+          style: {
+            margin: 0,
+            paddingLeft: ordered ? 20 : 18,
+            display: "grid",
+            gap: 8
+          }
+        },
+        renderNode(props.items)
+      );
+    }
+  });
+  var Col = defineComponent2({
+    name: "Col",
+    description: "Column data for a table.",
+    props: external_exports.object({
+      label: external_exports.string(),
+      values: external_exports.array(external_exports.any()),
+      type: external_exports.string().optional()
+    }),
+    component: () => null
+  });
+  var Series = defineComponent2({
+    name: "Series",
+    description: "Series data for a chart.",
+    props: external_exports.object({
+      name: external_exports.string(),
+      values: external_exports.array(external_exports.number())
+    }),
+    component: () => null
+  });
+  var Table = defineComponent2({
+    name: "Table",
+    description: "Renders column-oriented table data.",
+    props: external_exports.object({
+      columns: external_exports.array(Col.ref)
+    }),
+    component: ({ props }) => {
+      const columns = props.columns || [];
+      const rowCount = Math.max(...columns.map((column) => column.values?.length || 0), 0);
+      return /* @__PURE__ */ import_react2.default.createElement("section", { style: cardStyle }, /* @__PURE__ */ import_react2.default.createElement("div", { style: { maxHeight: 320, overflow: "auto" } }, /* @__PURE__ */ import_react2.default.createElement("table", { style: { borderCollapse: "collapse", width: "100%", fontSize: 13 } }, /* @__PURE__ */ import_react2.default.createElement("thead", null, /* @__PURE__ */ import_react2.default.createElement("tr", null, columns.map((column, index) => /* @__PURE__ */ import_react2.default.createElement("th", { key: `${column.label}-${index}`, style: { borderBottom: "1px solid #e2e8f0", padding: 8, textAlign: "left" } }, column.label)))), /* @__PURE__ */ import_react2.default.createElement("tbody", null, Array.from({ length: rowCount }).map((_, rowIndex) => /* @__PURE__ */ import_react2.default.createElement("tr", { key: rowIndex }, columns.map((column, columnIndex) => /* @__PURE__ */ import_react2.default.createElement("td", { key: `${rowIndex}-${columnIndex}`, style: { borderBottom: "1px solid #e2e8f0", padding: 8, verticalAlign: "top" } }, String(column.values?.[rowIndex] ?? "")))))))));
+    }
+  });
   var DataTable = defineComponent2({
     name: "DataTable",
     description: "Renders rows of tabular data.",
@@ -42688,22 +42781,125 @@ ${verifyLines.join("\n")}`;
   });
   var BarChart = defineComponent2({
     name: "BarChart",
-    description: "Renders a simple horizontal bar chart from row data.",
+    description: "Renders a simple bar chart from row data or OpenUI standard series data.",
     props: external_exports.object({
-      title: external_exports.string(),
-      xColumn: external_exports.string(),
-      yColumn: external_exports.string(),
-      rows: external_exports.array(external_exports.record(external_exports.string(), external_exports.any()))
+      first: external_exports.any(),
+      second: external_exports.any(),
+      third: external_exports.any().optional(),
+      fourth: external_exports.any().optional(),
+      fifth: external_exports.any().optional()
     }),
     component: ({ props }) => {
-      const values = props.rows.map((row) => Number(row[props.yColumn])).filter(Number.isFinite);
+      const isSeriesChart = Array.isArray(props.first) && Array.isArray(props.second);
+      const labels = isSeriesChart ? props.first.map(String) : [];
+      const series = isSeriesChart ? props.second : [];
+      const rows = isSeriesChart ? labels.map((label, index) => ({
+        label,
+        value: Number(series[0]?.values?.[index] ?? 0),
+        series: series[0]?.name || ""
+      })) : Array.isArray(props.fourth) ? props.fourth : [];
+      const title = isSeriesChart ? String(props.fifth || props.fourth || "Chart") : String(props.first || "Chart");
+      const xColumn = isSeriesChart ? "label" : String(props.second || "label");
+      const yColumn = isSeriesChart ? "value" : String(props.third || "value");
+      const values = rows.map((row) => Number(row[yColumn])).filter(Number.isFinite);
       const max = Math.max(...values, 1);
-      return /* @__PURE__ */ import_react2.default.createElement("section", { style: cardStyle }, /* @__PURE__ */ import_react2.default.createElement("h3", { style: { margin: "0 0 8px", fontSize: 15, color: "#0f172a" } }, props.title), /* @__PURE__ */ import_react2.default.createElement("div", { style: { display: "grid", gap: 8 } }, props.rows.map((row, index) => {
-        const value = Number(row[props.yColumn]) || 0;
+      return /* @__PURE__ */ import_react2.default.createElement("section", { style: cardStyle }, /* @__PURE__ */ import_react2.default.createElement("h3", { style: { margin: "0 0 8px", fontSize: 15, color: "#0f172a" } }, title), /* @__PURE__ */ import_react2.default.createElement("div", { style: { display: "grid", gap: 8 } }, rows.map((row, index) => {
+        const value = Number(row[yColumn]) || 0;
         const width = Math.max(3, value / max * 100);
-        return /* @__PURE__ */ import_react2.default.createElement("div", { key: index, style: { display: "grid", gridTemplateColumns: "minmax(70px, 140px) minmax(0, 1fr) minmax(44px, 72px)", gap: 10, alignItems: "center" } }, /* @__PURE__ */ import_react2.default.createElement("div", { style: { color: "#334155", fontSize: 12, overflowWrap: "anywhere" } }, String(row[props.xColumn] ?? "")), /* @__PURE__ */ import_react2.default.createElement("div", { style: { height: 14, borderRadius: 999, background: "#e2e8f0", overflow: "hidden" } }, /* @__PURE__ */ import_react2.default.createElement("div", { style: { height: "100%", width: `${width}%`, borderRadius: 999, background: "linear-gradient(90deg, #2563eb, #0891b2)" } })), /* @__PURE__ */ import_react2.default.createElement("div", { style: { color: "#334155", fontSize: 12 } }, value.toLocaleString()));
+        return /* @__PURE__ */ import_react2.default.createElement("div", { key: index, style: { display: "grid", gridTemplateColumns: "minmax(70px, 140px) minmax(0, 1fr) minmax(44px, 72px)", gap: 10, alignItems: "center" } }, /* @__PURE__ */ import_react2.default.createElement("div", { style: { color: "#334155", fontSize: 12, overflowWrap: "anywhere" } }, String(row[xColumn] ?? "")), /* @__PURE__ */ import_react2.default.createElement("div", { style: { height: 14, borderRadius: 999, background: "#e2e8f0", overflow: "hidden" } }, /* @__PURE__ */ import_react2.default.createElement("div", { style: { height: "100%", width: `${width}%`, borderRadius: 999, background: "linear-gradient(90deg, #2563eb, #0891b2)" } })), /* @__PURE__ */ import_react2.default.createElement("div", { style: { color: "#334155", fontSize: 12 } }, value.toLocaleString()));
       })));
     }
+  });
+  var Callout = defineComponent2({
+    name: "Callout",
+    description: "Displays a highlighted message.",
+    props: external_exports.object({
+      tone: external_exports.string(),
+      title: external_exports.string(),
+      body: external_exports.string().optional()
+    }),
+    component: ({ props }) => {
+      const warning = props.tone === "warning";
+      return /* @__PURE__ */ import_react2.default.createElement(
+        "section",
+        {
+          style: {
+            borderRadius: 8,
+            padding: "12px 14px",
+            border: `1px solid ${warning ? "#fde68a" : "#bae6fd"}`,
+            background: warning ? "#fffbeb" : "#f0f9ff",
+            color: warning ? "#78350f" : "#0c4a6e",
+            display: "grid",
+            gap: 4
+          }
+        },
+        /* @__PURE__ */ import_react2.default.createElement("strong", { style: { fontSize: 13 } }, props.title),
+        props.body ? /* @__PURE__ */ import_react2.default.createElement("span", { style: { fontSize: 13, lineHeight: 1.45 } }, props.body) : null
+      );
+    }
+  });
+  var FollowUpItem = defineComponent2({
+    name: "FollowUpItem",
+    description: "Displays a suggested follow-up prompt.",
+    props: external_exports.object({
+      text: external_exports.string()
+    }),
+    component: ({ props }) => /* @__PURE__ */ import_react2.default.createElement(
+      "button",
+      {
+        type: "button",
+        style: {
+          border: "1px solid #cbd5e1",
+          borderRadius: 8,
+          background: "#fff",
+          color: "#0f172a",
+          padding: "8px 10px",
+          fontSize: 13,
+          textAlign: "left",
+          cursor: "pointer"
+        },
+        onClick: () => {
+          const textbox = document.querySelector("textarea, input[type='text']");
+          if (textbox) {
+            textbox.value = props.text;
+            textbox.dispatchEvent(new Event("input", { bubbles: true }));
+            textbox.focus();
+          }
+        }
+      },
+      props.text
+    )
+  });
+  var FollowUpBlock = defineComponent2({
+    name: "FollowUpBlock",
+    description: "Displays suggested follow-up prompts.",
+    props: external_exports.object({
+      items: external_exports.array(FollowUpItem.ref)
+    }),
+    component: ({ props, renderNode }) => /* @__PURE__ */ import_react2.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: 8 } }, renderNode(props.items))
+  });
+  var CodeBlock = defineComponent2({
+    name: "CodeBlock",
+    description: "Displays code or structured text.",
+    props: external_exports.object({
+      language: external_exports.string(),
+      code: external_exports.string()
+    }),
+    component: ({ props }) => /* @__PURE__ */ import_react2.default.createElement(
+      "pre",
+      {
+        style: {
+          margin: 0,
+          padding: 12,
+          borderRadius: 8,
+          background: "#0f172a",
+          color: "#e2e8f0",
+          overflow: "auto",
+          fontSize: 12
+        }
+      },
+      /* @__PURE__ */ import_react2.default.createElement("code", null, props.code)
+    )
   });
   var Histogram = defineComponent2({
     name: "Histogram",
@@ -42740,17 +42936,62 @@ ${verifyLines.join("\n")}`;
       ))));
     }
   });
+  var Card = defineComponent2({
+    name: "Card",
+    description: "Root card layout for OpenUI chat responses.",
+    props: external_exports.object({
+      children: external_exports.array(
+        external_exports.union([
+          CardHeader.ref,
+          TextContent.ref,
+          ListBlock.ref,
+          Table.ref,
+          BarChart.ref,
+          Callout.ref,
+          FollowUpBlock.ref,
+          CodeBlock.ref,
+          InsightCard.ref,
+          Notice.ref,
+          MetricGrid.ref,
+          DataTable.ref,
+          Histogram.ref
+        ])
+      )
+    }),
+    component: ({ props, renderNode }) => /* @__PURE__ */ import_react2.default.createElement("article", { style: { ...cardStyle, display: "grid", gap: 12 } }, renderNode(props.children))
+  });
   var Root = defineComponent2({
     name: "Root",
     description: "Root layout for rendered analysis components.",
     props: external_exports.object({
-      children: external_exports.array(external_exports.union([InsightCard.ref, Notice.ref, MetricGrid.ref, DataTable.ref, BarChart.ref, Histogram.ref]))
+      children: external_exports.array(external_exports.union([Card.ref, InsightCard.ref, Notice.ref, MetricGrid.ref, DataTable.ref, BarChart.ref, Histogram.ref]))
     }),
     component: ({ props, renderNode }) => /* @__PURE__ */ import_react2.default.createElement("div", { style: { display: "grid", gap: 12 } }, renderNode(props.children))
   });
   var library = createLibrary2({
     root: "Root",
-    components: [Root, InsightCard, Notice, Metric, MetricGrid, DataTable, BarChart, Histogram]
+    components: [
+      Root,
+      Card,
+      CardHeader,
+      TextContent,
+      ListBlock,
+      ListItem,
+      Table,
+      Col,
+      Series,
+      Callout,
+      FollowUpBlock,
+      FollowUpItem,
+      CodeBlock,
+      InsightCard,
+      Notice,
+      Metric,
+      MetricGrid,
+      DataTable,
+      BarChart,
+      Histogram
+    ]
   });
   function decodeResponse(encoded) {
     if (!encoded) return "";

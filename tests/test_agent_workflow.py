@@ -31,6 +31,36 @@ app = app_module.app
 
 
 class CkanAgentWorkflowTests(TestCase):
+    def test_frontend_renderer_registers_validated_openui_components(self) -> None:
+        renderer = Path("app/frontend/openui-renderer.jsx").read_text(encoding="utf-8")
+        for component in [
+            "Card",
+            "CardHeader",
+            "TextContent",
+            "ListBlock",
+            "ListItem",
+            "Table",
+            "Col",
+            "Series",
+            "Callout",
+            "CodeBlock",
+            "FollowUpBlock",
+            "FollowUpItem",
+        ]:
+            self.assertIn(f'name: "{component}"', renderer)
+
+    def test_parser_accepts_fullscreen_openui_fallback_components(self) -> None:
+        parse_openui_lang(
+            "\n".join(
+                [
+                    "root = Card([header, callout, code])",
+                    'header = CardHeader("Fallback path", "Mocked invalid OpenUI request")',
+                    'callout = Callout("warning", "Renderer guard", "Fallback details")',
+                    'code = CodeBlock("openui-lang", "root = Nope([missing])")',
+                ]
+            )
+        )
+
     def test_valid_json_action_parses(self) -> None:
         action = parse_agent_action('{"action":"package_search","args":{"query":"population","rows":5},"reason":"start","confidence":0.7}')
 

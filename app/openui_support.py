@@ -416,6 +416,7 @@ def parse_openui_lang(openui_lang: str) -> ParsedOpenUI:
         "Col",
         "Series",
         "Callout",
+        "CodeBlock",
         "FollowUpBlock",
         "FollowUpItem",
         "InsightCard",

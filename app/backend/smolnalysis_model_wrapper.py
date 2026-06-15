@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import importlib.util
 import os
 from dataclasses import dataclass
 from pathlib import Path
@@ -16,30 +15,23 @@ except ImportError:
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-ROUTER_SOURCE = REPO_ROOT / "train" / "router" / "router_mlp.py"
-DEFAULT_ROUTER_OUTPUT_DIR = Path(
-    os.getenv("SMOLNALYSIS_ROUTER_OUTPUT_DIR", str(REPO_ROOT / "train" / "router" / "outputs" / "router-mlp"))
-)
 BASE_MODEL_ID = os.getenv("SMOLNALYSIS_MINICPM_TRANSFORMERS_MODEL_ID", os.getenv("MODEL_ID", "openbmb/MiniCPM5-1B"))
-BASE_ADAPTER_NAMES = {"", "base", "none", "no_adapter", "no-adapter", "general", "general_agent"}
-ROLE_ENV_KEYS = {
-    "general_agent": "GENERAL_AGENT",
-    "ckan_retrieval": "CKAN_RETRIEVAL",
-    "data_analysis": "DATA_ANALYSIS",
-    "openui_translator": "OPENUI_TRANSLATOR",
-}
-DEFAULT_LABEL_TO_ADAPTER = {
+ROUTER_LABEL_TO_ADAPTER = {
     "general_agent": None,
-    "base": None,
-    "none": None,
-    "ckan": "ckan_retrieval",
-    "retrieval": "ckan_retrieval",
     "ckan_retrieval": "ckan_retrieval",
-    "openui": "openui_translator",
     "openui_translator": "openui_translator",
-    "analysis": "data_analysis",
-    "data_analysis": "data_analysis",
 }
+RETRIEVAL_SYSTEM_PROMPT = (
+    "You generate the structured tool result for a smolnalysis user question. "
+    "Return only valid JSON. Do not include explanations, markdown, or any label prefix."
+)
+OPENUI_SYSTEM_PROMPT = (
+    "You generate OpenUI Lang from a user query and a structured tool result. "
+    "Use only the values from the tool result. Do not invent data. "
+    "Return only OpenUI Lang assignment statements, without explanations or markdown. "
+    "Start with root = Root([...])."
+)
+GREETING_RESPONSE = "hi, there how can i help you?"
 
 
 @dataclass(frozen=True)
@@ -47,14 +39,6 @@ class AdapterSource:
     name: str
     source: str
     is_path: bool
-
-
-@dataclass(frozen=True)
-class RouterDecision:
-    role: str
-    adapter: str | None
-    confidence: float
-    logits: list[float]
 
 
 def _repo_path(path: str | Path) -> Path:
@@ -74,57 +58,25 @@ def _looks_like_path(source: str) -> bool:
 
 
 class SmolnalysisMoE(torch.nn.Module):
-    """Small inference wrapper for router-selected LoRA adapters."""
+    """Small inference wrapper for the fixed smolnalysis adapter workflow."""
 
     def __init__(
         self,
         model_base_name: str = BASE_MODEL_ID,
         *,
-        task_router: torch.nn.Module | None = None,
-        router_labels: list[str] | None = None,
-        label_to_adapter: dict[str, str | None] | None = None,
         load_in_4bit: bool = True,
-        load_task_router: bool = True,
-        router_output_dir: str | Path = DEFAULT_ROUTER_OUTPUT_DIR,
-        router_max_length: int = 512,
     ) -> None:
         super().__init__()
         self.model_base_name = model_base_name
         self.load_in_4bit = load_in_4bit
-        self.router_output_dir = _repo_path(router_output_dir)
-        self.router_max_length = router_max_length
-        self.task_router = task_router
-        self.router_labels = router_labels
-        self.label_to_adapter = {**DEFAULT_LABEL_TO_ADAPTER, **(label_to_adapter or {})}
         self.loaded_adapters: set[str] = set()
         self.active_adapter: str | None = None
-        self.last_router_decision: RouterDecision | None = None
-
-        if self.task_router is None and load_task_router:
-            self.task_router, loaded_labels = self.load_task_router(self.router_output_dir)
-            if self.router_labels is None:
-                self.router_labels = loaded_labels
-        if self.router_labels is None:
-            self.router_labels = ["general_agent", "ckan_retrieval", "openui_translator"]
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_base_name, trust_remote_code=True)
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
         self.model_base = self.load_model_base(model_base_name)
         self.vocab_size = len(self.tokenizer)
-
-    @staticmethod
-    def load_task_router(output_dir: str | Path) -> tuple[torch.nn.Module, list[str]]:
-        output_dir = _repo_path(output_dir)
-        if not (output_dir / "router_mlp.pt").exists() or not (output_dir / "config.json").exists():
-            raise FileNotFoundError(f"Router artifacts are missing in {output_dir}")
-        spec = importlib.util.spec_from_file_location("smolnalysis_router_mlp", ROUTER_SOURCE)
-        if spec is None or spec.loader is None:
-            raise ImportError(f"Could not load router module from {ROUTER_SOURCE}")
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        router, config = module.load_router_mlp(output_dir)
-        return router, list(config.labels)
 
     def _build_quantization_config(self):
         if not self.load_in_4bit:
@@ -188,62 +140,28 @@ class SmolnalysisMoE(torch.nn.Module):
     def _preprocess(self, inputs: Any) -> dict[str, Any]:
         messages = self._normalize_messages(inputs)
         latest_user_messages = self._latest_user_message(messages)
-        router_messages = latest_user_messages or messages
         return {
             "messages": messages,
             "latest_user_messages": latest_user_messages,
-            "router_inputs": self._tokenize_messages(router_messages, max_length=self.router_max_length),
         }
 
     @staticmethod
     def _is_preprocessed(inputs: Any) -> bool:
-        return isinstance(inputs, dict) and ("input_ids" in inputs or "router_inputs" in inputs)
+        return isinstance(inputs, dict) and "input_ids" in inputs
 
     def _adapter_from_label(self, label: str | None) -> str | None:
-        adapter_name = self.label_to_adapter.get((label or "").strip().casefold(), label)
-        if adapter_name is None:
+        if label is None:
             return None
-        adapter_name = adapter_name.strip().casefold()
-        return None if adapter_name in BASE_ADAPTER_NAMES else adapter_name
+        label = label.strip()
+        try:
+            return ROUTER_LABEL_TO_ADAPTER[label]
+        except KeyError as exc:
+            available = ", ".join(ROUTER_LABEL_TO_ADAPTER)
+            raise KeyError(f"Unknown router label '{label}'. Expected one of: {available}") from exc
 
     def adapter_source_for_role(self, role: str | None) -> AdapterSource | None:
         adapter_name = self._adapter_from_label(role)
         return _adapter_source_for_role(adapter_name) if adapter_name else None
-
-    def route(self, inputs: Any) -> tuple[dict[str, Any], RouterDecision | None]:
-        preprocessed = inputs if self._is_preprocessed(inputs) else self._preprocess(inputs)
-        self.route_adapter(preprocessed)
-        return preprocessed, self.last_router_decision
-
-    def route_adapter(self, preprocessed: dict[str, Any]) -> str | None:
-        if self.task_router is None:
-            self.last_router_decision = None
-            return None
-
-        router_features = preprocessed.get("router_inputs", preprocessed)
-        try:
-            router_device = next(self.task_router.parameters()).device
-        except StopIteration:
-            router_device = torch.device("cpu")
-        router_inputs = {
-            key: value.to(router_device) if torch.is_tensor(value) else value
-            for key, value in router_features.items()
-            if key in {"input_ids", "attention_mask"}
-        }
-        with torch.inference_mode():
-            output = self.task_router(**router_inputs)
-        logits = output["logits"] if isinstance(output, dict) else output.logits
-        probabilities = torch.softmax(logits, dim=-1)[0]
-        label_index = int(logits.argmax(dim=-1).item())
-        label = self.router_labels[label_index]
-        adapter = self._adapter_from_label(label)
-        self.last_router_decision = RouterDecision(
-            role=label,
-            adapter=adapter,
-            confidence=float(probabilities[label_index].item()),
-            logits=[float(value) for value in logits[0].detach().cpu().tolist()],
-        )
-        return adapter
 
     def set_adapter(self, adapter_name: str | None) -> None:
         adapter_name = self._adapter_from_label(adapter_name)
@@ -277,10 +195,7 @@ class SmolnalysisMoE(torch.nn.Module):
         self.active_adapter = adapter.name
 
     def _generation_inputs(self, preprocessed: dict[str, Any]) -> dict[str, Any]:
-        if self.active_adapter is None:
-            messages = preprocessed.get("messages") or preprocessed.get("latest_user_messages") or []
-        else:
-            messages = preprocessed.get("latest_user_messages") or preprocessed.get("messages") or []
+        messages = preprocessed.get("messages") or preprocessed.get("latest_user_messages") or []
         return self._tokenize_messages(messages)
 
     def forward(
@@ -291,14 +206,11 @@ class SmolnalysisMoE(torch.nn.Module):
         temperature: float = 0.7,
         top_p: float = 0.95,
         top_k: int = 64,
-        adapter: str | None = "auto",
+        adapter: str | None = None,
     ):
         already_tokenized = isinstance(inputs, dict) and "input_ids" in inputs
         preprocessed = inputs if self._is_preprocessed(inputs) else self._preprocess(inputs)
-        requested_adapter = (adapter or "auto").strip().casefold() if isinstance(adapter, str) else adapter
         selected_adapter = self._adapter_from_label(adapter)
-        if requested_adapter in {None, "auto", "router"}:
-            selected_adapter = self.route_adapter(preprocessed)
         self.set_adapter(selected_adapter)
 
         model_inputs = preprocessed if already_tokenized else self._generation_inputs(preprocessed)
@@ -328,3 +240,52 @@ class SmolnalysisMoE(torch.nn.Module):
     def generate_text(self, inputs: Any, **generation_kwargs: Any) -> str:
         output_ids = self.forward(inputs, **generation_kwargs)
         return self.tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
+
+    @staticmethod
+    def _is_greeting(user_message: str) -> bool:
+        return user_message.strip().casefold() == "hi"
+
+    def generate_chat(
+        self,
+        inputs: Any,
+        *,
+        max_new_tokens: int = 512,
+        temperature: float = 0.7,
+        top_p: float = 0.95,
+        top_k: int = 64,
+    ) -> dict[str, Any]:
+        messages = self._normalize_messages(inputs)
+        latest_user = self._latest_user_message(messages)
+        user_message = latest_user[0]["content"] if latest_user else ""
+
+        if self._is_greeting(user_message):
+            return {
+                "content": GREETING_RESPONSE,
+                "tool_result": "",
+                "stages": [{"adapter": None, "input": "hardcoded_greeting"}],
+            }
+
+        generation_kwargs = {
+            "max_new_tokens": max_new_tokens,
+            "temperature": temperature,
+            "top_p": top_p,
+            "top_k": top_k,
+        }
+        retrieval_messages = [
+            {"role": "system", "content": RETRIEVAL_SYSTEM_PROMPT},
+            {"role": "user", "content": user_message},
+        ]
+        tool_result = self.generate_text(retrieval_messages, adapter="ckan_retrieval", **generation_kwargs)
+        openui_messages = [
+            {"role": "system", "content": OPENUI_SYSTEM_PROMPT},
+            {"role": "user", "content": f"{user_message}\n\nTool result:\n{tool_result}"},
+        ]
+        openui_lang = self.generate_text(openui_messages, adapter="openui_translator", **generation_kwargs)
+        return {
+            "content": openui_lang,
+            "tool_result": tool_result,
+            "stages": [
+                {"adapter": "ckan_retrieval", "input": "user_message"},
+                {"adapter": "openui_translator", "input": "user_message_and_tool_result"},
+            ],
+        }

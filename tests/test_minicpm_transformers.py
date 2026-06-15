@@ -35,21 +35,20 @@ class MiniCpmTransformersTests(TestCase):
         self.assertFalse(status["router"]["enabled"])
         self.assertIn("ckan_retrieval", status["roles"])
         self.assertEqual(status["roles"]["ckan_retrieval"]["temperature"], 0.0)
-        self.assertEqual(
-            status["roles"]["ckan_retrieval"]["adapter_repo_id"],
-            "build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora",
-        )
+        self.assertTrue(status["roles"]["ckan_retrieval"]["adapter_path"].endswith("train/retrieval/outputs/tool-results-minicpm5-lora/checkpoint-260"))
+        self.assertEqual(status["roles"]["ckan_retrieval"]["adapter_repo_id"], "")
         self.assertTrue(status["roles"]["ckan_retrieval"]["adapter_configured"])
 
-    def test_role_config_reads_peft_adapter_repo(self) -> None:
+    def test_role_config_uses_local_registry_path(self) -> None:
         os.environ["SMOLNALYSIS_MINICPM_CKAN_RETRIEVAL_ADAPTER_REPO_ID"] = "org/adapter"
         module = importlib.reload(importlib.import_module("backend.minicpm_transformers"))
 
         config = module.role_config("ckan_retrieval")
         status = module.runtime_status()
 
-        self.assertEqual(config.adapter_repo_id, "org/adapter")
-        self.assertEqual(status["roles"]["ckan_retrieval"]["adapter_hub_url"], "https://huggingface.co/org/adapter")
+        self.assertTrue(config.adapter_path.endswith("train/retrieval/outputs/tool-results-minicpm5-lora/checkpoint-260"))
+        self.assertEqual(config.adapter_repo_id, "")
+        self.assertEqual(status["roles"]["ckan_retrieval"]["adapter_hub_url"], "")
 
     def test_generate_trace_uses_cached_runtime_metadata(self) -> None:
         module = importlib.reload(importlib.import_module("backend.minicpm_transformers"))

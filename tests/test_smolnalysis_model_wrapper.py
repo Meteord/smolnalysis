@@ -44,10 +44,12 @@ class FakeModel(torch.nn.Module):
         super().__init__()
         self.weight = torch.nn.Parameter(torch.zeros(1))
         self.generated_input_ids = None
+        self.generated_input_history = []
         self.active_adapter = None
 
     def generate(self, **kwargs):
         self.generated_input_ids = kwargs["input_ids"].detach().clone()
+        self.generated_input_history.append(self.generated_input_ids)
         extra = torch.tensor([[99, 100]], dtype=torch.long)
         return torch.cat([kwargs["input_ids"], extra], dim=-1)
 
@@ -59,21 +61,6 @@ class FakeModel(torch.nn.Module):
         self.loaded_adapter_name = adapter_name
 
 
-class FakeRouter(torch.nn.Module):
-    def __init__(self, label_index: int, num_labels: int = 3) -> None:
-        super().__init__()
-        self.weight = torch.nn.Parameter(torch.zeros(1))
-        self.label_index = label_index
-        self.num_labels = num_labels
-        self.seen_input_ids = None
-
-    def forward(self, **kwargs):
-        self.seen_input_ids = kwargs["input_ids"].detach().clone()
-        logits = torch.zeros((1, self.num_labels), dtype=torch.float)
-        logits[0, self.label_index] = 10
-        return {"logits": logits}
-
-
 class FakePeftModel:
     @staticmethod
     def from_pretrained(model, path, adapter_name):
@@ -83,31 +70,31 @@ class FakePeftModel:
 
 
 class SmolnalysisMoETests(TestCase):
-    def build_wrapper(self, router: FakeRouter):
+    def build_wrapper(self):
         import backend.smolnalysis_model_wrapper as wrapper
 
         fake_model = FakeModel()
-        fake_adapter = SimpleNamespace(name="openui_translator", source="org/openui-adapter", is_path=False)
         peft_module = SimpleNamespace(PeftModel=FakePeftModel)
+
+        def fake_adapter_source(role):
+            return SimpleNamespace(name=role, source=f"/tmp/{role}", is_path=False)
+
         patches = [
             patch.object(wrapper.AutoTokenizer, "from_pretrained", return_value=FakeTokenizer()),
             patch.object(wrapper.AutoModelForCausalLM, "from_pretrained", return_value=fake_model),
-            patch.object(wrapper, "_adapter_source_for_role", return_value=fake_adapter),
+            patch.object(wrapper, "_adapter_source_for_role", side_effect=fake_adapter_source),
             patch.dict(sys.modules, {"peft": peft_module}),
         ]
         for active_patch in patches:
             active_patch.start()
             self.addCleanup(active_patch.stop)
         model = wrapper.SmolnalysisMoE(
-            task_router=router,
-            router_labels=["general_agent", "ckan_retrieval", "openui_translator"],
             load_in_4bit=False,
         )
         return model, fake_model
 
-    def test_forward_routes_adapter_and_uses_latest_user_message_only(self) -> None:
-        router = FakeRouter(label_index=2)
-        model, fake_model = self.build_wrapper(router)
+    def test_forward_uses_explicit_adapter_and_supplied_messages(self) -> None:
+        model, fake_model = self.build_wrapper()
 
         output_ids = model(
             [
@@ -115,32 +102,17 @@ class SmolnalysisMoETests(TestCase):
                 {"role": "assistant", "content": "old answer"},
                 {"role": "user", "content": "render this as OpenUI"},
             ],
-            adapter="auto",
+            adapter="openui_translator",
             temperature=0.0,
         )
 
         self.assertEqual(model.active_adapter, "openui_translator")
         self.assertEqual(fake_model.active_adapter, "openui_translator")
-        self.assertEqual(router.seen_input_ids.tolist(), [[1]])
-        self.assertEqual(fake_model.generated_input_ids.tolist(), [[1]])
+        self.assertEqual(fake_model.generated_input_ids.tolist(), [[1, 2, 3]])
         self.assertEqual(output_ids.tolist(), [[99, 100]])
 
-    def test_route_records_router_decision(self) -> None:
-        router = FakeRouter(label_index=2)
-        model, _fake_model = self.build_wrapper(router)
-
-        _preprocessed, decision = model.route("render this as OpenUI")
-
-        self.assertIsNotNone(decision)
-        assert decision is not None
-        self.assertEqual(decision.role, "openui_translator")
-        self.assertEqual(decision.adapter, "openui_translator")
-        self.assertGreater(decision.confidence, 0.9)
-        self.assertEqual(len(decision.logits), 3)
-
-    def test_forward_keeps_history_when_router_selects_base(self) -> None:
-        router = FakeRouter(label_index=0)
-        model, fake_model = self.build_wrapper(router)
+    def test_forward_keeps_history_with_no_adapter(self) -> None:
+        model, fake_model = self.build_wrapper()
 
         model(
             [
@@ -148,7 +120,7 @@ class SmolnalysisMoETests(TestCase):
                 {"role": "assistant", "content": "old answer"},
                 {"role": "user", "content": "hello"},
             ],
-            adapter="auto",
+            adapter=None,
             temperature=0.0,
         )
 
@@ -156,25 +128,22 @@ class SmolnalysisMoETests(TestCase):
         self.assertEqual(fake_model.generated_input_ids.tolist(), [[1, 2, 3]])
 
     def test_forward_accepts_preprocessed_inputs(self) -> None:
-        router = FakeRouter(label_index=2)
-        model, fake_model = self.build_wrapper(router)
+        model, fake_model = self.build_wrapper()
 
         model(
             {
                 "input_ids": torch.tensor([[7, 8, 9]], dtype=torch.long),
                 "attention_mask": torch.tensor([[1, 1, 1]], dtype=torch.long),
             },
-            adapter="auto",
+            adapter="openui_translator",
             temperature=0.0,
         )
 
         self.assertEqual(model.active_adapter, "openui_translator")
-        self.assertEqual(router.seen_input_ids.tolist(), [[7, 8, 9]])
         self.assertEqual(fake_model.generated_input_ids.tolist(), [[7, 8, 9]])
 
     def test_forward_accepts_wrapper_preprocess_output(self) -> None:
-        router = FakeRouter(label_index=2)
-        model, fake_model = self.build_wrapper(router)
+        model, fake_model = self.build_wrapper()
         preprocessed = model._preprocess(
             [
                 {"role": "user", "content": "old question"},
@@ -183,13 +152,47 @@ class SmolnalysisMoETests(TestCase):
             ]
         )
 
-        model(preprocessed, adapter="ROUTER", temperature=0.0)
+        model(preprocessed, adapter="openui_translator", temperature=0.0)
 
         self.assertEqual(model.active_adapter, "openui_translator")
-        self.assertEqual(router.seen_input_ids.tolist(), [[1]])
-        self.assertEqual(fake_model.generated_input_ids.tolist(), [[1]])
+        self.assertEqual(fake_model.generated_input_ids.tolist(), [[1, 2, 3]])
 
-    def test_default_adapter_sources_use_registry(self) -> None:
+    def test_generate_chat_returns_hardcoded_hi_response(self) -> None:
+        model, fake_model = self.build_wrapper()
+
+        result = model.generate_chat([{"role": "user", "content": "hi"}], temperature=0.0)
+
+        self.assertEqual(result["content"], "hi, there how can i help you?")
+        self.assertEqual(result["tool_result"], "")
+        self.assertEqual(result["stages"], [{"adapter": None, "input": "hardcoded_greeting"}])
+        self.assertEqual(fake_model.generated_input_history, [])
+
+    def test_generate_chat_runs_retrieval_then_openui_with_system_prompts(self) -> None:
+        model, fake_model = self.build_wrapper()
+
+        result = model.generate_chat([{"role": "user", "content": "Show temperature in Munich"}], temperature=0.0)
+
+        self.assertEqual(result["content"], "99 100")
+        self.assertEqual(result["tool_result"], "99 100")
+        self.assertEqual([stage["adapter"] for stage in result["stages"]], ["ckan_retrieval", "openui_translator"])
+        self.assertEqual(fake_model.generated_input_history[0].tolist(), [[1, 2]])
+        self.assertEqual(fake_model.generated_input_history[1].tolist(), [[1, 2]])
+
+    def test_adapter_choice_uses_exact_router_labels(self) -> None:
+        model, _fake_model = self.build_wrapper()
+
+        self.assertIsNone(model._adapter_from_label("general_agent"))
+        self.assertEqual(model._adapter_from_label("ckan_retrieval"), "ckan_retrieval")
+        self.assertEqual(model._adapter_from_label("openui_translator"), "openui_translator")
+
+        with self.assertRaises(KeyError):
+            model._adapter_from_label("ckan")
+        with self.assertRaises(KeyError):
+            model._adapter_from_label("openui")
+        with self.assertRaises(KeyError):
+            model._adapter_from_label("data_analysis")
+
+    def test_default_adapter_sources_use_local_registry(self) -> None:
         import backend.smolnalysis_model_wrapper as wrapper
 
         source = wrapper._adapter_source_for_role("ckan_retrieval")
@@ -197,11 +200,19 @@ class SmolnalysisMoETests(TestCase):
         self.assertIsNotNone(source)
         assert source is not None
         self.assertEqual(source.name, "ckan_retrieval")
-        self.assertFalse(source.is_path)
-        self.assertEqual(source.source, "build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora")
-        self.assertIsNone(wrapper._adapter_source_for_role("openui_translator"))
+        self.assertTrue(source.is_path)
+        self.assertTrue(Path(source.source).exists())
+        self.assertTrue(source.source.endswith("train/retrieval/outputs/tool-results-minicpm5-lora/checkpoint-260"))
 
-    def test_adapter_source_reads_env_repo_id(self) -> None:
+        openui_source = wrapper._adapter_source_for_role("openui_translator")
+        self.assertIsNotNone(openui_source)
+        assert openui_source is not None
+        self.assertEqual(openui_source.name, "openui_translator")
+        self.assertTrue(openui_source.is_path)
+        self.assertTrue(Path(openui_source.source).exists())
+        self.assertTrue(openui_source.source.endswith("train/openui_lang/outputs/openui-translate-mini-lora/checkpoint-160"))
+
+    def test_registry_ignores_env_repo_ids(self) -> None:
         import backend.smolnalysis_model_wrapper as wrapper
 
         with patch.dict(
@@ -213,8 +224,8 @@ class SmolnalysisMoETests(TestCase):
         self.assertIsNotNone(source)
         assert source is not None
         self.assertEqual(source.name, "openui_translator")
-        self.assertFalse(source.is_path)
-        self.assertEqual(source.source, "org/openui-adapter")
+        self.assertTrue(source.is_path)
+        self.assertTrue(source.source.endswith("train/openui_lang/outputs/openui-translate-mini-lora/checkpoint-160"))
 
 
 if __name__ == "__main__":
