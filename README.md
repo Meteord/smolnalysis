@@ -33,6 +33,7 @@ The app runs in Gradio Server Mode with a custom OpenUI chat frontend. Gradio pr
 - GitHub repo: [https://github.com/Meteord/smolnalysis](https://github.com/Meteord/smolnalysis)
 - Field notes (German): [Build Small Hackathon Blog Post](https://ki.muenchen.de/blog/2026-06-15-build-small-hackathon)
 - Fine-tuned model: [MiniCPM5-Finetune fur CKAN Retrieval](https://huggingface.co/build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora)
+- Contributors: `illuminate25` & `Meteord`
 
 ## How It Works
 
