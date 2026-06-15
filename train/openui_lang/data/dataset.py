@@ -61,16 +61,22 @@ def extract_openui_messages(sample: dict[str, Any]) -> list[dict[str, str]]:
     if not isinstance(assistant, str) or not assistant.strip():
         raise ValueError("OpenUI sample must include messages or a non-empty openui_lang target.")
 
-    user_payload = {
-        "task": sample.get("task", "render_openui"),
-        "user_question": sample.get("user_question"),
-        "query_result": sample.get("query_result"),
-        "component_hints": sample.get("component_hints"),
-        "quality_score": sample.get("quality_score"),
-    }
+    question = sample.get("user_question")
+    query_result = sample.get("query_result")
+    component_hints = sample.get("component_hints")
+    quality_score = sample.get("quality_score")
+    user_parts = []
+    if isinstance(question, str) and question.strip():
+        user_parts.append(question.strip())
+    if query_result is not None:
+        user_parts.append("Tool result:\n" + json.dumps(query_result, ensure_ascii=False, indent=2))
+    if component_hints is not None:
+        user_parts.append("component_hints:\n" + json.dumps(component_hints, ensure_ascii=False, indent=2))
+    if quality_score is not None:
+        user_parts.append("quality_score:\n" + json.dumps(quality_score, ensure_ascii=False, indent=2))
     return [
         {"role": "system", "content": DEFAULT_OPENUI_SYSTEM_PROMPT},
-        {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False, indent=2)},
+        {"role": "user", "content": "\n\n".join(user_parts)},
         {"role": "assistant", "content": assistant},
     ]
 

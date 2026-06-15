@@ -53,7 +53,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--logging-steps", type=int, default=25)
     parser.add_argument("--eval-steps", type=int, default=250)
     parser.add_argument("--save-steps", type=int, default=250)
-    parser.add_argument("--save-total-limit", type=int, default=2)
+    parser.add_argument("--save-total-limit", type=int, default=5)
     parser.add_argument("--lora-r", type=int, default=16)
     parser.add_argument("--lora-alpha", type=int, default=32)
     parser.add_argument("--lora-dropout", type=float, default=0.05)
@@ -177,6 +177,25 @@ def build_datasets(args: argparse.Namespace, tokenizer: Any) -> tuple[OpenUITrai
 
 def print_dataset_preview(dataset: OpenUITrainingDataset) -> None:
     sample = dataset.samples[0]
+    def debug_supervised_text(tokenizer, dataset, index=0):
+        item = dataset[index]
+        labels = item["labels"]
+        input_ids = item["input_ids"]
+
+        if hasattr(labels, "tolist"):
+            labels = labels.tolist()
+        if hasattr(input_ids, "tolist"):
+            input_ids = input_ids.tolist()
+
+        first = next(i for i, x in enumerate(labels) if x != -100)
+
+        print("first supervised index:", first)
+        print("decoded supervised start:")
+        print(tokenizer.decode(input_ids[first:first + 80]))
+        print("decoded prompt end:")
+        print(tokenizer.decode(input_ids[max(0, first - 80):first]))
+        
+    debug_supervised_text(dataset.tokenizer, dataset)
     messages = sample["messages"]
     print("Dataset preview")
     print(f"samples: {len(dataset)}")

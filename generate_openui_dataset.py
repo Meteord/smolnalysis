@@ -207,7 +207,7 @@ def choose_context(rng, domain=None):
 
 
 def row(user_query, tool_result, assistant, domain, data_shape, component):
-    content = "User query: " + user_query + "\n\nTool result:\n" + json.dumps(tool_result, ensure_ascii=False, indent=2)
+    content = user_query + "\n\nTool result:\n" + json.dumps(tool_result, ensure_ascii=False, indent=2)
     return {
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
