@@ -9,6 +9,11 @@ from dataclasses import dataclass
 from typing import Any
 
 try:
+    from .adapter_registry import adapter_source
+except ImportError:
+    from adapter_registry import adapter_source  # type: ignore
+
+try:
     import spaces
 except ImportError:
     class _SpacesFallback:
@@ -27,10 +32,6 @@ DEFAULT_MODEL_ID = os.getenv("SMOLNALYSIS_MINICPM_TRANSFORMERS_MODEL_ID", os.get
 DEFAULT_MAX_NEW_TOKENS = int(os.getenv("SMOLNALYSIS_MINICPM_MAX_NEW_TOKENS", os.getenv("MAX_TOKENS", "384")))
 DEFAULT_TEMPERATURE = float(os.getenv("SMOLNALYSIS_MINICPM_TEMPERATURE", os.getenv("TEMPERATURE", "0.7")))
 DEFAULT_TOP_P = float(os.getenv("SMOLNALYSIS_MINICPM_TOP_P", os.getenv("TOP_P", "0.95")))
-DEFAULT_CKAN_RETRIEVAL_ADAPTER_REPO_ID = os.getenv(
-    "SMOLNALYSIS_DEFAULT_CKAN_RETRIEVAL_ADAPTER_REPO_ID",
-    "build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora",
-)
 ZERO_GPU_DURATION_SECONDS = int(os.getenv("SMOLNALYSIS_MINICPM_ZEROGPU_DURATION_SECONDS", "120"))
 EAGER_LOAD = os.getenv("SMOLNALYSIS_MINICPM_TRANSFORMERS_EAGER_LOAD", os.getenv("SPACE_ID", "")).casefold() not in {
     "",
@@ -112,6 +113,10 @@ def normalize_role(adapter: str | None) -> str:
     return ROLE_ALIASES.get(value, value)
 
 
+def _looks_like_path(source: str) -> bool:
+    return source.startswith(("/", "./", "../", "~")) or os.path.exists(os.path.expanduser(source))
+
+
 def route_role(messages: list[dict[str, str]], adapter: str | None = "auto") -> str:
     requested = normalize_role(adapter)
     if requested != "auto":
@@ -145,12 +150,9 @@ def role_config(role: str) -> TransformersRoleConfig:
         raise KeyError(f"Unknown MiniCPM transformers role '{role}'. Available roles: {available}")
 
     default_temperature = "0" if role == "ckan_retrieval" else str(DEFAULT_TEMPERATURE)
-    adapter_path = _clean_env_value(_role_env(role, "ADAPTER_PATH"), _clean_env_value(_role_env(role, "LORA_PATH"), ""))
-    default_adapter_repo_id = DEFAULT_CKAN_RETRIEVAL_ADAPTER_REPO_ID if role == "ckan_retrieval" else ""
-    adapter_repo_id = _clean_env_value(
-        _role_env(role, "ADAPTER_REPO_ID"),
-        _clean_env_value(_role_env(role, "LORA_REPO_ID"), default_adapter_repo_id),
-    )
+    source = adapter_source(role)
+    adapter_path = source if source and _looks_like_path(source) else ""
+    adapter_repo_id = source if source and not _looks_like_path(source) else ""
     max_new_tokens = int(_clean_env_value(_role_env(role, "MAX_NEW_TOKENS"), str(DEFAULT_MAX_NEW_TOKENS)))
     temperature = float(_clean_env_value(_role_env(role, "TEMPERATURE"), default_temperature))
     top_p = float(_clean_env_value(_role_env(role, "TOP_P"), str(DEFAULT_TOP_P)))

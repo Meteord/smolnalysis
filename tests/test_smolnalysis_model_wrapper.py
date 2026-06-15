@@ -189,17 +189,32 @@ class SmolnalysisMoETests(TestCase):
         self.assertEqual(router.seen_input_ids.tolist(), [[1]])
         self.assertEqual(fake_model.generated_input_ids.tolist(), [[1]])
 
-    def test_default_adapter_sources_match_available_minicpm_adapter(self) -> None:
+    def test_default_adapter_sources_use_registry(self) -> None:
         import backend.smolnalysis_model_wrapper as wrapper
 
-        self.assertIsNone(wrapper._adapter_source_for_role("ckan_retrieval"))
-        source = wrapper._adapter_source_for_role("openui_translator")
+        source = wrapper._adapter_source_for_role("ckan_retrieval")
+
+        self.assertIsNotNone(source)
+        assert source is not None
+        self.assertEqual(source.name, "ckan_retrieval")
+        self.assertFalse(source.is_path)
+        self.assertEqual(source.source, "build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora")
+        self.assertIsNone(wrapper._adapter_source_for_role("openui_translator"))
+
+    def test_adapter_source_reads_env_repo_id(self) -> None:
+        import backend.smolnalysis_model_wrapper as wrapper
+
+        with patch.dict(
+            "os.environ",
+            {"SMOLNALYSIS_MINICPM_OPENUI_TRANSLATOR_ADAPTER_REPO_ID": "org/openui-adapter"},
+        ):
+            source = wrapper._adapter_source_for_role("openui_translator")
 
         self.assertIsNotNone(source)
         assert source is not None
         self.assertEqual(source.name, "openui_translator")
-        self.assertTrue(source.is_path)
-        self.assertTrue((Path(source.source) / "adapter_config.json").exists())
+        self.assertFalse(source.is_path)
+        self.assertEqual(source.source, "org/openui-adapter")
 
 
 if __name__ == "__main__":

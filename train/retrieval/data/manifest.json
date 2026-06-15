@@ -1,0 +1,26 @@
+{
+  "task": "generate_tool_result",
+  "description": "Question-to-tool-result shortcut dataset derived from OpenUI-Lang SFT data.",
+  "label_contract": "Assistant content is valid JSON only; it never includes the source tool-result marker.",
+  "system_prompt": "You generate the structured tool result for a smolnalysis user question. Return only valid JSON. Do not include explanations, markdown, or any label prefix.",
+  "splits": [
+    {
+      "split": "train",
+      "source": "train/openui_lang/data/openui_sft_train.jsonl",
+      "output": "train/retrieval/data/tool_result_train.jsonl",
+      "examples": 18000
+    },
+    {
+      "split": "eval",
+      "source": "train/openui_lang/data/openui_sft_eval.jsonl",
+      "output": "train/retrieval/data/tool_result_eval.jsonl",
+      "examples": 1995
+    },
+    {
+      "split": "test",
+      "source": "train/openui_lang/data/openui_sft_test.jsonl",
+      "output": "train/retrieval/data/tool_result_test.jsonl",
+      "examples": 5
+    }
+  ]
+}

@@ -58,8 +58,7 @@ Longer term, the Space should keep this Gradio Server app as the public UI and r
 The app keeps OpenUI support modular:
 
 - `app.py` owns the Gradio `Server`, serves the frontend, and exposes `/api/chat` plus the Gradio `respond` API.
-- MiniCPM backend modules own the optional model runtimes used for status/probe endpoints and later LoRA-backed specialists.
-- `backend/adapter_registry.py` maps backend adapter names to checkpoints under `models/gemma`.
+- MiniCPM backend modules own the optional model runtimes used for status/probe endpoints and LoRA-backed specialists.
 - `ckan_agent.py` defines the explicit CKAN retrieval loop, role action contract, tool execution, progress events, and retrieval OpenUI fallback.
 - `agent_workflow.py` is a small compatibility wrapper for the Gradio `respond` API and demo dataset fallback.
 - `ckan_support.py` validates public CKAN endpoints through the Action API v3.

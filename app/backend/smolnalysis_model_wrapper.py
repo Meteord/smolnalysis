@@ -9,6 +9,11 @@ from typing import Any
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+try:
+    from .adapter_registry import adapter_source
+except ImportError:
+    from adapter_registry import adapter_source  # type: ignore
+
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 ROUTER_SOURCE = REPO_ROOT / "train" / "router" / "router_mlp.py"
@@ -16,12 +21,6 @@ DEFAULT_ROUTER_OUTPUT_DIR = Path(
     os.getenv("SMOLNALYSIS_ROUTER_OUTPUT_DIR", str(REPO_ROOT / "train" / "router" / "outputs" / "router-mlp"))
 )
 BASE_MODEL_ID = os.getenv("SMOLNALYSIS_MINICPM_TRANSFORMERS_MODEL_ID", os.getenv("MODEL_ID", "openbmb/MiniCPM5-1B"))
-DEFAULT_OPENUI_TRANSLATOR_ADAPTER_PATH = Path(
-    os.getenv(
-        "SMOLNALYSIS_DEFAULT_OPENUI_TRANSLATOR_ADAPTER_PATH",
-        str(REPO_ROOT / "train" / "openui_lang" / "outputs" / "openui-sft-stats-components-lora"),
-    )
-)
 BASE_ADAPTER_NAMES = {"", "base", "none", "no_adapter", "no-adapter", "general", "general_agent"}
 ROLE_ENV_KEYS = {
     "general_agent": "GENERAL_AGENT",
@@ -58,40 +57,20 @@ class RouterDecision:
     logits: list[float]
 
 
-def _clean_env_value(name: str, default: str = "") -> str:
-    raw = os.getenv(name, default)
-    lines = []
-    for line in str(raw).splitlines():
-        value = line.strip().strip('"').strip("'")
-        if value and not value.startswith("#"):
-            lines.append(value)
-    return lines[-1] if lines else default
-
-
-def _role_env(role: str, suffix: str) -> str:
-    return f"SMOLNALYSIS_MINICPM_{ROLE_ENV_KEYS[role]}_{suffix}"
-
-
 def _repo_path(path: str | Path) -> Path:
     value = Path(path).expanduser()
     return value if value.is_absolute() else REPO_ROOT / value
 
 
 def _adapter_source_for_role(role: str) -> AdapterSource | None:
-    if role not in ROLE_ENV_KEYS:
+    source = adapter_source(role)
+    if not source:
         return None
+    return AdapterSource(role, source, _looks_like_path(source))
 
-    default_path = str(DEFAULT_OPENUI_TRANSLATOR_ADAPTER_PATH) if role == "openui_translator" else ""
-    adapter_path = _clean_env_value(_role_env(role, "ADAPTER_PATH"), _clean_env_value(_role_env(role, "LORA_PATH"), default_path))
-    adapter_repo_id = _clean_env_value(
-        _role_env(role, "ADAPTER_REPO_ID"),
-        _clean_env_value(_role_env(role, "LORA_REPO_ID"), ""),
-    )
-    if adapter_path:
-        return AdapterSource(role, adapter_path, True)
-    if adapter_repo_id:
-        return AdapterSource(role, adapter_repo_id, False)
-    return None
+
+def _looks_like_path(source: str) -> bool:
+    return source.startswith(("/", "./", "../", "~")) or Path(source).expanduser().exists()
 
 
 class SmolnalysisMoE(torch.nn.Module):
