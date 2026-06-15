@@ -12,6 +12,8 @@ from typing import Any
 
 import gradio as gr
 from dotenv import load_dotenv
+from fastapi.responses import HTMLResponse
+from pydantic import BaseModel, Field
 
 try:
     import spaces
@@ -212,38 +214,161 @@ def clear_chat() -> tuple[list[dict[str, Any]], list[dict[str, str]], str]:
     return [], [], ""
 
 
-with gr.Blocks(title="smolnalysis") as app:
-    gr.HTML(
-        _css()
-        + """
-        <div class="smol-shell">
-          <h1 class="smol-title">smolnalysis</h1>
-          <p class="smol-subtitle">MiniCPM SmolnalysisMoE chat with OpenUI rendering.</p>
-        </div>
-        """
-    )
-    chatbot = gr.Chatbot(
-        height=620,
-        show_label=False,
-        sanitize_html=False,
-        render_markdown=False,
-        placeholder="Ask a general question or ask for open data that should render as OpenUI.",
-    )
-    model_messages = gr.State([])
-    with gr.Row():
-        prompt = gr.Textbox(
-            placeholder="Ask smolnalysis...",
-            show_label=False,
-            scale=8,
-            autofocus=True,
-        )
-        send = gr.Button("Send", variant="primary", scale=1)
-        clear = gr.Button("Clear", scale=1)
-    gr.Examples(examples=EXAMPLE_PROMPTS, inputs=prompt)
+class ChatRequest(BaseModel):
+    message: str
+    history: list[dict[str, str]] = Field(default_factory=list)
 
-    prompt.submit(submit_message, [prompt, chatbot, model_messages], [prompt, chatbot, model_messages])
-    send.click(submit_message, [prompt, chatbot, model_messages], [prompt, chatbot, model_messages])
-    clear.click(clear_chat, outputs=[chatbot, model_messages, prompt])
+
+def _server_page() -> str:
+    examples = [row[0] for row in EXAMPLE_PROMPTS]
+    return (
+        "<!doctype html>"
+        '<html lang="en">'
+        "<head>"
+        '<meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width, initial-scale=1">'
+        "<title>smolnalysis</title>"
+        + _css()
+        + """
+<style>
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; }
+.gradio-container { max-width: 1120px; margin: 0 auto; padding: 18px; }
+.chat { min-height: 560px; border: 1px solid #dbe3ef; background: #fff; border-radius: 8px; padding: 14px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+.message { max-width: min(860px, 92%); border-radius: 8px; padding: 10px 12px; line-height: 1.45; }
+.message.user { align-self: flex-end; background: #2563eb; color: #fff; }
+.message.assistant { align-self: flex-start; background: #f1f5f9; color: #111827; }
+.composer { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; margin-top: 10px; }
+.composer input { min-height: 42px; border: 1px solid #cbd5e1; border-radius: 8px; padding: 0 12px; font-size: 15px; }
+.composer button, .examples button { border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: #111827; cursor: pointer; }
+.composer button { padding: 0 16px; font-weight: 600; }
+.composer button.primary { background: #2563eb; border-color: #2563eb; color: #fff; }
+.examples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.examples button { padding: 7px 9px; font-size: 13px; }
+.status { min-height: 20px; margin-top: 8px; color: #64748b; font-size: 12px; }
+</style>
+        """
+        "</head>"
+        "<body>"
+        '<main class="gradio-container">'
+        '<div class="smol-shell">'
+        '<h1 class="smol-title">smolnalysis</h1>'
+        '<p class="smol-subtitle">MiniCPM SmolnalysisMoE chat with OpenUI rendering.</p>'
+        "</div>"
+        '<section id="chat" class="chat" aria-live="polite"></section>'
+        '<form id="composer" class="composer">'
+        '<input id="prompt" autocomplete="off" autofocus placeholder="Ask smolnalysis..." />'
+        '<button class="primary" type="submit">Send</button>'
+        '<button id="clear" type="button">Clear</button>'
+        "</form>"
+        '<div id="examples" class="examples"></div>'
+        '<div id="status" class="status"></div>'
+        "</main>"
+        "<script>"
+        f"const EXAMPLES = {json.dumps(examples, ensure_ascii=False)};"
+        + r"""
+const chat = document.getElementById("chat");
+const prompt = document.getElementById("prompt");
+const statusEl = document.getElementById("status");
+const examplesEl = document.getElementById("examples");
+let history = [];
+
+function addMessage(role, content, htmlContent = false) {
+  const node = document.createElement("div");
+  node.className = `message ${role}`;
+  if (htmlContent) {
+    node.innerHTML = content;
+  } else {
+    node.textContent = content;
+  }
+  chat.appendChild(node);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+async function sendMessage(message) {
+  const text = (message || "").trim();
+  if (!text) return;
+  addMessage("user", text);
+  prompt.value = "";
+  statusEl.textContent = "Thinking...";
+  try {
+    const response = await fetch("/api/chat", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({message: text, history})
+    });
+    const payload = await response.json();
+    if (!response.ok) throw new Error(payload.detail || payload.error || response.statusText);
+    history = payload.history || history;
+    addMessage("assistant", payload.html, true);
+    statusEl.textContent = "";
+  } catch (error) {
+    addMessage("assistant", `${error.name}: ${error.message}`);
+    statusEl.textContent = "";
+  }
+}
+
+document.getElementById("composer").addEventListener("submit", (event) => {
+  event.preventDefault();
+  sendMessage(prompt.value);
+});
+document.getElementById("clear").addEventListener("click", () => {
+  history = [];
+  chat.innerHTML = "";
+  statusEl.textContent = "";
+  prompt.value = "";
+  prompt.focus();
+});
+for (const example of EXAMPLES) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = example;
+  button.addEventListener("click", () => {
+    prompt.value = example;
+    prompt.focus();
+  });
+  examplesEl.appendChild(button);
+}
+        """
+        "</script>"
+        "</body></html>"
+    )
+
+
+app = gr.Server(title="smolnalysis")
+
+
+@app.get("/", response_class=HTMLResponse)
+def index() -> HTMLResponse:
+    return HTMLResponse(_server_page())
+
+
+@app.post("/api/chat")
+@spaces.GPU(duration=120)
+def chat_api(request: ChatRequest) -> dict[str, Any]:
+    user_message = str(request.message or "").strip()
+    if not user_message:
+        return {"html": "", "history": request.history, "trace": {}}
+    messages = [*request.history, {"role": "user", "content": user_message}]
+    try:
+        content, trace = _run_model_chat(messages)
+        messages.append({"role": "assistant", "content": content})
+        return {
+            "content": content,
+            "html": _assistant_message(content, trace),
+            "history": messages,
+            "trace": trace,
+        }
+    except Exception as exc:
+        logger.exception("SmolnalysisMoE chat failed")
+        detail = f"{type(exc).__name__}: {str(exc).strip() or type(exc).__name__}"
+        messages.append({"role": "assistant", "content": detail})
+        return {
+            "content": detail,
+            "html": html.escape(detail),
+            "history": messages,
+            "trace": {"error": detail},
+        }
+
 
 
 if __name__ == "__main__":

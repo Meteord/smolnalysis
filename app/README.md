@@ -1,6 +1,6 @@
 # smolnalysis App
 
-This app is now a fresh Gradio Blocks frontend.
+This app uses `gr.Server` with a small custom HTML chat frontend.
 
 ## Local Run
 
@@ -18,14 +18,14 @@ Open [http://127.0.0.1:7860/](http://127.0.0.1:7860/).
 
 ## Runtime Shape
 
-- `app.py` owns the Gradio chat UI.
+- `app.py` owns the Gradio server, `/` frontend route, and `/api/chat` backend route.
 - Backend chat goes through `SmolnalysisMoE`.
 - `hi` returns `hi, there how can i help you?`.
 - Any other input runs the `ckan_retrieval` adapter with only the latest user message.
 - The retrieval adapter output is passed with the user question to the `openui_translator` adapter.
-- OpenUI-Lang responses are rendered inside the Gradio chat using `app/static/openui-renderer.js`.
+- OpenUI-Lang responses are rendered server-side into the custom chat UI.
 
-The old fullscreen React chat frontend and `/api/chat` streaming route have been removed.
+The old fullscreen React chat frontend and streaming route are still removed.
 
 ## Frontend Assets
 
