@@ -24,9 +24,9 @@ tags:
 
 **Ask a question about open data. Get UI generated on the fly. All powered by small expert models.**
 
-`smolnalysis` is an interactive open data agent built for the Build Small Hackathon. It combines a fine-tuned MiniCPM-1B language model with OpenUI-Lang code generation to create dynamic, data-driven interfaces directly from natural language questions about CKAN datasets.
+`smolnalysis` is an interactive open data agent built for the Build Small Hackathon. It combines MiniCPM5-1B, specialist LoRA adapters, and a learned router to create dynamic, data-driven interfaces directly from natural language questions about CKAN-style datasets.
 
-The app runs in Gradio Server Mode with a custom OpenUI chat frontend. Gradio provides the Python API server and Space-friendly runtime, while OpenUI drives the browser chat experience.
+The app runs on `gr.Server`. Gradio provides the Python API server and Space-friendly runtime, while a custom lightweight HTML chat frontend calls `/api/chat`. OpenUI-Lang output is cleaned and rendered server-side before it is inserted into the chat.
 
 ## Submission Links
 
@@ -69,14 +69,23 @@ The app connects to CKAN portals such as [opendata.muenchen.de](https://opendata
 - Produce validated CKAN retrieval actions
 - Generate OpenUI-Lang from retrieved context
 
+### 3. Learned Adapter Routing
+
+Incoming requests are routed by a small classifier trained on the same chat-template prompts used by the adapters. The router uses a frozen MiniCPM encoder and a lightweight MLP head, then selects one of:
+
+- `general_agent`: base model, no adapter
+- `ckan_retrieval`: initial data/retrieval prompt
+- `openui_translator`: prompt that already contains a `Tool result`
+
 ## Architecture
 
 The system uses a role-based routing pattern:
 
-1. Query routing selects the most suitable role for the latest user message.
+1. The router selects the most suitable role for the latest user message.
 2. MiniCPM-1B is used as the shared base model.
 3. Task-specific LoRA adapters specialize behavior without full model retraining.
-4. OpenUI-Lang output is rendered inline in the chat frontend.
+4. CKAN-style requests run retrieval first, then pass `user question + Tool result` to the OpenUI adapter.
+5. OpenUI-Lang output is rendered inline in the custom chat frontend.
 
 ## Models Used
 
@@ -85,15 +94,13 @@ The system uses a role-based routing pattern:
 | Base LLM | [openbmb/MiniCPM5-1B](https://huggingface.co/openbmb/MiniCPM5-1B) | 1B | Core language understanding and generation |
 | CKAN adapter | LoRA adapter | ~8M | CKAN retrieval actions |
 | OpenUI adapter | LoRA adapter | ~8M | OpenUI-Lang generation |
-| Router | Lightweight classifier | Small | Role selection |
+| Router | Frozen MiniCPM encoder + MLP head | <1M trainable head | Role selection |
 
 ## Local Setup
 
 ```bash
 uv venv
 uv sync
-npm install
-npm run build:openui-chat
 uv run python app/app.py
 ```
 
@@ -110,6 +117,7 @@ SMOLNALYSIS_MINICPM_TEMPERATURE=0.7
 ```
 
 Adapter defaults are configured in `app/backend/adapter_registry.py`.
+The router is enabled by default. If local router artifacts are missing, the runtime downloads them from `build-small-hackathon/smolnalysis-adapter-router`. Override with `SMOLNALYSIS_ROUTER_REPO_ID` only if you publish a different router repo.
 
 ## Useful Commands
 
@@ -117,8 +125,8 @@ Adapter defaults are configured in `app/backend/adapter_registry.py`.
 uv run python app/app.py
 uv run python -m unittest tests.test_smolnalysis_model_wrapper
 uv run python -m unittest tests.test_openui_adapter_demo
-npm run build:openui-chat
 npm run build:openui-renderer
+HF_TOKEN=... python train/router/upload_router_to_hf.py --router-dir train/router/outputs/router-mlp --repo-id build-small-hackathon/smolnalysis-adapter-router
 ```
 
 ## Planning

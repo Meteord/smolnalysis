@@ -115,17 +115,16 @@ ZeroGPU deployment notes:
 The app includes:
 
 - Gradio `Server` as the Python backend
-- A custom React frontend served from `/`
-- OpenUI's native fullscreen `FullScreen` chat component
+- A custom lightweight HTML chat frontend served from `/`
+- A JSON chat route at `/api/chat`
+- Training-set example prompts in the UI
 - Public CKAN endpoint configuration with `https://opendata.muenchen.de/` as the default
-- Server-side configuration for four OpenAI-compatible LLM roles
-- A simple Python CKAN agent loop exposed to the fullscreen frontend through `/api/chat`
-- LoRA-ready role boundaries for CKAN retrieval and OpenUI-Lang generation, with Python-owned tool execution and validation
-- OpenUI's `openuiChatLibrary` for rendered assistant responses
-- A demo city dataset used by the current deterministic analysis flow
-- A public Gradio API endpoint at `/gradio_api/call/respond`
+- MiniCPM5-1B as the shared base model
+- A frozen-encoder router with an MLP head for adapter role selection
+- LoRA role boundaries for CKAN retrieval and OpenUI-Lang generation
+- Server-side OpenUI-Lang cleaning and rendering for assistant responses
 
-The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and renders the full OpenUI chat application in the browser. `/api/chat` now routes dataset search messages through a CKAN specialist loop, streams validated OpenUI-Lang progress in the OpenAI-compatible SSE shape expected by the frontend, and records the model/tool trace. The MiniCPM role backends remain available for probing and later LoRA-backed specialist integration.
+The current frontend does not use Gradio's built-in Blocks UI. It uses Gradio as the server/runtime and serves a custom HTML chat page. `/api/chat` calls `SmolnalysisMoE`, records the model/tool trace, and returns rendered assistant HTML. OpenUI-Lang responses are rendered server-side before insertion into the chat.
 
 ## LLM role configuration
 
@@ -176,10 +175,7 @@ Generation spans include the base model, active adapter, sampling settings, mess
 # Run the app
 uv run python app/app.py
 
-# Rebuild the fullscreen OpenUI chat bundle
-npm run build:openui-chat
-
-# Rebuild the earlier embedded renderer prototype bundle
+# Rebuild the embedded OpenUI renderer bundle
 npm run build:openui-renderer
 
 # Run CKAN connector tests

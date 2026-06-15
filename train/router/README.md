@@ -42,6 +42,17 @@ The output directory contains:
 - `config.json`: architecture and label mapping.
 - `metrics.json`: eval/test accuracy and confusion matrix.
 
+Upload the router artifacts to Hugging Face Hub:
+
+```bash
+HF_TOKEN=... python train/router/upload_router_to_hf.py \
+  --router-dir train/router/outputs/router-mlp \
+  --repo-id build-small-hackathon/smolnalysis-adapter-router
+```
+
+The app runtime uses `build-small-hackathon/smolnalysis-adapter-router` by default when local router artifacts are not present.
+Set `SMOLNALYSIS_ROUTER_REPO_ID` only when using a different router repo.
+
 Load for inference:
 
 ```python
@@ -52,7 +63,7 @@ output = router(input_ids=input_ids, attention_mask=attention_mask)
 adapter = config.labels[int(output["logits"].argmax(dim=-1).item())]
 ```
 
-For the current minimal MoE PoC, prefer a deterministic two-stage wrapper:
+The current `SmolnalysisMoE` wrapper uses the router for `adapter="auto"`:
 
 1. Route the latest user request. If it predicts `ckan_retrieval`, run the retrieval adapter.
 2. Pass the OpenUI adapter its normal input shape: original user message plus `Tool result`.
