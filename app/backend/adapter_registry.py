@@ -23,10 +23,10 @@ ADAPTERS = {
         path=GEMMA_DIR / "checkpoints" / "gemma4_retrieval_adapter",
         description="Retrieval/tool-call adapter checkpoint used by the Gemma backend.",
     ),
-    "tool_json": AdapterSpec(
-        name="tool_json",
-        path=REPO_ROOT / "models" / "gemma4-tool-lora-adapter",
-        description="Adapter trained by training/trainer.py on llm_user_queries.jsonl.",
+    "openui_translater": AdapterSpec(
+        name="openui_translater",
+        path=REPO_ROOT / "train" / "openui_lang" / "ouputs" / "openui-translate-mini-lora",
+        description="Adapter trained on openui_sft_train.jsonl for tool result - openui component translation.",
     ),
 }
 

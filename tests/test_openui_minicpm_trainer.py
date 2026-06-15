@@ -34,8 +34,14 @@ class _FakeScalar:
         return self.value
 
 
+class _FakeTokenizer:
+    def decode(self, input_ids):
+        return "".join(str(value) for value in input_ids)
+
+
 class _FakeDataset:
     def __init__(self, size=3):
+        self.tokenizer = _FakeTokenizer()
         self.samples = [
             {
                 "task": "render_openui",
@@ -83,9 +89,18 @@ class OpenUIMiniCPMTrainerTests(TestCase):
         self.assertIs(limited, dataset)
         self.assertEqual(len(limited), 2)
 
+    def test_build_datasets_rejects_openui_split_directories(self) -> None:
+        args = train_minicpm_lora.build_arg_parser().parse_args(
+            ["--train-data", "train/openui_lang/data/train"]
+        )
+
+        with self.assertRaisesRegex(ValueError, "must be a JSONL file"):
+            train_minicpm_lora.build_datasets(args, object())
+
     @patch.object(train_minicpm_lora, "load_tokenizer", return_value=object())
     @patch.object(train_minicpm_lora, "build_datasets", return_value=(_FakeDataset(), _FakeDataset(size=1)))
-    def test_dry_run_reports_masked_and_supervised_tokens(self, _datasets, _tokenizer) -> None:
+    @patch.object(train_minicpm_lora, "debug_supervised_text")
+    def test_dry_run_reports_masked_and_supervised_tokens(self, _debug, _datasets, _tokenizer) -> None:
         args = train_minicpm_lora.build_arg_parser().parse_args(["--dry-run"])
 
         summary = train_minicpm_lora.dry_run(args)

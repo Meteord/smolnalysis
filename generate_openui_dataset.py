@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a synthetic SFT dataset for OpenUI-style component generation."""
+"""Generate a synthetic SFT dataset for OpenUI-Lang component generation."""
 
 import argparse
 import datetime
@@ -9,9 +9,9 @@ from collections import Counter
 
 
 SYSTEM_PROMPT = (
-    "You generate raw OpenUI component code from a user query and a structured tool result. "
-    "Use only the values from the tool result. Do not invent data. Return only the OpenUI "
-    "component code, without explanations or markdown."
+    "You generate OpenUI Lang from a user query and a structured tool result. "
+    "Use only the values from the tool result. Do not invent data. Return only OpenUI Lang "
+    "assignment statements, without explanations or markdown. Start with root = Root([...])."
 )
 
 DOMAINS = {
@@ -133,16 +133,16 @@ DATA_SHAPES = [
     "geo_values",
 ]
 COMPONENT_BY_SHAPE = {
-    "scalar": "StatCard",
-    "comparison": "ComparisonCard",
-    "time_series_daily": "LineChartCard",
-    "time_series_monthly": "BarChartCard",
-    "ranking": "HorizontalBarChartCard",
-    "threshold": "AlertCard",
-    "percentage": "ProgressCard",
-    "table": "TableCard",
-    "multi_kpi": "DashboardGrid",
-    "geo_values": "DistrictMapCard",
+    "scalar": "MetricGrid",
+    "comparison": "BarChart",
+    "time_series_daily": "Histogram",
+    "time_series_monthly": "BarChart",
+    "ranking": "BarChart",
+    "threshold": "Notice",
+    "percentage": "MetricGrid",
+    "table": "DataTable",
+    "multi_kpi": "MetricGrid",
+    "geo_values": "BarChart",
 }
 
 
@@ -218,153 +218,82 @@ def row(user_query, tool_result, assistant, domain, data_shape, component):
     }
 
 
-def render_stat_card(title, value, unit, description=None):
-    lines = [
-        "<StatCard",
-        f"  title={js_string(title)}",
-        f"  value={{{format_number(value)}}}",
-        f"  unit={js_string(unit)}",
-    ]
-    if description:
-        lines.append(f"  description={js_string(description)}")
-    lines.append("/>")
+def openui_rows(rows):
+    return json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
+
+
+def metric_value(value, unit):
+    return f"{format_number(value)} {unit}".strip()
+
+
+def render_metric_grid(title, metrics, summary=None):
+    children = [f"m{index + 1}" for index in range(len(metrics))]
+    root_children = ["summary", "metrics"] if summary else ["metrics"]
+    lines = [f"root = Root([{', '.join(root_children)}])"]
+    if summary:
+        lines.append(f"summary = InsightCard({js_string(title)}, {js_string(summary)})")
+    lines.append(f"metrics = MetricGrid([{', '.join(children)}])")
+    for ref, metric in zip(children, metrics):
+        args = [
+            js_string(metric["label"]),
+            js_string(metric["value"]),
+        ]
+        if metric.get("caption"):
+            args.append(js_string(metric["caption"]))
+        lines.append(f"{ref} = Metric({', '.join(args)})")
     return "\n".join(lines)
 
 
-def render_comparison_card(title, current_label, current_value, previous_label, previous_value, delta_value, delta_direction, unit):
+def render_insight(title, body):
     return "\n".join(
         [
-            "<ComparisonCard",
-            f"  title={js_string(title)}",
-            f"  currentLabel={js_string(current_label)}",
-            f"  currentValue={{{format_number(current_value)}}}",
-            f"  previousLabel={js_string(previous_label)}",
-            f"  previousValue={{{format_number(previous_value)}}}",
-            f"  deltaValue={{{format_number(delta_value)}}}",
-            f"  deltaDirection={js_string(delta_direction)}",
-            f"  unit={js_string(unit)}",
-            "/>",
+            "root = Root([summary])",
+            f"summary = InsightCard({js_string(title)}, {js_string(body)})",
         ]
     )
 
 
-def render_line_chart_card(title, x_key, y_key, unit, data):
-    return "\n".join(
-        [
-            "<LineChartCard",
-            f"  title={js_string(title)}",
-            f"  xKey={js_string(x_key)}",
-            f"  yKey={js_string(y_key)}",
-            f"  unit={js_string(unit)}",
-            "  data={[",
-            *[f"    {js_object(item)}{',' if i < len(data) - 1 else ''}" for i, item in enumerate(data)],
-            "  ]}",
-            "/>",
-        ]
-    )
-
-
-def render_bar_chart_card(title, x_key, y_key, unit, data):
-    return "\n".join(
-        [
-            "<BarChartCard",
-            f"  title={js_string(title)}",
-            f"  xKey={js_string(x_key)}",
-            f"  yKey={js_string(y_key)}",
-            f"  unit={js_string(unit)}",
-            "  data={[",
-            *[f"    {js_object(item)}{',' if i < len(data) - 1 else ''}" for i, item in enumerate(data)],
-            "  ]}",
-            "/>",
-        ]
-    )
-
-
-def render_horizontal_bar_chart_card(title, x_key, y_key, unit, data):
-    return "\n".join(
-        [
-            "<HorizontalBarChartCard",
-            f"  title={js_string(title)}",
-            f"  xKey={js_string(x_key)}",
-            f"  yKey={js_string(y_key)}",
-            f"  unit={js_string(unit)}",
-            "  data={[",
-            *[f"    {js_object(item)}{',' if i < len(data) - 1 else ''}" for i, item in enumerate(data)],
-            "  ]}",
-            "/>",
-        ]
-    )
-
-
-def render_alert_card(title, severity, value, threshold, unit, description):
-    return "\n".join(
-        [
-            "<AlertCard",
-            f"  title={js_string(title)}",
-            f"  severity={js_string(severity)}",
-            f"  value={{{format_number(value)}}}",
-            f"  threshold={{{format_number(threshold)}}}",
-            f"  unit={js_string(unit)}",
-            f"  description={js_string(description)}",
-            "/>",
-        ]
-    )
-
-
-def render_progress_card(title, value, max_value, unit, description):
-    return "\n".join(
-        [
-            "<ProgressCard",
-            f"  title={js_string(title)}",
-            f"  value={{{format_number(value)}}}",
-            f"  max={{{format_number(max_value)}}}",
-            f"  unit={js_string(unit)}",
-            f"  description={js_string(description)}",
-            "/>",
-        ]
-    )
-
-
-def render_table_card(title, columns, data):
-    return "\n".join(
-        [
-            "<TableCard",
-            f"  title={js_string(title)}",
-            "  columns={[",
-            *[f"    {js_object(item)}{',' if i < len(columns) - 1 else ''}" for i, item in enumerate(columns)],
-            "  ]}",
-            "  data={[",
-            *[f"    {js_object(item)}{',' if i < len(data) - 1 else ''}" for i, item in enumerate(data)],
-            "  ]}",
-            "/>",
-        ]
-    )
-
-
-def render_dashboard_grid(title, kpis):
-    lines = [f"<DashboardGrid title={js_string(title)}>"]
-    for kpi in kpis:
-        lines.append(
-            f"  <StatCard title={js_string(kpi['metric'])} value={{{format_number(kpi['value'])}}} unit={js_string(kpi['unit'])} />"
-        )
-    lines.append("</DashboardGrid>")
+def render_notice(title, message, tone="info", metrics=None):
+    root_children = ["notice", "metrics"] if metrics else ["notice"]
+    lines = [f"root = Root([{', '.join(root_children)}])"]
+    lines.append(f"notice = Notice({js_string(f'{title}: {message}')}, {js_string(tone)})")
+    if metrics:
+        refs = [f"m{index + 1}" for index in range(len(metrics))]
+        lines.append(f"metrics = MetricGrid([{', '.join(refs)}])")
+        for ref, metric in zip(refs, metrics):
+            lines.append(
+                f"{ref} = Metric({js_string(metric['label'])}, {js_string(metric['value'])}, {js_string(metric.get('caption', ''))})"
+            )
     return "\n".join(lines)
 
 
-def render_district_map_card(title, district_key, value_key, unit, data):
+def render_data_table(title, rows):
     return "\n".join(
         [
-            "<DistrictMapCard",
-            f"  title={js_string(title)}",
-            f"  districtKey={js_string(district_key)}",
-            f"  valueKey={js_string(value_key)}",
-            f"  unit={js_string(unit)}",
-            "  data={[",
-            *[f"    {js_object(item)}{',' if i < len(data) - 1 else ''}" for i, item in enumerate(data)],
-            "  ]}",
-            "/>",
+            "root = Root([table])",
+            f"table = DataTable({js_string(title)}, {openui_rows(rows)})",
         ]
     )
+
+
+def render_chart(title, x_column, y_column, rows, summary=None):
+    root_children = ["summary", "chart"] if summary else ["chart"]
+    lines = [f"root = Root([{', '.join(root_children)}])"]
+    if summary:
+        lines.append(f"summary = InsightCard({js_string(title)}, {js_string(summary)})")
+    lines.append(
+        f"chart = BarChart({js_string(title)}, {js_string(x_column)}, {js_string(y_column)}, {openui_rows(rows)})"
+    )
+    return "\n".join(lines)
+
+
+def render_histogram(title, column, values, summary=None):
+    root_children = ["summary", "histogram"] if summary else ["histogram"]
+    lines = [f"root = Root([{', '.join(root_children)}])"]
+    if summary:
+        lines.append(f"summary = InsightCard({js_string(title)}, {js_string(summary)})")
+    lines.append(f"histogram = Histogram({js_string(title)}, {js_string(column)}, {openui_rows(values)})")
+    return "\n".join(lines)
 
 
 def query_from_templates(rng, templates, **kwargs):
@@ -396,7 +325,12 @@ def generate_scalar_example(rng, domain=None):
     )
     title = f"{metric['name']} in {location} {year}"
     description = f"{'Gesamtwert' if metric['aggregation'] == 'sum' else 'Wert'} für das Jahr {year}"
-    return row(query, tool_result, render_stat_card(title, value, metric["unit"], description), domain, "scalar", "StatCard")
+    assistant = render_metric_grid(
+        title,
+        [{"label": metric["name"], "value": metric_value(value, metric["unit"]), "caption": description}],
+        f"{metric['name']} wurde für {location} im Jahr {year} gemeldet.",
+    )
+    return row(query, tool_result, assistant, domain, "scalar", "MetricGrid")
 
 
 def generate_comparison_example(rng, domain=None):
@@ -429,8 +363,13 @@ def generate_comparison_example(rng, domain=None):
         previous_year=previous_year,
     )
     title = f"{metric['name']} im Jahresvergleich in {location}"
-    assistant = render_comparison_card(title, str(year), current, str(previous_year), previous, delta, direction, metric["unit"])
-    return row(query, tool_result, assistant, domain, "comparison", "ComparisonCard")
+    chart_rows = [
+        {"year": str(previous_year), "value": previous},
+        {"year": str(year), "value": current},
+    ]
+    summary = f"Der Unterschied beträgt {metric_value(delta, metric['unit'])}; Richtung: {direction}."
+    assistant = render_chart(title, "year", "value", chart_rows, summary)
+    return row(query, tool_result, assistant, domain, "comparison", "BarChart")
 
 
 def generate_daily_series_example(rng, domain=None):
@@ -462,7 +401,13 @@ def generate_daily_series_example(rng, domain=None):
         location=location,
     )
     title = f"{metric['name']}verlauf in {location}"
-    return row(query, tool_result, render_line_chart_card(title, "date", "value", metric["unit"], values), domain, "time_series_daily", "LineChartCard")
+    assistant = render_histogram(
+        title,
+        "value",
+        [item["value"] for item in values],
+        f"Tageswerte für {metric['name']} in {location}; Einheit: {metric['unit']}.",
+    )
+    return row(query, tool_result, assistant, domain, "time_series_daily", "Histogram")
 
 
 def generate_monthly_series_example(rng, domain=None):
@@ -489,7 +434,8 @@ def generate_monthly_series_example(rng, domain=None):
         year=year,
     )
     title = f"{metric['name']} pro Monat in {location} {year}"
-    return row(query, tool_result, render_bar_chart_card(title, "month", "value", metric["unit"], values), domain, "time_series_monthly", "BarChartCard")
+    assistant = render_chart(title, "month", "value", values, f"Monatswerte in {metric['unit']}.")
+    return row(query, tool_result, assistant, domain, "time_series_monthly", "BarChart")
 
 
 def generate_ranking_example(rng, domain=None):
@@ -518,8 +464,8 @@ def generate_ranking_example(rng, domain=None):
         year=year,
     )
     title = f"{metric['name']} nach Stadtbezirk {year}"
-    assistant = render_horizontal_bar_chart_card(title, "value", "label", metric["unit"], values)
-    return row(query, tool_result, assistant, domain, "ranking", "HorizontalBarChartCard")
+    assistant = render_chart(title, "label", "value", values, f"Ranking nach {metric['name']} in {metric['unit']}.")
+    return row(query, tool_result, assistant, domain, "ranking", "BarChart")
 
 
 def generate_threshold_example(rng, domain=None):
@@ -558,8 +504,16 @@ def generate_threshold_example(rng, domain=None):
         location=location,
     )
     title = f"{metric['name']}-Grenzwert {'überschritten' if exceeded else 'eingehalten'}"
-    assistant = render_alert_card(title, severity, value, threshold, metric["unit"], description)
-    return row(query, tool_result, assistant, domain, "threshold", "AlertCard")
+    assistant = render_notice(
+        title,
+        description,
+        "warning" if exceeded else "info",
+        [
+            {"label": "Wert", "value": metric_value(value, metric["unit"]), "caption": str(year)},
+            {"label": "Grenzwert", "value": metric_value(threshold, metric["unit"]), "caption": status},
+        ],
+    )
+    return row(query, tool_result, assistant, domain, "threshold", "Notice")
 
 
 def generate_percentage_example(rng, domain=None):
@@ -587,8 +541,12 @@ def generate_percentage_example(rng, domain=None):
     )
     title = f"{percent_metric['name']} in {location}"
     description = f"Prozentwert für das Jahr {year}"
-    assistant = render_progress_card(title, value, 100, "%", description)
-    return row(query, tool_result, assistant, domain, "percentage", "ProgressCard")
+    assistant = render_metric_grid(
+        title,
+        [{"label": percent_metric["name"], "value": metric_value(value, "%"), "caption": description}],
+        f"{percent_metric['name']} liegt bei {format_number(value)} von 100 Prozent.",
+    )
+    return row(query, tool_result, assistant, domain, "percentage", "MetricGrid")
 
 
 def generate_table_example(rng, domain=None):
@@ -621,7 +579,7 @@ def generate_table_example(rng, domain=None):
         year=year,
     )
     title = f"{metric['name']} nach Dienststelle {year}"
-    return row(query, tool_result, render_table_card(title, columns, rows), domain, "table", "TableCard")
+    return row(query, tool_result, render_data_table(title, rows), domain, "table", "DataTable")
 
 
 def generate_multi_kpi_example(rng, domain=None):
@@ -647,7 +605,11 @@ def generate_multi_kpi_example(rng, domain=None):
         location=location,
     )
     title = f"Übersicht zu {domain} in {location}"
-    return row(query, tool_result, render_dashboard_grid(title, kpis), domain, "multi_kpi", "DashboardGrid")
+    metrics_for_ui = [
+        {"label": item["metric"], "value": metric_value(item["value"], item["unit"]), "caption": str(year)}
+        for item in kpis
+    ]
+    return row(query, tool_result, render_metric_grid(title, metrics_for_ui), domain, "multi_kpi", "MetricGrid")
 
 
 def generate_geo_values_example(rng, domain=None):
@@ -673,8 +635,8 @@ def generate_geo_values_example(rng, domain=None):
         location=location,
     )
     title = f"{metric['name']} nach Stadtbezirk in {location}"
-    assistant = render_district_map_card(title, "district", "value", metric["unit"], values)
-    return row(query, tool_result, assistant, domain, "geo_values", "DistrictMapCard")
+    assistant = render_chart(title, "district", "value", values, f"Stadtbezirkswerte in {metric['unit']}.")
+    return row(query, tool_result, assistant, domain, "geo_values", "BarChart")
 
 
 GENERATORS = {
@@ -697,8 +659,14 @@ def validate_row(example):
     assistant = decoded["messages"][2]["content"]
     if "```" in assistant:
         raise ValueError("assistant output contains markdown fence")
-    if not assistant.startswith("<"):
-        raise ValueError("assistant output does not look like raw component code")
+    if not assistant.startswith("root = Root(["):
+        raise ValueError("assistant output does not start with OpenUI Lang root assignment")
+    try:
+        from app.openui_support import parse_openui_lang
+
+        parse_openui_lang(assistant)
+    except Exception as exc:
+        raise ValueError(f"assistant output is not renderable OpenUI Lang: {exc}") from exc
     return encoded
 
 

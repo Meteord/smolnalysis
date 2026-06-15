@@ -92,13 +92,13 @@ class OpenUITrainingDatasetTests(TestCase):
         self.assertIn("labels", item)
         self.assertTrue(any(label != -100 for label in item["labels"]))
 
-    def test_dataset_handles_real_openui_train_sample(self) -> None:
-        train_dir = Path("train/openui_lang/data/train")
-        if not train_dir.exists():
-            self.skipTest("OpenUI train split is not present.")
+    def test_dataset_handles_real_openui_sft_train_sample(self) -> None:
+        train_data = Path("train/openui_lang/data/openui_sft_train.jsonl")
+        if not train_data.exists():
+            self.skipTest("OpenUI SFT train data is not present.")
 
         dataset = OpenUITrainingDataset(
-            train_dir,
+            train_data,
             _FakeTokenizer(),
             max_length=256,
             return_tensors="list",

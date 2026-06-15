@@ -16,6 +16,7 @@ if str(DATA_DIR) not in sys.path:
     sys.path.insert(0, str(DATA_DIR))
 
 from dataset import OpenUIDataCollator, OpenUITrainingDataset # type: ignore 
+from openui_semantic_eval import evaluate_openui_semantic  # type: ignore
 
 
 DEFAULT_MODEL = "openbmb/MiniCPM5-1B"
@@ -54,6 +55,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--eval-steps", type=int, default=250)
     parser.add_argument("--save-steps", type=int, default=250)
     parser.add_argument("--save-total-limit", type=int, default=5)
+    parser.add_argument("--semantic-eval-samples", type=int, default=200)
     parser.add_argument("--lora-r", type=int, default=16)
     parser.add_argument("--lora-alpha", type=int, default=32)
     parser.add_argument("--lora-dropout", type=float, default=0.05)
@@ -160,6 +162,14 @@ def load_model(args: argparse.Namespace):
 
 
 def build_datasets(args: argparse.Namespace, tokenizer: Any) -> tuple[OpenUITrainingDataset, OpenUITrainingDataset]:
+    for name, data_path in (("train", args.train_data), ("eval", args.eval_data)):
+        if data_path.suffix != ".jsonl":
+            raise ValueError(
+                f"OpenUI {name} data must be a JSONL file. Use "
+                f"{DEFAULT_TRAIN_DATA if name == 'train' else DEFAULT_EVAL_DATA}; "
+                f"the split directories contain verbose profiling targets."
+            )
+
     train_dataset = OpenUITrainingDataset(
         args.train_data,
         tokenizer,
@@ -175,37 +185,136 @@ def build_datasets(args: argparse.Namespace, tokenizer: Any) -> tuple[OpenUITrai
     return limit_dataset(train_dataset, args.train_limit), limit_dataset(eval_dataset, args.eval_limit)
 
 
-def print_dataset_preview(dataset: OpenUITrainingDataset) -> None:
-    sample = dataset.samples[0]
-    def debug_supervised_text(tokenizer, dataset, index=0):
-        item = dataset[index]
-        labels = item["labels"]
-        input_ids = item["input_ids"]
+def debug_supervised_text(tokenizer, dataset, index=0, window=120):
+    from data.dataset import extract_openui_messages, apply_chat_template, prompt_messages
+    sample = dataset.samples[index]
+    messages = extract_openui_messages(sample)
 
-        if hasattr(labels, "tolist"):
-            labels = labels.tolist()
-        if hasattr(input_ids, "tolist"):
-            input_ids = input_ids.tolist()
+    prompt_text = apply_chat_template(
+        tokenizer,
+        prompt_messages(messages),
+        add_generation_prompt=True,
+    )
+    full_text = apply_chat_template(
+        tokenizer,
+        messages,
+        add_generation_prompt=False,
+    )
 
-        first = next(i for i, x in enumerate(labels) if x != -100)
+    eos_token = getattr(tokenizer, "eos_token", None)
+    eos_token_id = getattr(tokenizer, "eos_token_id", None)
+    im_end_ids = tokenizer.encode("<|im_end|>", add_special_tokens=False)
 
-        print("first supervised index:", first)
-        print("decoded supervised start:")
-        print(tokenizer.decode(input_ids[first:first + 80]))
-        print("decoded prompt end:")
-        print(tokenizer.decode(input_ids[max(0, first - 80):first]))
-        
-    debug_supervised_text(dataset.tokenizer, dataset)
-    messages = sample["messages"]
-    print("Dataset preview")
-    print(f"samples: {len(dataset)}")
-    print(f"task: {sample.get('task')}")
-    print(f"dataset_title: {(sample.get('query_result') or {}).get('dataset_title')}")
-    print(f"roles: {[message['role'] for message in messages]}")
-    print(f"user_chars: {len(messages[-2]['content'])}")
-    print(f"assistant_chars: {len(messages[-1]['content'])}")
-    print("assistant_head:")
-    print(messages[-1]["content"][:600])
+    item = dataset[index]
+    labels = item["labels"]
+    input_ids = item["input_ids"]
+
+    if hasattr(labels, "tolist"):
+        labels = labels.tolist()
+    if hasattr(input_ids, "tolist"):
+        input_ids = input_ids.tolist()
+
+    supervised_indices = [i for i, x in enumerate(labels) if x != -100]
+    first = supervised_indices[0]
+    last = supervised_indices[-1]
+
+    prompt_ids = tokenizer(prompt_text, add_special_tokens=False)["input_ids"]
+    full_ids = tokenizer(full_text, add_special_tokens=False)["input_ids"]
+
+    print("=" * 100)
+    print("SPECIAL TOKENS")
+    print("=" * 100)
+    print("tokenizer.eos_token:", repr(eos_token))
+    print("tokenizer.eos_token_id:", eos_token_id)
+    print("<|im_end|> ids:", im_end_ids)
+    print("<|im_end|> decoded:", repr(tokenizer.decode(im_end_ids)))
+
+    if eos_token is not None:
+        eos_ids = tokenizer.encode(eos_token, add_special_tokens=False)
+        print("eos_token ids:", eos_ids)
+        print("eos_token decoded:", repr(tokenizer.decode(eos_ids)))
+
+    print("\n" + "=" * 100)
+    print("TEXT ENDINGS")
+    print("=" * 100)
+    print("prompt_text endswith eos:", prompt_text.endswith(eos_token) if eos_token else None)
+    print("full_text endswith eos:", full_text.endswith(eos_token) if eos_token else None)
+    print("prompt_text tail:")
+    print(repr(prompt_text[-500:]))
+    print("full_text tail:")
+    print(repr(full_text[-500:]))
+
+    print("\n" + "=" * 100)
+    print("TOKEN LENGTHS")
+    print("=" * 100)
+    print("len(prompt_ids):", len(prompt_ids))
+    print("len(full_ids):", len(full_ids))
+    print("len(dataset input_ids):", len(input_ids))
+    print("num masked tokens:", sum(1 for x in labels if x == -100))
+    print("num supervised tokens:", len(supervised_indices))
+    print("first supervised index:", first)
+    print("last supervised index:", last)
+
+    print("\n" + "=" * 100)
+    print("BOUNDARY INSPECTION")
+    print("=" * 100)
+    print("decoded prompt end before first supervised token:")
+    print(tokenizer.decode(input_ids[max(0, first - window):first], skip_special_tokens=False))
+
+    print("\ndecoded supervised start:")
+    print(tokenizer.decode(input_ids[first:first + window], skip_special_tokens=False))
+
+    print("\ndecoded supervised end:")
+    print(tokenizer.decode(input_ids[max(first, last - window + 1):last + 1], skip_special_tokens=False))
+
+    print("\ndecoded after last supervised token:")
+    print(tokenizer.decode(input_ids[last + 1:last + 1 + window], skip_special_tokens=False))
+
+    print("\n" + "=" * 100)
+    print("TOKEN-LEVEL BOUNDARY")
+    print("=" * 100)
+
+    start = max(0, first - 20)
+    end = min(len(input_ids), first + 40)
+
+    for i in range(start, end):
+        token_id = input_ids[i]
+        label = labels[i]
+        token_text = tokenizer.decode([token_id], skip_special_tokens=False)
+        supervised = label != -100
+        marker = " <-- FIRST SUPERVISED" if i == first else ""
+        print(
+            f"{i:05d} | id={token_id:<8} | "
+            f"label={label:<8} | "
+            f"{'SUP' if supervised else 'MASK'} | "
+            f"{repr(token_text)}{marker}"
+        )
+
+    print("\n" + "=" * 100)
+    print("TOKEN-LEVEL SUPERVISED END")
+    print("=" * 100)
+
+    start = max(0, last - 40)
+    end = min(len(input_ids), last + 5)
+
+    for i in range(start, end):
+        token_id = input_ids[i]
+        label = labels[i]
+        token_text = tokenizer.decode([token_id], skip_special_tokens=False)
+        supervised = label != -100
+        marker = " <-- LAST SUPERVISED" if i == last else ""
+        print(
+            f"{i:05d} | id={token_id:<8} | "
+            f"label={label:<8} | "
+            f"{'SUP' if supervised else 'MASK'} | "
+            f"{repr(token_text)}{marker}"
+        )
+
+    print("\n" + "=" * 100)
+    print("RAW ASSISTANT LABEL")
+    print("=" * 100)
+    print(repr(messages[-1]["content"]))
+    print("=" * 100)
 
 
 def dry_run(args: argparse.Namespace) -> dict[str, Any]:
@@ -215,7 +324,7 @@ def dry_run(args: argparse.Namespace) -> dict[str, Any]:
     supervised_tokens = int((first["labels"] != -100).sum().item())
     masked_tokens = int((first["labels"] == -100).sum().item())
 
-    print_dataset_preview(train_dataset)
+    debug_supervised_text(tokenizer, train_dataset)
     summary = {
         "train_samples": len(train_dataset),
         "eval_samples": len(eval_dataset),
@@ -236,7 +345,7 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
 
     tokenizer = load_tokenizer(args.model_name)
     train_dataset, eval_dataset = build_datasets(args, tokenizer)
-    print_dataset_preview(train_dataset)
+    debug_supervised_text(tokenizer, train_dataset)
 
     model = load_model(args)
     model = get_peft_model(model, build_lora_config(args))
@@ -285,11 +394,44 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
     trainer.save_model(str(args.output_dir))
     tokenizer.save_pretrained(str(args.output_dir))
 
-    metrics = trainer.evaluate()
+    eval_metrics = trainer.evaluate()
+    try:
+        semantic_metrics = evaluate_openui_semantic(
+            model,
+            tokenizer,
+            eval_dataset,
+            max_samples=args.semantic_eval_samples,
+            batch_size=max(1, args.per_device_eval_batch_size),
+        )
+    except Exception as exc:
+        semantic_metrics = {
+            "component_accuracy": 0.0,
+            "exact_match_rate": 0.0,
+            "required_value_accuracy": 0.0,
+            "tool_value_accuracy": 0.0,
+            "hallucinated_number_rate": 1.0,
+            "valid_openui_like_rate": 0.0,
+            "semantic_score": 0.0,
+            "semantic_eval_samples": 0.0,
+            "semantic_eval_failed_samples": 0.0,
+            "semantic_eval_error": str(exc),
+        }
+
+    metrics = dict(eval_metrics)
     metrics.update(train_result.metrics)
+    metrics.update(semantic_metrics)
     metrics_path = args.output_dir / "metrics.json"
+    eval_metrics_path = args.output_dir / "eval_metrics.json"
+    semantic_metrics_path = args.output_dir / "semantic_metrics.json"
     metrics_path.parent.mkdir(parents=True, exist_ok=True)
+    eval_metrics_path.write_text(json.dumps(eval_metrics, indent=2), encoding="utf-8")
+    semantic_metrics_path.write_text(json.dumps(semantic_metrics, indent=2), encoding="utf-8")
     metrics_path.write_text(json.dumps(metrics, indent=2), encoding="utf-8")
+    print("Eval metrics")
+    print(json.dumps(eval_metrics, indent=2))
+    print("OpenUI semantic metrics")
+    print(json.dumps(semantic_metrics, indent=2))
+    print("Combined metrics")
     print(json.dumps(metrics, indent=2))
     return metrics
 
