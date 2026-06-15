@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00410_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Temperatur in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2024,\n  \"unit\": \"°C\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 18.2\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 6.7\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 23.5\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 17.5\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": -1.9\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": -2.8\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 25.1\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 8.6\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 26.9\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

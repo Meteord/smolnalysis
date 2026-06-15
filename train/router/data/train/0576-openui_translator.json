@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01063_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich pH-Wert in Maxvorstadt in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Maxvorstadt\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"pH\",\n  \"values\": [\n    {\n      \"date\": \"2024-12-08\",\n      \"value\": 8.2\n    },\n    {\n      \"date\": \"2024-12-09\",\n      \"value\": 8.5\n    },\n    {\n      \"date\": \"2024-12-10\",\n      \"value\": 8.4\n    },\n    {\n      \"date\": \"2024-12-11\",\n      \"value\": 8.8\n    },\n    {\n      \"date\": \"2024-12-12\",\n      \"value\": 8.6\n    },\n    {\n      \"date\": \"2024-12-13\",\n      \"value\": 8.6\n    },\n    {\n      \"date\": \"2024-12-14\",\n      \"value\": 8.2\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

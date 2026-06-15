@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00616_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Netzlast in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2024,\n  \"value\": 850,\n  \"threshold\": 700,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"MW\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

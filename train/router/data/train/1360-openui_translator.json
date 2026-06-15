@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00096_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Ozon in Moosach.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Moosach\",\n  \"year\": 2019,\n  \"value\": 121,\n  \"threshold\": 120,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

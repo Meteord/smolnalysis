@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00102_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Trübung in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Bogenhausen\",\n  \"current\": {\n    \"year\": 2022,\n    \"value\": 6.0\n  },\n  \"previous\": {\n    \"year\": 2021,\n    \"value\": 2.8\n  },\n  \"unit\": \"NTU\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

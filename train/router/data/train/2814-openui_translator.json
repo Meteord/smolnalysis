@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01013_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich CO2-Emissionen in Köln in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Köln\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"t\",\n  \"values\": [\n    {\n      \"date\": \"2020-01-06\",\n      \"value\": 3767\n    },\n    {\n      \"date\": \"2020-01-07\",\n      \"value\": 3761\n    },\n    {\n      \"date\": \"2020-01-08\",\n      \"value\": 3277\n    },\n    {\n      \"date\": \"2020-01-09\",\n      \"value\": 3670\n    },\n    {\n      \"date\": \"2020-01-10\",\n      \"value\": 3931\n    },\n    {\n      \"date\": \"2020-01-11\",\n      \"value\": 3320\n    },\n    {\n      \"date\": \"2020-01-12\",\n      \"value\": 3866\n    },\n    {\n      \"date\": \"2020-01-13\",\n      \"value\": 3628\n    },\n    {\n      \"date\": \"2020-01-14\",\n      \"value\": 3910\n    },\n    {\n      \"date\": \"2020-01-15\",\n      \"value\": 4200\n    },\n    {\n      \"date\": \"2020-01-16\",\n      \"value\": 3738\n    },\n    {\n      \"date\": \"2020-01-17\",\n      \"value\": 3148\n    },\n    {\n      \"date\": \"2020-01-18\",\n      \"value\": 2744\n    },\n    {\n      \"date\": \"2020-01-19\",\n      \"value\": 2453\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

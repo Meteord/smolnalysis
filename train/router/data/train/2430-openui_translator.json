@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00327_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie groß ist der Anteil von Luftfeuchtigkeit in Landsberger Straße?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2025,\n  \"value\": 31,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

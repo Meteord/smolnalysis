@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01183_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Sterbefälle in Berlin in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Berlin\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Sterbefälle\",\n  \"values\": [\n    {\n      \"date\": \"2018-09-11\",\n      \"value\": 12751\n    },\n    {\n      \"date\": \"2018-09-12\",\n      \"value\": 9496\n    },\n    {\n      \"date\": \"2018-09-13\",\n      \"value\": 14652\n    },\n    {\n      \"date\": \"2018-09-14\",\n      \"value\": 11665\n    },\n    {\n      \"date\": \"2018-09-15\",\n      \"value\": 7422\n    },\n    {\n      \"date\": \"2018-09-16\",\n      \"value\": 7097\n    },\n    {\n      \"date\": \"2018-09-17\",\n      \"value\": 2356\n    },\n    {\n      \"date\": \"2018-09-18\",\n      \"value\": 5071\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

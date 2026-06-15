@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00042_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Online-Anteil in Bürgerbüro Mitte gegenüber 2023 verändert?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"current\": {\n    \"year\": 2024,\n    \"value\": 25\n  },\n  \"previous\": {\n    \"year\": 2023,\n    \"value\": 34\n  },\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

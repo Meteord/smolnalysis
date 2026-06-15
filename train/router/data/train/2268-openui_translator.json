@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00501_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Nitrat in Köln 2023.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Nitrat\",\n  \"location\": \"Köln\",\n  \"year\": 2023,\n  \"aggregation\": \"average\",\n  \"value\": 36.4,\n  \"unit\": \"mg/l\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00018",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "explain what a Python virtual environment is"
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

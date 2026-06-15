@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00415_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach PM10 in 2024.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM10\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2024,\n  \"unit\": \"µg/m³\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 89\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 59\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 57\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 37\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 34\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 33\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 10\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

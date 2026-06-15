@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01189_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse population für Bürgerbüro Mitte als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2023,\n  \"kpis\": [\n    {\n      \"metric\": \"Durchschnittsalter\",\n      \"value\": 42.2,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"metric\": \"Sterbefälle\",\n      \"value\": 17773,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"metric\": \"Geburten\",\n      \"value\": 41818,\n      \"unit\": \"Geburten\"\n    },\n    {\n      \"metric\": \"Wanderungssaldo\",\n      \"value\": 16030,\n      \"unit\": \"Personen\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00566_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Luftfeuchtigkeit in Schwabing-Freimann?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2018,\n  \"value\": 48,\n  \"threshold\": 85,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

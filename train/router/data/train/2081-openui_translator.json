@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00487_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch ist die Auslastung von Köln?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Köln\",\n  \"year\": 2025,\n  \"value\": 35,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

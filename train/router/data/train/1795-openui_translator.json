@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00278_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Durchschnittsgeschwindigkeit nach Dienststelle in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2018,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Durchschnittsgeschwindigkeit\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 25.0,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 35.7,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 59.7,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 48.6,\n      \"unit\": \"km/h\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

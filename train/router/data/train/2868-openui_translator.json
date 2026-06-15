@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01160_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Straßenauslastung räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Straßenauslastung\",\n  \"location\": \"Sendling\",\n  \"year\": 2022,\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 82\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 98\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 16\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 60\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 86\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

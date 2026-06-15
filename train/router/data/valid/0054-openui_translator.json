@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01024_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Geburten in Isar.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Isar\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Geburten\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 10944\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 17399\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 9567\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 46630\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 12448\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 28982\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 44770\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 6750\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 30835\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 20523\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 38695\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 38313\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

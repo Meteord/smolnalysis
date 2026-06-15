@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00650_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Niederschlag je Stadtbezirk in Donau.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Donau\",\n  \"year\": 2019,\n  \"unit\": \"mm\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 5\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 78\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 4\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 143\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 168\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 151\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

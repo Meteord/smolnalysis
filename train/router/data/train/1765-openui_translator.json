@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00144_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Geburten pro Monat für 2023 in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2023,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Geburten\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 2355\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 13519\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 28689\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 40460\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 32288\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 13730\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 412\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 5178\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 6446\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 12709\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 17570\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 19368\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

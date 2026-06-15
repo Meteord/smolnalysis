@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00513_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Fahrzeuganzahl in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Fahrzeuge\",\n  \"values\": [\n    {\n      \"date\": \"2022-12-08\",\n      \"value\": 80554\n    },\n    {\n      \"date\": \"2022-12-09\",\n      \"value\": 66207\n    },\n    {\n      \"date\": \"2022-12-10\",\n      \"value\": 64845\n    },\n    {\n      \"date\": \"2022-12-11\",\n      \"value\": 73046\n    },\n    {\n      \"date\": \"2022-12-12\",\n      \"value\": 84335\n    },\n    {\n      \"date\": \"2022-12-13\",\n      \"value\": 81480\n    },\n    {\n      \"date\": \"2022-12-14\",\n      \"value\": 85000\n    },\n    {\n      \"date\": \"2022-12-15\",\n      \"value\": 81091\n    },\n    {\n      \"date\": \"2022-12-16\",\n      \"value\": 80014\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

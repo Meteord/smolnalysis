@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01018_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2023,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Heizbedarf\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 2399,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 4067,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 1500,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

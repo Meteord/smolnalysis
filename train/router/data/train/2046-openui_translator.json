@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00055_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach CO2-Emissionen in 2022.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2022,\n  \"unit\": \"t\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 2977\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 1278\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 542\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 240\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 203\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

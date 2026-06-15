@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00136_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei CO2-Emissionen in Landsberger Straße?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2018,\n  \"value\": 1847,\n  \"threshold\": 3000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"t\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

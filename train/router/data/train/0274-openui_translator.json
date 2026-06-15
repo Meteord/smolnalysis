@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00094_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Luftqualitätsindex pro Monat für 2024 in Sendling.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Sendling\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"AQI\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 76\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 46\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 61\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 76\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 71\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 28\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 73\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 105\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 66\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 36\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 140\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 24\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

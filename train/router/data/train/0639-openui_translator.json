@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00543_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Wanderungssaldo in Köln.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Köln\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"date\": \"2022-02-05\",\n      \"value\": 18295\n    },\n    {\n      \"date\": \"2022-02-06\",\n      \"value\": 21548\n    },\n    {\n      \"date\": \"2022-02-07\",\n      \"value\": 26000\n    },\n    {\n      \"date\": \"2022-02-08\",\n      \"value\": 22606\n    },\n    {\n      \"date\": \"2022-02-09\",\n      \"value\": 26000\n    },\n    {\n      \"date\": \"2022-02-10\",\n      \"value\": 22369\n    },\n    {\n      \"date\": \"2022-02-11\",\n      \"value\": 20659\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

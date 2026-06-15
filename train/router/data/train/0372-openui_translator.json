@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00953_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Defizit in Bürgerbüro Mitte in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Defizit\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2025-08-12\",\n      \"value\": 1351\n    },\n    {\n      \"date\": \"2025-08-13\",\n      \"value\": 1400\n    },\n    {\n      \"date\": \"2025-08-14\",\n      \"value\": 1167\n    },\n    {\n      \"date\": \"2025-08-15\",\n      \"value\": 930\n    },\n    {\n      \"date\": \"2025-08-16\",\n      \"value\": 1129\n    },\n    {\n      \"date\": \"2025-08-17\",\n      \"value\": 954\n    },\n    {\n      \"date\": \"2025-08-18\",\n      \"value\": 1073\n    },\n    {\n      \"date\": \"2025-08-19\",\n      \"value\": 1260\n    },\n    {\n      \"date\": \"2025-08-20\",\n      \"value\": 1074\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,11 +1,18 @@
 {
-  "id": "openui_train_0062-0559-opendata-trinkwasserbrunnen-wfs-csv",
-  "source": "train/openui_lang/data/train/0062-0559-opendata-trinkwasserbrunnen-wfs-csv.json",
+  "id": "openui_sft_train_01086_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
   "label": "openui_translator",
   "messages": [
     {
       "role": "user",
-      "content": "Create a compact OpenUI summary for WFS (CSV) from Stadtplan der städtischen Trinkbrunnen.\n\nTool_result:\n{\n  \"dataset_title\": \"Stadtplan der städtischen Trinkbrunnen\",\n  \"package_id\": \"7e8484f0-12c2-40be-bd0c-cfe04f63a624\",\n  \"package_name\": \"opendata_trinkwasserbrunnen\",\n  \"resource_id\": \"20ba2c6a-f3ba-457f-81eb-959936afd5e9\",\n  \"resource_name\": \"WFS (CSV)\",\n  \"resource_format\": \"csv\",\n  \"description\": \"Dieser Datensatz beinhaltet die Trinkbrunnen der Landeshauptstadt München\",\n  \"organization\": \"Baureferat der Landeshauptstadt München\",\n  \"tags\": [\n    \"Digitaler Zwilling München\",\n    \"Landeshauptstadt München\",\n    \"Service\"\n  ],\n  \"groups\": [],\n  \"row_count\": 106,\n  \"sampled_rows\": 106,\n  \"column_count\": 5,\n  \"columns\": [\n    {\n      \"name\": \"shape\",\n      \"dtype\": \"object\",\n      \"kind\": \"geospatial\",\n      \"non_null_count\": 106,\n      \"null_count\": 0,\n      \"examples\": [\n        \"POINT (693160.8497008716 5334127.190397869)\",\n        \"POINT (688259.9238007668 5336793.02129817)\",\n        \"POINT (687988.6302007613 5336372.788798186)\",\n        \"POINT (690953.6683008221 5339563.139498003)\",\n        \"POINT (689739.0887007987 5329669.487098097)\"\n      ],\n      \"null_rate\": 0.0\n    },\n    {\n      \"name\": \"objekt\",\n      \"dtype\": \"object\",\n      \"kind\": \"category\",\n      \"non_null_count\": 106,\n      \"null_count\": 0,\n      \"examples\": [\n        \"Trinkbrunnen\"\n      ],\n      \"null_rate\": 0.0\n    },\n    {\n      \"name\": \"bezeichnung\",\n      \"dtype\": \"object\",\n      \"kind\": \"string\",\n      \"non_null_count\": 105,\n      \"null_count\": 1,\n      \"examples\": [\n        \"Bertschbrunnen\",\n        \"Gänsebrunnen\",\n        \"Vasenbrunnen\",\n        \"Holztrogbrunnen\",\n        \"Bezoldbrunnen\"\n      ],\n      \"null_rate\": 0.0094\n    },\n    {\n      \"name\": \"bemerkung\",\n      \"dtype\": \"object\",\n      \"kind\": \"string\",\n      \"non_null_count\": 50,\n      \"null_count\": 56,\n      \"examples\": [\n        \"Winterabdeckung\",\n        \"Forstenrieder Park, Karolinen geräumt\",\n        \"liegt im Perlacher Forst\",\n        \"Kronprinzenpark\",\n        \"Dauerläufer 24/7\"\n      ],\n      \"null_rate\": 0.5283\n    }\n  ]\n}\n\ncomponent_hints:\n{\n  \"recommended_components\": [\n    \"InsightCard\",\n    \"DataTable\"\n  ],\n  \"numeric_columns\": [],\n  \"category_columns\": [\n    \"objekt\"\n  ],\n  \"time_columns\": []\n}"
+      "content": "Prüfe den Grenzwert für Online-Anteil in Elbe.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Elbe\",\n  \"year\": 2021,\n  \"value\": 87,\n  \"threshold\": 75,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"%\"\n}"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
 }

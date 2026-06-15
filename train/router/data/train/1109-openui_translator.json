@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00109_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für water_quality in Elbe.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"location\": \"Elbe\",\n  \"year\": 2025,\n  \"kpis\": [\n    {\n      \"metric\": \"Nitrat\",\n      \"value\": 25.8,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"metric\": \"pH-Wert\",\n      \"value\": 7.6,\n      \"unit\": \"pH\"\n    },\n    {\n      \"metric\": \"Trübung\",\n      \"value\": 17.2,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"metric\": \"Gelöster Sauerstoff\",\n      \"value\": 8.6,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"metric\": \"Wassertemperatur\",\n      \"value\": 21.0,\n      \"unit\": \"°C\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

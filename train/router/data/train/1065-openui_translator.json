@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01019_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu energy in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2025,\n  \"kpis\": [\n    {\n      \"metric\": \"Stromverbrauch\",\n      \"value\": 3291,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"Netzlast\",\n      \"value\": 426,\n      \"unit\": \"MW\"\n    },\n    {\n      \"metric\": \"CO2-Emissionen\",\n      \"value\": 3033,\n      \"unit\": \"t\"\n    },\n    {\n      \"metric\": \"Heizbedarf\",\n      \"value\": 3425,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

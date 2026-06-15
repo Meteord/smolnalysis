@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00190_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Trübung je Stadtbezirk in Hamburg.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Hamburg\",\n  \"year\": 2023,\n  \"unit\": \"NTU\",\n  \"values\": [\n    {\n      \"district\": \"Sendling\",\n      \"value\": 6.3\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 13.9\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 17.2\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 7.3\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 14.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

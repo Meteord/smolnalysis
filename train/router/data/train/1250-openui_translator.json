@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00120_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Staudauer je Stadtbezirk in Köln.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Köln\",\n  \"year\": 2023,\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"district\": \"Moosach\",\n      \"value\": 182\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 113\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 148\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 217\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 5\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 52\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

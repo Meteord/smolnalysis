@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00458_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Stromverbrauch nach Dienststelle in Hamburg.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Hamburg\",\n  \"year\": 2024,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Stromverbrauch\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 3582,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 3357,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 2062,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 7469,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 7960,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 908,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00128_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Terminauslastung nach Dienststelle in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2022,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Terminauslastung\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 74,\n      \"unit\": \"%\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 88,\n      \"unit\": \"%\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 70,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

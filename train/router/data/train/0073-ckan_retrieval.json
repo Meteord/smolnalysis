@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_01349_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für population in Schwabing-Freimann."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 1349,
+    "task": "generate_tool_result"
+  }
+}

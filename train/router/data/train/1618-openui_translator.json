@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00233_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Ausgaben in Köln.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Ausgaben\",\n  \"location\": \"Köln\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2018-12-01\",\n      \"value\": 3011\n    },\n    {\n      \"date\": \"2018-12-02\",\n      \"value\": 3087\n    },\n    {\n      \"date\": \"2018-12-03\",\n      \"value\": 4024\n    },\n    {\n      \"date\": \"2018-12-04\",\n      \"value\": 4755\n    },\n    {\n      \"date\": \"2018-12-05\",\n      \"value\": 3653\n    },\n    {\n      \"date\": \"2018-12-06\",\n      \"value\": 2418\n    },\n    {\n      \"date\": \"2018-12-07\",\n      \"value\": 3349\n    },\n    {\n      \"date\": \"2018-12-08\",\n      \"value\": 2584\n    },\n    {\n      \"date\": \"2018-12-09\",\n      \"value\": 3863\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

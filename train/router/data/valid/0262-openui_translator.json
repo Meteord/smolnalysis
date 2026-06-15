@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00062_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Geburten in Bogenhausen gegenüber 2019 verändert?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Bogenhausen\",\n  \"current\": {\n    \"year\": 2020,\n    \"value\": 3446\n  },\n  \"previous\": {\n    \"year\": 2019,\n    \"value\": 20\n  },\n  \"unit\": \"Geburten\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

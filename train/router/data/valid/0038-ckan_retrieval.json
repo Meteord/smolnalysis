@@ -1,11 +1,21 @@
 {
-  "id": "ckan_multitool_eval_golden_00001",
-  "source": "train/ckan/data/multitool_eval_golden.jsonl",
+  "id": "retrieval_sft_train_00436_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Find useful data about bicycle counters."
+      "content": "Gab es eine Grenzwertüberschreitung bei ÖPNV-Verspätung in Bogenhausen?"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice",
+    "source_dataset": "openui_lang",
+    "source_index": 436,
+    "task": "generate_tool_result"
+  }
 }

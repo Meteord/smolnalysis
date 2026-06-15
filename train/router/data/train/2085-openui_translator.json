@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00533_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Netzlast in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Maxvorstadt\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MW\",\n  \"values\": [\n    {\n      \"date\": \"2025-04-01\",\n      \"value\": 578\n    },\n    {\n      \"date\": \"2025-04-02\",\n      \"value\": 519\n    },\n    {\n      \"date\": \"2025-04-03\",\n      \"value\": 560\n    },\n    {\n      \"date\": \"2025-04-04\",\n      \"value\": 600\n    },\n    {\n      \"date\": \"2025-04-05\",\n      \"value\": 490\n    },\n    {\n      \"date\": \"2025-04-06\",\n      \"value\": 539\n    },\n    {\n      \"date\": \"2025-04-07\",\n      \"value\": 477\n    },\n    {\n      \"date\": \"2025-04-08\",\n      \"value\": 383\n    },\n    {\n      \"date\": \"2025-04-09\",\n      \"value\": 502\n    },\n    {\n      \"date\": \"2025-04-10\",\n      \"value\": 544\n    },\n    {\n      \"date\": \"2025-04-11\",\n      \"value\": 406\n    },\n    {\n      \"date\": \"2025-04-12\",\n      \"value\": 484\n    },\n    {\n      \"date\": \"2025-04-13\",\n      \"value\": 482\n    },\n    {\n      \"date\": \"2025-04-14\",\n      \"value\": 620\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

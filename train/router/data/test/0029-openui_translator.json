@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00556_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Defizit in Rhein über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Defizit\",\n  \"location\": \"Rhein\",\n  \"year\": 2018,\n  \"value\": 420,\n  \"threshold\": 600,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

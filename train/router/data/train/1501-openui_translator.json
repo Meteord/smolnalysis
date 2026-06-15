@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00495_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei PM2.5?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM2.5\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2018,\n  \"unit\": \"µg/m³\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 50.1\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 46.6\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 45.9\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 45.7\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 36.3\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 35.2\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 9.0\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 7.3\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

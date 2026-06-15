@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00047",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "General question: give me three ways to debug a failing unit test."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

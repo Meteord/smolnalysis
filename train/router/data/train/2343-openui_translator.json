@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00061_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Durchschnittsalter in Sendling im Jahr 2024?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Sendling\",\n  \"year\": 2024,\n  \"aggregation\": \"average\",\n  \"value\": 36.6,\n  \"unit\": \"Jahre\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

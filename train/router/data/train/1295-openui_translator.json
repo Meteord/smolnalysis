@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00217_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie groß ist der Anteil von Solarerzeugung in Elbe?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Elbe\",\n  \"year\": 2025,\n  \"value\": 78,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00123",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_01054_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "I want to analyze Indikatorenatlas."
+      "content": "Wie verteilen sich die Monatswerte von PM2.5 in Frankfurt am Main 2025?"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 1054,
+    "task": "generate_tool_result"
+  }
 }

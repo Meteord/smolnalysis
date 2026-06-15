@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00212_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche CO2-Emissionen in Bürgerbüro Pasing in 2020 mit 2019.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"current\": {\n    \"year\": 2020,\n    \"value\": 358\n  },\n  \"previous\": {\n    \"year\": 2019,\n    \"value\": 12\n  },\n  \"unit\": \"t\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

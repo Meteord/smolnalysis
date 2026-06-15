@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00067",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Can you explain how git rebase differs from merge?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

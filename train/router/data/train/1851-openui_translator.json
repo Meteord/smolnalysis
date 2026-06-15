@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00442_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Terminauslastung in Rhein.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Rhein\",\n  \"current\": {\n    \"year\": 2024,\n    \"value\": 88\n  },\n  \"previous\": {\n    \"year\": 2023,\n    \"value\": 94\n  },\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

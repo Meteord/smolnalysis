@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00436_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei ÖPNV-Verspätung in Bogenhausen?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2018,\n  \"value\": 14,\n  \"threshold\": 10,\n  \"status\": \"exceeded\",\n  \"severity\": \"danger\",\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00178_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Luftqualitätsindex nach Dienststelle in Sendling.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Sendling\",\n  \"year\": 2024,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Luftqualitätsindex\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 78,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 103,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 57,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 64,\n      \"unit\": \"AQI\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

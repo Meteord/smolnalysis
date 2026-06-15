@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00014_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Luftqualitätsindex in Donau.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Donau\",\n  \"year\": 2021,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"AQI\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 140\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 117\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 108\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 111\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 69\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 106\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 65\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 136\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 76\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 48\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 24\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 18\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

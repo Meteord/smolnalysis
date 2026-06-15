@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00980_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir PM10 je Stadtbezirk in Köln.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM10\",\n  \"location\": \"Köln\",\n  \"year\": 2023,\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 43\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 31\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 88\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 64\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 28\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 76\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 76\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 68\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 51\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 46\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

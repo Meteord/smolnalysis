@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00252_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche PM2.5 in Landsberger Straße in 2021 mit 2020.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM2.5\",\n  \"location\": \"Landsberger Straße\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 36.2\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 41.7\n  },\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

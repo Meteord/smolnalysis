@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00063_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Durchschnittsalter in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Rosenheimer Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Jahre\",\n  \"values\": [\n    {\n      \"date\": \"2022-02-08\",\n      \"value\": 45.6\n    },\n    {\n      \"date\": \"2022-02-09\",\n      \"value\": 47.8\n    },\n    {\n      \"date\": \"2022-02-10\",\n      \"value\": 47.8\n    },\n    {\n      \"date\": \"2022-02-11\",\n      \"value\": 47.8\n    },\n    {\n      \"date\": \"2022-02-12\",\n      \"value\": 45.7\n    },\n    {\n      \"date\": \"2022-02-13\",\n      \"value\": 43.4\n    },\n    {\n      \"date\": \"2022-02-14\",\n      \"value\": 43.1\n    },\n    {\n      \"date\": \"2022-02-15\",\n      \"value\": 42.2\n    },\n    {\n      \"date\": \"2022-02-16\",\n      \"value\": 40.9\n    },\n    {\n      \"date\": \"2022-02-17\",\n      \"value\": 38.8\n    },\n    {\n      \"date\": \"2022-02-18\",\n      \"value\": 41.1\n    },\n    {\n      \"date\": \"2022-02-19\",\n      \"value\": 42.8\n    },\n    {\n      \"date\": \"2022-02-20\",\n      \"value\": 43.2\n    },\n    {\n      \"date\": \"2022-02-21\",\n      \"value\": 45.5\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

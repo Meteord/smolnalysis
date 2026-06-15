@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00698_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Moosach\",\n  \"year\": 2019,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"CO2-Emissionen\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 1254,\n      \"unit\": \"t\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 647,\n      \"unit\": \"t\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 868,\n      \"unit\": \"t\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

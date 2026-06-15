@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00183_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für pH-Wert in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Landsberger Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"pH\",\n  \"values\": [\n    {\n      \"date\": \"2018-11-01\",\n      \"value\": 8.1\n    },\n    {\n      \"date\": \"2018-11-02\",\n      \"value\": 8.4\n    },\n    {\n      \"date\": \"2018-11-03\",\n      \"value\": 8.2\n    },\n    {\n      \"date\": \"2018-11-04\",\n      \"value\": 8.4\n    },\n    {\n      \"date\": \"2018-11-05\",\n      \"value\": 8.0\n    },\n    {\n      \"date\": \"2018-11-06\",\n      \"value\": 8.0\n    },\n    {\n      \"date\": \"2018-11-07\",\n      \"value\": 7.9\n    },\n    {\n      \"date\": \"2018-11-08\",\n      \"value\": 8.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

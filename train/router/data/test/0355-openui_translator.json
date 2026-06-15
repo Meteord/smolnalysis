@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00809_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse weather für München als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"location\": \"München\",\n  \"year\": 2025,\n  \"kpis\": [\n    {\n      \"metric\": \"Windgeschwindigkeit\",\n      \"value\": 18.1,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"metric\": \"Temperatur\",\n      \"value\": 33.2,\n      \"unit\": \"°C\"\n    },\n    {\n      \"metric\": \"Luftfeuchtigkeit\",\n      \"value\": 57,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

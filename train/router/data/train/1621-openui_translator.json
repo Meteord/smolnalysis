@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00963_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Sonnenstunden in Hamburg in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Hamburg\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"h\",\n  \"values\": [\n    {\n      \"date\": \"2021-04-08\",\n      \"value\": 973\n    },\n    {\n      \"date\": \"2021-04-09\",\n      \"value\": 987\n    },\n    {\n      \"date\": \"2021-04-10\",\n      \"value\": 1094\n    },\n    {\n      \"date\": \"2021-04-11\",\n      \"value\": 1074\n    },\n    {\n      \"date\": \"2021-04-12\",\n      \"value\": 1047\n    },\n    {\n      \"date\": \"2021-04-13\",\n      \"value\": 903\n    },\n    {\n      \"date\": \"2021-04-14\",\n      \"value\": 955\n    },\n    {\n      \"date\": \"2021-04-15\",\n      \"value\": 1084\n    },\n    {\n      \"date\": \"2021-04-16\",\n      \"value\": 1410\n    },\n    {\n      \"date\": \"2021-04-17\",\n      \"value\": 1265\n    },\n    {\n      \"date\": \"2021-04-18\",\n      \"value\": 943\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

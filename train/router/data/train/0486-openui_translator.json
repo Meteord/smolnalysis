@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00276_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Straßenauslastung in Sendling?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Straßenauslastung\",\n  \"location\": \"Sendling\",\n  \"year\": 2024,\n  \"value\": 83,\n  \"threshold\": 85,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

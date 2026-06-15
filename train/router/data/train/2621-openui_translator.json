@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00486_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Luftfeuchtigkeit in Elbe.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Elbe\",\n  \"year\": 2020,\n  \"value\": 44,\n  \"threshold\": 85,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

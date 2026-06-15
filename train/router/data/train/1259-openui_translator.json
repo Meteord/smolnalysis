@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01173_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für CO2-Emissionen in München.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"München\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"t\",\n  \"values\": [\n    {\n      \"date\": \"2024-08-13\",\n      \"value\": 3768\n    },\n    {\n      \"date\": \"2024-08-14\",\n      \"value\": 3834\n    },\n    {\n      \"date\": \"2024-08-15\",\n      \"value\": 3205\n    },\n    {\n      \"date\": \"2024-08-16\",\n      \"value\": 3543\n    },\n    {\n      \"date\": \"2024-08-17\",\n      \"value\": 3868\n    },\n    {\n      \"date\": \"2024-08-18\",\n      \"value\": 4200\n    },\n    {\n      \"date\": \"2024-08-19\",\n      \"value\": 4132\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

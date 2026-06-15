@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00262_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Gelöster Sauerstoff in Bürgerbüro Mitte gegenüber 2023 verändert?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"current\": {\n    \"year\": 2024,\n    \"value\": 12.8\n  },\n  \"previous\": {\n    \"year\": 2023,\n    \"value\": 13.0\n  },\n  \"unit\": \"mg/l\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

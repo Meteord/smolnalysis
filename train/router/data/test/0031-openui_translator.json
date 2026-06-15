@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01182_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Geburten in Frankfurt am Main in 2022 mit 2021.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Frankfurt am Main\",\n  \"current\": {\n    \"year\": 2022,\n    \"value\": 6412\n  },\n  \"previous\": {\n    \"year\": 2021,\n    \"value\": 9892\n  },\n  \"unit\": \"Geburten\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

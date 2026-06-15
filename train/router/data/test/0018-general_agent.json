@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00068",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00206",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "No data task, just saying hello"
+      "content": "Explain a meeting agenda in German."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

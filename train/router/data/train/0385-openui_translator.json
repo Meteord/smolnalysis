@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00452_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Solarerzeugung in Hamburg.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Hamburg\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 1831\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 2216\n  },\n  \"unit\": \"MWh\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

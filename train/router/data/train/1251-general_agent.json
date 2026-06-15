@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00582",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Rewrite a deployment checklist with concrete examples."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

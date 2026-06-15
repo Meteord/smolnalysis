@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00219_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse energy für Hamburg als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"location\": \"Hamburg\",\n  \"year\": 2025,\n  \"kpis\": [\n    {\n      \"metric\": \"Heizbedarf\",\n      \"value\": 6973,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"Stromverbrauch\",\n      \"value\": 8110,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"Netzlast\",\n      \"value\": 438,\n      \"unit\": \"MW\"\n    },\n    {\n      \"metric\": \"Solarerzeugung\",\n      \"value\": 1176,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"CO2-Emissionen\",\n      \"value\": 1200,\n      \"unit\": \"t\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

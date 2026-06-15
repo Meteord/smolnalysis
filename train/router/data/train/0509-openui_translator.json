@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00218_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Heizbedarf in 2024.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Donau\",\n  \"year\": 2024,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Heizbedarf\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 6747,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 2708,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 6846,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 2410,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 98,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 5592,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00526",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Rewrite a Python function in German."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00746_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Wassertemperatur in Moosach.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Wassertemperatur\",\n  \"location\": \"Moosach\",\n  \"year\": 2024,\n  \"value\": 15.6,\n  \"threshold\": 22.0,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"°C\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

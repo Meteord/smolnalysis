@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00946_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Wanderungssaldo in Isar.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Isar\",\n  \"year\": 2022,\n  \"value\": 8340,\n  \"threshold\": 15000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

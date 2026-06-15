@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00476_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Defizit in Hamburg?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Defizit\",\n  \"location\": \"Hamburg\",\n  \"year\": 2020,\n  \"value\": 419,\n  \"threshold\": 600,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

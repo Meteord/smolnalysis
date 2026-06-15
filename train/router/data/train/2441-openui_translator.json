@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01170_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Wartezeit in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Köln\",\n  \"year\": 2024,\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 31\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 60\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 88\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 61\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 58\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 65\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 93\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

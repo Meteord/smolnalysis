@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00845_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Online-Anteil?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2024,\n  \"unit\": \"%\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Sendling\",\n      \"value\": 40\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 28\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 25\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 24\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 23\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

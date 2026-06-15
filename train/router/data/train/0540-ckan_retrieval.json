@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00981_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Wassertemperatur in Rhein 2018."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 981,
+    "task": "generate_tool_result"
+  }
+}

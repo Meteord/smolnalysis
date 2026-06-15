@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01045_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Temperatur in Sendling am höchsten?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Sendling\",\n  \"year\": 2020,\n  \"unit\": \"°C\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Laim\",\n      \"value\": 19.5\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 17.3\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 13.9\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 8.4\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 7.6\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

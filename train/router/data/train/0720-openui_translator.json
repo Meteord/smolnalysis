@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00879_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse finance_budget für Rhein als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"location\": \"Rhein\",\n  \"year\": 2024,\n  \"kpis\": [\n    {\n      \"metric\": \"Investitionsvolumen\",\n      \"value\": 496,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Budget\",\n      \"value\": 1977,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Ausgaben\",\n      \"value\": 7615,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Defizit\",\n      \"value\": 701,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Einnahmen\",\n      \"value\": 3497,\n      \"unit\": \"Mio. €\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00071_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Defizit in Frankfurt am Main im Jahr 2025?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 71,
+    "task": "generate_tool_result"
+  }
+}

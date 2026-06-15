@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00330_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Windgeschwindigkeit räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Windgeschwindigkeit\",\n  \"location\": \"Isar\",\n  \"year\": 2018,\n  \"unit\": \"km/h\",\n  \"values\": [\n    {\n      \"district\": \"Sendling\",\n      \"value\": 41.5\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 42.7\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 18.7\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 20.8\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 29.8\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

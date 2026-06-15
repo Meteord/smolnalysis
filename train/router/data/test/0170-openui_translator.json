@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00250_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Windgeschwindigkeit in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Windgeschwindigkeit\",\n  \"location\": \"Berlin\",\n  \"year\": 2020,\n  \"unit\": \"km/h\",\n  \"values\": [\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 65.7\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 22.0\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 33.8\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 13.3\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 45.4\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 45.6\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 47.7\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 37.4\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 63.9\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

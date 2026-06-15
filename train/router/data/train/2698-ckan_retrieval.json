@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00265_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach pH-Wert in 2021."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "ranking",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 265,
+    "task": "generate_tool_result"
+  }
+}

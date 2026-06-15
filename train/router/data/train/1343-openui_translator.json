@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00103_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Gelöster Sauerstoff in Schwabing-Freimann in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Schwabing-Freimann\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"mg/l\",\n  \"values\": [\n    {\n      \"date\": \"2020-09-12\",\n      \"value\": 7.0\n    },\n    {\n      \"date\": \"2020-09-13\",\n      \"value\": 7.5\n    },\n    {\n      \"date\": \"2020-09-14\",\n      \"value\": 7.1\n    },\n    {\n      \"date\": \"2020-09-15\",\n      \"value\": 6.8\n    },\n    {\n      \"date\": \"2020-09-16\",\n      \"value\": 7.5\n    },\n    {\n      \"date\": \"2020-09-17\",\n      \"value\": 7.3\n    },\n    {\n      \"date\": \"2020-09-18\",\n      \"value\": 7.2\n    },\n    {\n      \"date\": \"2020-09-19\",\n      \"value\": 6.0\n    },\n    {\n      \"date\": \"2020-09-20\",\n      \"value\": 5.5\n    },\n    {\n      \"date\": \"2020-09-21\",\n      \"value\": 5.3\n    },\n    {\n      \"date\": \"2020-09-22\",\n      \"value\": 5.0\n    },\n    {\n      \"date\": \"2020-09-23\",\n      \"value\": 5.4\n    },\n    {\n      \"date\": \"2020-09-24\",\n      \"value\": 5.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

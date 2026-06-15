@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00891_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war PM10 in Rhein im Jahr 2020?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM10\",\n  \"location\": \"Rhein\",\n  \"year\": 2020,\n  \"aggregation\": \"average\",\n  \"value\": 11,\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

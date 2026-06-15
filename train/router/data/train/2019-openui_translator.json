@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00961_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Niederschlag gab es in Leopoldstraße im Jahr 2021?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2021,\n  \"aggregation\": \"sum\",\n  \"value\": 179,\n  \"unit\": \"mm\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

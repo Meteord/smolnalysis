@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01073_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich ÖPNV-Verspätung in Bürgerbüro Pasing in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"date\": \"2023-10-04\",\n      \"value\": 28\n    },\n    {\n      \"date\": \"2023-10-05\",\n      \"value\": 30\n    },\n    {\n      \"date\": \"2023-10-06\",\n      \"value\": 31\n    },\n    {\n      \"date\": \"2023-10-07\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2023-10-08\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2023-10-09\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2023-10-10\",\n      \"value\": 29\n    },\n    {\n      \"date\": \"2023-10-11\",\n      \"value\": 30\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

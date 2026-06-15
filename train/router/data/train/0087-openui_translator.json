@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00363_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Online-Anteil in Maxvorstadt in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Maxvorstadt\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2021-10-09\",\n      \"value\": 52\n    },\n    {\n      \"date\": \"2021-10-10\",\n      \"value\": 43\n    },\n    {\n      \"date\": \"2021-10-11\",\n      \"value\": 30\n    },\n    {\n      \"date\": \"2021-10-12\",\n      \"value\": 23\n    },\n    {\n      \"date\": \"2021-10-13\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2021-10-14\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2021-10-15\",\n      \"value\": 34\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

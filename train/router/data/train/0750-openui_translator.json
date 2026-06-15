@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00925_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Wartezeit?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Berlin\",\n  \"year\": 2023,\n  \"unit\": \"min\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 62\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 48\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 44\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 27\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 23\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 8\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 7\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

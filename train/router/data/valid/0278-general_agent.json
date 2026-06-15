@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01152",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Debug a git workflow with concrete examples."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

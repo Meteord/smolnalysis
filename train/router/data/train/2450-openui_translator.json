@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00523_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Terminauslastung in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2025-05-10\",\n      \"value\": 51\n    },\n    {\n      \"date\": \"2025-05-11\",\n      \"value\": 43\n    },\n    {\n      \"date\": \"2025-05-12\",\n      \"value\": 37\n    },\n    {\n      \"date\": \"2025-05-13\",\n      \"value\": 37\n    },\n    {\n      \"date\": \"2025-05-14\",\n      \"value\": 48\n    },\n    {\n      \"date\": \"2025-05-15\",\n      \"value\": 54\n    },\n    {\n      \"date\": \"2025-05-16\",\n      \"value\": 43\n    },\n    {\n      \"date\": \"2025-05-17\",\n      \"value\": 40\n    },\n    {\n      \"date\": \"2025-05-18\",\n      \"value\": 39\n    },\n    {\n      \"date\": \"2025-05-19\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2025-05-20\",\n      \"value\": 45\n    },\n    {\n      \"date\": \"2025-05-21\",\n      \"value\": 50\n    },\n    {\n      \"date\": \"2025-05-22\",\n      \"value\": 45\n    },\n    {\n      \"date\": \"2025-05-23\",\n      \"value\": 56\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

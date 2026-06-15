@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01161",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Debug an API error message in two sentences."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

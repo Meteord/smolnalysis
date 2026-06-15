@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00671_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Staudauer gab es in Moosach im Jahr 2019?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Moosach\",\n  \"year\": 2019,\n  \"aggregation\": \"sum\",\n  \"value\": 28,\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

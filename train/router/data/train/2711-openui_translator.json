@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00724_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Sonnenstunden in Hamburg 2019?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Hamburg\",\n  \"year\": 2019,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"h\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 241\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 1714\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 2158\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 1723\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 302\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 871\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 1969\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 2196\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 1344\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 44\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 180\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 1250\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

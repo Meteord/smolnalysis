@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00210_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Online-Anteil räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2024,\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"district\": \"Moosach\",\n      \"value\": 34\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 84\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 67\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 86\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 92\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 57\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 35\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 49\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

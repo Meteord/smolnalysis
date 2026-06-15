@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00008",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Please summarize this paragraph in plain language."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

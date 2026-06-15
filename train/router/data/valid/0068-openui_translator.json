@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00741_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Gelöster Sauerstoff in Frankfurt am Main 2021.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2021,\n  \"aggregation\": \"average\",\n  \"value\": 5.6,\n  \"unit\": \"mg/l\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

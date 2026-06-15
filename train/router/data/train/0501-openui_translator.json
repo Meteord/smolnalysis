@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00216_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Stromverbrauch in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2020,\n  \"value\": 2654,\n  \"threshold\": 7500,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"MWh\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00194_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Fahrzeuganzahl pro Monat für 2019 in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2019,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Fahrzeuge\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 16903\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 38813\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 47687\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 35394\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 3401\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 30858\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 8999\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 51316\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 28387\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 33483\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 25657\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 33698\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

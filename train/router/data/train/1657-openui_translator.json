@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00008_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Windgeschwindigkeit\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2019,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Windgeschwindigkeit\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 30.3,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 66.1,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 34.7,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 21.3,\n      \"unit\": \"km/h\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

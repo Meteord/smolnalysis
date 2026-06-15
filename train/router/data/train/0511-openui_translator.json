@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00949_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse population für Donau als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"Donau\",\n  \"year\": 2023,\n  \"kpis\": [\n    {\n      \"metric\": \"Einwohner\",\n      \"value\": 2929403,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Sterbefälle\",\n      \"value\": 15929,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"metric\": \"Geburten\",\n      \"value\": 20367,\n      \"unit\": \"Geburten\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

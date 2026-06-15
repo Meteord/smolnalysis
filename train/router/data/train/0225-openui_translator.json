@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01093_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von CO2-Emissionen in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Rosenheimer Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"t\",\n  \"values\": [\n    {\n      \"date\": \"2022-11-12\",\n      \"value\": 3702\n    },\n    {\n      \"date\": \"2022-11-13\",\n      \"value\": 2964\n    },\n    {\n      \"date\": \"2022-11-14\",\n      \"value\": 3452\n    },\n    {\n      \"date\": \"2022-11-15\",\n      \"value\": 3267\n    },\n    {\n      \"date\": \"2022-11-16\",\n      \"value\": 3784\n    },\n    {\n      \"date\": \"2022-11-17\",\n      \"value\": 3316\n    },\n    {\n      \"date\": \"2022-11-18\",\n      \"value\": 3737\n    },\n    {\n      \"date\": \"2022-11-19\",\n      \"value\": 3365\n    },\n    {\n      \"date\": \"2022-11-20\",\n      \"value\": 2627\n    },\n    {\n      \"date\": \"2022-11-21\",\n      \"value\": 2917\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

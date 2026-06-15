@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00500_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Luftqualitätsindex je Stadtbezirk in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2024,\n  \"unit\": \"AQI\",\n  \"values\": [\n    {\n      \"district\": \"Laim\",\n      \"value\": 97\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 20\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 39\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 82\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 143\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 100\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 121\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 62\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 16\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 47\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

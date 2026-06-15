@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00649_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse weather für Berlin als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"location\": \"Berlin\",\n  \"year\": 2022,\n  \"kpis\": [\n    {\n      \"metric\": \"Luftfeuchtigkeit\",\n      \"value\": 55,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Windgeschwindigkeit\",\n      \"value\": 26.1,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"metric\": \"Niederschlag\",\n      \"value\": 158,\n      \"unit\": \"mm\"\n    },\n    {\n      \"metric\": \"Temperatur\",\n      \"value\": 26.5,\n      \"unit\": \"°C\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

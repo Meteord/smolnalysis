@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00628_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Durchschnittsalter in 2023.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2023,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Durchschnittsalter\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 42.1,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 41.5,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 41.3,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 41.3,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 47.1,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 39.6,\n      \"unit\": \"Jahre\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

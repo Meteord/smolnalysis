@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01118_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Investitionsvolumen nach Dienststelle in München.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"München\",\n  \"year\": 2022,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Investitionsvolumen\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 1748,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 1812,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 874,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 2089,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 2220,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 2039,\n      \"unit\": \"Mio. €\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00498_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM10\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2020,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"PM10\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 22,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 38,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 22,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 28,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 56,\n      \"unit\": \"µg/m³\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

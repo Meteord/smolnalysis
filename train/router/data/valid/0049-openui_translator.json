@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01095_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Heizbedarf?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2022,\n  \"unit\": \"MWh\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Sendling\",\n      \"value\": 6107\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 3770\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 3489\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 1510\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 334\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

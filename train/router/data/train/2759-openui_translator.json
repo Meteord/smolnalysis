@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00631_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Ausgaben in Rosenheimer Straße 2025.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Ausgaben\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2025,\n  \"aggregation\": \"sum\",\n  \"value\": 783,\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

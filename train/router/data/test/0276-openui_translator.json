@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00702_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Einwohner in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Schwabing-Freimann\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 899888\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 323197\n  },\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

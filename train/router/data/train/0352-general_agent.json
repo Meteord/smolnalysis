@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00082",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00997",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "yes"
+      "content": "Compare a short email in English."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

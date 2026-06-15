@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00813_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Ozon in Elbe.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Elbe\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"date\": \"2022-11-05\",\n      \"value\": 166\n    },\n    {\n      \"date\": \"2022-11-06\",\n      \"value\": 190\n    },\n    {\n      \"date\": \"2022-11-07\",\n      \"value\": 165\n    },\n    {\n      \"date\": \"2022-11-08\",\n      \"value\": 140\n    },\n    {\n      \"date\": \"2022-11-09\",\n      \"value\": 161\n    },\n    {\n      \"date\": \"2022-11-10\",\n      \"value\": 136\n    },\n    {\n      \"date\": \"2022-11-11\",\n      \"value\": 106\n    },\n    {\n      \"date\": \"2022-11-12\",\n      \"value\": 132\n    },\n    {\n      \"date\": \"2022-11-13\",\n      \"value\": 108\n    },\n    {\n      \"date\": \"2022-11-14\",\n      \"value\": 123\n    },\n    {\n      \"date\": \"2022-11-15\",\n      \"value\": 131\n    },\n    {\n      \"date\": \"2022-11-16\",\n      \"value\": 134\n    },\n    {\n      \"date\": \"2022-11-17\",\n      \"value\": 142\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

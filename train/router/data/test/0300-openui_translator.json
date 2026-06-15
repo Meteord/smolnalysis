@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00382_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Geburten in Moosach in 2022 mit 2021.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Moosach\",\n  \"current\": {\n    \"year\": 2022,\n    \"value\": 45142\n  },\n  \"previous\": {\n    \"year\": 2021,\n    \"value\": 48000\n  },\n  \"unit\": \"Geburten\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

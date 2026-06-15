@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00641_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Sonnenstunden in München im Jahr 2020?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"München\",\n  \"year\": 2020,\n  \"aggregation\": \"sum\",\n  \"value\": 1501,\n  \"unit\": \"h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

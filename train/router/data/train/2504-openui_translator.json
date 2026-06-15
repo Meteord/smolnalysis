@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00597_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie groß ist der Anteil von Straßenauslastung in Donau?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Straßenauslastung\",\n  \"location\": \"Donau\",\n  \"year\": 2019,\n  \"value\": 52,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

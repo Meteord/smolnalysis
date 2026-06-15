@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00751_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Straßenauslastung in Bürgerbüro Pasing im Jahr 2024?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Straßenauslastung\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2024,\n  \"aggregation\": \"average\",\n  \"value\": 27,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

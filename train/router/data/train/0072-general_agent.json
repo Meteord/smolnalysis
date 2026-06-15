@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00059",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00165",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "Quick note: servus"
+      "content": "Explain an API error message without using a table."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

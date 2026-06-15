@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01049_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse weather für Maxvorstadt als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2020,\n  \"kpis\": [\n    {\n      \"metric\": \"Sonnenstunden\",\n      \"value\": 2224,\n      \"unit\": \"h\"\n    },\n    {\n      \"metric\": \"Windgeschwindigkeit\",\n      \"value\": 70.0,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"metric\": \"Niederschlag\",\n      \"value\": 33,\n      \"unit\": \"mm\"\n    },\n    {\n      \"metric\": \"Temperatur\",\n      \"value\": 27.0,\n      \"unit\": \"°C\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

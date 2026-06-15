@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00555_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Investitionsvolumen in 2023.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"Elbe\",\n  \"year\": 2023,\n  \"unit\": \"Mio. €\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 2318\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 1930\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 908\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 899\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 889\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 255\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 72\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00806_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Niederschlag in Sendling?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Sendling\",\n  \"year\": 2023,\n  \"value\": 58,\n  \"threshold\": 80,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"mm\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

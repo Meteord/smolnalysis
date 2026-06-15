@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00232_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Budget in Bürgerbüro Mitte.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"current\": {\n    \"year\": 2018,\n    \"value\": 2944\n  },\n  \"previous\": {\n    \"year\": 2017,\n    \"value\": 3770\n  },\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

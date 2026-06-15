@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00005_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Temperatur in Berlin am höchsten?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Berlin\",\n  \"year\": 2021,\n  \"unit\": \"°C\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Giesing\",\n      \"value\": 22.4\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 21.7\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 21.1\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 19.8\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 8.9\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 1.3\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": -2.2\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00180_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Luftqualitätsindex räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Donau\",\n  \"year\": 2022,\n  \"unit\": \"AQI\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 82\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 103\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 107\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 50\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 126\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 145\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

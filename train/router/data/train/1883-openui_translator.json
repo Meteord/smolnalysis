@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01199_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu finance_budget in Sendling.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"location\": \"Sendling\",\n  \"year\": 2018,\n  \"kpis\": [\n    {\n      \"metric\": \"Budget\",\n      \"value\": 1190,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Einnahmen\",\n      \"value\": 2416,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Ausgaben\",\n      \"value\": 3742,\n      \"unit\": \"Mio. €\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

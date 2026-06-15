@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00772_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Solarerzeugung in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Bogenhausen\",\n  \"current\": {\n    \"year\": 2018,\n    \"value\": 1944\n  },\n  \"previous\": {\n    \"year\": 2017,\n    \"value\": 2561\n  },\n  \"unit\": \"MWh\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

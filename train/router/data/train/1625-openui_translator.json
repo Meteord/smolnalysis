@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00473_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Budget in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Rosenheimer Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2025-12-09\",\n      \"value\": 4022\n    },\n    {\n      \"date\": \"2025-12-10\",\n      \"value\": 4283\n    },\n    {\n      \"date\": \"2025-12-11\",\n      \"value\": 2689\n    },\n    {\n      \"date\": \"2025-12-12\",\n      \"value\": 1110\n    },\n    {\n      \"date\": \"2025-12-13\",\n      \"value\": 1053\n    },\n    {\n      \"date\": \"2025-12-14\",\n      \"value\": 604\n    },\n    {\n      \"date\": \"2025-12-15\",\n      \"value\": 878\n    },\n    {\n      \"date\": \"2025-12-16\",\n      \"value\": 2456\n    },\n    {\n      \"date\": \"2025-12-17\",\n      \"value\": 1021\n    },\n    {\n      \"date\": \"2025-12-18\",\n      \"value\": 1808\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

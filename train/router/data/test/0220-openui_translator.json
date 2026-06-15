@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00162_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Niederschlag in Bürgerbüro Pasing gegenüber 2022 verändert?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"current\": {\n    \"year\": 2023,\n    \"value\": 168\n  },\n  \"previous\": {\n    \"year\": 2022,\n    \"value\": 136\n  },\n  \"unit\": \"mm\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

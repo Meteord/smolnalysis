@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00349_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse water_quality für Berlin als Dashboard zusammen."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 349,
+    "task": "generate_tool_result"
+  }
+}

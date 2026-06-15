@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00516_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Durchschnittsgeschwindigkeit in Isar über dem Grenzwert?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice",
+    "source_dataset": "openui_lang",
+    "source_index": 516,
+    "task": "generate_tool_result"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00383_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Geburten in Schwabing-Freimann in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Schwabing-Freimann\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Geburten\",\n  \"values\": [\n    {\n      \"date\": \"2024-02-02\",\n      \"value\": 44504\n    },\n    {\n      \"date\": \"2024-02-03\",\n      \"value\": 36797\n    },\n    {\n      \"date\": \"2024-02-04\",\n      \"value\": 41477\n    },\n    {\n      \"date\": \"2024-02-05\",\n      \"value\": 41891\n    },\n    {\n      \"date\": \"2024-02-06\",\n      \"value\": 48000\n    },\n    {\n      \"date\": \"2024-02-07\",\n      \"value\": 41159\n    },\n    {\n      \"date\": \"2024-02-08\",\n      \"value\": 43199\n    },\n    {\n      \"date\": \"2024-02-09\",\n      \"value\": 36019\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

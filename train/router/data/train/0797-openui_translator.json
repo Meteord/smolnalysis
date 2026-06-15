@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01103_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Wanderungssaldo in Rosenheimer Straße in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Rosenheimer Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"date\": \"2024-11-10\",\n      \"value\": 11103\n    },\n    {\n      \"date\": \"2024-11-11\",\n      \"value\": 8081\n    },\n    {\n      \"date\": \"2024-11-12\",\n      \"value\": 7972\n    },\n    {\n      \"date\": \"2024-11-13\",\n      \"value\": 5092\n    },\n    {\n      \"date\": \"2024-11-14\",\n      \"value\": 10623\n    },\n    {\n      \"date\": \"2024-11-15\",\n      \"value\": 12198\n    },\n    {\n      \"date\": \"2024-11-16\",\n      \"value\": 11958\n    },\n    {\n      \"date\": \"2024-11-17\",\n      \"value\": 16550\n    },\n    {\n      \"date\": \"2024-11-18\",\n      \"value\": 16023\n    },\n    {\n      \"date\": \"2024-11-19\",\n      \"value\": 20394\n    },\n    {\n      \"date\": \"2024-11-20\",\n      \"value\": 17213\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

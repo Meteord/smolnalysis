@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00235",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Explain a code comment without using a table."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

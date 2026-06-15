@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00955_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Einnahmen?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2018,\n  \"unit\": \"Mio. €\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Moosach\",\n      \"value\": 9223\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 8254\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 6751\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 6228\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 5966\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 5496\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 4014\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 3053\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 1695\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 441\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

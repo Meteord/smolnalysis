@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00188_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Wassertemperatur\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2019,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Wassertemperatur\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 23.4,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 18.4,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 9.9,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 15.4,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 17.8,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 7.8,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 21.9,\n      \"unit\": \"°C\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

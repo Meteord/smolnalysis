@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00653_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Ozon in Köln in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Köln\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"date\": \"2025-02-01\",\n      \"value\": 168\n    },\n    {\n      \"date\": \"2025-02-02\",\n      \"value\": 190\n    },\n    {\n      \"date\": \"2025-02-03\",\n      \"value\": 190\n    },\n    {\n      \"date\": \"2025-02-04\",\n      \"value\": 190\n    },\n    {\n      \"date\": \"2025-02-05\",\n      \"value\": 163\n    },\n    {\n      \"date\": \"2025-02-06\",\n      \"value\": 182\n    },\n    {\n      \"date\": \"2025-02-07\",\n      \"value\": 155\n    },\n    {\n      \"date\": \"2025-02-08\",\n      \"value\": 162\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00016_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Luftqualitätsindex in Rosenheimer Straße?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2025,\n  \"value\": 113,\n  \"threshold\": 100,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"AQI\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

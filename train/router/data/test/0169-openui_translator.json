@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01033_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Budget in Elbe.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Elbe\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2018-12-14\",\n      \"value\": 6622\n    },\n    {\n      \"date\": \"2018-12-15\",\n      \"value\": 6440\n    },\n    {\n      \"date\": \"2018-12-16\",\n      \"value\": 6095\n    },\n    {\n      \"date\": \"2018-12-17\",\n      \"value\": 5089\n    },\n    {\n      \"date\": \"2018-12-18\",\n      \"value\": 4681\n    },\n    {\n      \"date\": \"2018-12-19\",\n      \"value\": 5756\n    },\n    {\n      \"date\": \"2018-12-20\",\n      \"value\": 4365\n    },\n    {\n      \"date\": \"2018-12-21\",\n      \"value\": 3255\n    },\n    {\n      \"date\": \"2018-12-22\",\n      \"value\": 4667\n    },\n    {\n      \"date\": \"2018-12-23\",\n      \"value\": 5434\n    },\n    {\n      \"date\": \"2018-12-24\",\n      \"value\": 4141\n    },\n    {\n      \"date\": \"2018-12-25\",\n      \"value\": 5018\n    },\n    {\n      \"date\": \"2018-12-26\",\n      \"value\": 3721\n    },\n    {\n      \"date\": \"2018-12-27\",\n      \"value\": 3684\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

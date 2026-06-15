@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00888_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Moosach\",\n  \"year\": 2019,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Niederschlag\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 146,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 14,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 23,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 33,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 8,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 63,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 118,\n      \"unit\": \"mm\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

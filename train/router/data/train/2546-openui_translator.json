@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00923_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Bearbeitungszeit in Maxvorstadt in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Maxvorstadt\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Tage\",\n  \"values\": [\n    {\n      \"date\": \"2021-11-08\",\n      \"value\": 25\n    },\n    {\n      \"date\": \"2021-11-09\",\n      \"value\": 27\n    },\n    {\n      \"date\": \"2021-11-10\",\n      \"value\": 28\n    },\n    {\n      \"date\": \"2021-11-11\",\n      \"value\": 25\n    },\n    {\n      \"date\": \"2021-11-12\",\n      \"value\": 21\n    },\n    {\n      \"date\": \"2021-11-13\",\n      \"value\": 28\n    },\n    {\n      \"date\": \"2021-11-14\",\n      \"value\": 34\n    },\n    {\n      \"date\": \"2021-11-15\",\n      \"value\": 38\n    },\n    {\n      \"date\": \"2021-11-16\",\n      \"value\": 37\n    },\n    {\n      \"date\": \"2021-11-17\",\n      \"value\": 36\n    },\n    {\n      \"date\": \"2021-11-18\",\n      \"value\": 32\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

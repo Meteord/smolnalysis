@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00124_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Anträge in Elbe 2025?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"Elbe\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Anträge\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 599\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 4692\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 4530\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 8988\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 4337\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 885\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 2954\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 7913\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 1316\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 7016\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 9100\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 1670\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

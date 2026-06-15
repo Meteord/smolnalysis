@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00289_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für public_administration in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2019,\n  \"kpis\": [\n    {\n      \"metric\": \"Wartezeit\",\n      \"value\": 16,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 48,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 20,\n      \"unit\": \"Tage\"\n    },\n    {\n      \"metric\": \"Anträge\",\n      \"value\": 6867,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"metric\": \"Online-Anteil\",\n      \"value\": 89,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

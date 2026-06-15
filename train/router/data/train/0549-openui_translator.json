@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00860_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Heizbedarf räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2022,\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 4945\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 1500\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 1046\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 4027\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 2224\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 689\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00492_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche NO2 in Bürgerbüro Pasing in 2019 mit 2018."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 492,
+    "task": "generate_tool_result"
+  }
+}

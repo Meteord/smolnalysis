@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00541_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Einwohner in München im Jahr 2025?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"München\",\n  \"year\": 2025,\n  \"aggregation\": \"count\",\n  \"value\": 2878476,\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

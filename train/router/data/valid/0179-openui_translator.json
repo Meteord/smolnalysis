@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00033_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Staudauer in Berlin in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Berlin\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"date\": \"2019-06-12\",\n      \"value\": 184\n    },\n    {\n      \"date\": \"2019-06-13\",\n      \"value\": 226\n    },\n    {\n      \"date\": \"2019-06-14\",\n      \"value\": 193\n    },\n    {\n      \"date\": \"2019-06-15\",\n      \"value\": 228\n    },\n    {\n      \"date\": \"2019-06-16\",\n      \"value\": 201\n    },\n    {\n      \"date\": \"2019-06-17\",\n      \"value\": 162\n    },\n    {\n      \"date\": \"2019-06-18\",\n      \"value\": 156\n    },\n    {\n      \"date\": \"2019-06-19\",\n      \"value\": 158\n    },\n    {\n      \"date\": \"2019-06-20\",\n      \"value\": 184\n    },\n    {\n      \"date\": \"2019-06-21\",\n      \"value\": 200\n    },\n    {\n      \"date\": \"2019-06-22\",\n      \"value\": 238\n    },\n    {\n      \"date\": \"2019-06-23\",\n      \"value\": 240\n    },\n    {\n      \"date\": \"2019-06-24\",\n      \"value\": 214\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

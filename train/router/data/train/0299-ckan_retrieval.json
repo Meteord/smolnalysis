@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00221",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_00601_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Is there open data for Freibad?"
+      "content": "Wie hoch war Terminauslastung in Hamburg im Jahr 2020?"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 601,
+    "task": "generate_tool_result"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00563_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Sonnenstunden in Landsberger Straße in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Landsberger Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"h\",\n  \"values\": [\n    {\n      \"date\": \"2022-11-09\",\n      \"value\": 678\n    },\n    {\n      \"date\": \"2022-11-10\",\n      \"value\": 476\n    },\n    {\n      \"date\": \"2022-11-11\",\n      \"value\": 489\n    },\n    {\n      \"date\": \"2022-11-12\",\n      \"value\": 629\n    },\n    {\n      \"date\": \"2022-11-13\",\n      \"value\": 668\n    },\n    {\n      \"date\": \"2022-11-14\",\n      \"value\": 978\n    },\n    {\n      \"date\": \"2022-11-15\",\n      \"value\": 1082\n    },\n    {\n      \"date\": \"2022-11-16\",\n      \"value\": 1095\n    },\n    {\n      \"date\": \"2022-11-17\",\n      \"value\": 840\n    },\n    {\n      \"date\": \"2022-11-18\",\n      \"value\": 839\n    },\n    {\n      \"date\": \"2022-11-19\",\n      \"value\": 970\n    },\n    {\n      \"date\": \"2022-11-20\",\n      \"value\": 1234\n    },\n    {\n      \"date\": \"2022-11-21\",\n      \"value\": 1590\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

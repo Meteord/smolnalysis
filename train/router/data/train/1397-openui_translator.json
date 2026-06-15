@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00469_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse population für Elbe als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"Elbe\",\n  \"year\": 2024,\n  \"kpis\": [\n    {\n      \"metric\": \"Geburten\",\n      \"value\": 26669,\n      \"unit\": \"Geburten\"\n    },\n    {\n      \"metric\": \"Durchschnittsalter\",\n      \"value\": 46.8,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"metric\": \"Wanderungssaldo\",\n      \"value\": 5529,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Einwohner\",\n      \"value\": 1586952,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Sterbefälle\",\n      \"value\": 13284,\n      \"unit\": \"Sterbefälle\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

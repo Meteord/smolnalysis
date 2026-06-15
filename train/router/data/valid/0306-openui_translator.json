@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00060_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Netzlast räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Köln\",\n  \"year\": 2021,\n  \"unit\": \"MW\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 402\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 519\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 272\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 224\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 611\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 608\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 405\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 595\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 788\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 677\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

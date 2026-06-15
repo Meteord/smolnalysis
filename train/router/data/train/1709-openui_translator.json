@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00733_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Ozon in Moosach.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Moosach\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"date\": \"2018-04-07\",\n      \"value\": 115\n    },\n    {\n      \"date\": \"2018-04-08\",\n      \"value\": 143\n    },\n    {\n      \"date\": \"2018-04-09\",\n      \"value\": 152\n    },\n    {\n      \"date\": \"2018-04-10\",\n      \"value\": 144\n    },\n    {\n      \"date\": \"2018-04-11\",\n      \"value\": 156\n    },\n    {\n      \"date\": \"2018-04-12\",\n      \"value\": 174\n    },\n    {\n      \"date\": \"2018-04-13\",\n      \"value\": 184\n    },\n    {\n      \"date\": \"2018-04-14\",\n      \"value\": 190\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

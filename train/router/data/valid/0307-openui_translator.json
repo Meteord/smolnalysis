@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00766_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Online-Anteil in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2023,\n  \"value\": 57,\n  \"threshold\": 75,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

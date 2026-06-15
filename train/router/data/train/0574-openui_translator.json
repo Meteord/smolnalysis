@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00898_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Ozon nach Dienststelle in Bürgerbüro Mitte.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2018,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Ozon\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 164,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 57,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 30,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 180,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 67,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 124,\n      \"unit\": \"µg/m³\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

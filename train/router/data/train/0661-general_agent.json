@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00208",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Explain a meeting agenda for documentation."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

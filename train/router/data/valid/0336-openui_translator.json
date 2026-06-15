@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00243_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Temperatur in Berlin.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Berlin\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"°C\",\n  \"values\": [\n    {\n      \"date\": \"2021-12-06\",\n      \"value\": 16.4\n    },\n    {\n      \"date\": \"2021-12-07\",\n      \"value\": 17.5\n    },\n    {\n      \"date\": \"2021-12-08\",\n      \"value\": 17.6\n    },\n    {\n      \"date\": \"2021-12-09\",\n      \"value\": 19.5\n    },\n    {\n      \"date\": \"2021-12-10\",\n      \"value\": 18.0\n    },\n    {\n      \"date\": \"2021-12-11\",\n      \"value\": 19.3\n    },\n    {\n      \"date\": \"2021-12-12\",\n      \"value\": 13.2\n    },\n    {\n      \"date\": \"2021-12-13\",\n      \"value\": 15.5\n    },\n    {\n      \"date\": \"2021-12-14\",\n      \"value\": 10.3\n    },\n    {\n      \"date\": \"2021-12-15\",\n      \"value\": 7.4\n    },\n    {\n      \"date\": \"2021-12-16\",\n      \"value\": 12.3\n    },\n    {\n      \"date\": \"2021-12-17\",\n      \"value\": 18.3\n    },\n    {\n      \"date\": \"2021-12-18\",\n      \"value\": 16.8\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00029_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu water_quality in Moosach.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"location\": \"Moosach\",\n  \"year\": 2019,\n  \"kpis\": [\n    {\n      \"metric\": \"Nitrat\",\n      \"value\": 39.0,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"metric\": \"Gelöster Sauerstoff\",\n      \"value\": 6.9,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"metric\": \"Wassertemperatur\",\n      \"value\": 7.4,\n      \"unit\": \"°C\"\n    },\n    {\n      \"metric\": \"pH-Wert\",\n      \"value\": 8.3,\n      \"unit\": \"pH\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

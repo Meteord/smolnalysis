@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00843_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Wartezeit in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Schwabing-Freimann\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"date\": \"2022-03-08\",\n      \"value\": 92\n    },\n    {\n      \"date\": \"2022-03-09\",\n      \"value\": 83\n    },\n    {\n      \"date\": \"2022-03-10\",\n      \"value\": 95\n    },\n    {\n      \"date\": \"2022-03-11\",\n      \"value\": 85\n    },\n    {\n      \"date\": \"2022-03-12\",\n      \"value\": 69\n    },\n    {\n      \"date\": \"2022-03-13\",\n      \"value\": 74\n    },\n    {\n      \"date\": \"2022-03-14\",\n      \"value\": 72\n    },\n    {\n      \"date\": \"2022-03-15\",\n      \"value\": 64\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

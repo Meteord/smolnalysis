@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01050_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Niederschlag räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2021,\n  \"unit\": \"mm\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 95\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 144\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 65\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 41\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 170\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

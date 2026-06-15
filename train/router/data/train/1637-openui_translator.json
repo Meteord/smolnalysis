@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00529_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse public_administration für Landsberger Straße als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2018,\n  \"kpis\": [\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 60,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Wartezeit\",\n      \"value\": 4,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Anträge\",\n      \"value\": 4191,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 15,\n      \"unit\": \"Tage\"\n    },\n    {\n      \"metric\": \"Online-Anteil\",\n      \"value\": 54,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00801_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Temperatur gab es in Maxvorstadt im Jahr 2024?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2024,\n  \"aggregation\": \"average\",\n  \"value\": 1.2,\n  \"unit\": \"°C\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

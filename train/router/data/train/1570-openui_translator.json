@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00950_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Durchschnittsalter je Stadtbezirk in Sendling.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Sendling\",\n  \"year\": 2024,\n  \"unit\": \"Jahre\",\n  \"values\": [\n    {\n      \"district\": \"Moosach\",\n      \"value\": 35.1\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 39.3\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 36.3\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 40.2\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 38.6\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 47.9\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 43.5\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

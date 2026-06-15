@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00326_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Windgeschwindigkeit in Köln über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Windgeschwindigkeit\",\n  \"location\": \"Köln\",\n  \"year\": 2024,\n  \"value\": 51.1,\n  \"threshold\": 50.0,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"km/h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00512_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Straßenauslastung in Sendling in 2020 mit 2019.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Straßenauslastung\",\n  \"location\": \"Sendling\",\n  \"current\": {\n    \"year\": 2020,\n    \"value\": 43\n  },\n  \"previous\": {\n    \"year\": 2019,\n    \"value\": 35\n  },\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

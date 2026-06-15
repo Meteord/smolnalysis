@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00918_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Staudauer nach Dienststelle in Köln.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Köln\",\n  \"year\": 2019,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Staudauer\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 176,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 28,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 85,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 19,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 190,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 175,\n      \"unit\": \"min\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

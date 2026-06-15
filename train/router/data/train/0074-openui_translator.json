@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00748_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Trübung nach Dienststelle in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2019,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Trübung\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 1.6,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 4.5,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 1.9,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 10.4,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 1.7,\n      \"unit\": \"NTU\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

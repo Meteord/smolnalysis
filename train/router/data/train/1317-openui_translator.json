@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00613_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Solarerzeugung in Rhein in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Rhein\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"date\": \"2020-12-08\",\n      \"value\": 2746\n    },\n    {\n      \"date\": \"2020-12-09\",\n      \"value\": 3223\n    },\n    {\n      \"date\": \"2020-12-10\",\n      \"value\": 2777\n    },\n    {\n      \"date\": \"2020-12-11\",\n      \"value\": 2601\n    },\n    {\n      \"date\": \"2020-12-12\",\n      \"value\": 3012\n    },\n    {\n      \"date\": \"2020-12-13\",\n      \"value\": 2526\n    },\n    {\n      \"date\": \"2020-12-14\",\n      \"value\": 2142\n    },\n    {\n      \"date\": \"2020-12-15\",\n      \"value\": 2747\n    },\n    {\n      \"date\": \"2020-12-16\",\n      \"value\": 3094\n    },\n    {\n      \"date\": \"2020-12-17\",\n      \"value\": 2458\n    },\n    {\n      \"date\": \"2020-12-18\",\n      \"value\": 2890\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

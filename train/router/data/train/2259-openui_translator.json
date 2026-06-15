@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00242_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Windgeschwindigkeit in Bürgerbüro Pasing gegenüber 2017 verändert?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Windgeschwindigkeit\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"current\": {\n    \"year\": 2018,\n    \"value\": 70.1\n  },\n  \"previous\": {\n    \"year\": 2017,\n    \"value\": 61.2\n  },\n  \"unit\": \"km/h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

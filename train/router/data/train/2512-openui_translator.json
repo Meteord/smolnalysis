@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00341_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Trübung in Berlin 2022.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Berlin\",\n  \"year\": 2022,\n  \"aggregation\": \"average\",\n  \"value\": 9.9,\n  \"unit\": \"NTU\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

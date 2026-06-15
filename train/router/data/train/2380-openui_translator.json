@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00343_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Wassertemperatur in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Wassertemperatur\",\n  \"location\": \"Frankfurt am Main\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"°C\",\n  \"values\": [\n    {\n      \"date\": \"2025-07-06\",\n      \"value\": 15.7\n    },\n    {\n      \"date\": \"2025-07-07\",\n      \"value\": 18.3\n    },\n    {\n      \"date\": \"2025-07-08\",\n      \"value\": 20.6\n    },\n    {\n      \"date\": \"2025-07-09\",\n      \"value\": 21.5\n    },\n    {\n      \"date\": \"2025-07-10\",\n      \"value\": 19.0\n    },\n    {\n      \"date\": \"2025-07-11\",\n      \"value\": 19.1\n    },\n    {\n      \"date\": \"2025-07-12\",\n      \"value\": 18.7\n    },\n    {\n      \"date\": \"2025-07-13\",\n      \"value\": 16.3\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

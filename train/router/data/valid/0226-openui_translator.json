@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00929_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu public_administration in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2020,\n  \"kpis\": [\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 96,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Wartezeit\",\n      \"value\": 6,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Anträge\",\n      \"value\": 319,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"metric\": \"Online-Anteil\",\n      \"value\": 91,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

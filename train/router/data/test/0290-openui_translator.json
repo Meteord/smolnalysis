@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00906_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Trübung in Bürgerbüro Mitte.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2024,\n  \"value\": 5.7,\n  \"threshold\": 5.0,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"NTU\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00869_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für population in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2022,\n  \"kpis\": [\n    {\n      \"metric\": \"Einwohner\",\n      \"value\": 1488041,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Wanderungssaldo\",\n      \"value\": 16325,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Geburten\",\n      \"value\": 5170,\n      \"unit\": \"Geburten\"\n    },\n    {\n      \"metric\": \"Sterbefälle\",\n      \"value\": 19189,\n      \"unit\": \"Sterbefälle\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

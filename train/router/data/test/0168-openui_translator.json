@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00931_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war CO2-Emissionen in Frankfurt am Main im Jahr 2022?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2022,\n  \"aggregation\": \"sum\",\n  \"value\": 3622,\n  \"unit\": \"t\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

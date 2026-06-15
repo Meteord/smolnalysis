@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00786_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Sterbefälle in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2022,\n  \"value\": 33243,\n  \"threshold\": 25000,\n  \"status\": \"exceeded\",\n  \"severity\": \"danger\",\n  \"unit\": \"Sterbefälle\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

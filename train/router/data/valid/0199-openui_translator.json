@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00578_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige NO2 nach Dienststelle in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"NO2\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2024,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"NO2\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 83,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 23,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 62,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 21,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 39,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 41,\n      \"unit\": \"µg/m³\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

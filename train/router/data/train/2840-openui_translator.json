@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00366_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Wartezeit in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2025,\n  \"value\": 53,\n  \"threshold\": 45,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

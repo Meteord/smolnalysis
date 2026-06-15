@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00380_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Solarerzeugung räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2023,\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 1154\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 1063\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 978\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 2328\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 991\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 1613\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 3109\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 1320\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

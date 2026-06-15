@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00389_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse population für Leopoldstraße als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2022,\n  \"kpis\": [\n    {\n      \"metric\": \"Geburten\",\n      \"value\": 13915,\n      \"unit\": \"Geburten\"\n    },\n    {\n      \"metric\": \"Einwohner\",\n      \"value\": 2421100,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Wanderungssaldo\",\n      \"value\": 13767,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Sterbefälle\",\n      \"value\": 12533,\n      \"unit\": \"Sterbefälle\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

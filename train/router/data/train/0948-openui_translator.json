@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01070_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für pH-Wert in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2025,\n  \"unit\": \"pH\",\n  \"values\": [\n    {\n      \"district\": \"Giesing\",\n      \"value\": 7.8\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 8.6\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 7.3\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 7.0\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 8.3\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 7.3\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 8.3\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 7.4\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

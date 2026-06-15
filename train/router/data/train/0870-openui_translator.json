@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00093_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Ozon in Donau.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Donau\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"date\": \"2019-12-08\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2019-12-09\",\n      \"value\": 27\n    },\n    {\n      \"date\": \"2019-12-10\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2019-12-11\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2019-12-12\",\n      \"value\": 28\n    },\n    {\n      \"date\": \"2019-12-13\",\n      \"value\": 31\n    },\n    {\n      \"date\": \"2019-12-14\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2019-12-15\",\n      \"value\": 50\n    },\n    {\n      \"date\": \"2019-12-16\",\n      \"value\": 52\n    },\n    {\n      \"date\": \"2019-12-17\",\n      \"value\": 49\n    },\n    {\n      \"date\": \"2019-12-18\",\n      \"value\": 55\n    },\n    {\n      \"date\": \"2019-12-19\",\n      \"value\": 30\n    },\n    {\n      \"date\": \"2019-12-20\",\n      \"value\": 42\n    },\n    {\n      \"date\": \"2019-12-21\",\n      \"value\": 64\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

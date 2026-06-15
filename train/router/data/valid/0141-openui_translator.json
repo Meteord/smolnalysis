@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00718_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Budget nach Dienststelle in München.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"München\",\n  \"year\": 2025,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Budget\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 3505,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 5877,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 6262,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 4519,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 3929,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 1792,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 9369,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 9097,\n      \"unit\": \"Mio. €\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

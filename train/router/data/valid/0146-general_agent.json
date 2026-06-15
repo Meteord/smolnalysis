@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00111",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I do not need data retrieval; suggest a folder structure for a small Python package."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

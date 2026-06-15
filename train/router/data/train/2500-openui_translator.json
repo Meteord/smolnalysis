@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00682_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Wartezeit in Bogenhausen in 2021 mit 2020.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Bogenhausen\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 4\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 3\n  },\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

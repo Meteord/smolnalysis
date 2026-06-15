@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00728_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Temperatur in 2025.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2025,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Temperatur\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 11.5,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 13.5,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 8.6,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 10.3,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": -2.2,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 23.3,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 6.0,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 31.0,\n      \"unit\": \"°C\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

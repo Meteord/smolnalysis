@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00884_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Luftfeuchtigkeit in Berlin 2023?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Berlin\",\n  \"year\": 2023,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 95\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 93\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 69\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 70\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 33\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 65\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 92\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 46\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 31\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 30\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 63\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 72\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

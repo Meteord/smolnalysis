@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00260_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir PM10 je Stadtbezirk in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM10\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2023,\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 22\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 81\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 15\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 66\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 60\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 81\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 45\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 30\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 28\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

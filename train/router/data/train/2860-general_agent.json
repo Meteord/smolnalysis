@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00048",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "translate this sentence into German: the report is ready"
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

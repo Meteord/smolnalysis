@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00013_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Luftqualitätsindex in München in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"München\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"AQI\",\n  \"values\": [\n    {\n      \"date\": \"2023-01-02\",\n      \"value\": 150\n    },\n    {\n      \"date\": \"2023-01-03\",\n      \"value\": 150\n    },\n    {\n      \"date\": \"2023-01-04\",\n      \"value\": 141\n    },\n    {\n      \"date\": \"2023-01-05\",\n      \"value\": 120\n    },\n    {\n      \"date\": \"2023-01-06\",\n      \"value\": 138\n    },\n    {\n      \"date\": \"2023-01-07\",\n      \"value\": 150\n    },\n    {\n      \"date\": \"2023-01-08\",\n      \"value\": 130\n    },\n    {\n      \"date\": \"2023-01-09\",\n      \"value\": 129\n    },\n    {\n      \"date\": \"2023-01-10\",\n      \"value\": 108\n    },\n    {\n      \"date\": \"2023-01-11\",\n      \"value\": 121\n    },\n    {\n      \"date\": \"2023-01-12\",\n      \"value\": 134\n    },\n    {\n      \"date\": \"2023-01-13\",\n      \"value\": 116\n    },\n    {\n      \"date\": \"2023-01-14\",\n      \"value\": 115\n    },\n    {\n      \"date\": \"2023-01-15\",\n      \"value\": 117\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

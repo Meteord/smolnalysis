@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00205_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Anträge in München am höchsten?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"München\",\n  \"year\": 2023,\n  \"unit\": \"Anträge\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 7715\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 7400\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 7139\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 5231\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 4908\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 4715\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 2844\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 2432\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 2279\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 428\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

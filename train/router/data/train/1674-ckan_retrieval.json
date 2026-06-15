@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00192_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Straßenauslastung in Donau in 2020 mit 2019."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 192,
+    "task": "generate_tool_result"
+  }
+}

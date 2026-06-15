@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00853_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Netzlast in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MW\",\n  \"values\": [\n    {\n      \"date\": \"2019-11-09\",\n      \"value\": 487\n    },\n    {\n      \"date\": \"2019-11-10\",\n      \"value\": 627\n    },\n    {\n      \"date\": \"2019-11-11\",\n      \"value\": 732\n    },\n    {\n      \"date\": \"2019-11-12\",\n      \"value\": 779\n    },\n    {\n      \"date\": \"2019-11-13\",\n      \"value\": 674\n    },\n    {\n      \"date\": \"2019-11-14\",\n      \"value\": 673\n    },\n    {\n      \"date\": \"2019-11-15\",\n      \"value\": 598\n    },\n    {\n      \"date\": \"2019-11-16\",\n      \"value\": 669\n    },\n    {\n      \"date\": \"2019-11-17\",\n      \"value\": 808\n    },\n    {\n      \"date\": \"2019-11-18\",\n      \"value\": 767\n    },\n    {\n      \"date\": \"2019-11-19\",\n      \"value\": 839\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

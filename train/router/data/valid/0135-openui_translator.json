@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00663_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Wassertemperatur in Bürgerbüro Mitte.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Wassertemperatur\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"°C\",\n  \"values\": [\n    {\n      \"date\": \"2021-01-01\",\n      \"value\": 6.6\n    },\n    {\n      \"date\": \"2021-01-02\",\n      \"value\": 4.5\n    },\n    {\n      \"date\": \"2021-01-03\",\n      \"value\": 4.0\n    },\n    {\n      \"date\": \"2021-01-04\",\n      \"value\": 4.0\n    },\n    {\n      \"date\": \"2021-01-05\",\n      \"value\": 6.6\n    },\n    {\n      \"date\": \"2021-01-06\",\n      \"value\": 4.7\n    },\n    {\n      \"date\": \"2021-01-07\",\n      \"value\": 4.0\n    },\n    {\n      \"date\": \"2021-01-08\",\n      \"value\": 4.0\n    },\n    {\n      \"date\": \"2021-01-09\",\n      \"value\": 4.0\n    },\n    {\n      \"date\": \"2021-01-10\",\n      \"value\": 4.0\n    },\n    {\n      \"date\": \"2021-01-11\",\n      \"value\": 6.5\n    },\n    {\n      \"date\": \"2021-01-12\",\n      \"value\": 4.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

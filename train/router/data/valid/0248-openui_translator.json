@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00468_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Sterbefälle nach Dienststelle in Köln.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Köln\",\n  \"year\": 2022,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Sterbefälle\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 27156,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 28767,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 32747,\n      \"unit\": \"Sterbefälle\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

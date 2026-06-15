@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00446_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Bearbeitungszeit in München.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"München\",\n  \"year\": 2021,\n  \"value\": 5,\n  \"threshold\": 21,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Tage\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

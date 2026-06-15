@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00044_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Bearbeitungszeit in Leopoldstraße 2018?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2018,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Tage\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 41\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 27\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 31\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 6\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 20\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 39\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 10\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 13\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 16\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 22\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 17\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 40\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

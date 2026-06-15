@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00138_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Solarerzeugung in 2022.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2022,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Solarerzeugung\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 1819,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 624,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 3391,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 572,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

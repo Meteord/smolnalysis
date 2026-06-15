@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00365_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Wartezeit in 2018.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Elbe\",\n  \"year\": 2018,\n  \"unit\": \"min\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Giesing\",\n      \"value\": 76\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 52\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 50\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 34\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 27\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 26\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 14\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00131",
-  "source": "synthetic_smalltalk",
+  "id": "general_task_00097",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "hello"
+      "content": "Can you give me a short explanation of REST APIs?"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

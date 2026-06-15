@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00440_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Staudauer in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Isar\",\n  \"year\": 2019,\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"district\": \"Sendling\",\n      \"value\": 68\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 159\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 168\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 137\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 135\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

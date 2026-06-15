@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01042_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Niederschlag in Isar in 2023 mit 2022.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Isar\",\n  \"current\": {\n    \"year\": 2023,\n    \"value\": 172\n  },\n  \"previous\": {\n    \"year\": 2022,\n    \"value\": 180\n  },\n  \"unit\": \"mm\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

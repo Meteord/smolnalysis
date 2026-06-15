@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00831_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele ÖPNV-Verspätung gab es in Sendling im Jahr 2021?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Sendling\",\n  \"year\": 2021,\n  \"aggregation\": \"average\",\n  \"value\": 4,\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

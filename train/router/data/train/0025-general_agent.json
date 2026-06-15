@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00128",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00659",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "how is your day going?"
+      "content": "Rewrite an architecture decision for a quick chat reply."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

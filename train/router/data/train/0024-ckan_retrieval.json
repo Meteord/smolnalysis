@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00745_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Nitrat in Maxvorstadt am höchsten?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "ranking",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 745,
+    "task": "generate_tool_result"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00750_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir pH-Wert je Stadtbezirk in Elbe.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Elbe\",\n  \"year\": 2018,\n  \"unit\": \"pH\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 7.9\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 8.7\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 8.0\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 8.5\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 7.7\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 6.9\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 6.6\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 8.4\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 7.6\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01144",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Debug a product requirements note as a checklist."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00202_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Online-Anteil in Hamburg gegenüber 2018 verändert?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Hamburg\",\n  \"current\": {\n    \"year\": 2019,\n    \"value\": 78\n  },\n  \"previous\": {\n    \"year\": 2018,\n    \"value\": 82\n  },\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

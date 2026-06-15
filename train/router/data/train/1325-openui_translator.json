@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01156_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Fahrzeuganzahl in Maxvorstadt?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2018,\n  \"value\": 29085,\n  \"threshold\": 60000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Fahrzeuge\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

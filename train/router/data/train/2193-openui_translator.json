@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00704_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Wanderungssaldo in Landsberger Straße 2024?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 18330\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 20227\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 19394\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": -5366\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 6205\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 21329\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 18283\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 23489\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 13046\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": -1110\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 17253\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 2233\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

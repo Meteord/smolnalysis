@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00323_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Luftfeuchtigkeit in Köln in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Köln\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2024-07-05\",\n      \"value\": 57\n    },\n    {\n      \"date\": \"2024-07-06\",\n      \"value\": 59\n    },\n    {\n      \"date\": \"2024-07-07\",\n      \"value\": 53\n    },\n    {\n      \"date\": \"2024-07-08\",\n      \"value\": 49\n    },\n    {\n      \"date\": \"2024-07-09\",\n      \"value\": 54\n    },\n    {\n      \"date\": \"2024-07-10\",\n      \"value\": 46\n    },\n    {\n      \"date\": \"2024-07-11\",\n      \"value\": 38\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

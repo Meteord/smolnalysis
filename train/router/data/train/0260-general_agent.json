@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01124",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Debug a Python function as a checklist."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

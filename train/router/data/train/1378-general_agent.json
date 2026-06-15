@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00668",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Rewrite a project timeline for documentation."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00082_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Sonnenstunden in Köln in 2025 mit 2024."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 82,
+    "task": "generate_tool_result"
+  }
+}

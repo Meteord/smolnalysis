@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00000",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_00122_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Zeig mir nützliche Daten zu Bevölkerung."
+      "content": "Zeige den Jahresvergleich für Bearbeitungszeit in Maxvorstadt."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 122,
+    "task": "generate_tool_result"
+  }
 }

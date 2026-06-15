@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00701_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Geburten in Berlin im Jahr 2020?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Berlin\",\n  \"year\": 2020,\n  \"aggregation\": \"sum\",\n  \"value\": 45038,\n  \"unit\": \"Geburten\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

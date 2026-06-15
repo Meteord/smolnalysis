@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00426_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist pH-Wert in Frankfurt am Main über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2020,\n  \"value\": 8.8,\n  \"threshold\": 8.5,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"pH\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

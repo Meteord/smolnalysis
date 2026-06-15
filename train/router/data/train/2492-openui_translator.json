@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00291_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für CO2-Emissionen in Hamburg 2020.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Hamburg\",\n  \"year\": 2020,\n  \"aggregation\": \"sum\",\n  \"value\": 2585,\n  \"unit\": \"t\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

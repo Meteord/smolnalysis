@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00070_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Sterbefälle in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"München\",\n  \"year\": 2022,\n  \"unit\": \"Sterbefälle\",\n  \"values\": [\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 42913\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 40004\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 45116\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 11000\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 17629\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 39379\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 18907\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 14650\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 21767\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 42020\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

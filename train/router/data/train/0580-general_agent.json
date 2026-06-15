@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00080",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Please what should I consider before choosing a database?."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

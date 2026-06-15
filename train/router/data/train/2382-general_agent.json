@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01114",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Compare a troubleshooting guide as a checklist."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

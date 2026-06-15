@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01010",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Compare a database schema idea for a teammate."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

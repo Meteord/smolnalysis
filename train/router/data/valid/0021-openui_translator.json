@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00629_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für population in Donau.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"Donau\",\n  \"year\": 2024,\n  \"kpis\": [\n    {\n      \"metric\": \"Wanderungssaldo\",\n      \"value\": -4534,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Sterbefälle\",\n      \"value\": 30847,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"metric\": \"Durchschnittsalter\",\n      \"value\": 41.2,\n      \"unit\": \"Jahre\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

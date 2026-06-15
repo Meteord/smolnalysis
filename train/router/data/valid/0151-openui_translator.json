@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01030_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Durchschnittsalter in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Rhein\",\n  \"year\": 2020,\n  \"unit\": \"Jahre\",\n  \"values\": [\n    {\n      \"district\": \"Moosach\",\n      \"value\": 42.5\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 48.2\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 35.6\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 36.8\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 39.9\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 36.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

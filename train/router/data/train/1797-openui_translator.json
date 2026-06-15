@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01068_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Nitrat\",\n  \"location\": \"Rhein\",\n  \"year\": 2024,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Nitrat\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 26.2,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 40.8,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 14.3,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 10.2,\n      \"unit\": \"mg/l\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

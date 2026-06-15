@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00618_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Solarerzeugung in 2025.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Elbe\",\n  \"year\": 2025,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Solarerzeugung\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 2796,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 3174,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 322,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 1944,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 1416,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 2594,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 3170,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 1883,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00323",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarize a Python function for a beginner."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00095",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "General question: how do I make a command line script easier to use?."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

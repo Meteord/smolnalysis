@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00434",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarize a code comment as a checklist."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

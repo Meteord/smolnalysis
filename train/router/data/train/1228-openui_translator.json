@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00630_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Einwohner je Stadtbezirk in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2018,\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 3637819\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 1983860\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 2852746\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 1911271\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 73377\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 2502221\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 2022236\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 3657126\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 1046670\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

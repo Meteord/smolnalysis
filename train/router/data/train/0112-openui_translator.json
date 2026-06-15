@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00041_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Bearbeitungszeit gab es in Sendling im Jahr 2019?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Sendling\",\n  \"year\": 2019,\n  \"aggregation\": \"average\",\n  \"value\": 20,\n  \"unit\": \"Tage\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

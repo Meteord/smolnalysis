@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00430_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Trübung je Stadtbezirk in Bürgerbüro Mitte.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2025,\n  \"unit\": \"NTU\",\n  \"values\": [\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 11.1\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 13.4\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 10.8\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 9.5\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 15.8\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 14.2\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 9.5\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 8.2\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 14.9\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 1.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

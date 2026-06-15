@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00539_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für energy in Sendling.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"location\": \"Sendling\",\n  \"year\": 2019,\n  \"kpis\": [\n    {\n      \"metric\": \"CO2-Emissionen\",\n      \"value\": 3879,\n      \"unit\": \"t\"\n    },\n    {\n      \"metric\": \"Stromverbrauch\",\n      \"value\": 4777,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"Netzlast\",\n      \"value\": 289,\n      \"unit\": \"MW\"\n    },\n    {\n      \"metric\": \"Heizbedarf\",\n      \"value\": 2661,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

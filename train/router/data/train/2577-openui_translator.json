@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00369_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse public_administration für Hamburg als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Hamburg\",\n  \"year\": 2020,\n  \"kpis\": [\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 47,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Online-Anteil\",\n      \"value\": 77,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Anträge\",\n      \"value\": 11169,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 10,\n      \"unit\": \"Tage\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

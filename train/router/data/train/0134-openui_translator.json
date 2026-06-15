@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00544_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Geburten in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2023,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Geburten\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 16919\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 41050\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 37483\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 29430\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 24246\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 3299\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 39344\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 36640\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 25394\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 34365\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 46285\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 8262\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

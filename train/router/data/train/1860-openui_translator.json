@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00165_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Temperatur?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2025,\n  \"unit\": \"°C\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Laim\",\n      \"value\": 30.1\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 28.3\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 23.0\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 21.5\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 14.1\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 12.4\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 12.2\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 1.4\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": -2.8\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

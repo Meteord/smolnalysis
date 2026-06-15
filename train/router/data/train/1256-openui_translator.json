@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01060_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Ozon in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2024,\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"district\": \"Giesing\",\n      \"value\": 40\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 150\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 81\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 134\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 174\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 92\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 87\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 147\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 79\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

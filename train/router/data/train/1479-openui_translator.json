@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00012_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für NO2 in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"NO2\",\n  \"location\": \"Landsberger Straße\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 20\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 27\n  },\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

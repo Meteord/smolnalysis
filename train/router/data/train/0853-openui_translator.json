@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00608_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2020,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Anträge\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 1283,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 5039,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 11926,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 3700,\n      \"unit\": \"Anträge\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

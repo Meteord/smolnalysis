@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01129",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Debug a Python function for a quick chat reply."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

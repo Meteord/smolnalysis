@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00951_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Einnahmen in Bürgerbüro Pasing 2024.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2024,\n  \"aggregation\": \"sum\",\n  \"value\": 435,\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

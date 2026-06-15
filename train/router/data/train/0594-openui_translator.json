@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01159_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse traffic für Donau als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"location\": \"Donau\",\n  \"year\": 2025,\n  \"kpis\": [\n    {\n      \"metric\": \"Durchschnittsgeschwindigkeit\",\n      \"value\": 46.1,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"metric\": \"Fahrzeuganzahl\",\n      \"value\": 81600,\n      \"unit\": \"Fahrzeuge\"\n    },\n    {\n      \"metric\": \"Staudauer\",\n      \"value\": 210,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Straßenauslastung\",\n      \"value\": 73,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

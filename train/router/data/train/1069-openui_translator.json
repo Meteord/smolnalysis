@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00150_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Geburten je Stadtbezirk in Berlin.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Berlin\",\n  \"year\": 2019,\n  \"unit\": \"Geburten\",\n  \"values\": [\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 33150\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 19710\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 37203\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 44187\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 41898\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 35325\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

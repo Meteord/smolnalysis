@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00564_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Luftfeuchtigkeit in Donau 2018?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Donau\",\n  \"year\": 2018,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 64\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 53\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 38\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 38\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 75\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 48\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 58\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 50\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 84\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 32\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 42\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 56\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00274_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Straßenauslastung in Bogenhausen 2024?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Straßenauslastung\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 68\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 61\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 53\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 27\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 47\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 65\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 71\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 47\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 46\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 88\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 71\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 16\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

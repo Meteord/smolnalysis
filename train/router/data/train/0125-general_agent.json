@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00072",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00486",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "Quick note: who are you?"
+      "content": "Summarize a plain-language definition in German."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

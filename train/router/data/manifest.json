@@ -1,29 +1,45 @@
 {
-  "per_label": 159,
-  "total": 477,
+  "per_label": 1200,
+  "total": 3600,
+  "description": "Balanced router data from the actual adapter prompt surfaces: raw initial user requests for retrieval, question plus Tool result prompts for OpenUI translation, and broad base-chat negatives.",
   "splits": {
     "train": {
-      "samples": 381,
+      "samples": 2880,
       "labels": {
-        "ckan_retrieval": 127,
-        "general_agent": 127,
-        "openui_translator": 127
+        "ckan_retrieval": 960,
+        "general_agent": 960,
+        "openui_translator": 960
+      },
+      "stages": {
+        "base_chat": 960,
+        "initial_retrieval": 960,
+        "openui_translation": 960
       }
     },
     "valid": {
-      "samples": 45,
+      "samples": 360,
       "labels": {
-        "ckan_retrieval": 15,
-        "general_agent": 15,
-        "openui_translator": 15
+        "ckan_retrieval": 120,
+        "general_agent": 120,
+        "openui_translator": 120
+      },
+      "stages": {
+        "base_chat": 120,
+        "initial_retrieval": 120,
+        "openui_translation": 120
       }
     },
     "test": {
-      "samples": 51,
+      "samples": 360,
       "labels": {
-        "ckan_retrieval": 17,
-        "general_agent": 17,
-        "openui_translator": 17
+        "ckan_retrieval": 120,
+        "general_agent": 120,
+        "openui_translator": 120
+      },
+      "stages": {
+        "base_chat": 120,
+        "initial_retrieval": 120,
+        "openui_translation": 120
       }
     }
   }

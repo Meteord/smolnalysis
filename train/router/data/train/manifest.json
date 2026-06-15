@@ -1,9 +1,14 @@
 {
   "split": "train",
-  "samples": 381,
+  "samples": 2880,
   "labels": {
-    "ckan_retrieval": 127,
-    "general_agent": 127,
-    "openui_translator": 127
+    "ckan_retrieval": 960,
+    "general_agent": 960,
+    "openui_translator": 960
+  },
+  "stages": {
+    "base_chat": 960,
+    "initial_retrieval": 960,
+    "openui_translation": 960
   }
 }

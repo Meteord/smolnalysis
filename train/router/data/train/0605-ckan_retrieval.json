@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00968_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Temperatur nach Dienststelle in Hamburg."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "table",
+    "component": "DataTable",
+    "source_dataset": "openui_lang",
+    "source_index": 968,
+    "task": "generate_tool_result"
+  }
+}

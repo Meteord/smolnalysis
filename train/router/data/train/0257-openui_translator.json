@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00134_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Heizbedarf in Hamburg.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Hamburg\",\n  \"year\": 2022,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 6426\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 6142\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 5148\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 6683\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 4620\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 5731\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 3702\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 944\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 1511\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 1069\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 5707\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 267\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

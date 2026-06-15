@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00540_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Netzlast je Stadtbezirk in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2023,\n  \"unit\": \"MW\",\n  \"values\": [\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 596\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 286\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 206\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 835\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 381\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 657\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00322_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Sonnenstunden in Bürgerbüro Mitte in 2020 mit 2019.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"current\": {\n    \"year\": 2020,\n    \"value\": 2263\n  },\n  \"previous\": {\n    \"year\": 2019,\n    \"value\": 1917\n  },\n  \"unit\": \"h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

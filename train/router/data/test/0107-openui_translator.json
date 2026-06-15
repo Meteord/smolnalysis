@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00355_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Staudauer in 2021.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2021,\n  \"unit\": \"min\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Giesing\",\n      \"value\": 178\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 125\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 125\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 2\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 1\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00778_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2019,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Netzlast\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 277,\n      \"unit\": \"MW\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 452,\n      \"unit\": \"MW\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 717,\n      \"unit\": \"MW\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

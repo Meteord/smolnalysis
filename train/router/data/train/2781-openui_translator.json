@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00862_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Einwohner in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Frankfurt am Main\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 2638472\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 2643688\n  },\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

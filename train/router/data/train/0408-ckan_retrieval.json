@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00539_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für energy in Sendling."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 539,
+    "task": "generate_tool_result"
+  }
+}

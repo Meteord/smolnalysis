@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00810_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Niederschlag in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Elbe\",\n  \"year\": 2021,\n  \"unit\": \"mm\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 161\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 90\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 156\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 126\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 117\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 82\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 74\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

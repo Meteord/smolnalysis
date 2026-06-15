@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00148_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2023,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Durchschnittsalter\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 42.1,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 42.1,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 41.9,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 42.9,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 41.6,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 35.2,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 39.6,\n      \"unit\": \"Jahre\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

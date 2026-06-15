@@ -1,9 +1,14 @@
 {
   "split": "test",
-  "samples": 51,
+  "samples": 360,
   "labels": {
-    "ckan_retrieval": 17,
-    "general_agent": 17,
-    "openui_translator": 17
+    "ckan_retrieval": 120,
+    "general_agent": 120,
+    "openui_translator": 120
+  },
+  "stages": {
+    "base_chat": 120,
+    "initial_retrieval": 120,
+    "openui_translation": 120
   }
 }

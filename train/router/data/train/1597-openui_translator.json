@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00614_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Heizbedarf in Maxvorstadt 2020?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2020,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 687\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 2732\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 5454\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 2648\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 4815\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 1159\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 5445\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 3083\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 1705\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 5789\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 3023\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 2994\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

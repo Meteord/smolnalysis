@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00603_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Bearbeitungszeit in Moosach in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Moosach\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Tage\",\n  \"values\": [\n    {\n      \"date\": \"2024-02-05\",\n      \"value\": 30\n    },\n    {\n      \"date\": \"2024-02-06\",\n      \"value\": 29\n    },\n    {\n      \"date\": \"2024-02-07\",\n      \"value\": 23\n    },\n    {\n      \"date\": \"2024-02-08\",\n      \"value\": 29\n    },\n    {\n      \"date\": \"2024-02-09\",\n      \"value\": 33\n    },\n    {\n      \"date\": \"2024-02-10\",\n      \"value\": 32\n    },\n    {\n      \"date\": \"2024-02-11\",\n      \"value\": 32\n    },\n    {\n      \"date\": \"2024-02-12\",\n      \"value\": 25\n    },\n    {\n      \"date\": \"2024-02-13\",\n      \"value\": 24\n    },\n    {\n      \"date\": \"2024-02-14\",\n      \"value\": 20\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

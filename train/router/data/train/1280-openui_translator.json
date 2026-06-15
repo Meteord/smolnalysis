@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00749_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse water_quality für Leopoldstraße als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2025,\n  \"kpis\": [\n    {\n      \"metric\": \"Gelöster Sauerstoff\",\n      \"value\": 9.0,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"metric\": \"Trübung\",\n      \"value\": 12.4,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"metric\": \"Nitrat\",\n      \"value\": 28.7,\n      \"unit\": \"mg/l\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

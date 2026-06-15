@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01171",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Debug a test failure in two sentences."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

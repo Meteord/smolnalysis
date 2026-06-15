@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00043",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00609",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "what can you do?."
+      "content": "Rewrite a meeting agenda for a quick chat reply."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00453_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Solarerzeugung in Sendling.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Sendling\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"date\": \"2023-12-14\",\n      \"value\": 2250\n    },\n    {\n      \"date\": \"2023-12-15\",\n      \"value\": 1790\n    },\n    {\n      \"date\": \"2023-12-16\",\n      \"value\": 2269\n    },\n    {\n      \"date\": \"2023-12-17\",\n      \"value\": 2684\n    },\n    {\n      \"date\": \"2023-12-18\",\n      \"value\": 3249\n    },\n    {\n      \"date\": \"2023-12-19\",\n      \"value\": 3477\n    },\n    {\n      \"date\": \"2023-12-20\",\n      \"value\": 3004\n    },\n    {\n      \"date\": \"2023-12-21\",\n      \"value\": 3293\n    },\n    {\n      \"date\": \"2023-12-22\",\n      \"value\": 3241\n    },\n    {\n      \"date\": \"2023-12-23\",\n      \"value\": 3516\n    },\n    {\n      \"date\": \"2023-12-24\",\n      \"value\": 3545\n    },\n    {\n      \"date\": \"2023-12-25\",\n      \"value\": 2906\n    },\n    {\n      \"date\": \"2023-12-26\",\n      \"value\": 3463\n    },\n    {\n      \"date\": \"2023-12-27\",\n      \"value\": 3600\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

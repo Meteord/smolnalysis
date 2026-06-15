@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00808_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Niederschlag in 2020.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Hamburg\",\n  \"year\": 2020,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Niederschlag\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 90,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 57,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 143,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 121,\n      \"unit\": \"mm\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 47,\n      \"unit\": \"mm\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

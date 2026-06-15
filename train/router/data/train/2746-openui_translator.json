@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00372_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Netzlast in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Bogenhausen\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 184\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 262\n  },\n  \"unit\": \"MW\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

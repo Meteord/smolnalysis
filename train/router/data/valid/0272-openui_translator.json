@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01039_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für finance_budget in München.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"location\": \"München\",\n  \"year\": 2023,\n  \"kpis\": [\n    {\n      \"metric\": \"Defizit\",\n      \"value\": 1221,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Budget\",\n      \"value\": 8680,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Einnahmen\",\n      \"value\": 460,\n      \"unit\": \"Mio. €\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

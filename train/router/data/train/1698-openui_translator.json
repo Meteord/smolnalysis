@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00211_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Netzlast gab es in Bürgerbüro Pasing im Jahr 2024?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2024,\n  \"aggregation\": \"average\",\n  \"value\": 593,\n  \"unit\": \"MW\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

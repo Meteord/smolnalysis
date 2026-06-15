@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00753_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Durchschnittsgeschwindigkeit in München.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"München\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"km/h\",\n  \"values\": [\n    {\n      \"date\": \"2024-05-11\",\n      \"value\": 46.2\n    },\n    {\n      \"date\": \"2024-05-12\",\n      \"value\": 54.4\n    },\n    {\n      \"date\": \"2024-05-13\",\n      \"value\": 61.7\n    },\n    {\n      \"date\": \"2024-05-14\",\n      \"value\": 64.0\n    },\n    {\n      \"date\": \"2024-05-15\",\n      \"value\": 55.7\n    },\n    {\n      \"date\": \"2024-05-16\",\n      \"value\": 46.5\n    },\n    {\n      \"date\": \"2024-05-17\",\n      \"value\": 45.8\n    },\n    {\n      \"date\": \"2024-05-18\",\n      \"value\": 42.0\n    },\n    {\n      \"date\": \"2024-05-19\",\n      \"value\": 34.6\n    },\n    {\n      \"date\": \"2024-05-20\",\n      \"value\": 31.8\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01114_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Investitionsvolumen in Rhein 2025?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"Rhein\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 1522\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 474\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 2325\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 2523\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 2461\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 1475\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 2303\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 2568\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 2305\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 181\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 353\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 782\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

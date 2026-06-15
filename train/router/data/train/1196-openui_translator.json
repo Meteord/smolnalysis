@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01014_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Heizbedarf in Landsberger Straße 2025?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 813\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 2216\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 4420\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 4146\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 1181\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 1193\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 5537\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 5675\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 6149\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 4424\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 1199\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 6892\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00602_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Anträge in München.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"München\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 10319\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 9071\n  },\n  \"unit\": \"Anträge\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

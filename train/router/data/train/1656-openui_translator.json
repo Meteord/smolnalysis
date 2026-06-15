@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01076_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Fahrzeuganzahl in Landsberger Straße über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2024,\n  \"value\": 41838,\n  \"threshold\": 60000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Fahrzeuge\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

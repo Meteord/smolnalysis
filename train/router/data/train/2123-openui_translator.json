@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00735_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Ozon in Bürgerbüro Pasing am höchsten?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2024,\n  \"unit\": \"µg/m³\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Giesing\",\n      \"value\": 159\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 153\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 139\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 110\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 89\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 87\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 31\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

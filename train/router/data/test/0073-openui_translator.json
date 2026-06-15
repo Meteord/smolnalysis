@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01113_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Ausgaben in Donau.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Ausgaben\",\n  \"location\": \"Donau\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2019-03-09\",\n      \"value\": 4983\n    },\n    {\n      \"date\": \"2019-03-10\",\n      \"value\": 6583\n    },\n    {\n      \"date\": \"2019-03-11\",\n      \"value\": 7212\n    },\n    {\n      \"date\": \"2019-03-12\",\n      \"value\": 8548\n    },\n    {\n      \"date\": \"2019-03-13\",\n      \"value\": 9200\n    },\n    {\n      \"date\": \"2019-03-14\",\n      \"value\": 9200\n    },\n    {\n      \"date\": \"2019-03-15\",\n      \"value\": 8030\n    },\n    {\n      \"date\": \"2019-03-16\",\n      \"value\": 7848\n    },\n    {\n      \"date\": \"2019-03-17\",\n      \"value\": 8694\n    },\n    {\n      \"date\": \"2019-03-18\",\n      \"value\": 7488\n    },\n    {\n      \"date\": \"2019-03-19\",\n      \"value\": 7094\n    },\n    {\n      \"date\": \"2019-03-20\",\n      \"value\": 6695\n    },\n    {\n      \"date\": \"2019-03-21\",\n      \"value\": 5604\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

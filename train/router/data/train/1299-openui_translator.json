@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01094_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von CO2-Emissionen in Frankfurt am Main 2021?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2021,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"t\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 307\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 491\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 678\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 3326\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 291\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 2261\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 713\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 3112\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 4013\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 3007\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 2923\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 1205\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

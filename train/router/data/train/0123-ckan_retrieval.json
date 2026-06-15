@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00004",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_00024_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Ich möchte Fahrrad analysieren."
+      "content": "Wie verteilen sich die Monatswerte von pH-Wert in München 2025?"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 24,
+    "task": "generate_tool_result"
+  }
 }

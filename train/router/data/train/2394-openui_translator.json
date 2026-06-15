@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01027_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Prozentwert für Durchschnittsalter in Bürgerbüro Mitte.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2021,\n  \"value\": 92,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

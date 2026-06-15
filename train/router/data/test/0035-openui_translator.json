@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00691_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Netzlast in München im Jahr 2018?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"München\",\n  \"year\": 2018,\n  \"aggregation\": \"average\",\n  \"value\": 665,\n  \"unit\": \"MW\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

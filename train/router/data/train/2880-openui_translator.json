@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01036_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Budget in Berlin.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Berlin\",\n  \"year\": 2021,\n  \"value\": 5071,\n  \"threshold\": 7000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

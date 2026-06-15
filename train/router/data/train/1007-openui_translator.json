@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00943_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Wanderungssaldo in Hamburg in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Hamburg\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"date\": \"2018-12-04\",\n      \"value\": -4302\n    },\n    {\n      \"date\": \"2018-12-05\",\n      \"value\": -4779\n    },\n    {\n      \"date\": \"2018-12-06\",\n      \"value\": -6000\n    },\n    {\n      \"date\": \"2018-12-07\",\n      \"value\": -4560\n    },\n    {\n      \"date\": \"2018-12-08\",\n      \"value\": -3472\n    },\n    {\n      \"date\": \"2018-12-09\",\n      \"value\": -6000\n    },\n    {\n      \"date\": \"2018-12-10\",\n      \"value\": -4429\n    },\n    {\n      \"date\": \"2018-12-11\",\n      \"value\": -13\n    },\n    {\n      \"date\": \"2018-12-12\",\n      \"value\": -1799\n    },\n    {\n      \"date\": \"2018-12-13\",\n      \"value\": -6000\n    },\n    {\n      \"date\": \"2018-12-14\",\n      \"value\": -6000\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

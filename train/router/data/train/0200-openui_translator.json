@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00550_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Wanderungssaldo in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Rhein\",\n  \"year\": 2025,\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 9659\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 1386\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 24157\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": -5049\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 17610\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 20570\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 9940\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": -5144\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": -269\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 13347\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

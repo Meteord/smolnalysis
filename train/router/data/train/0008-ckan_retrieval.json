@@ -1,11 +1,21 @@
 {
-  "id": "ckan_harvested_inventory_scenarios_01944",
-  "source": "train/ckan/data/harvested_inventory_scenarios.jsonl",
+  "id": "retrieval_sft_train_00639_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Is there open data for Landwirtschaft?"
+      "content": "Fasse finance_budget für Sendling als Dashboard zusammen."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 639,
+    "task": "generate_tool_result"
+  }
 }

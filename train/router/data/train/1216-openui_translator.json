@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00149_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu population in Donau.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"Donau\",\n  \"year\": 2022,\n  \"kpis\": [\n    {\n      \"metric\": \"Einwohner\",\n      \"value\": 2218430,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Wanderungssaldo\",\n      \"value\": -544,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Geburten\",\n      \"value\": 30201,\n      \"unit\": \"Geburten\"\n    },\n    {\n      \"metric\": \"Durchschnittsalter\",\n      \"value\": 43.7,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"metric\": \"Sterbefälle\",\n      \"value\": 38697,\n      \"unit\": \"Sterbefälle\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

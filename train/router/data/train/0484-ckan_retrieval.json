@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00638_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Investitionsvolumen nach Dienststelle in Maxvorstadt."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "table",
+    "component": "DataTable",
+    "source_dataset": "openui_lang",
+    "source_index": 638,
+    "task": "generate_tool_result"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00028_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Trübung in 2018.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2018,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Trübung\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 6.7,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 16.8,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 17.5,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 0.9,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 6.6,\n      \"unit\": \"NTU\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00669_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse water_quality für Bogenhausen als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2019,\n  \"kpis\": [\n    {\n      \"metric\": \"pH-Wert\",\n      \"value\": 7.6,\n      \"unit\": \"pH\"\n    },\n    {\n      \"metric\": \"Wassertemperatur\",\n      \"value\": 8.8,\n      \"unit\": \"°C\"\n    },\n    {\n      \"metric\": \"Trübung\",\n      \"value\": 0.9,\n      \"unit\": \"NTU\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

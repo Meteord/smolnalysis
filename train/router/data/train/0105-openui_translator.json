@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01083_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Online-Anteil in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Frankfurt am Main\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2025-10-01\",\n      \"value\": 96\n    },\n    {\n      \"date\": \"2025-10-02\",\n      \"value\": 96\n    },\n    {\n      \"date\": \"2025-10-03\",\n      \"value\": 86\n    },\n    {\n      \"date\": \"2025-10-04\",\n      \"value\": 96\n    },\n    {\n      \"date\": \"2025-10-05\",\n      \"value\": 96\n    },\n    {\n      \"date\": \"2025-10-06\",\n      \"value\": 85\n    },\n    {\n      \"date\": \"2025-10-07\",\n      \"value\": 90\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

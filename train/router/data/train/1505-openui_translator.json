@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00705_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Sterbefälle in Bürgerbüro Mitte am höchsten?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2022,\n  \"unit\": \"Sterbefälle\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Giesing\",\n      \"value\": 42144\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 39639\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 33602\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 19139\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 18621\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 18166\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 17228\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 212\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

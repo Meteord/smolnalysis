@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00245_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Windgeschwindigkeit in 2019.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Windgeschwindigkeit\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2019,\n  \"unit\": \"km/h\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 69.8\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 52.1\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 30.3\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 13.2\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 6.4\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

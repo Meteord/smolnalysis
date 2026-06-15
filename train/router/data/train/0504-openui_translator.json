@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00516_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Durchschnittsgeschwindigkeit in Isar über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"Isar\",\n  \"year\": 2021,\n  \"value\": 20.1,\n  \"threshold\": 20.0,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"km/h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

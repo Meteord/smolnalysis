@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00819_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse air_quality für Bogenhausen als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2020,\n  \"kpis\": [\n    {\n      \"metric\": \"PM2.5\",\n      \"value\": 26.3,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"metric\": \"PM10\",\n      \"value\": 60,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"metric\": \"Ozon\",\n      \"value\": 121,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"metric\": \"NO2\",\n      \"value\": 10,\n      \"unit\": \"µg/m³\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

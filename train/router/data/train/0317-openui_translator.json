@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00090_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Niederschlag räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2023,\n  \"unit\": \"mm\",\n  \"values\": [\n    {\n      \"district\": \"Moosach\",\n      \"value\": 76\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 20\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 11\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 81\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 65\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

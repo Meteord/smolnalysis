@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00927",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Compare a Python function in English."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

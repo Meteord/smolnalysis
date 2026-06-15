@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00562_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Luftfeuchtigkeit in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"current\": {\n    \"year\": 2024,\n    \"value\": 42\n  },\n  \"previous\": {\n    \"year\": 2023,\n    \"value\": 49\n  },\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

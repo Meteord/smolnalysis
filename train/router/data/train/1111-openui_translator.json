@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01142_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich pH-Wert in Bogenhausen gegenüber 2024 verändert?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Bogenhausen\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 7.1\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 7.3\n  },\n  \"unit\": \"pH\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

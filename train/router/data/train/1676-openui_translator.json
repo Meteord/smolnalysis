@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00560_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Einnahmen räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2022,\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 2820\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 471\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 9763\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 3943\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 2218\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 7282\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 906\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

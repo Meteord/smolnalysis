@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00472_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Investitionsvolumen in Bürgerbüro Mitte.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"current\": {\n    \"year\": 2024,\n    \"value\": 925\n  },\n  \"previous\": {\n    \"year\": 2023,\n    \"value\": 631\n  },\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

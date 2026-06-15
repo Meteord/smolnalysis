@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00683_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Wartezeit in Moosach.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Moosach\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"date\": \"2023-08-08\",\n      \"value\": 64\n    },\n    {\n      \"date\": \"2023-08-09\",\n      \"value\": 57\n    },\n    {\n      \"date\": \"2023-08-10\",\n      \"value\": 70\n    },\n    {\n      \"date\": \"2023-08-11\",\n      \"value\": 69\n    },\n    {\n      \"date\": \"2023-08-12\",\n      \"value\": 76\n    },\n    {\n      \"date\": \"2023-08-13\",\n      \"value\": 83\n    },\n    {\n      \"date\": \"2023-08-14\",\n      \"value\": 76\n    },\n    {\n      \"date\": \"2023-08-15\",\n      \"value\": 80\n    },\n    {\n      \"date\": \"2023-08-16\",\n      \"value\": 90\n    },\n    {\n      \"date\": \"2023-08-17\",\n      \"value\": 79\n    },\n    {\n      \"date\": \"2023-08-18\",\n      \"value\": 71\n    },\n    {\n      \"date\": \"2023-08-19\",\n      \"value\": 84\n    },\n    {\n      \"date\": \"2023-08-20\",\n      \"value\": 92\n    },\n    {\n      \"date\": \"2023-08-21\",\n      \"value\": 91\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

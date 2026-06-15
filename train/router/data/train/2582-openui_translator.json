@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00306_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Einwohner in Bogenhausen über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2023,\n  \"value\": 1993753,\n  \"threshold\": 1500000,\n  \"status\": \"exceeded\",\n  \"severity\": \"danger\",\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

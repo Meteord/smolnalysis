@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00078",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00441",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "Just checking in: was kannst du?"
+      "content": "Summarize a naming convention in two sentences."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

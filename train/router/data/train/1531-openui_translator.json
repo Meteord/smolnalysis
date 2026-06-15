@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01058_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Luftqualitätsindex nach Dienststelle in Köln.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Köln\",\n  \"year\": 2019,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Luftqualitätsindex\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 132,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 53,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 113,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 52,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 49,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 84,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 72,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 128,\n      \"unit\": \"AQI\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

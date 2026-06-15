@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00290_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Bearbeitungszeit je Stadtbezirk in Isar.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Isar\",\n  \"year\": 2020,\n  \"unit\": \"Tage\",\n  \"values\": [\n    {\n      \"district\": \"Laim\",\n      \"value\": 4\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 21\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 11\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 35\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 27\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

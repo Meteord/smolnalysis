@@ -1,11 +1,21 @@
 {
-  "id": "ckan_multitool_eval_golden_00000",
-  "source": "train/ckan/data/multitool_eval_golden.jsonl",
+  "id": "retrieval_sft_train_00185_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Was weisst du ueber Fahrraeder?"
+      "content": "Zeige ein Ranking der Bezirke nach Nitrat in 2021."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "ranking",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 185,
+    "task": "generate_tool_result"
+  }
 }

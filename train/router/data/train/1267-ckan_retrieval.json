@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00574_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von PM2.5 in Maxvorstadt 2021?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 574,
+    "task": "generate_tool_result"
+  }
+}

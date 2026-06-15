@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00386_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Sterbefälle in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2018,\n  \"value\": 21751,\n  \"threshold\": 25000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Sterbefälle\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

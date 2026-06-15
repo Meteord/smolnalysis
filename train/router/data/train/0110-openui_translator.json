@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00966_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Windgeschwindigkeit in Rosenheimer Straße über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Windgeschwindigkeit\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2018,\n  \"value\": 48.8,\n  \"threshold\": 50.0,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"km/h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

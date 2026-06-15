@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00151",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00271",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "Quick note: cool, thanks"
+      "content": "Explain a pull request description in two sentences."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

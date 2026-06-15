@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00773_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Stromverbrauch in Elbe in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Elbe\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"date\": \"2022-08-04\",\n      \"value\": 2250\n    },\n    {\n      \"date\": \"2022-08-05\",\n      \"value\": 2701\n    },\n    {\n      \"date\": \"2022-08-06\",\n      \"value\": 3945\n    },\n    {\n      \"date\": \"2022-08-07\",\n      \"value\": 3582\n    },\n    {\n      \"date\": \"2022-08-08\",\n      \"value\": 3395\n    },\n    {\n      \"date\": \"2022-08-09\",\n      \"value\": 4193\n    },\n    {\n      \"date\": \"2022-08-10\",\n      \"value\": 3963\n    },\n    {\n      \"date\": \"2022-08-11\",\n      \"value\": 2741\n    },\n    {\n      \"date\": \"2022-08-12\",\n      \"value\": 2668\n    },\n    {\n      \"date\": \"2022-08-13\",\n      \"value\": 2654\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

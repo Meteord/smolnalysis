@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00034",
-  "source": "synthetic_smalltalk",
+  "id": "general_task_00094",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "Quick note: guten morgen"
+      "content": "No chart or catalog lookup needed: how do I make a command line script easier to use?."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00945_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Durchschnittsalter in 2023.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Elbe\",\n  \"year\": 2023,\n  \"unit\": \"Jahre\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 48.6\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 48.0\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 46.3\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 43.6\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 41.7\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 37.0\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 36.9\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 36.1\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 35.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

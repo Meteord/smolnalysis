@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00082_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Sonnenstunden in Köln in 2025 mit 2024.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Köln\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 2216\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 1924\n  },\n  \"unit\": \"h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

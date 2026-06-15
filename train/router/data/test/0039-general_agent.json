@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00045",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00318",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "Just checking in: servus"
+      "content": "Explain a troubleshooting guide for documentation."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

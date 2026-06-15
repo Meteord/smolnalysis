@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01092_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Stromverbrauch in Frankfurt am Main gegenüber 2019 verändert?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Frankfurt am Main\",\n  \"current\": {\n    \"year\": 2020,\n    \"value\": 5928\n  },\n  \"previous\": {\n    \"year\": 2019,\n    \"value\": 6351\n  },\n  \"unit\": \"MWh\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

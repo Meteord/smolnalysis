@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00408_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Sonnenstunden nach Dienststelle in Rhein.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Rhein\",\n  \"year\": 2025,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Sonnenstunden\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 77,\n      \"unit\": \"h\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 345,\n      \"unit\": \"h\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 2052,\n      \"unit\": \"h\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 55,\n      \"unit\": \"h\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 2265,\n      \"unit\": \"h\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 525,\n      \"unit\": \"h\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

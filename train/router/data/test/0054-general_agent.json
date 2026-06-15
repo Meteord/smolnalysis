@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01130",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Debug a README section for a teammate."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

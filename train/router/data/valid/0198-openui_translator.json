@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00288_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Donau\",\n  \"year\": 2023,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Terminauslastung\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 66,\n      \"unit\": \"%\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 91,\n      \"unit\": \"%\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 73,\n      \"unit\": \"%\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 96,\n      \"unit\": \"%\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 40,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00517",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarize a troubleshooting guide in English."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

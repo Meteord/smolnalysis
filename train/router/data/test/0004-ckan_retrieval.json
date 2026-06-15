@@ -1,11 +1,21 @@
 {
-  "id": "ckan_harvested_scenarios_00040",
-  "source": "train/ckan/data/harvested_scenarios.jsonl",
+  "id": "retrieval_sft_train_00872_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Find verkehr datasets that could be analyzed. Limit the search to group=educ."
+      "content": "Vergleiche Ausgaben in Rhein in 2023 mit 2022."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 872,
+    "task": "generate_tool_result"
+  }
 }

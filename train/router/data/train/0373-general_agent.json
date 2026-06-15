@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00155",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00370",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "good evening :)"
+      "content": "Summarize a test failure for a teammate."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00433_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Staudauer in Bürgerbüro Mitte in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"date\": \"2020-05-10\",\n      \"value\": 237\n    },\n    {\n      \"date\": \"2020-05-11\",\n      \"value\": 240\n    },\n    {\n      \"date\": \"2020-05-12\",\n      \"value\": 237\n    },\n    {\n      \"date\": \"2020-05-13\",\n      \"value\": 240\n    },\n    {\n      \"date\": \"2020-05-14\",\n      \"value\": 205\n    },\n    {\n      \"date\": \"2020-05-15\",\n      \"value\": 205\n    },\n    {\n      \"date\": \"2020-05-16\",\n      \"value\": 177\n    },\n    {\n      \"date\": \"2020-05-17\",\n      \"value\": 184\n    },\n    {\n      \"date\": \"2020-05-18\",\n      \"value\": 218\n    },\n    {\n      \"date\": \"2020-05-19\",\n      \"value\": 222\n    },\n    {\n      \"date\": \"2020-05-20\",\n      \"value\": 213\n    },\n    {\n      \"date\": \"2020-05-21\",\n      \"value\": 198\n    },\n    {\n      \"date\": \"2020-05-22\",\n      \"value\": 157\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

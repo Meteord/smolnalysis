@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00533",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_01369_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Show me useful data about Parken."
+      "content": "Erstelle eine Übersicht zu weather in Donau."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 1369,
+    "task": "generate_tool_result"
+  }
 }

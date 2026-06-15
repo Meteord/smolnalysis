@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01035_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Budget in 2022.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Donau\",\n  \"year\": 2022,\n  \"unit\": \"Mio. €\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 8052\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 4931\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 1691\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 1339\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 439\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 96\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00174_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von NO2 in Berlin 2020?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"NO2\",\n  \"location\": \"Berlin\",\n  \"year\": 2020,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 56\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 41\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 46\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 83\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 81\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 60\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 69\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 33\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 40\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 19\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 37\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 66\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

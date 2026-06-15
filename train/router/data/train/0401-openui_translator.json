@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01163_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Terminauslastung in Leopoldstraße.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Leopoldstraße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2020-12-11\",\n      \"value\": 50\n    },\n    {\n      \"date\": \"2020-12-12\",\n      \"value\": 48\n    },\n    {\n      \"date\": \"2020-12-13\",\n      \"value\": 47\n    },\n    {\n      \"date\": \"2020-12-14\",\n      \"value\": 43\n    },\n    {\n      \"date\": \"2020-12-15\",\n      \"value\": 38\n    },\n    {\n      \"date\": \"2020-12-16\",\n      \"value\": 45\n    },\n    {\n      \"date\": \"2020-12-17\",\n      \"value\": 51\n    },\n    {\n      \"date\": \"2020-12-18\",\n      \"value\": 51\n    },\n    {\n      \"date\": \"2020-12-19\",\n      \"value\": 52\n    },\n    {\n      \"date\": \"2020-12-20\",\n      \"value\": 49\n    },\n    {\n      \"date\": \"2020-12-21\",\n      \"value\": 47\n    },\n    {\n      \"date\": \"2020-12-22\",\n      \"value\": 49\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00035",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00535",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "No data task, just saying merci"
+      "content": "Rewrite a README section without using a table."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

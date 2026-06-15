@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00506_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Trübung in Bürgerbüro Mitte?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2021,\n  \"value\": 2.8,\n  \"threshold\": 5.0,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"NTU\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

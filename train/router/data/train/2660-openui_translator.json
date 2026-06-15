@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00225_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Geburten?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Donau\",\n  \"year\": 2025,\n  \"unit\": \"Geburten\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 37976\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 35046\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 30949\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 20622\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 16887\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 11909\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

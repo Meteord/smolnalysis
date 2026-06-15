@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00975_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Ozon in 2020.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"München\",\n  \"year\": 2020,\n  \"unit\": \"µg/m³\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 146\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 134\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 131\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 92\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 92\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 40\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 29\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

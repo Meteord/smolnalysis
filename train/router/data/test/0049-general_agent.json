@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00105",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_01185",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "hey there."
+      "content": "Debug a deployment checklist without using a table."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

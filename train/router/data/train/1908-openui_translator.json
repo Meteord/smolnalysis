@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01178_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Solarerzeugung in 2018.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2018,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Solarerzeugung\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 1900,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 2504,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 2293,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 401,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 1716,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 1018,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00280_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Staudauer in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2022,\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"district\": \"Sendling\",\n      \"value\": 65\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 98\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 5\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 187\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 184\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 2\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 219\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 155\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 144\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 2\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

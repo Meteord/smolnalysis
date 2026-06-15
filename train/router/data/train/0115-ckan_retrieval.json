@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00058",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_01070_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "I want to analyze Europa."
+      "content": "Welche Werte gibt es für pH-Wert in den Bezirken?"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 1070,
+    "task": "generate_tool_result"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00163_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Niederschlag in Bürgerbüro Mitte in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"mm\",\n  \"values\": [\n    {\n      \"date\": \"2022-05-10\",\n      \"value\": 98\n    },\n    {\n      \"date\": \"2022-05-11\",\n      \"value\": 108\n    },\n    {\n      \"date\": \"2022-05-12\",\n      \"value\": 120\n    },\n    {\n      \"date\": \"2022-05-13\",\n      \"value\": 92\n    },\n    {\n      \"date\": \"2022-05-14\",\n      \"value\": 67\n    },\n    {\n      \"date\": \"2022-05-15\",\n      \"value\": 54\n    },\n    {\n      \"date\": \"2022-05-16\",\n      \"value\": 48\n    },\n    {\n      \"date\": \"2022-05-17\",\n      \"value\": 48\n    },\n    {\n      \"date\": \"2022-05-18\",\n      \"value\": 74\n    },\n    {\n      \"date\": \"2022-05-19\",\n      \"value\": 87\n    },\n    {\n      \"date\": \"2022-05-20\",\n      \"value\": 75\n    },\n    {\n      \"date\": \"2022-05-21\",\n      \"value\": 50\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

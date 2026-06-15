@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00693_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Stromverbrauch in Isar.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Isar\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"date\": \"2021-04-02\",\n      \"value\": 8988\n    },\n    {\n      \"date\": \"2021-04-03\",\n      \"value\": 7834\n    },\n    {\n      \"date\": \"2021-04-04\",\n      \"value\": 6677\n    },\n    {\n      \"date\": \"2021-04-05\",\n      \"value\": 6384\n    },\n    {\n      \"date\": \"2021-04-06\",\n      \"value\": 5021\n    },\n    {\n      \"date\": \"2021-04-07\",\n      \"value\": 4420\n    },\n    {\n      \"date\": \"2021-04-08\",\n      \"value\": 4636\n    },\n    {\n      \"date\": \"2021-04-09\",\n      \"value\": 3557\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

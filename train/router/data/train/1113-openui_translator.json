@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00823_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für pH-Wert in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Frankfurt am Main\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"pH\",\n  \"values\": [\n    {\n      \"date\": \"2022-03-02\",\n      \"value\": 6.9\n    },\n    {\n      \"date\": \"2022-03-03\",\n      \"value\": 7.3\n    },\n    {\n      \"date\": \"2022-03-04\",\n      \"value\": 7.0\n    },\n    {\n      \"date\": \"2022-03-05\",\n      \"value\": 6.7\n    },\n    {\n      \"date\": \"2022-03-06\",\n      \"value\": 7.0\n    },\n    {\n      \"date\": \"2022-03-07\",\n      \"value\": 6.9\n    },\n    {\n      \"date\": \"2022-03-08\",\n      \"value\": 6.9\n    },\n    {\n      \"date\": \"2022-03-09\",\n      \"value\": 7.0\n    },\n    {\n      \"date\": \"2022-03-10\",\n      \"value\": 6.7\n    },\n    {\n      \"date\": \"2022-03-11\",\n      \"value\": 6.6\n    },\n    {\n      \"date\": \"2022-03-12\",\n      \"value\": 6.9\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00145",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00282",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "merci!"
+      "content": "Explain a plain-language definition with concrete examples."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

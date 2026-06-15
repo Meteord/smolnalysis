@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00023_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Trübung in Rosenheimer Straße in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Rosenheimer Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"NTU\",\n  \"values\": [\n    {\n      \"date\": \"2018-07-11\",\n      \"value\": 10.7\n    },\n    {\n      \"date\": \"2018-07-12\",\n      \"value\": 13.5\n    },\n    {\n      \"date\": \"2018-07-13\",\n      \"value\": 11.6\n    },\n    {\n      \"date\": \"2018-07-14\",\n      \"value\": 13.0\n    },\n    {\n      \"date\": \"2018-07-15\",\n      \"value\": 11.3\n    },\n    {\n      \"date\": \"2018-07-16\",\n      \"value\": 10.6\n    },\n    {\n      \"date\": \"2018-07-17\",\n      \"value\": 11.7\n    },\n    {\n      \"date\": \"2018-07-18\",\n      \"value\": 10.4\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

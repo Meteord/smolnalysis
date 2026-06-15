@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00336_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Luftqualitätsindex in Hamburg über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Hamburg\",\n  \"year\": 2022,\n  \"value\": 43,\n  \"threshold\": 100,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"AQI\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

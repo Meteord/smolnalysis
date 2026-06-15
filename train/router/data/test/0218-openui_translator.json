@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00643_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Luftfeuchtigkeit in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2024-11-11\",\n      \"value\": 28\n    },\n    {\n      \"date\": \"2024-11-12\",\n      \"value\": 36\n    },\n    {\n      \"date\": \"2024-11-13\",\n      \"value\": 40\n    },\n    {\n      \"date\": \"2024-11-14\",\n      \"value\": 44\n    },\n    {\n      \"date\": \"2024-11-15\",\n      \"value\": 40\n    },\n    {\n      \"date\": \"2024-11-16\",\n      \"value\": 48\n    },\n    {\n      \"date\": \"2024-11-17\",\n      \"value\": 56\n    },\n    {\n      \"date\": \"2024-11-18\",\n      \"value\": 53\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

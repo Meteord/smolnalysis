@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_01131_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für NO2 in Moosach 2021."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 1131,
+    "task": "generate_tool_result"
+  }
+}

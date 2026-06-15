@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00492_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche NO2 in Bürgerbüro Pasing in 2019 mit 2018.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"NO2\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"current\": {\n    \"year\": 2019,\n    \"value\": 76\n  },\n  \"previous\": {\n    \"year\": 2018,\n    \"value\": 74\n  },\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00004_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Temperatur pro Monat für 2019 in Elbe.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Elbe\",\n  \"year\": 2019,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"°C\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 9.0\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 8.4\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 5.3\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": -3.3\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 12.9\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": -0.1\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 31.0\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": -1.9\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 6.4\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 19.5\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 29.5\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 9.1\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

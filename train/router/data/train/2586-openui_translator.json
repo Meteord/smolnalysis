@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00696_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Stromverbrauch in Rosenheimer Straße über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2025,\n  \"value\": 8306,\n  \"threshold\": 7500,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"MWh\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

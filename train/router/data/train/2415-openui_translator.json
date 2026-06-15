@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01009_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu public_administration in Moosach.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Moosach\",\n  \"year\": 2021,\n  \"kpis\": [\n    {\n      \"metric\": \"Online-Anteil\",\n      \"value\": 44,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Wartezeit\",\n      \"value\": 61,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 10,\n      \"unit\": \"Tage\"\n    },\n    {\n      \"metric\": \"Anträge\",\n      \"value\": 1468,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 40,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00583_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Gelöster Sauerstoff in Sendling in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Sendling\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"mg/l\",\n  \"values\": [\n    {\n      \"date\": \"2024-12-10\",\n      \"value\": 5.8\n    },\n    {\n      \"date\": \"2024-12-11\",\n      \"value\": 5.0\n    },\n    {\n      \"date\": \"2024-12-12\",\n      \"value\": 5.0\n    },\n    {\n      \"date\": \"2024-12-13\",\n      \"value\": 5.0\n    },\n    {\n      \"date\": \"2024-12-14\",\n      \"value\": 6.2\n    },\n    {\n      \"date\": \"2024-12-15\",\n      \"value\": 7.6\n    },\n    {\n      \"date\": \"2024-12-16\",\n      \"value\": 8.9\n    },\n    {\n      \"date\": \"2024-12-17\",\n      \"value\": 10.2\n    },\n    {\n      \"date\": \"2024-12-18\",\n      \"value\": 10.5\n    },\n    {\n      \"date\": \"2024-12-19\",\n      \"value\": 11.2\n    },\n    {\n      \"date\": \"2024-12-20\",\n      \"value\": 9.9\n    },\n    {\n      \"date\": \"2024-12-21\",\n      \"value\": 9.2\n    },\n    {\n      \"date\": \"2024-12-22\",\n      \"value\": 9.5\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

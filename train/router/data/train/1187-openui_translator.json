@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00339_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse air_quality für Donau als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"location\": \"Donau\",\n  \"year\": 2022,\n  \"kpis\": [\n    {\n      \"metric\": \"PM2.5\",\n      \"value\": 26.7,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"metric\": \"NO2\",\n      \"value\": 68,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"metric\": \"Luftqualitätsindex\",\n      \"value\": 81,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"metric\": \"Ozon\",\n      \"value\": 39,\n      \"unit\": \"µg/m³\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

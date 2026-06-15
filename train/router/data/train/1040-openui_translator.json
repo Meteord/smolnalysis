@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00635_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Einnahmen?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Berlin\",\n  \"year\": 2023,\n  \"unit\": \"Mio. €\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 9442\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 7696\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 6618\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 5438\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 3989\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 2989\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 2641\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 2418\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00189_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse water_quality für Sendling als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"location\": \"Sendling\",\n  \"year\": 2020,\n  \"kpis\": [\n    {\n      \"metric\": \"Gelöster Sauerstoff\",\n      \"value\": 9.5,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"metric\": \"pH-Wert\",\n      \"value\": 8.4,\n      \"unit\": \"pH\"\n    },\n    {\n      \"metric\": \"Trübung\",\n      \"value\": 12.3,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"metric\": \"Nitrat\",\n      \"value\": 23.2,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"metric\": \"Wassertemperatur\",\n      \"value\": 12.1,\n      \"unit\": \"°C\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

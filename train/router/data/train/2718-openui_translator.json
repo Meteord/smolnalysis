@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00235_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Budget in Moosach am höchsten?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Moosach\",\n  \"year\": 2018,\n  \"unit\": \"Mio. €\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 8847\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 8147\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 5256\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 3643\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 1433\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

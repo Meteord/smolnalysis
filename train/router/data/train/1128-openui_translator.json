@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00173_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich PM2.5 in Berlin in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM2.5\",\n  \"location\": \"Berlin\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"date\": \"2024-04-09\",\n      \"value\": 21.8\n    },\n    {\n      \"date\": \"2024-04-10\",\n      \"value\": 13.7\n    },\n    {\n      \"date\": \"2024-04-11\",\n      \"value\": 13.8\n    },\n    {\n      \"date\": \"2024-04-12\",\n      \"value\": 9.9\n    },\n    {\n      \"date\": \"2024-04-13\",\n      \"value\": 15.7\n    },\n    {\n      \"date\": \"2024-04-14\",\n      \"value\": 20.0\n    },\n    {\n      \"date\": \"2024-04-15\",\n      \"value\": 16.7\n    },\n    {\n      \"date\": \"2024-04-16\",\n      \"value\": 18.5\n    },\n    {\n      \"date\": \"2024-04-17\",\n      \"value\": 21.7\n    },\n    {\n      \"date\": \"2024-04-18\",\n      \"value\": 18.4\n    },\n    {\n      \"date\": \"2024-04-19\",\n      \"value\": 14.8\n    },\n    {\n      \"date\": \"2024-04-20\",\n      \"value\": 8.3\n    },\n    {\n      \"date\": \"2024-04-21\",\n      \"value\": 11.2\n    },\n    {\n      \"date\": \"2024-04-22\",\n      \"value\": 6.1\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

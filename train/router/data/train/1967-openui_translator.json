@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00126_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Anträge in Isar über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"Isar\",\n  \"year\": 2022,\n  \"value\": 11944,\n  \"threshold\": 9000,\n  \"status\": \"exceeded\",\n  \"severity\": \"danger\",\n  \"unit\": \"Anträge\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

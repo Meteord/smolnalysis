@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00634_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Budget pro Monat für 2024 in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 945\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 1360\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 8484\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 2456\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 8945\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 8546\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 500\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 2283\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 5675\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 2253\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 4836\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 4796\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

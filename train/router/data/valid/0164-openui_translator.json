@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00553_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Investitionsvolumen in Bogenhausen in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"Bogenhausen\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2023-01-07\",\n      \"value\": 1933\n    },\n    {\n      \"date\": \"2023-01-08\",\n      \"value\": 1886\n    },\n    {\n      \"date\": \"2023-01-09\",\n      \"value\": 2216\n    },\n    {\n      \"date\": \"2023-01-10\",\n      \"value\": 2162\n    },\n    {\n      \"date\": \"2023-01-11\",\n      \"value\": 1728\n    },\n    {\n      \"date\": \"2023-01-12\",\n      \"value\": 1426\n    },\n    {\n      \"date\": \"2023-01-13\",\n      \"value\": 1575\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

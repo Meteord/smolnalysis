@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00774_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Solarerzeugung in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2021,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 2059\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 3397\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 666\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 1030\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 1130\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 3189\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 2947\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 2481\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 692\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 534\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 1546\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 1649\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

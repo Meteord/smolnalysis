@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00685_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Anträge in Rhein am höchsten?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"Rhein\",\n  \"year\": 2019,\n  \"unit\": \"Anträge\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Sendling\",\n      \"value\": 8358\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 6112\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 5589\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 3093\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 952\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

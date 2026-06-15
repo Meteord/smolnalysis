@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00132_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Heizbedarf in Moosach.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Moosach\",\n  \"current\": {\n    \"year\": 2019,\n    \"value\": 265\n  },\n  \"previous\": {\n    \"year\": 2018,\n    \"value\": 80\n  },\n  \"unit\": \"MWh\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

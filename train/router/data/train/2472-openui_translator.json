@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01124_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Luftfeuchtigkeit in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 48\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 74\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 87\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 32\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 41\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 28\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 40\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 41\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 38\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 65\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 94\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 76\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

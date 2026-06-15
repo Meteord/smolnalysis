@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_01273_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Investitionsvolumen in Hamburg."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram",
+    "source_dataset": "openui_lang",
+    "source_index": 1273,
+    "task": "generate_tool_result"
+  }
+}

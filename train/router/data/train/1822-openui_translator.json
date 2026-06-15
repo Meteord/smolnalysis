@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00161_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Sonnenstunden in Hamburg im Jahr 2024?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Hamburg\",\n  \"year\": 2024,\n  \"aggregation\": \"sum\",\n  \"value\": 1553,\n  \"unit\": \"h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

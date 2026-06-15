@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00658_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Isar\",\n  \"year\": 2022,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Luftqualitätsindex\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 47,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 126,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 91,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 22,\n      \"unit\": \"AQI\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 61,\n      \"unit\": \"AQI\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

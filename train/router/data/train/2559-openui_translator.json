@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00576_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei PM2.5 in Donau?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM2.5\",\n  \"location\": \"Donau\",\n  \"year\": 2023,\n  \"value\": 26.0,\n  \"threshold\": 25,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

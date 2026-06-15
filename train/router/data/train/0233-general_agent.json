@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00016",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_01191",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "thanks :)"
+      "content": "Debug a short email in two sentences."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

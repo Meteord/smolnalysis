@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00620_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Netzlast in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2021,\n  \"unit\": \"MW\",\n  \"values\": [\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 546\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 324\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 74\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 566\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 137\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 278\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 636\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

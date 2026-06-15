@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00344_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Trübung in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2023,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"NTU\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 0.9\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 13.8\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 4.3\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 4.9\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 4.4\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 12.1\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 9.4\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 14.3\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 7.1\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 16.5\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 15.9\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 0.9\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

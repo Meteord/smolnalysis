@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00836_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für ÖPNV-Verspätung in München.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"München\",\n  \"year\": 2018,\n  \"value\": 8,\n  \"threshold\": 10,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

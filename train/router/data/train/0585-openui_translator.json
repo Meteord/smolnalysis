@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00292_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche CO2-Emissionen in Elbe in 2024 mit 2023.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Elbe\",\n  \"current\": {\n    \"year\": 2024,\n    \"value\": 4055\n  },\n  \"previous\": {\n    \"year\": 2023,\n    \"value\": 3879\n  },\n  \"unit\": \"t\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

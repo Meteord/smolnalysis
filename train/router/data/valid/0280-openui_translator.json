@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01198_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Investitionsvolumen nach Dienststelle in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2022,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Investitionsvolumen\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 921,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 616,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 62,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 1520,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 1983,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 448,\n      \"unit\": \"Mio. €\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

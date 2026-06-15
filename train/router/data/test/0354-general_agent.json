@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00061",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Can you help me plan a weekend in Munich?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

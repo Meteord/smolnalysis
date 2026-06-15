@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00153_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Einnahmen in Leopoldstraße.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Leopoldstraße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2023-10-08\",\n      \"value\": 994\n    },\n    {\n      \"date\": \"2023-10-09\",\n      \"value\": 1199\n    },\n    {\n      \"date\": \"2023-10-10\",\n      \"value\": 229\n    },\n    {\n      \"date\": \"2023-10-11\",\n      \"value\": 1897\n    },\n    {\n      \"date\": \"2023-10-12\",\n      \"value\": 1183\n    },\n    {\n      \"date\": \"2023-10-13\",\n      \"value\": 439\n    },\n    {\n      \"date\": \"2023-10-14\",\n      \"value\": 5\n    },\n    {\n      \"date\": \"2023-10-15\",\n      \"value\": 728\n    },\n    {\n      \"date\": \"2023-10-16\",\n      \"value\": 83\n    },\n    {\n      \"date\": \"2023-10-17\",\n      \"value\": 5\n    },\n    {\n      \"date\": \"2023-10-18\",\n      \"value\": 1534\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

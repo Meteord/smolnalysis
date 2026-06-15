@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01062_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Gelöster Sauerstoff in München gegenüber 2020 verändert?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"München\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 9.5\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 8.1\n  },\n  \"unit\": \"mg/l\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

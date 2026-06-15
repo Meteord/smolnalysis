@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00615_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Netzlast in Rhein am höchsten?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Rhein\",\n  \"year\": 2018,\n  \"unit\": \"MW\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 834\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 832\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 787\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 503\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 389\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 356\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 158\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 65\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

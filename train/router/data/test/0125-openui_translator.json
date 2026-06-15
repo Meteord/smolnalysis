@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00672_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Fahrzeuganzahl in Leopoldstraße gegenüber 2020 verändert?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Leopoldstraße\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 29169\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 34452\n  },\n  \"unit\": \"Fahrzeuge\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

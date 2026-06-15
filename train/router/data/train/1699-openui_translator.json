@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00003_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Niederschlag in Moosach.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Moosach\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"mm\",\n  \"values\": [\n    {\n      \"date\": \"2018-12-11\",\n      \"value\": 121\n    },\n    {\n      \"date\": \"2018-12-12\",\n      \"value\": 118\n    },\n    {\n      \"date\": \"2018-12-13\",\n      \"value\": 104\n    },\n    {\n      \"date\": \"2018-12-14\",\n      \"value\": 128\n    },\n    {\n      \"date\": \"2018-12-15\",\n      \"value\": 145\n    },\n    {\n      \"date\": \"2018-12-16\",\n      \"value\": 123\n    },\n    {\n      \"date\": \"2018-12-17\",\n      \"value\": 118\n    },\n    {\n      \"date\": \"2018-12-18\",\n      \"value\": 104\n    },\n    {\n      \"date\": \"2018-12-19\",\n      \"value\": 86\n    },\n    {\n      \"date\": \"2018-12-20\",\n      \"value\": 103\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00454_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Stromverbrauch in Isar.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Isar\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 8731\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 1145\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 7544\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 7345\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 367\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 7469\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 6315\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 2175\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 2085\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 2915\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 5286\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 7607\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

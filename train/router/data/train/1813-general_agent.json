@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01086",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Compare a plain-language definition in German."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

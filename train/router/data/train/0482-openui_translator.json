@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00329_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu weather in Sendling.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"location\": \"Sendling\",\n  \"year\": 2024,\n  \"kpis\": [\n    {\n      \"metric\": \"Niederschlag\",\n      \"value\": 147,\n      \"unit\": \"mm\"\n    },\n    {\n      \"metric\": \"Windgeschwindigkeit\",\n      \"value\": 8.0,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"metric\": \"Sonnenstunden\",\n      \"value\": 1590,\n      \"unit\": \"h\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

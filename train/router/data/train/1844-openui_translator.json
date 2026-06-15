@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01110_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Einwohner je Stadtbezirk in Köln.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Köln\",\n  \"year\": 2019,\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 1192234\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 3427100\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 773419\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 574415\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 811413\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

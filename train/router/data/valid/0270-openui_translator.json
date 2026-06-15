@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00958_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Budget in 2018.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2018,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Budget\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 2929,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 6471,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 8956,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 8215,\n      \"unit\": \"Mio. €\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

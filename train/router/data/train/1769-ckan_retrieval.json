@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00844_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Anträge in Rhein 2024?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 844,
+    "task": "generate_tool_result"
+  }
+}

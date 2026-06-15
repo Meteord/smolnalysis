@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00222_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Sterbefälle in Hamburg in 2023 mit 2022.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Hamburg\",\n  \"current\": {\n    \"year\": 2023,\n    \"value\": 30574\n  },\n  \"previous\": {\n    \"year\": 2022,\n    \"value\": 33039\n  },\n  \"unit\": \"Sterbefälle\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

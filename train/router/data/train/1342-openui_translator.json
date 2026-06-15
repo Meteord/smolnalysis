@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00919_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse traffic für Schwabing-Freimann als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2023,\n  \"kpis\": [\n    {\n      \"metric\": \"Straßenauslastung\",\n      \"value\": 89,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Fahrzeuganzahl\",\n      \"value\": 4414,\n      \"unit\": \"Fahrzeuge\"\n    },\n    {\n      \"metric\": \"Staudauer\",\n      \"value\": 24,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Durchschnittsgeschwindigkeit\",\n      \"value\": 48.7,\n      \"unit\": \"km/h\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

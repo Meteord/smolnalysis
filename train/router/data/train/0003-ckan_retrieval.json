@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00008",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_00707_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Show me useful data about Indikatorenatlas."
+      "content": "Zeige den Prozentwert für Einwohner in Elbe."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "percentage",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 707,
+    "task": "generate_tool_result"
+  }
 }

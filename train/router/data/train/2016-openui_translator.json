@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01098_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Stromverbrauch nach Dienststelle in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2021,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Stromverbrauch\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 9304,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 3444,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 9321,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 9046,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

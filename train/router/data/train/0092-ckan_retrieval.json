@@ -1,11 +1,21 @@
 {
-  "id": "ckan_harvested_inventory_scenarios_00532",
-  "source": "train/ckan/data/harvested_inventory_scenarios.jsonl",
+  "id": "retrieval_sft_train_00012_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Is there open data for MVV?"
+      "content": "Zeige den Jahresvergleich für NO2 in Landsberger Straße."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 12,
+    "task": "generate_tool_result"
+  }
 }

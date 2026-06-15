@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00031",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Can you draft a polite reply to a meeting invite?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

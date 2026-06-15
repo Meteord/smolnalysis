@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00973_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für NO2 in Rhein.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"NO2\",\n  \"location\": \"Rhein\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"date\": \"2023-10-10\",\n      \"value\": 77\n    },\n    {\n      \"date\": \"2023-10-11\",\n      \"value\": 81\n    },\n    {\n      \"date\": \"2023-10-12\",\n      \"value\": 71\n    },\n    {\n      \"date\": \"2023-10-13\",\n      \"value\": 62\n    },\n    {\n      \"date\": \"2023-10-14\",\n      \"value\": 54\n    },\n    {\n      \"date\": \"2023-10-15\",\n      \"value\": 52\n    },\n    {\n      \"date\": \"2023-10-16\",\n      \"value\": 48\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

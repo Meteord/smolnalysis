@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00874_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Einnahmen pro Monat für 2024 in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 667\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 294\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 7184\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 2275\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 6521\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 4897\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 6659\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 3175\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 2273\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 7564\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 8990\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 7798\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

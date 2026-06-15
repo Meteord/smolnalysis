@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00169_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für weather in Donau.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"location\": \"Donau\",\n  \"year\": 2023,\n  \"kpis\": [\n    {\n      \"metric\": \"Windgeschwindigkeit\",\n      \"value\": 50.1,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"metric\": \"Luftfeuchtigkeit\",\n      \"value\": 73,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Niederschlag\",\n      \"value\": 97,\n      \"unit\": \"mm\"\n    },\n    {\n      \"metric\": \"Temperatur\",\n      \"value\": 20.5,\n      \"unit\": \"°C\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00487",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarize a plain-language definition in English."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

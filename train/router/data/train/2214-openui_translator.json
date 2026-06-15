@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00866_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Geburten in Köln über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Köln\",\n  \"year\": 2019,\n  \"value\": 23415,\n  \"threshold\": 30000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Geburten\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00073_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Budget in Landsberger Straße in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Budget\",\n  \"location\": \"Landsberger Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2025-12-03\",\n      \"value\": 4429\n    },\n    {\n      \"date\": \"2025-12-04\",\n      \"value\": 3248\n    },\n    {\n      \"date\": \"2025-12-05\",\n      \"value\": 3144\n    },\n    {\n      \"date\": \"2025-12-06\",\n      \"value\": 4747\n    },\n    {\n      \"date\": \"2025-12-07\",\n      \"value\": 4195\n    },\n    {\n      \"date\": \"2025-12-08\",\n      \"value\": 4853\n    },\n    {\n      \"date\": \"2025-12-09\",\n      \"value\": 5365\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

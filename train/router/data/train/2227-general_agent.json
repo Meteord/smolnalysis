@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00769",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Outline an API error message for a quick chat reply."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

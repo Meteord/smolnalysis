@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01100_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für CO2-Emissionen in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Hamburg\",\n  \"year\": 2021,\n  \"unit\": \"t\",\n  \"values\": [\n    {\n      \"district\": \"Giesing\",\n      \"value\": 1729\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 2250\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 2603\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 724\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 3919\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 1563\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 613\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 447\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 991\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

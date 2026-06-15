@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01164_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Terminauslastung in Rhein.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Rhein\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 64\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 70\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 79\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 93\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 57\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 95\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 99\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 44\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 57\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 76\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 83\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 90\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00143_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Wanderungssaldo in Donau.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Donau\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"date\": \"2021-06-10\",\n      \"value\": 13503\n    },\n    {\n      \"date\": \"2021-06-11\",\n      \"value\": 9579\n    },\n    {\n      \"date\": \"2021-06-12\",\n      \"value\": 15293\n    },\n    {\n      \"date\": \"2021-06-13\",\n      \"value\": 14911\n    },\n    {\n      \"date\": \"2021-06-14\",\n      \"value\": 19278\n    },\n    {\n      \"date\": \"2021-06-15\",\n      \"value\": 19248\n    },\n    {\n      \"date\": \"2021-06-16\",\n      \"value\": 14525\n    },\n    {\n      \"date\": \"2021-06-17\",\n      \"value\": 13295\n    },\n    {\n      \"date\": \"2021-06-18\",\n      \"value\": 12802\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

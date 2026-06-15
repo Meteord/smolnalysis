@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00763_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Terminauslastung in Donau.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Donau\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2021-01-03\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2021-01-04\",\n      \"value\": 41\n    },\n    {\n      \"date\": \"2021-01-05\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2021-01-06\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2021-01-07\",\n      \"value\": 45\n    },\n    {\n      \"date\": \"2021-01-08\",\n      \"value\": 36\n    },\n    {\n      \"date\": \"2021-01-09\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2021-01-10\",\n      \"value\": 45\n    },\n    {\n      \"date\": \"2021-01-11\",\n      \"value\": 42\n    },\n    {\n      \"date\": \"2021-01-12\",\n      \"value\": 37\n    },\n    {\n      \"date\": \"2021-01-13\",\n      \"value\": 35\n    },\n    {\n      \"date\": \"2021-01-14\",\n      \"value\": 35\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

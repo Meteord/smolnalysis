@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00904_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir pH-Wert pro Monat für 2021 in Köln.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Köln\",\n  \"year\": 2021,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"pH\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 8.3\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 7.6\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 8.3\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 7.6\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 7.8\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 7.2\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 6.9\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 8.4\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 6.5\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 8.1\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 7.3\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 8.8\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00849_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu public_administration in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2022,\n  \"kpis\": [\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 17,\n      \"unit\": \"Tage\"\n    },\n    {\n      \"metric\": \"Anträge\",\n      \"value\": 5728,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 35,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

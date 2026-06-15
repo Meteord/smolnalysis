@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01023_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Sterbefälle in Leopoldstraße.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Leopoldstraße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Sterbefälle\",\n  \"values\": [\n    {\n      \"date\": \"2022-03-13\",\n      \"value\": 41557\n    },\n    {\n      \"date\": \"2022-03-14\",\n      \"value\": 44855\n    },\n    {\n      \"date\": \"2022-03-15\",\n      \"value\": 46000\n    },\n    {\n      \"date\": \"2022-03-16\",\n      \"value\": 46000\n    },\n    {\n      \"date\": \"2022-03-17\",\n      \"value\": 43703\n    },\n    {\n      \"date\": \"2022-03-18\",\n      \"value\": 46000\n    },\n    {\n      \"date\": \"2022-03-19\",\n      \"value\": 46000\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01155_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war ÖPNV-Verspätung in Berlin am höchsten?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Berlin\",\n  \"year\": 2018,\n  \"unit\": \"min\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 34\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 26\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 23\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 13\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 13\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 10\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 3\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

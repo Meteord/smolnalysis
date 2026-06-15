@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00272_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Fahrzeuganzahl in Elbe.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Elbe\",\n  \"current\": {\n    \"year\": 2024,\n    \"value\": 47462\n  },\n  \"previous\": {\n    \"year\": 2023,\n    \"value\": 58221\n  },\n  \"unit\": \"Fahrzeuge\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00559_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse finance_budget für Bürgerbüro Pasing als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2018,\n  \"kpis\": [\n    {\n      \"metric\": \"Defizit\",\n      \"value\": 1132,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Investitionsvolumen\",\n      \"value\": 262,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Ausgaben\",\n      \"value\": 6213,\n      \"unit\": \"Mio. €\"\n    },\n    {\n      \"metric\": \"Budget\",\n      \"value\": 3197,\n      \"unit\": \"Mio. €\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

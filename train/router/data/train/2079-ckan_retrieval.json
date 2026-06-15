@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00738_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige PM2.5 nach Dienststelle in Rosenheimer Straße."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "table",
+    "component": "DataTable",
+    "source_dataset": "openui_lang",
+    "source_index": 738,
+    "task": "generate_tool_result"
+  }
+}

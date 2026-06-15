@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00996_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Staudauer in Schwabing-Freimann?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2021,\n  \"value\": 78,\n  \"threshold\": 90,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

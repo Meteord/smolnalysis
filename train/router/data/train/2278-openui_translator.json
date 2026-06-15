@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00101_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Gelöster Sauerstoff in Berlin im Jahr 2018?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Berlin\",\n  \"year\": 2018,\n  \"aggregation\": \"average\",\n  \"value\": 6.6,\n  \"unit\": \"mg/l\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

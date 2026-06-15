@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00777_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch ist die Auslastung von Isar?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Isar\",\n  \"year\": 2025,\n  \"value\": 36,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

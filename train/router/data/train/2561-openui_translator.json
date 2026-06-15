@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00851_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele CO2-Emissionen gab es in Rhein im Jahr 2022?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Rhein\",\n  \"year\": 2022,\n  \"aggregation\": \"sum\",\n  \"value\": 2790,\n  \"unit\": \"t\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

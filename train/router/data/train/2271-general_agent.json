@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00907",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Outline a validation rule in English."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

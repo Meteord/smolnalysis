@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01102_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Einwohner in Moosach.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Moosach\",\n  \"current\": {\n    \"year\": 2018,\n    \"value\": 2142918\n  },\n  \"previous\": {\n    \"year\": 2017,\n    \"value\": 1560430\n  },\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

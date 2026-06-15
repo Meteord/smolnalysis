@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00640_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Investitionsvolumen räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2024,\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 2547\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 1841\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 711\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 1723\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 838\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 549\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

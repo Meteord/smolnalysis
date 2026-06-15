@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01007",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Compare a meeting agenda in English."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

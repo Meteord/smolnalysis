@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01079",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Compare a pull request description for a quick chat reply."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

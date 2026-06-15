@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01128_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Temperatur nach Dienststelle in Isar.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Isar\",\n  \"year\": 2023,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Temperatur\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 14.5,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 24.8,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 7.2,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 34.0,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 2.4,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 17.9,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": -3.3,\n      \"unit\": \"°C\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 8.8,\n      \"unit\": \"°C\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

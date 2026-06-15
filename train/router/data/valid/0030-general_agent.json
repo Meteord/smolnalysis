@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00995",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Compare a short email without using a table."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

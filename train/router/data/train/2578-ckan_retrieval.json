@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00610_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Anträge je Stadtbezirk in Hamburg."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 610,
+    "task": "generate_tool_result"
+  }
+}

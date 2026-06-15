@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00049_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für public_administration in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2018,\n  \"kpis\": [\n    {\n      \"metric\": \"Online-Anteil\",\n      \"value\": 25,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Wartezeit\",\n      \"value\": 63,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 36,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 20,\n      \"unit\": \"Tage\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

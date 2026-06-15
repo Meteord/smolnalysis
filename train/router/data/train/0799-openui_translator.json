@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00053_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Heizbedarf in Leopoldstraße.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Leopoldstraße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"date\": \"2018-02-04\",\n      \"value\": 5178\n    },\n    {\n      \"date\": \"2018-02-05\",\n      \"value\": 5840\n    },\n    {\n      \"date\": \"2018-02-06\",\n      \"value\": 6329\n    },\n    {\n      \"date\": \"2018-02-07\",\n      \"value\": 6703\n    },\n    {\n      \"date\": \"2018-02-08\",\n      \"value\": 6679\n    },\n    {\n      \"date\": \"2018-02-09\",\n      \"value\": 7200\n    },\n    {\n      \"date\": \"2018-02-10\",\n      \"value\": 6157\n    },\n    {\n      \"date\": \"2018-02-11\",\n      \"value\": 5443\n    },\n    {\n      \"date\": \"2018-02-12\",\n      \"value\": 5935\n    },\n    {\n      \"date\": \"2018-02-13\",\n      \"value\": 5438\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00924_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Anträge pro Monat für 2025 in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Anträge\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 11479\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 7955\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 4223\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 4825\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 1606\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 10595\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 10094\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 10379\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 7245\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 8272\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 425\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 3274\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

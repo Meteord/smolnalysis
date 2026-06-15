@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00633_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Einnahmen in Donau.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Donau\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2020-01-14\",\n      \"value\": 4760\n    },\n    {\n      \"date\": \"2020-01-15\",\n      \"value\": 3318\n    },\n    {\n      \"date\": \"2020-01-16\",\n      \"value\": 5010\n    },\n    {\n      \"date\": \"2020-01-17\",\n      \"value\": 5157\n    },\n    {\n      \"date\": \"2020-01-18\",\n      \"value\": 4400\n    },\n    {\n      \"date\": \"2020-01-19\",\n      \"value\": 3281\n    },\n    {\n      \"date\": \"2020-01-20\",\n      \"value\": 4227\n    },\n    {\n      \"date\": \"2020-01-21\",\n      \"value\": 3008\n    },\n    {\n      \"date\": \"2020-01-22\",\n      \"value\": 4602\n    },\n    {\n      \"date\": \"2020-01-23\",\n      \"value\": 5232\n    },\n    {\n      \"date\": \"2020-01-24\",\n      \"value\": 3677\n    },\n    {\n      \"date\": \"2020-01-25\",\n      \"value\": 5303\n    },\n    {\n      \"date\": \"2020-01-26\",\n      \"value\": 4180\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

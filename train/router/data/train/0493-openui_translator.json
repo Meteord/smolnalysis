@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00494_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für PM10 in Isar.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM10\",\n  \"location\": \"Isar\",\n  \"year\": 2018,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 36\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 67\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 41\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 25\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 62\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 51\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 85\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 79\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 52\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 69\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 27\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 14\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00261_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Wassertemperatur in Bogenhausen im Jahr 2019?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Wassertemperatur\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2019,\n  \"aggregation\": \"average\",\n  \"value\": 19.1,\n  \"unit\": \"°C\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00983_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Gelöster Sauerstoff in Elbe.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Elbe\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"mg/l\",\n  \"values\": [\n    {\n      \"date\": \"2018-12-05\",\n      \"value\": 11.5\n    },\n    {\n      \"date\": \"2018-12-06\",\n      \"value\": 10.3\n    },\n    {\n      \"date\": \"2018-12-07\",\n      \"value\": 11.5\n    },\n    {\n      \"date\": \"2018-12-08\",\n      \"value\": 12.8\n    },\n    {\n      \"date\": \"2018-12-09\",\n      \"value\": 13.0\n    },\n    {\n      \"date\": \"2018-12-10\",\n      \"value\": 13.0\n    },\n    {\n      \"date\": \"2018-12-11\",\n      \"value\": 13.0\n    },\n    {\n      \"date\": \"2018-12-12\",\n      \"value\": 13.0\n    },\n    {\n      \"date\": \"2018-12-13\",\n      \"value\": 13.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

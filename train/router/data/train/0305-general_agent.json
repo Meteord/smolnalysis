@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00122",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_01077",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "No data task, just saying how is your day going?"
+      "content": "Compare a pull request description in English."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

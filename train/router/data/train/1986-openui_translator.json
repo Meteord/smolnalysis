@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00269_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu water_quality in Leopoldstraße.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2024,\n  \"kpis\": [\n    {\n      \"metric\": \"Trübung\",\n      \"value\": 10.4,\n      \"unit\": \"NTU\"\n    },\n    {\n      \"metric\": \"pH-Wert\",\n      \"value\": 7.0,\n      \"unit\": \"pH\"\n    },\n    {\n      \"metric\": \"Nitrat\",\n      \"value\": 13.3,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"metric\": \"Wassertemperatur\",\n      \"value\": 12.3,\n      \"unit\": \"°C\"\n    },\n    {\n      \"metric\": \"Gelöster Sauerstoff\",\n      \"value\": 11.8,\n      \"unit\": \"mg/l\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

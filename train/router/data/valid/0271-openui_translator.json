@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00483_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Luftfeuchtigkeit in Elbe in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Elbe\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2025-12-11\",\n      \"value\": 61\n    },\n    {\n      \"date\": \"2025-12-12\",\n      \"value\": 57\n    },\n    {\n      \"date\": \"2025-12-13\",\n      \"value\": 62\n    },\n    {\n      \"date\": \"2025-12-14\",\n      \"value\": 54\n    },\n    {\n      \"date\": \"2025-12-15\",\n      \"value\": 55\n    },\n    {\n      \"date\": \"2025-12-16\",\n      \"value\": 59\n    },\n    {\n      \"date\": \"2025-12-17\",\n      \"value\": 67\n    },\n    {\n      \"date\": \"2025-12-18\",\n      \"value\": 55\n    },\n    {\n      \"date\": \"2025-12-19\",\n      \"value\": 45\n    },\n    {\n      \"date\": \"2025-12-20\",\n      \"value\": 35\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

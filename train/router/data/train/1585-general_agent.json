@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00677",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Rewrite a pull request description in English."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

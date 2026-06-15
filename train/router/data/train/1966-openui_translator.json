@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00609_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse public_administration für Leopoldstraße als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2018,\n  \"kpis\": [\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 79,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Online-Anteil\",\n      \"value\": 33,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 39,\n      \"unit\": \"Tage\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

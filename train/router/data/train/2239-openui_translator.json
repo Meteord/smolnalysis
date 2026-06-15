@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00040_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere ÖPNV-Verspätung räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2024,\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"district\": \"Laim\",\n      \"value\": 22\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 10\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 3\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 10\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 10\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 11\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 19\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 5\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 8\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

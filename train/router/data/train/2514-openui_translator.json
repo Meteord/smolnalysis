@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00974_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir PM2.5 pro Monat für 2020 in Donau.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM2.5\",\n  \"location\": \"Donau\",\n  \"year\": 2020,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 18.5\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 23.7\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 45.9\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 5.8\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 52.9\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 25.5\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 12.3\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 38.8\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 46.5\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 27.7\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 8.2\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 39.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

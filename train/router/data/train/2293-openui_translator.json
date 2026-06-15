@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00743_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Nitrat in Schwabing-Freimann in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Nitrat\",\n  \"location\": \"Schwabing-Freimann\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"mg/l\",\n  \"values\": [\n    {\n      \"date\": \"2024-06-13\",\n      \"value\": 11.8\n    },\n    {\n      \"date\": \"2024-06-14\",\n      \"value\": 13.3\n    },\n    {\n      \"date\": \"2024-06-15\",\n      \"value\": 7.1\n    },\n    {\n      \"date\": \"2024-06-16\",\n      \"value\": 1.6\n    },\n    {\n      \"date\": \"2024-06-17\",\n      \"value\": 1.0\n    },\n    {\n      \"date\": \"2024-06-18\",\n      \"value\": 1.7\n    },\n    {\n      \"date\": \"2024-06-19\",\n      \"value\": 1.0\n    },\n    {\n      \"date\": \"2024-06-20\",\n      \"value\": 3.1\n    },\n    {\n      \"date\": \"2024-06-21\",\n      \"value\": 1.1\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

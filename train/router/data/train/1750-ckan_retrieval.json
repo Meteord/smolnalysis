@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_01253_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für CO2-Emissionen in Landsberger Straße."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram",
+    "source_dataset": "openui_lang",
+    "source_index": 1253,
+    "task": "generate_tool_result"
+  }
+}

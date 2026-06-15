@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00581_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Trübung in Bürgerbüro Mitte 2021."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 581,
+    "task": "generate_tool_result"
+  }
+}

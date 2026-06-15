@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_01262_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Sterbefälle in Köln gegenüber 2023 verändert?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 1262,
+    "task": "generate_tool_result"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00870_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Geburten räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"München\",\n  \"year\": 2022,\n  \"unit\": \"Geburten\",\n  \"values\": [\n    {\n      \"district\": \"Sendling\",\n      \"value\": 43591\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 17040\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 6704\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 42359\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 22012\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 458\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 7616\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 24041\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

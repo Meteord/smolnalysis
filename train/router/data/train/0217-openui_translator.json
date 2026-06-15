@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01029_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu population in München.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"München\",\n  \"year\": 2021,\n  \"kpis\": [\n    {\n      \"metric\": \"Wanderungssaldo\",\n      \"value\": 12700,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Geburten\",\n      \"value\": 36858,\n      \"unit\": \"Geburten\"\n    },\n    {\n      \"metric\": \"Durchschnittsalter\",\n      \"value\": 42.5,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"metric\": \"Einwohner\",\n      \"value\": 2484594,\n      \"unit\": \"Personen\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

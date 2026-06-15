@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00500_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Luftqualitätsindex je Stadtbezirk in Maxvorstadt."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 500,
+    "task": "generate_tool_result"
+  }
+}

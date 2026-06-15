@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00122_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Bearbeitungszeit in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Maxvorstadt\",\n  \"current\": {\n    \"year\": 2019,\n    \"value\": 4\n  },\n  \"previous\": {\n    \"year\": 2018,\n    \"value\": 3\n  },\n  \"unit\": \"Tage\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

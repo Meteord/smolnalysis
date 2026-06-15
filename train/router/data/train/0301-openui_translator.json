@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00552_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Investitionsvolumen in Bürgerbüro Pasing gegenüber 2024 verändert?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 527\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 679\n  },\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

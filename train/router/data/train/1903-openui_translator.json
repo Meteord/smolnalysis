@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00068_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Sterbefälle in 2018.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2018,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Sterbefälle\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 22935,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 32969,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 23418,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 12592,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 38401,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 45092,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 11227,\n      \"unit\": \"Sterbefälle\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

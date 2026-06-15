@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00123_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Wartezeit in Hamburg.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Hamburg\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"date\": \"2019-10-09\",\n      \"value\": 6\n    },\n    {\n      \"date\": \"2019-10-10\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2019-10-11\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2019-10-12\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2019-10-13\",\n      \"value\": 7\n    },\n    {\n      \"date\": \"2019-10-14\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2019-10-15\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2019-10-16\",\n      \"value\": 8\n    },\n    {\n      \"date\": \"2019-10-17\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2019-10-18\",\n      \"value\": 19\n    },\n    {\n      \"date\": \"2019-10-19\",\n      \"value\": 5\n    },\n    {\n      \"date\": \"2019-10-20\",\n      \"value\": 6\n    },\n    {\n      \"date\": \"2019-10-21\",\n      \"value\": 6\n    },\n    {\n      \"date\": \"2019-10-22\",\n      \"value\": 22\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

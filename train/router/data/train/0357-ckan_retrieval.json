@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00130",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_00128_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Is there open data for Film?"
+      "content": "Zeige Terminauslastung nach Dienststelle in Landsberger Straße."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "table",
+    "component": "DataTable",
+    "source_dataset": "openui_lang",
+    "source_index": 128,
+    "task": "generate_tool_result"
+  }
 }

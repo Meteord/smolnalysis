@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00666_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Nitrat in Hamburg über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Nitrat\",\n  \"location\": \"Hamburg\",\n  \"year\": 2020,\n  \"value\": 23.0,\n  \"threshold\": 25.0,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"mg/l\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

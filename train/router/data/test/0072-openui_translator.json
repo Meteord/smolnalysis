@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00196_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Fahrzeuganzahl in Elbe.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Elbe\",\n  \"year\": 2023,\n  \"value\": 49551,\n  \"threshold\": 60000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Fahrzeuge\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

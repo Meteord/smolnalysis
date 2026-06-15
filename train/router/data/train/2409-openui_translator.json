@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00080_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Ausgaben in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Ausgaben\",\n  \"location\": \"Köln\",\n  \"year\": 2018,\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"district\": \"Laim\",\n      \"value\": 3009\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 3826\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 1851\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 7237\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 8064\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 3369\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 4619\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

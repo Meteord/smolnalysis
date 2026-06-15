@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00682_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Wartezeit in Bogenhausen in 2021 mit 2020."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 682,
+    "task": "generate_tool_result"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01180_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Stromverbrauch je Stadtbezirk in München.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"München\",\n  \"year\": 2020,\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 9766\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 3753\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 2688\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 795\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 7773\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

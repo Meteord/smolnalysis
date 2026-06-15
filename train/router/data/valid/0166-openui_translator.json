@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00230_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Durchschnittsalter in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2024,\n  \"unit\": \"Jahre\",\n  \"values\": [\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 47.9\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 48.6\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 37.2\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 39.6\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 43.2\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 45.7\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 44.1\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 44.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

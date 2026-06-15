@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01152_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Durchschnittsgeschwindigkeit in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"Rosenheimer Straße\",\n  \"current\": {\n    \"year\": 2022,\n    \"value\": 55.3\n  },\n  \"previous\": {\n    \"year\": 2021,\n    \"value\": 58.6\n  },\n  \"unit\": \"km/h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

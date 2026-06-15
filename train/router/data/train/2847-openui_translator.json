@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01001_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Terminauslastung gab es in Schwabing-Freimann im Jahr 2022?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2022,\n  \"aggregation\": \"average\",\n  \"value\": 66,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

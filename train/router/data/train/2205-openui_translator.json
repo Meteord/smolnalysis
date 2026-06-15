@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00825_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach pH-Wert in 2018.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Sendling\",\n  \"year\": 2018,\n  \"unit\": \"pH\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Moosach\",\n      \"value\": 8.1\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 8.1\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 8.0\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 7.1\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 6.9\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 6.7\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 6.7\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 6.6\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 6.6\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,11 +1,18 @@
 {
-  "id": "openui_train_0104-0516-kleiner-waffenschein-anzahl-kleiner-waffenschein",
-  "source": "train/openui_lang/data/train/0104-0516-kleiner-waffenschein-anzahl-kleiner-waffenschein.json",
+  "id": "openui_sft_train_00621_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
   "label": "openui_translator",
   "messages": [
     {
       "role": "user",
-      "content": "Show the distribution of anzahl in Kleiner Waffenschein.\n\nTool_result:\n{\n  \"dataset_title\": \"Kleiner Waffenschein\",\n  \"package_id\": \"abb5ca10-f176-4039-b8e7-c42b9e330ff0\",\n  \"package_name\": \"kleiner-waffenschein\",\n  \"resource_id\": \"46ab4aad-fde5-41a8-9b74-e2c7066d6689\",\n  \"resource_name\": \"Anzahl Kleiner Waffenschein\",\n  \"resource_format\": \"csv\",\n  \"description\": \"Der so genannte Kleine Waffenschein ist gesetzliches Erfordernis zum Führen von ansonsten erlaubnisfreien Gas,- Schreckschuss- und Signalwaffen, welche ab dem vollendeten 18. Lebensjahr erworben und besessen werden können. Wenn man eine solche Waffe also außerhalb der eigenen Wohnung, des eigenen befriedeten Besitztums oder auch der eigenen Geschäftsräume zugriffsbereit an der Person führen möchte, muss vorher der Kleine Waffenschein beantragt und ausgestellt werden. Voraussetzung hierfür ist da\",\n  \"organization\": \"Kreisverwaltungsreferat der Landeshauptstadt München\",\n  \"tags\": [],\n  \"groups\": [\n    \"just\"\n  ],\n  \"row_count\": 12,\n  \"sampled_rows\": 12,\n  \"column_count\": 3,\n  \"columns\": [\n    {\n      \"name\": \"anzahl\",\n      \"dtype\": \"object\",\n      \"kind\": \"numeric\",\n      \"non_null_count\": 12,\n      \"null_count\": 0,\n      \"examples\": [\n        \"9351\",\n        \"9218\",\n        \"9007\",\n        \"8757\",\n        \"8341\"\n      ],\n      \"numeric\": {\n        \"count\": 12.0,\n        \"min\": 3330.0,\n        \"max\": 9351.0,\n        \"mean\": 7222.9167,\n        \"median\": 7803.5\n      },\n      \"null_rate\": 0.0\n    },\n    {\n      \"name\": \"jahr\",\n      \"dtype\": \"object\",\n      \"kind\": \"year\",\n      \"non_null_count\": 12,\n      \"null_count\": 0,\n      \"examples\": [\n        \"2025\",\n        \"2024\",\n        \"2023\",\n        \"2022\",\n        \"2021\"\n      ],\n      \"numeric\": {\n        \"count\": 12.0,\n        \"min\": 2014.0,\n        \"max\": 2025.0,\n        \"mean\": 2019.5,\n        \"median\": 2019.5\n      },\n      \"null_rate\": 0.0\n    }\n  ]\n}\n\ncomponent_hints:\n{\n  \"recommended_components\": [\n    \"InsightCard\",\n    \"MetricGrid\",\n    \"Histogram\",\n    \"DataTable\"\n  ],\n  \"numeric_columns\": [\n    \"anzahl\"\n  ],\n  \"category_columns\": [],\n  \"time_columns\": [\n    \"jahr\"\n  ],\n  \"primary_chart\": {\n    \"type\": \"Histogram\",\n    \"x\": \"anzahl\"\n  }\n}"
+      "content": "Wie viele Sterbefälle gab es in Moosach im Jahr 2021?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Moosach\",\n  \"year\": 2021,\n  \"aggregation\": \"sum\",\n  \"value\": 16129,\n  \"unit\": \"Sterbefälle\"\n}"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
 }

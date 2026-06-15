@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00348_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für Gelöster Sauerstoff in 2025.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2025,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Gelöster Sauerstoff\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 6.9,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 6.0,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 9.7,\n      \"unit\": \"mg/l\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 6.1,\n      \"unit\": \"mg/l\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

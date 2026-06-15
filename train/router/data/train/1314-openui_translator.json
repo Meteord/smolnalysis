@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00244_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Sonnenstunden in Isar 2025?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Isar\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"h\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 655\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 209\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 498\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 1803\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 1361\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 391\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 411\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 1093\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 959\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 1251\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 2220\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 509\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

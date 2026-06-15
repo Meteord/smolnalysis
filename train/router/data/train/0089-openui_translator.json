@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00514_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Fahrzeuganzahl pro Monat für 2024 in Hamburg.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Hamburg\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Fahrzeuge\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 76070\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 29098\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 3941\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 36891\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 23808\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 80483\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 46656\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 67777\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 67209\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 7984\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 75015\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 62857\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

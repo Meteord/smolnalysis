@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00965_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Windgeschwindigkeit in Bürgerbüro Pasing am höchsten?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Windgeschwindigkeit\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2021,\n  \"unit\": \"km/h\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 70.0\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 65.2\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 63.5\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 56.4\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 55.7\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 38.0\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 32.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

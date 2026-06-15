@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00203_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Bearbeitungszeit in Berlin.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Berlin\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Tage\",\n  \"values\": [\n    {\n      \"date\": \"2024-07-02\",\n      \"value\": 2\n    },\n    {\n      \"date\": \"2024-07-03\",\n      \"value\": 2\n    },\n    {\n      \"date\": \"2024-07-04\",\n      \"value\": 2\n    },\n    {\n      \"date\": \"2024-07-05\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2024-07-06\",\n      \"value\": 4\n    },\n    {\n      \"date\": \"2024-07-07\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2024-07-08\",\n      \"value\": 2\n    },\n    {\n      \"date\": \"2024-07-09\",\n      \"value\": 6\n    },\n    {\n      \"date\": \"2024-07-10\",\n      \"value\": 7\n    },\n    {\n      \"date\": \"2024-07-11\",\n      \"value\": 7\n    },\n    {\n      \"date\": \"2024-07-12\",\n      \"value\": 5\n    },\n    {\n      \"date\": \"2024-07-13\",\n      \"value\": 2\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

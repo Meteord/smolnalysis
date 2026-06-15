@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00942_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Geburten in Schwabing-Freimann in 2025 mit 2024.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Schwabing-Freimann\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 491\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 20\n  },\n  \"unit\": \"Geburten\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

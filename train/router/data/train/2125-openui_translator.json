@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00354_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Straßenauslastung pro Monat für 2024 in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Straßenauslastung\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 44\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 16\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 58\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 32\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 81\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 80\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 45\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 63\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 76\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 77\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 72\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 20\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

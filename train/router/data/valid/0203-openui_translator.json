@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01071_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Durchschnittsgeschwindigkeit in Isar 2023.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"Isar\",\n  \"year\": 2023,\n  \"aggregation\": \"average\",\n  \"value\": 16.0,\n  \"unit\": \"km/h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

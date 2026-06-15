@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00872_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Ausgaben in Rhein in 2023 mit 2022.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Ausgaben\",\n  \"location\": \"Rhein\",\n  \"current\": {\n    \"year\": 2023,\n    \"value\": 4230\n  },\n  \"previous\": {\n    \"year\": 2022,\n    \"value\": 5417\n  },\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

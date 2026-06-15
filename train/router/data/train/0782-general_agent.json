@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00702",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Rewrite a validation rule with concrete examples."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

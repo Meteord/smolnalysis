@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00450_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Bearbeitungszeit räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2024,\n  \"unit\": \"Tage\",\n  \"values\": [\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 14\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 6\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 40\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 18\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 38\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 15\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

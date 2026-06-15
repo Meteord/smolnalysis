@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00485_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Luftfeuchtigkeit?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Luftfeuchtigkeit\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2019,\n  \"unit\": \"%\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 96\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 83\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 81\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 54\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 47\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 46\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 45\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 40\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 33\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 32\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

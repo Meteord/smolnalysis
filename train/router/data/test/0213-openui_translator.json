@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00612_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Stromverbrauch in Köln in 2018 mit 2017.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Köln\",\n  \"current\": {\n    \"year\": 2018,\n    \"value\": 5046\n  },\n  \"previous\": {\n    \"year\": 2017,\n    \"value\": 3889\n  },\n  \"unit\": \"MWh\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

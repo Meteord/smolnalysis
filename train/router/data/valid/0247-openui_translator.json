@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00670_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Nitrat je Stadtbezirk in Isar.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Nitrat\",\n  \"location\": \"Isar\",\n  \"year\": 2024,\n  \"unit\": \"mg/l\",\n  \"values\": [\n    {\n      \"district\": \"Laim\",\n      \"value\": 2.0\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 19.1\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 11.9\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 4.1\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 38.0\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 13.1\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 21.6\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 23.4\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

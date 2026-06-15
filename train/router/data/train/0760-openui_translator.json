@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00991_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Staudauer gab es in Landsberger Straße im Jahr 2024?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2024,\n  \"aggregation\": \"sum\",\n  \"value\": 54,\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00139_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse energy für Isar als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"location\": \"Isar\",\n  \"year\": 2018,\n  \"kpis\": [\n    {\n      \"metric\": \"Stromverbrauch\",\n      \"value\": 7590,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"Netzlast\",\n      \"value\": 251,\n      \"unit\": \"MW\"\n    },\n    {\n      \"metric\": \"Heizbedarf\",\n      \"value\": 1581,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00004",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "No chart or catalog lookup needed: write a short project update for my team."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

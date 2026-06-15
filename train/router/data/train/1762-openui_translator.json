@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00100_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir PM10 je Stadtbezirk in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM10\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2020,\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 42\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 26\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 50\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 36\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 17\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 64\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 57\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 51\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 33\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

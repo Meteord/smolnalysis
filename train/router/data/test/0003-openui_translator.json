@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00224_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Einwohner pro Monat für 2023 in Köln.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Köln\",\n  \"year\": 2023,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 1398316\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 1138922\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 1455883\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 3091265\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 3323403\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 2438885\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 2573928\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 262293\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 2141598\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 2320187\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 625733\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 1336135\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

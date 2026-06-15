@@ -1,11 +1,21 @@
 {
-  "id": "ckan_harvested_scenarios_00072",
-  "source": "train/ckan/data/harvested_scenarios.jsonl",
+  "id": "retrieval_sft_train_00681_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Find a dataset for a chart about klima."
+      "content": "Zeige mir den Wert für Wartezeit in Schwabing-Freimann 2022."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 681,
+    "task": "generate_tool_result"
+  }
 }

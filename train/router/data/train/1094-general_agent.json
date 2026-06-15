@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01183",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Debug a deployment checklist for a beginner."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

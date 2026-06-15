@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00003",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I do not need data retrieval; write a short project update for my team."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

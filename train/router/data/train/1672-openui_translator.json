@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01025_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Einwohner in Landsberger Straße am höchsten?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2023,\n  \"unit\": \"Personen\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 3003047\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 2791512\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 2411535\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 2185362\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 1870906\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

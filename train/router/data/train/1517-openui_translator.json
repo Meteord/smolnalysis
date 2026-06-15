@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00999_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu traffic in Köln.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"location\": \"Köln\",\n  \"year\": 2020,\n  \"kpis\": [\n    {\n      \"metric\": \"Straßenauslastung\",\n      \"value\": 80,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Staudauer\",\n      \"value\": 50,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Fahrzeuganzahl\",\n      \"value\": 9339,\n      \"unit\": \"Fahrzeuge\"\n    },\n    {\n      \"metric\": \"ÖPNV-Verspätung\",\n      \"value\": 22,\n      \"unit\": \"min\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

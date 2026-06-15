@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00783_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Sterbefälle in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Sterbefälle\",\n  \"values\": [\n    {\n      \"date\": \"2023-12-13\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2023-12-14\",\n      \"value\": 7189\n    },\n    {\n      \"date\": \"2023-12-15\",\n      \"value\": 1373\n    },\n    {\n      \"date\": \"2023-12-16\",\n      \"value\": 3953\n    },\n    {\n      \"date\": \"2023-12-17\",\n      \"value\": 978\n    },\n    {\n      \"date\": \"2023-12-18\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2023-12-19\",\n      \"value\": 3684\n    },\n    {\n      \"date\": \"2023-12-20\",\n      \"value\": 8411\n    },\n    {\n      \"date\": \"2023-12-21\",\n      \"value\": 8054\n    },\n    {\n      \"date\": \"2023-12-22\",\n      \"value\": 892\n    },\n    {\n      \"date\": \"2023-12-23\",\n      \"value\": 2181\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

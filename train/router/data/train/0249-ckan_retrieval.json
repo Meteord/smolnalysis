@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00938_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Tabelle für CO2-Emissionen in 2019."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable",
+    "source_dataset": "openui_lang",
+    "source_index": 938,
+    "task": "generate_tool_result"
+  }
+}

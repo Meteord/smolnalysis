@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00889_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu weather in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2020,\n  \"kpis\": [\n    {\n      \"metric\": \"Windgeschwindigkeit\",\n      \"value\": 8.3,\n      \"unit\": \"km/h\"\n    },\n    {\n      \"metric\": \"Luftfeuchtigkeit\",\n      \"value\": 92,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Sonnenstunden\",\n      \"value\": 505,\n      \"unit\": \"h\"\n    },\n    {\n      \"metric\": \"Temperatur\",\n      \"value\": 22.5,\n      \"unit\": \"°C\"\n    },\n    {\n      \"metric\": \"Niederschlag\",\n      \"value\": 146,\n      \"unit\": \"mm\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

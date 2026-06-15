@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00184",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_00627_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Gibt es offene Daten zu Bezirksausschüsse?"
+      "content": "Zeige den Prozentwert für Einwohner in Berlin."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "percentage",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 627,
+    "task": "generate_tool_result"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00113_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Durchschnittsgeschwindigkeit in Isar.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"Isar\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"km/h\",\n  \"values\": [\n    {\n      \"date\": \"2019-06-05\",\n      \"value\": 64.0\n    },\n    {\n      \"date\": \"2019-06-06\",\n      \"value\": 62.0\n    },\n    {\n      \"date\": \"2019-06-07\",\n      \"value\": 63.8\n    },\n    {\n      \"date\": \"2019-06-08\",\n      \"value\": 64.0\n    },\n    {\n      \"date\": \"2019-06-09\",\n      \"value\": 60.4\n    },\n    {\n      \"date\": \"2019-06-10\",\n      \"value\": 58.1\n    },\n    {\n      \"date\": \"2019-06-11\",\n      \"value\": 63.6\n    },\n    {\n      \"date\": \"2019-06-12\",\n      \"value\": 64.0\n    },\n    {\n      \"date\": \"2019-06-13\",\n      \"value\": 64.0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00464_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Durchschnittsalter in Köln.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Durchschnittsalter\",\n  \"location\": \"Köln\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Jahre\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 37.5\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 48.4\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 36.0\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 36.5\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 46.4\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 45.8\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 40.3\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 41.9\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 44.2\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 36.3\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 46.4\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 47.4\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

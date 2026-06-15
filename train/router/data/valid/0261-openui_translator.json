@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01090_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Werte gibt es für Online-Anteil in den Bezirken?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Online-Anteil\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2023,\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 36\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 69\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 21\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 90\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 36\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 72\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 90\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 20\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 38\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 82\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

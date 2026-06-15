@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00390_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Wanderungssaldo je Stadtbezirk in Sendling.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Sendling\",\n  \"year\": 2023,\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"district\": \"Moosach\",\n      \"value\": 3028\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": -1999\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 8029\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": -5737\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": -3114\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

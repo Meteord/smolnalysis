@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00167_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie groß ist der Anteil von Luftfeuchtigkeit in Elbe?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "percentage",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 167,
+    "task": "generate_tool_result"
+  }
+}

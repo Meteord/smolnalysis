@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00503_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich pH-Wert in Sendling in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"pH-Wert\",\n  \"location\": \"Sendling\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"pH\",\n  \"values\": [\n    {\n      \"date\": \"2019-11-14\",\n      \"value\": 8.7\n    },\n    {\n      \"date\": \"2019-11-15\",\n      \"value\": 8.4\n    },\n    {\n      \"date\": \"2019-11-16\",\n      \"value\": 8.5\n    },\n    {\n      \"date\": \"2019-11-17\",\n      \"value\": 8.1\n    },\n    {\n      \"date\": \"2019-11-18\",\n      \"value\": 8.2\n    },\n    {\n      \"date\": \"2019-11-19\",\n      \"value\": 8.0\n    },\n    {\n      \"date\": \"2019-11-20\",\n      \"value\": 7.9\n    },\n    {\n      \"date\": \"2019-11-21\",\n      \"value\": 7.8\n    },\n    {\n      \"date\": \"2019-11-22\",\n      \"value\": 8.1\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

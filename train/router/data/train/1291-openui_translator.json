@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00388_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Sterbefälle nach Dienststelle in Sendling.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Sterbefälle\",\n  \"location\": \"Sendling\",\n  \"year\": 2024,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Sterbefälle\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 12112,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 19435,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 11035,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 35173,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 41860,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 37152,\n      \"unit\": \"Sterbefälle\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 31500,\n      \"unit\": \"Sterbefälle\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

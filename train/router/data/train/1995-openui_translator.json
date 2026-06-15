@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00922_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Terminauslastung in Elbe.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Elbe\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 76\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 76\n  },\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

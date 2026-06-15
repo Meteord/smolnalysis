@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01140_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir PM2.5 je Stadtbezirk in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM2.5\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2022,\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 11.3\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 5.3\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 37.2\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 42.9\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 8.0\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 27.7\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

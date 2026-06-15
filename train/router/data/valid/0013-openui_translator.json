@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00379_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für energy in Leopoldstraße.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2020,\n  \"kpis\": [\n    {\n      \"metric\": \"Heizbedarf\",\n      \"value\": 5596,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"Netzlast\",\n      \"value\": 399,\n      \"unit\": \"MW\"\n    },\n    {\n      \"metric\": \"CO2-Emissionen\",\n      \"value\": 340,\n      \"unit\": \"t\"\n    },\n    {\n      \"metric\": \"Solarerzeugung\",\n      \"value\": 2217,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

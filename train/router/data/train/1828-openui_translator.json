@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01187_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Prozentwert für Geburten in Moosach.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Moosach\",\n  \"year\": 2022,\n  \"value\": 14,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

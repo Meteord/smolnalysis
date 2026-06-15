@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00756_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Fahrzeuganzahl in Frankfurt am Main über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2024,\n  \"value\": 53628,\n  \"threshold\": 60000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Fahrzeuge\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

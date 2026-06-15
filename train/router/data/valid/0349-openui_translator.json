@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00385_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Wanderungssaldo in 2020.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2020,\n  \"unit\": \"Personen\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 21134\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 20092\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 19751\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 11269\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 8140\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 5705\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 3714\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 2314\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": -5997\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00892_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Ozon in Bürgerbüro Mitte gegenüber 2018 verändert?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"current\": {\n    \"year\": 2019,\n    \"value\": 24\n  },\n  \"previous\": {\n    \"year\": 2018,\n    \"value\": 45\n  },\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

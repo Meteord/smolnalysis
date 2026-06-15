@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00409_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für weather in München.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"location\": \"München\",\n  \"year\": 2022,\n  \"kpis\": [\n    {\n      \"metric\": \"Luftfeuchtigkeit\",\n      \"value\": 52,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Niederschlag\",\n      \"value\": 25,\n      \"unit\": \"mm\"\n    },\n    {\n      \"metric\": \"Temperatur\",\n      \"value\": 9.3,\n      \"unit\": \"°C\"\n    },\n    {\n      \"metric\": \"Sonnenstunden\",\n      \"value\": 1356,\n      \"unit\": \"h\"\n    },\n    {\n      \"metric\": \"Windgeschwindigkeit\",\n      \"value\": 19.1,\n      \"unit\": \"km/h\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

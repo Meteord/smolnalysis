@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00816_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für PM10 in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"PM10\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2023,\n  \"value\": 43,\n  \"threshold\": 50,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

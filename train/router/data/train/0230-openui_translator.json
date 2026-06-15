@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00515_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei ÖPNV-Verspätung?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Rhein\",\n  \"year\": 2018,\n  \"unit\": \"min\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 25\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 20\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 13\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 6\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 2\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

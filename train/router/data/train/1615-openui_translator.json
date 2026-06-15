@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00273_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Straßenauslastung in München in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Straßenauslastung\",\n  \"location\": \"München\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"%\",\n  \"values\": [\n    {\n      \"date\": \"2024-07-03\",\n      \"value\": 28\n    },\n    {\n      \"date\": \"2024-07-04\",\n      \"value\": 36\n    },\n    {\n      \"date\": \"2024-07-05\",\n      \"value\": 50\n    },\n    {\n      \"date\": \"2024-07-06\",\n      \"value\": 63\n    },\n    {\n      \"date\": \"2024-07-07\",\n      \"value\": 65\n    },\n    {\n      \"date\": \"2024-07-08\",\n      \"value\": 53\n    },\n    {\n      \"date\": \"2024-07-09\",\n      \"value\": 46\n    },\n    {\n      \"date\": \"2024-07-10\",\n      \"value\": 47\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

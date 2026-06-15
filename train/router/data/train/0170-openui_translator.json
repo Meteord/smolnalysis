@@ -1,11 +1,18 @@
 {
-  "id": "openui_train_0097-0513-bibliothekskennzahlen-der-muenchner-stadtbibliothek-entleihungen-bibliothekskennzahlen-der-m-nchner-stadtbibliothek-entleihungen",
-  "source": "train/openui_lang/data/train/0097-0513-bibliothekskennzahlen-der-muenchner-stadtbibliothek-entleihungen-bibliothekskennzahlen-der-m-nchner-stadtbibliothek-entleihungen.json",
+  "id": "openui_sft_train_00371_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
   "label": "openui_translator",
   "messages": [
     {
       "role": "user",
-      "content": "Show the distribution of bibliothekssigel in Bibliothekskennzahlen der Münchner Stadtbibliothek - Entleihungen.\n\nTool_result:\n{\n  \"dataset_title\": \"Bibliothekskennzahlen der Münchner Stadtbibliothek - Entleihungen\",\n  \"package_id\": \"81d997b5-d210-4899-93e2-db8b59f19bec\",\n  \"package_name\": \"bibliothekskennzahlen-der-muenchner-stadtbibliothek-entleihungen\",\n  \"resource_id\": \"c1058e2e-0607-4c55-8de5-b0413b2add99\",\n  \"resource_name\": \"Bibliothekskennzahlen der Münchner Stadtbibliothek - Entleihungen\",\n  \"resource_format\": \"csv\",\n  \"description\": \"Der Datensatz umfasst Werte zu Entleihungen der Münchner Stadtbibliothek auf Monatsebene für den Zeitraum Januar 2024 bis Juni 2025 als Liste im CSV-Format. Die Daten wurden von der Münchner Stadtbibliothek erhoben. Der Datensatz enthält neben den Jahr- und Monatsangaben und den Bezeichnungen der Standorte Zahlenangaben zu den Entleihungen. Wenn Sie Fragen zum Datensatz haben oder unseren Datensatz für Ihr Projekt nutzen und mit uns dazu in Kontakt treten möchten, um Ihr Vorhaben vorzustellen, w\",\n  \"organization\": \" Münchner Stadtbibliothek\",\n  \"tags\": [\n    \"Ausleihe\",\n    \"Bibliothek\",\n    \"Bücher\",\n    \"Bücherei\",\n    \"Entleihungen\",\n    \"Kennzahlen\",\n    \"Kultur\",\n    \"Open Library\"\n  ],\n  \"groups\": [\n    \"educ\",\n    \"tech\"\n  ],\n  \"row_count\": 540,\n  \"sampled_rows\": 540,\n  \"column_count\": 5,\n  \"columns\": [\n    {\n      \"name\": \"bibliothekssigel\",\n      \"dtype\": \"int64\",\n      \"kind\": \"numeric\",\n      \"non_null_count\": 540,\n      \"null_count\": 0,\n      \"examples\": [\n        19,\n        51,\n        111,\n        112,\n        115\n      ],\n      \"numeric\": {\n        \"count\": 540.0,\n        \"min\": 19.0,\n        \"max\": 175.0,\n        \"mean\": 133.4,\n        \"median\": 133.5\n      },\n      \"null_rate\": 0.0\n    },\n    {\n      \"name\": \"anzahl_entleihungen\",\n      \"dtype\": \"int64\",\n      \"kind\": \"numeric\",\n      \"non_null_count\": 540,\n      \"null_count\": 0,\n      \"examples\": [\n        63178,\n        63115,\n        65582,\n        62284,\n        62430\n      ],\n      \"numeric\": {\n        \"count\": 540.0,\n        \"min\": 4.0,\n        \"max\": 67780.0,\n        \"mean\": 24862.7759,\n        \"median\": 21304.5\n      },\n      \"null_rate\": 0.0\n    },\n    {\n      \"name\": \"jahr_monat\",\n      \"dtype\": \"object\",\n      \"kind\": \"string\",\n      \"non_null_count\": 540,\n      \"null_count\": 0,\n      \"examples\": [\n        \"2024-01\",\n        \"2024-02\",\n        \"2024-03\",\n        \"2024-04\",\n        \"2024-05\"\n      ],\n      \"null_rate\": 0.0\n    },\n    {\n      \"name\": \"bibliothek\",\n      \"dtype\": \"object\",\n      \"kind\": \"string\",\n      \"non_null_count\": 540,\n      \"null_count\": 0,\n      \"examples\": [\n        \"Stadtbibliothek im Motorama\",\n        \"Stadtbibliothek im HP8\",\n        \"Berg am Laim\",\n        \"Waldtrudering\",\n        \"Riem\"\n      ],\n      \"null_rate\": 0.0\n    }\n  ]\n}\n\ncomponent_hints:\n{\n  \"recommended_components\": [\n    \"InsightCard\",\n    \"MetricGrid\",\n    \"Histogram\",\n    \"DataTable\"\n  ],\n  \"numeric_columns\": [\n    \"bibliothekssigel\",\n    \"anzahl_entleihungen\"\n  ],\n  \"category_columns\": [],\n  \"time_columns\": [],\n  \"primary_chart\": {\n    \"type\": \"Histogram\",\n    \"x\": \"bibliothekssigel\"\n  }\n}"
+      "content": "Wie viele Stromverbrauch gab es in Bürgerbüro Pasing im Jahr 2023?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Stromverbrauch\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2023,\n  \"aggregation\": \"sum\",\n  \"value\": 6139,\n  \"unit\": \"MWh\"\n}"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
 }

@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00128",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Explain a Python function for documentation."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

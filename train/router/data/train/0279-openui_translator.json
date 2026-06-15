@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00310_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Einwohner räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Köln\",\n  \"year\": 2024,\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 2137958\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 2488328\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 1734950\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 1296894\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 3136618\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 3103496\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 3208795\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 1263166\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01075_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Fahrzeuganzahl in Bürgerbüro Pasing am höchsten?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2024,\n  \"unit\": \"Fahrzeuge\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Giesing\",\n      \"value\": 83102\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 60875\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 58295\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 52284\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 46420\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 31230\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 27552\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 13287\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 11229\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 1768\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

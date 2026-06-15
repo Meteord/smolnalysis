@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00056",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Please make this sentence more concise."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

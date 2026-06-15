@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00591_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Durchschnittsgeschwindigkeit gab es in Sendling im Jahr 2018?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"Sendling\",\n  \"year\": 2018,\n  \"aggregation\": \"average\",\n  \"value\": 53.7,\n  \"unit\": \"km/h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

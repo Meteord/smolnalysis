@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00549_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse population für Isar als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"location\": \"Isar\",\n  \"year\": 2021,\n  \"kpis\": [\n    {\n      \"metric\": \"Wanderungssaldo\",\n      \"value\": 2913,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Einwohner\",\n      \"value\": 2711993,\n      \"unit\": \"Personen\"\n    },\n    {\n      \"metric\": \"Durchschnittsalter\",\n      \"value\": 43.1,\n      \"unit\": \"Jahre\"\n    },\n    {\n      \"metric\": \"Geburten\",\n      \"value\": 13117,\n      \"unit\": \"Geburten\"\n    },\n    {\n      \"metric\": \"Sterbefälle\",\n      \"value\": 36321,\n      \"unit\": \"Sterbefälle\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

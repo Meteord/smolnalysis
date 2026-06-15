@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00703_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Wanderungssaldo in Maxvorstadt in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Maxvorstadt\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"date\": \"2020-04-07\",\n      \"value\": -3246\n    },\n    {\n      \"date\": \"2020-04-08\",\n      \"value\": -5719\n    },\n    {\n      \"date\": \"2020-04-09\",\n      \"value\": -6000\n    },\n    {\n      \"date\": \"2020-04-10\",\n      \"value\": -4438\n    },\n    {\n      \"date\": \"2020-04-11\",\n      \"value\": -6000\n    },\n    {\n      \"date\": \"2020-04-12\",\n      \"value\": -2760\n    },\n    {\n      \"date\": \"2020-04-13\",\n      \"value\": -6000\n    },\n    {\n      \"date\": \"2020-04-14\",\n      \"value\": -556\n    },\n    {\n      \"date\": \"2020-04-15\",\n      \"value\": -1728\n    },\n    {\n      \"date\": \"2020-04-16\",\n      \"value\": -5555\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

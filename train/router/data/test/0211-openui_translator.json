@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00463_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Wanderungssaldo in Elbe in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Elbe\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Personen\",\n  \"values\": [\n    {\n      \"date\": \"2019-04-14\",\n      \"value\": 15417\n    },\n    {\n      \"date\": \"2019-04-15\",\n      \"value\": 20949\n    },\n    {\n      \"date\": \"2019-04-16\",\n      \"value\": 21723\n    },\n    {\n      \"date\": \"2019-04-17\",\n      \"value\": 19905\n    },\n    {\n      \"date\": \"2019-04-18\",\n      \"value\": 22141\n    },\n    {\n      \"date\": \"2019-04-19\",\n      \"value\": 18375\n    },\n    {\n      \"date\": \"2019-04-20\",\n      \"value\": 20329\n    },\n    {\n      \"date\": \"2019-04-21\",\n      \"value\": 23087\n    },\n    {\n      \"date\": \"2019-04-22\",\n      \"value\": 25528\n    },\n    {\n      \"date\": \"2019-04-23\",\n      \"value\": 26000\n    },\n    {\n      \"date\": \"2019-04-24\",\n      \"value\": 21557\n    },\n    {\n      \"date\": \"2019-04-25\",\n      \"value\": 22664\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

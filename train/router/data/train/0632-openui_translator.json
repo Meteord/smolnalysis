@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00690_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Anträge je Stadtbezirk in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2020,\n  \"unit\": \"Anträge\",\n  \"values\": [\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 8385\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 10051\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 9753\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 7721\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 8620\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 10772\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 4736\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 3755\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

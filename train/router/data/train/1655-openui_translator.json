@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01193_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Investitionsvolumen in Frankfurt am Main in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Investitionsvolumen\",\n  \"location\": \"Frankfurt am Main\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2022-11-11\",\n      \"value\": 981\n    },\n    {\n      \"date\": \"2022-11-12\",\n      \"value\": 814\n    },\n    {\n      \"date\": \"2022-11-13\",\n      \"value\": 1093\n    },\n    {\n      \"date\": \"2022-11-14\",\n      \"value\": 1169\n    },\n    {\n      \"date\": \"2022-11-15\",\n      \"value\": 864\n    },\n    {\n      \"date\": \"2022-11-16\",\n      \"value\": 1074\n    },\n    {\n      \"date\": \"2022-11-17\",\n      \"value\": 1426\n    },\n    {\n      \"date\": \"2022-11-18\",\n      \"value\": 1556\n    },\n    {\n      \"date\": \"2022-11-19\",\n      \"value\": 1281\n    },\n    {\n      \"date\": \"2022-11-20\",\n      \"value\": 1552\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00833_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Durchschnittsgeschwindigkeit in Sendling.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"Sendling\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"km/h\",\n  \"values\": [\n    {\n      \"date\": \"2018-08-01\",\n      \"value\": 62.0\n    },\n    {\n      \"date\": \"2018-08-02\",\n      \"value\": 55.0\n    },\n    {\n      \"date\": \"2018-08-03\",\n      \"value\": 48.8\n    },\n    {\n      \"date\": \"2018-08-04\",\n      \"value\": 45.6\n    },\n    {\n      \"date\": \"2018-08-05\",\n      \"value\": 43.4\n    },\n    {\n      \"date\": \"2018-08-06\",\n      \"value\": 44.8\n    },\n    {\n      \"date\": \"2018-08-07\",\n      \"value\": 40.8\n    },\n    {\n      \"date\": \"2018-08-08\",\n      \"value\": 43.5\n    },\n    {\n      \"date\": \"2018-08-09\",\n      \"value\": 50.2\n    },\n    {\n      \"date\": \"2018-08-10\",\n      \"value\": 59.3\n    },\n    {\n      \"date\": \"2018-08-11\",\n      \"value\": 64.0\n    },\n    {\n      \"date\": \"2018-08-12\",\n      \"value\": 60.0\n    },\n    {\n      \"date\": \"2018-08-13\",\n      \"value\": 64.0\n    },\n    {\n      \"date\": \"2018-08-14\",\n      \"value\": 62.2\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

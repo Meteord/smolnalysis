@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00142_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Einwohner in Bogenhausen gegenüber 2024 verändert?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Bogenhausen\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 943972\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 392773\n  },\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

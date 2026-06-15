@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00462_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Wanderungssaldo in Elbe in 2024 mit 2023."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 462,
+    "task": "generate_tool_result"
+  }
+}

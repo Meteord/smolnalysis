@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01165_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Bearbeitungszeit in Sendling am höchsten?\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Sendling\",\n  \"year\": 2024,\n  \"unit\": \"Tage\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 43\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 34\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 27\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 26\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 13\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

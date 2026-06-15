@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00873_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Einnahmen in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Maxvorstadt\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"date\": \"2024-11-08\",\n      \"value\": 3593\n    },\n    {\n      \"date\": \"2024-11-09\",\n      \"value\": 4154\n    },\n    {\n      \"date\": \"2024-11-10\",\n      \"value\": 4422\n    },\n    {\n      \"date\": \"2024-11-11\",\n      \"value\": 5929\n    },\n    {\n      \"date\": \"2024-11-12\",\n      \"value\": 6900\n    },\n    {\n      \"date\": \"2024-11-13\",\n      \"value\": 6990\n    },\n    {\n      \"date\": \"2024-11-14\",\n      \"value\": 5683\n    },\n    {\n      \"date\": \"2024-11-15\",\n      \"value\": 5063\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

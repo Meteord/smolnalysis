@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00765_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Bearbeitungszeit in 2025.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Sendling\",\n  \"year\": 2025,\n  \"unit\": \"Tage\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Giesing\",\n      \"value\": 35\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 25\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 22\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 9\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 7\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

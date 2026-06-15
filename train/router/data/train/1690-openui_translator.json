@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00736_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Luftqualitätsindex in Köln über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Köln\",\n  \"year\": 2021,\n  \"value\": 75,\n  \"threshold\": 100,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"AQI\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

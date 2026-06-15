@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00598_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ÖPNV-Verspätung nach Dienststelle in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2023,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"ÖPNV-Verspätung\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 26,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 16,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 28,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 30,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 2,\n      \"unit\": \"min\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

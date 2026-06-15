@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00208_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Anträge\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2025,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Anträge\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 4227,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 10159,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"Bürgerbüro Orleansplatz\",\n      \"value\": 7439,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 9780,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"Stadtkämmerei\",\n      \"value\": 8495,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 3626,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 7405,\n      \"unit\": \"Anträge\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

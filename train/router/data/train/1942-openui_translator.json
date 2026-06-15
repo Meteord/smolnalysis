@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00156_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Ausgaben in Donau.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Ausgaben\",\n  \"location\": \"Donau\",\n  \"year\": 2025,\n  \"value\": 8919,\n  \"threshold\": 6800,\n  \"status\": \"exceeded\",\n  \"severity\": \"danger\",\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

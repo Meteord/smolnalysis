@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00981_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Wassertemperatur in Rhein 2018.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Wassertemperatur\",\n  \"location\": \"Rhein\",\n  \"year\": 2018,\n  \"aggregation\": \"average\",\n  \"value\": 7.1,\n  \"unit\": \"°C\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

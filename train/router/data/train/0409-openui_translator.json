@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00172_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Luftqualitätsindex in Berlin in 2025 mit 2024.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Berlin\",\n  \"current\": {\n    \"year\": 2025,\n    \"value\": 96\n  },\n  \"previous\": {\n    \"year\": 2024,\n    \"value\": 106\n  },\n  \"unit\": \"AQI\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

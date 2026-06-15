@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00592_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Staudauer in Berlin in 2019 mit 2018."
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 592,
+    "task": "generate_tool_result"
+  }
+}

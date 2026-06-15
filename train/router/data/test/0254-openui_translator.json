@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00300_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere CO2-Emissionen räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2020,\n  \"unit\": \"t\",\n  \"values\": [\n    {\n      \"district\": \"Giesing\",\n      \"value\": 1397\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 23\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 2825\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 3810\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 3510\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

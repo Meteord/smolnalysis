@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01146_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gab es eine Grenzwertüberschreitung bei Trübung in Köln?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Trübung\",\n  \"location\": \"Köln\",\n  \"year\": 2022,\n  \"value\": 6.4,\n  \"threshold\": 5.0,\n  \"status\": \"exceeded\",\n  \"severity\": \"danger\",\n  \"unit\": \"NTU\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

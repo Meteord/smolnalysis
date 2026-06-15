@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00111",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00494",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "hallo :)"
+      "content": "Summarize a user story as a checklist."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

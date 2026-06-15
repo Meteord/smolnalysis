@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00155_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wo war Defizit in Sendling am höchsten?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Defizit\",\n  \"location\": \"Sendling\",\n  \"year\": 2021,\n  \"unit\": \"Mio. €\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 1079\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 1004\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 938\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 893\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 743\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 579\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 141\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 73\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 7\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

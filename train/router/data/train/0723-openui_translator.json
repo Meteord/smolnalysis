@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00034_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Fahrzeuganzahl pro Monat für 2023 in Isar.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Isar\",\n  \"year\": 2023,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Fahrzeuge\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 56792\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 11644\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 76624\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 43697\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 57086\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 28534\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 59626\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 47660\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 17276\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 56921\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 32972\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 63894\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

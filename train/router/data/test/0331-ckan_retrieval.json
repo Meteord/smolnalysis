@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00251_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele PM10 gab es in Hamburg im Jahr 2022?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 251,
+    "task": "generate_tool_result"
+  }
+}

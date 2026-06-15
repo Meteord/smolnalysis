@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00213_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir die Entwicklung von Heizbedarf in Berlin.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Berlin\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"date\": \"2022-09-05\",\n      \"value\": 1169\n    },\n    {\n      \"date\": \"2022-09-06\",\n      \"value\": 1791\n    },\n    {\n      \"date\": \"2022-09-07\",\n      \"value\": 2473\n    },\n    {\n      \"date\": \"2022-09-08\",\n      \"value\": 2600\n    },\n    {\n      \"date\": \"2022-09-09\",\n      \"value\": 1609\n    },\n    {\n      \"date\": \"2022-09-10\",\n      \"value\": 620\n    },\n    {\n      \"date\": \"2022-09-11\",\n      \"value\": 1325\n    },\n    {\n      \"date\": \"2022-09-12\",\n      \"value\": 2154\n    },\n    {\n      \"date\": \"2022-09-13\",\n      \"value\": 1813\n    },\n    {\n      \"date\": \"2022-09-14\",\n      \"value\": 2640\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

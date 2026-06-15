@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00525_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Terminauslastung in 2018.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Köln\",\n  \"year\": 2018,\n  \"unit\": \"%\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Sendling\",\n      \"value\": 99\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 96\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 81\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 72\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 72\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 66\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 54\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 45\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

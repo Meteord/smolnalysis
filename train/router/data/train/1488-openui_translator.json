@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00059_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu energy in Köln.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"location\": \"Köln\",\n  \"year\": 2024,\n  \"kpis\": [\n    {\n      \"metric\": \"Netzlast\",\n      \"value\": 775,\n      \"unit\": \"MW\"\n    },\n    {\n      \"metric\": \"Solarerzeugung\",\n      \"value\": 1085,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"Heizbedarf\",\n      \"value\": 4270,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"CO2-Emissionen\",\n      \"value\": 1808,\n      \"unit\": \"t\"\n    },\n    {\n      \"metric\": \"Stromverbrauch\",\n      \"value\": 5637,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

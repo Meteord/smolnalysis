@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01132_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Ozon in Donau.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Ozon\",\n  \"location\": \"Donau\",\n  \"current\": {\n    \"year\": 2024,\n    \"value\": 181\n  },\n  \"previous\": {\n    \"year\": 2023,\n    \"value\": 160\n  },\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

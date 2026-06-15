@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00582_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Gelöster Sauerstoff in Hamburg.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Hamburg\",\n  \"current\": {\n    \"year\": 2018,\n    \"value\": 8.8\n  },\n  \"previous\": {\n    \"year\": 2017,\n    \"value\": 9.9\n  },\n  \"unit\": \"mg/l\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

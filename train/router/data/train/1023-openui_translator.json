@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01174_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Heizbedarf in Moosach.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Heizbedarf\",\n  \"location\": \"Moosach\",\n  \"year\": 2025,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 325\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 2286\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 5613\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 6165\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 1622\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 3004\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 153\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 994\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 6223\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 5640\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 6741\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 3244\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

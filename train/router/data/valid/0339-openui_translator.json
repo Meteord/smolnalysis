@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01130_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Sonnenstunden räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Sonnenstunden\",\n  \"location\": \"Elbe\",\n  \"year\": 2020,\n  \"unit\": \"h\",\n  \"values\": [\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 2178\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 530\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 77\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 1107\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 652\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 487\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 1164\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 398\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

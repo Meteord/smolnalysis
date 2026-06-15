@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00449_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fasse public_administration für Berlin als Dashboard zusammen.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Berlin\",\n  \"year\": 2022,\n  \"kpis\": [\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 39,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Anträge\",\n      \"value\": 1860,\n      \"unit\": \"Anträge\"\n    },\n    {\n      \"metric\": \"Wartezeit\",\n      \"value\": 80,\n      \"unit\": \"min\"\n    },\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 17,\n      \"unit\": \"Tage\"\n    },\n    {\n      \"metric\": \"Online-Anteil\",\n      \"value\": 49,\n      \"unit\": \"%\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

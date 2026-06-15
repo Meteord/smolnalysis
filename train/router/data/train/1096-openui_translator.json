@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01099_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle eine Übersicht zu energy in Bürgerbüro Mitte.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"location\": \"Bürgerbüro Mitte\",\n  \"year\": 2021,\n  \"kpis\": [\n    {\n      \"metric\": \"Stromverbrauch\",\n      \"value\": 5029,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"CO2-Emissionen\",\n      \"value\": 955,\n      \"unit\": \"t\"\n    },\n    {\n      \"metric\": \"Solarerzeugung\",\n      \"value\": 2265,\n      \"unit\": \"MWh\"\n    },\n    {\n      \"metric\": \"Netzlast\",\n      \"value\": 309,\n      \"unit\": \"MW\"\n    },\n    {\n      \"metric\": \"Heizbedarf\",\n      \"value\": 5215,\n      \"unit\": \"MWh\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00071_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Defizit in Frankfurt am Main im Jahr 2025?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Defizit\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2025,\n  \"aggregation\": \"sum\",\n  \"value\": 1351,\n  \"unit\": \"Mio. €\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

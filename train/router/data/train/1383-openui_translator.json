@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01105_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Wanderungssaldo in 2025.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Donau\",\n  \"year\": 2025,\n  \"unit\": \"Personen\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Sendling\",\n      \"value\": 22811\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 21955\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 17146\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 15098\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 13804\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 11543\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 943\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 589\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 227\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 111\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

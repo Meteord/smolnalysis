@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01080_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Fahrzeuganzahl je Stadtbezirk in Landsberger Straße.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Landsberger Straße\",\n  \"year\": 2018,\n  \"unit\": \"Fahrzeuge\",\n  \"values\": [\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 48410\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 73214\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 81289\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 16995\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 53229\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01123_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Niederschlag in Hamburg in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Hamburg\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"mm\",\n  \"values\": [\n    {\n      \"date\": \"2020-12-02\",\n      \"value\": 20\n    },\n    {\n      \"date\": \"2020-12-03\",\n      \"value\": 3\n    },\n    {\n      \"date\": \"2020-12-04\",\n      \"value\": 0\n    },\n    {\n      \"date\": \"2020-12-05\",\n      \"value\": 0\n    },\n    {\n      \"date\": \"2020-12-06\",\n      \"value\": 0\n    },\n    {\n      \"date\": \"2020-12-07\",\n      \"value\": 2\n    },\n    {\n      \"date\": \"2020-12-08\",\n      \"value\": 0\n    },\n    {\n      \"date\": \"2020-12-09\",\n      \"value\": 0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

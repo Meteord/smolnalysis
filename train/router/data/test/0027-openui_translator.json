@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00461_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir den Wert für Einwohner in Isar 2019.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Isar\",\n  \"year\": 2019,\n  \"aggregation\": \"count\",\n  \"value\": 3011756,\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

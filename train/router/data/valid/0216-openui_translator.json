@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00915_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Stadtbezirke hatten die höchsten Werte bei Staudauer?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2019,\n  \"unit\": \"min\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 237\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 222\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 201\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 181\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 160\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 50\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 34\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

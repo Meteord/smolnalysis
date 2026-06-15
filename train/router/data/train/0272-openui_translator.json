@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00368_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige Wartezeit nach Dienststelle in Moosach.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Wartezeit\",\n  \"location\": \"Moosach\",\n  \"year\": 2021,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"Wartezeit\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 67,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 27,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 29,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Sozialbürgerhaus Nord\",\n      \"value\": 40,\n      \"unit\": \"min\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 72,\n      \"unit\": \"min\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

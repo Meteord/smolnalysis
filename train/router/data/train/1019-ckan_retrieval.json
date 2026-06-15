@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_01092_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Stromverbrauch in Frankfurt am Main gegenüber 2019 verändert?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "comparison",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 1092,
+    "task": "generate_tool_result"
+  }
+}

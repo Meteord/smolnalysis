@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00465_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Einwohner in 2020.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Einwohner\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2020,\n  \"unit\": \"Personen\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 3733849\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 3584808\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 3470393\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 2590560\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 2168125\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 1653376\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 1204780\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 1159029\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

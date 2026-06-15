@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00896_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Luftqualitätsindex in Bogenhausen über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2023,\n  \"value\": 118,\n  \"threshold\": 100,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"AQI\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

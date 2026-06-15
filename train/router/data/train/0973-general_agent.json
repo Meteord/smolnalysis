@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00028",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "No chart or catalog lookup needed: turn these notes into a checklist."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

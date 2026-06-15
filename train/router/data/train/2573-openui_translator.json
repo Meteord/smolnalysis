@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00971_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele NO2 gab es in Donau im Jahr 2024?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"NO2\",\n  \"location\": \"Donau\",\n  \"year\": 2024,\n  \"aggregation\": \"average\",\n  \"value\": 49,\n  \"unit\": \"µg/m³\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

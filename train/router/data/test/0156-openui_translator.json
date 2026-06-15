@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00333_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Luftqualitätsindex in Berlin in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"Luftqualitätsindex\",\n  \"location\": \"Berlin\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"AQI\",\n  \"values\": [\n    {\n      \"date\": \"2019-09-02\",\n      \"value\": 63\n    },\n    {\n      \"date\": \"2019-09-03\",\n      \"value\": 68\n    },\n    {\n      \"date\": \"2019-09-04\",\n      \"value\": 57\n    },\n    {\n      \"date\": \"2019-09-05\",\n      \"value\": 78\n    },\n    {\n      \"date\": \"2019-09-06\",\n      \"value\": 72\n    },\n    {\n      \"date\": \"2019-09-07\",\n      \"value\": 88\n    },\n    {\n      \"date\": \"2019-09-08\",\n      \"value\": 65\n    },\n    {\n      \"date\": \"2019-09-09\",\n      \"value\": 48\n    },\n    {\n      \"date\": \"2019-09-10\",\n      \"value\": 34\n    },\n    {\n      \"date\": \"2019-09-11\",\n      \"value\": 46\n    },\n    {\n      \"date\": \"2019-09-12\",\n      \"value\": 60\n    },\n    {\n      \"date\": \"2019-09-13\",\n      \"value\": 77\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

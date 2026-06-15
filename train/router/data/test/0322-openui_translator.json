@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01015_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Netzlast in 2022.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Donau\",\n  \"year\": 2022,\n  \"unit\": \"MW\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 642\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 402\n    },\n    {\n      \"label\": \"Sendling\",\n      \"value\": 382\n    },\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 356\n    },\n    {\n      \"label\": \"Laim\",\n      \"value\": 323\n    },\n    {\n      \"label\": \"Maxvorstadt\",\n      \"value\": 307\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

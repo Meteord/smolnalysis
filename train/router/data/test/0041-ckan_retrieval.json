@@ -1,11 +1,21 @@
 {
-  "id": "ckan_harvested_scenarios_00028",
-  "source": "train/ckan/data/harvested_scenarios.jsonl",
+  "id": "retrieval_sft_train_01249_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "I need open data about verkehr; inspect likely CKAN candidates. Limit the search to group=tran."
+      "content": "Erstelle eine Übersicht zu public_administration in Leopoldstraße."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 1249,
+    "task": "generate_tool_result"
+  }
 }

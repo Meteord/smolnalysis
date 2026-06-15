@@ -1,11 +1,21 @@
 {
-  "id": "ckan_multitool_eval_golden_00004",
-  "source": "train/ckan/data/multitool_eval_golden.jsonl",
+  "id": "retrieval_sft_train_00618_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Find school datasets."
+      "content": "Erstelle eine Tabelle für Solarerzeugung in 2025."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "table",
+    "component": "DataTable",
+    "source_dataset": "openui_lang",
+    "source_index": 618,
+    "task": "generate_tool_result"
+  }
 }

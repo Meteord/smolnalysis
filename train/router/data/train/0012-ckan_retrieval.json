@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00037",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_01024_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Is there open data for Tourismus?"
+      "content": "Erstelle ein Monatsdiagramm für Geburten in Isar."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 1024,
+    "task": "generate_tool_result"
+  }
 }

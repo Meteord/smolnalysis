@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00780_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir CO2-Emissionen je Stadtbezirk in Köln.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"CO2-Emissionen\",\n  \"location\": \"Köln\",\n  \"year\": 2025,\n  \"unit\": \"t\",\n  \"values\": [\n    {\n      \"district\": \"Sendling\",\n      \"value\": 2591\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 508\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 3879\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 3864\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 3763\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 2544\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

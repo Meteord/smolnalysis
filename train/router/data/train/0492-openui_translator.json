@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00694_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Netzlast pro Monat für 2024 in Elbe.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Elbe\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"MW\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 133\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 209\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 326\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 177\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 363\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 293\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 352\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 409\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 89\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 699\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 565\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 336\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

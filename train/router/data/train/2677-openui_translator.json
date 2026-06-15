@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00964_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für Temperatur in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Temperatur\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"°C\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 13.5\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 8.1\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 30.2\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 2.3\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 9.0\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 1.3\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 16.3\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 24.3\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 12.1\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 19.0\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 18.1\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 22.1\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

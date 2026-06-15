@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00209_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige die wichtigsten Kennzahlen für public_administration in Frankfurt am Main.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"location\": \"Frankfurt am Main\",\n  \"year\": 2023,\n  \"kpis\": [\n    {\n      \"metric\": \"Bearbeitungszeit\",\n      \"value\": 10,\n      \"unit\": \"Tage\"\n    },\n    {\n      \"metric\": \"Terminauslastung\",\n      \"value\": 80,\n      \"unit\": \"%\"\n    },\n    {\n      \"metric\": \"Anträge\",\n      \"value\": 6169,\n      \"unit\": \"Anträge\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "multi_kpi",
+    "component": "MetricGrid"
+  }
+}

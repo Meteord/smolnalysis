@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00400_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Einnahmen räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2023,\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 2344\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 7067\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 6453\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 5284\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 3800\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 5138\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 4878\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 5407\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

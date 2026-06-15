@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00294_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Netzlast pro Monat für 2022 in Rosenheimer Straße.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Rosenheimer Straße\",\n  \"year\": 2022,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"MW\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 171\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 706\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 278\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 272\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 628\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 521\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 310\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 759\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 846\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 314\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 770\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 328\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

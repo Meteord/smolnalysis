@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_01028",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Compare a shell command for documentation."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

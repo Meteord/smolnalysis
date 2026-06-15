@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00893_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich NO2 in Rosenheimer Straße in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"NO2\",\n  \"location\": \"Rosenheimer Straße\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"µg/m³\",\n  \"values\": [\n    {\n      \"date\": \"2024-02-01\",\n      \"value\": 32\n    },\n    {\n      \"date\": \"2024-02-02\",\n      \"value\": 32\n    },\n    {\n      \"date\": \"2024-02-03\",\n      \"value\": 42\n    },\n    {\n      \"date\": \"2024-02-04\",\n      \"value\": 39\n    },\n    {\n      \"date\": \"2024-02-05\",\n      \"value\": 26\n    },\n    {\n      \"date\": \"2024-02-06\",\n      \"value\": 18\n    },\n    {\n      \"date\": \"2024-02-07\",\n      \"value\": 9\n    },\n    {\n      \"date\": \"2024-02-08\",\n      \"value\": 8\n    },\n    {\n      \"date\": \"2024-02-09\",\n      \"value\": 8\n    },\n    {\n      \"date\": \"2024-02-10\",\n      \"value\": 8\n    },\n    {\n      \"date\": \"2024-02-11\",\n      \"value\": 9\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

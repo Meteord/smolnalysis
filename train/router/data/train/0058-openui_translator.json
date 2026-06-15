@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01166_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Terminauslastung in Bürgerbüro Pasing.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Terminauslastung\",\n  \"location\": \"Bürgerbüro Pasing\",\n  \"year\": 2019,\n  \"value\": 100,\n  \"threshold\": 90,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

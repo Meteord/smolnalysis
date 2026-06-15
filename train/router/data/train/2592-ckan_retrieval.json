@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_01161_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hoch war Wartezeit in Moosach im Jahr 2018?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 1161,
+    "task": "generate_tool_result"
+  }
+}

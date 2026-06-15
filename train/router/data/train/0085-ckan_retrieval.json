@@ -1,11 +1,21 @@
 {
-  "id": "ckan_scenarios_train_00073",
-  "source": "train/ckan/data/scenarios_train.jsonl",
+  "id": "retrieval_sft_train_00930_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
   "label": "ckan_retrieval",
   "messages": [
     {
       "role": "user",
-      "content": "Can you find data about Landtagswahl 2023?"
+      "content": "Welche Werte gibt es für Online-Anteil in den Bezirken?"
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart",
+    "source_dataset": "openui_lang",
+    "source_index": 930,
+    "task": "generate_tool_result"
+  }
 }

@@ -1,11 +1,14 @@
 {
-  "id": "smalltalk_00060",
-  "source": "synthetic_smalltalk",
+  "id": "general_combo_00569",
+  "source": "synthetic_general",
   "label": "general_agent",
   "messages": [
     {
       "role": "user",
-      "content": "Just checking in: merci"
+      "content": "Rewrite an API error message for a quick chat reply."
     }
-  ]
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
 }

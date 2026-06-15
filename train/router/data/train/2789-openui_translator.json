@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00085_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige ein Ranking der Bezirke nach Niederschlag in 2025.\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Elbe\",\n  \"year\": 2025,\n  \"unit\": \"mm\",\n  \"rank_by\": \"value_desc\",\n  \"values\": [\n    {\n      \"label\": \"Au-Haidhausen\",\n      \"value\": 169\n    },\n    {\n      \"label\": \"Bogenhausen\",\n      \"value\": 124\n    },\n    {\n      \"label\": \"Giesing\",\n      \"value\": 111\n    },\n    {\n      \"label\": \"Schwabing-Freimann\",\n      \"value\": 80\n    },\n    {\n      \"label\": \"Moosach\",\n      \"value\": 50\n    },\n    {\n      \"label\": \"Pasing-Obermenzing\",\n      \"value\": 43\n    },\n    {\n      \"label\": \"Neuhausen-Nymphenburg\",\n      \"value\": 39\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "ranking",
+    "component": "BarChart"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00834_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle ein Monatsdiagramm für ÖPNV-Verspätung in Berlin.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Berlin\",\n  \"year\": 2023,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 23\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 2\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 3\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 28\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 25\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 10\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 26\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 14\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 19\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 11\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 21\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 14\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

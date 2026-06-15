@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00193_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich ÖPNV-Verspätung in Maxvorstadt in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Maxvorstadt\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"date\": \"2021-02-05\",\n      \"value\": 8\n    },\n    {\n      \"date\": \"2021-02-06\",\n      \"value\": 10\n    },\n    {\n      \"date\": \"2021-02-07\",\n      \"value\": 13\n    },\n    {\n      \"date\": \"2021-02-08\",\n      \"value\": 11\n    },\n    {\n      \"date\": \"2021-02-09\",\n      \"value\": 6\n    },\n    {\n      \"date\": \"2021-02-10\",\n      \"value\": 0\n    },\n    {\n      \"date\": \"2021-02-11\",\n      \"value\": 0\n    },\n    {\n      \"date\": \"2021-02-12\",\n      \"value\": 0\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

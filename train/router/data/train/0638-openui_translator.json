@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00770_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Bearbeitungszeit je Stadtbezirk in Maxvorstadt.\n\nTool result:\n{\n  \"domain\": \"public_administration\",\n  \"metric\": \"Bearbeitungszeit\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2018,\n  \"unit\": \"Tage\",\n  \"values\": [\n    {\n      \"district\": \"Moosach\",\n      \"value\": 30\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 29\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 44\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 16\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 43\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 40\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 13\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 8\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 41\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 15\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "public_administration",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

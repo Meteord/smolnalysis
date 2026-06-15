@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00742_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Jahresvergleich für Wassertemperatur in Sendling.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Wassertemperatur\",\n  \"location\": \"Sendling\",\n  \"current\": {\n    \"year\": 2023,\n    \"value\": 15.8\n  },\n  \"previous\": {\n    \"year\": 2022,\n    \"value\": 16.9\n  },\n  \"unit\": \"°C\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

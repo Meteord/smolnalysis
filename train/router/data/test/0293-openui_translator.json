@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01104_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie verteilen sich die Monatswerte von Geburten in Elbe 2022?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Geburten\",\n  \"location\": \"Elbe\",\n  \"year\": 2022,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"Geburten\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 42335\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 17680\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 1025\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 38666\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 6928\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 22088\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 34119\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 26001\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 10911\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 19319\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 40330\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 16954\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

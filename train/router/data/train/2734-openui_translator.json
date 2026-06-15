@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00240_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Ausgaben räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Ausgaben\",\n  \"location\": \"Leopoldstraße\",\n  \"year\": 2021,\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 5852\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 6381\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 93\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 3085\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 6983\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 3465\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

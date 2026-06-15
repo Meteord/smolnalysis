@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00867_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige den Prozentwert für Wanderungssaldo in Elbe.\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Elbe\",\n  \"year\": 2018,\n  \"value\": 43,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

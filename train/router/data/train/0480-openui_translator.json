@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00673_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erstelle einen Tagesverlauf für Staudauer in Bogenhausen.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Staudauer\",\n  \"location\": \"Bogenhausen\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"min\",\n  \"values\": [\n    {\n      \"date\": \"2021-12-12\",\n      \"value\": 109\n    },\n    {\n      \"date\": \"2021-12-13\",\n      \"value\": 132\n    },\n    {\n      \"date\": \"2021-12-14\",\n      \"value\": 113\n    },\n    {\n      \"date\": \"2021-12-15\",\n      \"value\": 100\n    },\n    {\n      \"date\": \"2021-12-16\",\n      \"value\": 143\n    },\n    {\n      \"date\": \"2021-12-17\",\n      \"value\": 182\n    },\n    {\n      \"date\": \"2021-12-18\",\n      \"value\": 210\n    },\n    {\n      \"date\": \"2021-12-19\",\n      \"value\": 232\n    },\n    {\n      \"date\": \"2021-12-20\",\n      \"value\": 190\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

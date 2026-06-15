@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00098_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Liste die Werte nach Dienststelle auf.\n\nTool result:\n{\n  \"domain\": \"air_quality\",\n  \"metric\": \"NO2\",\n  \"location\": \"München\",\n  \"year\": 2020,\n  \"columns\": [\n    {\n      \"key\": \"office\",\n      \"label\": \"Dienststelle\"\n    },\n    {\n      \"key\": \"value\",\n      \"label\": \"NO2\"\n    },\n    {\n      \"key\": \"unit\",\n      \"label\": \"Einheit\"\n    }\n  ],\n  \"records\": [\n    {\n      \"office\": \"KVR Hauptstelle\",\n      \"value\": 75,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Riesenfeldstraße\",\n      \"value\": 52,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Referat für Stadtplanung\",\n      \"value\": 39,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Mitte\",\n      \"value\": 19,\n      \"unit\": \"µg/m³\"\n    },\n    {\n      \"office\": \"Bürgerbüro Pasing\",\n      \"value\": 57,\n      \"unit\": \"µg/m³\"\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "air_quality",
+    "data_shape": "table",
+    "component": "DataTable"
+  }
+}

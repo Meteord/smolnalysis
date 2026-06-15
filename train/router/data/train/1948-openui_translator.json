@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00157_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie groß ist der Anteil von Einnahmen in Berlin?\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Berlin\",\n  \"year\": 2019,\n  \"value\": 73,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

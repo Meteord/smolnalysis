@@ -1,0 +1,14 @@
+{
+  "id": "general_task_00010",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "No chart or catalog lookup needed: summarize this paragraph in plain language."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}

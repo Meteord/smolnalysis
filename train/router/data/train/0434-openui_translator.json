@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00264_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Wassertemperatur pro Monat für 2024 in Schwabing-Freimann.\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Wassertemperatur\",\n  \"location\": \"Schwabing-Freimann\",\n  \"year\": 2024,\n  \"time_granularity\": \"monthly\",\n  \"unit\": \"°C\",\n  \"values\": [\n    {\n      \"month\": \"Jan\",\n      \"value\": 7.4\n    },\n    {\n      \"month\": \"Feb\",\n      \"value\": 5.6\n    },\n    {\n      \"month\": \"Mär\",\n      \"value\": 23.8\n    },\n    {\n      \"month\": \"Apr\",\n      \"value\": 24.5\n    },\n    {\n      \"month\": \"Mai\",\n      \"value\": 11.1\n    },\n    {\n      \"month\": \"Jun\",\n      \"value\": 24.7\n    },\n    {\n      \"month\": \"Jul\",\n      \"value\": 22.8\n    },\n    {\n      \"month\": \"Aug\",\n      \"value\": 18.8\n    },\n    {\n      \"month\": \"Sep\",\n      \"value\": 13.1\n    },\n    {\n      \"month\": \"Okt\",\n      \"value\": 17.7\n    },\n    {\n      \"month\": \"Nov\",\n      \"value\": 16.8\n    },\n    {\n      \"month\": \"Dez\",\n      \"value\": 13.1\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "time_series_monthly",
+    "component": "BarChart"
+  }
+}

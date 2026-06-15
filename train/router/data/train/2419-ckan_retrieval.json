@@ -1,0 +1,21 @@
+{
+  "id": "retrieval_sft_train_00991_0",
+  "source": "train/retrieval/data/tool_result_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Staudauer gab es in Landsberger Straße im Jahr 2024?"
+    }
+  ],
+  "metadata": {
+    "router_stage": "initial_retrieval",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "scalar",
+    "component": "MetricGrid",
+    "source_dataset": "openui_lang",
+    "source_index": 991,
+    "task": "generate_tool_result"
+  }
+}

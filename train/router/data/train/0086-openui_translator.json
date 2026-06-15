@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00720_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Einnahmen räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"finance_budget\",\n  \"metric\": \"Einnahmen\",\n  \"location\": \"Donau\",\n  \"year\": 2025,\n  \"unit\": \"Mio. €\",\n  \"values\": [\n    {\n      \"district\": \"Sendling\",\n      \"value\": 2957\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 6598\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 5380\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 8574\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 1651\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 4376\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 1138\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 6496\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 2365\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 2078\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "finance_budget",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

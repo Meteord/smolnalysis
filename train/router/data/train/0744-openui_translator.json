@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00081_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie viele Niederschlag gab es in Bogenhausen im Jahr 2025?\n\nTool result:\n{\n  \"domain\": \"weather\",\n  \"metric\": \"Niederschlag\",\n  \"location\": \"Bogenhausen\",\n  \"year\": 2025,\n  \"aggregation\": \"sum\",\n  \"value\": 174,\n  \"unit\": \"mm\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "weather",
+    "data_shape": "scalar",
+    "component": "MetricGrid"
+  }
+}

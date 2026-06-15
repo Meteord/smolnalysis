@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00747_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie groß ist der Anteil von Nitrat in Maxvorstadt?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Nitrat\",\n  \"location\": \"Maxvorstadt\",\n  \"year\": 2022,\n  \"value\": 71,\n  \"max\": 100,\n  \"unit\": \"%\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "percentage",
+    "component": "MetricGrid"
+  }
+}

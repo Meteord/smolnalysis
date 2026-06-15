@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_01072_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Vergleiche Durchschnittsgeschwindigkeit in Isar in 2021 mit 2020.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Durchschnittsgeschwindigkeit\",\n  \"location\": \"Isar\",\n  \"current\": {\n    \"year\": 2021,\n    \"value\": 53.4\n  },\n  \"previous\": {\n    \"year\": 2020,\n    \"value\": 54.9\n  },\n  \"unit\": \"km/h\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

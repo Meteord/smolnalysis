@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00066_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Wanderungssaldo in Berlin über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"population\",\n  \"metric\": \"Wanderungssaldo\",\n  \"location\": \"Berlin\",\n  \"year\": 2021,\n  \"value\": 13507,\n  \"threshold\": 15000,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"Personen\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "population",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

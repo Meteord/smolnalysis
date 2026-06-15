@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00840_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeige mir Fahrzeuganzahl je Stadtbezirk in Rhein.\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"Fahrzeuganzahl\",\n  \"location\": \"Rhein\",\n  \"year\": 2021,\n  \"unit\": \"Fahrzeuge\",\n  \"values\": [\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 69791\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 16947\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 9960\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 18686\n    },\n    {\n      \"district\": \"Schwabing-Freimann\",\n      \"value\": 50686\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 45417\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 73139\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 64929\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 27331\n    },\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 39247\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

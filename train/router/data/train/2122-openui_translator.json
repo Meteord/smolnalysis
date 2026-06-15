@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00826_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ist Gelöster Sauerstoff in Donau über dem Grenzwert?\n\nTool result:\n{\n  \"domain\": \"water_quality\",\n  \"metric\": \"Gelöster Sauerstoff\",\n  \"location\": \"Donau\",\n  \"year\": 2024,\n  \"value\": 5.0,\n  \"threshold\": 6.0,\n  \"status\": \"normal\",\n  \"severity\": \"success\",\n  \"unit\": \"mg/l\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "water_quality",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

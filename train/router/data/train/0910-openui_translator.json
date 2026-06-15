@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00936_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Prüfe den Grenzwert für Netzlast in Donau.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Donau\",\n  \"year\": 2018,\n  \"value\": 781,\n  \"threshold\": 700,\n  \"status\": \"exceeded\",\n  \"severity\": \"warning\",\n  \"unit\": \"MW\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "threshold",
+    "component": "Notice"
+  }
+}

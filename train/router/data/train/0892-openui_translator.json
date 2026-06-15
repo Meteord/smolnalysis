@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00293_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich Netzlast in Sendling in der letzten Woche entwickelt?\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Netzlast\",\n  \"location\": \"Sendling\",\n  \"time_granularity\": \"daily\",\n  \"unit\": \"MW\",\n  \"values\": [\n    {\n      \"date\": \"2023-06-13\",\n      \"value\": 623\n    },\n    {\n      \"date\": \"2023-06-14\",\n      \"value\": 675\n    },\n    {\n      \"date\": \"2023-06-15\",\n      \"value\": 712\n    },\n    {\n      \"date\": \"2023-06-16\",\n      \"value\": 638\n    },\n    {\n      \"date\": \"2023-06-17\",\n      \"value\": 695\n    },\n    {\n      \"date\": \"2023-06-18\",\n      \"value\": 649\n    },\n    {\n      \"date\": \"2023-06-19\",\n      \"value\": 540\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "time_series_daily",
+    "component": "Histogram"
+  }
+}

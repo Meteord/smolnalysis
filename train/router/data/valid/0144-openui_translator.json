@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00460_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Visualisiere Solarerzeugung räumlich nach Stadtbezirk.\n\nTool result:\n{\n  \"domain\": \"energy\",\n  \"metric\": \"Solarerzeugung\",\n  \"location\": \"Moosach\",\n  \"year\": 2020,\n  \"unit\": \"MWh\",\n  \"values\": [\n    {\n      \"district\": \"Maxvorstadt\",\n      \"value\": 128\n    },\n    {\n      \"district\": \"Neuhausen-Nymphenburg\",\n      \"value\": 1722\n    },\n    {\n      \"district\": \"Au-Haidhausen\",\n      \"value\": 1278\n    },\n    {\n      \"district\": \"Sendling\",\n      \"value\": 1671\n    },\n    {\n      \"district\": \"Giesing\",\n      \"value\": 631\n    },\n    {\n      \"district\": \"Moosach\",\n      \"value\": 2769\n    },\n    {\n      \"district\": \"Pasing-Obermenzing\",\n      \"value\": 2184\n    },\n    {\n      \"district\": \"Laim\",\n      \"value\": 476\n    },\n    {\n      \"district\": \"Bogenhausen\",\n      \"value\": 388\n    }\n  ]\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "energy",
+    "data_shape": "geo_values",
+    "component": "BarChart"
+  }
+}

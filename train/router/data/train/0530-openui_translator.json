@@ -1,0 +1,18 @@
+{
+  "id": "openui_sft_train_00432_0",
+  "source": "train/openui_lang/data/openui_sft_train.jsonl",
+  "label": "openui_translator",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Wie hat sich ÖPNV-Verspätung in Elbe gegenüber 2017 verändert?\n\nTool result:\n{\n  \"domain\": \"traffic\",\n  \"metric\": \"ÖPNV-Verspätung\",\n  \"location\": \"Elbe\",\n  \"current\": {\n    \"year\": 2018,\n    \"value\": 7\n  },\n  \"previous\": {\n    \"year\": 2017,\n    \"value\": 6\n  },\n  \"unit\": \"min\"\n}"
+    }
+  ],
+  "metadata": {
+    "router_stage": "openui_translation",
+    "source_split": "train",
+    "domain": "traffic",
+    "data_shape": "comparison",
+    "component": "BarChart"
+  }
+}

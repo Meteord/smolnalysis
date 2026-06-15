@@ -1,0 +1,14 @@
+{
+  "id": "general_combo_00841",
+  "source": "synthetic_general",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Outline a naming convention in two sentences."
+    }
+  ],
+  "metadata": {
+    "router_stage": "base_chat"
+  }
+}
