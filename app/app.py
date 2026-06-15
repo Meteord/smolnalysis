@@ -50,6 +50,14 @@ DEFAULT_TEMPERATURE = float(os.getenv("SMOLNALYSIS_MINICPM_TEMPERATURE", "0.7"))
 DEFAULT_TOP_P = float(os.getenv("SMOLNALYSIS_MINICPM_TOP_P", "0.95"))
 DEFAULT_TOP_K = int(os.getenv("SMOLNALYSIS_MINICPM_TOP_K", "64"))
 LOAD_IN_4BIT = os.getenv("SMOLNALYSIS_MINICPM_LOAD_IN_4BIT", "true").casefold() not in {"0", "false", "no", "off"}
+EXAMPLE_PROMPTS = [
+    ["Erstelle ein Monatsdiagramm für Bearbeitungszeit in Isar."],
+    ["Zeige mir Heizbedarf pro Monat für 2023 in Bürgerbüro Pasing."],
+    ["Welche Werte gibt es für Einwohner in den Bezirken?"],
+    ["Prüfe den Grenzwert für Stromverbrauch in Bogenhausen."],
+    ["Liste die Werte nach Dienststelle auf."],
+    ["Summarize a Python function for a teammate."],
+]
 
 OPENUI_PREVIEW_CSS = """
 .preview { border: 1px solid #d7dde8; border-radius: 8px; padding: 14px; background: #fff; color: #111827; }
@@ -231,6 +239,7 @@ with gr.Blocks(title="smolnalysis") as app:
         )
         send = gr.Button("Send", variant="primary", scale=1)
         clear = gr.Button("Clear", scale=1)
+    gr.Examples(examples=EXAMPLE_PROMPTS, inputs=prompt)
 
     prompt.submit(submit_message, [prompt, chatbot, model_messages], [prompt, chatbot, model_messages])
     send.click(submit_message, [prompt, chatbot, model_messages], [prompt, chatbot, model_messages])
