@@ -4,8 +4,10 @@ import html
 import json
 import logging
 import os
+import sys
 import time
 from functools import lru_cache
+from pathlib import Path
 from typing import Any
 
 import gradio as gr
@@ -26,10 +28,14 @@ except ImportError:
 
 try:
     from .backend.smolnalysis_model_wrapper import SmolnalysisMoE
-    from .openui_support import OpenUIValidationError, parse_openui_lang, render_openui_error, render_openui_value
 except ImportError:
     from backend.smolnalysis_model_wrapper import SmolnalysisMoE
-    from openui_support import OpenUIValidationError, parse_openui_lang, render_openui_error, render_openui_value
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from openui_adapter_demo import render_component_preview  # type: ignore  # noqa: E402
 
 
 load_dotenv()
@@ -45,29 +51,33 @@ DEFAULT_TOP_P = float(os.getenv("SMOLNALYSIS_MINICPM_TOP_P", "0.95"))
 DEFAULT_TOP_K = int(os.getenv("SMOLNALYSIS_MINICPM_TOP_K", "64"))
 LOAD_IN_4BIT = os.getenv("SMOLNALYSIS_MINICPM_LOAD_IN_4BIT", "true").casefold() not in {"0", "false", "no", "off"}
 
-
-def _renderer_head() -> str:
-    return """
-<script>
-(() => {
-  const loadRenderer = () => {
-    if (window.SmolnalysisOpenUIRenderer) {
-      window.SmolnalysisOpenUIRenderer.mountAll();
-      return;
-    }
-    if (document.querySelector("script[data-smolnalysis-openui-renderer]")) return;
-    const script = document.createElement("script");
-    script.src = "/gradio_api/file=app/static/openui-renderer.js";
-    script.dataset.smolnalysisOpenuiRenderer = "true";
-    document.head.appendChild(script);
-  };
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", loadRenderer, { once: true });
-  } else {
-    loadRenderer();
-  }
-})();
-</script>
+OPENUI_PREVIEW_CSS = """
+.preview { border: 1px solid #d7dde8; border-radius: 8px; padding: 14px; background: #fff; color: #111827; }
+.preview, .preview * { color: #111827; }
+.preview h2 { margin: 0 0 10px; font-size: 18px; color: #0f172a; }
+.preview p { color: #334155; }
+.insight, .chart-preview, .table-preview { background: #fff; color: #111827; }
+.insight { border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+.insight p, .chart-preview p { color: #334155; margin: 0 0 10px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.stat { border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; display: grid; gap: 3px; background: #f8fafc; }
+.stat span, .stat small { color: #475569; font-size: 12px; }
+.stat strong { color: #0f172a; font-size: 20px; }
+.bar-row { display: grid; grid-template-columns: minmax(72px, 150px) 1fr minmax(72px, 120px); gap: 8px; align-items: center; margin: 8px 0; }
+.bar-row span, .bar-row b { color: #1f2937; font-size: 12px; overflow-wrap: anywhere; }
+.bar-row div, .progress { height: 14px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+.bar-row i, .progress i { display: block; height: 100%; background: #2563eb; border-radius: 999px; }
+.alert.warning { border-color: #f59e0b; background: #fffbeb; }
+.alert.danger { border-color: #ef4444; background: #fef2f2; }
+.alert.success { border-color: #10b981; background: #ecfdf5; }
+.preview table { width: 100%; border-collapse: collapse; }
+.preview th { color: #111827; border-bottom: 1px solid #cbd5e1; padding: 7px 6px; font-size: 13px; text-align: left; }
+.preview td { color: #1f2937; border-top: 1px solid #e5e7eb; padding: 7px 6px; font-size: 13px; }
+.preview td:nth-child(2), .preview td:nth-child(3) { text-align: right; }
+.histogram { display: flex; align-items: end; gap: 4px; height: 160px; padding-top: 8px; }
+.histogram-bar { flex: 1; min-width: 8px; background: #2563eb; border-radius: 4px 4px 0 0; }
+.error { border-color: #ef4444; background: #fef2f2; }
+.error pre { white-space: pre-wrap; }
 """
 
 
@@ -104,14 +114,7 @@ def _css() -> str:
   color: #64748b;
   font-size: 12px;
 }
-.openui-host [data-openui-mount]:empty::before {
-  content: "Rendering OpenUI...";
-  display: block;
-  border: 1px dashed #cbd5e1;
-  border-radius: 8px;
-  padding: 12px;
-  color: #64748b;
-}
+""" + OPENUI_PREVIEW_CSS + """
 </style>
 """
 
@@ -151,17 +154,10 @@ def _is_openui_lang(content: str) -> bool:
 
 
 def _openui_mount_html(openui_lang: str) -> str:
-    try:
-        parsed = parse_openui_lang(openui_lang)
-        value = render_openui_value(parsed, openui_lang)
-    except OpenUIValidationError as exc:
-        value = render_openui_error(openui_lang, str(exc))
-    encoded = html.escape(str(value.get("encoded") or ""))
+    rendered = render_component_preview(openui_lang)
     source = html.escape(openui_lang)
     return (
-        '<div class="smol-render-card openui-host">'
-        f'<div data-openui-mount data-openui-encoded="{encoded}"></div>'
-        "</div>"
+        f'<div class="smol-render-card">{rendered}</div>'
         '<details class="smol-openui-source">'
         "<summary>OpenUI Lang</summary>"
         f"<pre>{source}</pre>"
@@ -208,7 +204,6 @@ def clear_chat() -> tuple[list[dict[str, Any]], list[dict[str, str]], str]:
 with gr.Blocks(title="smolnalysis") as app:
     gr.HTML(
         _css()
-        + _renderer_head()
         + """
         <div class="smol-shell">
           <h1 class="smol-title">smolnalysis</h1>
