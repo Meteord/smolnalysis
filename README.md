@@ -10,6 +10,13 @@ app_file: app.py
 pinned: false
 license: mit
 short_description: Interactive open data analysis app for CKAN datasets.
+tags:
+  - track:backyard
+  - sponsor:openbmb
+  - achievement:offgrid
+  - achievement:welltuned
+  - achievement:offbrand
+  - achievement:fieldnotes
 ---
 
 # smolnalysis
