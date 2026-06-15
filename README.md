@@ -13,6 +13,7 @@ short_description: Interactive open data analysis app for CKAN datasets.
 tags:
   - track:backyard
   - sponsor:openbmb
+  - sponsor:modal
   - achievement:offgrid
   - achievement:welltuned
   - achievement:offbrand
@@ -33,12 +34,14 @@ The app runs in Gradio Server Mode with a custom OpenUI chat frontend. Gradio pr
 - Source code: [Meteord/smolnalysis on GitHub](https://github.com/Meteord/smolnalysis)
 - Demo video: [In github](https://github.com/Meteord/smolnalysis/blob/main/demo.mov)
 - Field notes (German): [Build Small Hackathon Blog Post](https://ki.muenchen.de/blog/2026-06-15-build-small-hackathon)
-- Models:
+- Models (all below 2B and 4Bit quantized and we therefore want to participate in the Tiny Titan challenge)
   - Base model: [MiniCPM5-1B](https://huggingface.co/openbmb/MiniCPM5-1B)
   - Fine-tuned LoRA adapters:
     - [MiniCPM5-1B Adapter für CKAN Retrieval](https://huggingface.co/build-small-hackathon/smolnalysis-translation-minicpm5-lora)
     - [MiniCPM5-1B Adapter für OpenUI-Lang Generation](https://huggingface.co/build-small-hackathon/smolnalysis-generation-minicpm5-lora)
 - Contributors: `illuminate25` and `Meteord`
+- [Social Media Post](https://www.linkedin.com/posts/michael-jaumann-a4736a263_think-big-war-gesternsebastian-berger-und-share-7472425559524950018-R1Qi/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECow1cBepLyGVVeRVQlppPim4o-EHvxmoM)
+- Modal-Challenge: [Our Documentation, how we used modal (German)](https://ki.muenchen.de/blog/2026-06-15-build-small-hackathon#training)
 
 ## How It Works
 
