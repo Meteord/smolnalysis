@@ -15,6 +15,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_ROUTER_DIR = REPO_ROOT / "train" / "router" / "outputs" / "router-mlp"
 ROUTER_SOURCE = REPO_ROOT / "train" / "router" / "router_mlp.py"
 DEFAULT_TOKENIZER_MODEL_ID = "openbmb/MiniCPM5-1B"
+DEFAULT_ROUTER_REPO_ID = "build-small-hackathon/smolnalysis-adapter-router"
 
 
 @dataclass(frozen=True)
@@ -29,13 +30,46 @@ def _truthy(value: str | None) -> bool:
     return str(value or "").strip().casefold() in {"1", "true", "yes", "on"}
 
 
+def _falsey(value: str | None) -> bool:
+    return str(value or "").strip().casefold() in {"0", "false", "no", "off"}
+
+
 def router_enabled() -> bool:
-    return _truthy(os.getenv("SMOLNALYSIS_ROUTER_ENABLED"))
+    return not _falsey(os.getenv("SMOLNALYSIS_ROUTER_ENABLED"))
 
 
 def router_output_dir() -> Path:
     path = Path(os.getenv("SMOLNALYSIS_ROUTER_OUTPUT_DIR", str(DEFAULT_ROUTER_DIR))).expanduser()
     return path if path.is_absolute() else REPO_ROOT / path
+
+
+def router_repo_id() -> str:
+    return os.getenv("SMOLNALYSIS_ROUTER_REPO_ID", DEFAULT_ROUTER_REPO_ID).strip()
+
+
+def _router_artifacts_present(path: Path) -> bool:
+    return (path / "router_mlp.pt").exists() and (path / "config.json").exists()
+
+
+def _router_artifact_dir() -> Path:
+    output_dir = router_output_dir()
+    if _router_artifacts_present(output_dir):
+        return output_dir
+
+    repo_id = router_repo_id()
+    if not repo_id:
+        return output_dir
+
+    from huggingface_hub import snapshot_download
+
+    token = os.getenv("HF_TOKEN") or os.getenv("HUGGING_FACE_HUB_TOKEN")
+    snapshot = snapshot_download(
+        repo_id=repo_id,
+        repo_type="model",
+        token=token,
+        allow_patterns=["config.json", "router_mlp.pt", "metrics.json"],
+    )
+    return Path(snapshot)
 
 
 def router_max_length() -> int:
@@ -96,11 +130,12 @@ def _tokenize(tokenizer: Any, messages: list[dict[str, str]], max_length: int):
 
 def predict_role(messages: list[dict[str, str]], *, model_id: str) -> RouterPrediction | None:
     if not router_enabled():
+        logger.info("router disabled by SMOLNALYSIS_ROUTER_ENABLED")
         return None
 
-    output_dir = router_output_dir()
-    if not (output_dir / "router_mlp.pt").exists() or not (output_dir / "config.json").exists():
-        logger.warning("router enabled but artifacts are missing in %s", output_dir)
+    output_dir = _router_artifact_dir()
+    if not _router_artifacts_present(output_dir):
+        logger.warning("router artifacts are missing in %s", output_dir)
         return None
 
     try:
@@ -124,7 +159,7 @@ def predict_role(messages: list[dict[str, str]], *, model_id: str) -> RouterPred
             source=str(output_dir),
         )
     except Exception:
-        logger.exception("router prediction failed; falling back to heuristic routing")
+        logger.exception("router prediction failed")
         return None
 
 
@@ -134,7 +169,8 @@ def runtime_status() -> dict[str, Any]:
     return {
         "enabled": router_enabled(),
         "output_dir": str(output_dir),
-        "artifacts_present": (output_dir / "router_mlp.pt").exists() and (output_dir / "config.json").exists(),
+        "repo_id": router_repo_id(),
+        "artifacts_present": _router_artifacts_present(output_dir),
         "max_length": router_max_length(),
         "min_confidence": router_min_confidence(),
         "cache": {

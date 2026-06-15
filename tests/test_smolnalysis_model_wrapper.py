@@ -70,7 +70,7 @@ class FakePeftModel:
 
 
 class SmolnalysisMoETests(TestCase):
-    def build_wrapper(self):
+    def build_wrapper(self, router_role=None):
         import backend.smolnalysis_model_wrapper as wrapper
 
         fake_model = FakeModel()
@@ -91,6 +91,14 @@ class SmolnalysisMoETests(TestCase):
         model = wrapper.SmolnalysisMoE(
             load_in_4bit=False,
         )
+        if router_role is not None:
+            model._router_decision = lambda messages: wrapper.RouterDecision(
+                role=router_role,
+                adapter=model._adapter_from_label(router_role),
+                confidence=1.0,
+                logits=[],
+                source="test",
+            )
         return model, fake_model
 
     def test_forward_uses_explicit_adapter_and_supplied_messages(self) -> None:
@@ -160,23 +168,69 @@ class SmolnalysisMoETests(TestCase):
     def test_generate_chat_returns_hardcoded_hi_response(self) -> None:
         model, fake_model = self.build_wrapper()
 
-        result = model.generate_chat([{"role": "user", "content": "hi"}], temperature=0.0)
+        result = model.generate_chat([{"role": "user", "content": "hi"}], adapter=None, temperature=0.0)
 
         self.assertEqual(result["content"], "hi, there how can i help you?")
         self.assertEqual(result["tool_result"], "")
         self.assertEqual(result["stages"], [{"adapter": None, "input": "hardcoded_greeting"}])
         self.assertEqual(fake_model.generated_input_history, [])
 
-    def test_generate_chat_runs_retrieval_then_openui_with_system_prompts(self) -> None:
-        model, fake_model = self.build_wrapper()
+    def test_generate_chat_runs_retrieval_then_openui_with_adapter_inputs(self) -> None:
+        model, fake_model = self.build_wrapper(router_role="ckan_retrieval")
 
         result = model.generate_chat([{"role": "user", "content": "Show temperature in Munich"}], temperature=0.0)
 
         self.assertEqual(result["content"], "99 100")
         self.assertEqual(result["tool_result"], "99 100")
         self.assertEqual([stage["adapter"] for stage in result["stages"]], ["ckan_retrieval", "openui_translator"])
-        self.assertEqual(fake_model.generated_input_history[0].tolist(), [[1, 2]])
+        self.assertEqual(fake_model.generated_input_history[0].tolist(), [[1]])
         self.assertEqual(fake_model.generated_input_history[1].tolist(), [[1, 2]])
+
+    def test_generate_chat_can_force_retrieval_without_openui_followup(self) -> None:
+        model, fake_model = self.build_wrapper()
+
+        result = model.generate_chat(
+            [{"role": "user", "content": "Show temperature in Munich"}],
+            adapter="ckan_retrieval",
+            render_openui_after_retrieval=False,
+            temperature=0.0,
+        )
+
+        self.assertEqual(result["content"], "99 100")
+        self.assertEqual(result["tool_result"], "99 100")
+        self.assertEqual(result["stages"], [{"adapter": "ckan_retrieval", "input": "user_message"}])
+        self.assertEqual(len(fake_model.generated_input_history), 1)
+        self.assertEqual(fake_model.active_adapter, "ckan_retrieval")
+
+    def test_generate_chat_uses_openui_directly_when_tool_result_is_present(self) -> None:
+        model, fake_model = self.build_wrapper(router_role="openui_translator")
+
+        result = model.generate_chat(
+            [{"role": "user", "content": "Show temperature\n\nTool result:\n{\"value\": 12}"}],
+            temperature=0.0,
+        )
+
+        self.assertEqual(result["content"], "99 100")
+        self.assertEqual(result["tool_result"], "")
+        self.assertEqual(result["stages"], [{"adapter": "openui_translator", "input": "user_message_and_tool_result"}])
+        self.assertEqual(len(fake_model.generated_input_history), 1)
+        self.assertEqual(fake_model.generated_input_history[0].tolist(), [[1, 2]])
+        self.assertEqual(fake_model.active_adapter, "openui_translator")
+
+    def test_generate_chat_can_force_general_agent(self) -> None:
+        model, fake_model = self.build_wrapper()
+
+        result = model.generate_chat(
+            [{"role": "user", "content": "Explain virtualenvs"}],
+            adapter="general_agent",
+            temperature=0.0,
+        )
+
+        self.assertEqual(result["content"], "99 100")
+        self.assertEqual(result["tool_result"], "")
+        self.assertEqual(result["stages"], [{"adapter": None, "input": "messages"}])
+        self.assertEqual(model.active_adapter, None)
+        self.assertEqual(len(fake_model.generated_input_history), 1)
 
     def test_adapter_choice_uses_exact_router_labels(self) -> None:
         model, _fake_model = self.build_wrapper()

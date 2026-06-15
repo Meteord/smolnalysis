@@ -25,12 +25,12 @@ DEFAULT_OUTPUT_DIR = Path("train/router/outputs/router-mlp")
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Train a lightweight adapter-router MLP over tokenizer input_ids.")
     parser.add_argument("--model-name", default=DEFAULT_MODEL)
+    parser.add_argument("--encoder-model-name", default=None)
     parser.add_argument("--train-data", type=Path, default=DATA_DIR / "train")
     parser.add_argument("--eval-data", type=Path, default=DATA_DIR / "valid")
     parser.add_argument("--test-data", type=Path, default=DATA_DIR / "test")
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--max-length", type=int, default=512)
-    parser.add_argument("--embedding-dim", type=int, default=128)
     parser.add_argument("--hidden-dim", type=int, default=128)
     parser.add_argument("--dropout", type=float, default=0.1)
     parser.add_argument("--learning-rate", type=float, default=2e-3)
@@ -122,22 +122,27 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
     test_dataset = RouterTrainingDataset(args.test_data, tokenizer, max_length=args.max_length)
 
     pad_token_id = getattr(tokenizer, "pad_token_id", None) or getattr(tokenizer, "eos_token_id", 0) or 0
+    encoder_model_name = args.encoder_model_name or args.model_name
     config = RouterMLPConfig(
         vocab_size=tokenizer_vocab_size(tokenizer),
-        embedding_dim=args.embedding_dim,
+        embedding_dim=None,
         hidden_dim=args.hidden_dim,
         num_labels=len(ROUTER_LABELS),
         dropout=args.dropout,
         pad_token_id=int(pad_token_id),
+        encoder_model_name=encoder_model_name,
+        architecture="frozen_encoder",
     )
     model = build_router_mlp(config)
+    config.encoder_hidden_size = int(getattr(model.encoder.config, "hidden_size", 0) or 0)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
     train_loader = build_loader(train_dataset, tokenizer, args.batch_size, shuffle=True)
     eval_loader = build_loader(eval_dataset, tokenizer, args.batch_size, shuffle=False)
     test_loader = build_loader(test_dataset, tokenizer, args.batch_size, shuffle=False)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay)
+    trainable_parameters = [parameter for parameter in model.parameters() if parameter.requires_grad]
+    optimizer = torch.optim.AdamW(trainable_parameters, lr=args.learning_rate, weight_decay=args.weight_decay)
 
     if args.dry_run:
         first = train_dataset[0]
@@ -149,6 +154,9 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
             "label": int(first["labels"].item()),
             "label_name": ID_TO_LABEL[int(first["labels"].item())],
             "vocab_size": config.vocab_size,
+            "architecture": config.architecture,
+            "encoder_model_name": config.encoder_model_name,
+            "encoder_hidden_size": config.encoder_hidden_size,
             "device": str(device),
         }
         print(json.dumps(summary, indent=2))
@@ -183,10 +191,14 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
         print(json.dumps(epoch_metrics))
         if eval_metrics["loss"] < best_eval:
             best_eval = eval_metrics["loss"]
-            best_state = {key: value.detach().cpu().clone() for key, value in model.state_dict().items()}
+            best_state = {
+                key: value.detach().cpu().clone()
+                for key, value in model.state_dict().items()
+                if not key.startswith("encoder.")
+            }
 
     if best_state is not None:
-        model.load_state_dict(best_state)
+        model.load_state_dict(best_state, strict=False)
     test_metrics = evaluate(model, test_loader, device)
     eval_metrics = evaluate(model, eval_loader, device)
     metrics = {
@@ -197,7 +209,12 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
     }
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    torch.save(model.state_dict(), args.output_dir / "router_mlp.pt")
+    router_state = {
+        key: value.detach().cpu()
+        for key, value in model.state_dict().items()
+        if not key.startswith("encoder.")
+    }
+    torch.save(router_state, args.output_dir / "router_mlp.pt")
     (args.output_dir / "config.json").write_text(json.dumps(config.to_dict(), indent=2) + "\n", encoding="utf-8")
     (args.output_dir / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(metrics, indent=2))

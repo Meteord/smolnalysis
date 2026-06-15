@@ -35,7 +35,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from openui_adapter_demo import render_component_preview  # type: ignore  # noqa: E402
+from openui_adapter_demo import clean_component_output, render_component_preview  # type: ignore  # noqa: E402
 
 
 load_dotenv()
@@ -140,13 +140,16 @@ def _run_model_chat(messages: list[dict[str, str]]) -> tuple[str, dict[str, Any]
     model = _model()
     started = time.perf_counter()
     result = model.generate_chat(messages, **_generation_kwargs())
+    content = str(result["content"])
+    if any(stage.get("adapter") == "openui_translator" for stage in result.get("stages", [])):
+        content = clean_component_output(content)
     trace = {
         "stages": result["stages"],
         "duration_ms": round((time.perf_counter() - started) * 1000, 1),
     }
     if result.get("tool_result"):
         trace["tool_result"] = result["tool_result"]
-    return str(result["content"]), trace
+    return content, trace
 
 
 def _is_openui_lang(content: str) -> bool:
