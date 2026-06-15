@@ -10,13 +10,73 @@ app_file: app.py
 pinned: false
 license: mit
 short_description: Interactive open data analysis app for CKAN datasets.
+tags:
+  - track:backyard
+  - sponsor:openbmb
+  - achievement:offgrid
+  - achievement:welltuned
+  - achievement:offbrand
+  - achievement:fieldnotes
 ---
 
-# smolnalysis
+# 📊 smolnalysis
 
-Interactive open data chat for the build small hackathon.
+**Ask a question about open data. Get UI generated on the fly. All powered by small expert models.**
 
-The current app is intentionally simple: a Gradio Blocks chat frontend backed by `SmolnalysisMoE`. OpenUI-Lang returned by the model is rendered inside the chat with the lightweight OpenUI renderer bundle.
+`smolnalysis` is an interactive open data agent built for the Build Small Hackathon. It combines a fine-tuned MiniCPM-1B language model with OpenUI-Lang code generation to create dynamic, data-driven interfaces directly from natural language questions about CKAN datasets.
+
+The app runs in Gradio Server Mode with a custom OpenUI chat frontend. Gradio provides the Python API server and Space-friendly runtime, while OpenUI drives the browser chat experience.
+
+## Submission Links
+
+- Live Space: [https://huggingface.co/spaces/build-small-hackathon/smolnalysis](https://huggingface.co/spaces/build-small-hackathon/smolnalysis)
+- GitHub repo: [https://github.com/Meteord/smolnalysis](https://github.com/Meteord/smolnalysis)
+- Field notes (German): [Build Small Hackathon Blog Post](https://ki.muenchen.de/blog/2026-06-15-build-small-hackathon)
+- Fine-tuned model: [MiniCPM5-Finetune fur CKAN Retrieval](https://huggingface.co/build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora)
+
+## How It Works
+
+smolnalysis combines two key ideas:
+
+### 1. OpenUI-Lang for Token-Efficient UI Generation
+
+Instead of generating full HTML or JSON UI specifications, the app uses [OpenUI-Lang](https://www.openui.com/docs/openui-lang/specification-v05), a lightweight declarative language for component-based interfaces.
+
+```text
+root = Stack([header, cards, footer])
+header = CardHeader("Weather in Munich", "Current Forecast")
+cards = Stack([tempCard, windCard, humCard], "row", "m", "stretch", "start", true)
+tempCard = Card([CardHeader("Temperature", "Partly Cloudy"), TextContent("14 C", "large-heavy")], "card")
+windCard = Card([CardHeader("Wind", "From Northwest"), TextContent("18 km/h", "large-heavy")], "card")
+humCard = Card([CardHeader("Humidity", "Moderate"), TextContent("62%", "large-heavy")], "card")
+footer = Card([CardHeader("5-Day Forecast", ""), forecastChart], "sunk")
+```
+
+### 2. CKAN Integration with Specialist Adapters
+
+The app connects to CKAN portals such as [opendata.muenchen.de](https://opendata.muenchen.de/), discovers relevant datasets, and uses role-specific adapters to:
+
+- Parse natural language questions about datasets
+- Produce validated CKAN retrieval actions
+- Generate OpenUI-Lang from retrieved context
+
+## Architecture
+
+The system uses a role-based routing pattern:
+
+1. Query routing selects the most suitable role for the latest user message.
+2. MiniCPM-1B is used as the shared base model.
+3. Task-specific LoRA adapters specialize behavior without full model retraining.
+4. OpenUI-Lang output is rendered inline in the chat frontend.
+
+## Models Used
+
+| Component | Model | Parameters | Purpose |
+|-----------|-------|------------|---------|
+| Base LLM | [openbmb/MiniCPM5-1B](https://huggingface.co/openbmb/MiniCPM5-1B) | 1B | Core language understanding and generation |
+| CKAN adapter | LoRA adapter | ~8M | CKAN retrieval actions |
+| OpenUI adapter | LoRA adapter | ~8M | OpenUI-Lang generation |
+| Router | Lightweight classifier | Small | Role selection |
 
 ## Local Setup
 
@@ -24,36 +84,13 @@ The current app is intentionally simple: a Gradio Blocks chat frontend backed by
 uv venv
 uv sync
 npm install
-npm run build:openui-renderer
+npm run build:openui-chat
 uv run python app/app.py
 ```
 
 Open [http://127.0.0.1:7860/](http://127.0.0.1:7860/).
 
-## Chat Flow
-
-- `hi`: returns `hi, there how can i help you?`.
-- Any other input runs `ckan_retrieval`.
-- Retrieval generation receives only the latest user message.
-- The retrieval adapter output is passed with the user question to `openui_translator`.
-- If the final output is OpenUI-Lang, the Gradio chat renders it inline.
-
-## Frontend
-
-The old fullscreen React chat frontend was removed. The only remaining frontend bundle is the OpenUI renderer:
-
-- Source: `app/frontend/openui-renderer.jsx`
-- Built asset: `app/static/openui-renderer.js`
-
-Rebuild after renderer edits:
-
-```bash
-npm run build:openui-renderer
-```
-
 ## Runtime Configuration
-
-The shared MiniCPM base model defaults to `openbmb/MiniCPM5-1B`.
 
 Common settings:
 
@@ -63,10 +100,7 @@ SMOLNALYSIS_MINICPM_MAX_NEW_TOKENS=512
 SMOLNALYSIS_MINICPM_TEMPERATURE=0.7
 ```
 
-Adapter paths are local and fixed in `app/backend/adapter_registry.py`:
-
-- `ckan_retrieval`: `train/retrieval/outputs/tool-results-minicpm5-lora/checkpoint-260`
-- `openui_translator`: `train/openui_lang/outputs/openui-translate-mini-lora/checkpoint-160`
+Adapter defaults are configured in `app/backend/adapter_registry.py`.
 
 ## Useful Commands
 
@@ -74,6 +108,7 @@ Adapter paths are local and fixed in `app/backend/adapter_registry.py`:
 uv run python app/app.py
 uv run python -m unittest tests.test_smolnalysis_model_wrapper
 uv run python -m unittest tests.test_openui_adapter_demo
+npm run build:openui-chat
 npm run build:openui-renderer
 ```
 
@@ -81,3 +116,12 @@ npm run build:openui-renderer
 
 - Project vision and idea: [tasks/vision.md](tasks/vision.md)
 - Task tracker: [tasks/task_list.md](tasks/task_list.md)
+
+## Acknowledgements
+
+Special thanks to:
+
+- [Hugging Face](https://huggingface.co/) for Gradio, Spaces, and the hackathon
+- [OpenBMB](https://www.openbmb.cn/) for MiniCPM and sponsorship
+- [Modal](https://modal.com) for providing training credits
+- The Build Small Hackathon organizers and community
