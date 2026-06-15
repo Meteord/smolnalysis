@@ -28,7 +28,7 @@ jobs:
       - name: Build frontend assets
         run: |
           npm ci
-          npm run build:openui-chat
+          npm run build:openui-renderer
 
       - name: Prepare Space snapshot
         run: |
