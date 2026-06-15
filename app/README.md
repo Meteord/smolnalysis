@@ -108,6 +108,17 @@ SMOLNALYSIS_LLM_<ROLE>_API_KEY=...
 
 The current `/api/chat` path runs the CKAN retrieval loop for dataset search prompts and streams OpenUI-Lang progress as OpenAI-compatible SSE chunks. The `ckan_tool` environment variable names remain supported as compatibility aliases, but runtime logic normalizes that role to `ckan_retrieval`.
 
+## Adapter Router
+
+The MiniCPM backends can route `adapter="auto"` through the trained router MLP at `train/router/outputs/router-mlp` instead of the keyword heuristic:
+
+```bash
+SMOLNALYSIS_ROUTER_ENABLED=true
+SMOLNALYSIS_ROUTER_OUTPUT_DIR=train/router/outputs/router-mlp
+```
+
+The router uses the MiniCPM tokenizer and expects `router_mlp.pt` plus `config.json` in the output directory. If artifacts are missing, confidence is below `SMOLNALYSIS_ROUTER_MIN_CONFIDENCE`, or inference fails, the app falls back to the existing heuristic. The current training labels are `general_agent`, `ckan_retrieval`, and `openui_translator`; retrain with `data_analysis` if you want the router to choose that role directly.
+
 ## Hugging Face Tracing
 
 Set `SMOLNALYSIS_HF_TRACING_ENABLED=true` to emit OpenTelemetry spans around the Hugging Face runtime path:

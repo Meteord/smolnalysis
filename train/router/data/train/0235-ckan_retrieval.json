@@ -1,0 +1,11 @@
+{
+  "id": "ckan_harvested_inventory_scenarios_00638",
+  "source": "train/ckan/data/harvested_inventory_scenarios.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want to analyze Gesundheit."
+    }
+  ]
+}

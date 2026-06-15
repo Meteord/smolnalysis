@@ -1,0 +1,11 @@
+{
+  "id": "ckan_scenarios_train_00161",
+  "source": "train/ckan/data/scenarios_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Do you have data about Gesundheit?"
+    }
+  ]
+}

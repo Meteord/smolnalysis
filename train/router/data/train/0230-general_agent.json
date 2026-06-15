@@ -1,0 +1,11 @@
+{
+  "id": "smalltalk_00008",
+  "source": "synthetic_smalltalk",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "who are you?"
+    }
+  ]
+}

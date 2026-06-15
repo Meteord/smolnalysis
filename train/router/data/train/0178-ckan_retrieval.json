@@ -1,0 +1,11 @@
+{
+  "id": "ckan_scenarios_train_00005",
+  "source": "train/ckan/data/scenarios_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ich möchte Bevölkerung analysieren."
+    }
+  ]
+}

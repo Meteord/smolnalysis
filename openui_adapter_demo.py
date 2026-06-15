@@ -160,7 +160,7 @@ def load_model_once(model_name: str, adapter: Path, load_in_4bit: bool) -> tuple
         trust_remote_code=True,
         torch_dtype=torch.bfloat16 if load_in_4bit else "auto",
         device_map="auto",
-        quantization_config=quantization_config,
+        #quantization_config=quantization_config,
     )
     model = PeftModel.from_pretrained(base_model, adapter)
     model.eval()

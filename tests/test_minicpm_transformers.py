@@ -4,6 +4,7 @@ import importlib
 import os
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 from unittest import TestCase, main
 from unittest.mock import patch
 
@@ -31,6 +32,7 @@ class MiniCpmTransformersTests(TestCase):
         self.assertEqual(status["model_hub_url"], "https://huggingface.co/openbmb/MiniCPM5-1B")
         self.assertFalse(status["eager_load"]["enabled"])
         self.assertEqual(status["cache"]["loaded_models"], 0)
+        self.assertFalse(status["router"]["enabled"])
         self.assertIn("ckan_retrieval", status["roles"])
         self.assertEqual(status["roles"]["ckan_retrieval"]["temperature"], 0.0)
         self.assertEqual(
@@ -68,6 +70,28 @@ class MiniCpmTransformersTests(TestCase):
         self.assertEqual(trace["backend"], "transformers")
         self.assertEqual(trace["cache"]["hit"], True)
         self.assertIn("cuda:0", trace["events"][-1]["detail"])
+
+    def test_auto_role_uses_router_prediction_when_enabled(self) -> None:
+        os.environ["SMOLNALYSIS_ROUTER_ENABLED"] = "true"
+        module = importlib.reload(importlib.import_module("backend.minicpm_transformers"))
+
+        with patch(
+            "backend.router_runtime.predict_role",
+            return_value=SimpleNamespace(role="openui_translator", confidence=0.91),
+        ) as predict_role:
+            role = module.route_role([{"role": "user", "content": "Find a dataset about bikes"}], adapter="auto")
+
+        self.assertEqual(role, "openui_translator")
+        predict_role.assert_called_once()
+
+    def test_auto_role_falls_back_to_heuristic_without_router_prediction(self) -> None:
+        os.environ["SMOLNALYSIS_ROUTER_ENABLED"] = "true"
+        module = importlib.reload(importlib.import_module("backend.minicpm_transformers"))
+
+        with patch("backend.router_runtime.predict_role", return_value=None):
+            role = module.route_role([{"role": "user", "content": "Find a dataset about bikes"}], adapter="auto")
+
+        self.assertEqual(role, "ckan_retrieval")
 
 
 if __name__ == "__main__":

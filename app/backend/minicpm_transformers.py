@@ -117,6 +117,15 @@ def route_role(messages: list[dict[str, str]], adapter: str | None = "auto") -> 
     if requested != "auto":
         return requested
 
+    try:
+        from . import router_runtime
+    except ImportError:
+        import router_runtime  # type: ignore
+
+    prediction = router_runtime.predict_role(messages, model_id=DEFAULT_MODEL_ID)
+    if prediction and prediction.role in ROLE_ENV_KEYS:
+        return prediction.role
+
     last_user_text = next(
         (message["content"] for message in reversed(messages) if message.get("role") == "user"),
         "",
@@ -314,6 +323,11 @@ def generate_chat_response_with_trace(
 
 def runtime_status() -> dict[str, Any]:
     cache = _load_model_for_role.cache_info()
+    try:
+        from . import router_runtime
+    except ImportError:
+        import router_runtime  # type: ignore
+
     roles = {}
     for role in ROLE_ENV_KEYS:
         config = role_config(role)
@@ -339,6 +353,7 @@ def runtime_status() -> dict[str, Any]:
             "hits": cache.hits,
             "misses": cache.misses,
         },
+        "router": router_runtime.runtime_status(),
         "eager_load": EAGER_LOAD_STATUS,
         "max_new_tokens": DEFAULT_MAX_NEW_TOKENS,
     }

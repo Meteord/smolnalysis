@@ -1,0 +1,11 @@
+{
+  "id": "ckan_harvested_inventory_scenarios_01378",
+  "source": "train/ckan/data/harvested_inventory_scenarios.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Show me useful data about Finanzen."
+    }
+  ]
+}

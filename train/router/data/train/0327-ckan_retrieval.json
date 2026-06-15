@@ -1,0 +1,11 @@
+{
+  "id": "ckan_scenarios_train_00024",
+  "source": "train/ckan/data/scenarios_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Zeig mir nützliche Daten zu Digitaler Zwilling München."
+    }
+  ]
+}

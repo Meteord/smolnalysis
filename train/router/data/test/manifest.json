@@ -1,0 +1,9 @@
+{
+  "split": "test",
+  "samples": 51,
+  "labels": {
+    "ckan_retrieval": 17,
+    "general_agent": 17,
+    "openui_translator": 17
+  }
+}

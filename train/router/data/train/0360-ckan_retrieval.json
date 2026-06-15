@@ -1,0 +1,11 @@
+{
+  "id": "ckan_harvested_inventory_scenarios_01783",
+  "source": "train/ckan/data/harvested_inventory_scenarios.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ich möchte Sitzplätze analysieren."
+    }
+  ]
+}

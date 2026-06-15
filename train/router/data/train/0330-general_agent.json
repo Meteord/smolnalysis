@@ -1,0 +1,11 @@
+{
+  "id": "smalltalk_00071",
+  "source": "synthetic_smalltalk",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Just checking in: erzähl mir einen witz"
+    }
+  ]
+}

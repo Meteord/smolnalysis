@@ -1,0 +1,11 @@
+{
+  "id": "ckan_multitool_eval_golden_00007",
+  "source": "train/ckan/data/multitool_eval_golden.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find the latest dataset."
+    }
+  ]
+}

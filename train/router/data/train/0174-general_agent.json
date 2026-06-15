@@ -1,0 +1,11 @@
+{
+  "id": "smalltalk_00112",
+  "source": "synthetic_smalltalk",
+  "label": "general_agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "No data task, just saying ok"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ckan_scenarios_train_00687",
+  "source": "train/ckan/data/scenarios_train.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Show me useful data about Machine Learning."
+    }
+  ]
+}

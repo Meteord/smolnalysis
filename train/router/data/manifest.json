@@ -1,0 +1,30 @@
+{
+  "per_label": 159,
+  "total": 477,
+  "splits": {
+    "train": {
+      "samples": 381,
+      "labels": {
+        "ckan_retrieval": 127,
+        "general_agent": 127,
+        "openui_translator": 127
+      }
+    },
+    "valid": {
+      "samples": 45,
+      "labels": {
+        "ckan_retrieval": 15,
+        "general_agent": 15,
+        "openui_translator": 15
+      }
+    },
+    "test": {
+      "samples": 51,
+      "labels": {
+        "ckan_retrieval": 17,
+        "general_agent": 17,
+        "openui_translator": 17
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ckan_harvested_scenarios_00064",
+  "source": "train/ckan/data/harvested_scenarios.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Search CKAN for klima data and pick useful tabular resources."
+    }
+  ]
+}

@@ -103,6 +103,15 @@ def route_role(messages: list[dict[str, str]], adapter: str | None = "auto") -> 
     if requested != "auto":
         return requested
 
+    try:
+        from . import router_runtime
+    except ImportError:
+        import router_runtime  # type: ignore
+
+    prediction = router_runtime.predict_role(messages, model_id=router_runtime.router_tokenizer_model_id())
+    if prediction and prediction.role in ROLE_ENV_KEYS:
+        return prediction.role
+
     last_user_text = next(
         (message["content"] for message in reversed(messages) if message.get("role") == "user"),
         "",
@@ -496,6 +505,11 @@ def generate_chat_response_with_trace(
 
 
 def runtime_status() -> dict[str, Any]:
+    try:
+        from . import router_runtime
+    except ImportError:
+        import router_runtime  # type: ignore
+
     roles = {}
     for role in ROLE_ENV_KEYS:
         config = role_config(role)
@@ -523,6 +537,7 @@ def runtime_status() -> dict[str, Any]:
         "model_family": "MiniCPM",
         "llama_cpp": llama_cpp_runtime_info(),
         "eager_load": EAGER_LOAD_STATUS,
+        "router": router_runtime.runtime_status(),
         "roles": roles,
         "n_ctx": DEFAULT_N_CTX,
         "n_gpu_layers": DEFAULT_N_GPU_LAYERS,

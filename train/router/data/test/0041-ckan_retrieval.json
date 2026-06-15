@@ -1,0 +1,11 @@
+{
+  "id": "ckan_harvested_scenarios_00028",
+  "source": "train/ckan/data/harvested_scenarios.jsonl",
+  "label": "ckan_retrieval",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I need open data about verkehr; inspect likely CKAN candidates. Limit the search to group=tran."
+    }
+  ]
+}

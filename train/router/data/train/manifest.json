@@ -1,0 +1,9 @@
+{
+  "split": "train",
+  "samples": 381,
+  "labels": {
+    "ckan_retrieval": 127,
+    "general_agent": 127,
+    "openui_translator": 127
+  }
+}
