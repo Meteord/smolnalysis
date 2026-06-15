@@ -29,11 +29,16 @@ The app runs in Gradio Server Mode with a custom OpenUI chat frontend. Gradio pr
 
 ## Submission Links
 
-- Live Space: [https://huggingface.co/spaces/build-small-hackathon/smolnalysis](https://huggingface.co/spaces/build-small-hackathon/smolnalysis)
-- GitHub repo: [https://github.com/Meteord/smolnalysis](https://github.com/Meteord/smolnalysis)
+- Live app: [smolnalysis on Hugging Face Spaces](https://huggingface.co/spaces/build-small-hackathon/smolnalysis)
+- Source code: [Meteord/smolnalysis on GitHub](https://github.com/Meteord/smolnalysis)
+- Demo video: [In github](https://github.com/Meteord/smolnalysis/blob/main/demo.mov)
 - Field notes (German): [Build Small Hackathon Blog Post](https://ki.muenchen.de/blog/2026-06-15-build-small-hackathon)
-- Fine-tuned model: [MiniCPM5-Finetune fur CKAN Retrieval](https://huggingface.co/build-small-hackathon/smolnalysis-ckan-retrieval-minicpm5-lora)
-- Contributors: `illuminate25` & `Meteord`
+- Models:
+  - Base model: [MiniCPM5-1B](https://huggingface.co/openbmb/MiniCPM5-1B)
+  - Fine-tuned LoRA adapters:
+    - [MiniCPM5-1B Adapter für CKAN Retrieval](https://huggingface.co/build-small-hackathon/smolnalysis-translation-minicpm5-lora)
+    - [MiniCPM5-1B Adapter für OpenUI-Lang Generation](https://huggingface.co/build-small-hackathon/smolnalysis-generation-minicpm5-lora)
+- Contributors: `illuminate25` and `Meteord`
 
 ## How It Works
 
