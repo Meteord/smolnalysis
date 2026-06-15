@@ -36,6 +36,7 @@ The app is a Gradio Server Mode app with a custom fullscreen OpenUI chat fronten
 - TODO Demo Video
 - TODO Sozial Media post
 - TODO Links zu den uploads von den Modellen
+- TODO names of Huggingfaces Teammates
 
 ## How It Works
 
