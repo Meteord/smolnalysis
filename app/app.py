@@ -53,12 +53,9 @@ DEFAULT_TOP_P = float(os.getenv("SMOLNALYSIS_MINICPM_TOP_P", "0.95"))
 DEFAULT_TOP_K = int(os.getenv("SMOLNALYSIS_MINICPM_TOP_K", "64"))
 LOAD_IN_4BIT = os.getenv("SMOLNALYSIS_MINICPM_LOAD_IN_4BIT", "true").casefold() not in {"0", "false", "no", "off"}
 EXAMPLE_PROMPTS = [
-    ["Erstelle ein Monatsdiagramm für Bearbeitungszeit in Isar."],
     ["Zeige mir Heizbedarf pro Monat für 2023 in Bürgerbüro Pasing."],
-    ["Welche Werte gibt es für Einwohner in den Bezirken?"],
     ["Prüfe den Grenzwert für Stromverbrauch in Bogenhausen."],
-    ["Liste die Werte nach Dienststelle auf."],
-    ["Summarize a Python function for a teammate."],
+    ["Say 'Hello World!' in Python"],
 ]
 
 OPENUI_PREVIEW_CSS = """
@@ -220,7 +217,14 @@ class ChatRequest(BaseModel):
 
 
 def _server_page() -> str:
-    examples = [row[0] for row in EXAMPLE_PROMPTS]
+    examples = [
+        {"label": "Monthly chart", "prompt": EXAMPLE_PROMPTS[0][0]},
+        {"label": "Energy", "prompt": EXAMPLE_PROMPTS[1][0]},
+        {"label": "District values", "prompt": EXAMPLE_PROMPTS[2][0]},
+        #{"label": "Threshold", "prompt": EXAMPLE_PROMPTS[3][0]},
+        #{"label": "Table", "prompt": EXAMPLE_PROMPTS[4][0]},
+        #{"label": "General", "prompt": EXAMPLE_PROMPTS[5][0]},
+    ]
     return (
         "<!doctype html>"
         '<html lang="en">'
@@ -231,37 +235,176 @@ def _server_page() -> str:
         + _css()
         + """
 <style>
-body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #111827; }
-.gradio-container { max-width: 1120px; margin: 0 auto; padding: 18px; }
-.chat { min-height: 560px; border: 1px solid #dbe3ef; background: #fff; border-radius: 8px; padding: 14px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
-.message { max-width: min(860px, 92%); border-radius: 8px; padding: 10px 12px; line-height: 1.45; }
-.message.user { align-self: flex-end; background: #2563eb; color: #fff; }
-.message.assistant { align-self: flex-start; background: #f1f5f9; color: #111827; }
-.composer { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; margin-top: 10px; }
-.composer input { min-height: 42px; border: 1px solid #cbd5e1; border-radius: 8px; padding: 0 12px; font-size: 15px; }
-.composer button, .examples button { border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: #111827; cursor: pointer; }
-.composer button { padding: 0 16px; font-weight: 600; }
-.composer button.primary { background: #2563eb; border-color: #2563eb; color: #fff; }
-.examples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.examples button { padding: 7px 9px; font-size: 13px; }
-.status { min-height: 20px; margin-top: 8px; color: #64748b; font-size: 12px; }
+:root {
+  --ink: #172033;
+  --muted: #647084;
+  --line: #d7e0eb;
+  --surface: #ffffff;
+  --soft: #f6f8fb;
+  --primary: #116d7b;
+  --primary-strong: #0b5260;
+  --primary-soft: #e7f5f4;
+  --indigo: #4457c7;
+  --green: #16866f;
+  --rose: #c9435d;
+  --shadow: 0 18px 44px rgba(23,32,51,0.11);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(17,109,123,0.18), transparent 340px),
+    radial-gradient(circle at 88% 8%, rgba(68,87,199,0.13), transparent 300px),
+    linear-gradient(180deg, #f8fbfc 0%, #eef4f7 100%);
+  color: var(--ink);
+}
+.gradio-container { max-width: 1180px; margin: 0 auto; padding: 20px; }
+.topbar { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.smol-shell { padding: 0; }
+.smol-title { letter-spacing: 0; }
+.status-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.82);
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: var(--muted);
+  font-size: 13px;
+  box-shadow: 0 8px 22px rgba(23,32,51,0.06);
+}
+.status-dot { width: 9px; height: 9px; border-radius: 999px; background: var(--green); box-shadow: 0 0 0 4px rgba(22,134,111,0.14); }
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 14px; align-items: start; }
+.chat-panel { border: 1px solid var(--line); background: rgba(255,255,255,0.9); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); }
+.chat {
+  min-height: 590px;
+  max-height: calc(100vh - 230px);
+  background: linear-gradient(180deg, #ffffff, #f7fafb);
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.empty {
+  margin: auto;
+  max-width: 560px;
+  text-align: center;
+  color: var(--muted);
+}
+.empty strong { display: block; color: var(--ink); font-size: 22px; margin-bottom: 8px; }
+.message-wrap { display: flex; flex-direction: column; gap: 4px; max-width: min(880px, 94%); }
+.message-wrap.user { align-self: flex-end; align-items: flex-end; }
+.message-wrap.assistant { align-self: flex-start; align-items: flex-start; }
+.message-label { color: var(--muted); font-size: 11px; padding: 0 4px; }
+.message {
+  border-radius: 8px;
+  padding: 11px 13px;
+  line-height: 1.48;
+  overflow-wrap: anywhere;
+}
+.message.user { background: linear-gradient(135deg, var(--primary), var(--indigo)); color: #fff; box-shadow: 0 12px 24px rgba(17,109,123,0.22); }
+.message.assistant { background: #eef5f6; color: var(--ink); border: 1px solid #deeaee; }
+.message.pending { min-width: 86px; color: var(--muted); }
+.dots { display: inline-flex; gap: 4px; align-items: center; }
+.dots i { width: 6px; height: 6px; border-radius: 999px; background: var(--muted); animation: pulse 1s infinite ease-in-out; }
+.dots i:nth-child(2) { animation-delay: .15s; }
+.dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes pulse { 0%, 80%, 100% { opacity: .25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+.composer {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+.composer textarea {
+  min-height: 48px;
+  max-height: 150px;
+  resize: vertical;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+  line-height: 1.35;
+}
+.composer textarea:focus { outline: 3px solid rgba(17,109,123,0.16); border-color: var(--primary); }
+.composer button, .examples button {
+  border: 1px solid #c9d5df;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff, #f8fbfc);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(23,32,51,0.06);
+  transition: transform .14s ease, border-color .14s ease, background .14s ease, box-shadow .14s ease;
+}
+.composer button { padding: 0 17px; font-weight: 700; }
+.composer button:hover, .examples button:hover { transform: translateY(-1px); border-color: rgba(17,109,123,0.45); box-shadow: 0 8px 20px rgba(23,32,51,0.10); }
+.composer button.primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(17,109,123,0.24);
+}
+.composer button.primary:hover { box-shadow: 0 12px 26px rgba(17,109,123,0.30); }
+.composer button:disabled { cursor: wait; opacity: .6; transform: none; }
+.side-panel { display: grid; gap: 12px; }
+.panel { border: 1px solid var(--line); background: rgba(255,255,255,0.88); border-radius: 8px; padding: 12px; box-shadow: 0 12px 28px rgba(23,32,51,0.07); }
+.panel h2 { margin: 0 0 8px; font-size: 14px; }
+.panel p { margin: 0 0 10px; color: var(--muted); font-size: 13px; line-height: 1.4; }
+.examples { display: grid; gap: 8px; }
+.examples button { width: 100%; padding: 10px 11px; text-align: left; position: relative; overflow: hidden; }
+.examples button::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: linear-gradient(180deg, var(--primary), var(--indigo)); opacity: .9; }
+.examples small { display: block; color: var(--primary); font-size: 11px; margin-bottom: 3px; font-weight: 750; }
+.status { min-height: 20px; color: var(--muted); font-size: 12px; }
+.smol-meta { overflow-wrap: anywhere; }
+@media (max-width: 860px) {
+  .gradio-container { padding: 12px; }
+  .topbar { align-items: flex-start; flex-direction: column; }
+  .workspace { grid-template-columns: 1fr; }
+  .chat { min-height: 480px; max-height: none; }
+  .composer { grid-template-columns: 1fr; }
+  .composer button { min-height: 42px; }
+}
 </style>
         """
         "</head>"
         "<body>"
         '<main class="gradio-container">'
+        '<header class="topbar">'
         '<div class="smol-shell">'
         '<h1 class="smol-title">smolnalysis</h1>'
-        '<p class="smol-subtitle">MiniCPM SmolnalysisMoE chat with OpenUI rendering.</p>'
+        '<p class="smol-subtitle">Ask for open data, get a rendered interface back.</p>'
         "</div>"
-        '<section id="chat" class="chat" aria-live="polite"></section>'
+        '<div class="status-card"><span class="status-dot"></span><span>Router + adapters online</span></div>'
+        "</header>"
+        '<div class="workspace">'
+        '<section class="chat-panel">'
+        '<section id="chat" class="chat" aria-live="polite">'
+        '<div id="empty" class="empty"><strong>Start with an example prompt</strong><span>Results that produce OpenUI-Lang render directly in the chat.</span></div>'
+        "</section>"
         '<form id="composer" class="composer">'
-        '<input id="prompt" autocomplete="off" autofocus placeholder="Ask smolnalysis..." />'
-        '<button class="primary" type="submit">Send</button>'
+        '<textarea id="prompt" autocomplete="off" autofocus placeholder="Ask smolnalysis..."></textarea>'
+        '<button id="send" class="primary" type="submit">Send</button>'
         '<button id="clear" type="button">Clear</button>'
         "</form>"
+        "</section>"
+        '<aside class="side-panel">'
+        '<section class="panel">'
+        '<h2>Examples</h2>'
+        '<p>Try one of these examples and see what happens.</p>'
         '<div id="examples" class="examples"></div>'
-        '<div id="status" class="status"></div>'
+        "</section>"
+        '<section class="panel">'
+        '<h2>Run State</h2>'
+        '<p id="status" class="status">Idle</p>'
+        "</section>"
+        "</aside>"
+        "</div>"
         "</main>"
         "<script>"
         f"const EXAMPLES = {json.dumps(examples, ensure_ascii=False)};"
@@ -270,9 +413,17 @@ const chat = document.getElementById("chat");
 const prompt = document.getElementById("prompt");
 const statusEl = document.getElementById("status");
 const examplesEl = document.getElementById("examples");
+const sendButton = document.getElementById("send");
 let history = [];
 
 function addMessage(role, content, htmlContent = false) {
+  const emptyEl = document.getElementById("empty");
+  if (emptyEl) emptyEl.remove();
+  const wrap = document.createElement("div");
+  wrap.className = `message-wrap ${role}`;
+  const label = document.createElement("div");
+  label.className = "message-label";
+  label.textContent = role === "user" ? "You" : "smolnalysis";
   const node = document.createElement("div");
   node.className = `message ${role}`;
   if (htmlContent) {
@@ -280,8 +431,20 @@ function addMessage(role, content, htmlContent = false) {
   } else {
     node.textContent = content;
   }
-  chat.appendChild(node);
+  wrap.appendChild(label);
+  wrap.appendChild(node);
+  chat.appendChild(wrap);
   chat.scrollTop = chat.scrollHeight;
+  return wrap;
+}
+
+function addPendingMessage() {
+  return addMessage("assistant", '<span class="dots"><i></i><i></i><i></i></span>', true);
+}
+
+function setBusy(isBusy) {
+  prompt.disabled = isBusy;
+  sendButton.disabled = isBusy;
 }
 
 async function sendMessage(message) {
@@ -289,7 +452,9 @@ async function sendMessage(message) {
   if (!text) return;
   addMessage("user", text);
   prompt.value = "";
-  statusEl.textContent = "Thinking...";
+  statusEl.textContent = "Routing request and generating response...";
+  setBusy(true);
+  const pending = addPendingMessage();
   try {
     const response = await fetch("/api/chat", {
       method: "POST",
@@ -299,11 +464,17 @@ async function sendMessage(message) {
     const payload = await response.json();
     if (!response.ok) throw new Error(payload.detail || payload.error || response.statusText);
     history = payload.history || history;
+    pending.remove();
     addMessage("assistant", payload.html, true);
-    statusEl.textContent = "";
+    const stages = (payload.trace && payload.trace.stages || []).map((stage) => stage.adapter || "base").join(" -> ");
+    statusEl.textContent = stages ? `Last run: ${stages}` : "Idle";
   } catch (error) {
+    pending.remove();
     addMessage("assistant", `${error.name}: ${error.message}`);
-    statusEl.textContent = "";
+    statusEl.textContent = "Error";
+  } finally {
+    setBusy(false);
+    prompt.focus();
   }
 }
 
@@ -311,19 +482,25 @@ document.getElementById("composer").addEventListener("submit", (event) => {
   event.preventDefault();
   sendMessage(prompt.value);
 });
+prompt.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    sendMessage(prompt.value);
+  }
+});
 document.getElementById("clear").addEventListener("click", () => {
   history = [];
-  chat.innerHTML = "";
-  statusEl.textContent = "";
+  chat.innerHTML = '<div id="empty" class="empty"><strong>Start with a training-style prompt</strong><span>Try a chart, table, threshold check, or a general question. Results that produce OpenUI-Lang render directly in the chat.</span></div>';
+  statusEl.textContent = "Idle";
   prompt.value = "";
   prompt.focus();
 });
 for (const example of EXAMPLES) {
   const button = document.createElement("button");
   button.type = "button";
-  button.textContent = example;
+  button.innerHTML = `<small>${example.label}</small>${example.prompt}`;
   button.addEventListener("click", () => {
-    prompt.value = example;
+    prompt.value = example.prompt;
     prompt.focus();
   });
   examplesEl.appendChild(button);
